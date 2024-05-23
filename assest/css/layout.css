@@ -781,12 +781,12 @@
         top: 0;
         left: 0;
         right: 0;
+        bottom: 0;
         max-width: var(--max-width);
         z-index: 555;
         margin: 0 auto;
         background-color: var(--white-color);
         padding: 0 0 40px;
-        height: 100vh;
     }
 
     .mo-menu-layer-group.depth2-type .mo-menu-body {
