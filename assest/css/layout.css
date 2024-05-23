@@ -825,7 +825,7 @@
 
     .mo-menu-layer-group .mo-menu-body {
         padding: 0 20px;
-        height: calc(100vh - 154px);
+        height: calc(100vh - 238px);
         overflow: hidden;
         overflow-y: auto;
     }
@@ -835,6 +835,7 @@
         left: 0;
         right: 0;
         bottom: 0;
+        background-color: var(--white-color);
         padding: 20px 20px 18px;
         padding: 20px 20px calc(constant(safe-area-inset-bottom) + 18px);
         padding: 20px 20px calc(env(safe-area-inset-bottom) + 18px);
