@@ -1,0 +1,73 @@
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+    <meta name="theme-color" content="#fff">
+    <meta name="color-scheme" content="light only">
+    <meta name="msapplication-TileColor" content="#fff">
+    <meta name="msapplication-TileImage" content="/ms-icon-70x70.png">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <link rel="stylesheet" type="text/css" href="./assest/css/swiper-bundle.css" />
+    <link rel="stylesheet" type="text/css" href="./assest/css/common.css" />
+    <link rel="stylesheet" type="text/css" href="./assest/css/layout.css" />
+    <link rel="stylesheet" type="text/css" href="./assest/css/main.css" />
+    <meta name="keywords" content="meBook" />
+    <meta name="description" content="meBook" />
+    <title>meBook</title>
+</head>
+
+<body>
+    <main class="main-wrap">
+        <!--컨텐츠 시작-->
+        <div class="container">
+            <!--메인 팝업 시작-->
+            <section class="main-popup-section" id="layerPopupOverlay">
+                <div class="main-popup-container">
+                    <div class="main-popup-content">
+                        <div class="main-popup-banner-area swiper-banner">
+                            <div class="swiper" id="mainPopupBanner">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <a href="" class="main-popup-banner">
+                                            <img src="./assest/images/img-main-banner-dummy-01.png" alt="">
+                                        </a>
+                                    </div>
+                                    <a href="" class="swiper-slide">
+                                        <div class="main-popup-banner">
+                                            <img src="./assest/images/img-main-banner-dummy-02.png" alt="">
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="swiper-pagination"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="main-popup-btns">
+                        <button type="button" class="btn-popup">오늘 하루 보지 않기</button>
+                        <button type="button" class="btn-popup-black" id="closePopuplayer">닫기</button>
+                    </div>
+                </div>
+            </section>
+            <!--메인 팝업 끝-->
+        </div>
+    </main>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script src="./assest/js/common.js"></script>
+    <script src="./assest/js/swiper-bundle.js"></script>
+    <script>
+        
+        // 팝업
+        var popupOverlay = document.getElementById('layerPopupOverlay');
+        var closePopupButton = document.getElementById('closePopuplayer');
+
+        closePopupButton.addEventListener('click', function () {
+            popupOverlay.style.display = 'none'; // 팝업 숨기기
+        });
+
+    </script>
+</body>
+
+</html>
