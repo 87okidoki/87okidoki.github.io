@@ -831,7 +831,7 @@
     }
 
     .mo-menu-layer-group .mo-menu-footer {
-        position: sticky;
+        position: fixed;
         left: 0;
         right: 0;
         bottom: 0;
