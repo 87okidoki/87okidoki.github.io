@@ -798,14 +798,15 @@
     .mo-menu-layer-group .mo-menu-link-group {
         padding:0 0px 32px;
         margin-bottom: 32px;
-        margin-bottom: calc(constant(safe-area-inset-bottom) + 32px);
-        margin-bottom: calc(env(safe-area-inset-bottom) + 32px);
         margin-top: 20px;
         border-bottom: 1px solid var(--border-primary);
     }
 
     .mo-menu-layer-group .mo-menu-link-group:last-child {
         border-bottom: 0;
+        margin-bottom: 32px;
+        margin-bottom: calc(constant(safe-area-inset-bottom) + 32px);
+        margin-bottom: calc(env(safe-area-inset-bottom) + 32px);
     }
 
     .mo-menu-layer-group .menu-link-title {
@@ -831,6 +832,9 @@
         padding: 0 20px;
         overflow: hidden;
         overflow-y: auto;
+        scroll-behavior: smooth;
+        -webkit-overflow-scrolling: auto;
+        -ms-overflow-style: -ms-autohiding-scrollbar;
     }
 
     .mo-menu-layer-group .mo-menu-footer {
