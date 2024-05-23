@@ -827,7 +827,6 @@
         margin-bottom: 100px;
         height: calc(100vh - 156px);
         padding: 0 20px;
-        height: 100%;
         overflow: hidden;
         overflow-y: auto;
     }
