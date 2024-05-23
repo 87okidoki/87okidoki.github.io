@@ -796,7 +796,7 @@
     }
 
     .mo-menu-layer-group .mo-menu-link-group {
-        padding:0 20px 32px;
+        padding:0 0px 32px;
         margin-bottom: 32px;
         margin-top: 20px;
         border-bottom: 1px solid var(--border-primary);
