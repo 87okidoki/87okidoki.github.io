@@ -138,7 +138,7 @@ $(function () {
         $("body").addClass("scroll-lock");
         $(".mo-menu-layer-group .mo-menu-body").on("scroll", function (e) {
             var wheel = e.originalEvent.wheelDelta;
-            if (wheel > 0) {
+            if (wheel > 10) {
                 $(".mo-menu-layer-group .mo-menu-footer").removeClass("line");
 
             } else {
