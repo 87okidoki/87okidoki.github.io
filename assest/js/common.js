@@ -1,6 +1,8 @@
 $(function () {
     /* 메인배너*/
-    const progressLine = document.querySelector('#mainVisualBanner .autoplay-progress svg')
+    const progressLine = document.querySelector(
+        '#mainVisualBanner .autoplay-progress svg'
+    )
     const mainVisualBanner = new Swiper('#mainVisualBanner', {
         loop: true,
         effect: "fade",
@@ -62,6 +64,7 @@ $(function () {
     /* 그리드 리스트 스와이퍼*/
     const gridSwiper = new Swiper('#gridSwiper', {
         slidesPerView: 'auto',
+        freeMode: true,
         grid: {
             rows: 2
         },
@@ -71,6 +74,7 @@ $(function () {
     /* 썸네일 리스트 스와이퍼*/
     const thumbSwiper = new Swiper('#thumbSwiper', {
         slidesPerView: 'auto',
+        freeMode: true,
         pagination: {
             clickable: true
         }
@@ -82,23 +86,31 @@ $(function () {
     // 페이지 스크롤 이벤트 리스너 추가
     window.addEventListener('scroll', function () {
         var header = document.getElementById('header');
-        
+
         // 스크롤 위치가 0보다 크면 'fixed' 클래스 추가, 아니면 제거
         if (window.scrollY > 0) {
-            header.classList.add('fixed');
+            header
+                .classList
+                .add('fixed');
         } else {
-            header.classList.remove('fixed');
+            header
+                .classList
+                .remove('fixed');
         }
     });
 
     // 스크롤 탑버튼
     window.addEventListener('scroll', function () {
         var scrollTopButton = document.getElementById('btnTopScroll');
-        
+
         if (window.scrollY > 0) {
-            scrollTopButton.classList.add('on');
+            scrollTopButton
+                .classList
+                .add('on');
         } else {
-            scrollTopButton.classList.remove('on');
+            scrollTopButton
+                .classList
+                .remove('on');
         }
     });
     // "맨 위로" 버튼 클릭 이벤트
@@ -110,7 +122,7 @@ $(function () {
     });
 
     /* pc 카테고리 메뉴 열림 닫힘*/
-   $("#openPcCategorylayer").click(function () {
+    $("#openPcCategorylayer").click(function () {
         $("#pcCategorylayerOverlay").removeClass("off");
         $("body").addClass("scroll-lock");
 
@@ -134,13 +146,16 @@ $(function () {
     $("#openMobileCategorylayer").click(function () {
         $("#mobileCategorylayerOverlay").removeClass("off");
         $("body").addClass("scroll-lock");
-       $(".mo-menu-layer-group").on("wheel mousewheel touchmove", function (e) {
+        $(".mo-menu-layer-group").on("wheel mousewheel touchmove", function (e) {
             var wheel;
             if (e.type === "wheel" || e.type === "mousewheel") {
-                // wheelDelta for mousewheel event (older browsers), deltaY for wheel event (modern browsers)
+                // wheelDelta for mousewheel event (older browsers), deltaY for wheel event
+                // (modern browsers)
                 wheel = e.originalEvent.wheelDelta || -e.originalEvent.deltaY;
             } else if (e.type === "touchmove") {
-                var touch = e.originalEvent.touches[0];
+                var touch = e
+                    .originalEvent
+                    .touches[0];
                 wheel = touch.clientY - (this.lastY || touch.clientY);
                 this.lastY = touch.clientY;
             }
@@ -154,7 +169,9 @@ $(function () {
 
         // 초기 터치 위치를 저장하는 코드 추가
         $(".mo-menu-layer-group").on("touchstart", function (e) {
-            var touch = e.originalEvent.touches[0];
+            var touch = e
+                .originalEvent
+                .touches[0];
             this.lastY = touch.clientY;
         });
     });
@@ -169,10 +186,14 @@ $(function () {
         var idx = $(this).index();
 
         $(".btns-swiper-group .swiper-slide .btn-swiper-tab").removeClass("on");
-        $(".btns-swiper-group .swiper-slide .btn-swiper-tab").eq(idx).addClass("on");
+        $(".btns-swiper-group .swiper-slide .btn-swiper-tab")
+            .eq(idx)
+            .addClass("on");
 
         $(".tab-swiper-content-section").hide();
-        $(".tab-swiper-content-section").eq(idx).show();
+        $(".tab-swiper-content-section")
+            .eq(idx)
+            .show();
     });
 
 });
