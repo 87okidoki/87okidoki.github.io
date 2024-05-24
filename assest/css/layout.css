@@ -804,9 +804,9 @@
 
     .mo-menu-layer-group .mo-menu-link-group:last-child {
         border-bottom: 0;
-        margin-bottom: 32px;
-        margin-bottom: calc(constant(safe-area-inset-bottom) + 32px);
-        margin-bottom: calc(env(safe-area-inset-bottom) + 32px);
+        margin-bottom: 56px;
+        margin-bottom: calc(constant(safe-area-inset-bottom) + 56px);
+        margin-bottom: calc(env(safe-area-inset-bottom) + 56px);
     }
 
     .mo-menu-layer-group .menu-link-title {
