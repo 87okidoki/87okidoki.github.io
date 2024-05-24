@@ -136,16 +136,28 @@ $(function () {
     $("#openMobileCategorylayer").click(function () {
         $("#mobileCategorylayerOverlay").removeClass("off");
         $("body").addClass("scroll-lock");
-        $(".mo-menu-layer-group").on("scroll", function (e) {
-            var scroll = e.originalEvent.scroll;
-            if (scroll > 0) {
+        $(".mo-menu-layer-group").on("wheel touchmove", function (e) {
+            var wheel;
+            if (e.type === "wheel") {
+                wheel = e.originalEvent.deltaY;
+            } else if (e.type === "touchmove") {
+                var touch = e.originalEvent.touches[0];
+                wheel = touch.clientY - this.lastY;
+                this.lastY = touch.clientY;
+            }
+            
+            if (wheel < 0) {
                 $(".mo-menu-layer-group .mo-menu-footer").removeClass("line");
-
             } else {
                 $(".mo-menu-layer-group .mo-menu-footer").addClass("line");
             }
         });
 
+        // 초기 터치 위치를 저장하는 코드 추가
+        $(".mo-menu-layer-group").on("touchstart", function (e) {
+            var touch = e.originalEvent.touches[0];
+            this.lastY = touch.clientY;
+        });
     });
     $("#closeMobileCategorylayerOverlay").click(function () {
         $("#mobileCategorylayerOverlay").addClass("off")
