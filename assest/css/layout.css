@@ -333,6 +333,8 @@
     --progress: 0;
     position: absolute;
     left: 0;
+    left: calc(constant(safe-area-inset-left) + 0px);
+    left: calc(env(safe-area-inset-left) + 0px);
     top: 0;
     z-index: 10;
     width: 100%;
@@ -346,11 +348,11 @@
 .main-visual-banner-section .main-visual-banner-text-box {
     position: absolute;
     left: 80px;
+    left: calc(constant(safe-area-inset-left) + 80px);
+    left: calc(env(safe-area-inset-left) + 80px);
     bottom: 135px;
     width: 368px;
     z-index: 10;
-    left: calc(constant(safe-area-inset-left) + 80px);
-    left: calc(env(safe-area-inset-left) + 80px);
 }
 
 .main-visual-banner-section .main-visual-banner-title {
