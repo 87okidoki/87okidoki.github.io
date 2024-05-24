@@ -1279,6 +1279,8 @@
     .footer-section {
         margin-top: 52px;
         padding: 40px 0 48px;
+        padding: 40px 0 calc(constant(safe-area-inset-bottom) + 48px);
+        padding: 40px 0 calc(env(safe-area-inset-bottom) + 48px);
     }
     .footer-section .logo {
         width: 124px;
