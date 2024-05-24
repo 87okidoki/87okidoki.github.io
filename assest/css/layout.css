@@ -810,6 +810,8 @@
         right: calc(env(safe-area-inset-right) + 0px);
         left: calc(constant(safe-area-inset-left) + 0px);
         left: calc(env(safe-area-inset-left) + 0px);
+        bottom: calc(constant(safe-area-inset-bottom) + 0px);
+        bottom: calc(env(safe-area-inset-bottom) + 0px);
     }
 
     .mo-menu-layer-group.depth2-type .mo-menu-body {
@@ -1301,6 +1303,8 @@
         padding: 40px 0 48px;
         padding: 40px 0 calc(constant(safe-area-inset-bottom) + 48px);
         padding: 40px 0 calc(env(safe-area-inset-bottom) + 48px);
+        margin-bottom: calc(constant(safe-area-inset-bottom) + 48px);
+        margin-bottom: c calc(env(safe-area-inset-bottom) + 48px);
     }
     .footer-section .logo {
         width: 124px;
