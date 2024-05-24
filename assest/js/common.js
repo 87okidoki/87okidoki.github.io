@@ -3,8 +3,9 @@ $(function () {
     const progressLine = document.querySelector('#mainVisualBanner .autoplay-progress svg')
     const mainVisualBanner = new Swiper('#mainVisualBanner', {
         loop: true,
+        effect: "fade",
         autoplay: {
-            delay: 5500,
+            delay: 6000,
             disableOnInteraction: false
         },
         navigation: {
