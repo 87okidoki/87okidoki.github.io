@@ -1312,7 +1312,7 @@
     display: none;
 }
 
-@media screen and (max-width:767px){
+@media screen and (max-width:767px) {
     .footer-section {
         margin-top: 52px;
         padding: 40px calc(constant(safe-area-inset-right) + 0px) calc(constant(safe-area-inset-bottom) + 48px) calc(constant(safe-area-inset-left) + 0px);
@@ -1326,4 +1326,54 @@
     .footer-section .copyright-text {
         margin-bottom: 0;
     }
+}
+
+.book-area {
+    position: relative;
+}
+
+.book-area img {
+    position: absolute;
+    border-radius: 2px 4px 4px 2px;
+    overflow: hidden;
+    width: 80px;
+    height: 106px;
+    z-index: 1;
+    left: 2px;
+}
+
+.book-area .book {
+    position: relative;
+    display: inline-block;
+    width: 87px;
+    height: 106px;
+
+}
+.book-area .bg-book {
+    position: absolute;
+    left: 0;
+    top: 4px;
+    width: 90px;
+    height: 97px;
+    background: url("../images/img-book-middle.png") repeat-y center center /contain;
+}
+.book-area .book::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: -6px;
+    width: 90px;
+    height: 11px;
+    display: inline-block;
+    background: url("../images/img-book-top.png") no-repeat center center /contain;
+}
+.book-area .book::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 90px;
+    height: 11px;
+    display: inline-block;
+    background: url("../images/img-book-bottom.png") no-repeat center center /contain;
 }

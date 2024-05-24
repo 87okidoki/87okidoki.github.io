@@ -54,7 +54,7 @@
     /* Modern Browsers */
     url("../fonts/Pretendard-Boldr.ttf") format("truetype"),
     /* Safari, Android, iOS */
-    url( "../fonts/Pretendard-Bold.svg#NotoSansKR") format("svg")))
+     url("../fonts/Pretendard-Bold.svg#NotoSansKR") format("svg")));
 }
 
 @font-face {
@@ -72,7 +72,7 @@
     /* Modern Browsers */
     url("../fonts/Pretendard-SemiBoldr.ttf") format("truetype"),
     /* Safari, Android, iOS */
-    url( "../fonts/Pretendard-SemiBold.svg#NotoSansKR") format("svg")))
+     url("../fonts/Pretendard-SemiBold.svg#NotoSansKR") format("svg")));
 }
 
 @font-face {
@@ -90,7 +90,7 @@
     /* Modern Browsers */
     url("../fonts/Pretendard-Regular.ttf") format("truetype"),
     /* Safari, Android, iOS */
-    url( "../fonts/Pretendard-Regular.svg#NotoSansKR") format("svg")))
+     url("../fonts/Pretendard-Regular.svg#NotoSansKR") format("svg")));
 }
 
 @font-face {
@@ -108,7 +108,7 @@
     /* Modern Browsers */
     url("../fonts/Pretendard-Light.ttf") format("truetype"),
     /* Safari, Android, iOS */
-    url( "../fonts/Pretendard-Light.svg#NotoSansKR") format("svg")))
+     url("../fonts/Pretendard-Light.svg#NotoSansKR") format("svg")));
 }
 
 /* reset */
@@ -665,11 +665,7 @@ img {
 
 /*contents-section*/
 .contents-section {
-    padding: 52px 0;
-    padding-right: calc(constant(safe-area-inset-right) + 0px);
-    padding-right: calc(env(safe-area-inset-right) + 0px);
-    padding-left: calc(constant(safe-area-inset-left) + 0px);
-    padding-left: calc(env(safe-area-inset-left) + 0px);
+    padding: 52px calc(env(safe-area-inset-right) + 0px) 52px calc(env(safe-area-inset-left) + 0px);
 }
 
 .contents-section .contents-header .contents-header-title {
@@ -698,9 +694,15 @@ img {
     .contents-section {
         padding: 28px 0;
     }
+    .contents-section .contents-header .contents-header-title {
+        font-family: "Pretendard Bold";
+        font-size: 2rem;
+        line-height: 24px;
+    }
     .contents-section .contents-header-both > .btn-more > .text {
         display: none;
     }
+
 }
 
 /*content-section */
