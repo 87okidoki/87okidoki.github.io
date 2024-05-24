@@ -1286,7 +1286,7 @@
 @media screen and (max-width:767px) {
     .footer-section {
         margin-top: 52px;
-        padding: 40px calc(env(safe-area-inset-right) + 20px) calc(env(safe-area-inset-bottom) + 48px) calc(env(safe-area-inset-left) + 20px);
+        padding: 40px calc(env(safe-area-inset-right) + 0px) calc(env(safe-area-inset-bottom) + 48px) calc(env(safe-area-inset-left) + 0px);
         margin-left: calc(constant(safe-area-inset-left) + 0px);
         margin-left: calc(env(safe-area-inset-left) + 0px);
         margin-right: calc(constant(safe-area-inset-right) + 0px);
