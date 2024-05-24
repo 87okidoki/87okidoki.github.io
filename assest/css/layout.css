@@ -829,14 +829,12 @@
         margin-top: 56px;
         margin-bottom: 100px;
         height: calc(100vh - 156px);
-        
         padding: 0 20px;
         overflow: hidden;
         overflow-y: auto;
         scroll-behavior: smooth;
         -webkit-overflow-scrolling: auto;
         -ms-overflow-style: -ms-autohiding-scrollbar;
-        min-height: -webkit-fill-available;
     }
 
     .mo-menu-layer-group .mo-menu-footer {
