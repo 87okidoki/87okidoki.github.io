@@ -136,16 +136,17 @@ $(function () {
     $("#openMobileCategorylayer").click(function () {
         $("#mobileCategorylayerOverlay").removeClass("off");
         $("body").addClass("scroll-lock");
-        $(".mo-menu-layer-group").on("wheel touchmove", function (e) {
+       $(".mo-menu-layer-group").on("wheel mousewheel touchmove", function (e) {
             var wheel;
-            if (e.type === "wheel") {
-                wheel = e.originalEvent.deltaY;
+            if (e.type === "wheel" || e.type === "mousewheel") {
+                // wheelDelta for mousewheel event (older browsers), deltaY for wheel event (modern browsers)
+                wheel = e.originalEvent.wheelDelta || -e.originalEvent.deltaY;
             } else if (e.type === "touchmove") {
                 var touch = e.originalEvent.touches[0];
-                wheel = touch.clientY - this.lastY;
+                wheel = touch.clientY - (this.lastY || touch.clientY);
                 this.lastY = touch.clientY;
             }
-            
+
             if (wheel > 0) {
                 $(".mo-menu-layer-group .mo-menu-footer").removeClass("line");
             } else {
