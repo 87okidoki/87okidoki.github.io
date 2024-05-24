@@ -661,10 +661,10 @@ img {
 /*layout*/
 .container {
     width: 100%;
-    padding-right: calc(constant(safe-area-inset-bottom) + 0px);
-    padding-right: calc(env(safe-area-inset-bottom) + 0px);
-    padding-left: calc(constant(safe-area-inset-bottom) + 0px);
-    padding-left: calc(env(safe-area-inset-bottom) + 0px);
+    padding-right: calc(constant(safe-area-inset-right) + 0px);
+    padding-right: calc(env(safe-area-inset-right) + 0px);
+    padding-left: calc(constant(safe-area-inset-left) + 0px);
+    padding-left: calc(env(safe-area-inset-left) + 0px);
 }
 
 /*contents-section*/
