@@ -78,33 +78,29 @@ $(function () {
     /* 카테고리 버튼 스와이퍼*/
     const btnSwiper = new Swiper('#btnSwiper', {slidesPerView: 'auto'});
 
-    // 스크롤시 해더 상단 고정
+    // 페이지 스크롤 이벤트 리스너 추가
     window.addEventListener('scroll', function () {
         var header = document.getElementById('header');
+        
+        // 스크롤 위치가 0보다 크면 'fixed' 클래스 추가, 아니면 제거
         if (window.scrollY > 0) {
-            header
-                .classList
-                .add('fixed');
+            header.classList.add('fixed');
         } else {
-            header
-                .classList
-                .remove('fixed');
+            header.classList.remove('fixed');
         }
     });
 
     // 스크롤 탑버튼
     window.addEventListener('scroll', function () {
-        var scrollTop = document.getElementById('btnTopScroll');
+        var scrollTopButton = document.getElementById('btnTopScroll');
+        
         if (window.scrollY > 0) {
-            scrollTop
-                .classList
-                .add('on');
+            scrollTopButton.classList.add('on');
         } else {
-            scrollTop
-                .classList
-                .remove('on');
+            scrollTopButton.classList.remove('on');
         }
     });
+    // "맨 위로" 버튼 클릭 이벤트
     $('.btn-top-scroll').click(function () {
         $('html, body').animate({
             scrollTop: 0
@@ -113,17 +109,18 @@ $(function () {
     });
 
     /* pc 카테고리 메뉴 열림 닫힘*/
-    $("#openPcCategorylayer").click(function () {
+   $("#openPcCategorylayer").click(function () {
         $("#pcCategorylayerOverlay").removeClass("off");
         $("body").addClass("scroll-lock");
+
         $(".main-menu-layer-group").on("mousewheel", function (e) {
-            var wheel = e.originalEvent.wheelDelta;
+            var wheelDelta = e.originalEvent.wheelDelta;
+            var $menuFooter = $(".main-menu-layer-group .menu-footer");
 
-            if (wheel > 0) {
-                $(".main-menu-layer-group .menu-footer").removeClass("line");
-
+            if (wheelDelta > 0) {
+                $menuFooter.removeClass("line");
             } else {
-                $(".main-menu-layer-group .menu-footer").addClass("line");
+                $menuFooter.addClass("line");
             }
         });
     });
@@ -166,17 +163,15 @@ $(function () {
         $("body").removeClass("scroll-lock");
     });
 
-    /* 스와이퍼 탭*/
+    // 스와이퍼 슬라이드 클릭 이벤트 리스너 추가
     $(".btns-swiper-group .swiper-slide").click(function () {
         var idx = $(this).index();
+
         $(".btns-swiper-group .swiper-slide .btn-swiper-tab").removeClass("on");
-        $(".btns-swiper-group .swiper-slide .btn-swiper-tab")
-            .eq(idx)
-            .addClass("on");
+        $(".btns-swiper-group .swiper-slide .btn-swiper-tab").eq(idx).addClass("on");
+
         $(".tab-swiper-content-section").hide();
-        $(".tab-swiper-content-section")
-            .eq(idx)
-            .show();
-    })
+        $(".tab-swiper-content-section").eq(idx).show();
+    });
 
 });
