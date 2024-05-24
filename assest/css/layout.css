@@ -389,6 +389,8 @@
     .main-visual-banner-section .main-visual-banner-text-box {
         max-width: 245px;
         left: 20px;
+        left: calc(constant(safe-area-inset-left) + 20px);
+        left: calc(env(safe-area-inset-left) + 20px);
         bottom: 64px;
     }
     .main-visual-banner-section .main-visual-banner-title {
@@ -402,20 +404,36 @@
     }
     .main-visual-banner-section .swiper-control-area {
         left: 20px;
+        left: calc(constant(safe-area-inset-left) + 20px);
+        left: calc(env(safe-area-inset-left) + 20px);
         right: 20px;
+        right: calc(constant(safe-area-inset-right) + 20px);
+        right: calc(env(safe-area-inset-right) + 20px);
         bottom: 12px;
+        bottom: calc(constant(safe-area-inset-bottom) + 12px);
+        bottom: calc(env(safe-area-inset-bottom) + 12px);
     }
     .main-visual-banner-section .indi-progress {
         left: 20px;
+        left: calc(constant(safe-area-inset-left) + 20px);
+        left: calc(env(safe-area-inset-left) + 20px);
         right: 170px;
+        right: calc(constant(safe-area-inset-right) + 170px);
+        right: calc(env(safe-area-inset-right) + 170px);
         bottom: 32px;
+        bottom: calc(constant(safe-area-inset-bottom) + 32px);
+        bottom: calc(env(safe-area-inset-bottom) + 32px);
         width: auto;
     }
     .main-visual-banner-section .swiper-control-area .btn-area {
         position: absolute;
         top: -20px;
         left: auto;
+        left: calc(constant(safe-area-inset-left) + auto);
+        left: calc(env(safe-area-inset-left) + auto);
         right: 54px;
+        right: calc(constant(safe-area-inset-right) + 54px);
+        right: calc(env(safe-area-inset-right) + 54px);
     }
     .main-visual-banner-section .pc-main-banner {
         display: none;
