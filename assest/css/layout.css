@@ -885,8 +885,6 @@
         right: calc(env(safe-area-inset-right) + 0px);
         left: calc(constant(safe-area-inset-left) + 0px);
         left: calc(env(safe-area-inset-left) + 0px);
-        bottom: calc(constant(safe-area-inset-bottom) + 0px);
-        bottom: calc(env(safe-area-inset-bottom) + 0px);
     }
 
     .mo-menu-layer-group .mo-menu-footer.line {
