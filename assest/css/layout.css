@@ -1289,6 +1289,10 @@
     .footer-section {
         margin-top: 52px;
         padding: 40px calc(env(safe-area-inset-right) + 0px) calc(env(safe-area-inset-bottom) + 48px) calc(env(safe-area-inset-left) + 0px);
+        margin-left: calc(constant(safe-area-inset-left) + 0px);
+        margin-left: calc(env(safe-area-inset-left) + 0px);
+        margin-right: calc(constant(safe-area-inset-right) + 0px);
+        margin-right: calc(env(safe-area-inset-right) + 0px);
         margin-bottom: calc(constant(safe-area-inset-bottom) + 48px);
         margin-bottom: calc(env(safe-area-inset-bottom) + 48px);
     }
