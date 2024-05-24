@@ -146,7 +146,7 @@ $(function () {
                 this.lastY = touch.clientY;
             }
             
-            if (wheel < 0) {
+            if (wheel > 0) {
                 $(".mo-menu-layer-group .mo-menu-footer").removeClass("line");
             } else {
                 $(".mo-menu-layer-group .mo-menu-footer").addClass("line");
@@ -159,6 +159,7 @@ $(function () {
             this.lastY = touch.clientY;
         });
     });
+
     $("#closeMobileCategorylayerOverlay").click(function () {
         $("#mobileCategorylayerOverlay").addClass("off")
         $("body").removeClass("scroll-lock");
