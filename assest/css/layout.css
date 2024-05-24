@@ -325,6 +325,9 @@
 
 .main-visual-banner-section .indi-progress .autoplay-progress {
     position: absolute;
+    left: 0;
+    left: calc(constant(safe-area-inset-left) + 0px);
+    left: calc(env(safe-area-inset-left) + 0px);
     z-index: 10;
     width: 100%;
     height: 1px;
