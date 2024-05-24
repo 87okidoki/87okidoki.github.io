@@ -661,15 +661,15 @@ img {
 /*layout*/
 .container {
     width: 100%;
-    /* padding-right: calc(constant(safe-area-inset-right) + 0px);
-    padding-right: calc(env(safe-area-inset-right) + 0px);
-    padding-left: calc(constant(safe-area-inset-left) + 0px);
-    padding-left: calc(env(safe-area-inset-left) + 0px); */
 }
 
 /*contents-section*/
 .contents-section {
     padding: 52px 0;
+    padding-right: calc(constant(safe-area-inset-right) + 0px);
+    padding-right: calc(env(safe-area-inset-right) + 0px);
+    padding-left: calc(constant(safe-area-inset-left) + 0px);
+    padding-left: calc(env(safe-area-inset-left) + 0px);
 }
 
 .contents-section .contents-header .contents-header-title {
