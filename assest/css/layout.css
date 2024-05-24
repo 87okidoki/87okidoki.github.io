@@ -771,6 +771,10 @@
         right: 0;
         height: 56px;
         padding: 16px 20px;
+        right: calc(constant(safe-area-inset-right) + 0px);
+        right: calc(env(safe-area-inset-right) + 0px);
+        left: calc(constant(safe-area-inset-left) + 0px);
+        left: calc(env(safe-area-inset-left) + 0px);
     }
 
     .mo-header .mo-header-title {
@@ -802,6 +806,10 @@
         margin: 0 auto;
         background-color: var(--white-color);
         padding: 0 0 40px;
+        right: calc(constant(safe-area-inset-right) + 0px);
+        right: calc(env(safe-area-inset-right) + 0px);
+        left: calc(constant(safe-area-inset-left) + 0px);
+        left: calc(env(safe-area-inset-left) + 0px);
     }
 
     .mo-menu-layer-group.depth2-type .mo-menu-body {
