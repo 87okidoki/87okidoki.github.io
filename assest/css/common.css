@@ -1054,6 +1054,8 @@ img {
     position: fixed;
     z-index: 55;
     right: 28px;
+    right: calc(constant(safe-area-inset-right) + 28px);
+    right: calc(env(safe-area-inset-right) + 28px);
     transform: auto;
     max-width: var(--max-width);
     display: flex;

@@ -864,17 +864,17 @@
 
     .mo-menu-layer-group .mo-menu-footer {
         position: fixed;
-        left: 0;
-        right: 0;
-        bottom: 0;
+        left: 0px;
+        right: 0px;
+        bottom: 0px;
         background-color: var(--white-color);
         padding: 20px 20px 18px;
         padding: 20px 20px calc(constant(safe-area-inset-bottom) + 18px);
         padding: 20px 20px calc(env(safe-area-inset-bottom) + 18px);
-        right: calc(constant(safe-area-inset-right) + 0);
-        right: calc(env(safe-area-inset-right) + 0);
-        left: calc(constant(safe-area-inset-left) + 0);
-        left: calc(env(safe-area-inset-left) + 0);
+        right: calc(constant(safe-area-inset-right) + 0px);
+        right: calc(env(safe-area-inset-right) + 0px);
+        left: calc(constant(safe-area-inset-left) + 0px);
+        left: calc(env(safe-area-inset-left) + 0px);
     }
 
     .mo-menu-layer-group .mo-menu-footer.line {
