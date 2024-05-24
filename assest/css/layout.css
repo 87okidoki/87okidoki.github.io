@@ -145,6 +145,10 @@
     max-width: var(--max-width);
     box-shadow: 0 2px 30px 0 rgba(0, 0, 0, 0.04);
     transition: var(--transition);
+    right: calc(constant(safe-area-inset-right) + 0px);
+    right: calc(env(safe-area-inset-right) + 0px);
+    left: calc(constant(safe-area-inset-left) + 0px);
+    left: calc(env(safe-area-inset-left) + 0px);
 }
 
 .header-section.fixed .btn-app-down,
@@ -163,6 +167,10 @@
         height: 56px;
         max-width: 100%;
         box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.04);
+        right: calc(constant(safe-area-inset-right) + 0px);
+        right: calc(env(safe-area-inset-right) + 0px);
+        left: calc(constant(safe-area-inset-left) + 0px);
+        left: calc(env(safe-area-inset-left) + 0px);
     }
 
     .header-section .header .logo {
