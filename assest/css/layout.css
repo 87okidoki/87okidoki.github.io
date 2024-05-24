@@ -1312,7 +1312,7 @@
     display: none;
 }
 
-@media screen and (max-width:767px) and (orientation: landscape) {
+@media screen and (max-width:767px){
     .footer-section {
         margin-top: 52px;
         padding: 40px calc(constant(safe-area-inset-right) + 0px) calc(constant(safe-area-inset-bottom) + 48px) calc(constant(safe-area-inset-left) + 0px);
