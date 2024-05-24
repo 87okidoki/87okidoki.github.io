@@ -288,6 +288,8 @@
     position: absolute;
     left: 472px;
     bottom: 76px;
+    left: calc(constant(safe-area-inset-left) + 472px);
+    left: calc(env(safe-area-inset-left) + 472px);
 }
 
 .main-visual-banner-section .swiper-control-area .btn-area .btn-pause {
@@ -334,9 +336,6 @@
 .main-visual-banner-section .indi-progress .autoplay-progress svg {
     --progress: 0;
     position: absolute;
-    /* left: 0px;
-    left: calc(constant(safe-area-inset-left) + 0px);
-    left: calc(env(safe-area-inset-left) + 0px); */
     top: 0;
     z-index: 10;
     width: 100%;
@@ -414,8 +413,6 @@
         right: calc(constant(safe-area-inset-right) + 20px);
         right: calc(env(safe-area-inset-right) + 20px);
         bottom: 12px;
-        bottom: calc(constant(safe-area-inset-bottom) + 12px);
-        bottom: calc(env(safe-area-inset-bottom) + 12px);
     }
     .main-visual-banner-section .indi-progress {
         left: 20px;
@@ -425,8 +422,6 @@
         right: calc(constant(safe-area-inset-right) + 170px);
         right: calc(env(safe-area-inset-right) + 170px);
         bottom: 32px;
-        bottom: calc(constant(safe-area-inset-bottom) + 32px);
-        bottom: calc(env(safe-area-inset-bottom) + 32px);
         width: auto;
     }
     .main-visual-banner-section .swiper-control-area .btn-area {
