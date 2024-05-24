@@ -136,9 +136,9 @@ $(function () {
     $("#openMobileCategorylayer").click(function () {
         $("#mobileCategorylayerOverlay").removeClass("off");
         $("body").addClass("scroll-lock");
-        $(".mo-menu-layer-group .mo-menu-body").on("scroll", function (e) {
-            var wheel = e.originalEvent.wheelDelta;
-            if (wheel > 0) {
+        $(".mo-menu-layer-group").on("touchend", function (e) {
+            var touchend = e.originalEvent.wheelDelta;
+            if (touchend > 0) {
                 $(".mo-menu-layer-group .mo-menu-footer").removeClass("line");
 
             } else {
