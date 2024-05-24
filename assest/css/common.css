@@ -1032,7 +1032,7 @@ img {
     color: var(--blue-grey-400);
     text-align: center;
     font-size: 1.4rem;
-    width: 66px;
+    min-width: 66px;
     padding: 8px 0;
     line-height: 16px;
     margin-right: 8px;
