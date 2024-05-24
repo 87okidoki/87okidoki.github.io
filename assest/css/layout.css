@@ -862,6 +862,12 @@
         padding: 20px 20px 18px;
         padding: 20px 20px calc(constant(safe-area-inset-bottom) + 18px);
         padding: 20px 20px calc(env(safe-area-inset-bottom) + 18px);
+        right: calc(constant(safe-area-inset-right) + 0px);
+        right: calc(env(safe-area-inset-right) + 0px);
+        left: calc(constant(safe-area-inset-left) + 0px);
+        left: calc(env(safe-area-inset-left) + 0px);
+        bottom: calc(constant(safe-area-inset-bottom) + 0px);
+        bottom: calc(env(safe-area-inset-bottom) + 0px);
     }
 
     .mo-menu-layer-group .mo-menu-footer.line {
@@ -1240,6 +1246,14 @@
     background-color: #EEEEEF;
     padding: 56px 20px 64px;
     margin: 68px auto 0;
+    padding: 40px calc(constant(safe-area-inset-right) + 20px) calc(constant(safe-area-inset-bottom) + 48px) calc(constant(safe-area-inset-left) + 20px);
+    padding: 40px calc(env(safe-area-inset-right) + 20px) calc(env(safe-area-inset-bottom) + 48px) calc(env(safe-area-inset-left) + 20px);
+    margin-left: calc(constant(safe-area-inset-left) + 0px);
+    margin-left: calc(env(safe-area-inset-left) + 0px);
+    margin-right: calc(constant(safe-area-inset-right) + 0px);
+    margin-right: calc(env(safe-area-inset-right) + 0px);
+    margin-bottom: calc(constant(safe-area-inset-bottom) + 0px);
+    margin-bottom: calc(env(safe-area-inset-bottom) + 0px);
 }
 
 .footer-section .logo {
@@ -1289,13 +1303,8 @@
 @media screen and (max-width:767px) {
     .footer-section {
         margin-top: 52px;
+        padding: 40px calc(constant(safe-area-inset-right) + 0px) calc(constant(safe-area-inset-bottom) + 48px) calc(constant(safe-area-inset-left) + 0px);
         padding: 40px calc(env(safe-area-inset-right) + 0px) calc(env(safe-area-inset-bottom) + 48px) calc(env(safe-area-inset-left) + 0px);
-        margin-left: calc(constant(safe-area-inset-left) + 0px);
-        margin-left: calc(env(safe-area-inset-left) + 0px);
-        margin-right: calc(constant(safe-area-inset-right) + 0px);
-        margin-right: calc(env(safe-area-inset-right) + 0px);
-        margin-bottom: calc(constant(safe-area-inset-bottom) + 0px);
-        margin-bottom: calc(env(safe-area-inset-bottom) + 0px);
     }
     .footer-section .logo {
         width: 124px;
