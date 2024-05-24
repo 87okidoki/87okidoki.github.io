@@ -791,9 +791,12 @@
         bottom: 0;
         max-width: var(--max-width);
         z-index: 555;
-        margin: 0 auto;
+        margin-right: calc(constant(safe-area-inset-right) + 0px);
+        margin-right: calc(env(safe-area-inset-right) + 0px);
+        margin-left: calc(constant(safe-area-inset-left) + 0px);
+        margin-left: calc(env(safe-area-inset-left) + 0px);
         background-color: var(--white-color);
-        padding: 0 0 40px;
+        padding-bottom: 0 0 40px;
         right: calc(constant(safe-area-inset-right) + 0px);
         right: calc(env(safe-area-inset-right) + 0px);
         left: calc(constant(safe-area-inset-left) + 0px);
