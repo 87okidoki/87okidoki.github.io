@@ -43,11 +43,16 @@ $(function () {
     const mainEventBanner = new Swiper('#mainEventBanner', {
         loop: true,
         autoplay: false,
+        spaceBetween: 20,
         pagination: {
             el: ".swiper-pagination",
             clickable: true,
             watchOverflow: true
-        }
+        },
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
     });
 
     /* 메인 팝업 배너*/
@@ -68,7 +73,12 @@ $(function () {
         grid: {
             rows: 2
         },
-        spaceBetween: 0
+        spaceBetween: 0,
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+    
     });
 
     /* 썸네일 리스트 스와이퍼*/
@@ -77,11 +87,60 @@ $(function () {
         freeMode: true,
         pagination: {
             clickable: true
-        }
+        },
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
     });
 
     /* 카테고리 버튼 스와이퍼*/
-    const btnSwiper = new Swiper('#btnSwiper', {slidesPerView: 'auto'});
+
+    const btnSwiper = new Swiper('.btns-swiper-group', {
+        slidesPerView: 'auto',
+        preventClicks: true,
+        preventClicksPropagation: false,
+        observer: true,
+        observeParents: true,
+    });
+
+    const $snbSwiperItem = $('.btns-swiper-group .swiper-wrapper .swiper-slide a');
+    $snbSwiperItem.click(function() {
+        const target = $(this).parent();
+        $snbSwiperItem.parent().removeClass('on');
+        target.addClass('on');
+        muCenter(target);
+    });
+
+    function muCenter(target) {
+        const snbwrap = $('.btns-swiper-group .swiper-wrapper');
+        const targetPos = target.position();
+        const box = $('.btns-swiper-group');
+        const boxHalf = box.width() / 2;
+        let pos;
+        let listWidth = 0;
+
+        snbwrap.find('.swiper-slide').each(function() {
+            listWidth += $(this).outerWidth();
+        });
+
+        const selectTargetPos = targetPos.left + target.outerWidth() / 2;
+        if (selectTargetPos <= boxHalf) { // left
+            pos = 0;
+        } else if ((listWidth - selectTargetPos) <= boxHalf) { // right
+            pos = listWidth - box.width();
+        } else {
+            pos = selectTargetPos - boxHalf;
+        }
+
+        setTimeout(function() {
+            snbwrap.css({
+                "transform": "translate3d(" + (pos * -1) + "px, 0, 0)",
+                "transition-duration": "500ms"
+            });
+        }, 200);
+    }
+    // const btnSwiper = new Swiper('#btnSwiper', {slidesPerView: 'auto'});
 
     // 페이지 스크롤 이벤트 리스너 추가
     window.addEventListener('scroll', function () {
@@ -185,15 +244,23 @@ $(function () {
     $(".btns-swiper-group .swiper-slide").click(function () {
         var idx = $(this).index();
 
-        $(".btns-swiper-group .swiper-slide .btn-swiper-tab").removeClass("on");
+        $(".btns-swiper-group .swiper-slide .btn-swiper-tab").removeClass("active");
         $(".btns-swiper-group .swiper-slide .btn-swiper-tab")
             .eq(idx)
-            .addClass("on");
+            .addClass("active");
 
         $(".tab-swiper-content-section").hide();
         $(".tab-swiper-content-section")
             .eq(idx)
             .show();
+    });
+
+    // 팝업
+    var popupOverlay = document.getElementById('layerPopupOverlay');
+    var closePopupButton = document.getElementById('closePopuplayer');
+
+    closePopupButton.addEventListener('click', function () {
+        popupOverlay.style.display = 'none'; // 팝업 숨기기
     });
 
 });

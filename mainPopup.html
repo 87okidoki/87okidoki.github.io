@@ -26,7 +26,7 @@
             <!--메인 팝업 시작-->
             <section class="main-popup-section" id="layerPopupOverlay">
                 <div class="main-popup-container">
-                    <div class="main-popup-content">
+                    <div class="main-popup-body">
                         <div class="main-popup-banner-area swiper-banner">
                             <div class="swiper" id="mainPopupBanner">
                                 <div class="swiper-wrapper">
@@ -45,9 +45,9 @@
                             </div>
                         </div>
                     </div>
-                    <div class="main-popup-btns">
-                        <button type="button" class="btn-popup">오늘 하루 보지 않기</button>
-                        <button type="button" class="btn-popup-black" id="closePopuplayer">닫기</button>
+                    <div class="main-popup-footer">
+                        <button type="reset" class="btn btn-full btn-secondary btn-small">오늘 하루 보지 않기</button>
+                        <button type="button" class="btn btn-full btn-primary width-116  btn-small">닫기</button>
                     </div>
                 </div>
             </section>
@@ -55,19 +55,8 @@
         </div>
     </main>
     <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
-    <script src="./assest/js/common.js"></script>
     <script src="./assest/js/swiper-bundle.js"></script>
-    <script>
-        
-        // 팝업
-        var popupOverlay = document.getElementById('layerPopupOverlay');
-        var closePopupButton = document.getElementById('closePopuplayer');
-
-        closePopupButton.addEventListener('click', function () {
-            popupOverlay.style.display = 'none'; // 팝업 숨기기
-        });
-
-    </script>
+    <script src="./assest/js/common.js"></script>
 </body>
 
 </html>

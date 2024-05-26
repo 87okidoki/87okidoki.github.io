@@ -9,7 +9,6 @@
  *
  * Released on: May 13, 2024
  */
-
 var Swiper = (function () {
   'use strict';
 

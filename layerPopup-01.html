@@ -23,7 +23,7 @@
     <main class="main-wrap">
         <!--컨텐츠 시작-->
         <div class="container">
-            <!--메인 팝업 시작-->
+            <!--팝업 시작-->
             <section class="popup-section" id="layerPopupOverlay">
                 <div class="popup-container text-center">
                     <heade class="popup-header">
@@ -34,28 +34,16 @@
                         다시 결제를 시도해 주세요.</p>
                     </div>
                     <div class="popup-footer">
-                        <button type="button" class="btn btn-full btn-secondary">취소</button>
-                        <button type="button" class="btn btn-full btn-primary">확인</button>
+                        <button type="button" class="btn btn-full btn-primary btn-small">확인</button>
                     </div>
                 </div>
             </section>
-            <!--메인 팝업 끝-->
+            <!--팝업 끝-->
         </div>
     </main>
     <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
     <script src="./assest/js/swiper-bundle.js"></script>
     <script src="./assest/js/common.js"></script>
-    <script>
-        
-        // 팝업
-        var popupOverlay = document.getElementById('layerPopupOverlay');
-        var closePopupButton = document.getElementById('closePopuplayer');
-
-        closePopupButton.addEventListener('click', function () {
-            popupOverlay.style.display = 'none'; // 팝업 숨기기
-        });
-
-    </script>
 </body>
 
 </html>
