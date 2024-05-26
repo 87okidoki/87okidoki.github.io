@@ -221,10 +221,14 @@
     width: calc(100% - 421px);
 }
 .main-wrap .main-contents-wrap{
+    padding: 52px 0px 0px;
+    padding: 52px calc(constant(safe-area-inset-right) + 0px) 0px calc(constant(safe-area-inset-left) + 0px);
     padding: 52px calc(env(safe-area-inset-right) + 0px) 0px calc(env(safe-area-inset-left) + 0px);
 }
 
 .sub-contents-wrap{
+    padding: 112px 20px 56px;
+    padding: 112px calc(constant(safe-area-inset-right) + 20px) 56px calc(constant(safe-area-inset-left) + 20px);
     padding: 112px calc(env(safe-area-inset-right) + 20px) 56px calc(env(safe-area-inset-left) + 20px);
     margin: 0 auto;
     max-width: var(--max-width);
@@ -1798,7 +1802,8 @@ transform: rotate(-180deg);
     bottom: calc(constant(safe-area-inset-bottom) + 0px);
     bottom: calc(env(safe-area-inset-bottom) + 0px);
     left: 50%;
-    bottom: 0;
+    left: calc(constant(safe-area-inset-left) +  50%);
+    left: calc(env(safe-area-inset-left) +  50%);
     max-height: 900px;
     z-index: 990;
     border-radius: 28px 28px 0px 0px;
@@ -1818,8 +1823,8 @@ transform: rotate(-180deg);
 }
 .card-popup .card-bar-area .card-bar{
     width: 56px;
-height: 4px;border-radius: 2px;
-background-color: var(--blue-grey-200);
+    height: 4px;border-radius: 2px;
+    background-color: var(--blue-grey-200);
 }
 
 .price-info-list-group{
