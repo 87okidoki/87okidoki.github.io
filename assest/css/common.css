@@ -4479,12 +4479,12 @@ color: var(--primary-color);
   width: 32px;
   height: 32px;
   border-radius: 50%;
-  background-color: #fff;
-  box-shadow: 1px 1px 6px 0px rgba(0, 0, 0, 0.08), 1px 1px 15px 0px rgba(0, 0, 0, 0.08);
+  background-color: var(--white-color);
+ border: 1px solid var(--border-primary);
 }
 
 .swiper-banner .swiper-button-next{
-    right: 6px;
+    right: 3px;
 }
 .grid-thumb-list-items .swiper-button-next,
 .grid-thumb-list-items .swiper-button-prev{
