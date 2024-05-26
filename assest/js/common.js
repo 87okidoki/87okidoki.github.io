@@ -140,7 +140,7 @@ $(function () {
     //         });
     //     }, 200);
     // }
-    const btnSwiper = new Swiper('#btnSwiper', {slidesPerView: 'auto'});
+    const btnSwiper = new Swiper('.btns-swiper-group', {slidesPerView: 'auto'});
 
     // 페이지 스크롤 이벤트 리스너 추가
     window.addEventListener('scroll', function () {

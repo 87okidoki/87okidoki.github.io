@@ -488,11 +488,11 @@
     margin-right: 8px;
     display: block; 
 }
-.btns-swiper-group .swiper-slide.on a .btn-swiper-tab{    
+/* .btns-swiper-group .swiper-slide.on a .btn-swiper-tab{    
     border-radius: 8px;
     background: var(--black-color);
     color: var(--white-color); 
-}
+} */
 
 @media screen and (max-width:767px) {
     .btns-swiper-group {
