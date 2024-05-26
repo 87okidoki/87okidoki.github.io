@@ -1805,8 +1805,6 @@ transform: rotate(-180deg);
     right: calc(constant(safe-area-inset-right) + 0px);
     right: calc(env(safe-area-inset-right) +  0px);
     bottom: 0;
-    bottom: calc(constant(safe-area-inset-bottom) + 0px);
-    bottom: calc(env(safe-area-inset-bottom) + 0px);
     margin: 0 auto;
     max-height: 900px;
     z-index: 990;
