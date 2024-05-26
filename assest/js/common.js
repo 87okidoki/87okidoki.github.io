@@ -96,51 +96,51 @@ $(function () {
 
     /* 카테고리 버튼 스와이퍼*/
 
-    const btnSwiper = new Swiper('.btns-swiper-group', {
-        slidesPerView: 'auto',
-        preventClicks: true,
-        preventClicksPropagation: false,
-        observer: true,
-        observeParents: true,
-    });
+    // const btnSwiper = new Swiper('.btns-swiper-group', {
+    //     slidesPerView: 'auto',
+    //     preventClicks: true,
+    //     preventClicksPropagation: false,
+    //     observer: true,
+    //     observeParents: true,
+    // });
 
-    const $snbSwiperItem = $('.btns-swiper-group .swiper-wrapper .swiper-slide a');
-    $snbSwiperItem.click(function() {
-        const target = $(this).parent();
-        $snbSwiperItem.parent().removeClass('on');
-        target.addClass('on');
-        muCenter(target);
-    });
+    // const $snbSwiperItem = $('.btns-swiper-group .swiper-wrapper .swiper-slide a');
+    // $snbSwiperItem.click(function() {
+    //     const target = $(this).parent();
+    //     $snbSwiperItem.parent().removeClass('on');
+    //     target.addClass('on');
+    //     muCenter(target);
+    // });
 
-    function muCenter(target) {
-        const snbwrap = $('.btns-swiper-group .swiper-wrapper');
-        const targetPos = target.position();
-        const box = $('.btns-swiper-group');
-        const boxHalf = box.width() / 2;
-        let pos;
-        let listWidth = 0;
+    // function muCenter(target) {
+    //     const snbwrap = $('.btns-swiper-group .swiper-wrapper');
+    //     const targetPos = target.position();
+    //     const box = $('.btns-swiper-group');
+    //     const boxHalf = box.width() / 2;
+    //     let pos;
+    //     let listWidth = 0;
 
-        snbwrap.find('.swiper-slide').each(function() {
-            listWidth += $(this).outerWidth();
-        });
+    //     snbwrap.find('.swiper-slide').each(function() {
+    //         listWidth += $(this).outerWidth();
+    //     });
 
-        const selectTargetPos = targetPos.left + target.outerWidth() / 2;
-        if (selectTargetPos <= boxHalf) { // left
-            pos = 0;
-        } else if ((listWidth - selectTargetPos) <= boxHalf) { // right
-            pos = listWidth - box.width();
-        } else {
-            pos = selectTargetPos - boxHalf;
-        }
+    //     const selectTargetPos = targetPos.left + target.outerWidth() / 2;
+    //     if (selectTargetPos <= boxHalf) { // left
+    //         pos = 0;
+    //     } else if ((listWidth - selectTargetPos) <= boxHalf) { // right
+    //         pos = listWidth - box.width();
+    //     } else {
+    //         pos = selectTargetPos - boxHalf;
+    //     }
 
-        setTimeout(function() {
-            snbwrap.css({
-                "transform": "translate3d(" + (pos * -1) + "px, 0, 0)",
-                "transition-duration": "500ms"
-            });
-        }, 200);
-    }
-    // const btnSwiper = new Swiper('#btnSwiper', {slidesPerView: 'auto'});
+    //     setTimeout(function() {
+    //         snbwrap.css({
+    //             "transform": "translate3d(" + (pos * -1) + "px, 0, 0)",
+    //             "transition-duration": "500ms"
+    //         });
+    //     }, 200);
+    // }
+    const btnSwiper = new Swiper('#btnSwiper', {slidesPerView: 'auto'});
 
     // 페이지 스크롤 이벤트 리스너 추가
     window.addEventListener('scroll', function () {
