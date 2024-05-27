@@ -285,6 +285,7 @@
   cursor: auto;
   pointer-events: none;
 }
+
 .swiper-navigation-disabled .swiper-button-prev,
 .swiper-navigation-disabled .swiper-button-next {
   display: none !important;

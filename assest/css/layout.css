@@ -1218,13 +1218,6 @@
 .grid-thumb-list-items .book-thumb {
     height: 106px;
 }
-@media screen and (max-width:767px) {
-    .grid-thumb-list-items {
-        margin-left: -20px;
-        margin-right: -20px;
-    }
-
-}
 
 .book-thumb-area {
     position: relative;
