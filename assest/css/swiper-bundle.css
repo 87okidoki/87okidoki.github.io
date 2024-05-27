@@ -253,6 +253,8 @@
   --swiper-navigation-color: var(--swiper-theme-color);
   */
 }
+.grid-thumb-list-items .grid-swiper-button-next,
+.grid-thumb-list-items .grid-swiper-button-prev,
 .swiper-button-prev,
 .swiper-button-next {
   position: absolute;
@@ -267,12 +269,16 @@
   justify-content: center;
   color: var(--swiper-navigation-color, var(--swiper-theme-color));
 }
+.grid-thumb-list-items .grid-swiper-button-next.swiper-button-disabled,
+.grid-thumb-list-items .grid-swiper-button-prev.swiper-button-disabled,
 .swiper-button-prev.swiper-button-disabled,
 .swiper-button-next.swiper-button-disabled {
   opacity: 0;
   cursor: auto;
   pointer-events: none;
 }
+.grid-thumb-list-items .grid-swiper-button-next.swiper-button-hidden,
+.grid-thumb-list-items .grid-swiper-button-prev.swiper-button-hidden,
 .swiper-button-prev.swiper-button-hidden,
 .swiper-button-next.swiper-button-hidden {
   opacity: 0;
@@ -283,6 +289,8 @@
 .swiper-navigation-disabled .swiper-button-next {
   display: none !important;
 }
+.grid-thumb-list-items .grid-swiper-button-next svg,
+.grid-thumb-list-items .grid-swiper-button-prev svg,
 .swiper-button-prev svg,
 .swiper-button-next svg {
   width: 100%;
@@ -294,11 +302,13 @@
 .swiper-rtl .swiper-button-next svg {
   transform: rotate(180deg);
 }
+.grid-thumb-list-items .grid-swiper-button-prev,
 .swiper-button-prev,
 .swiper-rtl .swiper-button-next {
   left: var(--swiper-navigation-sides-offset, 4px);
   right: auto;
 }
+.grid-thumb-list-items .grid-swiper-button-next,
 .swiper-button-next,
 .swiper-rtl .swiper-button-prev {
   right: var(--swiper-navigation-sides-offset, 4px);

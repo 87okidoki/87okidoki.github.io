@@ -217,6 +217,7 @@
 }
 
 .main-wrap .main-ebook-group {
+    position: relative;
     float: right;
     width: calc(100% - 421px);
 }
@@ -1152,12 +1153,10 @@
 .grid-thumb-list-items {
     margin-top: 22px;
     margin-right: -20px;
-    margin-left: -20px;
 }
 
 .grid-thumb-list-items .swiper-wrapper {
     height: 277px;
-    padding-left: 20px;
 }
 .grid-thumb-list-items .swiper {
     width: 100%;
@@ -1172,7 +1171,7 @@
 .grid-thumb-list-items .thumb-item {
     display: flex;
     align-items: center;
-    margin-right: 36px;
+    margin-right: 26px;
     margin-top: 8px;
 }
 
@@ -1184,7 +1183,7 @@
 
 .grid-thumb-list-items .thumb-item-text-area {
     flex-shrink: 0;
-    width: 158px;
+    width: 101px;
     margin-left: 16px;
 }
 
