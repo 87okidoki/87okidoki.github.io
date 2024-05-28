@@ -222,15 +222,9 @@
     width: calc(100% - 421px);
 }
 .main-wrap .main-contents-wrap {
-<<<<<<< HEAD
     padding: 52px 0 68px;
     padding: 52px calc(constant(safe-area-inset-right) + 0px) 68px calc(constant(safe-area-inset-left) + 0px);
     padding: 52px calc(env(safe-area-inset-right) + 0px) 68px calc(env(safe-area-inset-left) + 0px);
-=======
-    padding: 52px 0 0;
-    padding: 52px calc(constant(safe-area-inset-right) + 0px) 0 calc(constant(safe-area-inset-left) + 0px);
-    padding: 52px calc(env(safe-area-inset-right) + 0px) 0 calc(env(safe-area-inset-left) + 0px);
->>>>>>> 26460279779478edbbb0ee1eaf50ddc1d74f4c3b
 }
 
 .sub-contents-wrap {
@@ -259,10 +253,7 @@
     }
     .sub-contents-wrap {
         padding-top: 96px;
-<<<<<<< HEAD
         padding-bottom: 50px;
-=======
->>>>>>> 26460279779478edbbb0ee1eaf50ddc1d74f4c3b
     }
 }
 
@@ -1801,7 +1792,6 @@
     }
     .payment-wrap .payment-accordion-group .checks-group .inline:last-child {
         margin-bottom: 0;
-<<<<<<< HEAD
     }
     .payment-wrap .cart-empty-section {
         margin-top: 64px;
@@ -1810,8 +1800,6 @@
     .payment-wrap .payment-completed-section {
         margin-top: 44px;
         padding-bottom: 0;
-=======
->>>>>>> 26460279779478edbbb0ee1eaf50ddc1d74f4c3b
     }
 }
 
