@@ -1456,7 +1456,7 @@
 }
 
 /*구매하기*/
-.purchase-wrap .purchase-header {
+.payment-wrap .payment-header {
     position: relative;
     display: flex;
     align-items: center;
@@ -1464,28 +1464,28 @@
     margin-bottom: 16px;
 }
 
-.purchase-wrap .purchase-header .purchase-header-title {
+.payment-wrap .payment-header .payment-header-title {
     position: relative;
     font-family: "Pretendard Bold";
     font-size: 2.4rem;
     line-height: 34px;
 }
-.purchase-wrap .purchase-header .sub-text {
+.payment-wrap .payment-header .sub-text {
     font-family: "Pretendard";
     font-size: 1.4rem;
     line-height: 20px;
     color: var(--blue-grey-600);
 }
-.purchase-wrap .purchase-header .amount {
+.payment-wrap .payment-header .amount {
     font-family: "Pretendard Bold";
     color: var(--black-color);
 }
-.purchase-wrap .purchase-header .purchase-header-left {
+.payment-wrap .payment-header .payment-header-left {
     display: flex;
     align-items: center;
     gap: 12px;
 }
-.purchase-wrap .purchase-header .info-popup-group {
+.payment-wrap .payment-header .info-popup-group {
     position: absolute;
     top: 32px;
     left: 0;
@@ -1494,13 +1494,13 @@
     z-index: 55;
     filter: drop-shadow(0px 4px 16px rgba(0, 0, 0, 0.16));
 }
-.purchase-wrap .purchase-header .info-popup-group .info-text-items {
+.payment-wrap .payment-header .info-popup-group .info-text-items {
     border-radius: 8px;
     background-color: var(--white-color);
     padding: 20px;
     overflow: hidden;
 }
-.purchase-wrap .purchase-header .info-popup-group::before {
+.payment-wrap .payment-header .info-popup-group::before {
     content: '';
     position: absolute;
     top: -8px;
@@ -1510,11 +1510,11 @@
     width: 16px;
     height: 12px;
 }
-.purchase-wrap .purchase-header .purchase-process {
+.payment-wrap .payment-header .payment-process {
     display: flex;
     align-items: center;
 }
-.purchase-wrap .purchase-header .purchase-process .purchase-process-item {
+.payment-wrap .payment-header .payment-process .payment-process-item {
     position: relative;
     font-size: 1.2rem;
     line-height: 14px;
@@ -1522,13 +1522,13 @@
     padding-left: 24px;
     padding-right: 32px;
 }
-.purchase-wrap .purchase-header .purchase-process .purchase-process-item.on {
+.payment-wrap .payment-header .payment-process .payment-process-item.on {
     color: var(--black-color);
 }
-.purchase-wrap .purchase-header .purchase-process .purchase-process-item:last-child {
+.payment-wrap .payment-header .payment-process .payment-process-item:last-child {
     padding-right: 0;
 }
-.purchase-wrap .purchase-header .purchase-process .purchase-process-item::after {
+.payment-wrap .payment-header .payment-process .payment-process-item::after {
     content: '';
     display: inline-block;
     position: absolute;
@@ -1538,10 +1538,10 @@
     height: 16px;
     background: url("../images/ic-process-arrow.svg");
 }
-.purchase-wrap .purchase-header .purchase-process .purchase-process-item:last-child:after {
+.payment-wrap .payment-header .payment-process .payment-process-item:last-child:after {
     display: none;
 }
-.purchase-wrap .purchase-header .purchase-process .purchase-process-item::before {
+.payment-wrap .payment-header .payment-process .payment-process-item::before {
     content: '';
     display: inline-block;
     position: absolute;
@@ -1550,26 +1550,26 @@
     width: 16px;
     height: 16px;
 }
-.purchase-wrap .purchase-header .purchase-process .purchase-process-item:nth-child(1)::before {
+.payment-wrap .payment-header .payment-process .payment-process-item:nth-child(1)::before {
     background: url("../images/ic-process-cart.svg");
 }
-.purchase-wrap .purchase-header .purchase-process .purchase-process-item:nth-child(2)::before {
+.payment-wrap .payment-header .payment-process .payment-process-item:nth-child(2)::before {
     background: url("../images/ic-process-card.svg");
 }
-.purchase-wrap .purchase-header .purchase-process .purchase-process-item:nth-child(3)::before {
+.payment-wrap .payment-header .payment-process .payment-process-item:nth-child(3)::before {
     background: url("../images/ic-process-order.svg");
 }
-.purchase-wrap .purchase-header .purchase-process .purchase-process-item.on:nth-child(1)::before {
+.payment-wrap .payment-header .payment-process .payment-process-item.on:nth-child(1)::before {
     background: url("../images/ic-process-cart-on.svg");
 }
-.purchase-wrap .purchase-header .purchase-process .purchase-process-item.on:nth-child(2)::before {
+.payment-wrap .payment-header .payment-process .payment-process-item.on:nth-child(2)::before {
     background: url("../images/ic-process-card-on.svg");
 }
-.purchase-wrap .purchase-header .purchase-process .purchase-process-item.on:nth-child(3)::before {
+.payment-wrap .payment-header .payment-process .payment-process-item.on:nth-child(3)::before {
     background: url("../images/ic-process-order-on.svg");
 }
 
-.purchase-wrap .purchase-option-group {
+.payment-wrap .payment-option-group {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -1577,42 +1577,42 @@
     padding-bottom: 16px;
     border-bottom: 2px solid var(--black-color);
 }
-.purchase-wrap .purchase-info-group {
+.payment-wrap .payment-info-group {
     text-align: center;
 }
-.purchase-wrap .purchase-info-group .img-box {
+.payment-wrap .payment-info-group .img-box {
     display: inline-block;
     width: 170px;
 }
-.purchase-wrap .purchase-info-group .text-box {
+.payment-wrap .payment-info-group .text-box {
     margin-top: 8px;
 }
-.purchase-wrap .purchase-info-group .purchase-title {
+.payment-wrap .payment-info-group .payment-title {
     font-family: "Pretendard Bold";
     font-size: 2rem;
     line-height: 24px;
 }
-.purchase-wrap .purchase-info-group .purchase-small-title {
+.payment-wrap .payment-info-group .payment-small-title {
     font-family: "Pretendard Bold";
     font-size: 1.6rem;
     line-height: 20px;
 }
-.purchase-wrap .purchase-info-group .purchase-text {
+.payment-wrap .payment-info-group .payment-text {
     margin-top: 16px;
     font-size: 1.4rem;
     line-height: 20px;
     color: var(--blue-grey-500);
 }
-.purchase-wrap .purchase-info-group .btn-area {
+.payment-wrap .payment-info-group .btn-area {
     margin-top: 36px;
 }
-.purchase-wrap .purchase-info-group .btns-area {
+.payment-wrap .payment-info-group .btns-area {
     display: flex;
     justify-content: center;
     gap: 16px;
     margin-top: 48px;
 }
-.purchase-wrap .purchase-completed-group {
+.payment-wrap .payment-completed-group {
     max-width: 484px;
     padding: 24px 28px;
     border-radius: 8px;
@@ -1620,7 +1620,7 @@
     margin: 56px auto 0;
 }
 
-.purchase-wrap .purchase-accordion-group .purchase-accordion-header {
+.payment-wrap .payment-accordion-group .payment-accordion-header {
     list-style: none;
     cursor: default;
     position: relative;
@@ -1628,7 +1628,7 @@
     padding-top: 16px;
     padding-bottom: 16px;
 }
-.purchase-wrap .purchase-accordion-group .purchase-accordion-header:after {
+.payment-wrap .payment-accordion-group .payment-accordion-header:after {
     content: "";
     position: absolute;
     top: 16px;
@@ -1641,29 +1641,29 @@
     width: 24px;
     height: 24px;
 }
-.purchase-wrap .purchase-accordion-group[open] .purchase-accordion-header {
+.payment-wrap .payment-accordion-group[open] .payment-accordion-header {
     border-bottom: 2px solid var(--black-color);
 }
-.purchase-wrap .purchase-accordion-group[open] .purchase-accordion-header:after {
+.payment-wrap .payment-accordion-group[open] .payment-accordion-header:after {
     transition: all 0.3s cubic-bezier(0,.21,.03,1.01);
     -webkit-transform: rotate(-180deg);
     transform: rotate(-180deg);
 }
-.purchase-wrap .purchase-accordion-group .purchase-accordion-title {
+.payment-wrap .payment-accordion-group .payment-accordion-title {
     font-family: "Pretendard SemiBold";
     font-size: 1.6rem;
     line-height: 24px;
 }
-.purchase-wrap .purchase-accordion-group .purchase-accordion-body {
+.payment-wrap .payment-accordion-group .payment-accordion-body {
     padding: 24px 0 56px;
 }
-.purchase-wrap .purchase-accordion-group .purchaser-info-box {
+.payment-wrap .payment-accordion-group .paymentr-info-box {
     margin-top: 12px;
 }
-.purchase-wrap .purchase-accordion-group .purchaser-info-box > li {
+.payment-wrap .payment-accordion-group .paymentr-info-box > li {
     display: flex;
 }
-.purchase-wrap .purchase-accordion-group .purchaser-info-box .title {
+.payment-wrap .payment-accordion-group .paymentr-info-box .title {
     position: relative;
     font-size: 1.4rem;
     line-height: 24px;
@@ -1672,7 +1672,7 @@
     padding-left: 12px;
     flex-shrink: 0;
 }
-.purchase-wrap .purchase-accordion-group .purchaser-info-box .title::before {
+.payment-wrap .payment-accordion-group .paymentr-info-box .title::before {
     content: '';
     display: inline-block;
     position: absolute;
@@ -1683,103 +1683,103 @@
     height: 2px;
     border-radius: 10px;
 }
-.purchase-wrap .purchase-accordion-group .purchaser-info-box .content {
+.payment-wrap .payment-accordion-group .paymentr-info-box .content {
     font-size: 1.4rem;
     line-height: 24px;
 }
-.purchase-wrap .purchase-accordion-group .goods-list-group:first-child .goods-list-header {
+.payment-wrap .payment-accordion-group .goods-list-group:first-child .goods-list-header {
     padding-top: 0;
 }
-.purchase-wrap .purchase-accordion-group .discount-coupon-box {
+.payment-wrap .payment-accordion-group .discount-coupon-box {
     display: flex;
     align-items: center;
 }
-.purchase-wrap .purchase-accordion-group .discount-coupon-left {
+.payment-wrap .payment-accordion-group .discount-coupon-left {
     display: flex;
     justify-content: space-between;
     flex-shrink: 0;
 }
-.purchase-wrap .purchase-accordion-group .discount-coupon-title {
+.payment-wrap .payment-accordion-group .discount-coupon-title {
     font-family: "Pretendard SemiBold";
     font-size: 1.6rem;
     line-height: 22px;
     margin-right: 99px;
 }
-.purchase-wrap .purchase-accordion-group .discount-coupon-total {
+.payment-wrap .payment-accordion-group .discount-coupon-total {
     font-size: 1.4rem;
     line-height: 20px;
 }
-.purchase-wrap .purchase-accordion-group .discount-coupon-right {
+.payment-wrap .payment-accordion-group .discount-coupon-right {
     width: 320px;
     margin-left: 40px;
 }
-.purchase-wrap .purchase-accordion-group .checks-group {
+.payment-wrap .payment-accordion-group .checks-group {
     padding-bottom: 24px;
 }
-.purchase-wrap .purchase-accordion-group .agree-checks-group.agree-check span {
+.payment-wrap .payment-accordion-group .agree-checks-group.agree-check span {
     color: var(--black-color);
     font-size: 1.2rem;
     line-height: 18px;
 }
-.purchase-wrap .agree-checks-group .info-text-items {
+.payment-wrap .agree-checks-group .info-text-items {
     margin-top: 16px;
     margin-left: 36px;
 }
 @media screen and (max-width:767px) {
-    .purchase-wrap .purchase-header .purchase-process,
-    .purchase-wrap .purchase-info-box {
+    .payment-wrap .payment-header .payment-process,
+    .payment-wrap .payment-info-box {
         display: none;
     }
-    .purchase-wrap .purchase-info-group .img-box {
+    .payment-wrap .payment-info-group .img-box {
         width: 128px;
     }
-    .purchase-wrap .purchase-header .purchase-header-title {
+    .payment-wrap .payment-header .payment-header-title {
         font-family: "Pretendard Bold";
         font-size: 2rem;
         line-height: 24px;
     }
-    .purchase-wrap .purchase-completed-group {
+    .payment-wrap .payment-completed-group {
         max-width: 100%;
         margin-top: 36px;
         padding: 24px 20px;
     }
-    .purchase-wrap .purchase-info-group .purchase-title {
+    .payment-wrap .payment-info-group .payment-title {
         font-family: "Pretendard Bold";
         font-size: 1.6rem;
         line-height: 24px;
     }
-    .purchase-wrap .purchase-info-group .btns-area {
+    .payment-wrap .payment-info-group .btns-area {
         display: block;
         margin-top: 32px;
     }
-    .purchase-wrap .purchase-info-group .btns-area .btn {
+    .payment-wrap .payment-info-group .btns-area .btn {
         width: 100%;
     }
-    .purchase-wrap .purchase-info-group .btns-area .btn +.btn {
+    .payment-wrap .payment-info-group .btns-area .btn +.btn {
         margin-top: 16px;
     }
-    .purchase-wrap .purchase-info-group .list-box li > .content {
+    .payment-wrap .payment-info-group .list-box li > .content {
         font-size: 1.4rem;
     }
-    .purchase-wrap .purchase-accordion-group .goods-list-group .goods-list-item .goods-list-left .badge-area {
+    .payment-wrap .payment-accordion-group .goods-list-group .goods-list-item .goods-list-left .badge-area {
         left: 0;
     }
-    .purchase-wrap .purchase-accordion-group .discount-coupon-box {
+    .payment-wrap .payment-accordion-group .discount-coupon-box {
         display: block;
     }
-    .purchase-wrap .purchase-accordion-group .discount-coupon-right {
+    .payment-wrap .payment-accordion-group .discount-coupon-right {
         width: 100%;
         margin-left: 0;
         margin-top: 24px;
     }
-    .purchase-wrap .purchase-accordion-group .discount-coupon-left {
+    .payment-wrap .payment-accordion-group .discount-coupon-left {
         width: 100%;
     }
-    .purchase-wrap .purchase-accordion-group .checks-group .inline {
+    .payment-wrap .payment-accordion-group .checks-group .inline {
         display: block;
         margin-bottom: 24px;
     }
-    .purchase-wrap .purchase-accordion-group .checks-group .inline:last-child {
+    .payment-wrap .payment-accordion-group .checks-group .inline:last-child {
         margin-bottom: 0;
     }
 }
