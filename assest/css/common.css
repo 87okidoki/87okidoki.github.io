@@ -55,7 +55,7 @@
     /* Modern Browsers */
     url("../fonts/Pretendard-Boldr.ttf") format("truetype"),
     /* Safari, Android, iOS */
-    url( "../fonts/Pretendard-Bold.svg#NotoSansKR") format("svg"))
+     url("../fonts/Pretendard-Bold.svg#NotoSansKR") format("svg"));
 }
 
 @font-face {
@@ -73,7 +73,7 @@
     /* Modern Browsers */
     url("../fonts/Pretendard-SemiBoldr.ttf") format("truetype"),
     /* Safari, Android, iOS */
-    url( "../fonts/Pretendard-SemiBold.svg#NotoSansKR") format("svg"))
+     url("../fonts/Pretendard-SemiBold.svg#NotoSansKR") format("svg"));
 }
 
 @font-face {
@@ -91,7 +91,7 @@
     /* Modern Browsers */
     url("../fonts/Pretendard-Regular.ttf") format("truetype"),
     /* Safari, Android, iOS */
-    url( "../fonts/Pretendard-Regular.svg#NotoSansKR") format("svg"))
+     url("../fonts/Pretendard-Regular.svg#NotoSansKR") format("svg"));
 }
 
 @font-face {
@@ -109,7 +109,7 @@
     /* Modern Browsers */
     url("../fonts/Pretendard-Light.ttf") format("truetype"),
     /* Safari, Android, iOS */
-    url( "../fonts/Pretendard-Light.svg#NotoSansKR") format("svg"))
+     url("../fonts/Pretendard-Light.svg#NotoSansKR") format("svg"));
 }
 
 /* reset */
@@ -1306,6 +1306,12 @@ img {
 }
 .btn-large:disabled {
     box-shadow: 0 0 0 0 transparent;
+}
+
+.btn-popup {
+    font-size: 1.6rem;
+    line-height: 40px;
+    padding: 0 20px;
 }
 
 .btn-icon-xsmall {
@@ -4516,8 +4522,8 @@ img {
     height: 22px;
 }
 @media screen and (hover:none) {
-    .grid-thumb-list-items .swiper-button-next,
-    .grid-thumb-list-items .swiper-button-prev,
+    .grid-thumb-list-items .grid-swiper-button-next,
+    .grid-thumb-list-items .grid-swiper-button-prev,
     .swiper-banner .swiper-button-next,
     .swiper-banner .swiper-button-prev,
     .thumb-list-items .swiper-button-next,
