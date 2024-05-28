@@ -43,7 +43,7 @@ $(function () {
     const mainEventBanner = new Swiper('#mainEventBanner', {
         loop: true,
         autoplay: false,
-        spaceBetween: 20,
+        spaceBetween: 26,
         pagination: {
             el: ".swiper-pagination",
             clickable: true,
@@ -59,6 +59,7 @@ $(function () {
     const mainPopupBanner = new Swiper('#mainPopupBanner', {
         loop: true,
         autoplay: false,
+              spaceBetween: 20,
         pagination: {
             el: ".swiper-pagination",
             clickable: true,
@@ -69,14 +70,13 @@ $(function () {
     /* 그리드 리스트 스와이퍼*/
     const gridSwiper = new Swiper('#gridSwiper', {
         slidesPerView: 'auto',
-        freeMode: true,
         grid: {
             rows: 2
         },
         spaceBetween: 0,
         navigation: {
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev",
+            nextEl: ".grid-swiper-button-next",
+            prevEl: ".grid-swiper-button-prev",
         },
     
     });
@@ -254,13 +254,4 @@ $(function () {
             .eq(idx)
             .show();
     });
-
-    // 팝업
-    var popupOverlay = document.getElementById('layerPopupOverlay');
-    var closePopupButton = document.getElementById('closePopuplayer');
-
-    closePopupButton.addEventListener('click', function () {
-        popupOverlay.style.display = 'none'; // 팝업 숨기기
-    });
-
 });

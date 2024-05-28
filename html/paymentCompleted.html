@@ -9,16 +9,16 @@
     <meta name="msapplication-TileColor" content="#fff">
     <meta name="msapplication-TileImage" content="/ms-icon-70x70.png">
     <meta name="apple-mobile-web-app-capable" content="yes">
-    <link rel="stylesheet" type="text/css" href="./assest/css/swiper-bundle.css" />
-    <link rel="stylesheet" type="text/css" href="./assest/css/common.css" />
-    <link rel="stylesheet" type="text/css" href="./assest/css/layout.css" />
+    <link rel="stylesheet" type="text/css" href="../assest/css/swiper-bundle.css" />
+    <link rel="stylesheet" type="text/css" href="../assest/css/common.css" />
+    <link rel="stylesheet" type="text/css" href="../assest/css/layout.css" />
     <meta name="keywords" content="meBook" />
     <meta name="description" content="meBook" />
     <title>meBook</title>
 </head>
 
 <body>
-    <main class="purchase-wrap">
+    <main class="payment-wrap">
         <!--컨텐츠 시작-->
         <div class="container">
             <!--해더 시작-->
@@ -33,7 +33,7 @@
                             </div>
                             <a href="#" class="logo">
                                 <h1>
-                                    <img src="assest/images/logo-meBook.svg" alt="meBook" />
+                                    <img src="../assest/images/logo-meBook.svg" alt="meBook" />
                                 </h1>
                             </a>
                             <nav class="pc-nav-btns">
@@ -205,7 +205,7 @@
                                     </ul>
                                     <div class="menu-thumb-banner-area">
                                         <a class="img-banner" href="#">
-                                            <img src="./assest/images/img-menu-banner-dummy-01.png" alt="" />
+                                            <img src="../assest/images/img-menu-banner-dummy-01.png" alt="" />
                                         </a>
                                     </div>
                                 </div>
@@ -239,37 +239,51 @@
             </section>
             <!--해더 끝-->
             <div class="sub-contents-wrap">
-                <header class="purchase-header">
-                    <div class="purchase-header-left">
-                        <h2 class="purchase-header-title">
-                            장바구니 
+                <header class="payment-header">
+                    <div class="payment-header-left">
+                        <h2 class="payment-header-title">
+                            구매완료 
                         </h2>
+                        <small class="sub-text">(이용 가능 <b class="amount">3개</b>)</small>
                     </div>
-                    <ul class="purchase-process">
-                        <li class="purchase-process-item on">장바구니</li>
-                        <li class="purchase-process-item">구매하기</li>
-                        <li class="purchase-process-item">구매완료</li>
+                    <ul class="payment-process">
+                        <li class="payment-process-item">장바구니</li>
+                        <li class="payment-process-item">구매하기</li>
+                        <li class="payment-process-item on">구매완료</li>
                     </ul>
                 </header>
-                <section class="cart-empty-section">
-                    <div class="purchase-info-group">
+                <section class="payment-completed-section">
+                    <div class="payment-info-group">
                         <div class="img-box">
-                            <img src="./assest/images/img-cart-01.png" alt=""/>
+                            <img src="../assest/images/img-cart-02.png" alt=""/>
                         </div>
                         <div class="text-box">
-                            <h3 class="purchase-small-title">장바구니에 담긴 상품이 없습니다.</h3>
+                            <h3 class="payment-title">결제가 성공적으로 완료되었습니다.</h3>
+                            <p class="payment-text">구매한 상품의 정보는 <br/>
+                                구매내역 조회에서 확인 가능합니다.
+                            </p>
                         </div>
-                        <div class="btn-area">
-                            <a href="#" class="btn btn-primary btn-medium">상품 담으러 가기</a>
+                        <div class="payment-completed-group">
+                            <ul class="list-box both-type">
+                                <li><div class="title">구매 번호</div><div class="content"><strong>202401011145895236321</strong></div></li>
+                                <li><div class="title">구매 일시</div><div class="content">2024.04.26. 09:23:59</div></li>
+                                <li><div class="title">결제 수단</div><div class="content">신용카드(신한), me포인트</div></li>
+                                <li><div class="title">결제 금액</div><div class="content"><strong class="color-primary">36,500원</strong></div></li>
+                            </ul>
+                        </div>
+                        <div class="btns-area">
+                            <a href="#" class="btn btn-secondary btn-medium">구매내역 조회하기</a>
+                            <a href="#" class="btn btn-primary btn-medium">메인으로 돌아가기</a>
                         </div>
                     </div>
                 </section>
+
             </div>
             <!--푸터 시작-->
             <footer class="footer-section">
                 <div class="container-inner">
                     <a href="#" class="logo">
-                        <img src="assest/images/logo-meBook.svg" alt="meBook" />
+                        <img src="../assest/images/logo-meBook.svg" alt="meBook" />
                     </a>
                     <p class="copyright-text">
                         Copyright © 2024 메가스터디교육(주). All Rights Reserved.
@@ -295,8 +309,8 @@
         </div>
     </main>
     <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
-    <script src="./assest/js/swiper-bundle.js"></script>
-    <script src="./assest/js/common.js"></script>
+    <script src="../assest/js/swiper-bundle.js"></script>
+    <script src="../assest/js/common.js"></script>
 </body>
 
 </html>
