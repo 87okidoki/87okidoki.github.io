@@ -254,4 +254,10 @@ $(function () {
             .eq(idx)
             .show();
     });
+
+    //모바일 장바구니 툴팁 
+    $(".btn-info").click(function () { 
+        $( '.info-popup-group' ).toggleClass( 'off' );
+     });
+   
 });

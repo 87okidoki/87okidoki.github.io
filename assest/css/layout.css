@@ -1717,6 +1717,9 @@
 .payment-wrap .payment-accordion-group .checks-group {
     padding-bottom: 24px;
 }
+.payment-wrap .agree-checks-group{
+    margin-top: 56px;
+}
 .payment-wrap .payment-accordion-group .agree-checks-group.agree-check span {
     color: var(--black-color);
     font-size: 1.2rem;
@@ -1797,14 +1800,21 @@
         margin-top: 64px;
         padding-bottom: 100px;
     }
-    .payment-wrap .payment-completed-section {
+    .payment-wrap .payment-completed-section .footer-section{
         margin-top: 44px;
         padding-bottom: 0;
     }
 }
+.cart-wrap{
+    padding-bottom:130px ;
+    padding-bottom: calc(constant(safe-area-inset-bottom) + 130px)  ;
+    padding-bottom: calc(env(safe-area-inset-bottom) + 130px)  ;
+}
+.payment-wrap{
 
-/*card-popup*/
-.card-popup {
+}
+/*bottom-sheet-popup*/
+.bottom-sheet-popup {
     position: fixed;
     left: 0;
     left: calc(constant(safe-area-inset-left));
@@ -1826,12 +1836,12 @@
     padding: 12px 20px calc(constant(safe-area-inset-bottom) + 32px);
     padding: 12px 20px calc(env(safe-area-inset-bottom) + 32px);
 }
-.card-popup .card-bar-area {
+.bottom-sheet-popup .handler-area {
     display: block;
     width: 100%;
     text-align: center;
 }
-.card-popup .card-bar-area .card-bar {
+.bottom-sheet-popup .handler-area .handler-bar {
     width: 56px;
     height: 4px;
     border-radius: 2px;

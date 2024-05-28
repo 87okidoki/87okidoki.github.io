@@ -1654,6 +1654,9 @@ img {
 .checks input[type="checkbox"]+label::before,
 .checks input[type="radio"]+label::before {
     content: "";
+    position: absolute;
+    top:2px;
+    left: 0px;
     display: inline-block;
     width: 16px;
     height: 16px;
@@ -1701,6 +1704,7 @@ img {
 }
 
 .checks .label-check {
+    position: relative;
     display: inline-block;
 }
 
@@ -1710,7 +1714,7 @@ img {
     line-height: 20px;
     vertical-align: middle;
     cursor: pointer;
-    padding-left: 16px;
+    padding-left: 32px;
 }
 
 /*list-area*/
@@ -2091,7 +2095,7 @@ img {
 }
 .goods-list-group .goods-list-item .goods-list-left .checks {
     align-self: flex-start;
-    margin-right: 16px;
+    margin-right: 32px;
 }
 .goods-list-group .goods-info-box {
     margin-left: 32px;
