@@ -4521,7 +4521,10 @@ img {
     width: 22px;
     height: 22px;
 }
-@media screen and (hover:none) {
+@media (hover: none),
+(pointer: coarse),
+(hover: none) and (pointer: coarse),
+(hover: none) and (pointer: fine){
     .grid-thumb-list-items .grid-swiper-button-next,
     .grid-thumb-list-items .grid-swiper-button-prev,
     .swiper-banner .swiper-button-next,
