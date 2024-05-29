@@ -1220,6 +1220,7 @@
     height: 106px;
 }
 
+/* book-thumb-area */
 .book-thumb-area {
     position: relative;
     margin-bottom: 24px;
@@ -1247,26 +1248,14 @@
     height: 46px;
     z-index: 1;
 }
-.book-thumb-area.x-large {
+
+.book-thumb-area {
     width: 160px;
-    height: 212px;
-}
-.book-thumb-area.medium {
-    width: 160px;
-    height: 191px;
-}
-.book-thumb-area.medium {
-    width: 124px;
-    height: 164px;
 }
 .book-thumb-area.small {
     width: 104px;
-    height: 138px;
 }
-.book-thumb-area.x-small {
-    width: 82px;
-    height: 106px;
-}
+
 .book-thumb {
     position: relative;
     border-radius: 2px 8px 8px 2px;
@@ -1275,7 +1264,14 @@
     overflow: hidden;
     filter: drop-shadow(0px 1px 4px rgba(0, 0, 0, 0.12));
 }
-
+@media screen and (max-width:767px) {
+    .book-thumb-area {
+        width: 124px;
+    }
+    .book-thumb-area.small {
+        width: 82px;
+    }
+}
 .goods-thumb-area {
     position: relative;
 }
@@ -1297,17 +1293,24 @@
     overflow: hidden;
     margin-bottom: 24px;
 }
-.goods-thumb-area.large {
+.goods-thumb-area .goods-thumb {
     width: 160px;
     height: 212px;
 }
-.goods-thumb-area.medium {
-    width: 126px;
-    height: 168px;
-}
-.goods-thumb-area.small {
+.goods-thumb-area.small .goods-thumb {
     width: 104px;
     height: 138px;
+}
+@media screen and (max-width:767px) {
+    .goods-thumb-area .goods-thumb {
+        width: 126px;
+        height: 168px;
+    }
+
+    .goods-thumb-area.small .goods-thumb {
+        width: 82px;
+        height: 106px;
+    }
 }
 
 .book-area {
@@ -1717,8 +1720,11 @@
 .payment-wrap .payment-accordion-group .checks-group {
     padding-bottom: 24px;
 }
-.payment-wrap .agree-checks-group{
+.payment-wrap .payment-accordion-group .agree-checks-group {
     margin-top: 56px;
+}
+.payment-wrap .payment-section .payment-accordion-group:last-child .payment-accordion-body {
+    padding-bottom: 0;
 }
 .payment-wrap .payment-accordion-group .agree-checks-group.agree-check span {
     color: var(--black-color);
@@ -1800,19 +1806,18 @@
         margin-top: 64px;
         padding-bottom: 100px;
     }
-    .payment-wrap .payment-completed-section .footer-section{
+    .payment-wrap .payment-completed-section .footer-section {
         margin-top: 44px;
         padding-bottom: 0;
     }
 }
-.cart-wrap{
-    padding-bottom:130px ;
-    padding-bottom: calc(constant(safe-area-inset-bottom) + 130px)  ;
-    padding-bottom: calc(env(safe-area-inset-bottom) + 130px)  ;
+.cart-wrap {
+    padding-bottom: 130px;
+    padding-bottom: calc(constant(safe-area-inset-bottom) + 130px);
+    padding-bottom: calc(env(safe-area-inset-bottom) + 130px);
 }
-.payment-wrap{
+.payment-wrap {}
 
-}
 /*bottom-sheet-popup*/
 .bottom-sheet-popup {
     position: fixed;
@@ -1832,6 +1837,11 @@
     background: var(--white-color);
     box-shadow: 0 -2px 30px 0 rgba(0, 0, 0, 0.08);
     transition: all 0.3s cubic-bezier(0,.21,.03,1.01);
+    padding: 12px 20px 32px 0;
+    padding: 12px 20px calc(constant(safe-area-inset-bottom) + 32px);
+    padding: 12px 20px calc(env(safe-area-inset-bottom) + 32px);
+}
+.bottom-sheet-popup.handler {
     padding: 12px 20px 158px 0;
     padding: 12px 20px calc(constant(safe-area-inset-bottom) + 158px);
     padding: 12px 20px calc(env(safe-area-inset-bottom) + 158px);
@@ -1847,15 +1857,21 @@
     border-radius: 2px;
     background-color: var(--blue-grey-200);
 }
-.bottom-sheet-popup .bottom-sheet-footer{
+.bottom-sheet-popup .bottom-sheet-footer {
     position: fixed;
-    left: 0;
+    left: calc(constant(safe-area-inset-left));
+    left: calc(env(safe-area-inset-left));
     right: 0;
-    bottom: 0px;
-    background-color:var(--white-color);
-        padding: 0px 20px 32px 0;
-            padding: 0px 20px calc(constant(safe-area-inset-bottom) + 32px);
-            padding: 0px 20px calc(env(safe-area-inset-bottom) + 32px);
+    right: calc(constant(safe-area-inset-right));
+    right: calc(env(safe-area-inset-right));
+    bottom: 0;
+    background-color: var(--white-color);
+    padding: 0 20px 32px 0;
+    padding: 0 20px calc(constant(safe-area-inset-bottom) + 32px);
+    padding: 0 20px calc(env(safe-area-inset-bottom) + 32px);
+    margin: 0 auto;
+    max-width: var(--max-width);
+    min-width: 280px;
 }
 
 .price-info-list-group {
