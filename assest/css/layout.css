@@ -1496,7 +1496,8 @@
     right: 0;
     display: block;
     z-index: 55;
-    filter: drop-shadow(0px 4px 16px rgba(0, 0, 0, 0.16));
+    border-radius: 8px;
+    box-shadow:0px 4px 16px rgba(0, 0, 0, 0.16);
 }
 .payment-wrap .payment-header .info-popup-group .info-text-items {
     border-radius: 8px;
@@ -1508,7 +1509,7 @@
     content: '';
     position: absolute;
     top: -8px;
-    left: 85px;
+    left: 87px;
     display: inline-block;
     background: url("../images/img-polygon.svg") no-repeat center center/ contain;
     width: 16px;
@@ -1623,7 +1624,9 @@
     background-color: var(--blue-grey-50);
     margin: 56px auto 0;
 }
-
+.payment-wrap .payment-accordion-groupsummary::marker {
+    font-size: 0;
+}
 .payment-wrap .payment-accordion-group .payment-accordion-header {
     list-style: none;
     cursor: default;
