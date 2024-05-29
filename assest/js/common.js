@@ -51,15 +51,15 @@ $(function () {
         },
         navigation: {
             nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev",
-        },
+            prevEl: ".swiper-button-prev"
+        }
     });
 
     /* 메인 팝업 배너*/
     const mainPopupBanner = new Swiper('#mainPopupBanner', {
         loop: true,
         autoplay: false,
-              spaceBetween: 20,
+        spaceBetween: 20,
         pagination: {
             el: ".swiper-pagination",
             clickable: true,
@@ -76,9 +76,8 @@ $(function () {
         spaceBetween: 0,
         navigation: {
             nextEl: ".grid-swiper-button-next",
-            prevEl: ".grid-swiper-button-prev",
-        },
-    
+            prevEl: ".grid-swiper-button-prev"
+        }
     });
 
     /* 썸네일 리스트 스와이퍼*/
@@ -90,56 +89,30 @@ $(function () {
         },
         navigation: {
             nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev",
-        },
+            prevEl: ".swiper-button-prev"
+        }
     });
 
     /* 카테고리 버튼 스와이퍼*/
 
-    // const btnSwiper = new Swiper('.btns-swiper-group', {
-    //     slidesPerView: 'auto',
-    //     preventClicks: true,
-    //     preventClicksPropagation: false,
-    //     observer: true,
-    //     observeParents: true,
-    // });
-
-    // const $snbSwiperItem = $('.btns-swiper-group .swiper-wrapper .swiper-slide a');
-    // $snbSwiperItem.click(function() {
-    //     const target = $(this).parent();
-    //     $snbSwiperItem.parent().removeClass('on');
-    //     target.addClass('on');
-    //     muCenter(target);
-    // });
-
-    // function muCenter(target) {
-    //     const snbwrap = $('.btns-swiper-group .swiper-wrapper');
-    //     const targetPos = target.position();
-    //     const box = $('.btns-swiper-group');
-    //     const boxHalf = box.width() / 2;
-    //     let pos;
-    //     let listWidth = 0;
-
-    //     snbwrap.find('.swiper-slide').each(function() {
-    //         listWidth += $(this).outerWidth();
-    //     });
-
-    //     const selectTargetPos = targetPos.left + target.outerWidth() / 2;
-    //     if (selectTargetPos <= boxHalf) { // left
-    //         pos = 0;
-    //     } else if ((listWidth - selectTargetPos) <= boxHalf) { // right
-    //         pos = listWidth - box.width();
-    //     } else {
-    //         pos = selectTargetPos - boxHalf;
-    //     }
-
-    //     setTimeout(function() {
-    //         snbwrap.css({
-    //             "transform": "translate3d(" + (pos * -1) + "px, 0, 0)",
-    //             "transition-duration": "500ms"
-    //         });
-    //     }, 200);
-    // }
+    // const btnSwiper = new Swiper('.btns-swiper-group', {     slidesPerView:
+    // 'auto',     preventClicks: true,     preventClicksPropagation: false,
+    // observer: true,     observeParents: true, }); const $snbSwiperItem =
+    // $('.btns-swiper-group .swiper-wrapper .swiper-slide a');
+    // $snbSwiperItem.click(function() {     const target = $(this).parent();
+    // $snbSwiperItem.parent().removeClass('on');     target.addClass('on');
+    // muCenter(target); }); function muCenter(target) {     const snbwrap =
+    // $('.btns-swiper-group .swiper-wrapper');     const targetPos =
+    // target.position();     const box = $('.btns-swiper-group');     const boxHalf
+    // = box.width() / 2;     let pos;     let listWidth = 0;
+    // snbwrap.find('.swiper-slide').each(function() {         listWidth +=
+    // $(this).outerWidth();     });     const selectTargetPos = targetPos.left +
+    // target.outerWidth() / 2;     if (selectTargetPos <= boxHalf) {  left pos = 0;
+    // } else if ((listWidth - selectTargetPos) <= boxHalf) {  right pos = listWidth
+    // - box.width();     } else {         pos = selectTargetPos - boxHalf;     }
+    // setTimeout(function() {         snbwrap.css({ "transform": "translate3d(" +
+    // (pos * -1) + "px, 0, 0)", "transition-duration": "500ms"         });     },
+    // 200); }
     const btnSwiper = new Swiper('.btns-swiper-group', {slidesPerView: 'auto'});
 
     // 페이지 스크롤 이벤트 리스너 추가
@@ -148,36 +121,27 @@ $(function () {
 
         // 스크롤 위치가 0보다 크면 'fixed' 클래스 추가, 아니면 제거
         if (window.scrollY > 0) {
-            header
-                .classList
-                .add('fixed');
+            header.classList.add('fixed');
         } else {
-            header
-                .classList
-                .remove('fixed');
+            header.classList.remove('fixed');
         }
     });
 
     // 스크롤 탑버튼
-    window.addEventListener('scroll', function () {
-        var scrollTopButton = document.getElementById('btnTopScroll');
 
-        if (window.scrollY > 0) {
-            scrollTopButton
-                .classList
-                .add('on');
+    // "맨 위로" 버튼 클릭 이벤트
+  var scrollTopButton = $('#btnTopScroll');
+
+    $(window).on('scroll', function() {
+        if ($(this).scrollTop() > 0) {
+            scrollTopButton.addClass('on');
         } else {
-            scrollTopButton
-                .classList
-                .remove('on');
+            scrollTopButton.removeClass('on');
         }
     });
-    // "맨 위로" 버튼 클릭 이벤트
-    $('.btn-top-scroll').click(function () {
-        $('html, body').animate({
-            scrollTop: 0
-        }, 300);
-        return false;
+
+    scrollTopButton.on('click', function() {
+        $('html, body').animate({ scrollTop: 0 }, '300');
     });
 
     /* pc 카테고리 메뉴 열림 닫힘*/
@@ -255,32 +219,39 @@ $(function () {
             .show();
     });
 
-    //모바일 장바구니 툴팁 
-    $(".btn-info").click(function () { 
-        $( '.info-popup-group' ).toggleClass( 'off' );
+    //모바일 장바구니 툴팁
+    $(".btn-info").click(function () {
+        $('.info-popup-group').toggleClass('off');
     });
-    
-    
-    //바텀시트 ui 
-    let startY, currentY, initialBottom, isDragging, isOpen = false;
 
-     function toggleBottomSheet() {
+
+
+    //구매하기바텀시트 ui
+    let startY,
+        currentY,
+        initialBottom,
+        isDragging,
+        isOpen = false;
+
+    function toggleBottomSheet() {
+        const bottomSheetHeight = $('#bottomSheet').height();
         if (isOpen) {
-                      $('#bottomSheet').css('bottom', '0');
+            $('#bottomSheet').css('bottom', '0');
+            $('.footer-section').css('padding-bottom', '477px' );
+            $('#btnTopScroll').css('bottom', '465px');
         } else {
-              $('#bottomSheet').css('bottom', '-274px');
+            $('#bottomSheet').css('bottom', '-274px');
+            $('#btnTopScroll').css('bottom', '203px');
+            $('.footer-section').css('padding-bottom', '194px');
+
         }
         isOpen = !isOpen;
     }
 
-    $('#bottomSheetHandler').on('click', function() {
+    $('#bottomSheetHandler').on('click', function () {
         toggleBottomSheet();
     });
 
-    $('#closeBottomSheet').on('click', function() {
-        $('#bottomSheet').css('bottom', '-274px');
-        isOpen = false;
-    });
     function startDrag(y) {
         startY = y;
         initialBottom = parseInt($('#bottomSheet').css('bottom'));
@@ -288,8 +259,9 @@ $(function () {
     }
 
     function onDrag(y) {
-        if (!isDragging) return;
-
+        if (!isDragging) 
+            return;
+        
         currentY = y;
         let deltaY = startY - currentY;
         let newBottom = initialBottom + deltaY;
@@ -315,29 +287,17 @@ $(function () {
         }
     }
 
-    // 모바일 터치 이벤트
-    $('#bottomSheetHandler').on('touchstart', function(e) {
-        startDrag(e.touches[0].clientY);
-    });
-
-    $('#bottomSheetHandler').on('touchmove', function(e) {
-        onDrag(e.touches[0].clientY);
-    });
-
-    $('#bottomSheetHandler').on('touchend', function() {
-        endDrag();
-    });
-
+ 
     // 데스크톱 마우스 이벤트
-    $('#bottomSheetHandler').on('mousedown', function(e) {
+    $('#bottomSheetHandler').on('mousedown', function (e) {
         startDrag(e.clientY);
     });
 
-    $(document).on('mousemove', function(e) {
+    $(document).on('mousemove', function (e) {
         onDrag(e.clientY);
     });
 
-    $(document).on('mouseup', function() {
+    $(document).on('mouseup', function () {
         if (isDragging) {
             endDrag();
         }
