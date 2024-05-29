@@ -258,6 +258,88 @@ $(function () {
     //모바일 장바구니 툴팁 
     $(".btn-info").click(function () { 
         $( '.info-popup-group' ).toggleClass( 'off' );
-     });
-   
+    });
+    
+    
+    //바텀시트 ui 
+    let startY, currentY, initialBottom, isDragging, isOpen = false;
+
+     function toggleBottomSheet() {
+        if (isOpen) {
+                      $('#bottomSheet').css('bottom', '0');
+        } else {
+              $('#bottomSheet').css('bottom', '-274px');
+        }
+        isOpen = !isOpen;
+    }
+
+    $('#bottomSheetHandler').on('click', function() {
+        toggleBottomSheet();
+    });
+
+    $('#closeBottomSheet').on('click', function() {
+        $('#bottomSheet').css('bottom', '-274px');
+        isOpen = false;
+    });
+    function startDrag(y) {
+        startY = y;
+        initialBottom = parseInt($('#bottomSheet').css('bottom'));
+        isDragging = true;
+    }
+
+    function onDrag(y) {
+        if (!isDragging) return;
+
+        currentY = y;
+        let deltaY = startY - currentY;
+        let newBottom = initialBottom + deltaY;
+
+        // 제한 조건: 바텀시트가 완전히 화면 밖으로 나가지 않도록
+        if (newBottom < -$('#bottomSheet').height()) {
+            newBottom = -$('#bottomSheet').height();
+        } else if (newBottom > 0) {
+            newBottom = 0;
+        }
+
+        $('#bottomSheet').css('bottom', newBottom + 'px');
+    }
+
+    function endDrag() {
+        isDragging = false;
+
+        // 스냅 효과: 일정 거리 이상 드래그하면 열리고, 그렇지 않으면 닫힘
+        if (parseInt($('#bottomSheet').css('bottom')) > -$('#bottomSheet').height() / 2) {
+            $('#bottomSheet').css('bottom', '0');
+        } else {
+            $('#bottomSheet').css('bottom', '-274px');
+        }
+    }
+
+    // 모바일 터치 이벤트
+    $('#bottomSheetHandler').on('touchstart', function(e) {
+        startDrag(e.touches[0].clientY);
+    });
+
+    $('#bottomSheetHandler').on('touchmove', function(e) {
+        onDrag(e.touches[0].clientY);
+    });
+
+    $('#bottomSheetHandler').on('touchend', function() {
+        endDrag();
+    });
+
+    // 데스크톱 마우스 이벤트
+    $('#bottomSheetHandler').on('mousedown', function(e) {
+        startDrag(e.clientY);
+    });
+
+    $(document).on('mousemove', function(e) {
+        onDrag(e.clientY);
+    });
+
+    $(document).on('mouseup', function() {
+        if (isDragging) {
+            endDrag();
+        }
+    });
 });
