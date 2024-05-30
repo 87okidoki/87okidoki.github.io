@@ -1628,6 +1628,12 @@
 .payment-wrap .payment-accordion-group summary::marker {
     font-size: 0;
 }
+.payment-wrap .payment-accordion-group summary::-webkit-details-marker {
+    display: none;
+}
+.payment-wrap .payment-accordion-group summary{
+    list-style-type: none;
+}
 .payment-wrap .payment-accordion-group .payment-accordion-header {
     list-style: none;
     cursor: default;
