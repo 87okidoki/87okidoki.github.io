@@ -237,12 +237,8 @@ $(function () {
         const bottomSheetHeight = $('#bottomSheet').height();
         if (isOpen) {
             $('#bottomSheet').css('bottom', '0');
-            $('.footer-section').css('padding-bottom', '477px' );
-            $('#btnTopScroll').css('bottom', '465px');
         } else {
             $('#bottomSheet').css('bottom', '-274px');
-            $('#btnTopScroll').css('bottom', '203px');
-            $('.footer-section').css('padding-bottom', '194px');
 
         }
         isOpen = !isOpen;
