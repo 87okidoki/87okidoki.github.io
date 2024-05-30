@@ -242,9 +242,9 @@
                 <header class="payment-header">
                     <div class="payment-header-left">
                         <h2 class="payment-header-title">
-                            구매완료 
+                            구매하기
                         </h2>
-                        <small class="sub-text">(이용 가능 <b class="amount">3개</b>)</small>
+                        <small class="sub-text">(결제 대기 <b class="amount">3개</b>)</small>
                     </div>
                     <ul class="payment-process">
                         <li class="payment-process-item">장바구니</li>
@@ -270,6 +270,7 @@
                     <details class="payment-accordion-group" open>
                         <summary class="payment-accordion-header">
                             <h3 class="payment-accordion-title">구매 상품</h3>
+                            <span class="payment-accordion-content">4개</span>
                         </summary>
                         <div class="payment-accordion-body">
                             <div class="goods-list-group">
@@ -290,7 +291,7 @@
                                                 <div class="badge-area">
                                                     <span class="badge badge-primary">소장</span>
                                                 </div>
-                                                <h3 class="goods-title">2024 전한길 한국사 4.0 실전동형 모의고사 시즌 1</h3>
+                                                <a href="" class="goods-title">2024 전한길 한국사 4.0 실전동형 모의고사 시즌 1</a>
                                                 <div class="goods-info-text"><span class="text">전한길</span> <span class="text">메가스터디교육(공무원)</span></div>
                                                 <div class="goods-price"><span class="discount">10%</span><strong class="discount-price">9,000원</strong><span class="price">10,000원</span></div>
                                             </div>
@@ -309,7 +310,7 @@
                                                 <div class="badge-area">
                                                     <span class="badge badge-green">대여</span>
                                                 </div>
-                                                <h3 class="goods-title">2024 전한길 한국사 4.0 실전동형 모의고사 시즌 1</h3>
+                                                 <a href="" class="goods-title">2024 전한길 한국사 4.0 실전동형 모의고사 시즌 1</a>
                                                 <div class="goods-info-text"><span class="text">전한길</span> <span class="text">메가스터디교육(공무원)</span></div>
                                                 <div class="goods-price"><span class="discount">10%</span><strong class="discount-price">9,000원</strong><span class="price">10,000원</span></div>
                                             </div>
@@ -335,7 +336,7 @@
                                                 <div class="badge-area">
                                                     <span class="badge badge-green">대여</span>
                                                 </div>
-                                                <h3 class="goods-title">2024 전한길 한국사 4.0 실전동형 모의고사 시즌 1</h3>
+                                                <a href="" class="goods-title">2024 전한길 한국사 4.0 실전동형 모의고사 시즌 1</a>
                                                 <div class="goods-info-text"><span class="text">전한길</span> <span class="text">메가스터디교육(공무원)</span></div>
                                                 <div class="goods-price"><span class="discount">10%</span><strong class="discount-price">9,000원</strong><span class="price">10,000원</span></div>
                                             </div>
@@ -354,7 +355,7 @@
                                                 <div class="badge-area">
                                                     <span class="badge badge-primary">소장</span>
                                                 </div>
-                                                <h3 class="goods-title">2024 전한길 한국사 4.0 실전동형 모의고사 시즌 1</h3>
+                                                <a href="" class="goods-title">2024 전한길 한국사 4.0 실전동형 모의고사 시즌 1</a>
                                                 <div class="goods-info-text"><span class="text">전한길</span> <span class="text">메가스터디교육(공무원)</span></div>
                                                 <div class="goods-price"><span class="discount">10%</span><strong class="discount-price">9,000원</strong><span class="price">10,000원</span></div>
                                             </div>
@@ -367,6 +368,7 @@
                     <details class="payment-accordion-group" open>
                         <summary class="payment-accordion-header">
                             <h3 class="payment-accordion-title">혜택 적용</h3>
+                            <span class="payment-accordion-content">- 7,500원</span>
                         </summary>
                         <div class="payment-accordion-body">
                             <div class="discount-coupon-box">
@@ -390,11 +392,12 @@
                     <details class="payment-accordion-group" open>
                         <summary class="payment-accordion-header">
                             <h3 class="payment-accordion-title">결제 수단</h3>
+                            <span class="payment-accordion-content">36,000원</span>
                         </summary>
                         <div class="payment-accordion-body">
                             <div class="checks-group">
                                 <div class="checks inline">
-                                    <input type="radio" name="payment" id="payment-01" class="check" value="payment-01" />
+                                    <input type="radio" name="payment" id="payment-01" class="check" value="payment-01" checked />
                                     <label for="payment-01" class="label-check"><span>신용/체크카드</span></label>
                                 </div>
                                 <div class="checks inline">
@@ -468,7 +471,7 @@
                         <div class="total-price-conent color-primary">36,500원</div>
                     </div>
                     <div class="btn-area">
-                        <button type="button" class="btn btn-primary btn-full btn-large">결제하기</button>
+                        <button type="button" class="btn btn-primary btn-full btn-large" disabled>결제하기</button>
                     </div>
                 </div>
             </section>
