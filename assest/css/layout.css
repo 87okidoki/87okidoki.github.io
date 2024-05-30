@@ -1625,7 +1625,7 @@
     background-color: var(--blue-grey-50);
     margin: 56px auto 0;
 }
-.payment-wrap .payment-accordion-groupsummary::marker {
+.payment-wrap .payment-accordion-group summary::marker {
     font-size: 0;
 }
 .payment-wrap .payment-accordion-group .payment-accordion-header {
