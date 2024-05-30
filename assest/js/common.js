@@ -121,18 +121,20 @@ $(function () {
 
         // 스크롤 위치가 0보다 크면 'fixed' 클래스 추가, 아니면 제거
         if (window.scrollY > 0) {
-            header.classList.add('fixed');
+            header
+                .classList
+                .add('fixed');
         } else {
-            header.classList.remove('fixed');
+            header
+                .classList
+                .remove('fixed');
         }
     });
 
-    // 스크롤 탑버튼
+    // 스크롤 탑버튼 "맨 위로" 버튼 클릭 이벤트
+    var scrollTopButton = $('#btnTopScroll');
 
-    // "맨 위로" 버튼 클릭 이벤트
-  var scrollTopButton = $('#btnTopScroll');
-
-    $(window).on('scroll', function() {
+    $(window).on('scroll', function () {
         if ($(this).scrollTop() > 0) {
             scrollTopButton.addClass('on');
         } else {
@@ -140,8 +142,10 @@ $(function () {
         }
     });
 
-    scrollTopButton.on('click', function() {
-        $('html, body').animate({ scrollTop: 0 }, '300');
+    scrollTopButton.on('click', function () {
+        $('html, body').animate({
+            scrollTop: 0
+        }, '300');
     });
 
     /* pc 카테고리 메뉴 열림 닫힘*/
@@ -224,7 +228,22 @@ $(function () {
         $('.info-popup-group').toggleClass('off');
     });
 
+    // flotingBottomSheet가 있는지 확인하고, 패딩 값을 조절하는 함수
+    function adjustFooterPadding() {
+        var bottomSheetExists = $("#flotingBottomSheet").length > 0; // 바텀 시트의 존재 여부 확인
+        var paddingValue = bottomSheetExists
+            ? $("#flotingBottomSheet").outerHeight(): 0; // 바텀 시트가 있을 경우 패딩 값 설정
 
+        // 푸터에 패딩 값을 적용
+        $(".footer-section").css("padding-bottom", paddingValue + 80 + "px");
+          $("#btnTopScroll").css("bottom", paddingValue + 16 + "px");
+    }
+
+    // 페이지 로드 시 및 윈도우 리사이즈 시 패딩 값을 조절
+    adjustFooterPadding();
+    $(window).resize(function () {
+        adjustFooterPadding();
+    });
 
     //구매하기바텀시트 ui
     let startY,
@@ -234,12 +253,19 @@ $(function () {
         isOpen = false;
 
     function toggleBottomSheet() {
-        const bottomSheetHeight = $('#bottomSheet').height();
-        if (isOpen) {
-            $('#bottomSheet').css('bottom', '0');
-        } else {
-            $('#bottomSheet').css('bottom', '-274px');
+        const bottomSheet = $('#bottomSheet');
+        const bottomSheetHeight = bottomSheet.outerHeight();
+        const footer = $('.footer-section');
+        const topScroll = $('#btnTopScroll');
 
+        if (isOpen) {
+            bottomSheet.css('bottom', '0');
+            footer.css('padding-bottom', bottomSheetHeight + 80 + 'px');
+            topScroll.css('bottom', bottomSheetHeight + 16 + 'px');
+        } else {
+            bottomSheet.css('bottom', '-274px');
+            footer.css('padding-bottom', 178 + 80 + 'px');
+            topScroll.css('bottom', 178 + 16 + 'px');
         }
         isOpen = !isOpen;
     }
@@ -283,7 +309,6 @@ $(function () {
         }
     }
 
- 
     // 데스크톱 마우스 이벤트
     $('#bottomSheetHandler').on('mousedown', function (e) {
         startDrag(e.clientY);
