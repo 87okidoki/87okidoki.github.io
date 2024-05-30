@@ -228,10 +228,11 @@
 }
 
 .sub-contents-wrap {
-    padding: 112px 20px 56px;
-    padding: 112px calc(constant(safe-area-inset-right) + 20px) 56px calc(constant(safe-area-inset-left) + 20px);
-    padding: 112px calc(env(safe-area-inset-right) + 20px) 56px calc(env(safe-area-inset-left) + 20px);
+    padding: 112px 20px 72px;
+    padding: 112px calc(constant(safe-area-inset-right) + 20px) 72px calc(constant(safe-area-inset-left) + 20px);
+    padding: 112px calc(env(safe-area-inset-right) + 20px) 72px calc(env(safe-area-inset-left) + 20px);
     margin: 0 auto;
+    min-height: calc(-72px + 100vh);
     max-width: var(--max-width);
 }
 @media screen and (max-width:767px) {
@@ -253,7 +254,8 @@
     }
     .sub-contents-wrap {
         padding-top: 96px;
-        padding-bottom: 50px;
+        padding-bottom: 48px;
+        min-height: calc(-58px + 100vh);
     }
 }
 
@@ -1445,7 +1447,6 @@
 
 @media screen and (max-width:767px) {
     .footer-section {
-        margin-top: 52px;
         padding: 40px calc(constant(safe-area-inset-right) + 0px) calc(constant(safe-area-inset-bottom) + 48px) calc(constant(safe-area-inset-left) + 0px);
         padding: 40px calc(env(safe-area-inset-right) + 0px) calc(env(safe-area-inset-bottom) + 48px) calc(env(safe-area-inset-left) + 0px);
     }
@@ -1487,7 +1488,7 @@
 .payment-wrap .payment-header .payment-header-left {
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 4px;
 }
 .payment-wrap .payment-header .info-popup-group {
     position: absolute;
@@ -1497,7 +1498,7 @@
     display: block;
     z-index: 55;
     border-radius: 8px;
-    box-shadow:0px 4px 16px rgba(0, 0, 0, 0.16);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.16);
 }
 .payment-wrap .payment-header .info-popup-group .info-text-items {
     border-radius: 8px;
@@ -1509,7 +1510,7 @@
     content: '';
     position: absolute;
     top: -8px;
-    left: 87px;
+    left: 78px;
     display: inline-block;
     background: url("../images/img-polygon.svg") no-repeat center center/ contain;
     width: 16px;
@@ -1619,7 +1620,7 @@
 }
 .payment-wrap .payment-completed-group {
     max-width: 484px;
-    padding: 24px 28px;
+    padding: 32px;
     border-radius: 8px;
     background-color: var(--blue-grey-50);
     margin: 56px auto 0;
@@ -1631,6 +1632,9 @@
     list-style: none;
     cursor: default;
     position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     border-bottom: 1px solid var(--border-primary);
     padding-top: 16px;
     padding-bottom: 16px;
@@ -1641,8 +1645,8 @@
     top: 16px;
     right: 0;
     display: inline-block;
-    -webkit-transform: rotate(0deg);
-    transform: rotate(0deg);
+    -webkit-transform: rotate(-180deg);
+    transform: rotate(-180deg);
     transition: all 0.3s cubic-bezier(0,.21,.03,1.01);
     background: url("../images/ic-accordion-arrow.svg") no-repeat center center / contain;
     width: 24px;
@@ -1653,22 +1657,32 @@
 }
 .payment-wrap .payment-accordion-group[open] .payment-accordion-header:after {
     transition: all 0.3s cubic-bezier(0,.21,.03,1.01);
-    -webkit-transform: rotate(-180deg);
-    transform: rotate(-180deg);
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
 }
 .payment-wrap .payment-accordion-group .payment-accordion-title {
     font-family: "Pretendard SemiBold";
     font-size: 1.6rem;
     line-height: 24px;
 }
+.payment-wrap .payment-accordion-group .payment-accordion-content {
+    font-size: 1.4rem;
+    line-height: 20px;
+    margin-right: 40px;
+}
 .payment-wrap .payment-accordion-group .payment-accordion-body {
-    padding: 24px 0 56px;
+    margin: 24px 0 72px;
 }
 .payment-wrap .payment-accordion-group .paymentr-info-box {
     margin-top: 12px;
 }
 .payment-wrap .payment-accordion-group .paymentr-info-box > li {
     display: flex;
+    margin-bottom: 4px;
+}
+.payment-wrap .payment-accordion-group .paymentr-info-box > li:last-child {
+    display: flex;
+    margin-bottom: 0;
 }
 .payment-wrap .payment-accordion-group .paymentr-info-box .title {
     position: relative;
@@ -1683,7 +1697,7 @@
     content: '';
     display: inline-block;
     position: absolute;
-    top: 14px;
+    top: 12px;
     left: 4px;
     background-color: var(--gray-color-600);
     width: 2px;
@@ -1723,11 +1737,12 @@
 .payment-wrap .payment-accordion-group .checks-group {
     padding-bottom: 24px;
 }
-.payment-wrap .payment-accordion-group .agree-checks-group {
+.payment-wrap .agree-checks-group {
     margin-top: 56px;
 }
-.payment-wrap .payment-section .payment-accordion-group:last-child .payment-accordion-body {
-    padding-bottom: 0;
+.payment-wrap .payment-section {
+    margin-top: 8px;
+    padding-bottom: 72px;
 }
 .payment-wrap .payment-accordion-group .agree-checks-group.agree-check span {
     color: var(--black-color);
@@ -1741,12 +1756,14 @@
 
 .payment-wrap .cart-empty-section {
     margin-top: 300px;
-    padding-bottom: 350px;
+    padding-bottom: 314px;
 }
-
 .payment-wrap .payment-completed-section {
-    margin-top: 182px;
-    padding-bottom: 132px;
+    margin-top: 185px;
+    padding-bottom: 95px;
+}
+.payment-wrap .payment-completed-section .payment-info-group .text-box {
+    margin-top: 24px;
 }
 @media screen and (max-width:767px) {
     .payment-wrap .payment-header .payment-process,
@@ -1771,9 +1788,17 @@
         font-size: 1.6rem;
         line-height: 24px;
     }
+    .payment-wrap .payment-info-group .payment-text {
+        margin-top: 12px;
+    }
     .payment-wrap .payment-info-group .btns-area {
-        display: block;
+        display: grid;
+        justify-content: normal;
         margin-top: 32px;
+        gap: 0;
+    }
+    .payment-wrap .payment-info-group .btns-area .btn:nth-child(2) {
+        order: 1;
     }
     .payment-wrap .payment-info-group .btns-area .btn {
         width: 100%;
@@ -1786,6 +1811,9 @@
     }
     .payment-wrap .payment-accordion-group .goods-list-group .goods-list-item .goods-list-left .badge-area {
         left: 0;
+    }
+    .payment-wrap .payment-accordion-group .payment-accordion-body {
+        margin-bottom: 56px;
     }
     .payment-wrap .payment-accordion-group .discount-coupon-box {
         display: block;
@@ -1805,21 +1833,21 @@
     .payment-wrap .payment-accordion-group .checks-group .inline:last-child {
         margin-bottom: 0;
     }
+    .payment-wrap .payment-section {
+        padding-bottom: 32px;
+    }
     .payment-wrap .cart-empty-section {
         margin-top: 64px;
-        padding-bottom: 100px;
+        padding-bottom: 57px;
     }
-    .payment-wrap .payment-completed-section .footer-section {
+    .payment-wrap .payment-completed-section {
         margin-top: 44px;
-        padding-bottom: 0;
+        padding-bottom: 32px;
+    }
+    .payment-wrap .payment-completed-section .payment-info-group .text-box {
+        margin-top: 8px;
     }
 }
-.cart-wrap {
-    padding-bottom: 130px;
-    padding-bottom: calc(constant(safe-area-inset-bottom) + 130px);
-    padding-bottom: calc(env(safe-area-inset-bottom) + 130px);
-}
-.payment-wrap {}
 
 /*bottom-sheet-popup*/
 .bottom-sheet-popup {
@@ -1844,11 +1872,6 @@
     padding: 12px 20px calc(constant(safe-area-inset-bottom) + 32px);
     padding: 12px 20px calc(env(safe-area-inset-bottom) + 32px);
 }
-.bottom-sheet-popup.handler {
-    padding: 12px 20px 158px 0;
-    padding: 12px 20px calc(constant(safe-area-inset-bottom) + 158px);
-    padding: 12px 20px calc(env(safe-area-inset-bottom) + 158px);
-}
 .bottom-sheet-popup .handler-area {
     display: block;
     width: 100%;
@@ -1859,6 +1882,12 @@
     height: 4px;
     border-radius: 2px;
     background-color: var(--blue-grey-200);
+}
+
+.bottom-sheet-popup.handler {
+    padding: 12px 20px 158px 0;
+    padding: 12px 20px calc(constant(safe-area-inset-bottom) + 158px);
+    padding: 12px 20px calc(env(safe-area-inset-bottom) + 158px);
 }
 .bottom-sheet-popup .bottom-sheet-footer {
     position: fixed;
@@ -1876,7 +1905,22 @@
     max-width: var(--max-width);
     min-width: 280px;
 }
+.bottom-sheet-popup.handler .bottom-sheet-body {
+    padding-left: 12px;
+    padding-right: 12px;
+}
 
+.bottom-sheet-popup.handler .total-price-group {
+    padding-left: 12px;
+    padding-right: 12px;
+}
+@media screen and (max-width:767px) {
+    .bottom-sheet-popup.handler .bottom-sheet-body,
+    .bottom-sheet-popup.handler .total-price-group {
+        padding-left: 8px;
+        padding-right: 8px;
+    }
+}
 .price-info-list-group {
     margin-bottom: 4px;
     max-height: 278px;
@@ -1941,4 +1985,11 @@
     line-height: 24px;
     color: var(--blue-grey-500);
     text-decoration: line-through;
+}
+@media screen and (max-width:767px) {
+    .total-price-group {
+
+        padding-left: 8px;
+        padding-right: 8px;
+    }
 }
