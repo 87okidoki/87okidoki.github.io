@@ -55,7 +55,7 @@
     /* Modern Browsers */
     url("../fonts/Pretendard-Boldr.ttf") format("truetype"),
     /* Safari, Android, iOS */
-    url( "../fonts/Pretendard-Bold.svg#NotoSansKR") format("svg")))
+     url("../fonts/Pretendard-Bold.svg#NotoSansKR") format("svg")));
 }
 
 @font-face {
@@ -73,7 +73,7 @@
     /* Modern Browsers */
     url("../fonts/Pretendard-SemiBoldr.ttf") format("truetype"),
     /* Safari, Android, iOS */
-    url( "../fonts/Pretendard-SemiBold.svg#NotoSansKR") format("svg")))
+     url("../fonts/Pretendard-SemiBold.svg#NotoSansKR") format("svg")));
 }
 
 @font-face {
@@ -91,7 +91,7 @@
     /* Modern Browsers */
     url("../fonts/Pretendard-Regular.ttf") format("truetype"),
     /* Safari, Android, iOS */
-    url( "../fonts/Pretendard-Regular.svg#NotoSansKR") format("svg")))
+     url("../fonts/Pretendard-Regular.svg#NotoSansKR") format("svg")));
 }
 
 @font-face {
@@ -109,7 +109,7 @@
     /* Modern Browsers */
     url("../fonts/Pretendard-Light.ttf") format("truetype"),
     /* Safari, Android, iOS */
-    url( "../fonts/Pretendard-Light.svg#NotoSansKR") format("svg")))
+     url("../fonts/Pretendard-Light.svg#NotoSansKR") format("svg")));
 }
 
 /* reset */
@@ -2063,8 +2063,11 @@ img {
 }
 
 /*goods-list-group*/
-.goods-list-group {
+.goods-list-group::after {
+    content: '';
     border-bottom: 1px solid var(--border-primary);
+    display: block;
+    margin: 4px 0;
 }
 .goods-list-group .goods-list-header {
     padding-top: 24px;
@@ -2075,8 +2078,9 @@ img {
     font-size: 1.6rem;
     line-height: 22px;
 }
-.goods-list-group+.goods-list-group {
-    border-bottom: none;
+.goods-list-group+.goods-list-group::after {
+    content: '';
+    display: none;
 }
 .goods-list-group .goods-list-item {
     position: relative;
@@ -2085,7 +2089,9 @@ img {
     justify-content: space-between;
     padding-bottom: 32px;
 }
-
+.goods-list-group+.goods-list-group .goods-list-item:last-child {
+    padding-bottom: 0px;
+}
 .goods-list-group .goods-list-item .goods-list-left {
     position: relative;
     display: flex;
@@ -2100,8 +2106,8 @@ img {
     margin-right: 32px;
 }
 .goods-list-group .goods-list-item .book-thumb-area,
-.goods-list-group .goods-list-item .goods-thumb-area .goods-thumb{
-    margin-bottom: 0px;
+.goods-list-group .goods-list-item .goods-thumb-area .goods-thumb {
+    margin-bottom: 0;
 }
 .goods-list-group .goods-info-box .badge-area {
     margin-bottom: 12px;

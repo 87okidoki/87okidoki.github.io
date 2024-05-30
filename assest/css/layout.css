@@ -1631,7 +1631,7 @@
 .payment-wrap .payment-accordion-group summary::-webkit-details-marker {
     display: none;
 }
-.payment-wrap .payment-accordion-group summary{
+.payment-wrap .payment-accordion-group summary {
     list-style-type: none;
 }
 .payment-wrap .payment-accordion-group .payment-accordion-header {
@@ -1764,6 +1764,10 @@
     margin-top: 300px;
     padding-bottom: 314px;
 }
+.payment-wrap .cart-empty-section .cart-list-section {
+    padding-bottom: 32px;
+}
+
 .payment-wrap .payment-completed-section {
     margin-top: 185px;
     padding-bottom: 95px;
@@ -1803,14 +1807,15 @@
         margin-top: 32px;
         gap: 0;
     }
+    .payment-wrap .payment-info-group .btns-area .btn:nth-child(1) {
+        order: 2;
+        margin-top: 16px;
+    }
     .payment-wrap .payment-info-group .btns-area .btn:nth-child(2) {
         order: 1;
     }
     .payment-wrap .payment-info-group .btns-area .btn {
         width: 100%;
-    }
-    .payment-wrap .payment-info-group .btns-area .btn +.btn {
-        margin-top: 16px;
     }
     .payment-wrap .payment-info-group .list-box li > .content {
         font-size: 1.4rem;
@@ -1917,12 +1922,11 @@
 }
 
 .bottom-sheet-popup.handler .total-price-group {
-    padding-left: 12px;
-    padding-right: 12px;
+    padding-top: 0;
 }
 @media screen and (max-width:767px) {
     .bottom-sheet-popup.handler .bottom-sheet-body,
-    .bottom-sheet-popup.handler .total-price-group {
+    .bottom-sheet-popup.total-price-group {
         padding-left: 8px;
         padding-right: 8px;
     }
@@ -1968,8 +1972,10 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding-top: 20px;
     margin-bottom: 32px;
+    padding-left: 12px;
+    padding-right: 12px;
+    padding-top: 20px;
 }
 .total-price-group .total-price-title {
     font-family: "Pretendard Bold";
