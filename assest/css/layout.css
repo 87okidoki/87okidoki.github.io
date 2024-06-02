@@ -228,13 +228,22 @@
 }
 
 .sub-contents-wrap {
-    padding: 112px 20px 72px;
+    padding: 112px 20px 104px;
     padding: 112px calc(constant(safe-area-inset-right) + 20px) 104px calc(constant(safe-area-inset-left) + 20px);
     padding: 112px calc(env(safe-area-inset-right) + 20px) 104px calc(env(safe-area-inset-left) + 20px);
     margin: 0 auto;
     min-height: calc(-72px + 100vh);
     max-width: var(--max-width);
 }
+.detail-contents-wrap{
+    padding: 72px 0px 104px;
+    padding: 72px calc(constant(safe-area-inset-right) + 0px) 104px calc(constant(safe-area-inset-left) + 0px);
+    padding: 72px calc(env(safe-area-inset-right) + 0px) 104px calc(env(safe-area-inset-left) + 0px);
+    margin: 0 auto;
+    min-height: calc(-72px + 100vh);
+    max-width: var(--max-width);
+}
+
 @media screen and (max-width:767px) {
     .main-wrap .main-contents-wrap {
         padding-top: 42px;
@@ -1004,24 +1013,6 @@
     object-fit: cover;
 }
 
-/*swiper-banner*/
-
-.swiper-banner .swiper-pagination {
-    position: relative;
-    bottom: auto;
-    top: auto;
-    margin-top: 16px;
-}
-.swiper-banner .swiper-pagination-bullet {
-    margin-left: 6px !important;
-    margin-right: 6px !important;
-    width: 5px;
-    height: 5px;
-}
-
-.swiper-banner .swiper-pagination-bullet.swiper-pagination-bullet-active {
-    background-color: var(--primary-color);
-}
 
 /*banner-board-swiper-group*/
 .banner-board-swiper-group {
@@ -1109,6 +1100,7 @@
     }
 }
 .thumb-list-items .thumb-item-text-area {
+    margin-top: 24px;
     height: 60px;
 }
 
@@ -1225,7 +1217,6 @@
 /* book-thumb-area */
 .book-thumb-area {
     position: relative;
-    margin-bottom: 24px;
 }
 
 .book-thumb-area::after {
@@ -1257,7 +1248,9 @@
 .book-thumb-area.small {
     width: 104px;
 }
-
+.book-thumb-area.large {
+    width: 240px;
+}
 .book-thumb {
     position: relative;
     border-radius: 2px 8px 8px 2px;
@@ -1293,7 +1286,7 @@
     background: var(--color-Secondary-White, #FFF);
     box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.08);
     overflow: hidden;
-    margin-bottom: 24px;
+
 }
 .goods-thumb-area .goods-thumb {
     width: 160px;
@@ -1302,6 +1295,10 @@
 .goods-thumb-area.small .goods-thumb {
     width: 104px;
     height: 138px;
+}
+.goods-thumb-area.large .goods-thumb {
+    width: 240px;
+    height: 318px;
 }
 @media screen and (max-width:767px) {
     .goods-thumb-area .goods-thumb {
@@ -1490,32 +1487,7 @@
     align-items: center;
     gap: 4px;
 }
-.payment-wrap .payment-header .info-popup-group {
-    position: absolute;
-    top: 32px;
-    left: 0;
-    right: 0;
-    display: block;
-    z-index: 55;
-    border-radius: 8px;
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.16);
-}
-.payment-wrap .payment-header .info-popup-group .info-text-items {
-    border-radius: 8px;
-    background-color: var(--white-color);
-    padding: 20px;
-    overflow: hidden;
-}
-.payment-wrap .payment-header .info-popup-group::before {
-    content: '';
-    position: absolute;
-    top: -8px;
-    left: 78px;
-    display: inline-block;
-    background: url("../images/img-polygon.svg") no-repeat center center/ contain;
-    width: 16px;
-    height: 12px;
-}
+
 .payment-wrap .payment-header .payment-process {
     display: flex;
     align-items: center;
@@ -1853,6 +1825,478 @@
         margin-top: 8px;
     }
 }
+.detail-main-section{
+    position: relative;
+    padding-top: 58px;
+    background-color: var(--blue-grey-100);
+}
+.detail-main-section::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    display: block;
+    background: url(../images/bg-detail-dummy.png) no-repeat center center / cover;
+    height: 90.5%;
+    width: 100%;
+}
+
+.detail-main-section .book-thumb-area{
+    margin: 0 auto 0px;
+}
+.detail-main-section .book-btns-area{
+    position: absolute;
+    right: 24px;
+    bottom: 64px;
+    display: grid;
+    gap: 12px;
+}
+.book-thumb-area.badge-special::before{
+    right: -3px;
+    top: -16px;
+    width: 64px;
+    height: 64px;
+}
+.detail-main-section .btn-option{
+    display: flex;
+    gap: 4px;
+    align-items: center;
+    padding: 8px 12px ;
+    border-radius: 4px;
+    border: 1px solid var(--border-primary);
+    background: var(--white-color);
+}
+.detail-main-section .btn-option > .text{
+    display: inline-block;
+    font-size: 1.4rem;
+    line-height: 20px;
+}
+
+
+
+.goods-info-section {
+    padding: 26px 20px;background-color: var(--blue-grey-100);
+}
+.goods-info-section .goods-info-header{
+    margin-bottom: 40px;
+}
+.goods-info-section .goods-info-header .badge-area{
+    margin-bottom: 20px;
+}
+.goods-info-section .goods-info-header > .title {
+    font-family: "Pretendard Bold";
+    font-size: 2.4rem;
+    line-height: 34px;
+    margin-bottom: 16px;
+}
+.goods-info-section .notice-text{
+    position: relative;
+    font-size: 1.2rem;
+    line-height: 16px;
+    color: var(--blue-grey-600);
+    vertical-align: middle;
+    padding-left: 20px;
+    margin-top: 16px;
+    margin-bottom: 24px;
+}
+.goods-info-section .notice-text::before{
+    content: '';
+    position: absolute;
+    top: 0px;
+    left: 0;
+    display: inline-block;
+    background: url(../images/ic-notice-info.svg) no-repeat center center / contain;
+    width: 16px;
+    height: 16px;
+}
+.goods-info-section .notice-text > .btn-app-store-text{
+    position: relative;
+    font-family: "Pretendard Bold";
+text-decoration: underline;
+color: var(--blue-grey-600);
+
+}
+
+
+.detail-content-box{
+    border-radius: 8px;
+    background: var(--white-color);
+    box-shadow: 2px 0px 8px 0px rgba(0, 0, 0, 0.12);
+    margin-bottom: 16px;
+    padding: 26px 24px;
+}
+.detail-content-box.special{
+    position: relative;
+}
+.detail-content-box.special::before {
+    content: '';
+    position: absolute;
+    right: 8px;
+    top: -12px;
+    display: block;
+    background: url("../images/ic-special.png") no-repeat center center /contain;
+    width: 46px;
+    height: 46px;
+    z-index: 1;
+}
+
+.detail-content-box .detail-content-header{
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    margin-bottom: 24px;
+}
+.detail-content-box .detail-content-header > .title{
+    font-family: "Pretendard SemiBold";
+    font-size: 1.6rem;
+    line-height: 24px;
+}
+.detail-content-box .option-group{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 20px;
+    border-bottom: 2px solid var(--black-color);
+     margin-bottom: 24px;
+}
+
+.check-list-item{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+.check-list-item:last-child{
+    margin-bottom: 0px;
+}
+
+.detail-info-section{
+    padding: 0px 40px 40px;
+    background-color: var(--white-color);
+    margin-bottom: 8px;
+    font-size: 1.4rem;
+}
+.detail-info-section > .detail-info-header{
+    padding-top: 32px;
+    margin-bottom: 24px;
+}
+.detail-info-section > .detail-info-header > .detail-info-title{
+    font-family: "Pretendard SemiBold";
+    font-size: 1.6rem;
+    line-height: 24px;
+    position: sticky;
+}
+.detail-content-section {
+    padding:40px 40px 140px;
+    font-size: 1.4rem;
+    background-color: var(--white-color);
+    margin-bottom: 8px;
+}
+.detail-content-section > .detail-content{
+    height: 700px;
+    overflow: hidden;
+    position: relative;
+}
+.detail-content-section > .detail-content > .text{
+    display: block;
+    font-size: 1.4rem;
+    line-height: 30px;
+    margin-bottom: 40px;
+}
+.detail-content-section .btn-area{
+        position: relative;
+    text-align: center;
+    padding-top: 20px;
+}
+.detail-content-section .btn-area::before{
+    content: '';
+    position: absolute;
+    top: -120px;
+    left: 0;
+    right: 0;
+    display: block;
+    height: 120px;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.00) 0%, #FFF 100%);background: linear-gradient(180deg, rgba(255, 255, 255, 0.00) 0%, #FFF 100%);
+}
+.detail-content-section .btn-area .btn-detail-more{
+    font-family: "Pretendard SemiBold";
+    line-height: 20px;
+    color: var(--blue-grey-600);
+    border-radius: 8px;
+border: 1px solid var(--border-primary);
+background: var(--white-color);
+padding: 12px 20px 12px 24px;
+
+}
+
+
+.detail-goods-swiper {
+    position: relative;
+    margin: 0 auto;   width: 240px;
+}
+.detail-goods-swiper .swiper-slide{
+    width: 240px;
+
+}
+
+.detail-goods-swiper .swiper-button-next{
+ right:-56px;
+}
+.detail-goods-swiper .swiper-button-prev{
+    left: -56px;
+}
+.tab-bar-group {
+    position: sticky;
+    top:72px;
+    z-index: 1000;
+    background-color: #fff;
+}
+.tab-bar-group .swiper-slide{
+ width: 100%;
+}
+.tab-bar-group .swiper-slide:first-child .btn-tab-menu{
+    border-left: 0px;
+}
+.tab-bar-group .btn-tab-menu{
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+    font-size: 1.6rem;
+    line-height: 24px;
+    color: var(--blue-grey-600);  
+    background-color: var(--white-color);
+    padding: 12px 72px;
+    border: 1px solid var(--border-primary);
+    border-right: 0px;
+}
+
+.tab-bar-group .btn-tab-menu.on{
+    font-size: 1.6rem;
+    color: var(--white-color);  
+    background-color: var(--black-color);
+    border: 1px solid var(--black-color);
+    border-right: 0px;
+}
+.info-popup-group {
+    position: absolute;
+    top: 32px;
+    left: 0;
+    right: 0;
+    display: block;
+    z-index: 55;
+    border-radius: 8px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.16);
+}
+ .info-popup-group .info-text-items {
+    border-radius: 8px;
+    background-color: var(--white-color);
+    padding: 20px;
+    overflow: hidden;
+}
+.info-popup-group::before {
+    content: '';
+    position: absolute;
+    top: -8px;
+    left: 78px;
+    display: inline-block;
+    background: url("../images/img-polygon.svg") no-repeat center center/ contain;
+    width: 16px;
+    height: 12px;
+}
+.book-info-list .book-info-list-item{
+    display: flex;
+    margin-bottom: 16px;
+
+}
+.book-info-list .book-info-list-item:last-child{
+    margin-bottom: 0;
+}
+.book-info-list .book-info-list-item > .title{
+    font-family: "Pretendard Bold";
+    font-size: 1.6rem;
+    width: 72px;
+    margin-right: 32px;
+}
+.book-info-list .book-info-list-item > .content{
+    display: flex;
+
+}
+
+
+ .book-info-text {
+    font-size: 1.4rem;
+    line-height: 20px;
+    color: var(--blue-grey-500);
+    margin-bottom: 12px;
+}
+.book-info-text > .text {
+    position: relative;
+    padding-right: 8px;
+    margin-right: 8px;
+}
+.book-info-text > .text:last-child::after {
+    display: none;
+}
+.book-info-text > .text::after {
+    content: '';
+    position: absolute;
+    top: 3px;
+    right: -1px;
+    height: 12px;
+    width: 1px;
+    background-color: var(--blue-grey-500);
+}
+.app-store-popup{
+    position: absolute;
+    top: 28px;
+    left: 50%;
+    margin-left: -157px;
+    background-color: var(--white-color);
+    width: 100%;
+    width: 315px;
+    box-shadow: 4px 4px 28px rgba(0, 0, 0, 0.24);
+    border-radius: 12px;
+    padding: 18px 20px 20px 20px;
+    z-index: 50;
+}
+.app-store-popup::before {
+    content: '';
+    position: absolute;
+    top: -8px;
+    left: 50%;
+    margin-left: -8px;
+    display: inline-block;
+    background: url("../images/img-polygon.svg") no-repeat center center/ contain;
+    width: 16px;
+    height: 12px;
+}
+.app-store-popup > .header{
+    margin: 0 auto 13px;
+    width: 114px;
+}
+.app-store-box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 11px;
+    border-radius: 7px;
+    padding: 20px 16px;
+background-color: var(--blue-grey-50);
+}
+.app-store-box .btn-app-store{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    padding: 12px 19px;
+    border-radius: 50px;
+    background-color: var(--white-color);
+    box-shadow: 1px 1px 4px 0px rgba(0, 0, 0, 0.04), 1px 2px 12px 0px rgba(0, 0, 0, 0.12);
+}
+.app-store-box .btn-app-store > .text{
+    font-family: "Pretendard";
+    font-size: 1.2rem;
+    line-height: 18px; 
+}
+
+/*sns-list-group*/
+.sns-list-group .sns-list{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+}
+.sns-list-group .sns-list .sns-item{
+    padding: 12px 16px;
+    border-radius: 8px;
+background: var(--blue-grey-50);
+margin-top: 24px;
+}
+.sns-list-group .sns-list .sns-item > .text{
+    display: block;
+    margin-top: 8px;
+    color: var(--blue-grey-600);
+    font-size: 1.2rem;
+line-height: 18px;
+}
+.sns-list-group .btn-link-area{
+    display: flex;
+    align-items: center;
+    padding: 11px 16px;
+    border-radius: 8px;
+    background: var(--blue-grey-50);
+    font-size: 1.4rem;
+    line-height: 20px;
+    margin-top: 16px;
+    }
+    .sns-list-group .btn-link-area::after{
+    content: '';
+    display: inline-block;
+    background: url("../images/ic-link.svg") no-repeat center center/ contain;
+    width: 16px;
+    height: 16px;
+    flex-shrink: 0;
+}
+.sns-list-group .btn-link-area > .btn-link{
+    display: inline-block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    text-decoration: none;
+    margin-right: 16px;
+}
+/*book-preview-section*/
+.book-preview-section{
+    margin: 0 auto;
+    max-width:var(--max-width) ;
+    padding-bottom: 180px;
+}
+.book-preview-section .book-preview-header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+     padding: 32px 40px;
+}
+.book-preview-section .book-preview-header .book-preview-title{
+    width: 100%;
+    text-align: center;
+    font-family: "Pretendard Bold";
+    color: var(--black-color);
+    font-size: 2.4rem;
+    line-height: 34px;
+}
+.book-preview-section .swiper{
+    max-width: 613px;
+}
+.book-preview-section .book-preview-slide-group{
+    position: relative;
+    padding-top: 16px;
+    text-align: center;
+}
+.book-preview-section .book-preview-slide-group .swiper-pagination-fraction{
+    position: relative;
+    left: auto;
+    bottom: auto;
+    top: auto;
+    margin-top:40px;
+    display: inline-block;
+    width: auto;
+    padding: 8px 20px;
+    border-radius: 30px;
+    background-color: var(--blue-grey-50);
+    font-size: 1.6rem;
+    line-height: 24px;
+    color: var(--blue-grey-400);
+}
+.book-preview-section .book-preview-slide-group .swiper-button-prev{left: 56px;}
+.book-preview-section .book-preview-slide-group .swiper-button-next{right: 56px;}
+.book-preview-section .book-preview-slide-group .swiper-pagination-current{
+    font-family: "Pretendard Bold";
+    color: var(--black-color);
+    margin-right: 16px;
+}
+.book-preview-section .book-preview-slide-group .swiper-pagination-total{
+    margin-left: 16px;
+}
 
 /*bottom-sheet-popup*/
 .bottom-sheet-popup {
@@ -1909,6 +2353,10 @@
     margin: 0 auto;
     max-width: var(--max-width);
     min-width: 280px;
+}
+.bottom-sheet-popup .bottom-sheet-footer .btn-area {
+display: flex;
+gap: 8px;
 }
 .bottom-sheet-popup.handler .bottom-sheet-body {
     padding-left: 12px;

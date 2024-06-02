@@ -323,4 +323,51 @@ $(function () {
             endDrag();
         }
     });
+
+
+    
+    /* 상세페이지 미리보기 스와이퍼*/
+    const bookPreview = new Swiper('#bookPreview', {
+        freeMode: true,
+        slidesPerView: 1,
+        spaceBetween: 20,
+        loop:true,
+        pagination: {
+            el: ".swiper-pagination",
+            type: "fraction",
+
+        },
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev"
+        }
+    });
+
+    /*tab Menu*/
+    $(".btn-tab li").click(function () {
+        var idx = $(this).index();
+        $(".btn-tab li").removeClass("on");
+        $(".btn-tab li").eq(idx).addClass("on");
+        $(".tab-content-section").hide();
+        $(".tab-content-section").eq(idx).show();
+    });
+
+
+    const tabBtnSwiper = new Swiper('.tab-bar-group', {slidesPerView: 5});
+
+    const detailGoodsSwiper = new Swiper('#detailGoodsSwiper', {
+        loop: true,
+        autoplay: false,
+        spaceBetween: 20,
+        slidesPerView: 1,
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+            watchOverflow: true
+        },
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev"
+        }
+    });
 });
