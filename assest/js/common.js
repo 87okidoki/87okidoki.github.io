@@ -223,7 +223,7 @@ $(function () {
             .show();
     });
 
-    //모바일 장바구니 툴팁
+    // 툴팁
     $(".btn-info").click(function () {
         $('.info-popup-group').toggleClass('off');
     });
@@ -259,13 +259,13 @@ $(function () {
         const topScroll = $('#btnTopScroll');
 
         if (isOpen) {
-            bottomSheet.css('bottom', '0');
+            $('#bottomSheet').css('bottom', '0');
             footer.css('padding-bottom', bottomSheetHeight + 80 + 'px');
             topScroll.css('bottom', bottomSheetHeight + 16 + 'px');
         } else {
-            bottomSheet.css('bottom', '-274px');
-            footer.css('padding-bottom', 178 + 80 + 'px');
-            topScroll.css('bottom', 178 + 16 + 'px');
+            $('#bottomSheet').css('bottom', '-142px');
+            footer.css('padding-bottom', 142 + 80 + 'px');
+            topScroll.css('bottom', 182 + 16 + 'px');
         }
         isOpen = !isOpen;
     }
@@ -305,7 +305,7 @@ $(function () {
         if (parseInt($('#bottomSheet').css('bottom')) > -$('#bottomSheet').height() / 2) {
             $('#bottomSheet').css('bottom', '0');
         } else {
-            $('#bottomSheet').css('bottom', '-274px');
+            $('#bottomSheet').css('bottom', '-142px');
         }
     }
 
@@ -331,7 +331,7 @@ $(function () {
         freeMode: true,
         slidesPerView: 1,
         spaceBetween: 20,
-        loop:true,
+        loop:false,
         pagination: {
             el: ".swiper-pagination",
             type: "fraction",
@@ -343,6 +343,17 @@ $(function () {
         }
     });
 
+    $('.book-preview-slide-group > .img-book-preview > img').on('load', function () {
+        var imgWidth = $(this).width(); // 이미지의 너비 가져오기
+        $('.book-preview-slide-group > .swiper-pagination ').css('width', imgWidth + 'px'); // 페이지네이션 요소의 너비 설정
+    });
+
+    /* 상세페이지 앱스토어 팝업*/
+    $("#appStore").click(function () {
+        $("#appStorePopup").toggleClass("on");
+    });
+
+
     /*tab Menu*/
     $(".btn-tab li").click(function () {
         var idx = $(this).index();
@@ -352,11 +363,23 @@ $(function () {
         $(".tab-content-section").eq(idx).show();
     });
 
+    /*tabBtnSwiper*/
+    const tabBtnSwiper = new Swiper('#tabBarGroup', {
 
-    const tabBtnSwiper = new Swiper('.tab-bar-group', {slidesPerView: 5});
+            breakpoints: {
+            "767": {
+                slidesPerView: '5'
+            },
+            "320": {
+                slidesPerView: 'auto'
+            },
+        },
+    });
 
+
+  /*detailGoodsSwiper*/
     const detailGoodsSwiper = new Swiper('#detailGoodsSwiper', {
-        loop: true,
+        loop: false,
         autoplay: false,
         spaceBetween: 20,
         slidesPerView: 1,
@@ -369,5 +392,74 @@ $(function () {
             nextEl: ".swiper-button-next",
             prevEl: ".swiper-button-prev"
         }
+    });
+
+
+  /*tab-bar-group*/
+    var sections = $('.detail-content-section')
+    var nav = $('.tab-bar-group')
+    var nav_height = nav.outerHeight();
+    var header = $('.sub-header-section');
+    $(window).on('scroll', function () {
+        var cur_pos = $(this).scrollTop();
+        
+        sections.each(function() {
+        var top = $(this).offset().top - nav_height,
+            bottom = top + $(this).outerHeight();
+        if (cur_pos >= top && cur_pos <= bottom) {
+            nav.find('.btn-tab-menu').removeClass('on');
+            $(this).addClass('on');
+            nav.find('a[href="#'+$(this).attr('id')+'"]').addClass('on');
+        }
+        });
+    });
+  
+    nav.find('.btn-tab-menu').on('click', function () {
+        var $el = $(this)
+        , id = $el.attr('href');
+        $('html, body').animate({
+        scrollTop: $(id).offset().top 
+        }, 500);
+        
+        return false;
+    });
+
+    var header = $('.sub-header-section');
+    $(window).scroll(function() {
+      var stickyMenuOffset = nav.offset().top;
+      var scrollPosition = $(window).scrollTop();
+  
+      if (scrollPosition >= stickyMenuOffset) {
+        header.css('position', 'static');
+      } else {
+        header.css('position', 'fixed');
+      }
+    });
+
+
+   /*tab-bar-group*/
+    $('.btn-detail-more').click(function() {
+     
+        var section = $(this).closest('.detail-content-section');
+        section.toggleClass('open');
+        var icon = $(this).find('.icon');
+        icon.toggleClass('rotate');
+        
+        // 버튼 텍스트를 "더보기"에서 "접기"로, 그리고 다시 "접기"에서 "더보기"로 변경합니다.
+        if (section.hasClass('open')) {
+          $(this).html('<span class="text">접기</span> <span class="icon-arrow-up rotate"></span>');
+        } else {
+          $(this).html('<span class="text">더보기</span>  <span class="icon-arrow-up"></span>');
+        }
+
+
+    });
+
+    /*공유 하기*/
+    $('#btnShare').click(function() {
+        $('.popup-section').toggleClass('off');
+    });
+    $('#btnClose').click(function() {
+        $('.popup-section').addClass('off');
     });
 });
