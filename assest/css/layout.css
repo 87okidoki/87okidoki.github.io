@@ -2600,7 +2600,7 @@
     border-top: 2px solid var(--black-color);
     margin-top: 48px;
     padding-top: 20px;
-        width: 100%;
+        width: 100%; 
 }
 .book-preview-section .book-preview-slide-group .swiper-pagination-fraction {
     margin-top: 0;
