@@ -1859,6 +1859,7 @@
     top: 0;
     background: rgba(255, 255, 255, 0.02);
     backdrop-filter: blur(30px);
+    -webkit-backdrop-filter: blur(30px);
     z-index: 1;
     left: 0;
     right: 0;
