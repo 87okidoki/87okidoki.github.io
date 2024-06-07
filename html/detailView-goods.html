@@ -3,8 +3,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport"
-        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
     <meta name="theme-color" content="#fff">
     <meta name="color-scheme" content="light only">
     <meta name="msapplication-TileColor" content="#fff">
@@ -28,8 +27,7 @@
                     <div class="header-group">
                         <div class="header-left">
                             <div class="mo-nav-btns">
-                                <button class="btn-menu" type="button" class="btn btn-transparent"
-                                    id="openMobileCategorylayer">
+                                <button class="btn-menu" type="button" class="btn btn-transparent" id="openMobileCategorylayer">
                                     <i class="icon-menu-24"><span class="blind">메뉴</span></i>
                                 </button>
                             </div>
@@ -39,8 +37,7 @@
                                 </h1>
                             </a>
                             <nav class="pc-nav-btns">
-                                <button class="btn-menu" type="button" class="btn btn-transparent"
-                                    id="openPcCategorylayer">
+                                <button class="btn-menu" type="button" class="btn btn-transparent" id="openPcCategorylayer">
                                     <i class="icon-menu-24"><span class="blind">메뉴</span></i>
                                 </button>
                                 <ul class="nav-btn-items">
@@ -60,8 +57,7 @@
                                 <i class="icon-cart"><span class="blind">장바구니</span></i>
                                 <span class="badge-count">5</span>
                             </a>
-                            <a href="#" class="btn btn-transparent"><i class="icon-mypage"><span
-                                        class="blind">마이페이지</span></i></a>
+                            <a href="#" class="btn btn-transparent"><i class="icon-mypage"><span class="blind">마이페이지</span></i></a>
                         </div>
                     </div>
                     <a href="#" class="btn-app-down"><span class="text">앱 다운로드</span></a>
@@ -78,8 +74,7 @@
                             </div>
                             <h3 class="mo-header-title">카테고리</h3>
                             <div class="mo-header-right">
-                                <button type="button" class="btn btn-transparent btn-close"
-                                    id="closeMobileCategorylayerOverlay">
+                                <button type="button" class="btn btn-transparent btn-close" id="closeMobileCategorylayerOverlay">
                                     <i class="icon-close-24">
                                         <span class="blind">닫기</span></i>
                                 </button>
@@ -130,9 +125,9 @@
                         <header class="mo-header">
                             <div class="mo-header-left">
                                 <button type="button" class="btn btn-transparent" id="closeCategorylayer">
-                                    <i class="icon-back-24">
-                                        <span class="blind">뒤로</span>
-                                    </i>
+                                        <i class="icon-back-24">
+                                            <span class="blind">뒤로</span>
+                                        </i>
                                 </button>
                             </div>
                             <h3 class="mo-header-title">수험서</h3>
@@ -245,16 +240,31 @@
             <!--해더 끝-->
             <div class="detail-contents-wrap">
                 <section class="detail-main-section">
-                    <div class="book-thumb-area badge-special large">
-                        <div class="book-thumb">
-                            <img src="../assest/images/img-book-dummy-01.jpeg" alt="" />
+                    <div class="detail-goods-swiper">
+                        <div class="swiper" id="detailGoodsSwiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="goods-thumb-area large badge-free">
+                                        <div class="goods-thumb">
+                                            <img src="../assest/images/img-goods-dummy.png" alt="" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="goods-thumb-area large badge-free">
+                                        <div class="goods-thumb">
+                                            <img src="../assest/images/img-goods-dummy.png" alt="" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
+                        <div class="swiper-pagination"></div>
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
                     </div>
                     <div class="book-btns-area">
-                        <button type="button" class="btn btn-option"><span class="icon-preview"></span><span
-                                class="text">미리보기</span></button>
-                        <button type="button" class="btn btn-option" id="btnShare"><span class="icon-share"></span><span
-                                class="text">공유하기</span></button>
+                        <button type="button" class="btn btn-option" id="btnShare"><span class="icon-share"></span><span class="text">공유하기</span></button>
                     </div>
                 </section>
                 <section class="goods-info-section">
@@ -266,14 +276,7 @@
                             <span class="badge badge-black">이벤트</span>
                         </div>
                         <h2 class="title">2024 전한길 한국사 4.0 실전동형 모의고사 시즌 1</h2>
-                        <div class="book-info-texts"><span class="book-info-text">전한길</span> <span
-                                class="book-info-text">메가스터디교육(공무원)</span>
-                            <div class="grade-star-group">
-                                <div class="grade-star">
-                                    <div class="grade-star-on" style="width:80%;"></div>
-                                </div> <span class="text"> <span class="color-black">9.0</span>(999+)</span>
-                            </div>
-                        </div>
+                        <div class="book-info-texts"><span class="book-info-text">전한길</span> <span class="book-info-text">메가스터디교육(공무원)</span> <div class="grade-star-group"><div class="grade-star"><div class="grade-star-on"  style="width:80%;"></div></div> <span class="text"> <span class="color-black">9.0</span>(999+)</span></div></div>
                     </header>
                     <article class="detail-tab-content-box">
                         <ul class="btn-tab tab-box">
@@ -282,45 +285,40 @@
                         </ul>
                         <div class="tab-content-section tab-box-content-section on">
                             <ul class="book-info-list">
-                                <li class="book-info-list-item">
+                                <li class="book-info-list-item">                        
                                     <div class="title">정가</div>
                                     <div class="content"><span class="price-nene-deco">10,000원</span></div>
                                 </li>
-                                <li class="book-info-list-item">
+                                <li class="book-info-list-item">                        
                                     <div class="title">판매가</div>
-                                    <div class="content"><strong class="discount">10%</strong><strong
-                                            class="discount-price">9,000원</strong></div>
+                                    <div class="content"><strong class="discount">10%</strong><strong class="discount-price">9,000원</strong></div>
                                 </li>
                             </ul>
                         </div>
                         <div class="tab-content-section tab-box-content-section">
                             <ul class="book-info-list">
-                                <li class="book-info-list-item">
+                                <li class="book-info-list-item">                        
                                     <div class="title">정가</div>
                                     <div class="content"><span class="price-nene-deco">8,000원</span></div>
                                 </li>
-                                <li class="book-info-list-item">
+                                <li class="book-info-list-item">                        
                                     <div class="title">판매가</div>
-                                    <div class="content"><strong class="discount">50%</strong><strong
-                                            class="discount-price">4,000원</strong></div>
+                                    <div class="content"><strong class="discount">50%</strong><strong class="discount-price">4,000원</strong></div>
                                 </li>
                             </ul>
                         </div>
-                        <div class="notice-text">배송 상품이 아닌
+                        <div class="notice-text">배송 상품이 아닌 
                             <button type="button" class="btn-app-store-text" id="appStore">meBOOK 앱에서만 열람 가능한 디지털 상품
                                 <div class="app-store-popup" id="appStorePopup">
                                     <header class="header">
-                                        <img src="../assest/images/logo-meBook.svg" alt="meBook" />
+                                        <img src="../assest/images/logo-meBook.svg" alt="meBook"/>
                                     </header>
                                     <div class="app-store-box">
-                                        <a href="#" class="btn-app-store"><span class="logo-apple"></span><span
-                                                class="text">App Store</span></a>
-                                        <a href="#" class="btn-app-store"><span class="logo-google"></span><span
-                                                class="text">Google Play</span></a>
+                                        <a href="#" class="btn-app-store"><span class="logo-apple"></span><span class="text">App Store</span></a>
+                                        <a href="#"  class="btn-app-store"><span class="logo-google"></span><span class="text">Google Play</span></a>
                                     </div>
                                 </div>
-                            </button>이며, 프린트 불가합니다.
-                        </div>
+                            </button>이며, 프린트 불가합니다.</div>
                     </article>
                     <article class="detail-tab-content-box">
                         <ul class="tab-box">
@@ -328,32 +326,28 @@
                         </ul>
                         <div class="tab-box-content-section on">
                             <ul class="book-info-list">
-                                <li class="book-info-list-item">
+                                <li class="book-info-list-item">                        
                                     <div class="title">정가</div>
                                     <div class="content"><span class="price-nene-deco">10,000원</span></div>
                                 </li>
-                                <li class="book-info-list-item">
+                                <li class="book-info-list-item">                        
                                     <div class="title">판매가</div>
-                                    <div class="content"><strong class="discount">10%</strong><strong
-                                            class="discount-price">9,000원</strong></div>
+                                    <div class="content"><strong class="discount">10%</strong><strong class="discount-price">9,000원</strong></div>
                                 </li>
                             </ul>
                         </div>
-                        <div class="notice-text">배송 상품이 아닌
+                        <div class="notice-text">배송 상품이 아닌 
                             <button type="button" class="btn-app-store-text" id="appStore">meBOOK 앱에서만 열람 가능한 디지털 상품
                                 <div class="app-store-popup" id="appStorePopup">
                                     <header class="header">
-                                        <img src="../assest/images/logo-meBook.svg" alt="meBook" />
+                                        <img src="../assest/images/logo-meBook.svg" alt="meBook"/>
                                     </header>
                                     <div class="app-store-box">
-                                        <a href="#" class="btn-app-store"><span class="logo-apple"></span><span
-                                                class="text">App Store</span></a>
-                                        <a href="#" class="btn-app-store"><span class="logo-google"></span><span
-                                                class="text">Google Play</span></a>
+                                        <a href="#" class="btn-app-store"><span class="logo-apple"></span><span class="text">App Store</span></a>
+                                        <a href="#"  class="btn-app-store"><span class="logo-google"></span><span class="text">Google Play</span></a>
                                     </div>
                                 </div>
-                            </button>이며, 프린트 불가합니다.
-                        </div>
+                            </button>이며, 프린트 불가합니다.</div>
                     </article>
                     <article class="detail-content-box">
                         <header class="detail-content-header">
@@ -361,7 +355,7 @@
                         </header>
                         <div class="option-group">
                             <div class="checks black">
-                                <input type="checkbox" id="book-all" class="check" value="book-all" />
+                                <input type="checkbox" id="book-all" class="check" value="book-all"/>
                                 <label for="book-all" class="label-check"><span>전체선택</span></label>
                             </div>
                             <ul class="tab-text">
@@ -373,9 +367,8 @@
                             <ul class="check-list">
                                 <li class="check-list-item">
                                     <div class="checks black">
-                                        <input type="checkbox" id="book-01" class="check" value="book-01" />
-                                        <label for="book-01" class="label-check"><span>2024 전한길 한국사 4.0 실전동형 모의고사 시즌
-                                                2</span></label>
+                                        <input type="checkbox" id="book-01" class="check" value="book-01"/>
+                                        <label for="book-01" class="label-check"><span>2024 전한길 한국사 4.0 실전동형 모의고사 시즌 2</span></label>
                                     </div>
                                     <div class="price-area">
                                         <strong class="discount-price">9,000원</strong>
@@ -383,59 +376,47 @@
                                 </li>
                                 <li class="check-list-item">
                                     <div class="checks black">
-                                        <input type="checkbox" id="book-02" class="check" value="book-02" />
-                                        <label for="book-02" class="label-check"><span>2024 전한길 한국사 4.0 실전동형 모의고사 시즌
-                                                2</span></label>
+                                        <input type="checkbox" id="book-02" class="check" value="book-02"/>
+                                        <label for="book-02" class="label-check"><span>2024 전한길 한국사 4.0 실전동형 모의고사 시즌 2</span></label>
                                     </div>
                                     <div class="price-area">
-                                        <strong class="discount">10%</strong><strong
-                                            class="discount-price">9,000원</strong><span class="price">10,000원</span>
+                                        <strong class="discount">10%</strong><strong class="discount-price">9,000원</strong><span class="price">10,000원</span>
                                     </div>
                                 </li>
                                 <li class="check-list-item">
                                     <div class="checks black">
-                                        <input type="checkbox" id="book-03" class="check" value="book-03" />
-                                        <label for="book-03" class="label-check"><span>2024 전한길 한국사 4.0 실전동형 모의고사 시즌
-                                                2</span></label>
+                                        <input type="checkbox" id="book-03" class="check" value="book-03"/>
+                                        <label for="book-03" class="label-check"><span>2024 전한길 한국사 4.0 실전동형 모의고사 시즌 2</span></label>
                                     </div>
                                     <div class="price-area">
-                                        <strong class="discount">10%</strong><strong
-                                            class="discount-price">9,000원</strong><span class="price">10,000원</span>
+                                        <strong class="discount">10%</strong><strong class="discount-price">9,000원</strong><span class="price">10,000원</span>
                                     </div>
                                 </li>
-                            </ul>
+                            </ul>                                                      
                         </form>
                     </article>
                     <article class="detail-content-box special">
-                        <header class="detail-content-header">
-                            <h3 class="title">미북 Special</h3>
-                            <div class="info-group">
-                                <button type="button" class="btn btn-info">
-                                    <span class="icon-info"><span class="blind">안내</span></span>
-                                </button>
-                                <div class="info-popup-group detail-view off">
-                                    <p class="text">현재 상품에서 이용 가능한 학습 서비스입니다.</p>
+                            <header class="detail-content-header">
+                                <h3 class= "title">미북 Special</h3>
+                                <div class="info-group">
+                                    <button type="button" class="btn btn-info">
+                                        <span class="icon-info"><span class="blind">안내</span></span>
+                                    </button>
+                                    <div class="info-popup-group detail-view off">
+                                       <p class="text">현재 상품에서 이용 가능한 학습 서비스입니다.</p>
+                                    </div>
                                 </div>
+                            </header>
+                            <div class="chip-group">
+                                <div class="chip"><span class="chip-inner"><span class="text">정・오답 확인</span><span class="icon-answer-check"></span></span></div>
+                                <div class="chip"><span class="chip-inner"><span class="text">정답・해설 가리기</span><span class="icon-answer-hide"></span></span></div>
+                                <div class="chip"><span class="chip-inner"><span class="text">정답・해설 보기</span><span class="icon-answer-view"></span></span></div>
+                                <div class="chip"><span class="chip-inner"><span class="text">지문보기</span><span class="icon-fingerprint-view"></span></span></div>
+                                <div class="chip"><span class="chip-inner"><span class="text">학습 Q&A</span><span class="icon-learningQA"></span></span></div>
+                                <div class="chip"><span class="chip-inner"><span class="text">듣기 음원</span><span class="icon-listening"></span></span></div>
+                                <div class="chip"><span class="chip-inner"><span class="text">동영상 강의</span><span class="icon-player"></span></span></div>
+                                <div class="chip"><span class="chip-inner"><span class="text">응시하기</span><span class="icon-test"></span></span></div>
                             </div>
-                        </header>
-                        <div class="chip-group">
-                            <div class="chip"><span class="chip-inner"><span class="text">정・오답 확인</span><span
-                                        class="icon-answer-check"></span></span></div>
-                            <div class="chip"><span class="chip-inner"><span class="text">정답・해설 가리기</span><span
-                                        class="icon-answer-hide"></span></span></div>
-                            <div class="chip"><span class="chip-inner"><span class="text">정답・해설 보기</span><span
-                                        class="icon-answer-view"></span></span></div>
-                            <div class="chip"><span class="chip-inner"><span class="text">지문보기</span><span
-                                        class="icon-fingerprint-view"></span></span></div>
-                            <div class="chip"><span class="chip-inner"><span class="text">학습 Q&A</span><span
-                                        class="icon-learningQA"></span></span></div>
-                            <div class="chip"><span class="chip-inner"><span class="text">듣기 음원</span><span
-                                        class="icon-listening"></span></span></div>
-                            <div class="chip"><span class="chip-inner"><span class="text">동영상 강의</span><span
-                                        class="icon-player"></span></span></div>
-                            <div class="chip"><span class="chip-inner"><span class="text">응시하기</span><span
-                                        class="icon-test"></span></span></div>
-                        </div>
                     </article>
                 </section>
                 <section class="detail-info-section">
@@ -448,10 +429,10 @@
                                 <div class="title">
                                     저자
                                 </div>
-                                <div class="content">전한길</div>
+                                <div  class="content">전한길</div>
                             </div>
                             <div class="detail-goods-info-item">
-                                <div class="title">
+                                <div  class="title">
                                     출간일
                                 </div>
                                 <div class="content">024.01.01</div>
@@ -490,55 +471,49 @@
                         </div>
                     </div>
                 </section>
-                <section class="tab-bar-group">
+                <section class="tab-bar-group" >
                     <div class="swiper-container" id="tabBarGroup">
                         <div class="swiper-wrapper">
                             <div class="swiper-slide on"><a href="#tab-book" class="btn-tab-menu on">책 소개</a></div>
                             <div class="swiper-slide"><a href="#tab-contents" class="btn-tab-menu">목차</a></div>
                             <div class="swiper-slide"><a href="#tab-writer" class="btn-tab-menu">저자 소개</a></div>
                             <div class="swiper-slide"><a href="#tab-publishing" class="btn-tab-menu">출판사 서평</a></div>
-                            <div class="swiper-slide"><a href="#tab-review" class="btn-tab-menu">리뷰 <span
-                                        class="num">(NN)</span></a></div>
+                            <div class="swiper-slide"><a href="#tab-review" class="btn-tab-menu">리뷰 <span class="num">(NN)</span></a></div>
                         </div>
                     </div>
                 </section>
                 <section class="detail-content-section large" id="tab-book">
                     <div class="detail-content">
-                        최근 변화한 공무원 시험 출제 경향을 낱낱이 분석하여, 시험에 꼭 나오는 주제와 문제 유형, 난이도에 맞추어 엄선한 문제를 수록하였다. 실전에 서 ‘알고 있는 문제’를
-                        틀리는 이유는 제한된 시간 안에 시험을 마쳐야 하기 때문입니다. ‘합격 자가 진단’ 코너를 통해 지속적으로 자신의 취약점 을 점검하고, 출제자의 함정을 간파하는 훈련으로
-                        더욱 완벽하게 실전을 대비할 수 있도록 하였다. 출제 의도에 걸맞은 정답과 오답에 대한 상세 한 해설을 통해 문제 풀이의 실질적 해법을 제시하였습니다. 또한, 문제 풀이의
-                        맥이 되는 핵심적 요소를 제시하여 마무리 학습 효과까지 겸할 수 있도록 하였다.
-                        <img src="../assest/images/img-book-dummy-02.jpg" alt="">
+                            최근 변화한 공무원 시험 출제 경향을 낱낱이 분석하여, 시험에 꼭 나오는 주제와 문제 유형, 난이도에 맞추어 엄선한 문제를 수록하였다. 실전에 서 ‘알고 있는 문제’를 틀리는 이유는 제한된 시간 안에 시험을 마쳐야 하기 때문입니다. ‘합격 자가 진단’ 코너를 통해 지속적으로 자신의 취약점 을 점검하고, 출제자의 함정을 간파하는 훈련으로 더욱 완벽하게 실전을 대비할 수 있도록 하였다. 출제 의도에 걸맞은 정답과 오답에 대한 상세 한 해설을 통해 문제 풀이의 실질적 해법을 제시하였습니다. 또한, 문제 풀이의 맥이 되는 핵심적 요소를 제시하여 마무리 학습 효과까지 겸할 수 있도록 하였다.
+                        <img src="../assest/images/img-book-dummy-02.jpg" alt=""> 
                     </div>
                     <div class="btn-area">
-                        <button type="button" class="btn btn-detail-more"><span class="text">더보기</span> <span
-                                class="icon-arrow-up"></span></button>
+                        <button type="button" class="btn btn-detail-more"><span class="text">더보기</span>  <span class="icon-arrow-up"></span></button>
                     </div>
                 </section>
                 <section class="detail-content-section" id="tab-contents">
                     <div class="detail-content">
-                        실전동형 모의고사 01회<br />
-                        실전동형 모의고사 02회<br />
-                        실전동형 모의고사 03회<br />
-                        실전동형 모의고사 04회<br />
-                        실전동형 모의고사 05회<br />
-                        실전동형 모의고사 06회<br />
-                        실전동형 모의고사 07회<br />
-                        실전동형 모의고사 08회<br />
-                        실전동형 모의고사 09회<br />
-                        실전동형 모의고사 01회<br />
-                        실전동형 모의고사 02회<br />
-                        실전동형 모의고사 03회<br />
-                        실전동형 모의고사 04회<br />
-                        실전동형 모의고사 05회<br />
-                        실전동형 모의고사 06회<br />
-                        실전동형 모의고사 07회<br />
-                        실전동형 모의고사 08회<br />
+                        실전동형 모의고사 01회<br/>
+                        실전동형 모의고사 02회<br/>
+                        실전동형 모의고사 03회<br/>
+                        실전동형 모의고사 04회<br/>
+                        실전동형 모의고사 05회<br/>
+                        실전동형 모의고사 06회<br/>
+                        실전동형 모의고사 07회<br/>
+                        실전동형 모의고사 08회<br/>
+                        실전동형 모의고사 09회<br/>
+                        실전동형 모의고사 01회<br/>
+                        실전동형 모의고사 02회<br/>
+                        실전동형 모의고사 03회<br/>
+                        실전동형 모의고사 04회<br/>
+                        실전동형 모의고사 05회<br/>
+                        실전동형 모의고사 06회<br/>
+                        실전동형 모의고사 07회<br/>
+                        실전동형 모의고사 08회<br/>
                         실전동형 모의고사 09회
                     </div>
                     <div class="btn-area">
-                        <button type="button" class="btn btn-detail-more"> <span class="text">더보기</span> <span
-                                class="icon-arrow-up"></span></button>
+                        <button type="button" class="btn btn-detail-more"> <span class="text">더보기</span>  <span class="icon-arrow-up"></span></button>
                     </div>
                 </section>
                 <section class="detail-content-section" id="tab-writer">
@@ -546,56 +521,44 @@
                         <div class="writer">
                             <strong>저자(글) : 전한길 </strong>
                         </div>
-                        네이버 카페 회원 수가 35만 명이 넘는 공무원 한국사의 대표 강사로서, 온라인 수강생과 공무원 한국사 교재 판매량에 있어서 압도적이다. 메가스터 디 수능 강사, EBS
-                        교육방송 강사, 윌비스 고시학원 강사, 공단기/경단기/법검단기/소방단기/자단기 강사를 거쳐 현재는 메가공무원과 메가공무원학 원, 메가소방에서 한국사를 강의하고 있다.
-                        2004년에는 EBS 강의 만족도 전체 강사 중 1위를 하였으며, 2014∼2015년 국가직 7급 전체 수석 합격자와 2014년 경찰(여경) 최연소 합격자를 배출 하였다.
-                        이 외에도 2013∼2019년에는 잇따라 3관왕, 2관왕을 대거 배출하였으며, 2019년에는 국가직 9급 일반행정직 전체 수석합격자 배출 및 국가 직 7급 일반행정직 전체
-                        수석, 차석 합격자를 배출하였다.
-                        주요 도서로는 『전한길 한국사 합격생 필기노트』, 『전한길 한국사 2.0 All in one』, 『전한길 한국사 2.0 단권화 개념완성』, 『전한길 한국사 3.0 기출문
+                        네이버 카페 회원 수가 35만 명이 넘는 공무원 한국사의 대표 강사로서, 온라인 수강생과 공무원 한국사 교재 판매량에 있어서 압도적이다. 메가스터 디 수능 강사, EBS 교육방송 강사, 윌비스 고시학원 강사, 공단기/경단기/법검단기/소방단기/자단기 강사를 거쳐 현재는 메가공무원과 메가공무원학 원, 메가소방에서 한국사를 강의하고 있다.
+    2004년에는 EBS 강의 만족도 전체 강사 중 1위를 하였으며, 2014∼2015년 국가직 7급 전체 수석 합격자와 2014년 경찰(여경) 최연소 합격자를 배출 하였다. 이 외에도 2013∼2019년에는 잇따라 3관왕, 2관왕을 대거 배출하였으며, 2019년에는 국가직 9급 일반행정직 전체 수석합격자 배출 및 국가 직 7급 일반행정직 전체 수석, 차석 합격자를 배출하였다.
+    주요 도서로는 『전한길 한국사 합격생 필기노트』, 『전한길 한국사 2.0 All in one』, 『전한길 한국사 2.0 단권화 개념완성』, 『전한길 한국사 3.0 기출문
                     </div>
                     <div class="btn-area">
-                        <button type="button" class="btn btn-detail-more"><span class="text">더보기</span> <span
-                                class="icon-arrow-up"></span></button>
+                        <button type="button" class="btn btn-detail-more"><span class="text">더보기</span> <span class="icon-arrow-up"></span></button>
                     </div>
                 </section>
                 <section class="detail-content-section" id="tab-publishing">
                     <div class="detail-content">
                         「2024 전한길 한국사 4.0 실전동형 모의고사」의 남다른 구성
-                        1. 실전보다 더 실전 같은 모의고사 최근 변화한 공무원 시험 출제 경향을 낱낱이 분석하여, 시험에 꼭 나오는 주제와 문제 유형, 난이도에 맞추어 엄선한 문제를 수록하였다.
-                        2. 실전 점수 업그레이드를 위한 자가 진단 실전에서 ‘알고 있는 문제’를 틀리는 이유는 제한된 시간 안에 시험을 마쳐야 하기 때문입니다. ‘합격 자가 진단’ 코너를 통해
-                        지속적으로 자신의 취약점을 점검하고, 출제자의 함정을 간파하는 훈련으로 더욱 완벽하게 실전을 대비할 수 있도록 하였다.
-                        3. 풀이를 뛰어넘어 출제의 맥을 짚는 해설 출제 의도에 걸맞은 정답과 오답에 대한 상세한 해설을 통해 문제 풀이의 실질적 해법을 제시하였습니다. 또한, 문제 풀이의 맥이
-                        되는 핵심적 요소를 제시하여 마무리 학습 효과까지 겸할 수 있도록 하였습니다.
+                        1. 실전보다 더 실전 같은 모의고사  최근 변화한 공무원 시험 출제 경향을 낱낱이 분석하여, 시험에 꼭 나오는 주제와 문제 유형, 난이도에 맞추어 엄선한 문제를 수록하였다.
+                        2. 실전 점수 업그레이드를 위한 자가 진단  실전에서 ‘알고 있는 문제’를 틀리는 이유는 제한된 시간 안에 시험을 마쳐야 하기 때문입니다. ‘합격 자가 진단’ 코너를 통해 지속적으로 자신의 취약점을 점검하고, 출제자의 함정을 간파하는 훈련으로 더욱 완벽하게 실전을 대비할 수 있도록 하였다.
+                        3. 풀이를 뛰어넘어 출제의 맥을 짚는 해설  출제 의도에 걸맞은 정답과 오답에 대한 상세한 해설을 통해 문제 풀이의 실질적 해법을 제시하였습니다. 또한, 문제 풀이의 맥이 되는 핵심적 요소를 제시하여 마무리 학습 효과까지 겸할 수 있도록 하였습니다.
                         「2024 전한길 한국사 4.0 실전동형 모의고사」의 효과적인 활용
                         1. 문제편의 동형 모의고사를 풀어 자신의 실력을 측정한 후, 회차마다 제공되는 합격 자가진단표를 완성하고 스스로 확인하여 자신만의 학습 계획을 세운다.
                         2. 책속의 책으로 제공되는 〈정답 및 해설〉만으로도 완전한 학습이 가능하도록 문제 해설과 함께 다시 한번 문제를 수록하였으므로, 회독시 해설편을 적극 활용한다.
                         3. 전한길이 고안한 〈공무원 한국사 단기 고득점 자동화 시스템〉을 참고하면 완벽한 실력 향상과 고득점을 얻을 수 있다.
-                        4. 〈전한길 한국사 4.0 실전동형 모의고사〉는 〈공무원 한국사 단기 고득점 자동화 시스템〉을 완결하는 최종 콘텐츠이므로 〈전한길 한국사 합격생 필기노트〉를 함께 활용하면
-                        더욱 효과적으로 학습할 수 있다.
+                        4. 〈전한길 한국사 4.0 실전동형 모의고사〉는 〈공무원 한국사 단기 고득점 자동화 시스템〉을 완결하는 최종 콘텐츠이므로 〈전한길 한국사 합격생 필기노트〉를 함께 활용하면 더욱 효과적으로 학습할 수 있다.
                     </div>
                     <div class="btn-area">
-                        <button type="button" class="btn btn-detail-more"><span class="text">더보기</span> <span
-                                class="icon-arrow-up"></span></button>
+                        <button type="button" class="btn btn-detail-more"><span class="text">더보기</span> <span class="icon-arrow-up"></span></button>
                     </div>
                 </section>
                 <section class="detail-content-section" id="tab-review">
                     <div class="detail-content">
-                        최근 변화한 공무원 시험 출제 경향을 낱낱이 분석하여, 시험에 꼭 나오는 주제와 문제 유형, 난이도에 맞추어 엄선한 문제를 수록하였다. 실전에 서 ‘알고 있는 문제’를
-                        틀리는 이유는 제한된 시간 안에 시험을 마쳐야 하기 때문입니다. ‘합격 자가 진단’ 코너를 통해 지속적으로 자신의 취약점 을 점검하고, 출제자의 함정을 간파하는 훈련으로
-                        더욱 완벽하게 실전을 대비할 수 있도록 하였다. 출제 의도에 걸맞은 정답과 오답에 대한 상세 한 해설을 통해 문제 풀이의 실질적 해법을 제시하였습니다. 또한, 문제 풀이의
-                        맥이 되는 핵심적 요소를 제시하여 마무리 학습 효과까지 겸할 수 있도록 하였다.
-                        <img src="../assest/images/img-book-dummy-02.jpg" alt="">
+                            최근 변화한 공무원 시험 출제 경향을 낱낱이 분석하여, 시험에 꼭 나오는 주제와 문제 유형, 난이도에 맞추어 엄선한 문제를 수록하였다. 실전에 서 ‘알고 있는 문제’를 틀리는 이유는 제한된 시간 안에 시험을 마쳐야 하기 때문입니다. ‘합격 자가 진단’ 코너를 통해 지속적으로 자신의 취약점 을 점검하고, 출제자의 함정을 간파하는 훈련으로 더욱 완벽하게 실전을 대비할 수 있도록 하였다. 출제 의도에 걸맞은 정답과 오답에 대한 상세 한 해설을 통해 문제 풀이의 실질적 해법을 제시하였습니다. 또한, 문제 풀이의 맥이 되는 핵심적 요소를 제시하여 마무리 학습 효과까지 겸할 수 있도록 하였다.
+                        <img src="../assest/images/img-book-dummy-02.jpg" alt=""> 
                     </div>
                     <div class="btn-area">
-                        <button type="button" class="btn btn-detail-more"><span class="text">더보기</span> <span
-                                class="icon-arrow-up"></span></button>
+                        <button type="button" class="btn btn-detail-more"><span class="text">더보기</span> <span class="icon-arrow-up"></span></button>
                     </div>
                 </section>
             </div>
             <!--카드 팝업 시작-->
-            <section class="bottom-sheet-popup handler " id="bottomSheet">
+            <section class="bottom-sheet-popup handler " id="bottomSheet" >
                 <div class="handler-area" id="bottomSheetHandler">
-                    <button type="button" class="handler-bar"><span class="blind">핸들러</span></button>
+                    <button type="button" class="handler-bar" ><span class="blind">핸들러</span></button>
                 </div>
                 <div class="bottom-sheet-body">
                     <div class="price-info-list-group scroll">
@@ -649,8 +612,7 @@
                     </ul>
                 </div>
                 <div class="btn-top-scroll-area" id="btnTopScroll">
-                    <button type="button" class="btn-top-scroll"><span class="icon-top"><span
-                                class="blind">탑버튼</span></span><span class="text">TOP</span></button>
+                    <button type="button" class="btn-top-scroll"><span class="icon-top"><span class="blind">탑버튼</span></span><span class="text">TOP</span></button>
                 </div>
             </footer>
             <!--푸터 끝-->
@@ -693,7 +655,7 @@
                             </div>
                             <div class="btn-link-area">
                                 <a href="#" class="btn-link">
-                                    http://urlurlurlurlurlurlurlurlurlurlurlrulrlurlurlurlurlurlurlurlrul
+                                   http://urlurlurlurlurlurlurlurlurlurlurlrulrlurlurlurlurlurlurlurlrul
                                 </a>
                             </div>
                         </div>
