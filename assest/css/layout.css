@@ -2591,24 +2591,23 @@
     width: auto;
 }
 .book-preview-section .book-preview-slide-group .swiper-pagination-group{
-        margin-top: 48px;
-
-}
-.book-preview-section .book-preview-slide-group .swiper-pagination-fraction {
     position: relative;
     left: auto;
     right: auto;
     bottom: auto !important;
     top: auto;
-    display: inline-block;
+    display: block;
     border-top: 2px solid var(--black-color);
-    margin-top: 0;
+    margin-top: 48px;
     padding-top: 20px;
-    width: 100%;
+        width: 100%;
+}
+.book-preview-section .book-preview-slide-group .swiper-pagination-fraction {
+    margin-top: 0;
     font-size: 1.6rem;
     line-height: 24px;
     color: var(--blue-grey-400);
-}
+} 
 .book-preview-section .book-preview-slide-group .swiper-button-prev {
     left: 40px;
     box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.10);
@@ -2666,6 +2665,7 @@
     } */
     .book-preview-section .book-preview-slide-group .swiper-pagination-group {
         margin: 24px 20px 0;
+        width: auto;
     }
     .book-preview-section .book-preview-slide-group .swiper-button-prev {
         left: 12px;
