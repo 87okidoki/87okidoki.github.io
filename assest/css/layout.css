@@ -301,7 +301,23 @@
     object-fit: cover;
     object-position: left top;
 }
-
+.main-visual-banner-section .swiper-button-next,
+.main-visual-banner-section .swiper-button-prev{
+        top: 10px;
+    background: transparent;
+    border: 0;
+    width: 24px;
+    height: 24px;
+}
+@media (hover: none),
+(pointer: coarse),
+(hover: none) and (pointer: coarse),
+(hover: none) and (pointer: fine) {
+    .main-visual-banner-section .swiper-button-next,
+    .main-visual-banner-section .swiper-button-prev {
+        display: flex;
+    }
+}
 .main-visual-banner-section .swiper-button-next:after {
     content: '';
     background: url("../images/ic-arrow-indicator.svg") no-repeat center center /contain;
@@ -312,7 +328,9 @@
 .main-visual-banner-section .swiper-button-prev {
     left: -72px;
 }
-
+.main-visual-banner-section .swiper-button-next {
+    right: 12px;
+}
 .main-visual-banner-section .swiper-button-prev:after {
     content: '';
     background: url("../images/ic-arrow-indicator.svg") no-repeat center center /contain;
