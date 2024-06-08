@@ -93,26 +93,7 @@ $(function () {
         }
     });
 
-    /* 카테고리 버튼 스와이퍼*/
-
-    // const btnSwiper = new Swiper('.btns-swiper-group', {     slidesPerView:
-    // 'auto',     preventClicks: true,     preventClicksPropagation: false,
-    // observer: true,     observeParents: true, }); const $snbSwiperItem =
-    // $('.btns-swiper-group .swiper-wrapper .swiper-slide a');
-    // $snbSwiperItem.click(function() {     const target = $(this).parent();
-    // $snbSwiperItem.parent().removeClass('on');     target.addClass('on');
-    // muCenter(target); }); function muCenter(target) {     const snbwrap =
-    // $('.btns-swiper-group .swiper-wrapper');     const targetPos =
-    // target.position();     const box = $('.btns-swiper-group');     const boxHalf
-    // = box.width() / 2;     let pos;     let listWidth = 0;
-    // snbwrap.find('.swiper-slide').each(function() {         listWidth +=
-    // $(this).outerWidth();     });     const selectTargetPos = targetPos.left +
-    // target.outerWidth() / 2;     if (selectTargetPos <= boxHalf) {  left pos = 0;
-    // } else if ((listWidth - selectTargetPos) <= boxHalf) {  right pos = listWidth
-    // - box.width();     } else {         pos = selectTargetPos - boxHalf;     }
-    // setTimeout(function() {         snbwrap.css({ "transform": "translate3d(" +
-    // (pos * -1) + "px, 0, 0)", "transition-duration": "500ms"         });     },
-    // 200); }
+    //추천 도서 버튼 
     const btnSwiper = new Swiper('.btns-swiper-group', {slidesPerView: 'auto'});
 
     // 페이지 스크롤 이벤트 리스너 추가
@@ -224,9 +205,19 @@ $(function () {
     });
 
     // 툴팁
-    $(".btn-info").click(function () {
-        $('.info-popup-group').toggleClass('off');
+    $('.btn-info').click(function(event) {
+        event.stopPropagation();
+        var $popup = $(this).siblings('.info-popup-group');
+        $popup.toggleClass('off');
+
+        // 다른 곳 클릭 시 팝업 닫기
+        $(document).click(function(event) {
+            if (!$(event.target).closest('.info-group').length) {
+                $('.info-popup-group').addClass('off');
+            }
+        });
     });
+
 
     // flotingBottomSheet가 있는지 확인하고, 패딩 값을 조절하는 함수
     function adjustFooterPadding() {
@@ -324,8 +315,7 @@ $(function () {
         }
     });
 
-
-    
+  
     /* 상세페이지 미리보기 스와이퍼*/
     const bookPreview = new Swiper('#bookPreview', {
         freeMode: true,
@@ -349,10 +339,16 @@ $(function () {
     });
 
     /* 상세페이지 앱스토어 팝업*/
-    $("#appStore").click(function () {
-        $("#appStorePopup").toggleClass("on");
+    $('#appStore').click(function(event) {
+        event.stopPropagation();
+        $('#appStorePopup').toggle();
     });
 
+    $(document).click(function(event) {
+        if (!$(event.target).closest('#appStore').length && !$(event.target).closest('#appStorePopup').length) {
+            $('#appStorePopup').hide();
+        }
+    });
 
     /*tab Menu*/
     $(".btn-tab li").click(function () {
@@ -365,16 +361,18 @@ $(function () {
 
     /*tabBtnSwiper*/
     const tabBtnSwiper = new Swiper('#tabBarGroup', {
-
-            breakpoints: {
-            "767": {
-                slidesPerView: '5'
-            },
-            "320": {
-                slidesPerView: 'auto'
-            },
-        },
+        slidesPerView: 'auto',
+        freeMode: true,
     });
+    // PC 환경일 때만 탭 개수에 따라 클래스 적용
+    if (window.innerWidth >= 768) { // 768px 이상일 때 PC 환경으로 간주
+        var tabCount = $('.swiper-slide').length;
+        if (tabCount <= 2) {
+            $('#tabBarGroup .swiper-wrapper').addClass('fixed-width');
+        } else {
+            $('#tabBarGroup .swiper-wrapper').addClass('variable-width');
+        }
+    }
 
 
   /*detailGoodsSwiper*/
@@ -439,7 +437,6 @@ $(function () {
 
    /*tab-bar-group*/
     $('.btn-detail-more').click(function() {
-     
         var section = $(this).closest('.detail-content-section');
         section.toggleClass('open');
         var icon = $(this).find('.icon');
@@ -451,15 +448,21 @@ $(function () {
         } else {
           $(this).html('<span class="text">더보기</span>  <span class="icon-arrow-up"></span>');
         }
-
-
     });
+
 
     /*공유 하기*/
-    $('#btnShare').click(function() {
-        $('.popup-section').toggleClass('off');
+    $('#btnOpenShare').click(function() {
+        $('#sharePopup').removeClass('off');
     });
+
     $('#btnClose').click(function() {
-        $('.popup-section').addClass('off');
+        $('#sharePopup').addClass('off');
+    });
+
+    $(document).click(function(event) {
+        if (!$(event.target).closest('.popup-container').length && !$(event.target).closest('#btnOpenShare').length) {
+            $('#sharePopup').addClass('off');
+        }
     });
 });

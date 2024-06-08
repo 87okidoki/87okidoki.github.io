@@ -587,7 +587,9 @@ img {
 .width-50 {
     width: 50% !important;
 }
-
+.width-94 {
+    width: 94px !important;
+}
 .width-60 {
     width: 60px !important;
 }
@@ -1188,6 +1190,34 @@ img {
     width: 40px;
     height: 40px;
 }
+
+.login-google{
+    display: inline-block;
+    width: 48px;
+    height: 48px;
+    background: url(../images/login-google.svg) no-repeat center center /contain;
+}
+.login-kakao{
+    display: inline-block;
+    width: 48px;
+    height: 48px;
+    background: url(../images/login-kakao.svg) no-repeat center center /contain;
+}
+.login-apple{
+    display: inline-block;
+    width: 48px;
+    height: 48px;
+    background: url(../images/login-apple.svg) no-repeat center center /contain;
+}
+.login-google.small,
+.login-kakao.small,
+.login-apple.small{
+    width: 22px;
+    height: 22px;
+}
+
+
+/* chip-group  */
 .chip-group {
     flex-wrap: wrap;
     display: flex;
@@ -1243,7 +1273,7 @@ img {
 /*btn-top-scroll*/
 .btn-top-scroll-area {
     position: fixed;
-    z-index: 55;
+    z-index: 999;
     right: 28px;
     right: calc(constant(safe-area-inset-right) + 28px);
     right: calc(env(safe-area-inset-right) + 28px);
@@ -1537,6 +1567,7 @@ img {
     background-color: var(--blue-grey-50);
     color: var(--blue-grey-300);
 }
+
 .btn-transparent {
     background-color: transparent !important;
 }
@@ -1649,9 +1680,156 @@ img {
     height: 52px;
     padding: 14px 18px;
 }
-
+.form-large {
+    height: 64px;
+    padding: 20px 0px;
+}
 .form-white {
     background-color: #fff !important;
+}
+.login-input {
+    position: relative;
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    background-color: var(--white-color);
+    border-bottom: 1px solid var(--border-primary);
+    width: 100%;
+    height: 64px;
+}
+.login-input::after{
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0px;
+    height: 1px;
+    width: 100%;
+    background-color: transparent;
+}
+.login-input input{
+    font-family: "Pretendard SemiBold";
+    font-size: 1.4rem;
+    line-height: 20px;
+    color: var(--black-color);
+    border: 0px;
+    height: 100%;
+    width: 100%;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    padding: 20px 0px;
+}
+.login-input input::placeholder{
+    font-family: "Pretendard";
+    color: var(--blue-grey-400);
+}
+.login-input:focus::after,
+.login-input:focus-visible::after ,
+.login-input:hover::after{
+    background-color:var(--black-color);
+    -webkit-transition: all 0.3s cubic-bezier(0, 0.21, 0.03, 1.01);
+    -o-transition: all 0.3s cubic-bezier(0, 0.21, 0.03, 1.01);
+    transition: all 0.3s cubic-bezier(0, 0.21, 0.03, 1.01);
+}
+.login-input:focus,
+.login-input:focus-visible ,
+.login-input:hover {
+    border-color:var(--black-color);
+    -webkit-transition: all 0.3s cubic-bezier(0, 0.21, 0.03, 1.01);
+    -o-transition: all 0.3s cubic-bezier(0, 0.21, 0.03, 1.01);
+    transition: all 0.3s cubic-bezier(0, 0.21, 0.03, 1.01);
+}
+
+.login-input-group.error .login-input{
+    border-color:var(--red-color);
+}
+.login-input-group.error .login-input::after{
+    background-color:var(--red-color);
+} 
+.login-input-group.error .login-input:focus::after{
+    background-color:transparent;
+} 
+
+.login-input-group.error .guide-text-box .guide-text.error{
+    display: block;
+}
+.login-input-group .guide-text-box{
+    margin-top: 8px;
+}
+.login-input-group .guide-text-box .guide-text{
+    position: relative;
+    font-size: 1rem;
+    line-height: 12px;
+    margin-top: 4px;
+    padding-left: 10px;
+    color: var(--gray-color-400);
+}
+.login-input-group .guide-text-box .guide-text::before{
+    content: '';
+    display: inline-block;
+    position: absolute;
+    top: 5px;
+    left: 0;
+    background-color: var(--gray-color-400);
+    width: 2px;
+    height: 2px;
+    border-radius: 10px;
+}
+.login-input-group .guide-text-box .guide-text.error{
+    display: none;
+    color: var(--red-color);
+}
+.login-input-group .guide-text-box .guide-text.error::before{
+    background-color: var(--red-color);
+}
+
+.login-input .icon-input-close{
+    display: inline-block;
+    background: url(../images/ic-input-close.svg) no-repeat center center /contain;
+    width: 24px;
+    height: 24px;
+}
+.login-input .icon-input-eye{
+    display: inline-block;
+    background: url(../images/ic-input-eye.svg) no-repeat center center /contain;
+    width: 24px;
+    height: 24px;
+}
+.login-input .icon-input-eye-closing{
+    display: inline-block;
+    background: url(../images/ic-input-eye-closing.svg) no-repeat center center /contain;
+    width: 24px;
+    height: 24px;
+}
+
+.login-input > .login-inpu-btns{
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+    gap: 12px;
+}
+.login-input > .login-inpu-btns .clock{
+    color: var(--black-300);
+    font-size: 1.4rem;
+    line-height: 20px;
+    margin-left: 4px;
+}
+.login-input > .login-inpu-btns .btn-input{
+    font-size: 1.4rem;
+    border: solid 1px var(--black-color);
+    background-color: var(--black-color);
+    color: var(--white-color);
+    line-height: 42px;
+    padding: 0 20px;
+    border-radius: 8px;
+    margin-left: 4px;
+}
+.btn-input:disabled {
+    border: solid 1px var(--blue-grey-50);
+    background-color: var(--blue-grey-50);
+    color: var(--blue-grey-300);
 }
 
 .form-control {
@@ -1660,7 +1838,6 @@ img {
     font-size: 1.4rem;
     background-color: var(--white-color);
     color: var(--blue-grey-500);
-    font-weight: 500;
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
@@ -1767,28 +1944,7 @@ img {
     border-radius: 5px;
 }
 
-/* search */
-.form-control-icon {
-    position: relative;
-}
-
-.form-control-icon .form-medium+.btn-icon {
-    position: absolute;
-    top: 19px;
-    right: 18px;
-    background-color: transparent;
-}
-
-.form-control-icon .form-small+.btn-icon {
-    position: absolute;
-    top: 14px;
-    right: 18px;
-    background-color: transparent;
-}
-.form-title+.checks-area {
-    margin-top: 14px;
-}
-
+/* checks */
 .checks.inline {
     display: inline-block;
     margin-right: 58px;
@@ -1861,8 +2017,38 @@ img {
     line-height: 20px;
     vertical-align: middle;
     cursor: pointer;
-    padding-left: 28px;
+    padding-left: 24px;
 }
+
+
+
+.checks.line input[type="checkbox"]+label::before{
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: 0;
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    vertical-align: middle;
+    cursor: pointer;
+}
+.checks.line input[type="checkbox"]+label::before {
+    background: url("../images/ic-line-checkbox.svg") no-repeat center center / contain;
+}
+
+.checks.line input[type="checkbox"]:checked+label::before {
+    background: url("../images/ic-line-checkbox-on.svg") no-repeat center center / contain;
+}
+.checks.line .label-check span {
+    display: inline-block;
+    font-size: 1.2rem;
+    line-height: 20px;
+    vertical-align: middle;
+    cursor: pointer;
+    padding-left: 20px;
+}
+
 
 /*list-area*/
 .list-box.both-type li {

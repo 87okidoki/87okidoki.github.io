@@ -239,21 +239,25 @@
             </section>
             <!--해더 끝-->
             <div class="detail-contents-wrap">
-                <section class="detail-main-section">
+                <section class="detail-main-section goods">
                     <div class="detail-goods-swiper">
                         <div class="swiper" id="detailGoodsSwiper">
                             <div class="swiper-wrapper">
                                 <div class="swiper-slide">
-                                    <div class="goods-thumb-area large">
-                                        <div class="goods-thumb">
-                                            <img src="../assest/images/img-goods-dummy.png" alt="" />
+                                    <div class="thumb-item">
+                                        <div class="goods-thumb-area large">
+                                            <div class="goods-thumb">
+                                                <img src="../assest/images/img-goods-dummy.png" alt="" />
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="swiper-slide">
-                                    <div class="goods-thumb-area large">
-                                        <div class="goods-thumb">
-                                            <img src="../assest/images/img-goods-dummy.png" alt="" />
+                                    <div class="thumb-item">
+                                        <div class="goods-thumb-area large badge-free">
+                                            <div class="goods-thumb">
+                                                <img src="../assest/images/img-goods-dummy.png" alt="" />
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -264,7 +268,7 @@
                         <div class="swiper-button-next"></div>
                     </div>
                     <div class="book-btns-area">
-                        <button type="button" class="btn btn-option" id="btnShare"><span class="icon-share"></span><span class="text">공유하기</span></button>
+                        <button type="button" class="btn btn-option" id="btnOpenShare"><span class="icon-share"></span><span class="text">공유하기</span></button>
                     </div>
                 </section>
                 <section class="goods-info-section">
@@ -617,7 +621,7 @@
             </footer>
             <!--푸터 끝-->
             <!--팝업 시작-->
-            <section class="popup-section sns off">
+            <section class="popup-section sns off" id="sharePopup">
                 <div class="popup-container text-center">
                     <header class="popup-header">
                         <h2 class="title">공유하기</h2>
