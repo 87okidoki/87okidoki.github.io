@@ -395,20 +395,20 @@ $(function () {
         }
     });
 
-
   /*tab-bar-group*/
     var sections = $('.detail-content-section')
     var nav = $('.tab-bar-group')
-    var nav_height = nav.outerHeight();
+    var navHeight = nav.outerHeight();
     var header = $('.sub-header-section');
     $(window).on('scroll', function () {
         var cur_pos = $(this).scrollTop();
         
         sections.each(function() {
-        var top = $(this).offset().top - nav_height,
+        var top = $(this).offset().top - navHeight,
             bottom = top + $(this).outerHeight();
         if (cur_pos >= top && cur_pos <= bottom) {
             nav.find('.btn-tab-menu').removeClass('on');
+            sections.removeClass('on');
             $(this).addClass('on');
             nav.find('a[href="#'+$(this).attr('id')+'"]').addClass('on');
         }
@@ -417,8 +417,8 @@ $(function () {
   
 
     nav.find('.btn-tab-menu').on('click', function () {
-        var $el = $(this)
-        , id = $el.attr('href');
+        var $el = $(this), 
+        id = $el.attr('href');
         $('html, body').animate({
         scrollTop: $(id).offset().top 
         }, 500);
@@ -426,27 +426,19 @@ $(function () {
         return false;
     });
     
-    var menu = $('.tab-bar-group');
-    var offset = menu.offset().top;
 
+    var offset = nav.offset().top;
     $(window).scroll(function() {
-        if ($(window).scrollTop() > offset) {
-            menu.addClass('sticky');
+        if ($(window).scrollTop() >= offset) {
+            nav.addClass('sticky');
+            header.css('position', 'static');
         } else {
-            menu.removeClass('sticky');
+            nav.removeClass('sticky');
+            header.css('position', 'fixed');
         }
     });
 
-    $(window).scroll(function() {
-      var stickyMenuOffset = nav.offset().top;
-      var scrollPosition = $(window).scrollTop();
-  
-      if (scrollPosition >= stickyMenuOffset) {
-        header.css('position', 'static');
-      } else {
-        header.css('position', 'fixed');
-      }
-    });
+
 
 
    /*btn-detail-more*/
