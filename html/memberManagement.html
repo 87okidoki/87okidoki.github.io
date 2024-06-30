@@ -1,0 +1,532 @@
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+    <meta name="theme-color" content="#fff">
+    <meta name="color-scheme" content="light only">
+    <meta name="msapplication-TileColor" content="#fff">
+    <meta name="msapplication-TileImage" content="/ms-icon-70x70.png">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <link rel="stylesheet" type="text/css" href="../assest/css/swiper-bundle.css" />
+    <link rel="stylesheet" type="text/css" href="../assest/css/common.css" />
+    <link rel="stylesheet" type="text/css" href="../assest/css/layout.css" />
+    <meta name="keywords" content="meBook" />
+    <meta name="description" content="meBook" />
+    <title>meBook</title>
+</head>
+
+<body>
+    <main class="my-wrap">
+        <!--컨텐츠 시작-->
+        <div class="container">
+            <!--해더 시작-->
+            <section class="header-section sub-header-section">
+                <header class="header">
+                    <div class="header-group">
+                        <div class="header-left">
+                            <div class="mo-nav-btns">
+                                <button class="btn-menu" type="button" class="btn btn-transparent"
+                                    id="openMobileCategorylayer">
+                                    <i class="icon-menu-24"><span class="blind">메뉴</span></i>
+                                </button>
+                            </div>
+                            <a href="#" class="logo">
+                                <h1>
+                                    <img src="../assest/images/logo-meBook.svg" alt="meBook" />
+                                </h1>
+                            </a>
+                            <nav class="pc-nav-btns">
+                                <button class="btn-menu" type="button" class="btn btn-transparent"
+                                    id="openPcCategorylayer">
+                                    <i class="icon-menu-24"><span class="blind">메뉴</span></i>
+                                </button>
+                                <ul class="nav-btn-items">
+                                    <li class="nav-btn-item"><a href="">베스트셀러</a></li>
+                                    <li class="nav-btn-item"><a href="">신간도서</a></li>
+                                    <li class="nav-btn-item"><a href="">이벤트</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                        <div class="header-right">
+                            <a href="#" class="btn btn-transparent">
+                                <span class="icon-search">
+                                    <span class="blind">검색</span>
+                                </span>
+                            </a>
+                            <a href="#" class="btn btn-transparent btn-cart">
+                                <i class="icon-cart"><span class="blind">장바구니</span></i>
+                                <span class="badge-count">5</span>
+                            </a>
+                            <a href="#" class="btn btn-transparent"><i class="icon-mypage"><span
+                                        class="blind">마이페이지</span></i></a>
+                        </div>
+                    </div>
+                    <a href="#" class="btn-app-down"><span class="text">앱 다운로드</span></a>
+                </header>
+                <!-- mobile 메뉴 레이어 시작 -->
+                <article class="mo-menu-layer-group off" id="mobileCategorylayerOverlay">
+                    <h3 class="blind">메뉴 1depth</h3>
+                    <div class="mo-main-menu-layer">
+                        <header class="mo-header">
+                            <div class="mo-header-left">
+                                <i class="icon-menu-left">
+                                    <span class="blind">메뉴</span>
+                                </i>
+                            </div>
+                            <h3 class="mo-header-title">카테고리</h3>
+                            <div class="mo-header-right">
+                                <button type="button" class="btn btn-transparent btn-close"
+                                    id="closeMobileCategorylayerOverlay">
+                                    <i class="icon-close-gray">
+                                        <span class="blind">닫기</span></i>
+                                </button>
+                            </div>
+                        </header>
+                        <nav class="mo-menu-body scroll">
+                            <div class="mo-menu-link-group">
+                                <div class="menu-link-title">E-BOOK</div>
+                                <div class="menu-link-lists">
+                                    <ul class="menu-link-list">
+                                        <li class="menu-link-item on"><a href="#">수험서</a></li>
+                                        <li class="menu-link-item"><a href="#">외국어</a></li>
+                                        <li class="menu-link-item"><a href="#">기출문제</a></li>
+                                        <li class="menu-link-item"><a href="#">자격증</a></li>
+                                        <li class="menu-link-item"><a href="#">대학교재</a></li>
+                                        <li class="menu-link-item"><a href="#">그 외’s</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="mo-menu-link-group">
+                                <h3 class="menu-link-title">Digital Goods</h3>
+                                <div class="menu-link-lists">
+                                    <ul class="menu-link-list">
+                                        <li class="menu-link-item"><a href="#">노트 템플릿</a></li>
+                                        <li class="menu-link-item"><a href="#">노트 표지</a></li>
+                                        <li class="menu-link-item"><a href="#">노트 속지</a></li>
+                                        <li class="menu-link-item"><a href="#">스티커</a></li>
+                                        <li class="menu-link-item"><a href="#">그 외</a></li>
+                                        <li class="menu-link-item"><a href="#">노트 템플릿</a></li>
+                                        <li class="menu-link-item"><a href="#">노트 표지</a></li>
+                                        <li class="menu-link-item"><a href="#">노트 속지</a></li>
+                                        <li class="menu-link-item"><a href="#">스티커</a></li>
+                                        <li class="menu-link-item"><a href="#">그 외</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </nav>
+                        <div class="mo-menu-footer">
+                            <a class="menu-event-banner" href="#">
+                                <span class="blind"> 무료 도서 / 굿즈</span>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+                <article class="mo-menu-layer-group depth2-type off" id="mobileCategorylayerOverlay">
+                    <h3 class="blind">메뉴 2depth</h3>
+                    <div class="mo-main-menu-layer scroll">
+                        <header class="mo-header">
+                            <div class="mo-header-left">
+                                <button type="button" class="btn btn-transparent" id="closeCategorylayer">
+                                    <i class="icon-back-24">
+                                        <span class="blind">뒤로</span>
+                                    </i>
+                                </button>
+                            </div>
+                            <h3 class="mo-header-title">수험서</h3>
+                            <div class="mo-header-right">
+                                <button type="button" class="btn btn-transparent" id="closeMobileCategorylayerOverlay">
+                                    <i class="icon-close-gray">
+                                        <span class="blind">닫기</span></i>
+                                </button>
+                            </div>
+                        </header>
+                        <nav class="mo-menu-body">
+                            <div class="mo-menu-link-group">
+                                <div class="menu-link-lists">
+                                    <ul class="menu-link-list">
+                                        <li class="menu-link-item icon-more on"><a href="#">중등</a></li>
+                                        <li class="menu-link-item icon-more"><a href="#">고등</a></li>
+                                        <li class="menu-link-item"><a href="#">공무원</a></li>
+                                        <li class="menu-link-item icon-more"><a href="#">변호사/변리사</a></li>
+                                        <li class="menu-link-item"><a href="#">교육임용</a></li>
+                                        <li class="menu-link-item"><a href="#">취업</a></li>
+                                        <li class="menu-link-item"><a href="#">편입/독학사</a></li>
+                                        <li class="menu-link-item"><a href="#">검정고시</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </nav>
+                        <div class="mo-menu-footer">
+                            <a class="mo-menu-banner" href="#">
+                                <span class="blind">메가스터디 </span>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+                <!-- pc 메뉴 레이어 시작 -->
+                <article class="main-menu-layer-group off" id="pcCategorylayerOverlay">
+                    <h3 class="blind">카테고리 레이어</h3>
+                    <div class="main-menu-layer">
+                        <header class="main-menu-header">
+                            <h3 class="main-menu-title icon-category">카테고리</h3>
+                            <button type="button" class="btn btn-transparent" id="closePcCategorylayerOverlay">
+                                <i class="icon-close-32">
+                                    <span class="blind">닫기</span></i>
+                            </button>
+                        </header>
+                        <nav class="menu-body scroll">
+                            <div class="menu-link-group">
+                                <div class="menu-link-title">E-BOOK</div>
+                                <div class="menu-link-lists">
+                                    <ul class="menu-link-list">
+                                        <li class="menu-link-item on"><a href="#">수험서</a></li>
+                                        <li class="menu-link-item"><a href="#">외국어</a></li>
+                                        <li class="menu-link-item"><a href="#">기출문제</a></li>
+                                        <li class="menu-link-item"><a href="#">자격증</a></li>
+                                        <li class="menu-link-item"><a href="#">대학교재</a></li>
+                                        <li class="menu-link-item"><a href="#">그 외’s</a></li>
+                                    </ul>
+                                    <ul class="menu-link-list">
+                                        <li class="menu-link-item"><a href="#">중등</a></li>
+                                        <li class="menu-link-item on"><a href="#">고등</a></li>
+                                        <li class="menu-link-item"><a href="#">공무원</a></li>
+                                        <li class="menu-link-item"><a href="#">변호사/변리사</a></li>
+                                        <li class="menu-link-item"><a href="#">교육임용</a></li>
+                                        <li class="menu-link-item"><a href="#">취업</a></li>
+                                        <li class="menu-link-item"><a href="#">편입/독학사</a></li>
+                                        <li class="menu-link-item"><a href="#">검정고시</a></li>
+                                    </ul>
+                                    <ul class="menu-link-list">
+                                        <li class="menu-link-item"><a href="#">행정직(9/7급)</a></li>
+                                        <li class="menu-link-item"><a href="#">기술직</a></li>
+                                        <li class="menu-link-item"><a href="#">소방직</a></li>
+                                        <li class="menu-link-item"><a href="#">경찰직</a></li>
+                                        <li class="menu-link-item"><a href="#">군무원</a></li>
+                                        <li class="menu-link-item"><a href="#">계리직</a></li>
+                                        <li class="menu-link-item"><a href="#">법원/등기직</a></li>
+                                    </ul>
+                                    <div class="menu-thumb-banner-area">
+                                        <a class="img-banner" href="#">
+                                            <img src="./../assest/images/img-menu-banner-dummy-01.png" alt="" />
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="menu-link-group">
+                                <h3 class="menu-link-title">DIGITAL GOODS</h3>
+                                <div class="menu-link-lists">
+                                    <ul class="menu-link-list">
+                                        <li class="menu-link-item"><a href="#">노트 템플릿</a></li>
+                                        <li class="menu-link-item"><a href="#">노트 표지</a></li>
+                                        <li class="menu-link-item"><a href="#">노트 속지</a></li>
+                                        <li class="menu-link-item"><a href="#">스티커</a></li>
+                                        <li class="menu-link-item"><a href="#">그 외</a></li>
+                                        <li class="menu-link-item"><a href="#">노트 템플릿</a></li>
+                                        <li class="menu-link-item"><a href="#">노트 표지</a></li>
+                                        <li class="menu-link-item"><a href="#">노트 속지</a></li>
+                                        <li class="menu-link-item"><a href="#">스티커</a></li>
+                                        <li class="menu-link-item"><a href="#">그 외</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </nav>
+                        <div class="menu-footer">
+                            <a class="menu-event-banner" href="#">
+                                <span class="blind"> 무료 도서 / 굿즈</span>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+                <!--pc 메뉴 레이어 끝-->
+            </section>
+            <!--해더 끝-->
+            <div class="sub-contents-wrap">
+                <section class="edit-member-section">
+                    <header class="sub-contents-header">
+                        <h2 class="sub-contents-header-title">
+                            회원정보 관리
+                        </h2>
+                        <div class="swiper-container btns-swiper-group no-full">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide on"><a href="#"><span class="btn-swiper-tab active">개인 정보 수정</span></a></div>
+                                <div class="swiper-slide"><a href="#"><span class="btn-swiper-tab">비밀번호 변경</span></a></div>
+                            </div>
+                        </div>
+                    </header>
+                    <!--개인 정보 수정 시작-->
+                    <section class="tab-swiper-content-section on">
+                        <div class="form-block-group  edit-member-group">
+                            <header class="form-block-header">
+                                <h3 class="form-block-title">회원 정보 수정</h3>
+                            </header>
+                            <form action="" method="">
+                                <fieldset>
+                                    <legend class="blind">개인 정보 수정</legend>
+                                    <div class="form-group">
+                                        <header class="form-header">
+                                            <div class="form-label">계정</div>
+                                        </header>
+                                        <div class="form-control-text">mebook111@gmail.com</div>
+                                    </div>
+                                    <div class="form-group">
+                                        <header class="form-header">
+                                            <div class="form-label">이름</div>
+                                        </header>
+                                        <div class="form-control-text">김미북</div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-label">생년월일</label>
+
+                                        <div class="form-control-line">
+                                            <div class="form-control-set">
+                                                <div class="year">
+                                                    <input type="tel" value="2009"> <span class="text">년</span>
+                                                </div>
+                                                <span>/</span>
+                                                <div class="month">
+                                                    <input type="tel" value="09"> <span class="text">월</span>
+                                                </div>
+                                                <span>/</span>
+                                                <div class="day">
+                                                    <input type="tel" value="07"> <span class="text">일</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <header class="form-header">
+                                            <div class="form-label">성별</div>
+                                        </header>
+                                        <div class="form-control-text">
+                                            <div class="checks inline black">
+                                                <input type="radio" name="gender" id="man" class="check" value="남자" checked />
+                                                <label for="man" class="label-check"><span>남자</span></label>
+                                            </div>
+                                            <div class="checks inline black">
+                                                <input type="radio" name="gender" id="women" class="check" value="여자" />
+                                                <label for="women" class="label-check"><span>여자</span></label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <header class="form-header">
+                                            <div class="form-label">휴대전화</div>
+                                        </header>
+                                        <div class="form-control-line">
+                                            <input type="tel"  value="01012345678">
+                                            <div class="form-control-btns">
+                                                <button type="reset" class="btn btn-transparent"><span class="icon-input-close"><span class="blind">삭제</span></span></button>
+                                                <button type="button" class="btn btn-input">인증요청</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <header class="form-header">
+                                            <div class="form-label">인증번호</div>
+                                        </header>
+                                        <div class="form-control-line">
+                                            <input type="tel" placeholder="인증 번호">
+                                            <div class="form-control-btns">
+                                                <button type="reset" class="btn btn-transparent"><span class="icon-input-close"><span class="blind">삭제</span></span></button>
+                                                <span class="clock">02:58</span>
+                                                <button type="button" class="btn btn-input">확인</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <header class="form-header">
+                                            <div class="form-label">가입수단</div>
+                                        </header>
+                                        <div class="form-control-text">  
+                                            <div class="flex">
+                                                <span class="login-google x-small mr-8"><span class="blind">구글 로고</span></span> 구글
+                                            </div> 
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <header class="form-header">
+                                            <div class="form-label">관심 카테고리</div>
+                                        </header>
+                                        <div class="category-toggle-group">
+                                            <div class="category-toggle-inner">
+                                                <div class="btn-category-toggle">
+                                                    <input type="checkbox" id="category-01" name="category">
+                                                    <label for="category-01"><span class="icon"><span class="blind">체크</span></span>중등 교재</label>
+                                                </div>
+                                                <div class="btn-category-toggle">
+                                                    <input type="checkbox" id="category-02" name="category">
+                                                    <label for="category-02"><span class="icon"><span class="blind">체크</span></span>고등 교재</label>
+                                                </div>
+                                                <div class="btn-category-toggle">
+                                                    <input type="checkbox" id="category-03" name="category">
+                                                    <label for="category-03"><span class="icon"><span class="blind">체크</span></span>대학 교재</label>
+                                                </div>
+                                                <div class="btn-category-toggle">
+                                                    <input type="checkbox" id="category-04" name="category">
+                                                    <label for="category-04"><span class="icon"><span class="blind">체크</span></span>공무원</label>
+                                                </div>
+                                                <div class="btn-category-toggle">
+                                                    <input type="checkbox" id="category-05" name="category">
+                                                    <label for="category-05"><span class="icon"><span class="blind">체크</span></span>편입</label>
+                                                </div>
+                                                <div class="btn-category-toggle">
+                                                    <input type="checkbox" id="category-06" name="category">
+                                                    <label for="category-06"><span class="icon"><span class="blind">체크</span></span>수능</label>
+                                                </div>
+                                                <div class="btn-category-toggle">
+                                                    <input type="checkbox" id="category-07" name="category">
+                                                    <label for="category-07"><span class="icon"><span class="blind">체크</span></span>외국어</label>
+                                                </div>
+                                                <div class="btn-category-toggle">
+                                                    <input type="checkbox" id="category-08" name="category">
+                                                    <label for="category-08"><span class="icon"><span class="blind">체크</span></span>자격증</label>
+                                                </div>
+                                                <div class="btn-category-toggle">
+                                                    <input type="checkbox" id="category-09" name="category">
+                                                    <label for="category-09"><span class="icon"><span class="blind">체크</span></span>노트필기</label>
+                                                </div>
+                                                <div class="btn-category-toggle">
+                                                    <input type="checkbox" id="category-10" name="category">
+                                                    <label for="category-10"><span class="icon"><span class="blind">체크</span></span>온라인 강의</label>
+                                                </div>
+                                            </div>
+                                            <div class="guide-text-box">
+                                                <p class="help-text">* 관심 카테고리에 알맞는 큐레이션을 받을 수 있습니다.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <header class="form-header">
+                                            <div class="form-label">마케팅 정보 수신</div>
+                                        </header>
+                                        <div class="form-checks">
+                                            <div class="form-checks-set">
+                                                <div class="checks black">
+                                                    <input type="radio" name="marketing" id="reception" class="check" value="수신" checked />
+                                                    <label for="reception" class="label-check"><span>수신</span></label>
+                                                </div>
+                                                <div class="sms-checks">
+                                                    <div class="checks line">
+                                                        <input type="checkbox" id="SMS" class="check" name="SMS" disabled>
+                                                        <label for="SMS" class="label-check"><span>SMS</span></label>
+                                                    </div>
+                                                    <div class="checks line">
+                                                        <input type="checkbox" id="E-mail" class="check" name="E-mail" disabled>
+                                                        <label for="E-mail" class="label-check"><span>E-mail</span></label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="checks inline black">
+                                                <input type="radio" name="marketing" id="non-receiving" class="check" value="비수신" />
+                                                <label for="non-receiving" class="label-check"><span>비수신</span></label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <a href="#" class="btn-withdrawal">
+                                        <span class="text">회원탈퇴</span>
+                                        <i class="icon-arrow-right-16">
+                                            <span class="blind">더보기</span>
+                                        </i>
+                                    </a>
+                                    <div class="btns-block-group">
+                                        <button type="button" class="btn btn-full btn-large-02 btn-secondary">취소</button>
+                                        <button type="submit" class="btn btn-full btn-large-02 btn-primary" disabled>회원 정보 수정</button>
+                                    </div>
+                                </fieldset>
+                            </form>
+                        </div>
+                    </section>
+                    <!--개인 정보 수정 끝-->
+                    <!--비밀번호 변경 시작-->
+                    <section class="tab-swiper-content-section">
+                        <div class="form-block-group password-change-group">
+                            <header class="form-block-header">
+                                <h3 class="form-block-title">비밀번호 변경</h3>
+                            </header>
+                            <form action="" method="">
+                                <fieldset>
+                                    <legend class="blind">비밀번호 변경</legend>
+                                    <div class="form-group">
+                                        <label class="form-label">현재 비밀번호</label>
+                                        <div class="form-control-line">
+                                            <input type="password" placeholder="현재 비밀번호를 입력해주세요">
+                                            <button type="button" class="btn btn-transparent"><span class="icon-input-eye-closing"><span class="blind">비밀번호 숨기기</span></span></button>
+                                            <button type="button" class="btn btn-transparent"><span class="icon-input-eye"><span class="blind">비밀번호 보기</span></span></button>
+                                            <button type="reset" class="btn btn-transparent"><span class="icon-input-close"><span class="blind">삭제</span></span></button>
+                                        </div>
+                                    </div>
+                                    <div class="form-group error">
+                                        <label class="form-label">새 비밀번호</label>
+                                        <div class="form-control-line">
+                                            <input type="password" placeholder="비밀번호 재설정">
+                                            <button type="button" class="btn btn-transparent"><span class="icon-input-eye-closing"><span class="blind">비밀번호 숨기기</span></span></button>
+                                            <button type="button" class="btn btn-transparent"><span class="icon-input-eye"><span class="blind">비밀번호 보기</span></span></button>
+                                            <button type="reset" class="btn btn-transparent"><span class="icon-input-close"><span class="blind">삭제</span></span></button>
+                                        </div>
+                                        <div class="guide-text-box">
+                                            <p class="guide-text error">비밀번호 형식이 올바르지 않습니다.</p>
+                                            <p class="guide-text">영문, 숫자, 특수문자 중 2가지 포함, 8~20자 이내</p>
+                                        </div>
+                                    </div>
+                                    <div class="form-group error">
+                                        <label class="form-label">새 비밀번호 확인</label>
+                                        <div class="form-control-line">
+                                            <input type="password" placeholder="새 비밀번호를 입력해주세요">
+                                            <button type="button" class="btn btn-transparent"><span class="icon-input-eye-closing"><span class="blind">비밀번호 숨기기</span></span></button>
+                                            <button type="button" class="btn btn-transparent"><span class="icon-input-eye"><span class="blind">비밀번호 보기</span></span></button>
+                                            <button type="reset" class="btn btn-transparent"><span class="icon-input-close"><span class="blind">삭제</span></span></button>
+                                        </div>
+                                        <div class="guide-text-box">
+                                            <p class="guide-text error">비밀번호가 일치하지 않습니다.</p>
+                                        </div>
+                                    </div>
+                                    <div class="btns-block-group">
+                                        <button type="button" class="btn btn-full btn-large-02 btn-secondary">취소</button>
+                                        <button type="submit" class="btn btn-full btn-large-02 btn-primary" disabled>비밀번호 변경</button>
+                                    </div>
+                                </fieldset>
+                            </form>
+                        </div>
+                    </section>
+                    <!--비밀번호 변경 끝-->
+                </section>
+            </div>
+            <!--푸터 시작-->
+            <footer class="footer-section">
+                <div class="container-inner">
+                    <a href="#" class="logo">
+                        <img src="../assest/images/logo-meBook.svg" alt="meBook" />
+                    </a>
+                    <p class="copyright-text">
+                        Copyright © 2024 메가스터디교육(주). All Rights Reserved.
+                    </p>
+                    <ul class="copyright-text">
+                        <li>법인명(상호) : 메가스터디교육(주)</li>
+                        <li>대표자 : 손성은</li>
+                        <li>사업자등록번호 : 780-87-00034</li>
+                    </ul>
+                    <ul class="copyright-text">
+                        <li>서울 서초구 효령로 321 (서초동, 덕원빌딩) 메가스터디교육(주), 7층</li>
+                        <li>02-6438-3106</li>
+                        <li>
+                            <a href="mailto:mebookteam@mebook.io" target="_blank">mebookteam@mebook.io</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="btn-top-scroll-area" id="btnTopScroll">
+                    <button type="button" class="btn-top-scroll"><span class="icon-top"><span
+                                class="blind">탑버튼</span></span><span class="text">TOP</span></button>
+                </div>
+            </footer>
+            <!--푸터 끝-->
+        </div>
+    </main>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script src="../assest/js/swiper-bundle.js"></script>
+    <script src="../assest/js/common.js"></script>
+</body>
+
+</html>

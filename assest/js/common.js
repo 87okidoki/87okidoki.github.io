@@ -103,12 +103,10 @@ $(function () {
         // 스크롤 위치가 0보다 크면 'fixed' 클래스 추가, 아니면 제거
         if (window.scrollY > 0) {
             header
-                .classList
-                .add('fixed');
+                .classList.add('fixed');
         } else {
             header
-                .classList
-                .remove('fixed');
+                .classList.remove('fixed');
         }
     });
 
@@ -426,7 +424,27 @@ $(function () {
         return false;
     });
     
+    $(window).scroll(function() {
+      var stickyMenuOffset = nav.offset().top;
+      var scrollPosition = $(window).scrollTop();
+  
+      if (scrollPosition >= stickyMenuOffset) {
+        header.css('position', 'static');
+      } else {
+        header.css('position', 'fixed');
+      }
+    });
 
+    var offset = nav.offset().top;
+
+    $(window).on('scroll', function() {
+        if ($(window).scrollTop() > offset) {
+        nav.addClass('sticky');
+        } else {
+        nav.removeClass('sticky');
+        }
+    });
+    
     var offset = nav.offset().top;
     $(window).scroll(function() {
         if ($(window).scrollTop() >= offset) {
@@ -480,3 +498,4 @@ $(function () {
     });
 
 });
+
