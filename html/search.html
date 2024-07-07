@@ -24,16 +24,25 @@
         <!--컨텐츠 시작-->
         <div class="container">
             <!-- 검색 시작 -->
-            <section class="search-section">
-                <div class="search-bar">
-                    <i><span class="icon-search-32"><span class="blind">검색</span></span></i>
-                    <input type="text" class="input-box" placeholder="검색어를 입력해주세요." />
-                    <button type="button" class="btn btn-transparent" id="closeSearchlayer">
-                        <i class="icon-close-32"><span class="blind">닫기</span></i>
-                    </button>
-                </div>
+            <section class="search-section search-layer-section">
+                <form>
+                    <div class="search-bar">
+                        <button type="button" class="btn btn-transparent">
+                            <i class="icon-back-32"><span class="blind">뒤로</span></i>
+                        </button>
+                        <input type="text" class="input-box" placeholder="검색어를 입력해주세요." />
+                        <div class="btns">
+                            <button type="submit" class="btn btn-transparent">
+                                <i class="icon-search-clear"><span class="blind">지우기</span></i>
+                            </button>
+                            <button type="submit" class="btn btn-transparent">
+                                <i class="icon-search-32"><span class="blind">검색</span></i>
+                            </button>
+                        </div>
+                    </div>
+                 </form>
                 <!-- 검색화면 진입 시작 -->
-                <div class="off">
+                <div  class="search-intro-section">
                     <div class="keyword-area">
                         <header class="search-layer-header">
                             <h3 class="search-layer-title">최근 검색어</h3>
@@ -58,7 +67,7 @@
                         <header class="search-layer-header">
                             <h3 class="search-layer-title">이 달의 E교재</h3>
                         </header>
-                        <ol class="search-list-items">
+                        <ol class="search-list-items order">
                             <li class="search-list-item">
                                 <a href="#">
                                     <span class="num">1.</span>
@@ -77,8 +86,6 @@
                                     <span class="writer">박준철</span>2024 써니 행정법 총론 실전동형 모의고사
                                 </a>
                             </li>
-                        </ol>
-                        <ol class="search-list-items">
                             <li class="search-list-item">
                                 <a href="#">
                                     <span class="num">4.</span>
@@ -120,9 +127,9 @@
                             </li>
                         </ol>
                     </div>
-                    <div class="thumb-list-items">
+                    <div class="book-thumb-group">
                         <a class="thumb-item" href="#">
-                            <div class="book-thumb-area">
+                            <div class="book-thumb-area  badge-special">
                                 <div class="book-thumb">
                                     <img src="../assest/images/img-book-dummy-02.jpg" alt="" />
                                 </div>
@@ -141,7 +148,7 @@
             <!-- 검색 끝 -->
         </div>
     </main>
-    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script src="../assest/js/jquery-2.2.4.min.js"></script>
     <script src="../assest/js/common.js"></script>
     <script src="../assest/js/swiper-bundle.js"></script>
 </body>

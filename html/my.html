@@ -251,11 +251,9 @@
                                 <div class="login">
                                     김미북 님  
                                     <span class="login-google small"><span class="blind">구글 로고</span></span>
-                                    <span class="login-kakao small"><span class="blind">구글 로고</span></span>
-                                    <span class="login-apple small"><span class="blind">구글 로고</span></span>
-                                    <span class="login-mebook small"><span class="blind">구글 로고</span></span>
-
-
+                                    <span class="login-kakao small"><span class="blind">카카오 로고</span></span>
+                                    <span class="login-apple small"><span class="blind">애플 로고</span></span>
+                                    <span class="login-mebook small"><span class="blind">미북 로고</span></span>
                                 </div> 
                             </h2> 
                             <a href="#" class="btn-text grey-500">로그아웃</a>
@@ -264,18 +262,24 @@
                     <div class="my-content-group">
                         <div class="category-chip-group">
                             <div class="category-chip-inner">
-                                <span class="category-chip">고등교재</span>
-                                <span class="category-chip">취업</span>
-                                <span class="category-chip">외국어</span>
-                                <span class="category-chip">기출문제</span>
-                                <span class="category-chip">수능</span>
+                                <div class="category-chip-box">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide on"><span class="category-chip">고등교재</span></div>
+                                        <div class="swiper-slide"><span class="category-chip">취업</span></div>
+                                        <div class="swiper-slide"><span class="category-chip">외국어</span></div>
+                                        <div class="swiper-slide"><span class="category-chip">기출문제</span></div>
+                                        <div class="swiper-slide"> <span class="category-chip">수능</span></div>
+                                    </div>
+                                </div>
                             </div>
-                            <a href="" class="btn-edit"><span class="icon-edit"></span>편집</a>
+                            <div class="btn-area">
+                                <a href="" class="btn-edit"><i class="icon-edit"></i> <span class="text">편집</span></a>
+                            </div>
                         </div>
                         <div class="my-menu-group">
                             <a href="#" class="my-menu-item">
                                 <span class="icon-my"><span class="blind">내 정보</span></span>
-                                <span class="text">내 정보 수정</span>
+                                <span class="text">내 정보</span>
                             </a>
                             <a href="#" class="my-menu-item">
                                 <span class="cart">
@@ -286,11 +290,11 @@
                             </a>
                             <a href="#" class="my-menu-item">
                                 <span class="icon-card"><span class="blind">카드</span></span>
-                                <span class="text">구매 내역 조회</span>
+                                <span class="text">구매 내역</span>
                             </a>
                             <a href="#" class="my-menu-item">
                                 <span class="icon-refund"><span class="blind">환불</span></span>
-                                <span class="text">취소/환불 조회</span>
+                                <span class="text">취소/환불</span>
                             </a>
                         </div>
                         <div class="my-book-group">
@@ -512,7 +516,7 @@
             <!--푸터 끝-->
         </div>
     </main>
-    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script src="../assest/js/jquery-2.2.4.min.js"></script>
     <script src="../assest/js/swiper-bundle.js"></script>
     <script src="../assest/js/common.js"></script>
 </body>

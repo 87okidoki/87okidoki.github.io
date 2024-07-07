@@ -1,4 +1,14 @@
 $(function () {
+    jQuery.browser = {};
+    (function () {
+        jQuery.browser.msie = false;
+        jQuery.browser.version = 0;
+        if (navigator.userAgent.match(/MSIE ([0-9]+)\./)) {
+            jQuery.browser.msie = true;
+            jQuery.browser.version = RegExp.$1;
+        }
+    })();
+
     /* 메인배너*/
     const progressLine = document.querySelector(
         '#mainVisualBanner .autoplay-progress svg'
@@ -97,21 +107,20 @@ $(function () {
     const btnSwiper = new Swiper('.btns-swiper-group', {slidesPerView: 'auto'});
 
     // 페이지 스크롤 이벤트 리스너 추가
-    window.addEventListener('scroll', function () {
-        var header = document.getElementById('header');
+     const header = document.getElementById('header');
 
-        // 스크롤 위치가 0보다 크면 'fixed' 클래스 추가, 아니면 제거
-        if (window.scrollY > 0) {
-            header
-                .classList.add('fixed');
-        } else {
-            header
-                .classList.remove('fixed');
+        if (header) {
+            window.addEventListener('scroll', function () {
+                if (window.scrollY > 0) {
+                    header.classList.add('fixed');
+                } else {
+                    header.classList.remove('fixed');
+                }
+            });
         }
-    });
 
     // 스크롤 탑버튼 "맨 위로" 버튼 클릭 이벤트
-    var scrollTopButton = $('#btnTopScroll');
+    const scrollTopButton = $('#btnTopScroll');
 
     $(window).on('scroll', function () {
         if ($(this).scrollTop() > 0) {
@@ -133,8 +142,8 @@ $(function () {
         $("body").addClass("scroll-lock");
 
         $(".main-menu-layer-group").on("mousewheel", function (e) {
-            var wheelDelta = e.originalEvent.wheelDelta;
-            var $menuFooter = $(".main-menu-layer-group .menu-footer");
+            const wheelDelta = e.originalEvent.wheelDelta;
+            const $menuFooter = $(".main-menu-layer-group .menu-footer");
 
             if (wheelDelta > 0) {
                 $menuFooter.removeClass("line");
@@ -159,7 +168,7 @@ $(function () {
                 // (modern browsers)
                 wheel = e.originalEvent.wheelDelta || -e.originalEvent.deltaY;
             } else if (e.type === "touchmove") {
-                var touch = e
+                const touch = e
                     .originalEvent
                     .touches[0];
                 wheel = touch.clientY - (this.lastY || touch.clientY);
@@ -175,7 +184,7 @@ $(function () {
 
         // 초기 터치 위치를 저장하는 코드 추가
         $(".mo-menu-layer-group").on("touchstart", function (e) {
-            var touch = e
+            const touch = e
                 .originalEvent
                 .touches[0];
             this.lastY = touch.clientY;
@@ -189,7 +198,7 @@ $(function () {
 
     // 스와이퍼 슬라이드 클릭 이벤트 리스너 추가
     $(".btns-swiper-group .swiper-slide").click(function () {
-        var idx = $(this).index();
+        const idx = $(this).index();
 
         $(".btns-swiper-group .swiper-slide .btn-swiper-tab").removeClass("active");
         $(".btns-swiper-group .swiper-slide .btn-swiper-tab")
@@ -202,10 +211,16 @@ $(function () {
             .show();
     });
 
+    //캘린더 스와이퍼 
+    const btnsFilterGroup = new Swiper('#btnsFilterGroup', {slidesPerView: 'auto'});
+
+   //추천 도서 버튼 
+   const btnCategorySwiper = new Swiper('.category-chip-box ', {slidesPerView: 'auto'});
+
     // 툴팁
     $('.btn-info').click(function(event) {
         event.stopPropagation();
-        var $popup = $(this).siblings('.info-popup-group');
+        const $popup = $(this).siblings('.info-popup-group');
         $popup.toggleClass('off');
 
         // 다른 곳 클릭 시 팝업 닫기
@@ -219,8 +234,8 @@ $(function () {
 
     // flotingBottomSheet가 있는지 확인하고, 패딩 값을 조절하는 함수
     function adjustFooterPadding() {
-        var bottomSheetExists = $("#flotingBottomSheet").length > 0; // 바텀 시트의 존재 여부 확인
-        var paddingValue = bottomSheetExists
+        const bottomSheetExists = $("#flotingBottomSheet").length > 0; // 바텀 시트의 존재 여부 확인
+        const paddingValue = bottomSheetExists
             ? $("#flotingBottomSheet").outerHeight(): 0; // 바텀 시트가 있을 경우 패딩 값 설정
 
         // 푸터에 패딩 값을 적용
@@ -274,8 +289,8 @@ $(function () {
             return;
         
         currentY = y;
-        let deltaY = startY - currentY;
-        let newBottom = initialBottom + deltaY;
+        const deltaY = startY - currentY;
+        const newBottom = initialBottom + deltaY;
 
         // 제한 조건: 바텀시트가 완전히 화면 밖으로 나가지 않도록
         if (newBottom < -$('#bottomSheet').height()) {
@@ -332,7 +347,7 @@ $(function () {
     });
 
     $('.book-preview-slide-group > .img-book-preview > img').on('load', function () {
-        var imgWidth = $(this).width(); // 이미지의 너비 가져오기
+        const imgWidth = $(this).width(); // 이미지의 너비 가져오기
         $('.book-preview-slide-group > .swiper-pagination ').css('width', imgWidth + 'px'); // 페이지네이션 요소의 너비 설정
     });
 
@@ -352,7 +367,7 @@ $(function () {
 
     /*tab Menu*/
     $(".btn-tab li").click(function () {
-        var idx = $(this).index();
+        const idx = $(this).index();
         $(".btn-tab li").removeClass("on");
         $(".btn-tab li").eq(idx).addClass("on");
         $(".tab-content-section").hide();
@@ -367,7 +382,7 @@ $(function () {
     });
     // PC 환경일 때만 탭 개수에 따라 클래스 적용
     if (window.innerWidth >= 768) { // 768px 이상일 때 PC 환경으로 간주
-        var tabCount = $('.swiper-slide').length;
+        const tabCount = $('.swiper-slide').length;
         if (tabCount <= 2) {
             $('#tabBarGroup .swiper-wrapper').addClass('fixed-width');
         } else {
@@ -393,77 +408,61 @@ $(function () {
         }
     });
 
+
+
+    
+
   /*tab-bar-group*/
-    var sections = $('.detail-content-section')
-    var nav = $('.tab-bar-group')
-    var navHeight = nav.outerHeight();
-    var header = $('.sub-header-section');
-    $(window).on('scroll', function () {
-        var cur_pos = $(this).scrollTop();
-        
-        sections.each(function() {
-        var top = $(this).offset().top - navHeight,
-            bottom = top + $(this).outerHeight();
-        if (cur_pos >= top && cur_pos <= bottom) {
-            nav.find('.btn-tab-menu').removeClass('on');
-            sections.removeClass('on');
-            $(this).addClass('on');
-            nav.find('a[href="#'+$(this).attr('id')+'"]').addClass('on');
-        }
+    let sections = $('.detail-content-section')
+    let tabNav = $('.tab-bar-group')
+
+    if (tabNav && tabNav.length > 0) {
+        let tabNavHeight = tabNav.outerHeight();
+        let subHeader = $('.sub-header-section');
+        let tabNavOffset = tabNav.offset().top;
+        $(window).on('scroll', function () {
+            const cur_pos = $(this).scrollTop();
+            sections.each(function() {
+            const top = $(this).offset().top - tabNavHeight,
+                bottom = top + $(this).outerHeight();
+            if (cur_pos >= top && cur_pos <= bottom) {
+                tabNav.find('.btn-tab-menu').removeClass('on');
+                sections.removeClass('on');
+                $(this).addClass('on');
+                tabNav.find('a[href="#'+$(this).attr('id')+'"]').addClass('on');
+            }
+            });
         });
-    });
-  
-
-    nav.find('.btn-tab-menu').on('click', function () {
-        var $el = $(this), 
-        id = $el.attr('href');
-        $('html, body').animate({
-        scrollTop: $(id).offset().top 
-        }, 500);
-        
-        return false;
-    });
-    
-    $(window).scroll(function() {
-      var stickyMenuOffset = nav.offset().top;
-      var scrollPosition = $(window).scrollTop();
-  
-      if (scrollPosition >= stickyMenuOffset) {
-        header.css('position', 'static');
-      } else {
-        header.css('position', 'fixed');
-      }
-    });
-
-    var offset = nav.offset().top;
-
-    $(window).on('scroll', function() {
-        if ($(window).scrollTop() > offset) {
-        nav.addClass('sticky');
-        } else {
-        nav.removeClass('sticky');
-        }
-    });
-    
-    var offset = nav.offset().top;
-    $(window).scroll(function() {
-        if ($(window).scrollTop() >= offset) {
-            nav.addClass('sticky');
-            header.css('position', 'static');
-        } else {
-            nav.removeClass('sticky');
-            header.css('position', 'fixed');
-        }
-    });
+            
+        $(window).scroll(function () {
+            if ($(window).scrollTop() >= tabNavOffset) {
+                tabNav.addClass('sticky');
+                subHeader.css('position', 'static');
+            } else {
+                tabNav.removeClass('sticky');
+                subHeader.css('position', 'fixed');
+            }
+        });
 
 
+
+        tabNav.find('.btn-tab-menu').on('click', function () {
+            const $el = $(this), 
+            id = $el.attr('href');
+            $('html, body').animate({
+            scrollTop: $(id).offset().top 
+            }, 500);
+            
+            return false;
+        });
+    }
 
 
    /*btn-detail-more*/
     $('.btn-detail-more').click(function() {
-        var section = $(this).closest('.detail-content-section');
+        const section = $(this).closest('.detail-content-section');
         section.toggleClass('open');
-        var icon = $(this).find('.icon');
+        const icon = $(this).find('.icon');
         icon.toggleClass('rotate');
         
         // 버튼 텍스트를 "더보기"에서 "접기"로, 그리고 다시 "접기"에서 "더보기"로 변경합니다.
@@ -492,10 +491,25 @@ $(function () {
     
     /*tab-text Menu*/
     $(".tab-text li").click(function () {
-        var idx = $(this).index();
+        const idx = $(this).index();
         $(".tab-text  li").removeClass("on");
         $(".tab-text li").eq(idx).addClass("on");
     });
 
+
+  
+    // 스와이퍼 슬라이드 클릭 이벤트 리스너 추가
+    $(".btns-filter-group .swiper-slide").click(function () {
+        const idx = $(this).index();
+        $(".btns-filter-group .btn-filter").removeClass("on");
+        $(".btns-filter-group .btn-filter").eq(idx).addClass("on");
+
+    });
+
+    
+    //추천 도서 버튼 
+    const searchkeyword = new Swiper('#searchkeyword', {slidesPerView: 'auto'});
+
 });
+
 

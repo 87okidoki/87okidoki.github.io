@@ -1,0 +1,633 @@
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+    <meta name="theme-color" content="#fff">
+    <meta name="color-scheme" content="light only">
+    <meta name="msapplication-TileColor" content="#fff">
+    <meta name="msapplication-TileImage" content="/ms-icon-70x70.png">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <link rel="stylesheet" type="text/css" href="../assest/css/swiper-bundle.css" />
+    <link rel="stylesheet" type="text/css" href="../assest/css/common.css" />
+    <link rel="stylesheet" type="text/css" href="../assest/css/layout.css" />
+    <meta name="keywords" content="meBook" />
+    <meta name="description" content="meBook" />
+    <title>meBook</title>
+</head>
+
+<body>
+    <main class="category-wrap">
+        <!--컨텐츠 시작-->
+        <div class="container">
+            <!--해더 시작-->
+            <section class="header-section sub-header-section">
+                <header class="header">
+                    <div class="header-group">
+                        <div class="header-left">
+                            <div class="mo-nav-btns">
+                                <button class="btn-menu" type="button" class="btn btn-transparent"
+                                    id="openMobileCategorylayer">
+                                    <i class="icon-menu-24"><span class="blind">메뉴</span></i>
+                                </button>
+                            </div>
+                            <a href="#" class="logo">
+                                <h1>
+                                    <img src="../assest/images/logo-meBook.svg" alt="meBook" />
+                                </h1>
+                            </a>
+                            <nav class="pc-nav-btns">
+                                <button class="btn-menu" type="button" class="btn btn-transparent"
+                                    id="openPcCategorylayer">
+                                    <i class="icon-menu-24"><span class="blind">메뉴</span></i>
+                                </button>
+                                <ul class="nav-btn-items">
+                                    <li class="nav-btn-item"><a href="">베스트셀러</a></li>
+                                    <li class="nav-btn-item"><a href="">신간도서</a></li>
+                                    <li class="nav-btn-item"><a href="">이벤트</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                        <div class="header-right">
+                            <a href="#" class="btn btn-transparent">
+                                <span class="icon-search">
+                                    <span class="blind">검색</span>
+                                </span>
+                            </a>
+                            <a href="#" class="btn btn-transparent btn-cart">
+                                <i class="icon-cart"><span class="blind">장바구니</span></i>
+                                <span class="badge-count">5</span>
+                            </a>
+                            <a href="#" class="btn btn-transparent"><i class="icon-mypage"><span
+                                        class="blind">마이페이지</span></i></a>
+                        </div>
+                    </div>
+                    <a href="#" class="btn-app-down"><span class="text">앱 다운로드</span></a>
+                </header>
+                <!-- mobile 메뉴 레이어 시작 -->
+                <article class="mo-menu-layer-group off" id="mobileCategorylayerOverlay">
+                    <h3 class="blind">메뉴 1depth</h3>
+                    <div class="mo-main-menu-layer">
+                        <header class="mo-header">
+                            <div class="mo-header-left">
+                                <i class="icon-menu-left">
+                                    <span class="blind">메뉴</span>
+                                </i>
+                            </div>
+                            <h3 class="mo-header-title">카테고리</h3>
+                            <div class="mo-header-right">
+                                <button type="button" class="btn btn-transparent btn-close"
+                                    id="closeMobileCategorylayerOverlay">
+                                    <i class="icon-close-gray">
+                                        <span class="blind">닫기</span></i>
+                                </button>
+                            </div>
+                        </header>
+                        <nav class="mo-menu-body scroll">
+                            <div class="mo-menu-link-group">
+                                <div class="menu-link-title">E-BOOK</div>
+                                <div class="menu-link-lists">
+                                    <ul class="menu-link-list">
+                                        <li class="menu-link-item on"><a href="#">수험서</a></li>
+                                        <li class="menu-link-item"><a href="#">외국어</a></li>
+                                        <li class="menu-link-item"><a href="#">기출문제</a></li>
+                                        <li class="menu-link-item"><a href="#">자격증</a></li>
+                                        <li class="menu-link-item"><a href="#">대학교재</a></li>
+                                        <li class="menu-link-item"><a href="#">그 외’s</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="mo-menu-link-group">
+                                <h3 class="menu-link-title">Digital Goods</h3>
+                                <div class="menu-link-lists">
+                                    <ul class="menu-link-list">
+                                        <li class="menu-link-item"><a href="#">노트 템플릿</a></li>
+                                        <li class="menu-link-item"><a href="#">노트 표지</a></li>
+                                        <li class="menu-link-item"><a href="#">노트 속지</a></li>
+                                        <li class="menu-link-item"><a href="#">스티커</a></li>
+                                        <li class="menu-link-item"><a href="#">그 외</a></li>
+                                        <li class="menu-link-item"><a href="#">노트 템플릿</a></li>
+                                        <li class="menu-link-item"><a href="#">노트 표지</a></li>
+                                        <li class="menu-link-item"><a href="#">노트 속지</a></li>
+                                        <li class="menu-link-item"><a href="#">스티커</a></li>
+                                        <li class="menu-link-item"><a href="#">그 외</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </nav>
+                        <div class="mo-menu-footer">
+                            <a class="menu-event-banner" href="#">
+                                <span class="blind"> 무료 도서 / 굿즈</span>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+                <article class="mo-menu-layer-group depth2-type off" id="mobileCategorylayerOverlay">
+                    <h3 class="blind">메뉴 2depth</h3>
+                    <div class="mo-main-menu-layer scroll">
+                        <header class="mo-header">
+                            <div class="mo-header-left">
+                                <button type="button" class="btn btn-transparent" id="closeCategorylayer">
+                                    <i class="icon-back-24">
+                                        <span class="blind">뒤로</span>
+                                    </i>
+                                </button>
+                            </div>
+                            <h3 class="mo-header-title">수험서</h3>
+                            <div class="mo-header-right">
+                                <button type="button" class="btn btn-transparent" id="closeMobileCategorylayerOverlay">
+                                    <i class="icon-close-gray">
+                                        <span class="blind">닫기</span></i>
+                                </button>
+                            </div>
+                        </header>
+                        <nav class="mo-menu-body">
+                            <div class="mo-menu-link-group">
+                                <div class="menu-link-lists">
+                                    <ul class="menu-link-list">
+                                        <li class="menu-link-item icon-more on"><a href="#">중등</a></li>
+                                        <li class="menu-link-item icon-more"><a href="#">고등</a></li>
+                                        <li class="menu-link-item"><a href="#">공무원</a></li>
+                                        <li class="menu-link-item icon-more"><a href="#">변호사/변리사</a></li>
+                                        <li class="menu-link-item"><a href="#">교육임용</a></li>
+                                        <li class="menu-link-item"><a href="#">취업</a></li>
+                                        <li class="menu-link-item"><a href="#">편입/독학사</a></li>
+                                        <li class="menu-link-item"><a href="#">검정고시</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </nav>
+                        <div class="mo-menu-footer">
+                            <a class="mo-menu-banner" href="#">
+                                <span class="blind">메가스터디 </span>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+                <!-- pc 메뉴 레이어 시작 -->
+                <article class="main-menu-layer-group off" id="pcCategorylayerOverlay">
+                    <h3 class="blind">카테고리 레이어</h3>
+                    <div class="main-menu-layer">
+                        <header class="main-menu-header">
+                            <h3 class="main-menu-title icon-category">카테고리</h3>
+                            <button type="button" class="btn btn-transparent" id="closePcCategorylayerOverlay">
+                                <i class="icon-close-32">
+                                    <span class="blind">닫기</span></i>
+                            </button>
+                        </header>
+                        <nav class="menu-body scroll">
+                            <div class="menu-link-group">
+                                <div class="menu-link-title">E-BOOK</div>
+                                <div class="menu-link-lists">
+                                    <ul class="menu-link-list">
+                                        <li class="menu-link-item on"><a href="#">수험서</a></li>
+                                        <li class="menu-link-item"><a href="#">외국어</a></li>
+                                        <li class="menu-link-item"><a href="#">기출문제</a></li>
+                                        <li class="menu-link-item"><a href="#">자격증</a></li>
+                                        <li class="menu-link-item"><a href="#">대학교재</a></li>
+                                        <li class="menu-link-item"><a href="#">그 외’s</a></li>
+                                    </ul>
+                                    <ul class="menu-link-list">
+                                        <li class="menu-link-item"><a href="#">중등</a></li>
+                                        <li class="menu-link-item on"><a href="#">고등</a></li>
+                                        <li class="menu-link-item"><a href="#">공무원</a></li>
+                                        <li class="menu-link-item"><a href="#">변호사/변리사</a></li>
+                                        <li class="menu-link-item"><a href="#">교육임용</a></li>
+                                        <li class="menu-link-item"><a href="#">취업</a></li>
+                                        <li class="menu-link-item"><a href="#">편입/독학사</a></li>
+                                        <li class="menu-link-item"><a href="#">검정고시</a></li>
+                                    </ul>
+                                    <ul class="menu-link-list">
+                                        <li class="menu-link-item"><a href="#">행정직(9/7급)</a></li>
+                                        <li class="menu-link-item"><a href="#">기술직</a></li>
+                                        <li class="menu-link-item"><a href="#">소방직</a></li>
+                                        <li class="menu-link-item"><a href="#">경찰직</a></li>
+                                        <li class="menu-link-item"><a href="#">군무원</a></li>
+                                        <li class="menu-link-item"><a href="#">계리직</a></li>
+                                        <li class="menu-link-item"><a href="#">법원/등기직</a></li>
+                                    </ul>
+                                    <div class="menu-thumb-banner-area">
+                                        <a class="img-banner" href="#">
+                                            <img src="./../assest/images/img-menu-banner-dummy-01.png" alt="" />
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="menu-link-group">
+                                <h3 class="menu-link-title">DIGITAL GOODS</h3>
+                                <div class="menu-link-lists">
+                                    <ul class="menu-link-list">
+                                        <li class="menu-link-item"><a href="#">노트 템플릿</a></li>
+                                        <li class="menu-link-item"><a href="#">노트 표지</a></li>
+                                        <li class="menu-link-item"><a href="#">노트 속지</a></li>
+                                        <li class="menu-link-item"><a href="#">스티커</a></li>
+                                        <li class="menu-link-item"><a href="#">그 외</a></li>
+                                        <li class="menu-link-item"><a href="#">노트 템플릿</a></li>
+                                        <li class="menu-link-item"><a href="#">노트 표지</a></li>
+                                        <li class="menu-link-item"><a href="#">노트 속지</a></li>
+                                        <li class="menu-link-item"><a href="#">스티커</a></li>
+                                        <li class="menu-link-item"><a href="#">그 외</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </nav>
+                        <div class="menu-footer">
+                            <a class="menu-event-banner" href="#">
+                                <span class="blind"> 무료 도서 / 굿즈</span>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+                <!--pc 메뉴 레이어 끝-->
+            </section>
+            <!--해더 끝-->
+             <div class="sub-contents-wrap">
+                <section class="category-list-section">
+                    <div class="banner-board-group">
+                        <a href="#" class="banner-board-large">
+                            <img src="../assest/images/img-main-banner-dummy-01.png" alt="">
+                        </a>
+                    </div>
+                    <header class="sub-contents-header">
+                        <h2 class="sub-contents-header-title">
+                            한국사
+                        </h2>
+                    </header>
+                    <div class="search-option-group">
+                        <div class="checks black">
+                            <input type="checkbox" id="checkboxall" class="check" value="checkboxall">
+                            <label for="checkboxall" class="label-check"><span>전체선택</span></label>
+                        </div>
+                        <div class="btn-option-box">
+                            <div class="search-area">
+                                <form class="input-box">
+                                    <input type="text" class="" placeholder="분야 내 검색"/>
+                                    <button type="submit" class="btn btn-transparent"><i class="icon-search"></i></button>
+                                </form>
+                                <div>
+                                    <div class="btn btn-search-keyword">
+                                        <a href="" class="text">전한길 한국사 모의고사</a>
+                                        <button type="submit" class="btn btn-transparent"><i class="icon-close"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="bths">
+                                <button type="reset" class="btn btn-secondary btn-x-small">장바구니</button>
+                                <button type="reset" class="btn btn-secondary btn-x-small">바로구매</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="grid-option-group">
+                        <select>
+                            <option>인기순</option>
+                            <option>최신순</option>
+                        </select>
+                        <div class="pagination">
+                            <a href="#" class="previous disabled">
+                                <span class="blind">왼쪽 화살</span>               
+                            </a>
+                            <a href="#">1</a>
+                            <a href="#" class="active">2</a>
+                            <a href="#">3</a>
+                            <span>∙∙∙</span>
+                            <a href="#">999</a>
+                            <a href="#" class="next">
+                                <span class="blind">오른쪽 화살</span>               
+                            </a>
+                        </div>
+                    </div>
+                    <article class="goods-list-group category-list-group">
+                        <ul class="goods-list">
+                            <li class="goods-list-item">
+                                <div class="goods-list-left">
+                                    <div class="checks black">
+                                        <input type="checkbox" id="ebookcheckbox-01" class="check" value="ebookcheckbox-01"/>
+                                        <label for="ebookcheckbox-01" class="label-check"><span class="blind"> E-BOOK</span></label>
+                                    </div>
+                                    <a class="thumb-item" href="#">
+                                        <div class="book-thumb-area badge-special small">
+                                            <div class="book-thumb">
+                                                <img src="../assest/images/img-book-dummy-01.png" alt="" />
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <div class="goods-info-box">
+                                        <div class="badge-area">
+                                            <span class="badge badge-default">무료</span>
+                                            <span class="badge badge-default">시리즈</span>
+                                            <span class="badge badge-default">이벤트</span>
+                                            <span class="badge badge-default">추천</span>
+                                        </div>
+                                        <a href="" class="goods-title">2024 전한길 한국사 4.0 실전동형 모의고사 시즌 1</a>
+                                        <div class="goods-info-text"><span class="text">전한길</span> <span class="text">메가스터디교육(공무원)</span></div>
+                                        <div class="goods-price"><span class="discount">10%</span><strong class="discount-price">9,000원</strong><span class="price">10,000원</span></div>
+                                        <div class="category-badges"> 
+                                            <span class="category-badge">동영상 강의</span> <span class="category-badge">듣기 음원</span><span class="category-badge">+2</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="goods-list-item">
+                                <div class="goods-list-left">
+                                    <div class="checks black">
+                                        <input type="checkbox" id="ebookcheckbox-01" class="check" value="ebookcheckbox-01"/>
+                                        <label for="ebookcheckbox-01" class="label-check"><span class="blind"> E-BOOK</span></label>
+                                    </div>
+                                    <a class="thumb-item" href="#">
+                                        <div class="book-thumb-area badge-special small">
+                                            <div class="book-thumb">
+                                                <img src="../assest/images/img-book-dummy-01.png" alt="" />
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <div class="goods-info-box">
+                                        <div class="badge-area">
+                                            <span class="badge badge-default">무료</span>
+                                            <span class="badge badge-default">시리즈</span>
+                                            <span class="badge badge-default">이벤트</span>
+                                            <span class="badge badge-default">추천</span>
+                                        </div>
+                                        <a href="" class="goods-title">2024 전한길 한국사 4.0 실전동형 모의고사 시즌 1</a>
+                                        <div class="goods-info-text"><span class="text">전한길</span> <span class="text">메가스터디교육(공무원)</span></div>
+                                        <div class="goods-price"><span class="discount">10%</span><strong class="discount-price">9,000원</strong><span class="price">10,000원</span></div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="goods-list-item">
+                                <div class="goods-list-left">
+                                    <div class="checks black">
+                                        <input type="checkbox" id="ebookcheckbox-01" class="check" value="ebookcheckbox-01"/>
+                                        <label for="ebookcheckbox-01" class="label-check"><span class="blind"> E-BOOK</span></label>
+                                    </div>
+                                    <a class="thumb-item" href="#">
+                                        <div class="book-thumb-area badge-special small">
+                                            <div class="book-thumb">
+                                                <img src="../assest/images/img-book-dummy-01.png" alt="" />
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <div class="goods-info-box">
+                                        <div class="badge-area">
+                                            <span class="badge badge-default">무료</span>
+                                            <span class="badge badge-default">시리즈</span>
+                                            <span class="badge badge-default">이벤트</span>
+                                            <span class="badge badge-default">추천</span>
+                                        </div>
+                                        <a href="" class="goods-title">2024 전한길 한국사 4.0 실전동형 모의고사 시즌 1</a>
+                                        <div class="goods-info-text"><span class="text">전한길</span> <span class="text">메가스터디교육(공무원)</span></div>
+                                        <div class="goods-price"><span class="discount">10%</span><strong class="discount-price">9,000원</strong><span class="price">10,000원</span></div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="goods-list-item">
+                                <div class="goods-list-left">
+                                    <div class="checks black">
+                                        <input type="checkbox" id="ebookcheckbox-02" class="check" value="ebookcheckbox-02"/>
+                                        <label for="ebookcheckbox-02" class="label-check"><span class="blind"> E-BOOK</span></label>
+                                    </div>
+                                    <a class="thumb-item" href="#">
+                                        <div class="book-thumb-area badge-special small">
+                                            <div class="book-thumb">
+                                                <img src="../assest/images/img-book-dummy-01.png" alt="" />
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <div class="goods-info-box">
+                                        <div class="badge-area">
+                                            <span class="badge badge-default">무료</span>
+                                            <span class="badge badge-default">시리즈</span>
+                                        </div>
+                                        <a href="" class="goods-title">2024 전한길 한국사 4.0 실전동형 모의고사 시즌 1</a>
+                                        <div class="goods-info-text"><span class="text">전한길</span> <span class="text">메가스터디교육(공무원)</span></div>
+                                        <div class="goods-price"><span class="discount">10%</span><strong class="discount-price">9,000원</strong><span class="price">10,000원</span></div>
+                                        <div class="category-badges"> 
+                                            <span class="category-badge">동영상 강의</span> <span class="category-badge">듣기 음원</span><span class="category-badge">+2</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </article>
+                    <div class="btns-block-group">
+                        <div class="pagination-group">
+                            <div class="pagination">
+                                <a href="#" class="previous disabled">
+                                    <span class="blind">왼쪽 화살</span>               
+                                </a>
+                                <a href="#">1</a>
+                                <a href="#" class="active">2</a>
+                                <a href="#">3</a>
+                                <span>∙∙∙</span>
+                                <a href="#">999</a>
+                                <a href="#" class="next">
+                                    <span class="blind">오른쪽 화살</span>               
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+             </div>
+            <!--카드 팝업 시작-->
+            <section class="bottom-sheet-popup handler " id="bottomSheet">
+                <div class="handler-area" id="bottomSheetHandler">
+                    <button type="button" class="handler-bar"><span class="blind">핸들러</span></button>
+                </div>
+                <div class="bottom-sheet-body">
+                    <div class="price-info-list-group scroll">
+                        <header class="price-info-list-header">
+                            <h3 class="price-info-list-title">결제정보</h3>
+                        </header>
+                        <ul class="price-info-list">
+                            <li class="price-info-item">
+                                <div class="price-info-title">총 상품 금액</div>
+                                <div class="price-info-content">20,000원</div>
+                            </li>
+                            <li class="price-info-item">
+                                <div class="price-info-title">총 할인금액</div>
+                                <div class="price-info-content color-red">-6,000원</div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="bottom-sheet-footer">
+                    <div class="total-price-group">
+                        <div class="total-price-title">총 상품 금액 <span class="color-primary">(2개)</span></div>
+                        <div class="total-price-conent">19,000원 <small class="price">20,000원</small></div>
+                    </div>
+                    <div class="btn-area">
+                        <button type="button" class="btn btn-line-primary btn-full btn-large-02">장바구니</button>
+                        <button type="button" class="btn btn-primary btn-full btn-large-02">바로 구매</button>
+                    </div>
+                </div>
+            </section>
+            <!--카드 팝업 끝-->
+            <!--푸터 시작-->
+            <footer class="footer-section">
+                <div class="container-inner">
+                    <a href="#" class="logo">
+                        <img src="../assest/images/logo-meBook.svg" alt="meBook" />
+                    </a>
+                    <p class="copyright-text">
+                        Copyright © 2024 메가스터디교육(주). All Rights Reserved.
+                    </p>
+                    <ul class="copyright-text">
+                        <li>법인명(상호) : 메가스터디교육(주)</li>
+                        <li>대표자 : 손성은</li>
+                        <li>사업자등록번호 : 780-87-00034</li>
+                    </ul>
+                    <ul class="copyright-text">
+                        <li>서울 서초구 효령로 321 (서초동, 덕원빌딩) 메가스터디교육(주), 7층</li>
+                        <li>02-6438-3106</li>
+                        <li>
+                            <a href="mailto:mebookteam@mebook.io" target="_blank">mebookteam@mebook.io</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="btn-top-scroll-area" id="btnTopScroll">
+                    <button type="button" class="btn-top-scroll"><span class="icon-top"><span
+                                class="blind">탑버튼</span></span><span class="text">TOP</span></button>
+                </div>
+            </footer>
+            <!--푸터 끝-->
+            <!--최근 검색어 시작-->
+            <section class="view-section" >
+                <header class="side-banner-header">
+                    <h3 class="side-banner-title">
+                        최근 본 상품 (6)
+                    </h3>
+                    <button type="reset" class="btn-text">전체삭제</button>
+                </header>
+                <div class="side-banner-body">
+                    <div class="grid-thumb-list-items">
+                        <a class="thumb-item" href="#">
+                            <div class="book-area badge-special">
+                                <div class="book">
+                                    <div class="book-img">
+                                        <img src="../assest/images/img-book-dummy-01.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="bg-book"></div>
+                            </div>
+                            <div class="thumb-item-text-area">
+                                <h3 class="thumb-item-title">
+                                    큰별쌤 최태성의 스토리 한국사 사전
+                                </h3>
+                                <div class="thumb-item-sub-text">전한길</div>
+                            </div>
+                        </a>
+                        <a class="thumb-item" href="#">
+                            <div class="book-area badge-special">
+                                <div class="book">
+                                    <div class="book-img">
+                                        <img src="../assest/images/img-book-dummy-01.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="bg-book"></div>
+                            </div>
+                            <div class="thumb-item-text-area">
+                                <h3 class="thumb-item-title">
+                                    큰별쌤 최태성의 스토리 한국사 사전
+                                </h3>
+                                <div class="thumb-item-sub-text">전한길</div>
+                            </div>
+                        </a>
+                        <a class="thumb-item" href="#">
+                            <div class="book-area badge-special">
+                                <div class="book">
+                                    <div class="book-img">
+                                        <img src="../assest/images/img-book-dummy-01.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="bg-book"></div>
+                            </div>
+                            <div class="thumb-item-text-area">
+                                <h3 class="thumb-item-title">
+                                    큰별쌤 최태성의 스토리 한국사 사전
+                                </h3>
+                                <div class="thumb-item-sub-text">전한길</div>
+                            </div>
+                        </a>
+                    </div> 
+                </div>
+            </section>
+            <!--최근 검색어 끝-->
+        </div>
+    </main>
+    <script src="../assest/js/jquery-2.2.4.min.js"></script>
+    <script src="../assest/js/swiper-bundle.js"></script>
+    <script src="../assest/js/jquery.multi-select.min.js"></script>
+    <script src="../assest/js/common.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            // 드롭다운 메뉴 토글
+            $(".btn-multi-dropdown dt .btn-dropdown").on('click', function() {
+                // 현재 클릭된 드롭다운의 다음 요소인 dd를 찾습니다.
+                let $dd = $(this).closest('dt').next('dd');
+                
+                // 다른 모든 드롭다운 닫기
+                $(".btn-multi-dropdown dd").not($dd).find('ul').hide();
+                
+                // 클릭한 드롭다운 토글
+                $dd.find('ul').slideToggle('fast');
+                
+                // 아이콘 회전 처리
+                $(this).find('.icon-arrow').toggleClass('rotate');
+            });
+
+            // 페이지 다른 곳 클릭 시 드롭다운 닫기
+            $(document).bind('click', function(e) {
+                let $clicked = $(e.target);
+                if (!$clicked.parents().hasClass("btn-multi-dropdown")) {
+                    $(".btn-multi-dropdown dd ul").hide();
+                }
+            });
+
+            // 다중 선택 체크박스 기능
+            $('.mutli-select-checkbox input[type="checkbox"]').on('click', function() {
+                let $dropdown = $(this).closest('.btn-multi-dropdown');
+                let $multiSel = $(this).closest('.btn-multi-dropdown').find('.multi-select');
+                let title = $(this).val() + ",";
+
+                if ($(this).is(':checked')) {
+                    let html = '<span title="' + title + '">' + title + '</span>';
+                    $multiSel.append(html);
+                    $(this).closest('.btn-multi-dropdown').find('.hide').hide();
+                } else {
+                    $multiSel.find('span[title="' + title + '"]').remove();
+                    if ($multiSel.children().length == 0) {
+                        $(this).closest('.btn-multi-dropdown').find('.hide').show();
+                    }
+                }
+                // 드롭다운 제목 배경색 변경
+                if ($multiSel.children().length > 0) {
+                    $dropdown.find('dt .btn-dropdown').addClass('on');
+                } else {
+                    $dropdown.find('dt .btn-dropdown').removeClass('on');
+                }
+            });
+
+            // 기본 위치(top)값
+            let floatPosition = parseInt($("#sideBanner").css('top'))
+
+            // scroll 인식
+            $(window).scroll(function() {
+            
+                // 현재 스크롤 위치
+                let currentTop = $(window).scrollTop();
+                let bannerTop = currentTop + floatPosition + "px";
+
+                //이동 애니메이션
+                $("#sideBanner").stop().animate({
+                "top" : bannerTop
+                }, 500);
+
+            }).scroll();
+        });
+
+    </script>
+</body>
+
+</html>

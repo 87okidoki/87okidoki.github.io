@@ -10,6 +10,7 @@
     <meta name="msapplication-TileColor" content="#fff">
     <meta name="msapplication-TileImage" content="/ms-icon-70x70.png">
     <meta name="apple-mobile-web-app-capable" content="yes">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
     <link rel="stylesheet" type="text/css" href="../assest/css/swiper-bundle.css" />
     <link rel="stylesheet" type="text/css" href="../assest/css/common.css" />
     <link rel="stylesheet" type="text/css" href="../assest/css/layout.css" />
@@ -244,22 +245,48 @@
             </section>
             <!--해더 끝-->
             <div class="sub-contents-wrap">
-                <header class="sub-contents-header">
-                    <h2 class="sub-contents-header-title">
-                        구매내역 조회
-                    </h2>
-                    <div class="swiper-container btns-swiper-group">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide on"><a href="#"><span class="btn-swiper-tab active">최근 3개월<span></a></div>
-                            <div class="swiper-slide"><a href="#"><span class="btn-swiper-tab">2개월</span></a></div>
+                <!--구매내역 조회 시작-->
+                <section class="purchase-history-section">
+                    <header class="sub-contents-header">
+                        <h2 class="sub-contents-header-title">
+                            구매내역 조회
+                        </h2>
+                        <div class="date-range-area">
+                            <div class="btns-filter-group" id="btnsFilterGroup">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide on"><button type="button" class="btn-filter on">최근 3개월</button></div>
+                                    <div class="swiper-slide"> <button type="button" class="btn-filter">2개월</button></div>
+                                    <div class="swiper-slide"> <button type="button" class="btn-filter">1개월</button></div>
+                                    <div class="swiper-slide"><button type="button" class="btn-filter">1주일</button></div>
+                                    <div class="swiper-slide only-pc">                 
+                                        <input type="button" name="daterange" class="btn-filter btn-date-range" value="직접 입력" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="btn-date-range-mo-area only-mobile">
+                                <div class="btn-date-range-mo-inner">
+                                    <input type="text" name="daterange" class="btn-date-range-mo" value="" placeholder="직접 입력" />     
+                                    <i class="icon-calendar"></i>    
+                                </div>                   
+                            </div>
                         </div>
-                    </div>
-                </header>
-                <div class="tab-swiper-content-section on">
+                    </header>
+                    <!--구매내역 없음 시작-->
+                    <section class="goods-list-empty-group">
+                        <div class="empty-info-group">
+                            <div class="img-box">
+                                <img src="../assest/images/img-cart-01.png" alt="" />
+                            </div>
+                            <div class="text-box">
+                                <h3 class="empty-title">구매한 내역이 없습니다.</h3>
+                            </div>
+                        </div>
+                    </section>
+                    <!--구매내역 없음 끝-->
                     <section class="goods-list-section">
                         <div class="payment-option-group">
-                            <div class="flex"> 
-                                <h3 class="option-small-title">2024.03.04</h3> 
+                            <div class="flex">
+                                <h3 class="option-small-title">2024.03.04</h3>
                                 <span class="option-num">(구매 번호 : 24123456789)</span>
                             </div>
                             <a href="#" class="btn-more">
@@ -267,7 +294,7 @@
                                 <i class="icon-arrow-right-16"><span class="blind">상세보기</span></i>
                             </a>
                         </div>
-                        <article class="goods-list-group">
+                        <article class="goods-list-group purchase">
                             <header class="goods-list-header">
                                 <span class="goods-list-title">E-BOOK</span>
                             </header>
@@ -283,10 +310,11 @@
                                         </a>
                                         <div class="goods-info-box">
                                             <ul class="sub-text-area">
-                                                <li >
-                                                2024.03.08 결제 완료
                                                 <li>
-                                                다운로드 가능 (~2024.03.11)
+                                                    2024.03.08 결제 완료
+                                                </li>
+                                                <li>
+                                                    다운로드 가능 (~2024.03.11)
                                                 </li>
                                             </ul>
                                             <a href="" class="goods-title">2024 전한길 한국사 4.0 실전동형 모의고사 시즌 1</a>
@@ -297,8 +325,18 @@
                                         </div>
                                     </div>
                                     <div class="btns-grid-area">
-                                        <button type="button" class="btn btn-x-small btn-line">리뷰쓰기 </button>
-                                        <button type="button" class="btn btn-x-small btn-line">환불신청 </button>
+                                        <button type="button" class="btn btn-x-small btn-line" disabled>리뷰쓰기 </button>
+                                        <button type="button" class="btn btn-x-small btn-line" disabled>환불신청 </button>
+                                    </div>
+                                    <div class="mo-sub-text-box">
+                                        <ul class="sub-text-area">
+                                            <li>
+                                                2024.03.08 결제 완료
+                                            </li>
+                                            <li>
+                                                다운로드 가능 (~2024.03.11)
+                                            </li>
+                                        </ul>
                                     </div>
                                 </li>
                                 <li class="goods-list-item">
@@ -314,6 +352,7 @@
                                             <ul class="sub-text-area red">
                                                 <li>
                                                     2024.03.08 결제 완료
+                                                </li>
                                                 <li>
                                                     다운로드 가능 (~2024.03.11)
                                                 </li>
@@ -329,10 +368,20 @@
                                         <button type="button" class="btn btn-x-small btn-line" disabled>리뷰쓰기</button>
                                         <button type="button" class="btn btn-x-small btn-line">환불신청</button>
                                     </div>
+                                    <div class="mo-sub-text-box">
+                                        <ul class="sub-text-area">
+                                            <li>
+                                                2024.03.08 결제 완료
+                                            </li>
+                                            <li class="color-red">
+                                                다운로드 가능 (~2024.03.11)
+                                            </li>
+                                        </ul>
+                                    </div>
                                 </li>
                             </ul>
-                        </article> 
-                        <article class="goods-list-group">
+                        </article>
+                        <article class="goods-list-group purchase">
                             <header class="goods-list-header">
                                 <span class="goods-list-title">DIGITAL GOODS</span>
                             </header>
@@ -347,46 +396,17 @@
                                             </div>
                                         </a>
                                         <div class="goods-info-box">
-                                            <ul class="sub-text-area primary">
-                                                <li>
-                                                    2024.03.08 결제 완료
-                                                <li>
-                                                    다운로드 가능 (~2024.03.11)
-                                                </li>
-                                            </ul>
-                                            <a href="" class="goods-title">2024 전한길 한국사 4.0 실전동형 모의고사 시즌 1</a>
-                                            <div class="goods-info-text"><span class="text">전한길</span> <span
-                                                    class="text">메가스터디교육(공무원)</span></div>
-                                            <div class="goods-price"><span class="discount">10%</span><strong
-                                                    class="discount-price">9,000원</strong><span class="price">10,000원</span></div>
-                                        </div>
-                                    </div>
-                                    <div class="btns-grid-area">
-                                        <button type="button" class="btn btn-x-small btn-line" disabled>리뷰쓰기</button>
-                                        <button type="button" class="btn btn-x-small btn-line" disabled>환불신청</button>
-                                    </div>
-                                </li>
-                                <li class="goods-list-item">
-                                    <div class="goods-list-left">
-                                        <a href="" class="thumb-item">
-                                            <div class="goods-thumb-area small">
-                                                <div class="goods-thumb">
-                                                    <img src="../assest/images/img-goods-dummy.png" alt="" />
-                                                </div>
-                                            </div>
-                                        </a>
-                                        <div class="goods-info-box">
                                             <ul class="sub-text-area">
                                                 <li>
                                                     2024.03.08 결제 완료
+                                                </li>
                                                 <li>
                                                     다운로드 가능 (~2024.03.11)
                                                 </li>
                                             </ul>
                                             <a href="" class="goods-title">2024 전한길 한국사 4.0 실전동형 모의고사 시즌 1</a>
                                             <div class="goods-info-text">
-                                                <span class="text">전한길</span>
-                                                <span class="text">메가스터디교육(공무원)</span>
+                                                <span class="text">파트너명</span>
                                             </div>
                                             <div class="goods-price">
                                                 <span class="discount">10%</span>
@@ -399,14 +419,24 @@
                                         <button type="button" class="btn btn-x-small btn-line">리뷰쓰기</button>
                                         <button type="button" class="btn btn-x-small btn-line">환불신청</button>
                                     </div>
+                                    <div class="mo-sub-text-box">
+                                        <ul class="sub-text-area">
+                                            <li>
+                                                2024.03.08 결제 완료
+                                            </li>
+                                            <li>
+                                                다운로드 가능 (~2024.03.11)
+                                            </li>
+                                        </ul>
+                                    </div>
                                 </li>
                             </ul>
                         </article>
                     </section>
                     <section class="goods-list-section">
                         <div class="payment-option-group">
-                            <div class="flex"> 
-                                <h3 class="option-small-title color-red">입금대기</h3> 
+                            <div class="flex">
+                                <h3 class="option-small-title color-red">입금대기</h3>
                                 <span class="option-num">(구매 번호 : 24123456789)</span>
                             </div>
                             <a href="#" class="btn-more">
@@ -414,7 +444,7 @@
                                 <i class="icon-arrow-right-16"><span class="blind">상세보기</span></i>
                             </a>
                         </div>
-                        <article class="goods-list-group">
+                        <article class="goods-list-group purchase">
                             <header class="goods-list-header">
                                 <span class="goods-list-title">E-BOOK</span>
                             </header>
@@ -429,11 +459,12 @@
                                             </div>
                                         </a>
                                         <div class="goods-info-box">
-                                            <ul class="sub-text-area">
-                                                <li >
-                                                2024.03.08 결제 완료
+                                            <ul class="sub-text-area red">
                                                 <li>
-                                                다운로드 가능 (~2024.03.11)
+                                                    2024.03.08 결제 완료
+                                                </li>
+                                                <li>
+                                                    다운로드 가능 (~2024.03.11)
                                                 </li>
                                             </ul>
                                             <a href="" class="goods-title">2024 전한길 한국사 4.0 실전동형 모의고사 시즌 1</a>
@@ -447,6 +478,16 @@
                                         <button type="button" class="btn btn-x-small btn-line">리뷰쓰기 </button>
                                         <button type="button" class="btn btn-x-small btn-line">환불신청 </button>
                                     </div>
+                                    <div class="mo-sub-text-box">
+                                        <ul class="sub-text-area red">
+                                            <li>
+                                                결제 대기 중
+                                            </li>
+                                            <li>
+                                                6/11(화)까지 입금
+                                            </li>
+                                        </ul>
+                                    </div>
                                 </li>
                                 <li class="goods-list-item">
                                     <div class="goods-list-left">
@@ -458,9 +499,10 @@
                                             </div>
                                         </a>
                                         <div class="goods-info-box">
-                                            <ul class="sub-text-area red">
+                                            <ul class="sub-text-area primary">
                                                 <li>
                                                     2024.03.08 결제 완료
+                                                </li>
                                                 <li>
                                                     다운로드 가능 (~2024.03.11)
                                                 </li>
@@ -476,11 +518,22 @@
                                         <button type="button" class="btn btn-x-small btn-line" disabled>리뷰쓰기</button>
                                         <button type="button" class="btn btn-x-small btn-line">환불신청</button>
                                     </div>
+                                    <div class="mo-sub-text-box">
+                                        <ul class="sub-text-area">
+                                            <li>
+                                                2024.03.08 결제 완료
+                                            </li>
+                                            <li class="color-primary">
+                                                다운로드 가능 (~2024.03.11)
+                                            </li>
+                                        </ul>
+                                    </div>
                                 </li>
                             </ul>
-                        </article> 
+                        </article>
                     </section>
-                </div>
+                </section>
+                <!--구매내역 조회 끝-->
             </div>
             <!--푸터 시작-->
             <footer class="footer-section">
@@ -512,9 +565,37 @@
             <!--푸터 끝-->
         </div>
     </main>
-    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script src="../assest/js/jquery-2.2.4.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
     <script src="../assest/js/swiper-bundle.js"></script>
     <script src="../assest/js/common.js"></script>
+    <script>
+        $(function () {
+            // 데이트 피커
+            $('input[name="daterange"]').daterangepicker({
+                locale: {
+                    "separator": " ~ ",                     // 시작일시와 종료일시 구분자
+                    "format": 'YYYY.MM.DD',     // 일시 노출 포맷
+                    "applyLabel": "확인",
+                    "cancelLabel": "취소",
+                    "customRangeLabel": "Custom",
+                    "daysOfWeek": ["일", "월", "화", "수", "목", "금", "토"],
+                    "monthNames": ["1월", "2월", "3월", "4월", "5월", "6월", "7월", "8월", "9월", "10월", "11월", "12월"],
+                },
+                autoUpdateInput: false,
+                "drops": "down",
+                opens: 'right',
+            });
+            $('input[name="daterange"]').on('apply.daterangepicker', function(ev, picker) {
+                $(this).val(picker.startDate.format('MM/DD/YYYY') + ' - ' + picker.endDate.format('MM/DD/YYYY'));
+            });
+        
+            $('input[name="daterange"]').on('cancel.daterangepicker', function(ev, picker) {
+                $(this).val('');
+            });
+        });
+    </script>
 </body>
 
 </html>
