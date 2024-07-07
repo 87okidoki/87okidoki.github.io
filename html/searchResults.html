@@ -183,19 +183,22 @@
                         <h2 class="search-result-title">
                             <span class="color-primary">전한길</span> 검색 결과<span class="num">(1,234)</span>
                         </h2>
+                        <div class="btn-filter-area only-mobile">
+                            <button type="button" class="btn btn-transparent"><i class="icon-filter"><span class="blind">필터</span></i></button>
+                        </div>
                     </header>
                     <div class="search-option-group">
                         <div class="checks black">
                             <input type="checkbox" id="checkboxall" class="check" value="checkboxall">
-                            <label for="checkboxall" class="label-check"><span>전체선택 <b>(5개)</b></span></label>
+                            <label for="checkboxall" class="label-check"><span>전체선택</span></label>
                         </div>
-                        <div class="bths">
+                        <div class="bths only-pc">
                             <button type="reset" class="btn btn-secondary btn-x-small">장바구니</button>
                             <button type="reset" class="btn btn-secondary btn-x-small">바로구매</button>
                         </div>
                     </div>
                     <div class="grid-option-group">
-                        <select>
+                        <select class="only-pc">
                             <option>인기순</option>
                             <option>최신순</option>
                         </select>
@@ -761,7 +764,7 @@
             </footer>
             <!--푸터 끝-->
             <!--최근 검색어 시작-->
-            <section class="side-banner-section" id="sideBanner">
+            <aside class="side-banner-section" id="sideBanner">
                 <header class="side-banner-header">
                     <h3 class="side-banner-title">
                         최근 검색어
@@ -802,7 +805,7 @@
                         </li>
                     </ul> 
                 </div>
-            </section>
+            </aside>
             <!--최근 검색어 끝-->
         </div>
     </main>

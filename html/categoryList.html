@@ -124,7 +124,7 @@
                         </div>
                     </div>
                 </article>
-                <article class="mo-menu-layer-group depth2-type off" id="mobileCategorylayerOverlay">
+                <article class="mo-menu-layer-group depth2-type off " id="mobileCategorylayerOverlay">
                     <h3 class="blind">메뉴 2depth</h3>
                     <div class="mo-main-menu-layer scroll">
                         <header class="mo-header">
@@ -245,15 +245,25 @@
             <!--해더 끝-->
              <div class="sub-contents-wrap">
                 <section class="category-list-section">
+                    <div class="">
+                        <ul>
+                            <li><i class="icon-home"><span class="blind">홈</span></i></li>
+                        </ul>
+                    </div>
                     <div class="banner-board-group">
                         <a href="#" class="banner-board-large">
                             <img src="../assest/images/img-main-banner-dummy-01.png" alt="">
                         </a>
                     </div>
                     <header class="sub-contents-header">
-                        <h2 class="sub-contents-header-title">
-                            한국사
-                        </h2>
+                        <div class="flex">
+                            <h2 class="sub-contents-header-title">
+                                한국사
+                            </h2>
+                            <div class="btn-filter-area only-mobile">
+                                <button type="button" class="btn btn-transparent"><i class="icon-filter"><span class="blind">필터</span></i></button>
+                            </div>
+                        </div>
                     </header>
                     <div class="search-option-group">
                         <div class="checks black">
@@ -280,7 +290,7 @@
                         </div>
                     </div>
                     <div class="grid-option-group">
-                        <select>
+                        <select class="only-pc"> 
                             <option>인기순</option>
                             <option>최신순</option>
                         </select>
@@ -430,7 +440,7 @@
                 </section>
              </div>
             <!--카드 팝업 시작-->
-            <section class="bottom-sheet-popup handler " id="bottomSheet">
+            <section class="bottom-sheet-popup handler off" id="bottomSheet">
                 <div class="handler-area" id="bottomSheetHandler">
                     <button type="button" class="handler-bar"><span class="blind">핸들러</span></button>
                 </div>
@@ -491,68 +501,165 @@
                 </div>
             </footer>
             <!--푸터 끝-->
-            <!--최근 검색어 시작-->
-            <section class="view-section" >
-                <header class="side-banner-header">
-                    <h3 class="side-banner-title">
-                        최근 본 상품 (6)
-                    </h3>
-                    <button type="reset" class="btn-text">전체삭제</button>
-                </header>
-                <div class="side-banner-body">
-                    <div class="grid-thumb-list-items">
-                        <a class="thumb-item" href="#">
-                            <div class="book-area badge-special">
-                                <div class="book">
-                                    <div class="book-img">
-                                        <img src="../assest/images/img-book-dummy-01.png" alt="">
+            <!--최근 본 상품 시작-->
+            <aside class="recent-view-section off">
+                <div class="recent-view-container">
+                    <header class="recent-view-header">
+                        <h3 class="recent-view-title">
+                            최근 본 상품 <span class="color-primary">(6)</span>
+                        </h3>
+                        <button type="reset" class="btn-text">전체삭제</button>
+                    </header>
+                    <div class="recent-view-body scroll">
+                        <div class="grid-thumb-list-items recent-view-list">
+                            <div class="thumb-item">
+                                <div class="contet-left">
+                                    <a href="#"  class="book-area badge-special">
+                                        <div class="book">
+                                            <div class="book-img">
+                                                <img src="../assest/images/img-book-dummy-01.png" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="bg-book"></div>
+                                    </a>
+                                    <div class="thumb-item-text-area">
+                                        <a href="#" class="thumb-item-title">
+                                            큰별쌤 최태성의 스토리 한국사 사전
+                                        </a>
+                                        <div class="thumb-item-sub-text">전한길</div>
                                     </div>
                                 </div>
-                                <div class="bg-book"></div>
+                                <button type="reset" class="btn btn-transparent">
+                                    <i class="icon-close-16"><span class="blind">삭제</span></i>
+                                </button>
                             </div>
-                            <div class="thumb-item-text-area">
-                                <h3 class="thumb-item-title">
-                                    큰별쌤 최태성의 스토리 한국사 사전
-                                </h3>
-                                <div class="thumb-item-sub-text">전한길</div>
-                            </div>
-                        </a>
-                        <a class="thumb-item" href="#">
-                            <div class="book-area badge-special">
-                                <div class="book">
-                                    <div class="book-img">
-                                        <img src="../assest/images/img-book-dummy-01.png" alt="">
+                            <div class="thumb-item">
+                                <div class="contet-left">
+                                    <a href="#"  class="book-area badge-special">
+                                        <div class="book">
+                                            <div class="book-img">
+                                                <img src="../assest/images/img-book-dummy-01.png" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="bg-book"></div>
+                                    </a>
+                                    <div class="thumb-item-text-area">
+                                        <a href="#" class="thumb-item-title">
+                                            큰별쌤 최태성의 스토리 한국사 사전
+                                        </a>
+                                        <div class="thumb-item-sub-text">전한길</div>
                                     </div>
                                 </div>
-                                <div class="bg-book"></div>
+                                <button type="reset" class="btn btn-transparent">
+                                    <i class="icon-close-16"><span class="blind">삭제</span></i>
+                                </button>
                             </div>
-                            <div class="thumb-item-text-area">
-                                <h3 class="thumb-item-title">
-                                    큰별쌤 최태성의 스토리 한국사 사전
-                                </h3>
-                                <div class="thumb-item-sub-text">전한길</div>
-                            </div>
-                        </a>
-                        <a class="thumb-item" href="#">
-                            <div class="book-area badge-special">
-                                <div class="book">
-                                    <div class="book-img">
-                                        <img src="../assest/images/img-book-dummy-01.png" alt="">
+                            <div class="thumb-item">
+                                <div class="contet-left">
+                                    <a href="#"  class="book-area badge-special">
+                                        <div class="book">
+                                            <div class="book-img">
+                                                <img src="../assest/images/img-book-dummy-01.png" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="bg-book"></div>
+                                    </a>
+                                    <div class="thumb-item-text-area">
+                                        <a href="#" class="thumb-item-title">
+                                            큰별쌤 최태성의 스토리 한국사 사전
+                                        </a>
+                                        <div class="thumb-item-sub-text">전한길</div>
                                     </div>
                                 </div>
-                                <div class="bg-book"></div>
+                                <button type="reset" class="btn btn-transparent">
+                                    <i class="icon-close-16"><span class="blind">삭제</span></i>
+                                </button>
                             </div>
-                            <div class="thumb-item-text-area">
-                                <h3 class="thumb-item-title">
-                                    큰별쌤 최태성의 스토리 한국사 사전
-                                </h3>
-                                <div class="thumb-item-sub-text">전한길</div>
+                            <div class="thumb-item">
+                                <div class="contet-left">
+                                    <a href="#"  class="book-area badge-special">
+                                        <div class="book">
+                                            <div class="book-img">
+                                                <img src="../assest/images/img-book-dummy-01.png" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="bg-book"></div>
+                                    </a>
+                                    <div class="thumb-item-text-area">
+                                        <a href="#" class="thumb-item-title">
+                                            큰별쌤 최태성의 스토리 한국사 사전
+                                        </a>
+                                        <div class="thumb-item-sub-text">전한길</div>
+                                    </div>
+                                </div>
+                                <button type="reset" class="btn btn-transparent">
+                                    <i class="icon-close-16"><span class="blind">삭제</span></i>
+                                </button>
                             </div>
-                        </a>
-                    </div> 
+                            <div class="thumb-item">
+                                <div class="contet-left">
+                                    <a href="#"  class="book-area badge-special">
+                                        <div class="book">
+                                            <div class="book-img">
+                                                <img src="../assest/images/img-book-dummy-01.png" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="bg-book"></div>
+                                    </a>
+                                    <div class="thumb-item-text-area">
+                                        <a href="#" class="thumb-item-title">
+                                            큰별쌤 최태성의 스토리 한국사 사전
+                                        </a>
+                                        <div class="thumb-item-sub-text">전한길</div>
+                                    </div>
+                                </div>
+                                <button type="reset" class="btn btn-transparent">
+                                    <i class="icon-close-16"><span class="blind">삭제</span></i>
+                                </button>
+                            </div>
+                            <div class="thumb-item">
+                                <div class="contet-left">
+                                    <a href="#"  class="book-area badge-special">
+                                        <div class="book">
+                                            <div class="book-img">
+                                                <img src="../assest/images/img-book-dummy-01.png" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="bg-book"></div>
+                                    </a>
+                                    <div class="thumb-item-text-area">
+                                        <a href="#" class="thumb-item-title">
+                                            큰별쌤 최태성의 스토리 한국사 사전
+                                        </a>
+                                        <div class="thumb-item-sub-text">전한길</div>
+                                    </div>
+                                </div>
+                                <button type="reset" class="btn btn-transparent">
+                                    <i class="icon-close-16"><span class="blind">삭제</span></i>
+                                </button>
+                            </div>
+
+                        </div> 
+                    </div>
                 </div>
-            </section>
-            <!--최근 검색어 끝-->
+            </aside>
+            <!--최근 본 상품 끝-->
+            <article class="mo-menu-layer-group " id="mobileCategorylayerOverlay">
+                <h3 class="blind">필터</h3>
+                <div class="mo-main-menu-layer scroll">
+                    <header class="mo-header">
+                        <h3 class="mo-header-title">수험서</h3>
+                        <div class="mo-header-right">
+                            <button type="button" class="btn btn-transparent" id="closeMobileCategorylayerOverlay">
+                                <i class="icon-close-gray">
+                                    <span class="blind">닫기</span></i>
+                            </button>
+                        </div>
+                    </header>                        
+                    <div class=""></div>
+                </div>
+            </article>
+
         </div>
     </main>
     <script src="../assest/js/jquery-2.2.4.min.js"></script>
@@ -562,69 +669,7 @@
 
     <script type="text/javascript">
         $(document).ready(function() {
-            // 드롭다운 메뉴 토글
-            $(".btn-multi-dropdown dt .btn-dropdown").on('click', function() {
-                // 현재 클릭된 드롭다운의 다음 요소인 dd를 찾습니다.
-                let $dd = $(this).closest('dt').next('dd');
-                
-                // 다른 모든 드롭다운 닫기
-                $(".btn-multi-dropdown dd").not($dd).find('ul').hide();
-                
-                // 클릭한 드롭다운 토글
-                $dd.find('ul').slideToggle('fast');
-                
-                // 아이콘 회전 처리
-                $(this).find('.icon-arrow').toggleClass('rotate');
-            });
-
-            // 페이지 다른 곳 클릭 시 드롭다운 닫기
-            $(document).bind('click', function(e) {
-                let $clicked = $(e.target);
-                if (!$clicked.parents().hasClass("btn-multi-dropdown")) {
-                    $(".btn-multi-dropdown dd ul").hide();
-                }
-            });
-
-            // 다중 선택 체크박스 기능
-            $('.mutli-select-checkbox input[type="checkbox"]').on('click', function() {
-                let $dropdown = $(this).closest('.btn-multi-dropdown');
-                let $multiSel = $(this).closest('.btn-multi-dropdown').find('.multi-select');
-                let title = $(this).val() + ",";
-
-                if ($(this).is(':checked')) {
-                    let html = '<span title="' + title + '">' + title + '</span>';
-                    $multiSel.append(html);
-                    $(this).closest('.btn-multi-dropdown').find('.hide').hide();
-                } else {
-                    $multiSel.find('span[title="' + title + '"]').remove();
-                    if ($multiSel.children().length == 0) {
-                        $(this).closest('.btn-multi-dropdown').find('.hide').show();
-                    }
-                }
-                // 드롭다운 제목 배경색 변경
-                if ($multiSel.children().length > 0) {
-                    $dropdown.find('dt .btn-dropdown').addClass('on');
-                } else {
-                    $dropdown.find('dt .btn-dropdown').removeClass('on');
-                }
-            });
-
-            // 기본 위치(top)값
-            let floatPosition = parseInt($("#sideBanner").css('top'))
-
-            // scroll 인식
-            $(window).scroll(function() {
-            
-                // 현재 스크롤 위치
-                let currentTop = $(window).scrollTop();
-                let bannerTop = currentTop + floatPosition + "px";
-
-                //이동 애니메이션
-                $("#sideBanner").stop().animate({
-                "top" : bannerTop
-                }, 500);
-
-            }).scroll();
+  
         });
 
     </script>

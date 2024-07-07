@@ -1155,7 +1155,12 @@ img {
     width: 24px;
     height: 24px;
 }
-
+.icon-filter{
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background: url(../images/ic-filter.svg) no-repeat center center / contain;
+}
 .logo-apple {
     display: inline-block;
     background: url("../images/logo-apple.svg") no-repeat center center/ contain;
