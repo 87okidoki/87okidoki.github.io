@@ -13,6 +13,7 @@
     <link rel="stylesheet" type="text/css" href="../assest/css/swiper-bundle.css" />
     <link rel="stylesheet" type="text/css" href="../assest/css/common.css" />
     <link rel="stylesheet" type="text/css" href="../assest/css/layout.css" />
+    <link rel="stylesheet" type="text/css" href="../assest/css/main.css" />
     <meta name="keywords" content="meBook" />
     <meta name="description" content="meBook" />
     <title>meBook</title>
@@ -22,20 +23,35 @@
     <main class="main-wrap">
         <!--컨텐츠 시작-->
         <div class="container">
-            <!--로딩 시작-->
-            <section class="popup-section">
+            <!--팝업 시작-->
+            <section class="popup-section goods-option-popup-section">
                 <div class="popup-container text-center">
-                    <div class="loading"></div>
                     <header class="popup-header">
-                        <h2 class="title">결제 중입니다.</h2>
+                        <h2 class="title">팝업이 상품 옵션을 선택해 주세요.</h2>
                     </header>
                     <div class="popup-body">
-                        <p class="text">브라우저를 종료하지 마시고<br />
-                        잠시만 기다려 주세요.</p>
+                        <div class="check-group">
+                            <div class="checks black">
+                                <input type="radio" id="goodsOption-01" class="check" name="goodsOption" value="소장" checked>
+                                <label for="goodsOption-01" class="label-check">
+                                    <span><b>소장</b></span>
+                                </label>
+                            </div>
+                            <div class="checks black">
+                                <input type="radio" id="goodsOption-02" class="check" name="goodsOption" value="대여">
+                                <label for="goodsOption-02" class="label-check">
+                                    <span><b>대여</b></span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="popup-footer">
+                        <button type="button" class="btn btn-full btn-secondary btn-popup">취소</button>
+                        <button type="button" class="btn btn-full btn-primary btn-popup">선택 완료</button>
                     </div>
                 </div>
             </section>
-            <!--로딩 끝-->
+            <!--팝업 끝-->
         </div>
     </main>
     <script src="../assest/js/jquery-2.2.4.min.js"></script>

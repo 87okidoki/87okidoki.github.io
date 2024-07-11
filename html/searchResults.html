@@ -72,7 +72,15 @@
             </section>
             <!-- 검색 끝 -->
              <div class="search-contents-wrap">
+                <!-- 검색 결과 시작-->
                 <section class="search-results-section">
+                    <div class="banner-section">
+                        <div class="banner-board-group">
+                            <a href="#" class="banner-board-large">
+                                <img src="../assest/images/img-main-banner-dummy-01.png" alt="">
+                            </a>
+                        </div>
+                    </div>
                     <div class="search-filter-group">
                         <div class="btn-filter-items">
                             <div class="btn-filter-item">
@@ -144,26 +152,28 @@
                                         <i class="icon-arrow"><span class="blind">화살표</span></i>
                                     </div>
                                     <div class="search-dropdown-layer">
-                                        <div class="input-box">
-                                            <input type="text" class="" placeholder="결과 내 재검색"/>
-                                            <button type="submit" class="btn btn-transparent"><i class="icon-search"></i></button>
+                                        <div class="small-search-box">
+                                            <div class="input-box">
+                                                <input type="text" class="" placeholder="결과 내 재검색"/>
+                                                <button type="submit" class="btn btn-transparent"><i class="icon-search"></i></button>
+                                            </div>
+                                            <ul class="search-list">
+                                                <li class="search-list-item">
+                                                    <a href="#" class="text">모의고사</a> 
+                                                    <button type="button" class="btn-delete">
+                                                        <i class="icon-close-16"><span class="blind">삭제</span></i>
+                                                    </button>
+                                                </li>
+                                            </ul>
+                                            <button type="submit" class="btn btn-search">검색</button>
                                         </div>
-                                        <ul class="search-list">
-                                            <li class="search-list-item">
-                                                <a href="#" class="text">모의고사</a> 
-                                                <button type="button" class="btn-delete">
-                                                     <i class="icon-close-16"><span class="blind">삭제</span></i>
-                                                </button>
-                                            </li>
-                                        </ul>
-                                        <button type="submit" class="btn btn-search">검색</button>
                                     </div>
                                 </div>
                             </div>
                         </div>    
                         <button type="reset" class="btn-text">초기화</button>
                     </div>
-                    <!-- 빈 1:1 문의 리스트 시작-->
+                    <!-- 빈 검색 결과 시작-->
                     <div class="search-empty-group">
                         <div class="empty-info-group">
                             <div class="img-box">
@@ -178,13 +188,13 @@
                             </div>
                         </div>
                     </div>
-                    <!-- 빈 1:1 문의 리스트 끝-->
+                    <!--빈 검색 결과 끝-->
                     <header class="search-result-header">
                         <h2 class="search-result-title">
                             <span class="color-primary">전한길</span> 검색 결과<span class="num">(1,234)</span>
                         </h2>
                         <div class="btn-filter-area only-mobile">
-                            <button type="button" class="btn btn-transparent"><i class="icon-filter"><span class="blind">필터</span></i></button>
+                            <button type="button" class="btn btn-transparent" id="btnFilter"><i class="icon-filter"><span class="blind">필터</span></i></button>
                         </div>
                     </header>
                     <div class="search-option-group">
@@ -192,17 +202,22 @@
                             <input type="checkbox" id="checkboxall" class="check" value="checkboxall">
                             <label for="checkboxall" class="label-check"><span>전체선택</span></label>
                         </div>
-                        <div class="bths only-pc">
+                        <div class="bths">
                             <button type="reset" class="btn btn-secondary btn-x-small">장바구니</button>
                             <button type="reset" class="btn btn-secondary btn-x-small">바로구매</button>
                         </div>
                     </div>
                     <div class="grid-option-group">
-                        <select class="only-pc">
-                            <option>인기순</option>
-                            <option>최신순</option>
-                        </select>
-                        <div class="pagination">
+                        <div class="form-select only-pc">
+                            <select class="select">
+                                <option>인기도순</option>
+                                <option>판매량순</option>
+                                <option>최신 출간순</option>
+                                <option>낮은 가격순</option>
+                                <option>리뷰순</option>
+                            </select>
+                        </div>
+                        <div class="pagination small">
                             <a href="#" class="previous disabled">
                                 <span class="blind">왼쪽 화살</span>               
                             </a>
@@ -219,34 +234,11 @@
                     <div class="thumb-grid-items">
                         <div class="thumb-grid-item">
                             <div class="checks black">
-                                <input type="checkbox" id="ebookcheckbox-01" class="check" value="ebookcheckbox-01">
-                                <label for="ebookcheckbox-01" class="label-check"><span class="blind"> E-BOOK</span></label>
-                            </div>
-                            <a class="thumb-item" href="#">
-                                <div class="book-thumb-area  badge-special">
-                                    <div class="book-thumb">
-                                        <img src="../assest/images/img-book-dummy-02.jpg" alt="">
-                                    </div>
-                                </div>
-                                <div class="thumb-item-text-area">
-                                    <h3 class="thumb-item-title">
-                                        2024 전한길 한국사 4.0 실전동형 모의고사 시즌 1
-                                    </h3>
-                                    <div class="thumb-item-sub-text">전한길</div>
-                                    <div class="goods-price">
-                                        <span class="discount">10%</span>
-                                        <strong class="discount-price">9,000원</strong>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="thumb-grid-item">
-                            <div class="checks black">
                                 <input type="checkbox" id="ebookcheckbox-02" class="check" value="ebookcheckbox-02">
-                                <label for="ebookcheckbox-02" class="label-check"><span class="blind"> E-BOOK</span></label>
+                                <label for="ebookcheckbox-02" class="label-check"><span class="blind"> e-Book</span></label>
                             </div>
                             <div class="thumb-item">
-                                <a  href="#" class="book-thumb-area  badge-special">
+                                <a href="#" class="book-thumb-area  badge-special">
                                     <div class="book-thumb">
                                         <img src="../assest/images/img-book-dummy-02.jpg" alt="">
                                     </div>
@@ -268,17 +260,17 @@
                         </div>
                         <div class="thumb-grid-item">
                             <div class="checks black">
-                                <input type="checkbox" id="ebookcheckbox-03" class="check" value="ebookcheckbox-03">
-                                <label for="ebookcheckbox-03" class="label-check"><span class="blind"> E-BOOK</span></label>
+                                <input type="checkbox" id="ebookcheckbox-02" class="check" value="ebookcheckbox-02">
+                                <label for="ebookcheckbox-02" class="label-check"><span class="blind"> e-Book</span></label>
                             </div>
                             <div class="thumb-item">
-                                <a class="book-thumb-area badge-special" href="#">
+                                <a href="#" class="book-thumb-area  badge-special">
                                     <div class="book-thumb">
                                         <img src="../assest/images/img-book-dummy-03.png" alt="">
                                     </div>
                                 </a>
                                 <div class="thumb-item-text-area">
-                                    <a class="thumb-item-title" href="#">
+                                    <a href="#" class="thumb-item-title">
                                         2024 전한길 한국사 4.0 실전동형 모의고사 시즌 1
                                     </a>
                                     <div class="thumb-item-sub-text">전한길</div>
@@ -286,51 +278,25 @@
                                         <span class="discount">10%</span>
                                         <strong class="discount-price">9,000원</strong>
                                     </div>
-                                    <div class="category-badges"> 
+                                    <div class="category-badges">
                                         <span class="category-badge">동영상 강의</span><span class="category-badge">+2</span>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="thumb-grid-item">
-                            <div class="checks black">
-                                <input type="checkbox" id="ebookcheckbox-01" class="check" value="ebookcheckbox-01">
-                                <label for="ebookcheckbox-01" class="label-check"><span class="blind"> E-BOOK</span></label>
-                            </div>
-                            <a class="thumb-item" href="#">
-                                <div class="book-thumb-area  badge-special">
-                                    <div class="book-thumb">
-                                        <img src="../assest/images/img-book-dummy-02.jpg" alt="">
-                                    </div>
-                                </div>
-                                <div class="thumb-item-text-area">
-                                    <h3 class="thumb-item-title">
-                                        2024 전한길 한국사 4.0 실전동형 모의고사 시즌 1
-                                    </h3>
-                                    <div class="thumb-item-sub-text">전한길</div>
-                                    <div class="goods-price">
-                                        <span class="discount">10%</span>
-                                        <strong class="discount-price">9,000원</strong>
-                                    </div>
-                                    <div class="category-badges"> 
-                                        <span class="category-badge">동영상 강의</span><span class="category-badge">+2</span>
-                                    </div>
-                                </div>
-                            </a>
                         </div>
                         <div class="thumb-grid-item">
                             <div class="checks black">
                                 <input type="checkbox" id="ebookcheckbox-02" class="check" value="ebookcheckbox-02">
-                                <label for="ebookcheckbox-02" class="label-check"><span class="blind"> E-BOOK</span></label>
+                                <label for="ebookcheckbox-02" class="label-check"><span class="blind"> e-Book</span></label>
                             </div>
                             <div class="thumb-item">
-                                <a  href="#" class="book-thumb-area  badge-special">
+                                <a href="#" class="book-thumb-area  badge-special">
                                     <div class="book-thumb">
-                                        <img src="../assest/images/img-book-dummy-02.jpg" alt="">
+                                        <img src="../assest/images/img-book-dummy-04.png" alt="">
                                     </div>
                                 </a>
                                 <div class="thumb-item-text-area">
-                                    <a  href="#" class="thumb-item-title">
+                                    <a href="#" class="thumb-item-title">
                                         2024 전한길 한국사 4.0 실전동형 모의고사 시즌 1
                                     </a>
                                     <div class="thumb-item-sub-text">전한길</div>
@@ -338,77 +304,25 @@
                                         <span class="discount">10%</span>
                                         <strong class="discount-price">9,000원</strong>
                                     </div>
-                                    <div class="category-badges"> 
+                                    <div class="category-badges">
                                         <span class="category-badge">동영상 강의</span><span class="category-badge">+2</span>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="thumb-grid-item">
-                            <div class="checks black">
-                                <input type="checkbox" id="ebookcheckbox-03" class="check" value="ebookcheckbox-03">
-                                <label for="ebookcheckbox-03" class="label-check"><span class="blind"> E-BOOK</span></label>
-                            </div>
-                            <div class="thumb-item">
-                                <a class="book-thumb-area badge-special" href="#">
-                                    <div class="book-thumb">
-                                        <img src="../assest/images/img-book-dummy-03.png" alt="">
-                                    </div>
-                                </a>
-                                <div class="thumb-item-text-area">
-                                    <a class="thumb-item-title" href="#">
-                                        2024 전한길 한국사 4.0 실전동형 모의고사 시즌 1
-                                    </a>
-                                    <div class="thumb-item-sub-text">전한길</div>
-                                    <div class="goods-price">
-                                        <span class="discount">10%</span>
-                                        <strong class="discount-price">9,000원</strong>
-                                    </div>
-                                    <div class="category-badges"> 
-                                        <span class="category-badge">동영상 강의</span><span class="category-badge">+2</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="thumb-grid-item">
-                            <div class="checks black">
-                                <input type="checkbox" id="ebookcheckbox-01" class="check" value="ebookcheckbox-01">
-                                <label for="ebookcheckbox-01" class="label-check"><span class="blind"> E-BOOK</span></label>
-                            </div>
-                            <a class="thumb-item" href="#">
-                                <div class="book-thumb-area  badge-special">
-                                    <div class="book-thumb">
-                                        <img src="../assest/images/img-book-dummy-02.jpg" alt="">
-                                    </div>
-                                </div>
-                                <div class="thumb-item-text-area">
-                                    <h3 class="thumb-item-title">
-                                        2024 전한길 한국사 4.0 실전동형 모의고사 시즌 1
-                                    </h3>
-                                    <div class="thumb-item-sub-text">전한길</div>
-                                    <div class="goods-price">
-                                        <span class="discount">10%</span>
-                                        <strong class="discount-price">9,000원</strong>
-                                    </div>
-                                    <div class="category-badges"> 
-                                        <span class="category-badge">동영상 강의</span><span class="category-badge">+2</span>
-                                    </div>
-                                </div>
-                            </a>
                         </div>
                         <div class="thumb-grid-item">
                             <div class="checks black">
                                 <input type="checkbox" id="ebookcheckbox-02" class="check" value="ebookcheckbox-02">
-                                <label for="ebookcheckbox-02" class="label-check"><span class="blind"> E-BOOK</span></label>
+                                <label for="ebookcheckbox-02" class="label-check"><span class="blind"> e-Book</span></label>
                             </div>
                             <div class="thumb-item">
-                                <a  href="#" class="book-thumb-area  badge-special">
+                                <a href="#" class="book-thumb-area  badge-special">
                                     <div class="book-thumb">
-                                        <img src="../assest/images/img-book-dummy-02.jpg" alt="">
+                                        <img src="../assest/images/img-book-dummy-04.png" alt="">
                                     </div>
                                 </a>
                                 <div class="thumb-item-text-area">
-                                    <a  href="#" class="thumb-item-title">
+                                    <a href="#" class="thumb-item-title">
                                         2024 전한길 한국사 4.0 실전동형 모의고사 시즌 1
                                     </a>
                                     <div class="thumb-item-sub-text">전한길</div>
@@ -416,77 +330,25 @@
                                         <span class="discount">10%</span>
                                         <strong class="discount-price">9,000원</strong>
                                     </div>
-                                    <div class="category-badges"> 
+                                    <div class="category-badges">
                                         <span class="category-badge">동영상 강의</span><span class="category-badge">+2</span>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="thumb-grid-item">
-                            <div class="checks black">
-                                <input type="checkbox" id="ebookcheckbox-03" class="check" value="ebookcheckbox-03">
-                                <label for="ebookcheckbox-03" class="label-check"><span class="blind"> E-BOOK</span></label>
-                            </div>
-                            <div class="thumb-item">
-                                <a class="book-thumb-area badge-special" href="#">
-                                    <div class="book-thumb">
-                                        <img src="../assest/images/img-book-dummy-03.png" alt="">
-                                    </div>
-                                </a>
-                                <div class="thumb-item-text-area">
-                                    <a class="thumb-item-title" href="#">
-                                        2024 전한길 한국사 4.0 실전동형 모의고사 시즌 1
-                                    </a>
-                                    <div class="thumb-item-sub-text">전한길</div>
-                                    <div class="goods-price">
-                                        <span class="discount">10%</span>
-                                        <strong class="discount-price">9,000원</strong>
-                                    </div>
-                                    <div class="category-badges"> 
-                                        <span class="category-badge">동영상 강의</span><span class="category-badge">+2</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="thumb-grid-item">
-                            <div class="checks black">
-                                <input type="checkbox" id="ebookcheckbox-01" class="check" value="ebookcheckbox-01">
-                                <label for="ebookcheckbox-01" class="label-check"><span class="blind"> E-BOOK</span></label>
-                            </div>
-                            <a class="thumb-item" href="#">
-                                <div class="book-thumb-area  badge-special">
-                                    <div class="book-thumb">
-                                        <img src="../assest/images/img-book-dummy-02.jpg" alt="">
-                                    </div>
-                                </div>
-                                <div class="thumb-item-text-area">
-                                    <h3 class="thumb-item-title">
-                                        2024 전한길 한국사 4.0 실전동형 모의고사 시즌 1
-                                    </h3>
-                                    <div class="thumb-item-sub-text">전한길</div>
-                                    <div class="goods-price">
-                                        <span class="discount">10%</span>
-                                        <strong class="discount-price">9,000원</strong>
-                                    </div>
-                                    <div class="category-badges"> 
-                                        <span class="category-badge">동영상 강의</span><span class="category-badge">+2</span>
-                                    </div>
-                                </div>
-                            </a>
                         </div>
                         <div class="thumb-grid-item">
                             <div class="checks black">
                                 <input type="checkbox" id="ebookcheckbox-02" class="check" value="ebookcheckbox-02">
-                                <label for="ebookcheckbox-02" class="label-check"><span class="blind"> E-BOOK</span></label>
+                                <label for="ebookcheckbox-02" class="label-check"><span class="blind"> e-Book</span></label>
                             </div>
                             <div class="thumb-item">
-                                <a  href="#" class="book-thumb-area  badge-special">
+                                <a href="#" class="book-thumb-area  badge-special">
                                     <div class="book-thumb">
-                                        <img src="../assest/images/img-book-dummy-02.jpg" alt="">
+                                        <img src="../assest/images/img-book-dummy-04.png" alt="">
                                     </div>
                                 </a>
                                 <div class="thumb-item-text-area">
-                                    <a  href="#" class="thumb-item-title">
+                                    <a href="#" class="thumb-item-title">
                                         2024 전한길 한국사 4.0 실전동형 모의고사 시즌 1
                                     </a>
                                     <div class="thumb-item-sub-text">전한길</div>
@@ -494,77 +356,25 @@
                                         <span class="discount">10%</span>
                                         <strong class="discount-price">9,000원</strong>
                                     </div>
-                                    <div class="category-badges"> 
+                                    <div class="category-badges">
                                         <span class="category-badge">동영상 강의</span><span class="category-badge">+2</span>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="thumb-grid-item">
-                            <div class="checks black">
-                                <input type="checkbox" id="ebookcheckbox-03" class="check" value="ebookcheckbox-03">
-                                <label for="ebookcheckbox-03" class="label-check"><span class="blind"> E-BOOK</span></label>
-                            </div>
-                            <div class="thumb-item">
-                                <a class="book-thumb-area badge-special" href="#">
-                                    <div class="book-thumb">
-                                        <img src="../assest/images/img-book-dummy-03.png" alt="">
-                                    </div>
-                                </a>
-                                <div class="thumb-item-text-area">
-                                    <a class="thumb-item-title" href="#">
-                                        2024 전한길 한국사 4.0 실전동형 모의고사 시즌 1
-                                    </a>
-                                    <div class="thumb-item-sub-text">전한길</div>
-                                    <div class="goods-price">
-                                        <span class="discount">10%</span>
-                                        <strong class="discount-price">9,000원</strong>
-                                    </div>
-                                    <div class="category-badges"> 
-                                        <span class="category-badge">동영상 강의</span><span class="category-badge">+2</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="thumb-grid-item">
-                            <div class="checks black">
-                                <input type="checkbox" id="ebookcheckbox-01" class="check" value="ebookcheckbox-01">
-                                <label for="ebookcheckbox-01" class="label-check"><span class="blind"> E-BOOK</span></label>
-                            </div>
-                            <a class="thumb-item" href="#">
-                                <div class="book-thumb-area  badge-special">
-                                    <div class="book-thumb">
-                                        <img src="../assest/images/img-book-dummy-02.jpg" alt="">
-                                    </div>
-                                </div>
-                                <div class="thumb-item-text-area">
-                                    <h3 class="thumb-item-title">
-                                        2024 전한길 한국사 4.0 실전동형 모의고사 시즌 1
-                                    </h3>
-                                    <div class="thumb-item-sub-text">전한길</div>
-                                    <div class="goods-price">
-                                        <span class="discount">10%</span>
-                                        <strong class="discount-price">9,000원</strong>
-                                    </div>
-                                    <div class="category-badges"> 
-                                        <span class="category-badge">동영상 강의</span><span class="category-badge">+2</span>
-                                    </div>
-                                </div>
-                            </a>
                         </div>
                         <div class="thumb-grid-item">
                             <div class="checks black">
                                 <input type="checkbox" id="ebookcheckbox-02" class="check" value="ebookcheckbox-02">
-                                <label for="ebookcheckbox-02" class="label-check"><span class="blind"> E-BOOK</span></label>
+                                <label for="ebookcheckbox-02" class="label-check"><span class="blind"> e-Book</span></label>
                             </div>
                             <div class="thumb-item">
-                                <a  href="#" class="book-thumb-area  badge-special">
+                                <a href="#" class="book-thumb-area  badge-special">
                                     <div class="book-thumb">
-                                        <img src="../assest/images/img-book-dummy-02.jpg" alt="">
+                                        <img src="../assest/images/img-book-dummy-04.png" alt="">
                                     </div>
                                 </a>
                                 <div class="thumb-item-text-area">
-                                    <a  href="#" class="thumb-item-title">
+                                    <a href="#" class="thumb-item-title">
                                         2024 전한길 한국사 4.0 실전동형 모의고사 시즌 1
                                     </a>
                                     <div class="thumb-item-sub-text">전한길</div>
@@ -572,111 +382,7 @@
                                         <span class="discount">10%</span>
                                         <strong class="discount-price">9,000원</strong>
                                     </div>
-                                    <div class="category-badges"> 
-                                        <span class="category-badge">동영상 강의</span><span class="category-badge">+2</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="thumb-grid-item">
-                            <div class="checks black">
-                                <input type="checkbox" id="ebookcheckbox-03" class="check" value="ebookcheckbox-03">
-                                <label for="ebookcheckbox-03" class="label-check"><span class="blind"> E-BOOK</span></label>
-                            </div>
-                            <div class="thumb-item">
-                                <a class="book-thumb-area badge-special" href="#">
-                                    <div class="book-thumb">
-                                        <img src="../assest/images/img-book-dummy-03.png" alt="">
-                                    </div>
-                                </a>
-                                <div class="thumb-item-text-area">
-                                    <a class="thumb-item-title" href="#">
-                                        2024 전한길 한국사 4.0 실전동형 모의고사 시즌 1
-                                    </a>
-                                    <div class="thumb-item-sub-text">전한길</div>
-                                    <div class="goods-price">
-                                        <span class="discount">10%</span>
-                                        <strong class="discount-price">9,000원</strong>
-                                    </div>
-                                    <div class="category-badges"> 
-                                        <span class="category-badge">동영상 강의</span><span class="category-badge">+2</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="thumb-grid-item">
-                            <div class="checks black">
-                                <input type="checkbox" id="ebookcheckbox-01" class="check" value="ebookcheckbox-01">
-                                <label for="ebookcheckbox-01" class="label-check"><span class="blind"> E-BOOK</span></label>
-                            </div>
-                            <a class="thumb-item" href="#">
-                                <div class="book-thumb-area  badge-special">
-                                    <div class="book-thumb">
-                                        <img src="../assest/images/img-book-dummy-02.jpg" alt="">
-                                    </div>
-                                </div>
-                                <div class="thumb-item-text-area">
-                                    <h3 class="thumb-item-title">
-                                        2024 전한길 한국사 4.0 실전동형 모의고사 시즌 1
-                                    </h3>
-                                    <div class="thumb-item-sub-text">전한길</div>
-                                    <div class="goods-price">
-                                        <span class="discount">10%</span>
-                                        <strong class="discount-price">9,000원</strong>
-                                    </div>
-                                    <div class="category-badges"> 
-                                        <span class="category-badge">동영상 강의</span><span class="category-badge">+2</span>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="thumb-grid-item">
-                            <div class="checks black">
-                                <input type="checkbox" id="ebookcheckbox-02" class="check" value="ebookcheckbox-02">
-                                <label for="ebookcheckbox-02" class="label-check"><span class="blind"> E-BOOK</span></label>
-                            </div>
-                            <div class="thumb-item">
-                                <a  href="#" class="book-thumb-area  badge-special">
-                                    <div class="book-thumb">
-                                        <img src="../assest/images/img-book-dummy-02.jpg" alt="">
-                                    </div>
-                                </a>
-                                <div class="thumb-item-text-area">
-                                    <a  href="#" class="thumb-item-title">
-                                        2024 전한길 한국사 4.0 실전동형 모의고사 시즌 1
-                                    </a>
-                                    <div class="thumb-item-sub-text">전한길</div>
-                                    <div class="goods-price">
-                                        <span class="discount">10%</span>
-                                        <strong class="discount-price">9,000원</strong>
-                                    </div>
-                                    <div class="category-badges"> 
-                                        <span class="category-badge">동영상 강의</span><span class="category-badge">+2</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="thumb-grid-item">
-                            <div class="checks black">
-                                <input type="checkbox" id="ebookcheckbox-03" class="check" value="ebookcheckbox-03">
-                                <label for="ebookcheckbox-03" class="label-check"><span class="blind"> E-BOOK</span></label>
-                            </div>
-                            <div class="thumb-item">
-                                <a class="book-thumb-area badge-special" href="#">
-                                    <div class="book-thumb">
-                                        <img src="../assest/images/img-book-dummy-03.png" alt="">
-                                    </div>
-                                </a>
-                                <div class="thumb-item-text-area">
-                                    <a class="thumb-item-title" href="#">
-                                        2024 전한길 한국사 4.0 실전동형 모의고사 시즌 1
-                                    </a>
-                                    <div class="thumb-item-sub-text">전한길</div>
-                                    <div class="goods-price">
-                                        <span class="discount">10%</span>
-                                        <strong class="discount-price">9,000원</strong>
-                                    </div>
-                                    <div class="category-badges"> 
+                                    <div class="category-badges">
                                         <span class="category-badge">동영상 강의</span><span class="category-badge">+2</span>
                                     </div>
                                 </div>
@@ -701,7 +407,8 @@
                         </div>
                     </div>
                 </section>
-             </div>
+                <!-- 검색 결과 끝-->
+            </div>
             <!--카드 팝업 시작-->
             <section class="bottom-sheet-popup handler " id="bottomSheet">
                 <div class="handler-area" id="bottomSheetHandler">
@@ -807,6 +514,96 @@
                 </div>
             </aside>
             <!--최근 검색어 끝-->
+            <!--필터 시작-->
+            <article class="mo-layer-group" id="layerFilter">
+                <h3 class="blind">필터</h3>
+                <div class="mo-layer-container scroll">
+                    <header class="mo-header">
+                        <h3 class="mo-header-title">필터</h3>
+                        <div class="mo-header-right">
+                            <button type="button" class="btn btn-transparent" id="closelayerFilter">
+                                <i class="icon-close-gray">
+                                    <span class="blind">닫기</span></i>
+                            </button>
+                        </div>
+                    </header>
+                    <div class="mo-layer-body scroll">
+                        <div class="filter-group">
+                            <header class="filter-header">
+                                <h3 class="filter-title">정렬 기준</h3>
+                            </header>
+                            <ul class="filter-lists">
+                                <li class="filter-item">
+                                    <div class="checks black check-block">
+                                        <input type="radio" id="filter-01" class="check" name="filter" value="인기도순" checked>
+                                        <label for="filter-01" class="label-check">
+                                            <span>인기도순</span>
+                                        </label>
+                                    </div>
+                                </li>
+                                <li class="filter-item">
+                                    <div class="checks black check-block">
+                                        <input type="radio" id="filter-02" class="check" name="filter" value="판매량순">
+                                        <label for="filter-02" class="label-check">
+                                            <span>판매량순</span>
+                                        </label>
+                                    </div>
+                                </li>
+                                <li class="filter-item">
+                                    <div class="checks black check-block">
+                                        <input type="radio" id="filter-03" class="check" name="filter" value="최신 출간순">
+                                        <label for="filter-03" class="label-check">
+                                            <span>최신 출간순</span>
+                                        </label>
+                                    </div>
+                                </li>
+                                <li class="filter-item">
+                                    <div class="checks black check-block">
+                                        <input type="radio" id="filter-04" class="check" name="filter" value="낮은 가격순">
+                                        <label for="filter-04" class="label-check">
+                                            <span>낮은 가격순</span>
+                                        </label>
+                                    </div>
+                                </li>
+                                <li class="filter-item">
+                                    <div class="checks black check-block">
+                                        <input type="radio" id="filter-05" class="check" name="filter" value="리뷰순">
+                                        <label for="filter-05" class="label-check">
+                                            <span>리뷰순</span>
+                                        </label>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="filter-group">
+                            <header class="filter-header">
+                                <h3 class="filter-title">분야 내 검색</h3>
+                            </header>
+                            <div class="small-search-box">
+                                <div class="input-box">
+                                    <input type="text" class="" placeholder="분야 내 검색" />
+                                    <button type="submit" class="btn btn-transparent"><i class="icon-search"></i></button>
+                                </div>
+                                <ul class="search-list">
+                                    <li class="search-list-item">
+                                        <a href="#" class="text">모의고사</a>
+                                        <button type="button" class="btn-delete">
+                                            <i class="icon-close-16"><span class="blind">삭제</span></i>
+                                        </button>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mo-layer-footer">
+                        <div class="btn-set">
+                            <button type="reset" class="btn btn-secondary btn-large-02 btn-left">초기화</button>
+                            <button type="submit" class="btn btn-primary btn-full btn-large-02">적용하기</button>
+                        </div>
+                    </div>
+                </div>
+            </article>
+            <!--필터 끝-->
         </div>
     </main>
     <script src="../assest/js/jquery-2.2.4.min.js"></script>
@@ -855,6 +652,7 @@
                         $(this).closest('.btn-multi-dropdown').find('.hide').show();
                     }
                 }
+
                 // 드롭다운 제목 배경색 변경
                 if ($multiSel.children().length > 0) {
                     $dropdown.find('dt .btn-dropdown').addClass('on');
@@ -879,6 +677,26 @@
                 }, 500);
 
             }).scroll();
+            
+            //필터 레이어
+            $('#btnFilter').click(function () {
+                $('#layerFilter').addClass('on');
+                $('body').addClass('scroll-lock');
+            });
+
+            $('#closelayerFilter').click(function () {
+                $('#layerFilter').removeClass('on');
+                $('body').removeClass('scroll-lock');
+            });
+
+            $('.mo-layer-container.scroll').scroll(function () {
+                if ($(this).scrollTop() > 0) {
+                    $('body').addClass('scroll-lock');
+                } else {
+                    $('body').removeClass('scroll-lock');
+                }
+            });
+
         });
 
     </script>

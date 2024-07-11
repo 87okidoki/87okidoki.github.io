@@ -240,7 +240,7 @@ $(function () {
 
         // 푸터에 패딩 값을 적용
         $(".footer-section").css("padding-bottom", paddingValue + 80 + "px");
-          $("#btnTopScroll").css("bottom", paddingValue + 16 + "px");
+          $("#btnTopScroll").css("bottom", paddingValue + 40 + "px");
     }
 
     // 페이지 로드 시 및 윈도우 리사이즈 시 패딩 값을 조절

@@ -55,7 +55,7 @@
     /* Modern Browsers */
     url("../fonts/Pretendard-Boldr.ttf") format("truetype"),
     /* Safari, Android, iOS */
-     url("../fonts/Pretendard-Bold.svg#NotoSansKR") format("svg");
+     url("../fonts/Pretendard-Bold.svg#NotoSansKR") format("svg"));
 }
 
 @font-face {
@@ -73,7 +73,7 @@
     /* Modern Browsers */
     url("../fonts/Pretendard-SemiBoldr.ttf") format("truetype"),
     /* Safari, Android, iOS */
-     url("../fonts/Pretendard-SemiBold.svg#NotoSansKR") format("svg");
+     url("../fonts/Pretendard-SemiBold.svg#NotoSansKR") format("svg"));
 }
 
 @font-face {
@@ -91,7 +91,7 @@
     /* Modern Browsers */
     url("../fonts/Pretendard-Regular.ttf") format("truetype"),
     /* Safari, Android, iOS */
-     url("../fonts/Pretendard-Regular.svg#NotoSansKR") format("svg");
+     url("../fonts/Pretendard-Regular.svg#NotoSansKR") format("svg"));
 }
 
 @font-face {
@@ -109,7 +109,7 @@
     /* Modern Browsers */
     url("../fonts/Pretendard-Light.ttf") format("truetype"),
     /* Safari, Android, iOS */
-     url("../fonts/Pretendard-Light.svg#NotoSansKR") format("svg");
+     url("../fonts/Pretendard-Light.svg#NotoSansKR") format("svg"));
 }
 
 /* reset */
@@ -1155,11 +1155,18 @@ img {
     width: 24px;
     height: 24px;
 }
-.icon-filter{
+.icon-filter {
     display: inline-block;
     width: 24px;
     height: 24px;
-    background: url(../images/ic-filter.svg) no-repeat center center / contain;
+    background: url("../images/ic-filter.svg") no-repeat center center / contain;
+}
+.icon-calendar {
+    display: inline-block;
+    background: url("../images/ic-calendar.svg") no-repeat center center /contain;
+    width: 16px;
+    height: 16px;
+    flex-shrink: 0;
 }
 .logo-apple {
     display: inline-block;
@@ -1334,12 +1341,12 @@ img {
     line-height: 14.286px;
     color: var(--white-color);
 }
-@media screen and (min-width:1366px) {
+/* @media screen and (min-width:1024px) {
     .btn-top-scroll-area {
         right: 50%;
-        transform: translateX(655px);
+        transform: translateX(471px);
     }
-}
+} */
 
 /*btn-area*/
 .btn {
@@ -1357,6 +1364,7 @@ img {
 
 .btn-keywords {
     display: flex;
+    flex-wrap: wrap;
     gap: 8px;
 }
 
@@ -1372,6 +1380,7 @@ img {
 
 .btn-keyword .text {
     padding-right: 28px;
+    white-space: pre;
 }
 
 .btn-keyword .btn-delete {
@@ -1770,7 +1779,7 @@ img {
     margin-left: 4px;
 }
 
-.form-control-line-btn{
+.form-control-line-btn {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -1784,18 +1793,18 @@ img {
     padding: 20px 0;
     text-align: left;
 }
-.form-control-line-btn .text{
+.form-control-line-btn .text {
     color: var(--blue-grey-400);
     font-size: 1.4rem;
 }
-.form-control-line-btn .text.on{
+.form-control-line-btn .text.on {
     color: var(--black-color);
     font-family: "Pretendard SemiBold";
 }
-.icon-arrow{
+.icon-arrow {
     transform: rotate(180deg);
     display: inline-block;
-    background: url(../images/ic-accordion-arrow.svg) no-repeat center center / contain;
+    background: url("../images/ic-accordion-arrow.svg") no-repeat center center / contain;
     width: 20px;
     height: 20px;
 }
@@ -1924,55 +1933,6 @@ img {
     border-color: #e2e2e2;
     color: #3d3d3d;
 }
-/*
-.form-textarea {
-    font-size: 16px;
-    color: #3d3d3d;
-    padding: 24px 30px;
-    background-color: #fff;
-    border-radius: 6px;
-    border: solid 1px #cbcbcb;
-    width: 100%;
-    overflow-x: hidden;
-    overflow-y: auto;
-    scroll-behavior: smooth;
-    scrollbar-color: transparent rgba(171, 171, 171, 0.6);
-    word-break: break-all;
-    word-wrap: break-word;
-}*/
-/* 
-.form-textarea.small {
-    padding: 14px 18px;
-}
-
-.form-textarea:-moz-read-only {
-    color: rgba(61, 61, 61, 0.5);
-    background-color: #f6f6f6;
-}
-
-.form-textarea:read-only {
-    color: rgba(61, 61, 61, 0.5);
-    background-color: #f6f6f6;
-} */
-
-/* .form-box {
-    padding: 24px 30px;
-    background-color: #fff;
-    border-radius: 6px;
-    border: solid 1px #cbcbcb;
-    background-color: #fff;
-    overflow-x: hidden;
-    overflow-y: auto;
-    scroll-behavior: smooth;
-    scrollbar-color: transparent rgba(171, 171, 171, 0.6);
-}
-
-.form-box textarea {
-    font-size: 18px;
-    color: #7c7c7c;
-    word-break: break-all;
-    word-wrap: break-word;
-} */
 
 .form-textarea::-webkit-scrollbar {
     width: 6px;
@@ -1991,6 +1951,35 @@ img {
 .form-textarea::-webkit-scrollbar-thumb {
     border-radius: 5px;
 }
+.form-select {
+    position: relative;
+    background: #fff url("../images/ic-arrow-indicator-24.svg") no-repeat right 16px/ contain;
+    background-size: 10px;
+}
+
+.form-select::after {
+    content: '';
+    position: absolute;
+    right: 16px;
+    top: 8px;
+    display: block;
+    background: url("../images/ic-arrow-bottom.svg") no-repeat center center/ contain;
+    width: 16px;
+    height: 16px;
+}
+
+.form-select .select {
+    height: 32px;
+    padding: 8px 36px 8px 16px;
+    transition: border-color 0.1s ease-in-out, box-shadow 0.1s ease-in-out;
+    border: 1px solid var(--border-primary);
+    border-radius: 8px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+/* picture-upload-group 사진올리기*/
 .picture-upload-group {
     display: flex;
     gap: 16px;
@@ -2169,7 +2158,9 @@ img {
 .checks input[type="checkbox"]+label::before {
     background: url("../images/ic-square-checkbox.svg") no-repeat center center / contain;
 }
-
+.checks input[type="checkbox"]:disabled+label::before {
+    background: url("../images/ic-square-checkbox-disabled.svg") no-repeat center center / contain;
+}
 .checks.primary input[type="checkbox"]:checked+label::before {
     background: url("../images/ic-square-checkbox-primary.svg") no-repeat center center / contain;
 }
@@ -2189,12 +2180,14 @@ img {
 .checks input[type="radio"]+label::before {
     background: url("../images/ic-radio.svg") no-repeat center center / contain;
 }
-
+.checks input[type="radio"]:disabled+label::before {
+    background: url("../images/ic-radio-disabled.svg") no-repeat center center / contain;
+}
 .checks.primary input[type="radio"]:checked+label::before {
     background: url("../images/ic-radio-primary.svg") no-repeat center center / contain;
 }
 
-.checks.black input[type="radio"]:checked+label::before {
+.checks.black input[type="radio"]:checked + label::before {
     background: url("../images/ic-radio-black.svg") no-repeat center center / contain;
 }
 
@@ -2214,6 +2207,10 @@ img {
     vertical-align: middle;
     cursor: pointer;
     padding-left: 24px;
+}
+
+.checks .label-check span > b {
+    font-family: "Pretendard SemiBold";
 }
 
 .checks.line input[type="checkbox"]+label::before {
@@ -2241,6 +2238,23 @@ img {
     vertical-align: middle;
     cursor: pointer;
     padding-left: 20px;
+}
+.check-block {
+    position: relative;
+}
+
+.check-block.checks input[type="checkbox"]+label::before,
+.check-block.checks input[type="radio"]+label::before {
+    right: 0;
+    left: auto;
+}
+
+.check-block.checks .label-check span {
+    padding-left: 0;
+}
+
+.check-block.checks .label-check {
+    display: block;
 }
 
 /* login-input */
@@ -3026,6 +3040,7 @@ img {
 }
 .goods-list-group .goods-info-box .badge-area {
     display: flex;
+    flex-wrap: wrap;
     gap: 8px;
     margin-bottom: 12px;
 }
@@ -3127,25 +3142,32 @@ img {
 .goods-list-group .mo-sub-text-box {
     display: none;
 }
+
+.goods-list-group .checks .label-check span {
+    padding-left: 28px;
+}
 .category-list-group {
     padding-top: 40px;
 }
-.category-list-group::after{
+.category-list-group::after {
     display: none;
 }
-.category-list-group .goods-list-item{
+.category-list-group .goods-list-item {
     padding-bottom: 40px;
 }
-.category-list-group .goods-list-item:last-child{
+.category-list-group .goods-list-item:last-child {
     padding-bottom: 0;
 }
+
 .category-list-group .goods-info-box .badge-area,
 .category-list-group .goods-info-box .goods-title,
-.category-list-group  .goods-info-text{
+.category-list-group .goods-info-text {
     margin-bottom: 8px;
-
 }
-.category-list-group .category-badges{
+.category-list-group .goods-info-box{
+ margin-right: 0;
+}
+.category-list-group .category-badges {
     margin-top: 8px;
 }
 @media screen and (max-width:767px) {
@@ -3264,8 +3286,13 @@ img {
     .goods-list-group.purchase-check .mo-sub-text-box {
         margin-top: 16px;
     }
-    .goods-list-group .goods-list .goods-list-item .btns-grid-area+.mo-sub-text-box {
+    .goods-list-group .goods-list .goods-list-item .mo-sub-text-box + .btns-grid-area {
         margin-top: 8px;
+    }
+    .category-list-group .goods-list-item .goods-list-left .badge-area {
+        position: relative;
+        top: 0;
+        left: 0;
     }
 }
 
@@ -3369,12 +3396,12 @@ img {
     line-height: 40px;
     font-size: 1.4rem;
 }
-.pagination a:first-child {
+/* .pagination a:first-child {
     margin-right: 38px;
 }
 .pagination a:last-child {
     margin-left: 38px;
-}
+} */
 
 .pagination a.active {
     color: var(--white-color);
@@ -3388,7 +3415,7 @@ img {
     transform: rotate(180deg);
     width: 24px;
     height: 24px;
-    margin-right: 12px;
+    margin-right: 4px;
 }
 .pagination a.previous.disabled {
     display: inline-block;
@@ -3396,14 +3423,19 @@ img {
 }
 .pagination a.next {
     background: url("../images/ic-arrow-indicator-black-24.svg") no-repeat center center/ contain;
-    background-color: var(--white-color);
     width: 24px;
     height: 24px;
-    margin-left: 12px;
+    margin-left: 4px;
 }
 .pagination a.next.disabled {
     display: inline-block;
     background: url("../images/ic-arrow-indicator-gray-24.svg") no-repeat center center/ contain;
+}
+
+.pagination.small a,
+.pagination.small span {
+    width: 32px;
+    line-height: 32px;
 }
 
 /* btns-block-group*/
@@ -3726,15 +3758,17 @@ img {
     margin-top: 24px;
 }
 
+
+/* btns-filter-group 필터  */
 .btns-filter-group {
     position: relative;
     display: inline-block;
-    padding: 8px 8px;
+    padding: 8px;
     border-radius: 8px;
     background: var(--blue-grey-50);
     overflow: hidden;
 }
-.btns-filter-group .swiper-slide{
+.btns-filter-group .swiper-slide {
     width: auto;
 }
 .btns-filter-group .btn-filter {
@@ -3749,7 +3783,7 @@ img {
 }
 
 .btns-filter-group .btn-filter:last-child {
-    margin-right: 0px;
+    margin-right: 0;
 }
 .btns-filter-group .btn-filter.on {
     border-radius: 8px;
@@ -3759,15 +3793,17 @@ img {
 .btns-filter-group .btn-filter:last-child {
     margin-right: 0;
 }
-.btns-filter-group .btn-filter.on > .btn-date-range{
+.btns-filter-group .btn-filter.on > .btn-date-range {
     color: var(--white-color);
 }
 @media screen and (max-width:767px) {
-    .btns-filter-group{
+    .btns-filter-group {
         width: 100%;
-    } 
+    }
 }
-.btn-date-range{
+
+/* btn-date-range 기간 선택 */
+.btn-date-range {
     position: relative;
     background-color: transparent;
     font-family: "Pretendard Regular";
@@ -3779,71 +3815,68 @@ img {
     padding: 8px 28px 8px 16px;
     caret-color: transparent;
 }
-.btn-date-range-mo-area{
+.btn-date-range-mo-area {
     margin-top: 8px;
     height: 48px;
     border-radius: 8px;
     background-color: var(--blue-grey-50);
-     padding: 8px;
+    padding: 8px;
 }
-.btn-date-range-mo-inner{
+.btn-date-range-mo-inner {
     display: flex;
     align-items: center;
     background-color: var(--white-color);
     width: 100%;
-    border: 0px;
+    border: 0;
     height: 32px;
     padding: 8px 12px 8px 16px;
     border-radius: 8px;
 }
-.btn-date-range-mo{
+.btn-date-range-mo {
     font-family: "Pretendard Regular";
     text-align: left;
     caret-color: transparent;
     font-size: 1.4rem;
     line-height: 16px;
-    border: 0px;
+    border: 0;
     width: 100%;
 }
-.btn-date-range-mo::placeholder{
+.btn-date-range-mo::placeholder {
     color: var(--blue-grey-400);
     font-size: 1.4rem;
     line-height: 16px;
 }
-.icon-calendar{
-    display: inline-block;
-    background: url(../images/ic-calendar.svg) no-repeat center center /contain;
-    width: 16px;
-    height: 16px;
-    flex-shrink: 0;
-}
-.daterangepicker{
+
+
+/* daterangepicker 데이트 피커  */
+.daterangepicker {
     border-radius: 8px;
-    box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.16);
-    border: 0px;
+    box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.16);
+    border: 0;
+    z-index: 1000;
 }
-.daterangepicker .calendar-table table thead tr:first-child th{
+.daterangepicker .calendar-table table thead tr:first-child th {
     padding-bottom: 16px;
     height: 48px;
 }
 .daterangepicker .calendar-table table thead tr th {
     font-family: "Pretendard SemiBold";
 }
-.daterangepicker .calendar-table table thead tr th:hover{
+.daterangepicker .calendar-table table thead tr th:hover {
     background-color: transparent;
 }
 .daterangepicker.opensright:after,
-.daterangepicker.opensright:before{
+.daterangepicker.opensright:before {
     display: none;
 }
-.daterangepicker .drp-calendar{
+.daterangepicker .drp-calendar {
     max-width: 305px;
 }
 .daterangepicker .drp-calendar.left {
     padding: 24px 0 24px 16px;
 }
-.daterangepicker .drp-calendar.right{
-    padding: 24px 24px;
+.daterangepicker .drp-calendar.right {
+    padding: 24px;
 }
 .daterangepicker td.off,
 .daterangepicker td.off.end-date,
@@ -3871,47 +3904,47 @@ img {
 .daterangepicker td.active:hover {
     background-color: var(--black-color);
 }
-.daterangepicker .drp-buttons{
-    border-top:0px;
-    padding: 0px 24px 24px;
+.daterangepicker .drp-buttons {
+    border-top: 0;
+    padding: 0 24px 24px;
 }
-.daterangepicker .drp-buttons .btn{
+.daterangepicker .drp-buttons .btn {
     font-family: "Pretendard Regular";
     width: 127px;
     padding: 12px 24px;
     font-size: 1.6rem;
     line-height: 24px;
     border-radius: 8px;
-    border: 0px;
+    border: 0;
 }
-.daterangepicker .drp-selected{
+.daterangepicker .drp-selected {
     font-size: 1.4rem;
 }
 .cancelBtn.btn.btn-sm.btn-default {
     color: var(--blue-grey-600);
     background-color: var(--blue-grey-100);
-    margin-left: 0px;
+    margin-left: 0;
 }
-.applyBtn.btn.btn-sm.btn-primary{
+.applyBtn.btn.btn-sm.btn-primary {
     color: var(--white-color);
     background-color: var(--black-color);
 }
 
-.daterangepicker .calendar-table .next span{
+.daterangepicker .calendar-table .next span {
     display: inline-block;
-    background: url(../images/ic-calendar-indicator.svg) no-repeat center center /contain;
+    background: url("../images/ic-calendar-indicator.svg") no-repeat center center /contain;
     width: 20px;
     height: 20px;
     color: #fff;
     transform: rotate(0deg);
     border: solid transparent;
-    border-width:  0;
+    border-width: 0;
     border-radius: 0;
-    padding: 0px;
+    padding: 0;
 }
 .daterangepicker .calendar-table .prev span {
     display: inline-block;
-    background: url(../images/ic-calendar-indicator.svg) no-repeat center center /contain;
+    background: url("../images/ic-calendar-indicator.svg") no-repeat center center /contain;
     width: 20px;
     height: 20px;
     color: #fff;
@@ -3919,37 +3952,37 @@ img {
     border: solid transparent;
     border-width: 0;
     border-radius: 0;
-    padding: 0px;
+    padding: 0;
 }
 
 @media screen and (max-width:767px) {
-    .daterangepicker{
+    .daterangepicker {
         top: 100px !important;
         left: 50% !important;
         margin-left: -152px !important;
         width: 305px;
     }
-    .daterangepicker .drp-calendar.left{
-        padding: 24px 24px 0px;
-        border-radius: 8px 8px 0px 0px;
+    .daterangepicker .drp-calendar.left {
+        padding: 24px 24px 0;
+        border-radius: 8px 8px 0 0;
     }
-    .daterangepicker.show-calendar .drp-buttons{
+    .daterangepicker.show-calendar .drp-buttons {
         display: flex;
-        border-radius: 0px 0px 8px 8px;
+        border-radius: 0 0 8px 8px;
     }
-    .daterangepicker .ranges,
-    .daterangepicker .drp-selected{
+    .daterangepicker .drp-selected,
+    .daterangepicker .ranges {
         display: none;
     }
     .cancelBtn.btn.btn-sm.btn-default {
-        margin-left: 0px;
+        margin-left: 0;
     }
     .daterangepicker .drp-calendar.left,
     .daterangepicker .drp-calendar.right,
-    .daterangepicker.show-calendar .drp-buttons{
+    .daterangepicker.show-calendar .drp-buttons {
         background-color: var(--white-color);
     }
-    .daterangepicker.show-calendar::after{
+    .daterangepicker.show-calendar::after {
         content: '';
         display: block;
         position: fixed;
@@ -3959,8 +3992,8 @@ img {
         bottom: 0;
         z-index: -1;
         background-color: rgba(0, 0, 0, 0.5);
-        border-right: 0px solid transparent;
-        border-bottom: 0px solid transparent;
-        border-left: 0px solid transparent;
+        border-right: 0 solid transparent;
+        border-bottom: 0 solid transparent;
+        border-left: 0 solid transparent;
     }
 }
