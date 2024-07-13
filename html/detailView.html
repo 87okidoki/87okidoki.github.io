@@ -643,14 +643,180 @@
                     <!--출판사 서평 끝-->
                      <!--리뷰 시작-->
                     <section class="detail-content-section" id="tab-review">
-                        <div class="review">
-                            <strong>4.0</strong>
-                            <div class="grade-star-group">
-                                <div class="grade-star">
-                                    <div class="grade-star-on" style="width:80%;"></div>
+                        <div class="grade-star-box">
+                            <strong class="grade-num">4.0</strong>
+                            <div class="grade-star-area">
+                                <div class="grade-star-primary">
+                                    <div class="grade-star-primary-on" style="width:40%;"></div>
                                 </div>
                             </div>
-                            <p>1,234개 리뷰</p>
+                            <p class="review-num">1,234개 리뷰</p>
+                        </div>
+                        <div class="review-register-group">
+                            <form>
+                                <div class="review-register-btn">
+                                    <div class="btn-star-toggle-group">
+                                        <div class="btn-star-toggle">
+                                            <input type="radio" id="star-1" name="star">
+                                            <label for="star-1"><i class="icon-star"><span class="blind">별</span></i>5<span class="text">점</span></label>
+                                        </div>
+                                        <div class="btn-star-toggle">
+                                            <input type="radio" id="star-2" name="star">
+                                            <label for="star-2"><i class="icon-star"><span class="blind">별</span></i>4<span class="text">점</span></label>
+                                        </div>
+                                        <div class="btn-star-toggle">
+                                            <input type="radio" id="star-3" name="star">
+                                            <label for="star-3"><i class="icon-star"><span class="blind">별</span></i>3<span class="text">점</span></label>
+                                        </div>
+                                        <div class="btn-star-toggle">
+                                            <input type="radio" id="star-4" name="star">
+                                            <label for="star-4"><i class="icon-star"><span class="blind">별</span></i>2<span class="text">점</span></label>
+                                        </div>
+                                        <div class="btn-star-toggle">
+                                            <input type="radio" id="star-5" name="star">
+                                            <label for="star-5"><i class="icon-star"><span class="blind">별</span></i>1<span class="text">점</span></label>
+                                        </div>
+                                    </div>
+                                    <div class="btn-area">
+                                      <button type="submit" class="btn btn-medium btn-primary">리뷰 등록</button>
+                                    </div>
+                                </div>
+                                <div class="review-textarea">
+                                    <textarea class="scroll" maxlength="3000" placeholder="리뷰를 작성해 주세요."></textarea>
+                                    <div class="num"><span class="on">0</span>/3000</div>
+                                </div>
+                                <div class="review-btn-area">
+                                    <button type="submit" class="btn btn-large-02 btn-full btn-primary">리뷰 등록</button>
+                                  </div>
+                                <div class="review-guide-area">
+                                    도서 구매 후 리뷰 작성이 가능합니다.
+                                </div>
+                            </form>
+                        </div>
+                        <div class="review-list-group">
+                            <header class="review-list-header">
+                                <h3 class="review-list-title">리뷰 (1,234)</h3>
+                                <div class="review-select">
+                                    <select class="select">
+                                        <option>최신순</option>
+                                    </select>
+                                </div>
+                            </header>
+                            <div class="review-list-body">
+                                <div class="review-list-item">
+                                    <div class="user-info-box">
+                                        <div class="grade-star">
+                                            <div class="grade-star-on" style="width:20%;"><span class="blind">별점</span></div>
+                                        </div>
+                                        <div class="user-info">
+                                            <span class="info-text">아*디</span>
+                                            <span class="info-text">2022.04.19</span>
+                                        </div>
+                                    </div>
+                                    <div class="review-text">
+                                        <div class="text">
+                                            전한길 선생님의 작년 필기노트로 공부하다가                                  
+                                        </div>
+                                        <button type="button" class="btn-review-more">
+                                            <span class="icon-arrow-bottom"><span class="blind">더보기</span></span>
+                                         </button>
+                                    </div>
+                                </div>
+                                <div class="review-list-item">
+                                    <div class="user-info-box">
+                                        <div class="grade-star">
+                                            <div class="grade-star-on" style="width:40%;"><span class="blind">별점</span></div>
+                                        </div>
+                                        <div class="user-info">
+                                            <span class="info-text">아*디</span>
+                                            <span class="info-text">2022.04.19</span>
+                                        </div>
+                                    </div>
+                                    <div class="review-text">
+                                        <div class="text">
+                                            전한길 선생님의 작년 필기노트로 공부하다가 마지막에는 최신 필기노트로 보면 좋을 거 같아 24년도 필기노트 구매했어요. 조금씩 바뀐 부분이 있어서 사길 잘한 거 같아요. 가독성도 조금 더 좋아진 거 같기도 하고요. 만족스럽 조금씩 바뀐 부분이 있어서 사길 잘한 거 같아요. 가독성도 조금 더 좋아진 거 같기도 하고요. 만족스럽습니다. 조금씩 바뀐 부분이 있어서 사길 잘한 거 같아요. 가독성도 조금 더 좋아진 거 같기도 하고요. 조금씩 바뀐 부분이 있어서 사길 잘한 거 같아요.                                   
+                                        </div>
+                                        <button type="button" class="btn-review-more">
+                                            <span class="icon-arrow-bottom"><span class="blind">더보기</span></span>
+                                         </button>
+                                    </div>
+                                </div>
+                                <div class="review-list-item">
+                                    <div class="user-info-box">
+                                        <div class="grade-star">
+                                            <div class="grade-star-on" style="width:60%;"><span class="blind">별점</span></div>
+                                        </div>
+                                        <div class="user-info">
+                                            <span class="info-text">아*디</span>
+                                            <span class="info-text">2022.04.19</span>
+                                        </div>
+                                    </div>
+                                    <div class="review-text">
+                                        <div class="text">
+                                            전한길 선생님의 작년 필기노트로 공부하다가 마지막에는 최신 필기노트로 보면 좋을 거 같아 24년도 필기노트 구매했어요. 조금씩 바뀐 부분이 있어서 사길 잘한 거 같아요. 가독성도 조금 더 좋아진 거 같기도 하고요. 만족스럽습니다. 조금씩 바뀐 부분이 있어서 사길 잘한 거 같아요. 가독성도 조금 더 좋아진 거 같기도 하고요. 만족스럽습니다. 조금씩 바뀐 부분이 있어서 사길 잘한 거 같아요. 가독성도 조금 더 좋아진 거 같기도 하고요. 조금씩 바뀐 부분이 있어서 사길 잘한 거 같아요.                                    
+                                            전한길 선생님의 작년 필기노트로 공부하다가 마지막에는 최신 필기노트로 보면 좋을 거 같아 24년도 필기노트 구매했어요. 조금씩 바뀐 부분이 있어서 사길 잘한 거 같아요. 가독성도 조금 더 좋아진 거 같기도 하고요. 만족스럽 조금씩 바뀐 부분이 있어서 사길 잘한 거 같아요. 가독성도 조금 더 좋아진 거 같기도 하고요. 만족스럽습니다. 조금씩 바뀐 부분이 있어서 사길 잘한 거 같아요. 가독성도 조금 더 좋아진 거 같기도 하고요. 조금씩 바뀐 부분이 있어서 사길 잘한 거 같아요.                                   
+                                        </div>
+                                        <button type="button" class="btn-review-more">
+                                            <span class="icon-arrow-bottom"><span class="blind">더보기</span></span>
+                                         </button>
+                                    </div>
+                                </div>
+                                <div class="review-list-item">
+                                    <div class="user-info-box">
+                                        <div class="grade-star">
+                                            <div class="grade-star-on" style="width:80%;"><span class="blind">별점</span></div>
+                                        </div>
+                                        <div class="user-info">
+                                            <span class="info-text">아*디</span>
+                                            <span class="info-text">2022.04.19</span>
+                                        </div>
+                                    </div>
+                                    <div class="review-text">
+                                        <div class="text">
+                                            전한길 선생님의 작년 필기노트로 공부하다가 마지막에는 최신 필기노트로 보면 좋을 거 같아 24년도 필기노트 구매했어요. 조금씩 바뀐 부분이 있어서 사길 잘한 거 같아요. 가독성도 조금 더 좋아진 거 같기도 하고요. 만족스럽습니다. 조금씩 바뀐 부분이 있어서 사길 잘한 거 같아요. 가독성도 조금 더 좋아진 거 같기도 하고요. 만족스럽습니다. 조금씩 바뀐 부분이 있어서 사길 잘한 거 같아요. 가독성도 조금 더 좋아진 거 같기도 하고요. 조금씩 바뀐 부분이 있어서 사길 잘한 거 같아요.                                    
+                                            전한길 선생님의 작년 필기노트로 공부하다가 마지막에는 최신 필기노트로 보면 좋을 거 같아 24년도 필기노트 구매했어요. 조금씩 바뀐 부분이 있어서 사길 잘한 거 같아요. 가독성도 조금 더 좋아진 거 같기도 하고요. 만족스럽 조금씩 바뀐 부분이 있어서 사길 잘한 거 같아요. 가독성도 조금 더 좋아진 거 같기도 하고요. 만족스럽습니다. 조금씩 바뀐 부분이 있어서 사길 잘한 거 같아요. 가독성도 조금 더 좋아진 거 같기도 하고요. 조금씩 바뀐 부분이 있어서 사길 잘한 거 같아요.                                   
+                                        </div>
+                                        <button type="button" class="btn-review-more">
+                                            <span class="icon-arrow-bottom"><span class="blind">더보기</span></span>
+                                         </button>
+                                    </div>
+                                </div>
+                                <div class="review-list-item">
+                                    <div class="user-info-box">
+                                        <div class="grade-star">
+                                            <div class="grade-star-on" style="width:100%;"><span class="blind">별점</span></div>
+                                        </div>
+                                        <div class="user-info">
+                                            <span class="info-text">아*디</span>
+                                            <span class="info-text">2022.04.19</span>
+                                        </div>
+                                    </div>
+                                    <div class="review-text">
+                                        <div class="text">
+                                            전한길 선생님의 작년 필기노트로 공부하다가 마지막에는 최신 필기노트로 보면 좋을 거 같아 24년도 필기노트 구매했어요. 조금씩 바뀐 부분이 있어서 사길 잘한 거 같아요. 가독성도 조금 더 좋아진 거 같기도 하고요. 만족스럽습니다. 조금씩 바뀐 부분이 있어서 사길 잘한 거 같아요. 가독성도 조금 더 좋아진 거 같기도 하고요. 만족스럽습니다. 조금씩 바뀐 부분이 있어서 사길 잘한 거 같아요. 가독성도 조금 더 좋아진 거 같기도 하고요. 조금씩 바뀐 부분이 있어서 사길 잘한 거 같아요.                                    
+                                            전한길 선생님의 작년 필기노트로 공부하다가 마지막에는 최신 필기노트로 보면 좋을 거 같아 24년도 필기노트 구매했어요. 조금씩 바뀐 부분이 있어서 사길 잘한 거 같아요. 가독성도 조금 더 좋아진 거 같기도 하고요. 만족스럽 조금씩 바뀐 부분이 있어서 사길 잘한 거 같아요. 가독성도 조금 더 좋아진 거 같기도 하고요. 만족스럽습니다. 조금씩 바뀐 부분이 있어서 사길 잘한 거 같아요. 가독성도 조금 더 좋아진 거 같기도 하고요. 조금씩 바뀐 부분이 있어서 사길 잘한 거 같아요.                                   
+                                        </div>
+                                        <button type="button" class="btn-review-more">
+                                            <span class="icon-arrow-bottom"><span class="blind">더보기</span></span>
+                                         </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="pagination-group">
+                                <div class="pagination">
+                                    <a href="#" class="previous disabled">
+                                        <span class="blind">왼쪽 화살</span>               
+                                    </a>
+                                    <a href="#">1</a>
+                                    <a href="#" class="active">2</a>
+                                    <a href="#">3</a>
+                                    <span>∙∙∙</span>
+                                    <a href="#">999</a>
+                                    <a href="#" class="next">
+                                        <span class="blind">오른쪽 화살</span>               
+                                    </a>
+                                </div>
+                            </div>
                         </div>
                     </section>
                     <!--리뷰 서평 끝-->
@@ -826,5 +992,52 @@
     <script src="../assest/js/swiper-bundle.js"></script>
     <script src="../assest/js/common.js"></script>
 </body>
+<script>
 
+$(function($) {
+    function adjustText() {
+        var reviewBox = $('.review-list-group .text');
+        var maxChars = $(window).width() <= 729 ? 200 : 400;  // Set character limit based on screen width
+
+        reviewBox.each(function() {
+            var $this = $(this);
+            var originalText = $this.data('original-text');
+            
+            // Save the original text if not already saved
+            if (!originalText) {
+                originalText = $this.text();
+                $this.data('original-text', originalText);
+            }
+
+            if (originalText.length > maxChars) {
+                var truncatedText = originalText.substring(0, maxChars) + '...';
+                $this.text(truncatedText);
+                $this.addClass('hidden');
+
+                var btnMoreCmt = $this.siblings('.btn-review-more');
+                btnMoreCmt.show();
+                btnMoreCmt.off("click").on("click", function() {
+                    if ($this.hasClass('hidden')) {
+                        $this.text(originalText).removeClass('hidden');
+                    } else {
+                        $this.text(truncatedText).addClass('hidden');
+                    }
+                    $(this).toggleClass('on');
+                });
+            } else {
+                $this.text(originalText).removeClass('hidden');
+                $this.siblings('.btn-review-more').hide();
+            }
+        });
+    }
+
+    // Initial adjustment
+    adjustText();
+
+    // Adjust on window resize
+    $(window).resize(function() {
+        adjustText();
+    });
+});
+ </script>
 </html>

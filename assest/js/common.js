@@ -509,7 +509,7 @@ $(function () {
     
     //추천 도서 버튼 
     const searchkeyword = new Swiper('#searchkeyword', {slidesPerView: 'auto'});
-
+    const badgeSwiper = new Swiper('#badgeSwiper', {slidesPerView: 'auto'});
 });
 
 

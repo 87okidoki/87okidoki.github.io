@@ -692,7 +692,7 @@ img {
 }
 
 .main-contents-section {
-    padding: 52px 0;
+    padding: 40px 0;
 }
 
 .main-contents-section .main-contents-header .main-contents-header-title {
@@ -1847,8 +1847,6 @@ img {
     width: 100%;
     overflow-x: hidden;
     overflow-y: auto;
-    scroll-behavior: smooth;
-    scrollbar-color: transparent rgba(171, 171, 171, 0.6);
     word-break: break-all;
     word-wrap: break-word;
     margin: 20px 0 32px;
@@ -1953,8 +1951,6 @@ img {
 }
 .form-select {
     position: relative;
-    background: #fff url("../images/ic-arrow-indicator-24.svg") no-repeat right 16px/ contain;
-    background-size: 10px;
 }
 
 .form-select::after {
@@ -3159,7 +3155,7 @@ img {
     padding-bottom: 0;
 }
 
-.category-list-group .goods-info-box .badge-area,
+.category-list-group .goods-info-box .badge-swiper-area,
 .category-list-group .goods-info-box .goods-title,
 .category-list-group .goods-info-text {
     margin-bottom: 8px;
@@ -3169,6 +3165,10 @@ img {
 }
 .category-list-group .category-badges {
     margin-top: 8px;
+}
+.category-list-group .badge-swiper-area .swiper-slide{
+    width: auto;
+    margin-right: 8px;
 }
 @media screen and (max-width:767px) {
     .goods-list-group .book-thumb-area.small {
@@ -3293,6 +3293,37 @@ img {
         position: relative;
         top: 0;
         left: 0;
+    }
+    .category-list-group .goods-info-box{
+        margin-left: 24px;
+    }
+    .category-list-group .badge-swiper-area{
+        margin-left: -4px;
+    }
+    .category-list-group .badge-swiper-inner{
+        position: relative;
+        overflow: hidden;
+        padding-left: 4px;
+    }
+    .category-list-group .badge-swiper-inner::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0px;
+        width: 6px;
+        height: 100%;
+        z-index: 2;
+        background-image: linear-gradient(92deg, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+    }
+    .category-list-group .badge-swiper-inner::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0px;
+        width: 12px;
+        height: 100%;
+        z-index: 2;
+        background-image: linear-gradient(270deg, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
     }
 }
 

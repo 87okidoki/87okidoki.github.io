@@ -316,7 +316,8 @@
   left: auto;
 }
 .swiper-button-lock {
-  display: none;
+  visibility: hidden;
+  opacity: 0;
 }
 
 /* Navigation font start */
