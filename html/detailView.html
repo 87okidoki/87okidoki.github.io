@@ -28,8 +28,7 @@
                     <div class="header-group">
                         <div class="header-left">
                             <div class="mo-nav-btns">
-                                <button class="btn-menu" type="button" class="btn btn-transparent"
-                                    id="openMobileCategorylayer">
+                                <button class="btn-menu" type="button" class="btn btn-transparent" id="openMobileCategorylayer">
                                     <i class="icon-menu-24"><span class="blind">메뉴</span></i>
                                 </button>
                             </div>
@@ -39,8 +38,7 @@
                                 </h1>
                             </a>
                             <nav class="pc-nav-btns">
-                                <button class="btn-menu" type="button" class="btn btn-transparent"
-                                    id="openPcCategorylayer">
+                                <button class="btn-menu" type="button" class="btn btn-transparent" id="openPcCategorylayer">
                                     <i class="icon-menu-24"><span class="blind">메뉴</span></i>
                                 </button>
                                 <ul class="nav-btn-items">
@@ -60,11 +58,19 @@
                                 <i class="icon-cart"><span class="blind">장바구니</span></i>
                                 <span class="badge-count">5</span>
                             </a>
-                            <a href="#" class="btn btn-transparent"><i class="icon-mypage"><span
-                                        class="blind">마이페이지</span></i></a>
+                            <a href="#" class="btn btn-transparent"><i class="icon-mypage"><span class="blind">마이페이지</span></i></a>
+                            <a href="#" class="btn-app-down">
+                                <span class="btn-app-down-img">
+                                    <span class="image-wrap">
+                                        <img src="../assest/images/img-appdownload.png" alt="meBook app download" />
+                                    </span>
+                                    <span class="image-wrap">
+                                        <img src="../assest/images/img-appdownload.png" alt="meBook app download" />
+                                    </span>
+                                </span>
+                            </a>
                         </div>
                     </div>
-                    <a href="#" class="btn-app-down"><span class="text">앱 다운로드</span></a>
                 </header>
                 <!-- mobile 메뉴 레이어 시작 -->
                 <article class="mo-menu-layer-group off" id="mobileCategorylayerOverlay">
@@ -281,7 +287,7 @@
                 </section>
                 <!--굿즈 상세페이지 메인 끝-->
                 <!--상세페이지 메인 시작-->
-                <section class="detail-main-section">
+                <section class="detail-main-section off">
                     <div class="book-thumb-area badge-special large">
                         <div class="book-thumb">
                             <img src="../assest/images/img-book-dummy-01.png" alt="" />
@@ -298,10 +304,11 @@
                 <section class="goods-info-section">
                     <header class="goods-info-header">
                         <div class="badge-area">
-                            <span class="badge badge-primary">소장</span>
-                            <span class="badge badge-green">대여</span>
-                            <span class="badge badge-default">시리즈</span>
-                            <span class="badge badge-black">이벤트</span>
+                            <span class="badge badge-fill-primary">미북 Special 무료 제공</span>
+                            <span class="badge badge-ghost-primary">대여</span>
+                            <span class="badge badge-ghost-default">무료</span>
+                            <span class="badge badge-ghost-default">시리즈</span>
+                            <span class="badge badge-ghost-default">이벤트</span>
                         </div>
                         <h2 class="title">2024 전한길 한국사 4.0 실전동형 모의고사 시즌 1</h2>
                         <div class="book-info-texts"><span class="book-info-text">전한길</span> <span
@@ -317,7 +324,7 @@
                     <article class="detail-tab-content-box">
                         <ul class="btn-tab tab-box">
                             <li class="on">소장</li>
-                            <li class="">대여(~yy.mm.dd)</li>
+                            <li class="">대여(N일)</li>
                         </ul>
                         <div class="tab-content-section tab-box-content-section on">
                             <ul class="book-info-list">
@@ -453,6 +460,39 @@
                         </div>
                     </article>
                     <!--소장만 있는 경우 끝-->
+                    <!--미북 Special 시작-->
+                    <article class="detail-content-box">
+                        <header class="detail-content-header">
+                            <h3 class="title">미북 Special</h3>
+                            <div class="info-group">
+                                <button type="button" class="btn btn-info">
+                                    <span class="icon-info"><span class="blind">안내</span></span>
+                                </button>
+                                <div class="info-popup-group detail-view off">
+                                    <p class="text">현재 상품에서 이용 가능한 학습 서비스입니다.</p>
+                                </div>
+                            </div>
+                        </header>
+                        <div class="chip-group">
+                            <div class="chip"><span class="chip-inner"><span class="text">정・오답 확인</span><span
+                                        class="icon-answer-check"></span></span></div>
+                            <div class="chip"><span class="chip-inner"><span class="text">정답・해설 가리기</span><span
+                                        class="icon-answer-hide"></span></span></div>
+                            <div class="chip"><span class="chip-inner"><span class="text">정답・해설 보기</span><span
+                                        class="icon-answer-view"></span></span></div>
+                            <div class="chip"><span class="chip-inner"><span class="text">지문보기</span><span
+                                        class="icon-fingerprint-view"></span></span></div>
+                            <div class="chip"><span class="chip-inner"><span class="text">학습 Q&A</span><span
+                                        class="icon-learningQA"></span></span></div>
+                            <div class="chip"><span class="chip-inner"><span class="text">듣기 음원</span><span
+                                        class="icon-listening"></span></span></div>
+                            <div class="chip"><span class="chip-inner"><span class="text">동영상 강의</span><span
+                                        class="icon-player"></span></span></div>
+                            <div class="chip"><span class="chip-inner"><span class="text">응시하기</span><span class="icon-test"></span></span>
+                            </div>
+                        </div>
+                    </article>
+                    <!--미북 Special 끝-->
                     <!--시리즈 교재 시작-->
                     <article class="detail-content-box">
                         <header class="detail-content-header">
@@ -506,52 +546,21 @@
                         </form>
                     </article>
                     <!--시리즈 교재 끝-->
-                    <!--미북 Special 시작-->
-                    <article class="detail-content-box special">
-                        <header class="detail-content-header">
-                            <h3 class="title">미북 Special</h3>
-                            <div class="info-group">
-                                <button type="button" class="btn btn-info">
-                                    <span class="icon-info"><span class="blind">안내</span></span>
-                                </button>
-                                <div class="info-popup-group detail-view off">
-                                    <p class="text">현재 상품에서 이용 가능한 학습 서비스입니다.</p>
-                                </div>
-                            </div>
-                        </header>
-                        <div class="chip-group">
-                            <div class="chip"><span class="chip-inner"><span class="text">정・오답 확인</span><span
-                                        class="icon-answer-check"></span></span></div>
-                            <div class="chip"><span class="chip-inner"><span class="text">정답・해설 가리기</span><span
-                                        class="icon-answer-hide"></span></span></div>
-                            <div class="chip"><span class="chip-inner"><span class="text">정답・해설 보기</span><span
-                                        class="icon-answer-view"></span></span></div>
-                            <div class="chip"><span class="chip-inner"><span class="text">지문보기</span><span
-                                        class="icon-fingerprint-view"></span></span></div>
-                            <div class="chip"><span class="chip-inner"><span class="text">학습 Q&A</span><span
-                                        class="icon-learningQA"></span></span></div>
-                            <div class="chip"><span class="chip-inner"><span class="text">듣기 음원</span><span
-                                        class="icon-listening"></span></span></div>
-                            <div class="chip"><span class="chip-inner"><span class="text">동영상 강의</span><span
-                                        class="icon-player"></span></span></div>
-                            <div class="chip"><span class="chip-inner"><span class="text">응시하기</span><span
-                                        class="icon-test"></span></span></div>
-                        </div>
-                    </article>
-                     <!--미북 Special 끝-->
                 </section>
                 <!--상세 정보 시작-->
                 <div class="detail-content-wrap">
                     <!--스티키 탭 시작-->
                     <section class="tab-bar-group  sticky-navigation">
-                        <div class="swiper-container" id="tabBarGroup">
-                            <div class="swiper-wrapper">
-                                <div class="swiper-slide on"><a href="#tab-book" class="btn-tab-menu on">책 소개</a></div>
-                                <div class="swiper-slide"><a href="#tab-contents" class="btn-tab-menu">목차</a></div>
-                                <div class="swiper-slide"><a href="#tab-writer" class="btn-tab-menu">저자 소개</a></div>
-                                <div class="swiper-slide"><a href="#tab-publishing" class="btn-tab-menu">출판사 서평</a></div>
-                                <div class="swiper-slide"><a href="#tab-review" class="btn-tab-menu">리뷰 
-                                    <span class="num">(NN)</span></a>
+                        <div class="tab-bar-inner">
+                            <div class="swiper-container" id="tabBarGroup">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide on"><a href="#tab-book" class="btn-tab-menu on">책 소개</a></div>
+                                    <div class="swiper-slide"><a href="#tab-contents" class="btn-tab-menu">목차</a></div>
+                                    <div class="swiper-slide"><a href="#tab-writer" class="btn-tab-menu">저자 소개</a></div>
+                                    <div class="swiper-slide"><a href="#tab-publishing" class="btn-tab-menu">출판사 서평</a></div>
+                                    <div class="swiper-slide"><a href="#tab-review" class="btn-tab-menu">리뷰
+                                            <span class="num">(NN)</span></a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -641,7 +650,7 @@
                         </div>
                     </section>
                     <!--출판사 서평 끝-->
-                     <!--리뷰 시작-->
+                    <!--리뷰 시작-->
                     <section class="detail-content-section" id="tab-review">
                         <div class="grade-star-box">
                             <strong class="grade-num">4.0</strong>
@@ -878,11 +887,11 @@
                 <!--상품 정보 끝-->
             </div>
             <!--카드 팝업 시작-->
-            <section class="bottom-sheet-popup handler " id="bottomSheet">
-                <div class="handler-area" id="bottomSheetHandler">
+            <section class="bottom-sheet-popup handler " id="sheet" aria-hidden="false">
+                <div class="handler-area draggable-area">
                     <button type="button" class="handler-bar"><span class="blind">핸들러</span></button>
                 </div>
-                <div class="bottom-sheet-body">
+                <div class="bottom-sheet-body contents">
                     <div class="price-info-list-group scroll">
                         <header class="price-info-list-header">
                             <h3 class="price-info-list-title">결제정보</h3>
@@ -913,29 +922,47 @@
             <!--카드 팝업 끝-->
             <!--푸터 시작-->
             <footer class="footer-section">
+                <div class="link-text-group">
+                    <div class="container-inner">
+                        <div class="swiper-container" id="footerSwiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide on"><a href="#" class="link-text">회사소개</a></div>
+                                <div class="swiper-slide"><a href="#" class="link-text">이용약관</a></div>
+                                <div class="swiper-slide"><a href="#" class="link-text">개인정보처리방침</a></div>
+                                <div class="swiper-slide"><a href="#" class="link-text">공지사항</a></div>
+                                <div class="swiper-slide"><a href="#" class="link-text">FAQ</a></div>
+                                <div class="swiper-slide"><a href="#" class="link-text">입점문의</a></div>
+                                <div class="swiper-slide"><a href="#" class="link-text">1:1 문의</a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <div class="container-inner">
                     <a href="#" class="logo">
                         <img src="../assest/images/logo-meBook.svg" alt="meBook" />
                     </a>
-                    <p class="copyright-text">
-                        Copyright © 2024 메가스터디교육(주). All Rights Reserved.
-                    </p>
                     <ul class="copyright-text">
                         <li>법인명(상호) : 메가스터디교육(주)</li>
                         <li>대표자 : 손성은</li>
+                        <li>개인정보보호책임자 : OOO</li>
                         <li>사업자등록번호 : 780-87-00034</li>
+                        <li>통신판매업신고 : 제 0000-00000호 <a href="#"><strong>사업자정보확인</strong></a></li>
                     </ul>
                     <ul class="copyright-text">
-                        <li>서울 서초구 효령로 321 (서초동, 덕원빌딩) 메가스터디교육(주), 7층</li>
-                        <li>02-6438-3106</li>
+                        <li>주소 : 서울특별시 서초구 효령로 321 (서초동, 덕원빌딩), 7층</li>
+                        <li>전화번호 : 02-6438-3106</li>
                         <li>
-                            <a href="mailto:mebookteam@mebook.io" target="_blank">mebookteam@mebook.io</a>
+                            이메일 : <a href="mailto:mebookteam@mebook.io" target="_blank">mebookteam@mebook.io</a>
                         </li>
+                        <li>호스팅 서비스 제공자 : 메가스터디교육(주)</li>
                     </ul>
+                    <p class="copyright-text copyright">
+                        Copyright © 2024 메가스터디교육(주). All Rights Reserved.
+                    </p>
                 </div>
                 <div class="btn-top-scroll-area" id="btnTopScroll">
-                    <button type="button" class="btn-top-scroll"><span class="icon-top"><span
-                                class="blind">탑버튼</span></span><span class="text">TOP</span></button>
+                    <button type="button" class="btn-top-scroll"><span class="icon-top"><span class="blind">탑버튼</span></span><span
+                            class="text">TOP</span></button>
                 </div>
             </footer>
             <!--푸터 끝-->
@@ -990,6 +1017,7 @@
     </main>
     <script src="../assest/js/jquery-2.2.4.min.js"></script>
     <script src="../assest/js/swiper-bundle.js"></script>
+    <script src="../assest/js/bottom-sheet.js"></script>
     <script src="../assest/js/common.js"></script>
 </body>
 <script>

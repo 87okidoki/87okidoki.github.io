@@ -55,7 +55,7 @@
     /* Modern Browsers */
     url("../fonts/Pretendard-Boldr.ttf") format("truetype"),
     /* Safari, Android, iOS */
-     url("../fonts/Pretendard-Bold.svg#NotoSansKR") format("svg"));
+     url("../fonts/Pretendard-Bold.svg#NotoSansKR") format("svg"))));
 }
 
 @font-face {
@@ -73,7 +73,7 @@
     /* Modern Browsers */
     url("../fonts/Pretendard-SemiBoldr.ttf") format("truetype"),
     /* Safari, Android, iOS */
-     url("../fonts/Pretendard-SemiBold.svg#NotoSansKR") format("svg"));
+     url("../fonts/Pretendard-SemiBold.svg#NotoSansKR") format("svg"))));
 }
 
 @font-face {
@@ -91,7 +91,7 @@
     /* Modern Browsers */
     url("../fonts/Pretendard-Regular.ttf") format("truetype"),
     /* Safari, Android, iOS */
-     url("../fonts/Pretendard-Regular.svg#NotoSansKR") format("svg"));
+     url("../fonts/Pretendard-Regular.svg#NotoSansKR") format("svg"))));
 }
 
 @font-face {
@@ -109,7 +109,7 @@
     /* Modern Browsers */
     url("../fonts/Pretendard-Light.ttf") format("truetype"),
     /* Safari, Android, iOS */
-     url("../fonts/Pretendard-Light.svg#NotoSansKR") format("svg"));
+     url("../fonts/Pretendard-Light.svg#NotoSansKR") format("svg"))));
 }
 
 /* reset */
@@ -1074,7 +1074,12 @@ img {
     width: 24px;
     height: 24px;
 }
-
+.icon-info-gray {
+    display: inline-block;
+    background: url("../images/ic-notice-info.svg") no-repeat center center/ contain;
+    width: 16px;
+    height: 16px;
+}
 .icon-preview {
     display: inline-block;
     background: url("../images/ic-preview.svg") no-repeat center center/ contain;
@@ -2427,7 +2432,7 @@ img {
 }
 
 .list-box li {
-    margin-bottom: 20px;
+    margin-bottom: 16px;
 }
 
 .list-box li:last-child {
@@ -2436,9 +2441,10 @@ img {
 
 .list-box li > .title {
     flex-shrink: 0;
-    font-size: 1.4rem;
+    font-family: "Pretendard SemiBold";
+    font-size: 1.6rem;
     line-height: 20px;
-    color: var(--blue-grey-600);
+    color: var(--blue-grey-400);
 }
 
 .list-box li > .content {
@@ -2496,6 +2502,17 @@ img {
     background-color: var(--black-color);
     color: var(--white-color);
 }
+.badge-ghost-primary {
+    background-color: var(--main-light-100);
+    border: 1px solid var(--main-light-100);
+    color: var(--primary-color);
+}
+.badge-ghost-default {
+    background-color: var(--blue-grey-100);
+    border: 1px solid var(--blue-grey-100);
+    color: var(--blue-grey-600);
+}
+
 /* scroll-box */
 .scroll-box {
     overflow: hidden;
@@ -2833,49 +2850,33 @@ img {
 .btn-tab {
     font-size: 0;
 }
-.tab-box li {
+.tab-box {
     position: relative;
     display: inline-block;
-    cursor: pointer;
+    padding: 8px;
+    border-radius: 8px;
+    background: var(--blue-grey-50);
+    overflow: hidden;
+    margin-bottom: 16px;
+}
+.tab-box li {
+    display: inline-block;
+    color: var(--blue-grey-400);
+    text-align: center;
     font-size: 1.4rem;
-    line-height: 20px;
-    color: var(--blue-grey-500);
-    padding: 14px 24px;
-    border-radius: 8px 8px 0 0;
-    background: var(--blue-grey-200);
+    min-width: 66px;
+    padding: 8px 12px;
+    line-height: 16px;
 }
-.tab-box li::after {
-    content: '';
-    display: block;
-    position: absolute;
-    bottom: -8px;
-    left: 0;
-    right: 0;
-    height: 8px;
-    width: 100%;
-    background: var(--blue-grey-200);
-}
+
 .tab-box li.on {
-    position: relative;
-    font-family: "Pretendard SemiBold";
-    background-color: var(--white-color);
-    color: var(--black-color);
-    box-shadow: 2px 0 8px 0 rgba(0, 0, 0, 0.12);
-    z-index: 2;
+    border-radius: 8px;
+    background: var(--black-color);
+    color: var(--white-color);
 }
 .tab-box li.on::after {
     display: none;
 
-}
-.tab-box li.on::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: -8px;
-    height: 8px;
-    width: 100%;
-    background-color: var(--white-color);
 }
 .tab-box-content-section:first-child {
     border-radius: 0 8px 8px 8px;
@@ -2884,10 +2885,9 @@ img {
     display: none;
     position: relative;
     z-index: 1;
-    background-color: var(--white-color);
+    background-color: var(--blue-grey-50);
     padding: 26px 24px;
     border-radius: 8px 8px 8px 8px;
-    box-shadow: 2px 0 8px 0 rgba(0, 0, 0, 0.12);
 }
 .tab-swiper-content-section {
     display: none;
@@ -2930,9 +2930,6 @@ img {
 }
 
 @media screen and (max-width:767px) {
-    .tab-box li {
-        padding: 12px 24px;
-    }
     .tab-box-content-section {
         padding: 24px 20px;
     }
@@ -3160,13 +3157,13 @@ img {
 .category-list-group .goods-info-text {
     margin-bottom: 8px;
 }
-.category-list-group .goods-info-box{
- margin-right: 0;
+.category-list-group .goods-info-box {
+    margin-right: 0;
 }
 .category-list-group .category-badges {
     margin-top: 8px;
 }
-.category-list-group .badge-swiper-area .swiper-slide{
+.category-list-group .badge-swiper-area .swiper-slide {
     width: auto;
     margin-right: 8px;
 }
@@ -3294,13 +3291,13 @@ img {
         top: 0;
         left: 0;
     }
-    .category-list-group .goods-info-box{
+    .category-list-group .goods-info-box {
         margin-left: 24px;
     }
-    .category-list-group .badge-swiper-area{
+    .category-list-group .badge-swiper-area {
         margin-left: -4px;
     }
-    .category-list-group .badge-swiper-inner{
+    .category-list-group .badge-swiper-inner {
         position: relative;
         overflow: hidden;
         padding-left: 4px;
@@ -3309,7 +3306,7 @@ img {
         content: "";
         position: absolute;
         top: 0;
-        left: 0px;
+        left: 0;
         width: 6px;
         height: 100%;
         z-index: 2;
@@ -3319,7 +3316,7 @@ img {
         content: "";
         position: absolute;
         top: 0;
-        right: 0px;
+        right: 0;
         width: 12px;
         height: 100%;
         z-index: 2;
@@ -3417,6 +3414,7 @@ img {
     width: 40px;
     line-height: 40px;
     font-size: 1.4rem;
+    flex-shrink: 0;
 }
 .pagination span {
     display: inline-block;
@@ -3426,6 +3424,7 @@ img {
     width: 40px;
     line-height: 40px;
     font-size: 1.4rem;
+    flex-shrink: 0;
 }
 /* .pagination a:first-child {
     margin-right: 38px;
@@ -3789,7 +3788,6 @@ img {
     margin-top: 24px;
 }
 
-
 /* btns-filter-group 필터  */
 .btns-filter-group {
     position: relative;
@@ -3877,7 +3875,6 @@ img {
     font-size: 1.4rem;
     line-height: 16px;
 }
-
 
 /* daterangepicker 데이트 피커  */
 .daterangepicker {

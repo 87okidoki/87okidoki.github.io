@@ -238,9 +238,9 @@ $(function () {
         const paddingValue = bottomSheetExists
             ? $("#flotingBottomSheet").outerHeight(): 0; // 바텀 시트가 있을 경우 패딩 값 설정
 
-        // 푸터에 패딩 값을 적용
-        $(".footer-section").css("padding-bottom", paddingValue + 80 + "px");
-          $("#btnTopScroll").css("bottom", paddingValue + 40 + "px");
+        // // 푸터에 패딩 값을 적용
+        // $(".footer-section").css("padding-bottom", paddingValue + 80 + "px");
+        //   $("#btnTopScroll").css("bottom", paddingValue + 40 + "px");
     }
 
     // 페이지 로드 시 및 윈도우 리사이즈 시 패딩 값을 조절
@@ -375,22 +375,33 @@ $(function () {
     });
 
 
-    /*tabBtnSwiper*/
+    /* Initialize Swiper */
     const tabBtnSwiper = new Swiper('#tabBarGroup', {
         slidesPerView: 'auto',
         freeMode: true,
     });
-    // PC 환경일 때만 탭 개수에 따라 클래스 적용
-    if (window.innerWidth >= 768) { // 768px 이상일 때 PC 환경으로 간주
+
+    function applyTabClasses() {
         const tabCount = $('.swiper-slide').length;
-        if (tabCount <= 2) {
-            $('#tabBarGroup .swiper-wrapper').addClass('fixed-width');
-        } else {
-            $('#tabBarGroup .swiper-wrapper').addClass('variable-width');
+        const swiperWrapper = $('#tabBarGroup .swiper-wrapper');
+
+        swiperWrapper.removeClass('fixed-width variable-width');
+
+        if (window.innerWidth >= 768) { 
+            if (tabCount <= 2) {
+                swiperWrapper.addClass('fixed-width');
+            } else {
+                swiperWrapper.addClass('variable-width');
+            }
         }
     }
 
+    applyTabClasses();
 
+    window.addEventListener('resize', applyTabClasses);
+
+    
+    
   /*detailGoodsSwiper*/
     const detailGoodsSwiper = new Swiper('#detailGoodsSwiper', {
         loop: false,
@@ -509,7 +520,10 @@ $(function () {
     
     //추천 도서 버튼 
     const searchkeyword = new Swiper('#searchkeyword', {slidesPerView: 'auto'});
-    const badgeSwiper = new Swiper('#badgeSwiper', {slidesPerView: 'auto'});
+    const badgeSwiper = new Swiper('#badgeSwiper', { slidesPerView: 'auto' });
+    
+    const footerSwiper = new Swiper('#footerSwiper', { slidesPerView: 'auto' });
+    
 });
 
 

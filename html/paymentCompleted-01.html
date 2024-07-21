@@ -3,8 +3,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport"
-        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
     <meta name="theme-color" content="#fff">
     <meta name="color-scheme" content="light only">
     <meta name="msapplication-TileColor" content="#fff">
@@ -19,7 +18,7 @@
 </head>
 
 <body>
-    <main class="my-wrap">
+    <main class="payment-wrap">
         <!--컨텐츠 시작-->
         <div class="container">
             <!--해더 시작-->
@@ -84,9 +83,8 @@
                             </div>
                             <h3 class="mo-header-title">카테고리</h3>
                             <div class="mo-header-right">
-                                <button type="button" class="btn btn-transparent btn-close"
-                                    id="closeMobileCategorylayerOverlay">
-                                    <i class="icon-close-gray">
+                                <button type="button" class="btn btn-transparent btn-close" id="closeMobileCategorylayerOverlay">
+                                    <i class="icon-close-24">
                                         <span class="blind">닫기</span></i>
                                 </button>
                             </div>
@@ -136,15 +134,15 @@
                         <header class="mo-header">
                             <div class="mo-header-left">
                                 <button type="button" class="btn btn-transparent" id="closeCategorylayer">
-                                    <i class="icon-back-24">
-                                        <span class="blind">뒤로</span>
-                                    </i>
+                                        <i class="icon-back-24">
+                                            <span class="blind">뒤로</span>
+                                        </i>
                                 </button>
                             </div>
                             <h3 class="mo-header-title">수험서</h3>
                             <div class="mo-header-right">
                                 <button type="button" class="btn btn-transparent" id="closeMobileCategorylayerOverlay">
-                                    <i class="icon-close-gray">
+                                    <i class="icon-close-24">
                                         <span class="blind">닫기</span></i>
                                 </button>
                             </div>
@@ -216,7 +214,7 @@
                                     </ul>
                                     <div class="menu-thumb-banner-area">
                                         <a class="img-banner" href="#">
-                                            <img src="./../assest/images/img-menu-banner-dummy-01.png" alt="" />
+                                            <img src="../assest/images/img-menu-banner-dummy-01.png" alt="" />
                                         </a>
                                     </div>
                                 </div>
@@ -250,61 +248,61 @@
             </section>
             <!--해더 끝-->
             <div class="sub-contents-wrap">
-                <!--공지사항 뷰 시작-->
-                <section class="notice-view-section">
-                    <header class="sub-contents-header">
-                        <h2 class="sub-contents-header-title">
-                            FAQ
+                <header class="payment-header">
+                    <div class="payment-header-left">
+                        <h2 class="payment-header-title">
+                            구매완료 
                         </h2>
-                    </header>
-                    <div class="notice-view-group">
-                        <div class="notice-view-area">
-                            <header class="notice-header">
-                                <div class="content-left">
-                                    <span class="badge-medium badge-black">
-                                        결제문의
-                                    </span>
-                                    <span class="title">결제를 했는데 다운로드가 안됩니다.</span>
-                                </div>
-                                <div class="content-right">
-                                    <span class="date">2024.03.06</span>
-                                </div>
-                            </header>
-                            <div class="notice-body">
-                                결제를 했는데 다운로드가 안됩니다.<br />
-                                2024.03.05에 전한길 선생님 교재 구매했습니다.
-                                <div class="picture-list-group">
-                                    <div class="picture-item">
-                                        <img src="../assest/images/m-main-banner-dummy-01.png" alt="" />
-                                    </div>
-                                    <div class="picture-item">
-                                        <img src="../assest/images/m-main-banner-dummy-01.png" alt="" />
-                                    </div>
-                                </div>
-                            </div>
+                        <small class="sub-text">(이용 가능 <b class="amount">3개</b>)</small>
+                    </div>
+                    <ul class="payment-process">
+                        <li class="payment-process-item">장바구니</li>
+                        <li class="payment-process-item">구매하기</li>
+                        <li class="payment-process-item on">구매완료</li>
+                    </ul>
+                </header>
+                <section class="payment-completed-section">
+                    <div class="payment-info-group">
+                        <div class="img-box">
+                            <img src="../assest/images/img-cart-02.png" alt=""/>
                         </div>
-                    </div> 
-                    <div class="btn-block-group">
-                        <button type="button" class="btn btn-medium btn-secondary">목록으로</button>
+                        <div class="text-box">
+                            <h3 class="payment-title">결제가 성공적으로 완료되었습니다.</h3>
+                            <p class="payment-text">구매한 상품의 정보는 <br/>
+                                구매내역 조회에서 확인 가능합니다.
+                            </p>
+                        </div>
+                        <div class="payment-completed-group">
+                            <ul class="list-box both-type">
+                                <li><div class="title">구매 번호</div><div class="content"><strong>202401011145895236321</strong></div></li>
+                                <li><div class="title">구매 일시</div><div class="content">2024.04.26. 09:23:59</div></li>
+                                <li><div class="title">결제 수단</div><div class="content">신용카드(신한), me포인트</div></li>
+                                <li><div class="title">결제 금액</div><div class="content"><strong class="color-primary">36,500원</strong></div></li>
+                            </ul>
+                        </div>
+                        <div class="btns-area">
+                            <a href="#" class="btn btn-secondary btn-medium">구매내역 조회하기</a>
+                            <a href="#" class="btn btn-primary btn-medium">메인으로 돌아가기</a>
+                        </div>
                     </div>
                 </section>
-                <!--공지사항 뷰 끝-->
+
             </div>
             <!--푸터 시작-->
             <footer class="footer-section">
                 <div class="link-text-group">
                     <div class="container-inner">
-                        <div class="swiper-container" id="footerSwiper">
-                            <div class="swiper-wrapper">
-                                <div class="swiper-slide on"><a href="#" class="link-text">회사소개</a></div>
-                                <div class="swiper-slide"><a href="#" class="link-text">이용약관</a></div>
-                                <div class="swiper-slide"><a href="#" class="link-text">개인정보처리방침</a></div>
-                                <div class="swiper-slide"><a href="#" class="link-text">공지사항</a></div>
-                                <div class="swiper-slide"><a href="#" class="link-text">FAQ</a></div>
-                                <div class="swiper-slide"><a href="#" class="link-text">입점문의</a></div>
-                                <div class="swiper-slide"><a href="#" class="link-text">1:1 문의</a></div>
+                            <div class="swiper-container" id="footerSwiper">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide on"><a href="#" class="link-text">회사소개</a></div>
+                                    <div class="swiper-slide"><a href="#" class="link-text">이용약관</a></div>
+                                    <div class="swiper-slide"><a href="#" class="link-text">개인정보처리방침</a></div>
+                                    <div class="swiper-slide"><a href="#" class="link-text">공지사항</a></div>
+                                    <div class="swiper-slide"><a href="#" class="link-text">FAQ</a></div>
+                                    <div class="swiper-slide"><a href="#" class="link-text">입점문의</a></div>
+                                    <div class="swiper-slide"><a href="#" class="link-text">1:1 문의</a></div>
+                                </div>
                             </div>
-                        </div>
                     </div>
                 </div>
                 <div class="container-inner">
@@ -331,8 +329,7 @@
                     </p>
                 </div>
                 <div class="btn-top-scroll-area" id="btnTopScroll">
-                    <button type="button" class="btn-top-scroll"><span class="icon-top"><span class="blind">탑버튼</span></span><span
-                            class="text">TOP</span></button>
+                    <button type="button" class="btn-top-scroll"><span class="icon-top"><span class="blind">탑버튼</span></span><span class="text">TOP</span></button>
                 </div>
             </footer>
             <!--푸터 끝-->
