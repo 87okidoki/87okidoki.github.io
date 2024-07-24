@@ -7,14 +7,14 @@ $(function () {
   const draggableArea = sheet.querySelector(".draggable-area");
   const scrollTopButton = $("#btnTopScroll");
   const historyListBox = $("#historyListBox");
-  const historyButton = $("#btnHistory");
+  const floatingBtns = $("#floatingBtns");
   const footer = $(".footer-section");
 
-  // Check if required elements exist
-  if (!sheet || !sheetContents || !draggableArea || !scrollTopButton || !footer) {
-    console.error("Required elements do not exist in the DOM.");
-    return;
-  }
+  // // Check if required elements exist
+  // if (!sheet || !sheetContents || !draggableArea || !scrollTopButton || !footer) {
+  //   console.error("Required elements do not exist in the DOM.");
+  //   return;
+  // }
 
   let sheetHeight; // in vh
 
@@ -22,12 +22,8 @@ $(function () {
     sheetHeight = Math.max(0, Math.min(100, value));
     sheetContents.style.height = `${sheetHeight}vh`;
 
-    if (scrollTopButton) {
-      scrollTopButton.style.bottom = `${sheetHeight + 24}vh`;
-    }
-
-    if (historyButton) {
-      historyButton.style.bottom = `${sheetHeight + 30}vh`;
+    if (floatingBtns) {
+      floatingBtns.style.bottom = `${sheetHeight + 24}vh`;
     }
 
     if (footer) {
@@ -35,7 +31,7 @@ $(function () {
     }
 
     if (historyListBox) {
-      historyListBox.style.bottom = `${sheetHeight + 36}vh`;
+      historyListBox.style.bottom = `${sheetHeight + 38}vh`;
     }
   };
 

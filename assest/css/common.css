@@ -55,7 +55,7 @@
     /* Modern Browsers */
     url("../fonts/Pretendard-Boldr.ttf") format("truetype"),
     /* Safari, Android, iOS */
-     url("../fonts/Pretendard-Bold.svg#NotoSansKR") format("svg"))));
+    url( "../fonts/Pretendard-Bold.svg#NotoSansKR") format("svg"))))))
 }
 
 @font-face {
@@ -73,7 +73,7 @@
     /* Modern Browsers */
     url("../fonts/Pretendard-SemiBoldr.ttf") format("truetype"),
     /* Safari, Android, iOS */
-     url("../fonts/Pretendard-SemiBold.svg#NotoSansKR") format("svg"))));
+    url( "../fonts/Pretendard-SemiBold.svg#NotoSansKR") format("svg"))))))
 }
 
 @font-face {
@@ -91,7 +91,7 @@
     /* Modern Browsers */
     url("../fonts/Pretendard-Regular.ttf") format("truetype"),
     /* Safari, Android, iOS */
-     url("../fonts/Pretendard-Regular.svg#NotoSansKR") format("svg"))));
+    url( "../fonts/Pretendard-Regular.svg#NotoSansKR") format("svg"))))))
 }
 
 @font-face {
@@ -109,7 +109,7 @@
     /* Modern Browsers */
     url("../fonts/Pretendard-Light.ttf") format("truetype"),
     /* Safari, Android, iOS */
-     url("../fonts/Pretendard-Light.svg#NotoSansKR") format("svg"))));
+    url( "../fonts/Pretendard-Light.svg#NotoSansKR") format("svg"))))))
 }
 
 /* reset */
@@ -1299,7 +1299,11 @@ img {
 
 /*btn-top-scroll*/
 .btn-top-scroll-area {
-    position: fixed;
+    opacity: 0;
+    visibility: hidden;
+    height: 0;
+    transition: var(--transition);
+    /* position: fixed;
     z-index: 999;
     right: 28px;
     right: calc(constant(safe-area-inset-right) + 28px);
@@ -1312,19 +1316,19 @@ img {
     bottom: 40px;
     bottom: calc(constant(safe-area-inset-bottom) + 40px);
     bottom: calc(env(safe-area-inset-bottom) + 40px);
-    opacity: 0;
-    visibility: hidden;
-    transition: var(--transition);
+   */
 }
 
 .btn-top-scroll-area.on {
     opacity: 1;
     visibility: visible;
+    height: 100%;
     transition: var(--transition);
 }
 
 .btn-top-scroll {
     display: inline-block;
+    margin-top: 16px;
     width: 40px;
     height: 40px;
     border-radius: 50%;
@@ -2930,6 +2934,9 @@ img {
 }
 
 @media screen and (max-width:767px) {
+    .tab-box li {
+        padding: 12px 24px;
+    }
     .tab-box-content-section {
         padding: 24px 20px;
     }
@@ -3146,6 +3153,7 @@ img {
     display: none;
 }
 .category-list-group .goods-list-item {
+    display: block;
     padding-bottom: 40px;
 }
 .category-list-group .goods-list-item:last-child {
@@ -3165,7 +3173,6 @@ img {
 }
 .category-list-group .badge-swiper-area .swiper-slide {
     width: auto;
-    margin-right: 8px;
 }
 @media screen and (max-width:767px) {
     .goods-list-group .book-thumb-area.small {
@@ -3293,13 +3300,13 @@ img {
     }
     .category-list-group .goods-info-box {
         margin-left: 24px;
+        overflow: hidden;
     }
     .category-list-group .badge-swiper-area {
         margin-left: -4px;
     }
     .category-list-group .badge-swiper-inner {
         position: relative;
-        overflow: hidden;
         padding-left: 4px;
     }
     .category-list-group .badge-swiper-inner::before {

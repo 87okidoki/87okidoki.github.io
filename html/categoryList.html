@@ -689,154 +689,163 @@
                         Copyright © 2024 메가스터디교육(주). All Rights Reserved.
                     </p>
                 </div>
-                <div class="btn-top-scroll-area" id="btnTopScroll">
-                    <button type="button" class="btn-top-scroll"><span class="icon-top"><span class="blind">탑버튼</span></span><span
-                            class="text">TOP</span></button>
+                <div class="floating-btns" id="floatingBtns">
+                    <div class="btn-history-area" id="btnHistory">
+                        <button type="button" class="btn-history">
+                            <span class="icon-history"><span class="blind">시계</span><span class="count"
+                                    style="display: block;">10</span></span>
+                        </button>
+                    </div>
+                    <div class="btn-top-scroll-area" id="btnTopScroll">
+                        <button type="button" class="btn-top-scroll"><span class="icon-top"><span class="blind">탑버튼</span></span><span
+                                class="text">TOP</span>
+                        </button>
+                    </div>
+                    <!--최근 본 상품 시작-->
+                    <aside class="recent-view-section" id="historyList">
+                        <div class="recent-view-container" id="historyListBox">
+                            <header class="recent-view-header">
+                                <h3 class="recent-view-title">
+                                    최근 본 상품 <span class="color-primary">(6)</span>
+                                </h3>
+                                <button type="reset" class="btn-text">전체삭제</button>
+                            </header>
+                            <div class="recent-view-body scroll">
+                                <div class="grid-thumb-list-items recent-view-list">
+                                    <div class="thumb-item">
+                                        <div class="contet-left">
+                                            <a href="#" class="book-area badge-special">
+                                                <div class="book">
+                                                    <div class="book-img">
+                                                        <img src="../assest/images/img-book-dummy-01.png" alt="">
+                                                    </div>
+                                                </div>
+                                                <div class="bg-book"></div>
+                                            </a>
+                                            <div class="thumb-item-text-area">
+                                                <a href="#" class="thumb-item-title">
+                                                    큰별쌤 최태성의 스토리 한국사 사전
+                                                </a>
+                                                <div class="thumb-item-sub-text">전한길</div>
+                                            </div>
+                                        </div>
+                                        <button type="reset" class="btn btn-transparent">
+                                            <i class="icon-close-16"><span class="blind">삭제</span></i>
+                                        </button>
+                                    </div>
+                                    <div class="thumb-item">
+                                        <div class="contet-left">
+                                            <a href="#" class="book-area badge-special">
+                                                <div class="book">
+                                                    <div class="book-img">
+                                                        <img src="../assest/images/img-book-dummy-01.png" alt="">
+                                                    </div>
+                                                </div>
+                                                <div class="bg-book"></div>
+                                            </a>
+                                            <div class="thumb-item-text-area">
+                                                <a href="#" class="thumb-item-title">
+                                                    큰별쌤 최태성의 스토리 한국사 사전
+                                                </a>
+                                                <div class="thumb-item-sub-text">전한길</div>
+                                            </div>
+                                        </div>
+                                        <button type="reset" class="btn btn-transparent">
+                                            <i class="icon-close-16"><span class="blind">삭제</span></i>
+                                        </button>
+                                    </div>
+                                    <div class="thumb-item">
+                                        <div class="contet-left">
+                                            <a href="#" class="book-area badge-special">
+                                                <div class="book">
+                                                    <div class="book-img">
+                                                        <img src="../assest/images/img-book-dummy-01.png" alt="">
+                                                    </div>
+                                                </div>
+                                                <div class="bg-book"></div>
+                                            </a>
+                                            <div class="thumb-item-text-area">
+                                                <a href="#" class="thumb-item-title">
+                                                    큰별쌤 최태성의 스토리 한국사 사전
+                                                </a>
+                                                <div class="thumb-item-sub-text">전한길</div>
+                                            </div>
+                                        </div>
+                                        <button type="reset" class="btn btn-transparent">
+                                            <i class="icon-close-16"><span class="blind">삭제</span></i>
+                                        </button>
+                                    </div>
+                                    <div class="thumb-item">
+                                        <div class="contet-left">
+                                            <a href="#" class="book-area badge-special">
+                                                <div class="book">
+                                                    <div class="book-img">
+                                                        <img src="../assest/images/img-book-dummy-01.png" alt="">
+                                                    </div>
+                                                </div>
+                                                <div class="bg-book"></div>
+                                            </a>
+                                            <div class="thumb-item-text-area">
+                                                <a href="#" class="thumb-item-title">
+                                                    큰별쌤 최태성의 스토리 한국사 사전
+                                                </a>
+                                                <div class="thumb-item-sub-text">전한길</div>
+                                            </div>
+                                        </div>
+                                        <button type="reset" class="btn btn-transparent">
+                                            <i class="icon-close-16"><span class="blind">삭제</span></i>
+                                        </button>
+                                    </div>
+                                    <div class="thumb-item">
+                                        <div class="contet-left">
+                                            <a href="#" class="book-area badge-special">
+                                                <div class="book">
+                                                    <div class="book-img">
+                                                        <img src="../assest/images/img-book-dummy-01.png" alt="">
+                                                    </div>
+                                                </div>
+                                                <div class="bg-book"></div>
+                                            </a>
+                                            <div class="thumb-item-text-area">
+                                                <a href="#" class="thumb-item-title">
+                                                    큰별쌤 최태성의 스토리 한국사 사전
+                                                </a>
+                                                <div class="thumb-item-sub-text">전한길</div>
+                                            </div>
+                                        </div>
+                                        <button type="reset" class="btn btn-transparent">
+                                            <i class="icon-close-16"><span class="blind">삭제</span></i>
+                                        </button>
+                                    </div>
+                                    <div class="thumb-item">
+                                        <div class="contet-left">
+                                            <a href="#" class="book-area badge-special">
+                                                <div class="book">
+                                                    <div class="book-img">
+                                                        <img src="../assest/images/img-book-dummy-01.png" alt="">
+                                                    </div>
+                                                </div>
+                                                <div class="bg-book"></div>
+                                            </a>
+                                            <div class="thumb-item-text-area">
+                                                <a href="#" class="thumb-item-title">
+                                                    큰별쌤 최태성의 스토리 한국사 사전
+                                                </a>
+                                                <div class="thumb-item-sub-text">전한길</div>
+                                            </div>
+                                        </div>
+                                        <button type="reset" class="btn btn-transparent">
+                                            <i class="icon-close-16"><span class="blind">삭제</span></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </aside>
+                    <!--최근 본 상품 끝-->
                 </div>
             </footer>
             <!--푸터 끝-->
-            <!--최근 본 상품 시작-->
-            <aside class="recent-view-section" id="historyList">
-                <div class="recent-view-container"id="historyListBox">
-                    <header class="recent-view-header">
-                        <h3 class="recent-view-title">
-                            최근 본 상품 <span class="color-primary">(6)</span>
-                        </h3>
-                        <button type="reset" class="btn-text">전체삭제</button>
-                    </header>
-                    <div class="recent-view-body scroll">
-                        <div class="grid-thumb-list-items recent-view-list">
-                            <div class="thumb-item">
-                                <div class="contet-left">
-                                    <a href="#" class="book-area badge-special">
-                                        <div class="book">
-                                            <div class="book-img">
-                                                <img src="../assest/images/img-book-dummy-01.png" alt="">
-                                            </div>
-                                        </div>
-                                        <div class="bg-book"></div>
-                                    </a>
-                                    <div class="thumb-item-text-area">
-                                        <a href="#" class="thumb-item-title">
-                                            큰별쌤 최태성의 스토리 한국사 사전
-                                        </a>
-                                        <div class="thumb-item-sub-text">전한길</div>
-                                    </div>
-                                </div>
-                                <button type="reset" class="btn btn-transparent">
-                                    <i class="icon-close-16"><span class="blind">삭제</span></i>
-                                </button>
-                            </div>
-                            <div class="thumb-item">
-                                <div class="contet-left">
-                                    <a href="#" class="book-area badge-special">
-                                        <div class="book">
-                                            <div class="book-img">
-                                                <img src="../assest/images/img-book-dummy-01.png" alt="">
-                                            </div>
-                                        </div>
-                                        <div class="bg-book"></div>
-                                    </a>
-                                    <div class="thumb-item-text-area">
-                                        <a href="#" class="thumb-item-title">
-                                            큰별쌤 최태성의 스토리 한국사 사전
-                                        </a>
-                                        <div class="thumb-item-sub-text">전한길</div>
-                                    </div>
-                                </div>
-                                <button type="reset" class="btn btn-transparent">
-                                    <i class="icon-close-16"><span class="blind">삭제</span></i>
-                                </button>
-                            </div>
-                            <div class="thumb-item">
-                                <div class="contet-left">
-                                    <a href="#" class="book-area badge-special">
-                                        <div class="book">
-                                            <div class="book-img">
-                                                <img src="../assest/images/img-book-dummy-01.png" alt="">
-                                            </div>
-                                        </div>
-                                        <div class="bg-book"></div>
-                                    </a>
-                                    <div class="thumb-item-text-area">
-                                        <a href="#" class="thumb-item-title">
-                                            큰별쌤 최태성의 스토리 한국사 사전
-                                        </a>
-                                        <div class="thumb-item-sub-text">전한길</div>
-                                    </div>
-                                </div>
-                                <button type="reset" class="btn btn-transparent">
-                                    <i class="icon-close-16"><span class="blind">삭제</span></i>
-                                </button>
-                            </div>
-                            <div class="thumb-item">
-                                <div class="contet-left">
-                                    <a href="#" class="book-area badge-special">
-                                        <div class="book">
-                                            <div class="book-img">
-                                                <img src="../assest/images/img-book-dummy-01.png" alt="">
-                                            </div>
-                                        </div>
-                                        <div class="bg-book"></div>
-                                    </a>
-                                    <div class="thumb-item-text-area">
-                                        <a href="#" class="thumb-item-title">
-                                            큰별쌤 최태성의 스토리 한국사 사전
-                                        </a>
-                                        <div class="thumb-item-sub-text">전한길</div>
-                                    </div>
-                                </div>
-                                <button type="reset" class="btn btn-transparent">
-                                    <i class="icon-close-16"><span class="blind">삭제</span></i>
-                                </button>
-                            </div>
-                            <div class="thumb-item">
-                                <div class="contet-left">
-                                    <a href="#" class="book-area badge-special">
-                                        <div class="book">
-                                            <div class="book-img">
-                                                <img src="../assest/images/img-book-dummy-01.png" alt="">
-                                            </div>
-                                        </div>
-                                        <div class="bg-book"></div>
-                                    </a>
-                                    <div class="thumb-item-text-area">
-                                        <a href="#" class="thumb-item-title">
-                                            큰별쌤 최태성의 스토리 한국사 사전
-                                        </a>
-                                        <div class="thumb-item-sub-text">전한길</div>
-                                    </div>
-                                </div>
-                                <button type="reset" class="btn btn-transparent">
-                                    <i class="icon-close-16"><span class="blind">삭제</span></i>
-                                </button>
-                            </div>
-                            <div class="thumb-item">
-                                <div class="contet-left">
-                                    <a href="#" class="book-area badge-special">
-                                        <div class="book">
-                                            <div class="book-img">
-                                                <img src="../assest/images/img-book-dummy-01.png" alt="">
-                                            </div>
-                                        </div>
-                                        <div class="bg-book"></div>
-                                    </a>
-                                    <div class="thumb-item-text-area">
-                                        <a href="#" class="thumb-item-title">
-                                            큰별쌤 최태성의 스토리 한국사 사전
-                                        </a>
-                                        <div class="thumb-item-sub-text">전한길</div>
-                                    </div>
-                                </div>
-                                <button type="reset" class="btn btn-transparent">
-                                    <i class="icon-close-16"><span class="blind">삭제</span></i>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </aside>
-            <!--최근 본 상품 끝-->
             <!--필터 시작-->
             <article class="mo-layer-group" id="layerFilter">
                 <h3 class="blind">필터</h3>
