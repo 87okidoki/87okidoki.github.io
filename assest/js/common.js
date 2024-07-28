@@ -137,26 +137,37 @@ $(function () {
     });
 
     /* pc 카테고리 메뉴 열림 닫힘*/
-    $("#openPcCategorylayer").click(function () {
-        $("#pcCategorylayerOverlay").removeClass("off");
-        $("body").addClass("scroll-lock");
+    var isMenuVisible = false; // 상태를 추적하는 변수
+    $("#togglePcCategorylayer").click(function () {
+        isMenuVisible = !isMenuVisible; // 상태 반전
 
-        $(".main-menu-layer-group").on("mousewheel", function (e) {
-            const wheelDelta = e.originalEvent.wheelDelta;
-            const $menuFooter = $(".main-menu-layer-group .menu-footer");
-
-            if (wheelDelta > 0) {
-                $menuFooter.removeClass("line");
-            } else {
-                $menuFooter.addClass("line");
-            }
-        });
+        if (isMenuVisible) {
+            $("#pcCategorylayerOverlay").removeClass("off");
+            $("body").addClass("scroll-lock");
+            $('.icon').addClass('on');
+            
+            // Scroll 이벤트 핸들러를 추가
+            $(".main-menu-layer-group").on("wheel", handleScroll);
+        } else {
+            $("#pcCategorylayerOverlay").addClass("off");
+            $("body").removeClass("scroll-lock");
+            $('.icon').removeClass('on');
+            
+            // Scroll 이벤트 핸들러를 제거
+            $(".main-menu-layer-group").off("wheel", handleScroll);
+        }
     });
-    $("#closePcCategorylayerOverlay").click(function () {
-        $("#pcCategorylayerOverlay").addClass("off");
-        $("body").removeClass("scroll-lock");
-    });
 
+    function handleScroll(e) {
+        const deltaY = e.originalEvent.deltaY;
+        const $menuFooter = $(".main-menu-layer-group .menu-footer");
+
+        if (deltaY < 0) {
+            $menuFooter.removeClass("line");
+        } else if (deltaY > 0) {
+            $menuFooter.addClass("line");
+        }
+    }
     /* 모바일 카테고리 메뉴 열림 닫힘*/
     $("#openMobileCategorylayer").click(function () {
         $("#mobileCategorylayerOverlay").removeClass("off");
@@ -249,85 +260,6 @@ $(function () {
         adjustFooterPadding();
     });
 
-    //구매하기바텀시트 ui
-    let startY,
-        currentY,
-        initialBottom,
-        isDragging,
-        isOpen = false;
-
-    function toggleBottomSheet() {
-        const bottomSheet = $('#bottomSheet');
-        const bottomSheetHeight = bottomSheet.outerHeight();
-        const footer = $('.footer-section');
-        const topScroll = $('#btnTopScroll');
-
-        if (isOpen) {
-            $('#bottomSheet').css('bottom', '0');
-            footer.css('padding-bottom', bottomSheetHeight + 80 + 'px');
-            topScroll.css('bottom', bottomSheetHeight + 16 + 'px');
-        } else {
-            $('#bottomSheet').css('bottom', '-142px');
-            footer.css('padding-bottom', 142 + 80 + 'px');
-            topScroll.css('bottom', 182 + 16 + 'px');
-        }
-        isOpen = !isOpen;
-    }
-
-    $('#bottomSheetHandler').on('click', function () {
-        toggleBottomSheet();
-    });
-
-    function startDrag(y) {
-        startY = y;
-        initialBottom = parseInt($('#bottomSheet').css('bottom'));
-        isDragging = true;
-    }
-
-    function onDrag(y) {
-        if (!isDragging) 
-            return;
-        
-        currentY = y;
-        const deltaY = startY - currentY;
-        const newBottom = initialBottom + deltaY;
-
-        // 제한 조건: 바텀시트가 완전히 화면 밖으로 나가지 않도록
-        if (newBottom < -$('#bottomSheet').height()) {
-            newBottom = -$('#bottomSheet').height();
-        } else if (newBottom > 0) {
-            newBottom = 0;
-        }
-
-        $('#bottomSheet').css('bottom', newBottom + 'px');
-    }
-
-    function endDrag() {
-        isDragging = false;
-
-        // 스냅 효과: 일정 거리 이상 드래그하면 열리고, 그렇지 않으면 닫힘
-        if (parseInt($('#bottomSheet').css('bottom')) > -$('#bottomSheet').height() / 2) {
-            $('#bottomSheet').css('bottom', '0');
-        } else {
-            $('#bottomSheet').css('bottom', '-142px');
-        }
-    }
-
-    // 데스크톱 마우스 이벤트
-    $('#bottomSheetHandler').on('mousedown', function (e) {
-        startDrag(e.clientY);
-    });
-
-    $(document).on('mousemove', function (e) {
-        onDrag(e.clientY);
-    });
-
-    $(document).on('mouseup', function () {
-        if (isDragging) {
-            endDrag();
-        }
-    });
-
   
     /* 상세페이지 미리보기 스와이퍼*/
     const bookPreview = new Swiper('#bookPreview', {
@@ -381,24 +313,6 @@ $(function () {
         freeMode: true,
     });
 
-    function applyTabClasses() {
-        const tabCount = $('.swiper-slide').length;
-        const swiperWrapper = $('#tabBarGroup .swiper-wrapper');
-
-        swiperWrapper.removeClass('fixed-width variable-width');
-
-        if (window.innerWidth >= 768) { 
-            if (tabCount <= 2) {
-                swiperWrapper.addClass('fixed-width');
-            } else {
-                swiperWrapper.addClass('variable-width');
-            }
-        }
-    }
-
-    applyTabClasses();
-
-    window.addEventListener('resize', applyTabClasses);
 
     
     
@@ -520,17 +434,59 @@ $(function () {
     
     //추천 도서 버튼 
     const searchkeyword = new Swiper('#searchkeyword', {slidesPerView: 'auto'});
+    
+    //벳지 스와이프
     const badgeSwiper = new Swiper('#badgeSwiper', { slidesPerView: 'auto', spaceBetween: 8,});
     
+    //푸터 스와이프 
     const footerSwiper = new Swiper('#footerSwiper', { slidesPerView: 'auto' });
+    
+    //미북 스페셜 pc
     const specialThumbSwiper = new Swiper('#specialThumbSwiper', {       
         loop: true,
-        // autoplay: true,
-        // freeMode: true,
         slidesPerView: "auto",
-
         freeMode: true,
         spaceBetween: 24, 
+        autoplay: {
+            delay: 3000,
+        },
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev"
+        }
+    }); 
+    //미북 스페셜 모바일
+    const specialMobileThumbSwiper = new Swiper('#specialMobileThumbSwiper', {       
+        loop: true,
+        spaceBetween: 20, 
+        slidesPerView: 1.3,
+        centeredSlides: true,
+        autoplay: {
+            delay: 3000,
+        },
+        breakpoints: {
+            360: {
+                slidesPerView: 1.4,
+                spaceBetween: 20,
+            },
+            420: {
+                slidesPerView: 1.8,
+                spaceBetween: 20,
+            },
+            640: {
+                slidesPerView: 2.2,
+                spaceBetween: 20,
+            }
+        },
+    });
+    
+    //모바일 메뉴 
+    const textSwiper = new Swiper('#textSwiper', {       
+        // autoplay: true,
+        // freeMode: true,
+        slidesPerView: 'auto' ,
+        freeMode: true,
+        
     });
     
 });

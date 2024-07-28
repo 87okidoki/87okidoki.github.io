@@ -1005,6 +1005,12 @@ img {
     width: 16px;
     height: 16px;
 }
+.icon-menu-close {
+    display: inline-block;
+    background: url("../images/ic-menu-close.svg") no-repeat center center/ contain;
+    width: 24px;
+    height: 24px;
+}
 .icon-close-24 {
     display: inline-block;
     background: url("../images/ic-close-24.svg") no-repeat center center/ contain;

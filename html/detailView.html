@@ -573,6 +573,17 @@
                             </div>
                         </div>
                     </section>
+                    <!-- 메뉴 2개일때-->
+                    <!-- <section class="tab-bar-group sticky-navigation">
+                        <div class="tab-bar-inner">
+                            <div class="swiper-container" id="tabBarGroup">
+                                <div class="swiper-wrapper fixed-width">
+                                    <div class="swiper-slide on"><a href="#tab-book" class="btn-tab-menu on">책 소개</a></div>
+                                    <div class="swiper-slide"><a href="#tab-contents" class="btn-tab-menu">목차</a></div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>  -->
                     <!--스티키 탭 끝-->
                     <!--책 소개 시작-->
                     <section class="detail-content-section large" id="tab-book">
@@ -798,10 +809,10 @@
                                             </div>
                                         </div>
                                         <div class="review-text">
-                                            <div class="text">
+                                            <p class="more normal text">
                                                 전한길 선생님의 작년 필기노트로 공부하다가 마지막에는 최신 필기노트로 보면 좋을 거 같아 24년도 필기노트 구매했어요. 조금씩 바뀐 부분이 있어서 사길 잘한 거 같아요. 가독성도 조금 더 좋아진 거 같기도 하고요. 만족스럽습니다. 조금씩 바뀐 부분이 있어서 사길 잘한 거 같아요. 가독성도 조금 더 좋아진 거 같기도 하고요. 만족스럽습니다. 조금씩 바뀐 부분이 있어서 사길 잘한 거 같아요. 가독성도 조금 더 좋아진 거 같기도 하고요. 조금씩 바뀐 부분이 있어서 사길 잘한 거 같아요.                                    
                                                 전한길 선생님의 작년 필기노트로 공부하다가 마지막에는 최신 필기노트로 보면 좋을 거 같아 24년도 필기노트 구매했어요. 조금씩 바뀐 부분이 있어서 사길 잘한 거 같아요. 가독성도 조금 더 좋아진 거 같기도 하고요. 만족스럽 조금씩 바뀐 부분이 있어서 사길 잘한 거 같아요. 가독성도 조금 더 좋아진 거 같기도 하고요. 만족스럽습니다. 조금씩 바뀐 부분이 있어서 사길 잘한 거 같아요. 가독성도 조금 더 좋아진 거 같기도 하고요. 조금씩 바뀐 부분이 있어서 사길 잘한 거 같아요.                                   
-                                            </div>
+                                            </p>
                                             <button type="button" class="btn-review-more">
                                                 <span class="icon-arrow-bottom"><span class="blind">더보기</span></span>
                                             </button>
@@ -907,11 +918,11 @@
                 <!--상품 정보 끝-->
             </div>
             <!--카드 팝업 시작-->
-            <section class="bottom-sheet-popup handler " id="sheet" aria-hidden="false">
-                <div class="handler-area draggable-area">
-                    <button type="button" class="handler-bar"><span class="blind">핸들러</span></button>
-                </div>
-                <div class="bottom-sheet-body contents">
+            <section class="bottom-sheet-popup handler" id="sheet">
+                <button type="button" class="handler-area">
+                    <span class="handler-bar"><span class="blind">핸들러</span></span>
+                </button>
+                <div class="bottom-sheet-body">
                     <div class="price-info-list-group scroll">
                         <header class="price-info-list-header">
                             <h3 class="price-info-list-title">결제정보</h3>
@@ -1040,55 +1051,106 @@
     </main>
     <script src="../assest/js/jquery-2.2.4.min.js"></script>
     <script src="../assest/js/swiper-bundle.js"></script>
-    <script src="../assest/js/bottom-sheet.js"></script>
     <script src="../assest/js/common.js"></script>
+    <script src="../assest/js/bottom-sheet.js"></script>
 </body>
 <script>
+    // $(function($) {
+    //     function adjustText() {
+    //         var reviewBox = $('.review-list-group .text');
+    //         var maxChars = $(window).width() <= 729 ? 200 : 400;  // Set character limit based on screen width
 
-$(function($) {
-    function adjustText() {
-        var reviewBox = $('.review-list-group .text');
-        var maxChars = $(window).width() <= 729 ? 200 : 400;  // Set character limit based on screen width
+    //         reviewBox.each(function() {
+    //             var $this = $(this);
+    //             var originalText = $this.data('original-text');
+                
+    //             // Save the original text if not already saved
+    //             if (!originalText) {
+    //                 originalText = $this.text();
+    //                 $this.data('original-text', originalText);
+    //             }
 
-        reviewBox.each(function() {
-            var $this = $(this);
-            var originalText = $this.data('original-text');
-            
-            // Save the original text if not already saved
-            if (!originalText) {
-                originalText = $this.text();
-                $this.data('original-text', originalText);
-            }
+    //             if (originalText.length > maxChars) {
+    //                 var truncatedText = originalText.substring(0, maxChars) + '...';
+    //                 $this.text(truncatedText);
+    //                 $this.addClass('hidden');
 
-            if (originalText.length > maxChars) {
-                var truncatedText = originalText.substring(0, maxChars) + '...';
-                $this.text(truncatedText);
-                $this.addClass('hidden');
+    //                 var btnMoreCmt = $this.siblings('.btn-review-more');
+    //                 btnMoreCmt.show();
+    //                 btnMoreCmt.off("click").on("click", function() {
+    //                     if ($this.hasClass('hidden')) {
+    //                         $this.text(originalText).removeClass('hidden');
+    //                     } else {
+    //                         $this.text(truncatedText).addClass('hidden');
+    //                     }
+    //                     $(this).toggleClass('on');
+    //                 });
+    //             } else {
+    //                 $this.text(originalText).removeClass('hidden');
+    //                 $this.siblings('.btn-review-more').hide();
+    //             }
+    //         });
+    //     }
 
-                var btnMoreCmt = $this.siblings('.btn-review-more');
-                btnMoreCmt.show();
-                btnMoreCmt.off("click").on("click", function() {
-                    if ($this.hasClass('hidden')) {
-                        $this.text(originalText).removeClass('hidden');
-                    } else {
-                        $this.text(truncatedText).addClass('hidden');
-                    }
-                    $(this).toggleClass('on');
+    //     // Initial adjustment
+    //     adjustText();
+
+    //     // Adjust on window resize
+    //     $(window).resize(function() {
+    //         adjustText();
+    //     });
+    // });
+ 
+    $(function($) {
+         // 버튼을 표시하거나 숨기는 함수
+        function updateButtonVisibility() {
+            $(".review-list-item").each(function() { 
+                let $infoIntro = $(this).find('.review-text');
+                let heightThreshold = 77; // 3줄 기준 높이 값, 필요에 따라 조정
+
+                // 리뷰 텍스트의 높이를 측정하고 버튼 표시 여부 결정
+                if ($infoIntro.height() > heightThreshold) {
+                    $(this).find('.btn-review-more').show();    
+                } else {
+                    $(this).find('.btn-review-more').hide();    
+                }
+            });
+        }
+        // 페이지 로드 시 버튼 상태 초기화
+        updateButtonVisibility();
+
+        // 브라우저 창 크기 조정 시 버튼 상태 업데이트
+        $(window).resize(function() {
+            updateButtonVisibility();
+        });
+
+        // 버튼 클릭 이벤트 핸들러
+        $(".btn-review-more").click(function(e) { 
+            e.preventDefault(); 
+
+            let $button = $(this);
+            let $parent = $button.closest('.review-list-item');
+            let $infoIntro = $parent.find('.review-text');
+
+            if ($button.hasClass('up')) {
+                // 리뷰 축소
+                $parent.css({
+                    'overflow': 'hidden',
+                    'height': '174px'
                 });
+                $button.removeClass('up').addClass('down');
+                $infoIntro.removeClass('on'); 
             } else {
-                $this.text(originalText).removeClass('hidden');
-                $this.siblings('.btn-review-more').hide();
+                // 리뷰 확장
+                $parent.css({
+                    'overflow': 'visible',
+                    'height': 'auto',
+                    'max-height': 'none'
+                });
+                $button.removeClass('down').addClass('up');
+                $infoIntro.addClass('on'); 
             }
         });
-    }
-
-    // Initial adjustment
-    adjustText();
-
-    // Adjust on window resize
-    $(window).resize(function() {
-        adjustText();
     });
-});
  </script>
 </html>

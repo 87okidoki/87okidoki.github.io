@@ -1,86 +1,26 @@
-$(function () {
+$(function($) {
+  const $sheet = $('#sheet');
+  const $handlerBar = $sheet.find('.handler-bar');
+  const $footer = $('.footer-section');
+  const $floatingBtns = $('#floatingBtns');
+  const $historyListBox = $('#historyListBox');
 
-  const $ = document.querySelector.bind(document);
+  function adjustFooterPadding() {
+    const sheetHeight = $sheet.outerHeight();
+    $footer.css('padding-bottom', sheetHeight + 'px');
+    $floatingBtns.css('bottom', sheetHeight + 'px');
+  }
 
-  const sheet = $("#sheet");
-  const sheetContents = sheet.querySelector(".contents");
-  const draggableArea = sheet.querySelector(".draggable-area");
-  const scrollTopButton = $("#btnTopScroll");
-  const historyListBox = $("#historyListBox");
-  const floatingBtns = $("#floatingBtns");
-  const footer = $(".footer-section");
+  $handlerBar.on('click', function() {
+    $sheet.toggleClass('on');
+    adjustFooterPadding();
+  });
 
-  // // Check if required elements exist
-  // if (!sheet || !sheetContents || !draggableArea || !scrollTopButton || !footer) {
-  //   console.error("Required elements do not exist in the DOM.");
-  //   return;
-  // }
-
-  let sheetHeight; // in vh
-
-  const setSheetHeight = (value) => { 
-    sheetHeight = Math.max(0, Math.min(100, value));
-    sheetContents.style.height = `${sheetHeight}vh`;
-
-    if (floatingBtns) {
-      floatingBtns.style.bottom = `${sheetHeight + 24}vh`;
+  $(document).on('click', function(event) {
+    if (!$(event.target).closest('#sheet').length && $sheet.hasClass('on')) {
+      $sheet.removeClass('on');
+      adjustFooterPadding();
     }
-
-    if (footer) {
-      footer.style.paddingBottom = `${sheetHeight + 24}vh`;
-    }
-
-    if (historyListBox) {
-      historyListBox.style.bottom = `${sheetHeight + 38}vh`;
-    }
-  };
-
-  const setIsSheetShown = (value) => {
-    sheet.setAttribute("aria-hidden", String(!value));
-  };
-
-  const touchPosition = (event) => event.touches ? event.touches[0] : event;
-
-  let dragPosition;
-
-  const onDragStart = (event) => {
-    dragPosition = touchPosition(event).pageY;
-    sheetContents.classList.add("not-selectable");
-    draggableArea.style.cursor = document.body.style.cursor = "grabbing";
-  };
-
-  const onDragMove = (event) => {
-    if (dragPosition === undefined) return;
-
-    const y = touchPosition(event).pageY;
-    const deltaY = dragPosition - y;
-    const deltaHeight = deltaY / window.innerHeight * 100;
-
-    setSheetHeight(sheetHeight + deltaHeight);
-    dragPosition = y;
-  };
-
-  const onDragEnd = () => {
-    dragPosition = undefined;
-    sheetContents.classList.remove("not-selectable");
-    draggableArea.style.cursor = document.body.style.cursor = "";
-
-    if (sheetHeight < 10) {
-      setIsSheetShown(false);
-    } else if (sheetHeight > 20) {
-      setSheetHeight(33);
-    } else {
-      setSheetHeight(0);
-    }
-  };
-
-  draggableArea.addEventListener("mousedown", onDragStart);
-  draggableArea.addEventListener("touchstart", onDragStart);
-
-  window.addEventListener("mousemove", onDragMove);
-  window.addEventListener("touchmove", onDragMove);
-
-  window.addEventListener("mouseup", onDragEnd);
-  window.addEventListener("touchend", onDragEnd);
-
+  });
+  adjustFooterPadding();
 });

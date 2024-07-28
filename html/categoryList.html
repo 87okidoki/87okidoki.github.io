@@ -616,10 +616,10 @@
                 </section>
              </div>
             <!--카드 팝업 시작-->
-            <section class="bottom-sheet-popup handler" id="sheet" style="display: none;">
-                <div class="handler-area draggable-area">
-                    <button type="button" class="handler-bar"><span class="blind">핸들러</span></button>
-                </div>
+            <section class="bottom-sheet-popup handler" id="sheet">
+                <button type="button" class="handler-area">
+                    <span class="handler-bar"><span class="blind">핸들러</span></span>
+                </button>
                 <div class="bottom-sheet-body contents">
                     <div class="price-info-list-group scroll">
                         <header class="price-info-list-header">
@@ -1099,6 +1099,43 @@
                     hideBottomSheetPopup();
                 }
             });
+
+
+        
+            function syncBottomPosition() {
+                // Get the bottom value of #floatingBtns
+                var floatingBtnsBottom = $('#floatingBtns').css('bottom');
+                
+                // Parse the bottom value to an integer (assuming it is in pixels)
+                var currentBottom = parseInt(floatingBtnsBottom, 10);
+                
+                // Ensure the parsed value is a number
+                if (!isNaN(currentBottom)) {
+                    // Calculate the new bottom value by adding 200 pixels
+                    var newBottom = currentBottom + 120 + 'px';
+                    
+                    // Set the bottom value of #historyListBox to the new value
+                    $('#historyListBox').css('bottom', newBottom);
+                } else {
+                    console.error('Invalid bottom value for #floatingBtns:', floatingBtnsBottom);
+                }
+            }
+
+            // Call the function to sync positions on page load
+            $(document).ready(function() {
+                syncBottomPosition();
+            });
+
+            // Call the function whenever the window is resized
+            $(window).resize(function() {
+                syncBottomPosition();
+            });
+
+            // Call the function whenever the window is scrolled
+            $(window).scroll(function() {
+                syncBottomPosition();
+            });
+
         });
     </script>
 </body>
