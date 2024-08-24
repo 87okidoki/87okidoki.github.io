@@ -1,0 +1,769 @@
+.promotion-header-section{
+    background: url(../images/bg-main-promotion.png) no-repeat top center / cover;
+    height: 982px;
+    width: 100%;
+    text-align: center;
+    padding-top: 80px;
+}
+.promotion-header-section .promotion-main-title{
+    margin-bottom: 34px;
+}
+.promotion-header-section .promotion-main-title .img-title{
+    width: 808px;
+}
+.promotion-header-section .img-promotion{
+    width: 864px;
+}
+.promotion-content-section{
+    padding: 120px 0 120px;
+}
+
+.promotion-header{
+    position: relative;
+    z-index: 2;
+    text-align: center;
+}
+.promotion-header .sub-title{
+    background: linear-gradient(90deg, #8939E8 0%, #32A4F6 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    font-family: "Pretendard Light";
+    font-size: 2.2rem;
+    font-style: normal;
+    line-height: 100%; /* 22px */
+    letter-spacing: -0.45px;
+    margin-bottom: 22px;
+}
+.promotion-header .promotion-title{
+    position: relative;
+    font-family: "Pretendard Bold";
+    font-size: 6rem;
+    font-style: normal;
+    line-height: 78px; /* 130% */
+    letter-spacing: -1px;
+    color: var(--blue-grey-700);
+}
+.promotion-title > .primary{
+    color: #4E32F6;
+}
+.event-info-box {
+    max-width: 492px;
+    margin: 0 auto;
+}
+.event-info-box .event-info-title{
+    font-family: "Pretendard Bold";
+    font-size: 2rem;
+    line-height: 27px; 
+    color: var(--blue-grey-700);
+    margin-bottom: 20px;
+    text-align: center;
+}
+.event-info-list{
+    display: grid;
+    justify-content: center;
+}
+.event-info-box .event-info-item {
+    font-size: 1.8rem;
+    line-height: 24px;
+    color: var(--blue-grey-700);
+    margin-bottom: 8px;
+    text-align: left;
+}
+
+.event-info-box .event-info-item .title{
+    position: relative;    
+    display: inline-block;
+    width: 110px;
+    padding-left: 20px;
+}
+.event-info-box .event-info-item .title::before{
+    content: '';
+    position: absolute;
+    top: 11px;
+    left: 0px;
+    display: block;
+    width: 4px;
+    height: 4px;
+    background-color: var(--blue-grey-700);
+    border-radius: 50%;
+}
+.event-info-box .event-info-item .title::after{
+    content: '';
+    position: absolute;
+    top: 4px;
+    right: 0px;
+    display: block;
+    width: 0.5px;
+    height: 16px;
+    background-color: var(--blue-grey-700);
+}
+.event-info-box .event-info-item .content{
+    padding-left: 8px;
+}
+.event-info-box .event-info-item .content > .bold{
+    font-family: "Pretendard Bold";
+}
+
+.btn-promo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Pretendard Bold";
+    border-radius: 8px;
+    background-color: var(--black-color);
+    padding: 16px 16px;
+    color:  var(--white-color);
+    font-size: 1.6rem;
+}
+.btn-promo .primary{
+    color: #9B99FF;
+    margin-right: 2px;
+    display: inline-block;
+}
+.btn-promo .secondary{
+    color: #ACBEFF;
+    padding-left: 2px;
+    display: inline-block;
+}
+.btn-promo .primary .strong{
+    font-size: 2rem;
+    vertical-align: -1px;
+    padding-right: 2px;
+}
+.btn-promo .icon-right{
+    display: inline-block;
+    background: url(../images/icon-arrow-right.svg) no-repeat center center /contain;
+    width: 24px;
+    height: 24px;
+}
+.btn-promo .icon-share{
+    display: inline-block;
+    background: url(../images/icon-share.svg) no-repeat center center /contain;
+    width: 24px;
+    height: 24px;
+    opacity: 0.7;
+}
+
+.intro-section{
+    background-color: var(--white-color);
+    padding-top: 160px;
+    padding-bottom: 120px;
+}
+.intro-section .intro-section-title{
+    width: 626px;
+    text-align: center;
+    margin: 0 auto 72px;
+}
+.intro-section .tab-promo-group .swiper-slide{
+    width: auto;
+}
+.intro-section .tab-promo-group{
+    background-color: #F6F7FF;
+    margin-top: 72px;
+}
+.intro-section .tabs-promo{
+    margin: 0 auto;
+}
+.intro-section .tab-promo {
+    display: inline-block;
+    color: var(--blue-grey-500);
+    text-align: center;
+    font-size:2rem;
+    min-width: 182px;
+    padding: 24px 32px;
+}
+.intro-section .tab-promo.active {
+    font-family: "Pretendard Bold";
+    background:#4E32F6;
+    color: var(--white-color);
+}
+.intro-section .tab-promo-content-section{
+    margin-top: 64px;
+}
+.intro-section .video-box{
+    width: 796px;
+    height: 597px;
+    margin: 0 auto;
+    box-shadow: 12px 12px 60px 0px rgba(14, 15, 51, 0.20);
+}
+.intro-section .video-info-box {
+    max-width: 796px;
+    text-align: center;
+    margin: 64px auto 0;
+}
+.intro-section .video-info-box .title{
+    font-family: "Pretendard Bold";
+    font-size: 3.2rem;
+    line-height: 100%; /* 32px */
+    color: var(--black-color);
+    margin-bottom: 20px;
+}
+.intro-section .video-info-box .text{
+    font-family: "Pretendard Light";
+    font-size: 2rem;
+    line-height: 100%; /* 32px */
+    color: var(--black-color);
+    letter-spacing: -0.35px;
+    line-height: 32px;
+}
+
+
+.book-swiper-section{
+    background: linear-gradient(180deg, #F9FAFF 0%, #F8FAFF 100%);
+    padding-top: 128px;
+    padding-bottom: 120px;
+}
+.book-swiper-section .icon-special{
+    display: inline-block;
+    background: url(../images/icon-special.svg) no-repeat center center /contain;
+    width: 64px;
+    height: 64px;
+    margin-bottom: 15px;
+}
+.book-swiper-section .app-down-box::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    margin-left: -30px;
+    display: block;
+    width: 60px;
+    height: 1px;
+    background-color:#CAD3E8 ;
+}
+.book-swiper-section .app-down-box{
+    position: relative;
+    padding-top:56px;
+    text-align: center;
+}
+.book-swiper-section .app-down-box .info-text{
+    font-size: 2.4rem;
+    line-height: 32px;
+    color: var(--blue-grey-700);
+}
+.book-swiper-section .app-down-box .info-text > .bold{
+    font-family: "Pretendard Bold";
+}
+.book-swiper-section .app-down-box .btn-app-downs{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 36px;
+}
+.book-swiper-section .app-down-box .btn-app-down{
+    display: flex;
+width: 240px;
+height: 72px;
+padding: 20px 32px 20px 28px;
+justify-content: center;
+align-items: center;
+gap: 12px;
+font-size: 2rem;
+line-height: 32px;
+    border-radius: 8px;
+    border: 1px solid var(--Border-Border-primary, #E5E8EB);
+    background: var(--color-Secondary-White, #FFF);
+    box-shadow: 4px 4px 22px 0px rgba(194, 202, 255, 0.30);
+}
+
+.book-swiper-section .app-down-box .logo-apple,
+.book-swiper-section .app-down-box .logo-google{
+    width: 32px;
+    height: 32px;
+}
+
+
+.book-list-section{
+    background-color: #FBF7FF;
+    background: url(../images/bg-pink.png) no-repeat top center /cover;
+}
+.book-list-section .promotion-title{
+    display: inline-block;
+}
+.book-list-section .icon-free{
+    position: absolute;
+    top: -11px;
+    right: -28px;
+    display: inline-block;
+    background: url(../images/icon-free.png) no-repeat center center /contain;
+    width: 54px;
+    height: 38px;
+}
+
+.book-list-section .book-list-box{
+    margin-top: 82px;
+}
+.book-list-section .tabs-promo-black{
+    display: flex;
+}
+.book-list-section .tab-promo-black {
+    display: inline-block;
+    color: var(--blue-grey-600);
+    text-align: center;
+    font-size:2rem;
+    width: 100%;
+    border: 8px;
+    overflow: hidden;
+    padding: 24px 32px;
+    background-color: var(--white-color);
+    border-top: 1px solid var(--border-primary);
+    border-bottom: 1px solid var(--border-primary);
+    border-right: 1px solid var(--border-primary);
+}
+.book-list-section .tab-promo-black:first-child{
+    border-radius: 8px 0px 0px 0px;
+}
+.book-list-section .tab-promo-black:last-child{
+    border-radius: 0px 8px 0px 0px;
+}
+.book-list-section .tab-promo-black.active {
+    font-family: "Pretendard Bold";
+    background:var(--black-color);
+    color: var(--white-color);
+} 
+.book-list-section .tab-promo-content{
+     padding: 76px 53px 64px;
+     background-color: var(--white-color);
+     border-radius:0px 0px 8px 8px ;
+}
+.book-list-section .tab-promo-content .btn-promo-more{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Pretendard SemiBold";
+    font-size: 1.8rem;
+    line-height: 24px;
+    color: var(--blue-grey-500);
+    text-align: center;
+}
+.book-list-section .tab-promo-content .btn-promo-more > .icon-more{
+    display: inline-block;
+    background: url(../images/icon-more.svg) no-repeat center center / contain;
+    width: 24px;
+    height: 24px; 
+}
+
+.event-first-section{
+    background-color: var(--white-color);
+}
+.event-first-section .icon-event{
+    display: inline-block;
+    background: url(../images/img-event-first.png) no-repeat center center /contain;
+    width: 112px;
+    height: 52px;
+    margin-bottom: 28px;
+}
+.event-first-section .img-event-box{
+    position: relative;
+    max-width: 490px;
+    margin: 120px auto 34px;
+    z-index: 1;
+}
+.event-first-section .img-event-box::after{
+    content: '';
+    position: absolute;
+    top: -150px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: -1;
+    display: block;   
+    background: url(../images/img-event-text.png) no-repeat center center /contain;
+    width: 946px;
+    height: 212px;
+}
+.event-first-section .exam-box{
+    max-width: 804px;
+    margin: 56px auto 0px;
+}
+.event-first-section .exam-box::before{
+    content: '';
+    display: block;
+    height: 0.5px;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.20);
+}
+.event-first-section .exam-box .exam-box-header{
+    padding-top: 56px;
+    margin-bottom: 72px;
+    text-align: center;
+}
+.event-first-section .exam-box .exam-box-title{
+    font-family: "Pretendard Bold";
+    font-size: 4rem;
+    line-height: 60px; /* 150% */
+    letter-spacing: -1px;
+}
+.event-first-section .exam-box .exam-items{
+    display: flex;
+    align-items: center;
+    gap: 52px;
+}
+.event-first-section .exam-box .exam-item{
+    position: relative;
+}
+.event-first-section .exam-box .exam-thumb{
+    position: relative;
+    width: 100%;
+    height: 378px;
+    border-radius: 16px;
+    overflow: hidden;
+    background: #F7F8FF;
+}
+.event-first-section .exam-box .like-box{
+    position: absolute;
+    top: -25px;
+    left: 50%;
+    z-index: 1;
+    transform: translateX(-50%);
+}
+.event-first-section .exam-box .like{
+    display: inline-flex;
+    padding: 10px 24px;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    font-family: "Pretendard SemiBold";
+    font-size: 1.6rem;
+    line-height: 24px;
+    border-radius: 30px;
+    color: var(--white-color);
+    background: linear-gradient(90deg, rgba(137, 57, 232, 0.80) 0%, rgba(52, 161, 246, 0.80) 100%);
+}
+.event-first-section .exam-box .like .icon-heart{
+    background: url(../images/icon-heart.svg) no-repeat center center / contain;
+    width: 20px;
+    height: 20px; 
+}
+.event-first-section .exam-box .exam-item-title{
+    font-family: "Pretendard Bold";
+    font-size: 2.7rem;
+    margin-top: 24px;
+    margin-bottom: 32px;
+    text-align: center;
+}
+
+.event-second-section{
+    background-color: var(--white-color);
+    text-align: center;
+}
+.event-second-section .icon-event{
+    display: inline-block;
+    background: url(../images/img-event-second.png) no-repeat center center /contain;
+    width: 112px;
+    height: 52px;
+    margin-bottom: 28px;
+}
+.goods-box{
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    margin-top: 76px;
+    margin-bottom: 48px;
+}
+.event-second-section .goods-item{
+    width: 376px;
+    border-radius: 8px;
+    background: #F9FAFB;
+    padding-bottom: 48px;
+}
+
+.event-second-section .goods-item .goods-box-header{
+    font-family: "Pretendard Light";
+    border-radius: 8px 8px 0px 0px;
+    background: #87A8FF;
+    padding: 17px 20px;
+    font-size: 2.4rem;
+    color: var(--white-color);
+}
+.event-second-section .goods-item:nth-child(2) .goods-box-header{
+    background: #6D73FF;
+}
+.event-second-section .goods-item:nth-child(3) .goods-box-header{
+    background: #4E32F6;
+}
+.event-second-section .goods-item .goods-box-header .bold{
+    font-family: "Pretendard Bold";
+}
+.event-second-section .goods-item .goods-info-box .goods-name{
+    font-size: 2.4rem;
+    line-height: 36px;
+}
+.event-second-section .goods-item .goods-info-box .bold{
+    font-family: "Pretendard Bold";
+}
+.event-second-section .goods-item .goods-info-box .draw{
+    margin-top: 16px;
+    color: #555;
+    font-size: 1.8rem;
+    line-height: 26px;
+}
+
+
+.event-third-section{
+    padding-top:120px;
+    text-align: center;
+    background: linear-gradient(1800deg, rgba(220, 225, 255, 0.20) 0%, rgba(220, 225, 255, 0.20) 100%), linear-gradient(0deg, #DCE1FF 0%, #FFF 73%);
+}
+.event-third-section .icon-event{
+    display: inline-block;
+    background: url(../images/img-event-third.png) no-repeat center center /contain;
+    width: 112px;
+    height: 52px;
+    margin-bottom: 28px;
+}
+.event-third-section .img-event-box{
+    max-width: 756px;
+    margin: 60px auto 49px;
+}
+
+.event-third-section .promotion-step-box{
+    background-color: var(--white-color);
+    border-radius: 16px;
+    padding: 40px 40px;
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
+.event-third-section .promotion-step-text{
+    font-family: "Pretendard SemiBold";
+    color: #4E32F6;
+    font-size: 1.8rem;
+    line-height: 27px;
+    margin-bottom: 24px;
+}
+.event-third-section .promotion-step-title{
+    font-family: "Pretendard Bold";
+    font-size: 2.8rem;
+    line-height: 32px;
+}
+
+.event-third-section .event-share-box{
+    display: flex;
+    gap: 16px;
+    margin-top: 48px;
+}
+.event-third-section .event-share-img{
+    margin-bottom: 24px;
+}
+.event-third-section  .promotion-comment-box{
+
+}
+.event-third-section .promotion-comment-item{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size:14px;
+}
+.promotion-comment-box{margin-top: 42px;}
+.url-input-group .url-input-box{
+    display: flex;
+    align-items: center;
+    border: 1px solid transparent;
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+    background-image: linear-gradient(#fff, #fff), 
+    linear-gradient(to right, #8939E8 0%,  #32A4F6  100%);
+ border-radius: 8px;
+ overflow: hidden;
+}
+.url-input-group .name{
+    position: relative;
+    font-family: "Pretendard SemiBold";
+    font-size: 1.6rem;
+    line-height: 24px; /* 150% */
+    width: 102px;
+    flex-shrink: 0;
+    margin:0 24px;
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    white-space: normal;
+    text-overflow: ellipsis;
+    word-break: break-all;
+}
+.url-input-group .name-area{    
+    position: relative;margin-right: 24px;}
+.url-input-group .name-area::after{
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    right:0px;
+    width: 1px;
+    height: 24px;
+    background-color: var(--border-primary);
+}
+.url-input-group .input{
+    border: 0;
+    width: 100%;
+    height: 62px;
+    font-size: 1.6rem;
+    line-height: 24px; /* 150% */
+    letter-spacing: -0.056px;
+    color: var(--black-color);
+}
+.url-input-group .btn-url-input{
+    font-family: "Pretendard Bold";
+    font-size: 1.8rem;
+    color: var(--white-color);
+    background:  linear-gradient(to right, #8939E8 0%,  #32A4F6  100%);
+    padding: 8px 40px;
+    border: 0;
+    height: 62px;
+}
+.promotion-comment-list{
+    margin-top: 40px;
+}
+.romotion-comment-title{
+    font-family: "Pretendard SemiBold";
+    text-align: left;
+    font-size: 1.6rem;
+    line-height: 30px;
+    margin-bottom: 14px;
+}
+.promotion-comment-list .promotion-comment-items > li:nth-child(odd) {
+    background-color: #FBFCFC;
+}
+
+.promotion-comment-list .promotion-comment-items > li:nth-child(even) {
+ background-color: #F7F8FF;
+}
+
+.promotion-comment-list .promotion-comment-item{
+    padding: 16px 24px;
+    margin-bottom: 8px;
+    border-radius: 8px;
+}
+.promotion-comment-list .content-left{
+    display: flex;
+    align-items: center;
+}
+.promotion-comment-list .name-area{    
+    position: relative;
+    margin-right: 24px;
+}
+.promotion-comment-list .name-area::after{
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    right:0px;
+    width: 1px;
+    height: 20px;
+    background-color: var(--border-primary);
+}
+.promotion-comment-list .name{
+    font-family: "Pretendard SemiBold";
+    width: 72px;
+    color: #4E32F6;
+    font-size: 1.4rem;
+    line-height: 20px;
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    white-space: normal;
+    text-overflow: ellipsis;
+    word-break: break-all;
+    text-align: left;
+}
+.promotion-comment-list .url{
+    color: var(--blue-grey-700);
+    font-size: 1.4rem;
+line-height: 20px; 
+}
+.promotion-comment-list .date{
+    color: rgba(0, 0, 0, 0.30);
+text-align: right;
+font-size: 1.4rem;
+line-height: 20px; 
+}
+.promotion-comment-list .pagination-group{
+    margin-top: 56px;
+    margin-bottom: 8px;
+}
+
+.event-notice-box {
+    max-width: 568px;
+    border-radius: 20px;
+    background: #7265D3;
+    margin: 0 auto 10px;
+}
+.event-notice-box .event-notice summary::marker {
+    font-size: 0;
+}
+.event-notice-box .event-notice summary::-webkit-details-marker {
+    display: none;
+}
+.event-notice-box .event-notice summary {
+    list-style-type: none;
+}
+.event-notice-box .event-notice-header {
+    list-style: none;
+    cursor: default;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 32px 32px;
+}
+.event-notice-box .event-notice-header:after {
+    content: "";
+    position: absolute;
+    top: 32px;
+    right: 32px;
+    display: inline-block;
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+    transition: all 0.3s cubic-bezier(0,.21,.03,1.01);
+    background: url("../images/icon-arrow-bottom-white.svg") no-repeat center center / contain;
+    width: 32px;
+    height: 32px;
+}
+.event-notice-box .event-notice[open] .event-notice-header:after {
+    transition: all 0.3s cubic-bezier(0,.21,.03,1.01);
+    -webkit-transform: rotate(-180deg);
+    transform: rotate(-180deg);
+}
+
+.event-notice-box .event-notice .event-notice-title {
+    font-family: "Pretendard Bold";
+    font-size: 2rem;
+    line-height: 32px;
+    color: var(--white-color);
+}
+.event-notice-box .event-notice .event-notice-body {
+    display: block;
+    font-size: 1.4rem;
+    line-height: 20px;
+    padding: 0px 32px 32px;
+}
+.event-notice-list {
+    text-align: left;
+}
+
+.event-notice-list .event-notice-item{
+    position: relative;
+    font-family: "Pretendard Light";
+    color: rgba(255, 255, 255, 0.80);
+    font-size: 1.8rem;
+    line-height: 26px;
+    margin-bottom: 8px;
+    padding-left: 24px;
+}
+.event-notice-list .event-notice-item::after{
+    content: '';
+    position: absolute;
+    top: 12px;
+    left: 8px;
+    display: block;
+    width: 4px;
+    height: 4px;
+    background-color: rgba(255, 255, 255, 0.80);
+    border-radius: 8px;
+}
+.event-notice-list .event-notice-item:last-child{
+    margin-bottom: 0;
+}

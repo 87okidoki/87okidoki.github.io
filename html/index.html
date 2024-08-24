@@ -23,24 +23,27 @@
         <div class="container">
             <!--해더 시작-->
             <section class="header-section" id="header">
-                <!--수정 0712 시작-->
                 <header class="header">
                     <div class="header-group">
                         <div class="header-left">
                             <div class="mo-nav-btns">
-                                <button class="btn-menu" type="button" class="btn btn-transparent" id="openMobileCategorylayer">
+                                <button class="btn-menu" type="button" id="openMobileCategorylayer">
                                     <i class="icon-menu-24"><span class="blind">메뉴</span></i>
                                 </button>
                             </div>
+                            <!-- 7.29 메뉴 버튼 id 수정 시작 -->
+                            <div class="pc-nav-menu">
+                                <button class="btn-menu" type="button" id="togglePcCategorylayer">
+                                    <i class="icon"><span class="blind">메뉴</span></i>
+                                </button>
+                            </div>
+                            <!-- 7.29 메뉴 버튼 id 수정 끝 -->
                             <a href="#" class="logo">
                                 <h1>
-                                    <img src="../assest/images/logo-meBook.svg" alt="meBook" />
+                                    <img src="../assest/images/logo-meBook-store.svg" alt="meBook 스토어" />
                                 </h1>
                             </a>
                             <nav class="pc-nav-btns">
-                                <button class="btn-menu" type="button" class="btn btn-transparent" id="togglePcCategorylayer">
-                                    <i class="icon"><span class="blind">메뉴</span></i>
-                                </button>
                                 <ul class="nav-btn-items">
                                     <li class="nav-btn-item"><a href="">베스트셀러</a></li>
                                     <li class="nav-btn-item"><a href="">신간도서</a></li>
@@ -49,16 +52,18 @@
                             </nav>
                         </div>
                         <div class="header-right">
-                            <a href="#" class="btn btn-transparent">
-                                <span class="icon-search">
-                                    <span class="blind">검색</span>
-                                </span>
-                            </a>
-                            <a href="#" class="btn btn-transparent btn-cart">
-                                <i class="icon-cart"><span class="blind">장바구니</span></i>
-                                <span class="badge-count">5</span>
-                            </a>
-                            <a href="#" class="btn btn-transparent"><i class="icon-mypage"><span class="blind">마이페이지</span></i></a>
+                            <div class="btns">
+                                <a href="#" class="btn btn-transparent">
+                                    <span class="icon-search">
+                                        <span class="blind">검색</span>
+                                    </span>
+                                </a>
+                                <a href="#" class="btn btn-transparent btn-cart">
+                                    <i class="icon-cart"><span class="blind">장바구니</span></i>
+                                    <span class="badge-count">5</span>
+                                </a>
+                                <a href="#" class="btn btn-transparent"><i class="icon-mypage"><span class="blind">마이페이지</span></i></a>
+                            </div>
                             <a href="#" class="btn-app-down">
                                 <span class="btn-app-down-img">
                                     <span class="image-wrap">
@@ -72,7 +77,7 @@
                         </div>
                     </div>
                 </header>
-                <!--수정 0712 끝-->
+                <!-- 7.29 메뉴 레이어 시작 -->
                 <!-- mobile 메뉴 레이어 시작 -->
                 <article class="mo-menu-layer-group off" id="mobileCategorylayerOverlay">
                     <h3 class="blind">메뉴</h3>
@@ -106,7 +111,7 @@
                                 </ul>
                                 <a href="" class="btn-mo-menu">기출문제 자료실</a>
                             </div>
-                             <!-- e-Book 시작 -->
+                            <!-- e-Book 시작 -->
                             <section class="mo-menu-body-right mo-ebook-section on" id="moTab1">
                                 <ul class="btn-tab-line-area">
                                     <li class="on">
@@ -119,10 +124,12 @@
                                 <!-- 카테고리 시작 -->
                                 <div class="btn-tab-line-content mo-category-content on scroll" id="moSubTab1">
                                     <div class="mo-menu-link-group">
+                                        <!--8.8 모바일 메뉴 변경 시작-->
                                         <div class="mo-menu-depth1">
-                                            <span class="text">고등 참고서</span>
+                                            <span class="text">외국어</span>
                                             <span class="icon"><span class="blind">더보기</span></span>
                                         </div>
+                                        <!--8.8 모바일 메뉴 변경 끝-->
                                         <ul class="mo-menu-depth2">
                                             <li class="menu-link-item"><a href="#">수험서</a></li>
                                             <li class="menu-link-item"><a href="#">외국어</a></li>
@@ -134,7 +141,7 @@
                                     </div>
                                     <div class="mo-menu-link-group">
                                         <div class="mo-menu-depth1">
-                                            <span class="text">취업 수험서</span>
+                                            <span class="text">외국어</span>
                                             <span class="icon"><span class="blind">더보기</span></span>
                                         </div>
                                         <ul class="mo-menu-depth2">
@@ -162,7 +169,7 @@
                                     </div>
                                     <div class="mo-menu-link-group">
                                         <div class="mo-menu-depth1">
-                                            <span class="text">자격증</span>
+                                            <span class="text">외국어</span>
                                             <span class="icon"><span class="blind">더보기</span></span>
                                         </div>
                                         <ul class="mo-menu-depth2">
@@ -176,7 +183,7 @@
                                     </div>
                                     <div class="mo-menu-link-group">
                                         <div class="mo-menu-depth1">
-                                            <span class="text">대학 교재</span>
+                                            <span class="text">외국어</span>
                                             <span class="icon"><span class="blind">더보기</span></span>
                                         </div>
                                         <ul class="mo-menu-depth2">
@@ -191,60 +198,97 @@
                                 </div>
                                 <!-- 카테고리 끝 -->
                                 <!-- 출판사 시작 -->
+                                 <!-- 리스트 노출 순서명 개발 필요-->
                                 <div class="btn-tab-line-content mo-publisher-content on scroll" id="moSubTab2">
-                                    <div class="publisher-swiper-group">
-                                        <button type="button" class="btn btn-change">가나다순 <i class="icon"><span class="blind">변경</span></i></button>
+                                    <!-- <div class="publisher-swiper-group">
+                                        <button type="button" class="btn btn-change" id="btnChange">
+                                            가나다순 <i class="icon"><span class="blind">변경</span></i>
+                                        </button>
                                         <div class="publisher-swiper" id="textSwiper">
                                             <div class="swiper-wrapper">
                                                 <div class="swiper-slide">
-                                                    <button type="button" class="btn-toggle-text">
+                                                    <button type="button" class="btn btn-toggle-text">
                                                         전체
                                                     </button>
                                                 </div>
-                                                <div class="swiper-slide"> 
-                                                    <button type="button" class="btn-toggle-text">
+                                                <div class="swiper-slide">
+                                                    <button type="button" class="btn btn-toggle-text">
                                                         ㄱ
                                                     </button>
                                                 </div>
-                                                <div class="swiper-slide"> 
-                                                    <button type="button" class="btn-toggle-text">
+                                                <div class="swiper-slide">
+                                                    <button type="button" class="btn btn-toggle-text">
                                                         ㄴ
                                                     </button>
                                                 </div>
-                                                <div class="swiper-slide"> 
-                                                    <button type="button" class="btn-toggle-text">
+                                                <div class="swiper-slide">
+                                                    <button type="button" class="btn btn-toggle-text">
                                                         ㄷ
                                                     </button>
                                                 </div>
-                                                <div class="swiper-slide"> 
-                                                    <button type="button" class="btn-toggle-text">
+                                                <div class="swiper-slide">
+                                                    <button type="button" class="btn btn-toggle-text">
                                                         ㄹ
                                                     </button>
                                                 </div>
-                                                <div class="swiper-slide"> 
-                                                    <button type="button" class="btn-toggle-text">
+                                                <div class="swiper-slide">
+                                                    <button type="button" class="btn btn-toggle-text">
                                                         ㅁ
                                                     </button>
                                                 </div>
-                                                <div class="swiper-slide"> 
-                                                    <button type="button" class="btn-toggle-text">
+                                                <div class="swiper-slide">
+                                                    <button type="button" class="btn btn-toggle-text">
                                                         ㅂ
                                                     </button>
                                                 </div>
-                                                <div class="swiper-slide"> 
-                                                    <button type="button" class="btn-toggle-text">
+                                                <div class="swiper-slide">
+                                                    <button type="button" class="btn btn-toggle-text">
                                                         ㅅ
+                                                    </button>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <button type="button" class="btn btn-toggle-text">
+                                                        ㅇ
+                                                    </button>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <button type="button" class="btn btn-toggle-text">
+                                                        ㅈ
+                                                    </button>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <button type="button" class="btn btn-toggle-text">
+                                                        ㅊ
+                                                    </button>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <button type="button" class="btn btn-toggle-text">
+                                                        ㅋ
+                                                    </button>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <button type="button" class="btn btn-toggle-text">
+                                                        ㅌ
+                                                    </button>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <button type="button" class="btn btn-toggle-text">
+                                                        ㅍ
+                                                    </button>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <button type="button" class="btn btn-toggle-text">
+                                                        ㅎ
                                                     </button>
                                                 </div>
                                             </div>
                                         </div>
-    
-                                    </div>
+                                    </div> -->
                                     <div class="publisher-thumb">
                                         <div class="menu-thumb-items">
                                             <a href="#" class="menu-thumb-link">
                                                 <span class="thumb">
-                                                    <img src="../assest/images/img-book-dummy-03.png" alt="">
+                                                    <img src="../assest/images/img-dummy-bi.png" alt="">
                                                 </span>
                                                 <span class="thumb-title">
                                                     메가스터디북스
@@ -252,7 +296,7 @@
                                             </a>
                                             <a href="#" class="menu-thumb-link">
                                                 <span class="thumb">
-                                                    <img src="../assest/images/img-book-dummy-03.png" alt="">
+                                                    <img src="../assest/images/img-dummy-bi.png" alt="">
                                                 </span>
                                                 <span class="thumb-title">
                                                     메가스터디북스
@@ -260,7 +304,7 @@
                                             </a>
                                             <a href="#" class="menu-thumb-link">
                                                 <span class="thumb">
-                                                    <img src="../assest/images/img-book-dummy-03.png" alt="">
+                                                    <img src="../assest/images/img-dummy-bi.png" alt="">
                                                 </span>
                                                 <span class="thumb-title">
                                                     메가스터디북스
@@ -268,7 +312,7 @@
                                             </a>
                                             <a href="#" class="menu-thumb-link">
                                                 <span class="thumb">
-                                                    <img src="../assest/images/img-book-dummy-03.png" alt="">
+                                                    <img src="../assest/images/img-dummy-bi.png" alt="">
                                                 </span>
                                                 <span class="thumb-title">
                                                     메가스터디북스
@@ -276,7 +320,7 @@
                                             </a>
                                             <a href="#" class="menu-thumb-link">
                                                 <span class="thumb">
-                                                    <img src="../assest/images/img-book-dummy-03.png" alt="">
+                                                    <img src="../assest/images/img-dummy-bi.png" alt="">
                                                 </span>
                                                 <span class="thumb-title">
                                                     메가스터디북스
@@ -284,7 +328,7 @@
                                             </a>
                                             <a href="#" class="menu-thumb-link">
                                                 <span class="thumb">
-                                                    <img src="../assest/images/img-book-dummy-03.png" alt="">
+                                                    <img src="../assest/images/img-dummy-bi.png" alt="">
                                                 </span>
                                                 <span class="thumb-title">
                                                     메가스터디북스
@@ -292,15 +336,7 @@
                                             </a>
                                             <a href="#" class="menu-thumb-link">
                                                 <span class="thumb">
-                                                    <img src="../assest/images/img-book-dummy-03.png" alt="">
-                                                </span>
-                                                <span class="thumb-title">
-                                                    메가스터디북스
-                                                </span>
-                                            </a>                                            
-                                            <a href="#" class="menu-thumb-link">
-                                                <span class="thumb">
-                                                    <img src="../assest/images/img-book-dummy-03.png" alt="">
+                                                    <img src="../assest/images/img-dummy-bi.png" alt="">
                                                 </span>
                                                 <span class="thumb-title">
                                                     메가스터디북스
@@ -308,158 +344,7 @@
                                             </a>
                                             <a href="#" class="menu-thumb-link">
                                                 <span class="thumb">
-                                                    <img src="../assest/images/img-book-dummy-03.png" alt="">
-                                                </span>
-                                                <span class="thumb-title">
-                                                    메가스터디북스
-                                                </span>
-                                            </a>
-                                            <a href="#" class="menu-thumb-link">
-                                                <span class="thumb">
-                                                    <img src="../assest/images/img-book-dummy-03.png" alt="">
-                                                </span>
-                                                <span class="thumb-title">
-                                                    메가스터디북스
-                                                </span>
-                                            </a>
-                                            <a href="#" class="menu-thumb-link">
-                                                <span class="thumb">
-                                                    <img src="../assest/images/img-book-dummy-03.png" alt="">
-                                                </span>
-                                                <span class="thumb-title">
-                                                    메가스터디북스
-                                                </span>
-                                            </a>
-                                            <a href="#" class="menu-thumb-link">
-                                                <span class="thumb">
-                                                    <img src="../assest/images/img-book-dummy-03.png" alt="">
-                                                </span>
-                                                <span class="thumb-title">
-                                                    메가스터디북스
-                                                </span>
-                                            </a>
-                                            <a href="#" class="menu-thumb-link">
-                                                <span class="thumb">
-                                                    <img src="../assest/images/img-book-dummy-03.png" alt="">
-                                                </span>
-                                                <span class="thumb-title">
-                                                    메가스터디북스
-                                                </span>
-                                            </a>                                            
-                                            <a href="#" class="menu-thumb-link">
-                                                <span class="thumb">
-                                                    <img src="../assest/images/img-book-dummy-03.png" alt="">
-                                                </span>
-                                                <span class="thumb-title">
-                                                    메가스터디북스
-                                                </span>
-                                            </a>
-                                            <a href="#" class="menu-thumb-link">
-                                                <span class="thumb">
-                                                    <img src="../assest/images/img-book-dummy-03.png" alt="">
-                                                </span>
-                                                <span class="thumb-title">
-                                                    메가스터디북스
-                                                </span>
-                                            </a>
-                                            <a href="#" class="menu-thumb-link">
-                                                <span class="thumb">
-                                                    <img src="../assest/images/img-book-dummy-03.png" alt="">
-                                                </span>
-                                                <span class="thumb-title">
-                                                    메가스터디북스
-                                                </span>
-                                            </a>
-                                            <a href="#" class="menu-thumb-link">
-                                                <span class="thumb">
-                                                    <img src="../assest/images/img-book-dummy-03.png" alt="">
-                                                </span>
-                                                <span class="thumb-title">
-                                                    메가스터디북스
-                                                </span>
-                                            </a>
-                                            <a href="#" class="menu-thumb-link">
-                                                <span class="thumb">
-                                                    <img src="../assest/images/img-book-dummy-03.png" alt="">
-                                                </span>
-                                                <span class="thumb-title">
-                                                    메가스터디북스
-                                                </span>
-                                            </a>
-                                            <a href="#" class="menu-thumb-link">
-                                                <span class="thumb">
-                                                    <img src="../assest/images/img-book-dummy-03.png" alt="">
-                                                </span>
-                                                <span class="thumb-title">
-                                                    메가스터디북스
-                                                </span>
-                                            </a>                                            
-                                            <a href="#" class="menu-thumb-link">
-                                                <span class="thumb">
-                                                    <img src="../assest/images/img-book-dummy-03.png" alt="">
-                                                </span>
-                                                <span class="thumb-title">
-                                                    메가스터디북스
-                                                </span>
-                                            </a>
-                                            <a href="#" class="menu-thumb-link">
-                                                <span class="thumb">
-                                                    <img src="../assest/images/img-book-dummy-03.png" alt="">
-                                                </span>
-                                                <span class="thumb-title">
-                                                    메가스터디북스
-                                                </span>
-                                            </a>
-                                            <a href="#" class="menu-thumb-link">
-                                                <span class="thumb">
-                                                    <img src="../assest/images/img-book-dummy-03.png" alt="">
-                                                </span>
-                                                <span class="thumb-title">
-                                                    메가스터디북스
-                                                </span>
-                                            </a>
-                                            <a href="#" class="menu-thumb-link">
-                                                <span class="thumb">
-                                                    <img src="../assest/images/img-book-dummy-03.png" alt="">
-                                                </span>
-                                                <span class="thumb-title">
-                                                    메가스터디북스
-                                                </span>
-                                            </a>
-                                            <a href="#" class="menu-thumb-link">
-                                                <span class="thumb">
-                                                    <img src="../assest/images/img-book-dummy-03.png" alt="">
-                                                </span>
-                                                <span class="thumb-title">
-                                                    메가스터디북스
-                                                </span>
-                                            </a>
-                                            <a href="#" class="menu-thumb-link">
-                                                <span class="thumb">
-                                                    <img src="../assest/images/img-book-dummy-03.png" alt="">
-                                                </span>
-                                                <span class="thumb-title">
-                                                    출판사명 출판사명 두 줄 넘어갈 때 예시
-                                                </span>
-                                            </a>
-                                            <a href="#" class="menu-thumb-link">
-                                                <span class="thumb">
-                                                    <img src="../assest/images/img-book-dummy-03.png" alt="">
-                                                </span>
-                                                <span class="thumb-title">
-                                                    메가스터디북스
-                                                </span>
-                                            </a><a href="#" class="menu-thumb-link">
-                                                <span class="thumb">
-                                                    <img src="../assest/images/img-book-dummy-03.png" alt="">
-                                                </span>
-                                                <span class="thumb-title">
-                                                    메가스터디북스
-                                                </span>
-                                            </a>
-                                            <a href="#" class="menu-thumb-link">
-                                                <span class="thumb">
-                                                    <img src="../assest/images/img-book-dummy-03.png" alt="">
+                                                    <img src="../assest/images/img-dummy-bi.png" alt="">
                                                 </span>
                                                 <span class="thumb-title">
                                                     메가스터디북스
@@ -470,22 +355,27 @@
                                 </div>
                                 <!-- 출판사 끝 -->
                             </section>
-                             <!-- e-Book 끝 -->
-                             <!-- Digital goods 시작 -->
+                            <!-- e-Book 끝 -->
+                            <!-- Digital goods 시작 -->
                             <section class="mo-menu-body-right mo-digital-goods-section scroll" id="moTab2">
                                 <div class="digital-goods-links">
-                                    <a href="#" class="menu-link-title"><span class="text">다이어리/플래너</span><i class="icon"><span class="blind">더보기</span></i></a>
-                                    <a href="#" class="menu-link-title"><span class="text">한 권 노트</span><i class="icon"><span class="blind">더보기</span></i></a>
-                                    <a href="#" class="menu-link-title"><span class="text">노트 커버</span><i class="icon"><span class="blind">더보기</span></i></a>
-                                    <a href="#" class="menu-link-title"><span class="text">노트 속지</span><i class="icon"><span class="blind">더보기</span></i></a>
-                                    <a href="#" class="menu-link-title"><span class="text">스티커</span><i class="icon"><span class="blind">더보기</span></i></a>    
+                                    <a href="#" class="menu-link-title"><span class="text">다이어리/플래너</span><i class="icon"><span
+                                                class="blind">더보기</span></i></a>
+                                    <a href="#" class="menu-link-title"><span class="text">한 권 노트</span><i class="icon"><span
+                                                class="blind">더보기</span></i></a>
+                                    <a href="#" class="menu-link-title"><span class="text">노트 커버</span><i class="icon"><span
+                                                class="blind">더보기</span></i></a>
+                                    <a href="#" class="menu-link-title"><span class="text">노트 속지</span><i class="icon"><span
+                                                class="blind">더보기</span></i></a>
+                                    <a href="#" class="menu-link-title"><span class="text">스티커</span><i class="icon"><span
+                                                class="blind">더보기</span></i></a>
                                 </div>
                                 <div class="mo-digital-goods-thumbs">
                                     <h3 class="title">추천 작가</h3>
                                     <div class="menu-thumb-items">
                                         <a href="#" class="menu-thumb-link">
                                             <span class="thumb">
-                                                <img src="../assest/images/img-book-dummy-03.png" alt="">
+                                                <img src="../assest/images/img-dummy-bi.png" alt="">
                                             </span>
                                             <span class="thumb-title">
                                                 메가스터디북스
@@ -493,7 +383,7 @@
                                         </a>
                                         <a href="#" class="menu-thumb-link">
                                             <span class="thumb">
-                                                <img src="../assest/images/img-book-dummy-03.png" alt="">
+                                                <img src="../assest/images/img-dummy-bi.png" alt="">
                                             </span>
                                             <span class="thumb-title">
                                                 메가스터디북스
@@ -501,7 +391,7 @@
                                         </a>
                                         <a href="#" class="menu-thumb-link">
                                             <span class="thumb">
-                                                <img src="../assest/images/img-book-dummy-03.png" alt="">
+                                                <img src="../assest/images/img-dummy-bi.png" alt="">
                                             </span>
                                             <span class="thumb-title">
                                                 메가스터디북스
@@ -509,7 +399,7 @@
                                         </a>
                                         <a href="#" class="menu-thumb-link">
                                             <span class="thumb">
-                                                <img src="../assest/images/img-book-dummy-03.png" alt="">
+                                                <img src="../assest/images/img-dummy-bi.png" alt="">
                                             </span>
                                             <span class="thumb-title">
                                                 메가스터디북스
@@ -517,7 +407,7 @@
                                         </a>
                                         <a href="#" class="menu-thumb-link">
                                             <span class="thumb">
-                                                <img src="../assest/images/img-book-dummy-03.png" alt="">
+                                                <img src="../assest/images/img-dummy-bi.png" alt="">
                                             </span>
                                             <span class="thumb-title">
                                                 메가스터디북스
@@ -525,14 +415,7 @@
                                         </a>
                                         <a href="#" class="menu-thumb-link">
                                             <span class="thumb">
-                                                <img src="../assest/images/img-book-dummy-03.png" alt="">
-                                            </span>
-                                            <span class="thumb-title">
-                                                메가스터디북스
-                                            </span>
-                                        </a>   <a href="#" class="menu-thumb-link">
-                                            <span class="thumb">
-                                                <img src="../assest/images/img-book-dummy-03.png" alt="">
+                                                <img src="../assest/images/img-dummy-bi.png" alt="">
                                             </span>
                                             <span class="thumb-title">
                                                 메가스터디북스
@@ -540,7 +423,7 @@
                                         </a>
                                         <a href="#" class="menu-thumb-link">
                                             <span class="thumb">
-                                                <img src="../assest/images/img-book-dummy-03.png" alt="">
+                                                <img src="../assest/images/img-dummy-bi.png" alt="">
                                             </span>
                                             <span class="thumb-title">
                                                 메가스터디북스
@@ -548,132 +431,7 @@
                                         </a>
                                         <a href="#" class="menu-thumb-link">
                                             <span class="thumb">
-                                                <img src="../assest/images/img-book-dummy-03.png" alt="">
-                                            </span>
-                                            <span class="thumb-title">
-                                                메가스터디북스
-                                            </span>
-                                        </a>
-                                        <a href="#" class="menu-thumb-link">
-                                            <span class="thumb">
-                                                <img src="../assest/images/img-book-dummy-03.png" alt="">
-                                            </span>
-                                            <span class="thumb-title">
-                                                메가스터디북스
-                                            </span>
-                                        </a>
-                                        <a href="#" class="menu-thumb-link">
-                                            <span class="thumb">
-                                                <img src="../assest/images/img-book-dummy-03.png" alt="">
-                                            </span>
-                                            <span class="thumb-title">
-                                                메가스터디북스
-                                            </span>
-                                        </a>
-                                        <a href="#" class="menu-thumb-link">
-                                            <span class="thumb">
-                                                <img src="../assest/images/img-book-dummy-03.png" alt="">
-                                            </span>
-                                            <span class="thumb-title">
-                                                메가스터디북스
-                                            </span>
-                                        </a>   <a href="#" class="menu-thumb-link">
-                                            <span class="thumb">
-                                                <img src="../assest/images/img-book-dummy-03.png" alt="">
-                                            </span>
-                                            <span class="thumb-title">
-                                                메가스터디북스
-                                            </span>
-                                        </a>
-                                        <a href="#" class="menu-thumb-link">
-                                            <span class="thumb">
-                                                <img src="../assest/images/img-book-dummy-03.png" alt="">
-                                            </span>
-                                            <span class="thumb-title">
-                                                메가스터디북스
-                                            </span>
-                                        </a>
-                                        <a href="#" class="menu-thumb-link">
-                                            <span class="thumb">
-                                                <img src="../assest/images/img-book-dummy-03.png" alt="">
-                                            </span>
-                                            <span class="thumb-title">
-                                                메가스터디북스
-                                            </span>
-                                        </a>   <a href="#" class="menu-thumb-link">
-                                            <span class="thumb">
-                                                <img src="../assest/images/img-book-dummy-03.png" alt="">
-                                            </span>
-                                            <span class="thumb-title">
-                                                메가스터디북스
-                                            </span>
-                                        </a>
-                                        <a href="#" class="menu-thumb-link">
-                                            <span class="thumb">
-                                                <img src="../assest/images/img-book-dummy-03.png" alt="">
-                                            </span>
-                                            <span class="thumb-title">
-                                                메가스터디북스
-                                            </span>
-                                        </a>
-                                        <a href="#" class="menu-thumb-link">
-                                            <span class="thumb">
-                                                <img src="../assest/images/img-book-dummy-03.png" alt="">
-                                            </span>
-                                            <span class="thumb-title">
-                                                메가스터디북스
-                                            </span>
-                                        </a>
-                                        <a href="#" class="menu-thumb-link">
-                                            <span class="thumb">
-                                                <img src="../assest/images/img-book-dummy-03.png" alt="">
-                                            </span>
-                                            <span class="thumb-title">
-                                                메가스터디북스
-                                            </span>
-                                        </a>
-                                        <a href="#" class="menu-thumb-link">
-                                            <span class="thumb">
-                                                <img src="../assest/images/img-book-dummy-03.png" alt="">
-                                            </span>
-                                            <span class="thumb-title">
-                                                메가스터디북스
-                                            </span>
-                                        </a>
-                                        <a href="#" class="menu-thumb-link">
-                                            <span class="thumb">
-                                                <img src="../assest/images/img-book-dummy-03.png" alt="">
-                                            </span>
-                                            <span class="thumb-title">
-                                                메가스터디북스
-                                            </span>
-                                        </a>
-                                        <a href="#" class="menu-thumb-link">
-                                            <span class="thumb">
-                                                <img src="../assest/images/img-book-dummy-03.png" alt="">
-                                            </span>
-                                            <span class="thumb-title">
-                                                출판사명 출판사명 두 줄 넘어갈 때 예시
-                                            </span>
-                                        </a>
-                                        <a href="#" class="menu-thumb-link">
-                                            <span class="thumb">
-                                                <img src="../assest/images/img-book-dummy-03.png" alt="">
-                                            </span>
-                                            <span class="thumb-title">
-                                                메가스터디북스
-                                            </span>
-                                        </a><a href="#" class="menu-thumb-link">
-                                            <span class="thumb">
-                                                <img src="../assest/images/img-book-dummy-03.png" alt="">
-                                            </span>
-                                            <span class="thumb-title">
-                                                메가스터디북스
-                                            </span>
-                                        </a>
-                                        <a href="#" class="menu-thumb-link">
-                                            <span class="thumb">
-                                                <img src="../assest/images/img-book-dummy-03.png" alt="">
+                                                <img src="../assest/images/img-dummy-bi.png" alt="">
                                             </span>
                                             <span class="thumb-title">
                                                 메가스터디북스
@@ -714,7 +472,7 @@
                                     </div>
                                 </div>
                             </section>
-                             <!-- 무료 도서/굿즈 끝 -->
+                            <!-- 무료 도서/굿즈 끝 -->
                         </nav>
                     </div>
                 </article>
@@ -727,21 +485,25 @@
                                 <div class="btn-tab-menu-area">
                                     <ul>
                                         <li class="on">
-                                            <a href="#tab1" class="btn-tab-menu"><span class="text">e-Book</span><i class="icon"><span class="blind">더보기</span></i></a>
+                                            <a href="#tab1" class="btn-tab-menu"><span class="text">e-Book</span><i class="icon"><span
+                                                        class="blind">더보기</span></i></a>
                                         </li>
                                         <li>
-                                            <a href="#tab2" class="btn-tab-menu"><span class="text">Digital goods</span><i class="icon"><span class="blind">더보기</span></i></a>
+                                            <a href="#tab2" class="btn-tab-menu"><span class="text">Digital goods</span><i
+                                                    class="icon"><span class="blind">더보기</span></i></a>
                                         <li>
-                                            <a href="#tab3" class="btn-tab-menu"><span class="text">무료 도서/굿즈</span><i class="icon"><span class="blind">더보기</span></i></a>
+                                            <a href="#tab3" class="btn-tab-menu"><span class="text">무료 도서/굿즈</span><i class="icon"><span
+                                                        class="blind">더보기</span></i></a>
                                         </li>
                                     </ul>
-                                    <a href="#" class="btn-tab-menu"><span class="text">기출문제 자료실</span><i class="icon plus"><span class="blind">더보기</span></i></a>
+                                    <a href="#" class="btn-tab-menu"><span class="text">기출문제 자료실</span><i class="icon plus"><span
+                                                class="blind">더보기</span></i></a>
                                 </div>
                                 <a href="#" class="banner">
-                                    <img src="../assest/images/img-menu-dummy-banner.png" alt=""/>
+                                    <img src="../assest/images/img-menu-dummy-banner.png" alt="" />
                                 </a>
                             </div>
-                             <!-- e-Book 시작-->
+                            <!-- e-Book 시작-->
                             <section class="menu-body-right on eBook-section" id="tab1">
                                 <ul class="btn-tab-line-area">
                                     <li class="on">
@@ -756,12 +518,20 @@
                                     <div class="menu-link-group">
                                         <div class="menu-link-lists">
                                             <div class="menu-link-list-area">
-                                                <a href="#" class="menu-link-title"><span class="text">고등 참고서</span><i class="icon"><span class="blind">더보기</span></i></a>
+                                                <a href="#" class="menu-link-title">
+                                                    <span class="text">고등 참고서</span><i
+                                                        class="icon"><span class="blind">더보기</span></i>
+                                                    </a>
                                                 <ul class="menu-link-list">
                                                     <li class="menu-link-item">
-                                                        <button type="button" class="btn-menu-link">
-                                                            <span class="text">국어</span><i class="icon"><span class="blind">더보기</span></i>
-                                                        </button>
+                                                        <!--8.8 메뉴 구조 변경 시작-->
+                                                        <div class="menu-link-depth1-item">
+                                                            <a href="#" class="btn-menu-link">국어</a>
+                                                            <button type="button" class="btn-menu-more">
+                                                                <i class="icon"><span class="blind">더보기</span></i>
+                                                            </button>
+                                                        </div>
+                                                        <!--8.8 메뉴 구조 변경 끝-->
                                                         <ul class="menu-link-depth2-list">
                                                             <li class="menu-link-depth2-item"><a href="#">수학</a></li>
                                                             <li class="menu-link-depth2-item"><a href="#">영어</a></li>
@@ -771,9 +541,34 @@
                                                         </ul>
                                                     </li>
                                                     <li class="menu-link-item">
-                                                        <button type="button" class="btn-menu-link">
-                                                            <span class="text">수학</span><i class="icon"><span class="blind">더보기</span></i>
-                                                        </button>
+                                                        <div class="menu-link-depth1-item">
+                                                            <a href="#"  class="btn-menu-link">수학</a>
+                                                            <button type="button" class="btn-menu-more">
+                                                                <i class="icon"><span class="blind">더보기</span></i>
+                                                            </button>
+                                                        </div>
+                                                        <ul class="menu-link-depth2-list">
+                                                            <li class="menu-link-depth2-item"><a href="#">수학</a></li>
+                                                            <li class="menu-link-depth2-item"><a href="#">영어</a></li>
+                                                            <li class="menu-link-depth2-item"><a href="#">한국사</a></li>
+                                                            <li class="menu-link-depth2-item"><a href="#">대학교재</a></li>
+                                                            <li class="menu-link-depth2-item"><a href="#">그 외’s</a></li>
+                                                        </ul>
+                                                    </li>
+                                                    <!--8.8 2뎁스 없는 메뉴 구조 변경 시작-->
+                                                    <li class="menu-link-item">
+                                                        <div class="menu-link-depth1-item">
+                                                            <a href="#"  class="btn-menu-link">영어</a>
+                                                        </div>
+                                                    </li>
+                                                    <!--8.8 2뎁스 없는 메뉴 구조 변경 끝-->
+                                                    <li class="menu-link-item">
+                                                        <div class="menu-link-depth1-item">
+                                                            <a href="#"  class="btn-menu-link">한국사</a>
+                                                            <button type="button" class="btn-menu-more">
+                                                                <i class="icon"><span class="blind">더보기</span></i>
+                                                            </button>
+                                                        </div>
                                                         <ul class="menu-link-depth2-list">
                                                             <li class="menu-link-depth2-item"><a href="#">수학</a></li>
                                                             <li class="menu-link-depth2-item"><a href="#">영어</a></li>
@@ -783,26 +578,12 @@
                                                         </ul>
                                                     </li>
                                                     <li class="menu-link-item">
-                                                        <a href="" class="btn-menu-link">
-                                                            <span class="text">영어</span>
-                                                        </a>
-                                                    </li>
-                                                    <li class="menu-link-item">
-                                                        <button type="button" class="btn-menu-link">
-                                                            <span class="text">한국사</span><span class="icon"><i class="blind">더보기</span></i>
-                                                        </button>
-                                                        <ul class="menu-link-depth2-list">
-                                                            <li class="menu-link-depth2-item"><a href="#">수학</a></li>
-                                                            <li class="menu-link-depth2-item"><a href="#">영어</a></li>
-                                                            <li class="menu-link-depth2-item"><a href="#">한국사</a></li>
-                                                            <li class="menu-link-depth2-item"><a href="#">대학교재</a></li>
-                                                            <li class="menu-link-depth2-item"><a href="#">그 외’s</a></li>
-                                                        </ul>
-                                                    </li>
-                                                    <li class="menu-link-item">
-                                                        <button type="button" class="btn-menu-link">
-                                                            <span class="text">사회</span><span class="icon"><i class="blind">더보기</span></i>
-                                                        </button>
+                                                        <div class="menu-link-depth1-item">
+                                                            <a href="#"  class="btn-menu-link">사회</a>
+                                                            <button type="button" class="btn-menu-more">
+                                                                <i class="icon"><span class="blind">더보기</span></i>
+                                                            </button>
+                                                        </div>
                                                         <ul class="menu-link-depth2-list">
                                                             <li class="menu-link-depth2-item"><a href="#">수학</a></li>
                                                             <li class="menu-link-depth2-item"><a href="#">영어</a></li>
@@ -814,12 +595,16 @@
                                                 </ul>
                                             </div>
                                             <div class="menu-link-list-area">
-                                                <a href="#" class="menu-link-title"><span class="text">고등 참고서</span><i class="icon"><span class="blind">더보기</span></i></a>
+                                                <a href="#" class="menu-link-title"><span class="text">고등 참고서</span><i
+                                                        class="icon"><span class="blind">더보기</span></i></a>
                                                 <ul class="menu-link-list">
                                                     <li class="menu-link-item">
-                                                        <button type="button" class="btn-menu-link">
-                                                            <span class="text">국어</span><i class="icon"><span class="blind">더보기</span></i>
-                                                        </button>
+                                                        <div class="menu-link-depth1-item">
+                                                            <a href="#"  class="btn-menu-link">국어</a>
+                                                            <button type="button" class="btn-menu-more">
+                                                                <i class="icon"><span class="blind">더보기</span></i>
+                                                            </button>
+                                                        </div>
                                                         <ul class="menu-link-depth2-list">
                                                             <li class="menu-link-depth2-item"><a href="#">수학</a></li>
                                                             <li class="menu-link-depth2-item"><a href="#">영어</a></li>
@@ -829,9 +614,12 @@
                                                         </ul>
                                                     </li>
                                                     <li class="menu-link-item">
-                                                        <button type="button" class="btn-menu-link">
-                                                            <span class="text">수학</span><i class="icon"><span class="blind">더보기</span></i>
-                                                        </button>
+                                                        <div class="menu-link-depth1-item">
+                                                            <a href="#"  class="btn-menu-link">수학</a>
+                                                            <button type="button" class="btn-menu-more">
+                                                                <i class="icon"><span class="blind">더보기</span></i>
+                                                            </button>
+                                                        </div>
                                                         <ul class="menu-link-depth2-list">
                                                             <li class="menu-link-depth2-item"><a href="#">수학</a></li>
                                                             <li class="menu-link-depth2-item"><a href="#">영어</a></li>
@@ -846,9 +634,12 @@
                                                         </a>
                                                     </li>
                                                     <li class="menu-link-item">
-                                                        <button type="button" class="btn-menu-link">
-                                                            <span class="text">한국사</span><span class="icon"><i class="blind">더보기</span></i>
-                                                        </button>
+                                                        <div class="menu-link-depth1-item">
+                                                            <a href="#"  class="btn-menu-link">한국사</a>
+                                                            <button type="button" class="btn-menu-more">
+                                                                <i class="icon"><span class="blind">더보기</span></i>
+                                                            </button>
+                                                        </div>
                                                         <ul class="menu-link-depth2-list">
                                                             <li class="menu-link-depth2-item"><a href="#">수학</a></li>
                                                             <li class="menu-link-depth2-item"><a href="#">영어</a></li>
@@ -858,9 +649,12 @@
                                                         </ul>
                                                     </li>
                                                     <li class="menu-link-item">
-                                                        <button type="button" class="btn-menu-link">
-                                                            <span class="text">사회</span><span class="icon"><i class="blind">더보기</span></i>
-                                                        </button>
+                                                        <div class="menu-link-depth1-item">
+                                                            <a href="#"  class="btn-menu-link">사회</a>
+                                                            <button type="button" class="btn-menu-more">
+                                                                <i class="icon"><span class="blind">더보기</span></i>
+                                                            </button>
+                                                        </div>
                                                         <ul class="menu-link-depth2-list">
                                                             <li class="menu-link-depth2-item"><a href="#">수학</a></li>
                                                             <li class="menu-link-depth2-item"><a href="#">영어</a></li>
@@ -872,12 +666,16 @@
                                                 </ul>
                                             </div>
                                             <div class="menu-link-list-area">
-                                                <a href="#" class="menu-link-title"><span class="text">외국어</span><i class="icon"><span class="blind">더보기</span></i></a>
+                                                <a href="#" class="menu-link-title"><span class="text">외국어</span><i class="icon"><span
+                                                            class="blind">더보기</span></i></a>
                                                 <ul class="menu-link-list">
                                                     <li class="menu-link-item">
-                                                        <button type="button" class="btn-menu-link">
-                                                            <span class="text">국어</span><i class="icon"><span class="blind">더보기</span></i>
-                                                        </button>
+                                                        <div class="menu-link-depth1-item">
+                                                            <a href="#"  class="btn-menu-link">사회</a>
+                                                            <button type="button" class="btn-menu-more">
+                                                                <i class="icon"><span class="blind">더보기</span></i>
+                                                            </button>
+                                                        </div>
                                                         <ul class="menu-link-depth2-list">
                                                             <li class="menu-link-depth2-item"><a href="#">수학</a></li>
                                                             <li class="menu-link-depth2-item"><a href="#">영어</a></li>
@@ -887,9 +685,12 @@
                                                         </ul>
                                                     </li>
                                                     <li class="menu-link-item">
-                                                        <button type="button" class="btn-menu-link">
-                                                            <span class="text">수학</span><i class="icon"><span class="blind">더보기</span></i>
-                                                        </button>
+                                                        <div class="menu-link-depth1-item">
+                                                            <a href="#"  class="btn-menu-link">사회</a>
+                                                            <button type="button" class="btn-menu-more">
+                                                                <i class="icon"><span class="blind">더보기</span></i>
+                                                            </button>
+                                                        </div>
                                                         <ul class="menu-link-depth2-list">
                                                             <li class="menu-link-depth2-item"><a href="#">수학</a></li>
                                                             <li class="menu-link-depth2-item"><a href="#">영어</a></li>
@@ -899,14 +700,17 @@
                                                         </ul>
                                                     </li>
                                                     <li class="menu-link-item">
-                                                        <a href="" class="btn-menu-link">
-                                                            <span class="text">영어</span>
-                                                        </a>
+                                                        <div class="menu-link-depth1-item">
+                                                            <a href="#"  class="btn-menu-link">사회</a>
+                                                        </div>
                                                     </li>
                                                     <li class="menu-link-item">
-                                                        <button type="button" class="btn-menu-link">
-                                                            <span class="text">한국사</span><span class="icon"><i class="blind">더보기</span></i>
-                                                        </button>
+                                                        <div class="menu-link-depth1-item">
+                                                            <a href="#"  class="btn-menu-link">사회</a>
+                                                            <button type="button" class="btn-menu-more">
+                                                                <i class="icon"><span class="blind">더보기</span></i>
+                                                            </button>
+                                                        </div>
                                                         <ul class="menu-link-depth2-list">
                                                             <li class="menu-link-depth2-item"><a href="#">수학</a></li>
                                                             <li class="menu-link-depth2-item"><a href="#">영어</a></li>
@@ -916,9 +720,12 @@
                                                         </ul>
                                                     </li>
                                                     <li class="menu-link-item">
-                                                        <button type="button" class="btn-menu-link">
-                                                            <span class="text">사회</span><span class="icon"><i class="blind">더보기</span></i>
-                                                        </button>
+                                                        <div class="menu-link-depth1-item">
+                                                            <a href="#"  class="btn-menu-link">사회</a>
+                                                            <button type="button" class="btn-menu-more">
+                                                                <i class="icon"><span class="blind">더보기</span></i>
+                                                            </button>
+                                                        </div>
                                                         <ul class="menu-link-depth2-list">
                                                             <li class="menu-link-depth2-item"><a href="#">수학</a></li>
                                                             <li class="menu-link-depth2-item"><a href="#">영어</a></li>
@@ -930,12 +737,16 @@
                                                 </ul>
                                             </div>
                                             <div class="menu-link-list-area">
-                                                <a href="#" class="menu-link-title"><span class="text">외국어</span><i class="icon"><span class="blind">더보기</span></i></a>
+                                                <a href="#" class="menu-link-title"><span class="text">외국어</span><i class="icon"><span
+                                                            class="blind">더보기</span></i></a>
                                                 <ul class="menu-link-list">
                                                     <li class="menu-link-item">
-                                                        <button type="button" class="btn-menu-link">
-                                                            <span class="text">국어</span><i class="icon"><span class="blind">더보기</span></i>
-                                                        </button>
+                                                        <div class="menu-link-depth1-item">
+                                                            <a href="#"  class="btn-menu-link">사회</a>
+                                                            <button type="button" class="btn-menu-more">
+                                                                <i class="icon"><span class="blind">더보기</span></i>
+                                                            </button>
+                                                        </div>
                                                         <ul class="menu-link-depth2-list">
                                                             <li class="menu-link-depth2-item"><a href="#">수학</a></li>
                                                             <li class="menu-link-depth2-item"><a href="#">영어</a></li>
@@ -945,9 +756,12 @@
                                                         </ul>
                                                     </li>
                                                     <li class="menu-link-item">
-                                                        <button type="button" class="btn-menu-link">
-                                                            <span class="text">수학</span><i class="icon"><span class="blind">더보기</span></i>
-                                                        </button>
+                                                        <div class="menu-link-depth1-item">
+                                                            <a href="#"  class="btn-menu-link">사회</a>
+                                                            <button type="button" class="btn-menu-more">
+                                                                <i class="icon"><span class="blind">더보기</span></i>
+                                                            </button>
+                                                        </div>
                                                         <ul class="menu-link-depth2-list">
                                                             <li class="menu-link-depth2-item"><a href="#">수학</a></li>
                                                             <li class="menu-link-depth2-item"><a href="#">영어</a></li>
@@ -957,14 +771,17 @@
                                                         </ul>
                                                     </li>
                                                     <li class="menu-link-item">
-                                                        <a href="" class="btn-menu-link">
-                                                            <span class="text">영어</span>
-                                                        </a>
+                                                        <div class="menu-link-depth1-item">
+                                                            <a href="#"  class="btn-menu-link">사회</a>
+                                                        </div>
                                                     </li>
                                                     <li class="menu-link-item">
-                                                        <button type="button" class="btn-menu-link">
-                                                            <span class="text">한국사</span><span class="icon"><i class="blind">더보기</span></i>
-                                                        </button>
+                                                        <div class="menu-link-depth1-item">
+                                                            <a href="#"  class="btn-menu-link">사회</a>
+                                                            <button type="button" class="btn-menu-more">
+                                                                <i class="icon"><span class="blind">더보기</span></i>
+                                                            </button>
+                                                        </div>
                                                         <ul class="menu-link-depth2-list">
                                                             <li class="menu-link-depth2-item"><a href="#">수학</a></li>
                                                             <li class="menu-link-depth2-item"><a href="#">영어</a></li>
@@ -974,67 +791,12 @@
                                                         </ul>
                                                     </li>
                                                     <li class="menu-link-item">
-                                                        <button type="button" class="btn-menu-link">
-                                                            <span class="text">사회</span><span class="icon"><i class="blind">더보기</span></i>
-                                                        </button>
-                                                        <ul class="menu-link-depth2-list">
-                                                            <li class="menu-link-depth2-item"><a href="#">수학</a></li>
-                                                            <li class="menu-link-depth2-item"><a href="#">영어</a></li>
-                                                            <li class="menu-link-depth2-item"><a href="#">한국사</a></li>
-                                                            <li class="menu-link-depth2-item"><a href="#">대학교재</a></li>
-                                                            <li class="menu-link-depth2-item"><a href="#">그 외’s</a></li>
-                                                        </ul>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                            <div class="menu-link-list-area">
-                                                <a href="#" class="menu-link-title"><span class="text">외국어</span><i class="icon"><span class="blind">더보기</span></i></a>
-                                                <ul class="menu-link-list">
-                                                    <li class="menu-link-item">
-                                                        <button type="button" class="btn-menu-link">
-                                                            <span class="text">국어</span><i class="icon"><span class="blind">더보기</span></i>
-                                                        </button>
-                                                        <ul class="menu-link-depth2-list">
-                                                            <li class="menu-link-depth2-item"><a href="#">수학</a></li>
-                                                            <li class="menu-link-depth2-item"><a href="#">영어</a></li>
-                                                            <li class="menu-link-depth2-item"><a href="#">한국사</a></li>
-                                                            <li class="menu-link-depth2-item"><a href="#">대학교재</a></li>
-                                                            <li class="menu-link-depth2-item"><a href="#">그 외’s</a></li>
-                                                        </ul>
-                                                    </li>
-                                                    <li class="menu-link-item">
-                                                        <button type="button" class="btn-menu-link">
-                                                            <span class="text">수학</span><i class="icon"><span class="blind">더보기</span></i>
-                                                        </button>
-                                                        <ul class="menu-link-depth2-list">
-                                                            <li class="menu-link-depth2-item"><a href="#">수학</a></li>
-                                                            <li class="menu-link-depth2-item"><a href="#">영어</a></li>
-                                                            <li class="menu-link-depth2-item"><a href="#">한국사</a></li>
-                                                            <li class="menu-link-depth2-item"><a href="#">대학교재</a></li>
-                                                            <li class="menu-link-depth2-item"><a href="#">그 외’s</a></li>
-                                                        </ul>
-                                                    </li>
-                                                    <li class="menu-link-item">
-                                                        <a href="" class="btn-menu-link">
-                                                            <span class="text">영어</span>
-                                                        </a>
-                                                    </li>
-                                                    <li class="menu-link-item">
-                                                        <button type="button" class="btn-menu-link">
-                                                            <span class="text">한국사</span><span class="icon"><i class="blind">더보기</span></i>
-                                                        </button>
-                                                        <ul class="menu-link-depth2-list">
-                                                            <li class="menu-link-depth2-item"><a href="#">수학</a></li>
-                                                            <li class="menu-link-depth2-item"><a href="#">영어</a></li>
-                                                            <li class="menu-link-depth2-item"><a href="#">한국사</a></li>
-                                                            <li class="menu-link-depth2-item"><a href="#">대학교재</a></li>
-                                                            <li class="menu-link-depth2-item"><a href="#">그 외’s</a></li>
-                                                        </ul>
-                                                    </li>
-                                                    <li class="menu-link-item">
-                                                        <button type="button" class="btn-menu-link">
-                                                            <span class="text">사회</span><span class="icon"><i class="blind">더보기</span></i>
-                                                        </button>
+                                                        <div class="menu-link-depth1-item">
+                                                            <a href="#"  class="btn-menu-link">사회</a>
+                                                            <button type="button" class="btn-menu-more">
+                                                                <i class="icon"><span class="blind">더보기</span></i>
+                                                            </button>
+                                                        </div>
                                                         <ul class="menu-link-depth2-list">
                                                             <li class="menu-link-depth2-item"><a href="#">수학</a></li>
                                                             <li class="menu-link-depth2-item"><a href="#">영어</a></li>
@@ -1050,129 +812,128 @@
                                 </div>
                                 <!-- 카테고리 끝-->
                                 <!-- 출판사 시작-->
-                                <div class="btn-tab-line-content publisher-content scroll" id="subTab2"> 
-                                    <div class="publisher-btns-toggle">
-                                        <button type="button" class="btn-toggle-text">
+                                <div class="btn-tab-line-content publisher-content scroll" id="subTab2">
+                                    <!-- <div class="publisher-btns-toggle">
+                                        <button type="button" class="btn btn-toggle-text">
                                             전체
                                         </button>
-                                        <button type="button" class="btn-toggle-text">
+                                        <button type="button" class="btn btn-toggle-text">
                                             ㄱ
                                         </button>
-                                        <button type="button" class="btn-toggle-text">
+                                        <button type="button" class="btn btn-toggle-text">
                                             ㄴ
                                         </button>
-                                        <button type="button" class="btn-toggle-text">
+                                        <button type="button" class="btn btn-toggle-text">
                                             ㄷ
                                         </button>
-                                        <button type="button" class="btn-toggle-text">
+                                        <button type="button" class="btn btn-toggle-text">
                                             ㄹ
                                         </button>
-                                        <button type="button" class="btn-toggle-text">
+                                        <button type="button" class="btn btn-toggle-text">
                                             ㅁ
                                         </button>
-                                        <button type="button" class="btn-toggle-text">
+                                        <button type="button" class="btn btn-toggle-text">
                                             ㅂ
                                         </button>
-                                        <button type="button" class="btn-toggle-text">
+                                        <button type="button" class="btn btn-toggle-text">
                                             ㅅ
                                         </button>
-                                        <button type="button" class="btn-toggle-text">
+                                        <button type="button" class="btn btn-toggle-text">
                                             ㅇ
                                         </button>
-                                        <button type="button" class="btn-toggle-text">
+                                        <button type="button" class="btn btn-toggle-text">
                                             ㅈ
                                         </button>
-                                        <button type="button" class="btn-toggle-text">
+                                        <button type="button" class="btn btn-toggle-text">
                                             ㅊ
                                         </button>
-                                        <button type="button" class="btn-toggle-text">
+                                        <button type="button" class="btn btn-toggle-text">
                                             ㅋ
                                         </button>
-                                        <button type="button" class="btn-toggle-text">
+                                        <button type="button" class="btn btn-toggle-text">
                                             ㅌ
                                         </button>
-                                        <button type="button" class="btn-toggle-text">
+                                        <button type="button" class="btn btn-toggle-text">
                                             ㅍ
                                         </button>
-                                        <button type="button" class="btn-toggle-text">
+                                        <button type="button" class="btn btn-toggle-text">
                                             ㅎ
                                         </button>
-                                        <button type="button" class="btn-toggle-text">
+                                        <button type="button" class="btn btn-toggle-text">
                                             A
                                         </button>
-                                        <button type="button" class="btn-toggle-text">
+                                        <button type="button" class="btn btn-toggle-text">
                                             B
                                         </button>
-                                        <button type="button" class="btn-toggle-text">
+                                        <button type="button" class="btn btn-toggle-text">
                                             C
                                         </button>
-                                        <button type="button" class="btn-toggle-text">
+                                        <button type="button" class="btn btn-toggle-text">
                                             D
                                         </button>
-                                        <button type="button" class="btn-toggle-text">
+                                        <button type="button" class="btn btn-toggle-text">
                                             E
                                         </button>
-                                        <button type="button" class="btn-toggle-text">
+                                        <button type="button" class="btn btn-toggle-text">
                                             F
                                         </button>
-                                        <button type="button" class="btn-toggle-text">
+                                        <button type="button" class="btn btn-toggle-text">
                                             G
                                         </button>
-                                        <button type="button" class="btn-toggle-text">
+                                        <button type="button" class="btn btn-toggle-text">
                                             H
                                         </button>
-                                        <button type="button" class="btn-toggle-text">
+                                        <button type="button" class="btn btn-toggle-text">
                                             I
                                         </button>
-                                        <button type="button" class="btn-toggle-text">
+                                        <button type="button" class="btn btn-toggle-text">
                                             J
                                         </button>
-                                        <button type="button" class="btn-toggle-text">
+                                        <button type="button" class="btn btn-toggle-text">
                                             K
                                         </button>
-                                        <button type="button" class="btn-toggle-text">
+                                        <button type="button" class="btn btn-toggle-text">
                                             L
                                         </button>
-                                        <button type="button" class="btn-toggle-text">
+                                        <button type="button" class="btn btn-toggle-text">
                                             M
                                         </button>
-                                        <button type="button" class="btn-toggle-text">
+                                        <button type="button" class="btn btn-toggle-text">
                                             N
                                         </button>
-                                        <button type="button" class="btn-toggle-text">
+                                        <button type="button" class="btn btn-toggle-text">
                                             O
                                         </button>
-                                        <button type="button" class="btn-toggle-text">
+                                        <button type="button" class="btn btn-toggle-text">
                                             P
                                         </button>
-                                        <button type="button" class="btn-toggle-text">
+                                        <button type="button" class="btn btn-toggle-text">
                                             Q
                                         </button>
-                                        <button type="button" class="btn-toggle-text">
+                                        <button type="button" class="btn btn-toggle-text">
                                             R
                                         </button>
-                                        <button type="button" class="btn-toggle-text">
+                                        <button type="button" class="btn btn-toggle-text">
                                             S
                                         </button>
-                                        <button type="button" class="btn-toggle-text">
+                                        <button type="button" class="btn btn-toggle-text">
                                             T
                                         </button>
-                                        <button type="button" class="btn-toggle-text">
+                                        <button type="button" class="btn btn-toggle-text">
                                             1
                                         </button>
-                                        <button type="button" class="btn-toggle-text">
+                                        <button type="button" class="btn btn-toggle-text">
                                             2
                                         </button>
-                                        <button type="button" class="btn-toggle-text">
+                                        <button type="button" class="btn btn-toggle-text">
                                             3
                                         </button>
-    
-                                    </div>
+                                    </div> -->
                                     <div class="publisher-thumb">
                                         <div class="menu-thumb-items">
                                             <a href="#" class="menu-thumb-link">
                                                 <span class="thumb">
-                                                    <img src="../assest/images/img-book-dummy-03.png" alt="">
+                                                    <img src="../assest/images/img-dummy-bi.png" alt="">
                                                 </span>
                                                 <span class="thumb-title">
                                                     메가스터디북스
@@ -1180,7 +941,7 @@
                                             </a>
                                             <a href="#" class="menu-thumb-link">
                                                 <span class="thumb">
-                                                    <img src="../assest/images/img-book-dummy-03.png" alt="">
+                                                    <img src="../assest/images/img-dummy-bi.png" alt="">
                                                 </span>
                                                 <span class="thumb-title">
                                                     메가스터디북스
@@ -1188,7 +949,7 @@
                                             </a>
                                             <a href="#" class="menu-thumb-link">
                                                 <span class="thumb">
-                                                    <img src="../assest/images/img-book-dummy-03.png" alt="">
+                                                    <img src="../assest/images/img-dummy-bi.png" alt="">
                                                 </span>
                                                 <span class="thumb-title">
                                                     메가스터디북스
@@ -1196,7 +957,7 @@
                                             </a>
                                             <a href="#" class="menu-thumb-link">
                                                 <span class="thumb">
-                                                    <img src="../assest/images/img-book-dummy-03.png" alt="">
+                                                    <img src="../assest/images/img-dummy-bi.png" alt="">
                                                 </span>
                                                 <span class="thumb-title">
                                                     메가스터디북스
@@ -1204,7 +965,7 @@
                                             </a>
                                             <a href="#" class="menu-thumb-link">
                                                 <span class="thumb">
-                                                    <img src="../assest/images/img-book-dummy-03.png" alt="">
+                                                    <img src="../assest/images/img-dummy-bi.png" alt="">
                                                 </span>
                                                 <span class="thumb-title">
                                                     메가스터디북스
@@ -1212,7 +973,7 @@
                                             </a>
                                             <a href="#" class="menu-thumb-link">
                                                 <span class="thumb">
-                                                    <img src="../assest/images/img-book-dummy-03.png" alt="">
+                                                    <img src="../assest/images/img-dummy-bi.png" alt="">
                                                 </span>
                                                 <span class="thumb-title">
                                                     메가스터디북스
@@ -1220,15 +981,7 @@
                                             </a>
                                             <a href="#" class="menu-thumb-link">
                                                 <span class="thumb">
-                                                    <img src="../assest/images/img-book-dummy-03.png" alt="">
-                                                </span>
-                                                <span class="thumb-title">
-                                                    메가스터디북스
-                                                </span>
-                                            </a>                                            
-                                            <a href="#" class="menu-thumb-link">
-                                                <span class="thumb">
-                                                    <img src="../assest/images/img-book-dummy-03.png" alt="">
+                                                    <img src="../assest/images/img-dummy-bi.png" alt="">
                                                 </span>
                                                 <span class="thumb-title">
                                                     메가스터디북스
@@ -1236,158 +989,7 @@
                                             </a>
                                             <a href="#" class="menu-thumb-link">
                                                 <span class="thumb">
-                                                    <img src="../assest/images/img-book-dummy-03.png" alt="">
-                                                </span>
-                                                <span class="thumb-title">
-                                                    메가스터디북스
-                                                </span>
-                                            </a>
-                                            <a href="#" class="menu-thumb-link">
-                                                <span class="thumb">
-                                                    <img src="../assest/images/img-book-dummy-03.png" alt="">
-                                                </span>
-                                                <span class="thumb-title">
-                                                    메가스터디북스
-                                                </span>
-                                            </a>
-                                            <a href="#" class="menu-thumb-link">
-                                                <span class="thumb">
-                                                    <img src="../assest/images/img-book-dummy-03.png" alt="">
-                                                </span>
-                                                <span class="thumb-title">
-                                                    메가스터디북스
-                                                </span>
-                                            </a>
-                                            <a href="#" class="menu-thumb-link">
-                                                <span class="thumb">
-                                                    <img src="../assest/images/img-book-dummy-03.png" alt="">
-                                                </span>
-                                                <span class="thumb-title">
-                                                    메가스터디북스
-                                                </span>
-                                            </a>
-                                            <a href="#" class="menu-thumb-link">
-                                                <span class="thumb">
-                                                    <img src="../assest/images/img-book-dummy-03.png" alt="">
-                                                </span>
-                                                <span class="thumb-title">
-                                                    메가스터디북스
-                                                </span>
-                                            </a>                                            
-                                            <a href="#" class="menu-thumb-link">
-                                                <span class="thumb">
-                                                    <img src="../assest/images/img-book-dummy-03.png" alt="">
-                                                </span>
-                                                <span class="thumb-title">
-                                                    메가스터디북스
-                                                </span>
-                                            </a>
-                                            <a href="#" class="menu-thumb-link">
-                                                <span class="thumb">
-                                                    <img src="../assest/images/img-book-dummy-03.png" alt="">
-                                                </span>
-                                                <span class="thumb-title">
-                                                    메가스터디북스
-                                                </span>
-                                            </a>
-                                            <a href="#" class="menu-thumb-link">
-                                                <span class="thumb">
-                                                    <img src="../assest/images/img-book-dummy-03.png" alt="">
-                                                </span>
-                                                <span class="thumb-title">
-                                                    메가스터디북스
-                                                </span>
-                                            </a>
-                                            <a href="#" class="menu-thumb-link">
-                                                <span class="thumb">
-                                                    <img src="../assest/images/img-book-dummy-03.png" alt="">
-                                                </span>
-                                                <span class="thumb-title">
-                                                    메가스터디북스
-                                                </span>
-                                            </a>
-                                            <a href="#" class="menu-thumb-link">
-                                                <span class="thumb">
-                                                    <img src="../assest/images/img-book-dummy-03.png" alt="">
-                                                </span>
-                                                <span class="thumb-title">
-                                                    메가스터디북스
-                                                </span>
-                                            </a>
-                                            <a href="#" class="menu-thumb-link">
-                                                <span class="thumb">
-                                                    <img src="../assest/images/img-book-dummy-03.png" alt="">
-                                                </span>
-                                                <span class="thumb-title">
-                                                    메가스터디북스
-                                                </span>
-                                            </a>                                            
-                                            <a href="#" class="menu-thumb-link">
-                                                <span class="thumb">
-                                                    <img src="../assest/images/img-book-dummy-03.png" alt="">
-                                                </span>
-                                                <span class="thumb-title">
-                                                    메가스터디북스
-                                                </span>
-                                            </a>
-                                            <a href="#" class="menu-thumb-link">
-                                                <span class="thumb">
-                                                    <img src="../assest/images/img-book-dummy-03.png" alt="">
-                                                </span>
-                                                <span class="thumb-title">
-                                                    메가스터디북스
-                                                </span>
-                                            </a>
-                                            <a href="#" class="menu-thumb-link">
-                                                <span class="thumb">
-                                                    <img src="../assest/images/img-book-dummy-03.png" alt="">
-                                                </span>
-                                                <span class="thumb-title">
-                                                    메가스터디북스
-                                                </span>
-                                            </a>
-                                            <a href="#" class="menu-thumb-link">
-                                                <span class="thumb">
-                                                    <img src="../assest/images/img-book-dummy-03.png" alt="">
-                                                </span>
-                                                <span class="thumb-title">
-                                                    메가스터디북스
-                                                </span>
-                                            </a>
-                                            <a href="#" class="menu-thumb-link">
-                                                <span class="thumb">
-                                                    <img src="../assest/images/img-book-dummy-03.png" alt="">
-                                                </span>
-                                                <span class="thumb-title">
-                                                    메가스터디북스
-                                                </span>
-                                            </a>
-                                            <a href="#" class="menu-thumb-link">
-                                                <span class="thumb">
-                                                    <img src="../assest/images/img-book-dummy-03.png" alt="">
-                                                </span>
-                                                <span class="thumb-title">
-                                                    출판사명 출판사명 두 줄 넘어갈 때 예시
-                                                </span>
-                                            </a>
-                                            <a href="#" class="menu-thumb-link">
-                                                <span class="thumb">
-                                                    <img src="../assest/images/img-book-dummy-03.png" alt="">
-                                                </span>
-                                                <span class="thumb-title">
-                                                    메가스터디북스
-                                                </span>
-                                            </a><a href="#" class="menu-thumb-link">
-                                                <span class="thumb">
-                                                    <img src="../assest/images/img-book-dummy-03.png" alt="">
-                                                </span>
-                                                <span class="thumb-title">
-                                                    메가스터디북스
-                                                </span>
-                                            </a>
-                                            <a href="#" class="menu-thumb-link">
-                                                <span class="thumb">
-                                                    <img src="../assest/images/img-book-dummy-03.png" alt="">
+                                                    <img src="../assest/images/img-dummy-bi.png" alt="">
                                                 </span>
                                                 <span class="thumb-title">
                                                     메가스터디북스
@@ -1402,18 +1004,23 @@
                             <!-- Digital goods 시작-->
                             <section class="menu-body-right digital-goods-section" id="tab2">
                                 <div class="digital-goods-links">
-                                    <a href="#" class="menu-link-title"><span class="text">다이어리/플래너</span><i class="icon"><span class="blind">더보기</span></i></a>
-                                    <a href="#" class="menu-link-title"><span class="text">한 권 노트</span><i class="icon"><span class="blind">더보기</span></i></a>
-                                    <a href="#" class="menu-link-title"><span class="text">노트 커버</span><i class="icon"><span class="blind">더보기</span></i></a>
-                                    <a href="#" class="menu-link-title"><span class="text">노트 속지</span><i class="icon"><span class="blind">더보기</span></i></a>
-                                    <a href="#" class="menu-link-title"><span class="text">스티커</span><i class="icon"><span class="blind">더보기</span></i></a>    
+                                    <a href="#" class="menu-link-title"><span class="text">다이어리/플래너</span><i class="icon"><span
+                                                class="blind">더보기</span></i></a>
+                                    <a href="#" class="menu-link-title"><span class="text">한 권 노트</span><i class="icon"><span
+                                                class="blind">더보기</span></i></a>
+                                    <a href="#" class="menu-link-title"><span class="text">노트 커버</span><i class="icon"><span
+                                                class="blind">더보기</span></i></a>
+                                    <a href="#" class="menu-link-title"><span class="text">노트 속지</span><i class="icon"><span
+                                                class="blind">더보기</span></i></a>
+                                    <a href="#" class="menu-link-title"><span class="text">스티커</span><i class="icon"><span
+                                                class="blind">더보기</span></i></a>
                                 </div>
                                 <div class="digital-goods-thumbs scroll">
                                     <h3 class="title">추천 작가</h3>
                                     <div class="menu-thumb-items">
                                         <a href="#" class="menu-thumb-link">
                                             <span class="thumb">
-                                                <img src="../assest/images/img-book-dummy-03.png" alt="">
+                                                <img src="../assest/images/img-dummy-bi.png" alt="">
                                             </span>
                                             <span class="thumb-title">
                                                 메가스터디북스
@@ -1421,7 +1028,7 @@
                                         </a>
                                         <a href="#" class="menu-thumb-link">
                                             <span class="thumb">
-                                                <img src="../assest/images/img-book-dummy-03.png" alt="">
+                                                <img src="../assest/images/img-dummy-bi.png" alt="">
                                             </span>
                                             <span class="thumb-title">
                                                 메가스터디북스
@@ -1429,7 +1036,7 @@
                                         </a>
                                         <a href="#" class="menu-thumb-link">
                                             <span class="thumb">
-                                                <img src="../assest/images/img-book-dummy-03.png" alt="">
+                                                <img src="../assest/images/img-dummy-bi.png" alt="">
                                             </span>
                                             <span class="thumb-title">
                                                 메가스터디북스
@@ -1437,7 +1044,7 @@
                                         </a>
                                         <a href="#" class="menu-thumb-link">
                                             <span class="thumb">
-                                                <img src="../assest/images/img-book-dummy-03.png" alt="">
+                                                <img src="../assest/images/img-dummy-bi.png" alt="">
                                             </span>
                                             <span class="thumb-title">
                                                 메가스터디북스
@@ -1445,7 +1052,7 @@
                                         </a>
                                         <a href="#" class="menu-thumb-link">
                                             <span class="thumb">
-                                                <img src="../assest/images/img-book-dummy-03.png" alt="">
+                                                <img src="../assest/images/img-dummy-bi.png" alt="">
                                             </span>
                                             <span class="thumb-title">
                                                 메가스터디북스
@@ -1453,14 +1060,7 @@
                                         </a>
                                         <a href="#" class="menu-thumb-link">
                                             <span class="thumb">
-                                                <img src="../assest/images/img-book-dummy-03.png" alt="">
-                                            </span>
-                                            <span class="thumb-title">
-                                                메가스터디북스
-                                            </span>
-                                        </a>   <a href="#" class="menu-thumb-link">
-                                            <span class="thumb">
-                                                <img src="../assest/images/img-book-dummy-03.png" alt="">
+                                                <img src="../assest/images/img-dummy-bi.png" alt="">
                                             </span>
                                             <span class="thumb-title">
                                                 메가스터디북스
@@ -1468,7 +1068,7 @@
                                         </a>
                                         <a href="#" class="menu-thumb-link">
                                             <span class="thumb">
-                                                <img src="../assest/images/img-book-dummy-03.png" alt="">
+                                                <img src="../assest/images/img-dummy-bi.png" alt="">
                                             </span>
                                             <span class="thumb-title">
                                                 메가스터디북스
@@ -1476,132 +1076,7 @@
                                         </a>
                                         <a href="#" class="menu-thumb-link">
                                             <span class="thumb">
-                                                <img src="../assest/images/img-book-dummy-03.png" alt="">
-                                            </span>
-                                            <span class="thumb-title">
-                                                메가스터디북스
-                                            </span>
-                                        </a>
-                                        <a href="#" class="menu-thumb-link">
-                                            <span class="thumb">
-                                                <img src="../assest/images/img-book-dummy-03.png" alt="">
-                                            </span>
-                                            <span class="thumb-title">
-                                                메가스터디북스
-                                            </span>
-                                        </a>
-                                        <a href="#" class="menu-thumb-link">
-                                            <span class="thumb">
-                                                <img src="../assest/images/img-book-dummy-03.png" alt="">
-                                            </span>
-                                            <span class="thumb-title">
-                                                메가스터디북스
-                                            </span>
-                                        </a>
-                                        <a href="#" class="menu-thumb-link">
-                                            <span class="thumb">
-                                                <img src="../assest/images/img-book-dummy-03.png" alt="">
-                                            </span>
-                                            <span class="thumb-title">
-                                                메가스터디북스
-                                            </span>
-                                        </a>   <a href="#" class="menu-thumb-link">
-                                            <span class="thumb">
-                                                <img src="../assest/images/img-book-dummy-03.png" alt="">
-                                            </span>
-                                            <span class="thumb-title">
-                                                메가스터디북스
-                                            </span>
-                                        </a>
-                                        <a href="#" class="menu-thumb-link">
-                                            <span class="thumb">
-                                                <img src="../assest/images/img-book-dummy-03.png" alt="">
-                                            </span>
-                                            <span class="thumb-title">
-                                                메가스터디북스
-                                            </span>
-                                        </a>
-                                        <a href="#" class="menu-thumb-link">
-                                            <span class="thumb">
-                                                <img src="../assest/images/img-book-dummy-03.png" alt="">
-                                            </span>
-                                            <span class="thumb-title">
-                                                메가스터디북스
-                                            </span>
-                                        </a>   <a href="#" class="menu-thumb-link">
-                                            <span class="thumb">
-                                                <img src="../assest/images/img-book-dummy-03.png" alt="">
-                                            </span>
-                                            <span class="thumb-title">
-                                                메가스터디북스
-                                            </span>
-                                        </a>
-                                        <a href="#" class="menu-thumb-link">
-                                            <span class="thumb">
-                                                <img src="../assest/images/img-book-dummy-03.png" alt="">
-                                            </span>
-                                            <span class="thumb-title">
-                                                메가스터디북스
-                                            </span>
-                                        </a>
-                                        <a href="#" class="menu-thumb-link">
-                                            <span class="thumb">
-                                                <img src="../assest/images/img-book-dummy-03.png" alt="">
-                                            </span>
-                                            <span class="thumb-title">
-                                                메가스터디북스
-                                            </span>
-                                        </a>
-                                        <a href="#" class="menu-thumb-link">
-                                            <span class="thumb">
-                                                <img src="../assest/images/img-book-dummy-03.png" alt="">
-                                            </span>
-                                            <span class="thumb-title">
-                                                메가스터디북스
-                                            </span>
-                                        </a>
-                                        <a href="#" class="menu-thumb-link">
-                                            <span class="thumb">
-                                                <img src="../assest/images/img-book-dummy-03.png" alt="">
-                                            </span>
-                                            <span class="thumb-title">
-                                                메가스터디북스
-                                            </span>
-                                        </a>
-                                        <a href="#" class="menu-thumb-link">
-                                            <span class="thumb">
-                                                <img src="../assest/images/img-book-dummy-03.png" alt="">
-                                            </span>
-                                            <span class="thumb-title">
-                                                메가스터디북스
-                                            </span>
-                                        </a>
-                                        <a href="#" class="menu-thumb-link">
-                                            <span class="thumb">
-                                                <img src="../assest/images/img-book-dummy-03.png" alt="">
-                                            </span>
-                                            <span class="thumb-title">
-                                                출판사명 출판사명 두 줄 넘어갈 때 예시
-                                            </span>
-                                        </a>
-                                        <a href="#" class="menu-thumb-link">
-                                            <span class="thumb">
-                                                <img src="../assest/images/img-book-dummy-03.png" alt="">
-                                            </span>
-                                            <span class="thumb-title">
-                                                메가스터디북스
-                                            </span>
-                                        </a><a href="#" class="menu-thumb-link">
-                                            <span class="thumb">
-                                                <img src="../assest/images/img-book-dummy-03.png" alt="">
-                                            </span>
-                                            <span class="thumb-title">
-                                                메가스터디북스
-                                            </span>
-                                        </a>
-                                        <a href="#" class="menu-thumb-link">
-                                            <span class="thumb">
-                                                <img src="../assest/images/img-book-dummy-03.png" alt="">
+                                                <img src="../assest/images/img-dummy-bi.png" alt="">
                                             </span>
                                             <span class="thumb-title">
                                                 메가스터디북스
@@ -1610,7 +1085,7 @@
                                     </div>
                                 </div>
                             </section>
-                             <!-- Digital goods 끝-->
+                            <!-- Digital goods 끝-->
                             <!--무료 도서/굿즈 시작-->
                             <section class="menu-body-right free-books-section scroll" id="tab3">
                                 <div class="Free-books-thumb">
@@ -1645,8 +1120,12 @@
                             <!--무료 도서/굿즈 끝-->
                         </nav>
                     </div>
+                    <div class="bg">
+                        <div class="blind">배경</div>
+                    </div>
                 </article>
                 <!--pc 메뉴 레이어 끝-->
+                <!-- 7.29 메뉴 레이어 끝 -->
             </section>
             <!--해더 끝-->
             <!-- 메인 비주얼 배너 시작-->
@@ -1763,7 +1242,7 @@
                                             <a class="thumb-item" href="#">
                                                 <div class="book-thumb-area badge-special">
                                                     <div class="book-thumb">
-                                                        <img src="../assest/images/img-book-dummy-01.png" alt="" />
+                                                        <img src="../assest/images/img-book-dummy-05.png" alt="" />
                                                     </div>
                                                 </div>
                                                 <div class="thumb-item-text-area">
@@ -2079,30 +1558,55 @@
                     </div>
                 </section>
                 <!--HOT한 신간 끝-->
+                <!-- 7.29 띠 배너 수정 시작 -->
                 <!--띠 배너 시작-->
                 <section class="main-contents-section">
                     <div class="container-inner">
                         <div class="only-pc">
                             <div class="banner-board-group">
-                                <a href="#" class="banner-board-large">
-                                    <img src="../assest/images/demo/full-banner.png" alt="">
+                                <a href="#" class="banner-board-large" style="background-color: #F2F4F6;">
+                                    <span class="text-area">
+                                        <span class="sub-text">10월에는 행운을~</span>
+                                        <p class="title">LUCKY DRAW 행운 이벤트</p>
+                                    </span>
+                                    <span class="img-area">
+                                        <img src="../assest/images/img-dummy-banner.png" alt="">
+                                    </span>
                                 </a>
-                                <!-- <a href="#" class="banner-board-large">
-                                    <img src="../assest/images/img-main-banner-dummy-01.png" alt="">
-                                </a> -->
+                                <a href="#" class="banner-board-large" style="background-color: #F2F4F6;">
+                                    <span class="text-area">
+                                        <span class="sub-text">10월에는 행운을~</span>
+                                        <p class="title">LUCKY DRAW 행운 이벤트</p>
+                                    </span>
+                                    <span class="img-area">
+                                        <img src="../assest/images/img-dummy-banner.png" alt="">
+                                    </span>
+                                </a>
                             </div>
                         </div>
-                        <div class="banner-board-swiper-group only-mobile swiper-banner">
+                        <div class="only-mobile swiper-banner banner-board-group">
                             <div class="swiper" id="mainEventBanner">
                                 <div class="swiper-wrapper">
                                     <div class="swiper-slide">
-                                        <a href="" class="banner-board-swiper-img">
-                                            <img src="../assest/images/demo/m-full-banner.png" alt="">
+                                          <a href="#" class="banner-board-large" style="background-color: #F2F4F6;">
+                                            <span class="text-area">
+                                                <span class="sub-text">10월에는 행운을~</span>
+                                                <p class="title">LUCKY DRAW 2</p>
+                                            </span>
+                                            <span class="img-area">
+                                                <img src="../assest/images/img-dummy-banner.png" alt="">
+                                            </span>
                                         </a>
                                     </div>
                                     <div class="swiper-slide">
-                                        <a href="" class="banner-board-swiper-img">
-                                            <img src="../assest/images/demo/m-full-banner.png" alt="">
+                                        <a href="#" class="banner-board-large" style="background-color: #F2F4F6;">
+                                            <span class="text-area">
+                                                <span class="sub-text">10월에는 행운을~</span>
+                                                <p class="title">LUCKY DRAW 2</p>
+                                            </span>
+                                            <span class="img-area">
+                                                <img src="../assest/images/img-dummy-banner.png" alt="">
+                                            </span>
                                         </a>
                                     </div>
                                 </div>
@@ -2114,6 +1618,8 @@
                     </div>
                 </section>
                 <!--띠 배너 끝-->
+                <!-- 7.29  띠 배너 수정 끝 -->
+                <!-- 7.29 미북 스페셜 추가 시작 -->
                 <!--미북 스페셜 시작-->
                 <section class="main-contents-section"id="trigger1">
                     <div class="container-inner">
@@ -2138,7 +1644,6 @@
                                     <button type="button" class="btn-special btn-answer-check" data-target="answer-check">
                                         <span class="text">정・오답 확인</span><span class="icon"><span class="blind">정・오답 확인</span></span>
                                     </button>
-               
                                     <button type="button" class="btn-special btn-fingerprint-view" data-target="fingerprint-view">
                                         <span class="text">지문보기</span><span class="icon"><span class="blind">지문보기</span></span>
                                     </button>
@@ -2160,7 +1665,7 @@
                                 <div class="swiper" id="specialThumbSwiper">
                                     <div class="swiper-wrapper">
                                         <div class="swiper-slide">
-                                            <a href="" class="special-thumb-item">
+                                            <a href="./bookPreview.html" class="special-thumb-item">
                                                 <div class="special-thumb-area">
                                                     <div class="special-thumb-box">
                                                         <div class="special-thumb">
@@ -2173,16 +1678,67 @@
                                                         </h3>
                                                         <div class="special-item-sub-text">메가공무원</div>
                                                         <div class="tag-area">
-                                                            <span class="tag-special tag-listening" id="listening"><span class="icon"><span class="blind">듣기 음원</span></span></span>
-                                                            <span class="tag-special tag-test" id="test"><span class="icon"><span class="blind">응시하기</span></span></span>
-                                                            <span class="tag-special tag-answer-check" id="answer-check"><span class="icon"><span class="blind">정・오답 확인</span></span></span>
+                                                            <span class="tag-special tag-test test"><span class="icon"><span class="blind">응시하기</span></span></span>
+                                                            <span class="tag-special tag-answer-check answer-check"><span class="icon"><span class="blind">정・오답 확인</span></span></span>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </a>
                                         </div>
                                         <div class="swiper-slide">
-                                            <a href="" class="special-thumb-item">
+                                            <a href="./bookPreview.html" class="special-thumb-item">
+                                                <div class="special-thumb-area">
+                                                    <div class="special-thumb-box">
+                                                        <div class="special-thumb">
+                                                            <img src="../assest/images/img-book-dummy-05.png" alt="" />
+                                                        </div>
+                                                    </div>
+                                                    <div class="special-item-text-area">
+                                                        <h3 class="special-item-title">
+                                                            Re-base 기초영어
+                                                        </h3>
+                                                        <div class="special-item-sub-text">메가공무원</div>
+                                                        <div class="tag-area">
+                                                            <span class="tag-special tag-listening listening"><span class="icon"><span class="blind">듣기 음원</span></span></span>
+                                                            <span class="tag-special tag-test test"><span class="icon"><span class="blind">응시하기</span></span></span>
+                                                            <span class="tag-special tag-answer-check answer-check"><span class="icon"><span class="blind">정・오답 확인</span></span></span>
+                                                            <span class="tag-special tag-fingerprint-view fingerprint-view"><span class="icon"><span class="blind">듣기 음원</span></span></span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <a href="./bookPreview.html" class="special-thumb-item">
+                                                <div class="special-thumb-area">
+                                                    <div class="special-thumb-box">
+                                                        <div class="special-thumb">
+                                                            <img src="../assest/images/img-book-dummy-01.png" alt="" />
+                                                        </div>
+                                                    </div>
+                                                    <div class="special-item-text-area">
+                                                        <h3 class="special-item-title">
+                                                            Re-base 기초영어
+                                                        </h3>
+                                                        <div class="special-item-sub-text">메가공무원</div>
+                                                         <div class="tag-area">
+                                                            <!--8.9  id 삭제, class 추가 시작-->
+                                                            <span class="tag-special tag-listening listening"><span class="icon"><span class="blind">듣기 음원</span></span></span>
+                                                            <span class="tag-special tag-test test"><span class="icon"><span class="blind">응시하기</span></span></span>
+                                                            <span class="tag-special tag-answer-check answer-check"><span class="icon"><span class="blind">정・오답 확인</span></span></span>
+                                                            <span class="tag-special tag-fingerprint-view fingerprint-view"><span class="icon"><span class="blind">지문보기</span></span></span>
+                                                            <span class="tag-special tag-learningQA learningQA"><span class="icon"><span class="blind">학습 Q&A</span></span></span>
+                                                            <span class="tag-special tag-player player"><span class="icon"><span class="blind">동영상 강의</span></span></span>
+                                                            <span class="tag-special tag-answer-view answer-view"><span class="icon"><span class="blind">정답・해설 보기</span></span></span>
+                                                            <span class="tag-special tag-answer-hide answer-hide"><span class="icon"><span class="blind">정답・해설 가리기</span></span></span>
+                                                            <!--8.9  id 삭제 class 추가 끝-->
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <a href="./bookPreview.html" class="special-thumb-item">
                                                 <div class="special-thumb-area">
                                                     <div class="special-thumb-box">
                                                         <div class="special-thumb">
@@ -2195,65 +1751,21 @@
                                                         </h3>
                                                         <div class="special-item-sub-text">메가공무원</div>
                                                         <div class="tag-area">
-                                                            <span class="tag-special tag-listening" id="listening"><span class="icon"><span class="blind">듣기 음원</span></span></span>
-                                                            <span class="tag-special tag-test" id="test"><span class="icon"><span class="blind">응시하기</span></span></span>
-                                                            <span class="tag-special tag-answer-check" id="answer-check"><span class="icon"><span class="blind">정・오답 확인</span></span></span>
+                                                            <span class="tag-special tag-listening listening"><span class="icon"><span class="blind">듣기 음원</span></span></span>
+                                                            <span class="tag-special tag-test test"><span class="icon"><span class="blind">응시하기</span></span></span>
+                                                            <span class="tag-special tag-answer-check answer-check"><span class="icon"><span class="blind">정・오답 확인</span></span></span>
+                                                            <span class="tag-special tag-fingerprint-view fingerprint-view"><span class="icon"><span class="blind">듣기 음원</span></span></span>
+                                                            <span class="tag-special tag-learningQA learningQA"><span class="icon"><span class="blind">학습 Q&A</span></span></span>
+                                                            <span class="tag-special tag-player player"><span class="icon"><span class="blind">동영상 강의</span></span></span>
+                                                            <span class="tag-special tag-answer-view answer-view"><span class="icon"><span class="blind">정답・해설 보기</span></span></span>
+                                                            <span class="tag-special tag-answer-hide answer-hide"><span class="icon"><span class="blind">정답・해설 가리기</span></span></span>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </a>
                                         </div>
                                         <div class="swiper-slide">
-                                            <a href="" class="special-thumb-item">
-                                                <div class="special-thumb-area">
-                                                    <div class="special-thumb-box">
-                                                        <div class="special-thumb">
-                                                            <img src="../assest/images/img-book-dummy-01.png" alt="" />
-                                                        </div>
-                                                    </div>
-                                                    <div class="special-item-text-area">
-                                                        <h3 class="special-item-title">
-                                                            Re-base 기초영어
-                                                        </h3>
-                                                        <div class="special-item-sub-text">메가공무원</div>
-                                                        <div class="tag-area">
-                                                            <span class="tag-special tag-listening" id="listening"><span class="icon"><span class="blind">듣기 음원</span></span></span>
-                                                            <span class="tag-special tag-test" id="test"><span class="icon"><span class="blind">응시하기</span></span></span>
-                                                            <span class="tag-special tag-answer-check" id="answer-check"><span class="icon"><span class="blind">정・오답 확인</span></span></span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </a>
-                                        </div>
-                                        <div class="swiper-slide">
-                                            <a href="" class="special-thumb-item">
-                                                <div class="special-thumb-area">
-                                                    <div class="special-thumb-box">
-                                                        <div class="special-thumb">
-                                                            <img src="../assest/images/img-book-dummy-01.png" alt="" />
-                                                        </div>
-                                                    </div>
-                                                    <div class="special-item-text-area">
-                                                        <h3 class="special-item-title">
-                                                            Re-base 기초영어
-                                                        </h3>
-                                                        <div class="special-item-sub-text">메가공무원</div>
-                                                        <div class="tag-area">
-                                                            <span class="tag-special tag-listening" id="listening"><span class="icon"><span class="blind">듣기 음원</span></span></span>
-                                                            <span class="tag-special tag-test" id="test"><span class="icon"><span class="blind">응시하기</span></span></span>
-                                                            <span class="tag-special tag-answer-check" id="answer-check"><span class="icon"><span class="blind">정・오답 확인</span></span></span>
-                                                            <span class="tag-special tag-fingerprint-view" id="fingerprint-view"><span class="icon"><span class="blind">듣기 음원</span></span></span>
-                                                            <span class="tag-special tag-learningQA" id="learningQA"><span class="icon"><span class="blind">학습 Q&A</span></span></span>
-                                                            <span class="tag-special tag-player" id="player"><span class="icon"><span class="blind">동영상 강의</span></span></span>
-                                                            <span class="tag-special tag-answer-view" id="answer-view"><span class="icon"><span class="blind">정답・해설 보기</span></span></span>
-                                                            <span class="tag-special tag-answer-hide" id="answer-hide"><span class="icon"><span class="blind">정답・해설 가리기</span></span></span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </a>
-                                        </div>
-                                        <div class="swiper-slide">
-                                            <a href="" class="special-thumb-item">
+                                            <a href="./bookPreview.html" class="special-thumb-item">
                                                 <div class="special-thumb-area">
                                                     <div class="special-thumb-box">
                                                         <div class="special-thumb">
@@ -2266,15 +1778,15 @@
                                                         </h3>
                                                         <div class="special-item-sub-text">메가공무원</div>
                                                         <div class="tag-area">
-                                                            <span class="tag-special tag-answer-check" id="answer-check"><span class="icon"><span class="blind">정・오답 확인</span></span></span>
-                                                            <span class="tag-special tag-fingerprint-view" id="fingerprint-view"><span class="icon"><span class="blind">듣기 음원</span></span></span>
+                                                            <span class="tag-special tag-answer-view answer-view"><span class="icon"><span class="blind">정답・해설 보기</span></span></span>
+                                                            <span class="tag-special tag-answer-hide answer-hide"><span class="icon"><span class="blind">정답・해설 가리기</span></span></span>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </a>
                                         </div>
                                         <div class="swiper-slide">
-                                            <a href="" class="special-thumb-item">
+                                            <a href="./bookPreview.html" class="special-thumb-item">
                                                 <div class="special-thumb-area">
                                                     <div class="special-thumb-box">
                                                         <div class="special-thumb">
@@ -2287,16 +1799,18 @@
                                                         </h3>
                                                         <div class="special-item-sub-text">메가공무원</div>
                                                         <div class="tag-area">
-                                                            <span class="tag-special tag-answer-hide" id="answer-hide"><span class="icon"><span class="blind">정답・해설 가리기</span></span></span>
+                                                            <span class="tag-special tag-answer-check answer-check"><span class="icon"><span class="blind">정・오답 확인</span></span></span>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </a>
                                         </div>
                                     </div>
+                                    <!--08.22 swiper 버튼 위치 수정-->
+                                    <div class="swiper-button-prev"></div>
+                                    <div class="swiper-button-next"></div>
+                                    <!--08.22 swiper 버튼 위치 수정-->
                                 </div>
-                                <div class="swiper-button-prev"></div>
-                                <div class="swiper-button-next"></div>
                             </div>
                             <div class="img-diamond" id="animate1">
                                 <img src="../assest/images/img-diamond.png" alt="다이아몬드 이미지">
@@ -2310,138 +1824,205 @@
                                 <div class="swiper" id="specialMobileThumbSwiper">
                                     <div class="swiper-wrapper">
                                         <div class="swiper-slide">
-                                            <a href="" class="special-thumb-item">
+                                            <div href="" class="special-thumb-item">
                                                 <div class="special-thumb-area">
-                                                    <div class="special-thumb-box">
+                                                    <a href="" class="special-thumb-box">
                                                         <div class="special-thumb">
                                                             <img src="../assest/images/img-book-dummy-01.png" alt="" />
                                                         </div>
-                                                    </div>
+                                                    </a>
                                                     <div class="special-item-text-area">
-                                                        <h3 class="special-item-title">
+                                                        <a href="" class="special-item-title">
                                                             Re-base 기초영어
-                                                        </h3>
+                                                        </a>
                                                         <div class="special-item-sub-text">메가공무원</div>
                                                         <div class="tag-area">
-                                                            <span class="tag-special tag-listening on"><span class="icon"><span class="blind">듣기 음원</span></span></span>
-                                                            <span class="tag-special tag-test on"><span class="icon"><span class="blind">응시하기</span></span></span>
-                                                            <span class="tag-special tag-answer-check on"><span class="icon"><span class="blind">정・오답 확인</span></span></span>
+                                                            <span class="tag-special-box">
+                                                                <span class="tag-special-toast">듣기 음원 확인 서비스</span>
+                                                                 <button type="button" class="btn-special-toast tag-special tag-listening on"><span class="icon"><span class="blind">듣기 음원</span></span></button>
+                                                            </span>
+                                                            <span class="tag-special-box">
+                                                                <span class="tag-special-toast">응시하기 서비스</span>
+                                                                <button type="button" class="btn-special-toast tag-special tag-test on"><span class="icon"><span class="blind">응시하기</span></span></button>
+                                                            </span>
+                                                            <span class="tag-special-box">
+                                                                <span class="tag-special-toast">정・오답 확인 서비스</span>
+                                                                <button type="button" class="btn-special-toast tag-special tag-answer-check on"><span class="icon"><span class="blind">정・오답 확인</span></span></button>
+                                                            </span>
+                                                            <span class="tag-special-box">
+                                                                <span class="tag-special-toast">듣기 음원 서비스</span>
+                                                                <button type="button" class="btn-special-toast tag-special tag-fingerprint-view on"><span class="icon"><span class="blind">듣기 음원</span></span></button>
+                                                            </span>
+                                                            <span class="tag-special-box">
+                                                                <span class="tag-special-toast">학습 Q&A 서비스</span>
+                                                                <button type="button" class="btn-special-toast tag-special tag-learningQA on"><span class="icon"><span class="blind">학습 Q&A</span></span></button>
+                                                            </span>
+                                                            <span class="tag-special-box">
+                                                                <span class="tag-special-toast">동영상 강의 서비스</span>
+                                                                <button type="button" class="btn-special-toast tag-special tag-player on"><span class="icon"><span class="blind">동영상 강의</span></span></button>
+                                                            </span>
+                                                            <span class="tag-special-box">
+                                                                <span class="tag-special-toast">정답・해설 보기 서비스</span>
+                                                                <button type="button" class="btn-special-toast tag-special tag-answer-view on"><span class="icon"><span class="blind">정답・해설 보기</span></span></button>
+                                                            </span>
+                                                            <span class="tag-special-box">
+                                                                <span class="tag-special-toast">정답・해설 가리기 서비스</span>
+                                                                <button type="button" class="btn-special-toast tag-special tag-answer-hide on"><span class="icon"><span class="blind">정답・해설 가리기</span></span></button>
+                                                            </span>
                                                         </div>
                                                     </div>
                                                 </div>
-                                            </a>
+                                            </div>
                                         </div>
                                         <div class="swiper-slide">
-                                            <a href="" class="special-thumb-item">
+                                            <div class="special-thumb-item">
                                                 <div class="special-thumb-area">
-                                                    <div class="special-thumb-box">
-                                                        <div class="special-thumb">
-                                                            <img src="../assest/images/img-book-dummy-01.png" alt="" />
-                                                        </div>
-                                                    </div>
-                                                    <div class="special-item-text-area">
-                                                        <h3 class="special-item-title">
-                                                            Re-base 기초영어
-                                                        </h3>
-                                                        <div class="special-item-sub-text">메가공무원</div>
-                                                        <div class="tag-area">
-                                                            <span class="tag-special tag-listening on"><span class="icon"><span class="blind">듣기 음원</span></span></span>
-                                                            <span class="tag-special tag-test on"><span class="icon"><span class="blind">응시하기</span></span></span>
-                                                            <span class="tag-special tag-answer-check on"><span class="icon"><span class="blind">정・오답 확인</span></span></span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </a>
-                                        </div>
-                                        <div class="swiper-slide">
-                                            <a href="" class="special-thumb-item">
-                                                <div class="special-thumb-area">
-                                                    <div class="special-thumb-box">
-                                                        <div class="special-thumb">
-                                                            <img src="../assest/images/img-book-dummy-01.png" alt="" />
-                                                        </div>
-                                                    </div>
-                                                    <div class="special-item-text-area">
-                                                        <h3 class="special-item-title">
-                                                            Re-base 기초영어
-                                                        </h3>
-                                                        <div class="special-item-sub-text">메가공무원</div>
-                                                        <div class="tag-area">
-                                                            <span class="tag-special tag-listening on"><span class="icon"><span class="blind">듣기 음원</span></span></span>
-                                                            <span class="tag-special tag-test on"><span class="icon"><span class="blind">응시하기</span></span></span>
-                                                            <span class="tag-special tag-answer-check on"><span class="icon"><span class="blind">정・오답 확인</span></span></span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </a>
-                                        </div>
-                                        <div class="swiper-slide">
-                                            <a href="" class="special-thumb-item">
-                                                <div class="special-thumb-area">
-                                                    <div class="special-thumb-box">
-                                                        <div class="special-thumb">
-                                                            <img src="../assest/images/img-book-dummy-01.png" alt="" />
-                                                        </div>
-                                                    </div>
-                                                    <div class="special-item-text-area">
-                                                        <h3 class="special-item-title">
-                                                            Re-base 기초영어
-                                                        </h3>
-                                                        <div class="special-item-sub-text">메가공무원</div>
-                                                        <div class="tag-area">
-                                                            <span class="tag-special tag-listening on"><span class="icon"><span class="blind">듣기 음원</span></span></span>
-                                                            <span class="tag-special tag-test on"><span class="icon"><span class="blind">응시하기</span></span></span>
-                                                            <span class="tag-special tag-answer-check on"><span class="icon"><span class="blind">정・오답 확인</span></span></span>
-                                                            <span class="tag-special tag-fingerprint-view on"><span class="icon"><span class="blind">듣기 음원</span></span></span>
-                                                            <span class="tag-special tag-learningQA on"><span class="icon"><span class="blind">학습 Q&A</span></span></span>
-                                                            <span class="tag-special tag-player on"><span class="icon"><span class="blind">동영상 강의</span></span></span>
-                                                            <span class="tag-special tag-answer-view on"><span class="icon"><span class="blind">정답・해설 보기</span></span></span>
-                                                            <span class="tag-special tag-answer-hide on"><span class="icon"><span class="blind">정답・해설 가리기</span></span></span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </a>
-                                        </div>
-                                        <div class="swiper-slide">
-                                            <a href="" class="special-thumb-item">
-                                                <div class="special-thumb-area">
-                                                    <div class="special-thumb-box">
+                                                    <a href="" class="special-thumb-box">
                                                         <div class="special-thumb">
                                                             <img src="../assest/images/img-book-dummy-04.png" alt="" />
                                                         </div>
-                                                    </div>
+                                                    </a href="">
                                                     <div class="special-item-text-area">
-                                                        <h3 class="special-item-title">
+                                                        <a href="" class="special-item-title">
                                                             Re-base 기초영어
-                                                        </h3>
+                                                        </a>
                                                         <div class="special-item-sub-text">메가공무원</div>
                                                         <div class="tag-area">
-                                                            <span class="tag-special tag-answer-check on"><span class="icon"><span class="blind">정・오답 확인</span></span></span>
-                                                            <span class="tag-special tag-fingerprint-view on"><span class="icon"><span class="blind">듣기 음원</span></span></span>
+                                                            <span class="tag-special-box">
+                                                                <span class="tag-special-toast">듣기 음원 확인 서비스</span>
+                                                                <button type="button" class="btn-special-toast tag-special tag-listening on"><span class="icon"><span
+                                                                            class="blind">듣기 음원</span></span></button>
+                                                            </span>
+                                                            <span class="tag-special-box">
+                                                                <span class="tag-special-toast">응시하기 서비스</span>
+                                                                <button type="button" class="btn-special-toast tag-special tag-test on"><span class="icon"><span
+                                                                            class="blind">응시하기</span></span></button>
+                                                            </span>
+                                                            <span class="tag-special-box">
+                                                                <span class="tag-special-toast">정・오답 확인 서비스</span>
+                                                                <button type="button" class="btn-special-toast tag-special tag-answer-check on"><span class="icon"><span
+                                                                            class="blind">정・오답 확인</span></span></button>
+                                                            </span>
                                                         </div>
                                                     </div>
                                                 </div>
-                                            </a>
+                                            </div>
                                         </div>
                                         <div class="swiper-slide">
-                                            <a href="" class="special-thumb-item">
+                                            <div class="special-thumb-item">
                                                 <div class="special-thumb-area">
-                                                    <div class="special-thumb-box">
+                                                    <a href="" class="special-thumb-box">
                                                         <div class="special-thumb">
-                                                            <img src="../assest/images/img-book-dummy-01.png" alt="" />
+                                                            <img src="../assest/images/img-book-dummy-05.png" alt="" />
                                                         </div>
-                                                    </div>
+                                                    </a href="">
                                                     <div class="special-item-text-area">
-                                                        <h3 class="special-item-title">
+                                                        <a href="" class="special-item-title">
                                                             Re-base 기초영어
-                                                        </h3>
+                                                        </a>
                                                         <div class="special-item-sub-text">메가공무원</div>
                                                         <div class="tag-area">
-                                                            <span class="tag-special tag-answer-hide on"><span class="icon"><span class="blind">정답・해설 가리기</span></span></span>
+                                                            <span class="tag-special-box">
+                                                                <span class="tag-special-toast">응시하기 서비스</span>
+                                                                <button type="button" class="btn-special-toast tag-special tag-test on"><span class="icon"><span
+                                                                            class="blind">응시하기</span></span></button>
+                                                            </span>
+                                                            <span class="tag-special-box">
+                                                                <span class="tag-special-toast">정・오답 확인 서비스</span>
+                                                                <button type="button" class="btn-special-toast tag-special tag-answer-check on"><span
+                                                                        class="icon"><span class="blind">정・오답 확인</span></span></button>
+                                                            </span>
                                                         </div>
                                                     </div>
                                                 </div>
-                                            </a>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="special-thumb-item">
+                                                <div class="special-thumb-area">
+                                                    <a href="" class="special-thumb-box">
+                                                        <div class="special-thumb">
+                                                            <img src="../assest/images/img-book-dummy-05.png" alt="" />
+                                                        </div>
+                                                    </a href="">
+                                                    <div class="special-item-text-area">
+                                                        <a href="" class="special-item-title">
+                                                            Re-base 기초영어
+                                                        </a>
+                                                        <div class="special-item-sub-text">메가공무원</div>
+                                                        <div class="tag-area">
+                                                            <span class="tag-special-box">
+                                                                <span class="tag-special-toast">응시하기 서비스</span>
+                                                                <button type="button" class="btn-special-toast tag-special tag-test on"><span class="icon"><span
+                                                                            class="blind">응시하기</span></span></button>
+                                                            </span>
+                                                            <span class="tag-special-box">
+                                                                <span class="tag-special-toast">정・오답 확인 서비스</span>
+                                                                <button type="button" class="btn-special-toast tag-special tag-answer-check on"><span
+                                                                        class="icon"><span class="blind">정・오답 확인</span></span></button>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="special-thumb-item">
+                                                <div class="special-thumb-area">
+                                                    <a href="" class="special-thumb-box">
+                                                        <div class="special-thumb">
+                                                            <img src="../assest/images/img-book-dummy-05.png" alt="" />
+                                                        </div>
+                                                    </a href="">
+                                                    <div class="special-item-text-area">
+                                                        <a href="" class="special-item-title">
+                                                            Re-base 기초영어
+                                                        </a>
+                                                        <div class="special-item-sub-text">메가공무원</div>
+                                                        <div class="tag-area">
+                                                            <span class="tag-special-box">
+                                                                <span class="tag-special-toast">응시하기 서비스</span>
+                                                                <button type="button" class="btn-special-toast tag-special tag-test on"><span class="icon"><span
+                                                                            class="blind">응시하기</span></span></button>
+                                                            </span>
+                                                            <span class="tag-special-box">
+                                                                <span class="tag-special-toast">정・오답 확인 서비스</span>
+                                                                <button type="button" class="btn-special-toast tag-special tag-answer-check on"><span
+                                                                        class="icon"><span class="blind">정・오답 확인</span></span></button>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="special-thumb-item">
+                                                <div class="special-thumb-area">
+                                                    <a href="" class="special-thumb-box">
+                                                        <div class="special-thumb">
+                                                            <img src="../assest/images/img-book-dummy-05.png" alt="" />
+                                                        </div>
+                                                    </a href="">
+                                                    <div class="special-item-text-area">
+                                                        <a href="" class="special-item-title">
+                                                            Re-base 기초영어
+                                                        </a>
+                                                        <div class="special-item-sub-text">메가공무원</div>
+                                                        <div class="tag-area">
+                                                            <span class="tag-special-box">
+                                                                <span class="tag-special-toast">응시하기 서비스</span>
+                                                                <button type="button" class="btn-special-toast tag-special tag-test on"><span class="icon"><span
+                                                                            class="blind">응시하기</span></span></button>
+                                                            </span>
+                                                            <span class="tag-special-box">
+                                                                <span class="tag-special-toast">정・오답 확인 서비스</span>
+                                                                <button type="button" class="btn-special-toast tag-special tag-answer-check on"><span
+                                                                        class="icon"><span class="blind">정・오답 확인</span></span></button>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -2450,6 +2031,7 @@
                     </div>
                 </section>
                 <!--미북 스페셜 끝-->
+                <!-- 7.29 미북 스페셜 추가 끝 -->
                 <!--디지털 굿즈 시작-->
                 <section class="main-contents-section">
                     <div class="container-inner">
@@ -2857,18 +2439,19 @@
                 <!--이벤트 / 혜택 , 무료 e-Book 끝-->
                 <!--컨텐츠 끝-->
             </div>
+            <!--8.8 푸터 일부 텍스트& 이미지 &버튼 수정 추가 시작-->
             <!--푸터 시작-->
             <footer class="footer-section">
                 <div class="link-text-group">
                     <div class="container-inner">
                         <div class="swiper-container" id="footerSwiper">
                             <div class="swiper-wrapper">
-                                <div class="swiper-slide on"><a href="#" class="link-text">회사소개</a></div>
-                                <div class="swiper-slide"><a href="#" class="link-text">이용약관</a></div>
-                                <div class="swiper-slide"><a href="#" class="link-text">개인정보처리방침</a></div>
+                                <div class="swiper-slide on"><a href="#" target="_blank" class="link-text">회사소개</a></div>
+                                <div class="swiper-slide"><a href="#" target="_blank" class="link-text">이용약관</a></div>
+                                <div class="swiper-slide"><a href="#" target="_blank" class="link-text">개인정보처리방침</a></div>
                                 <div class="swiper-slide"><a href="#" class="link-text">공지사항</a></div>
+                                <div class="swiper-slide"><a href="#" class="link-text">제휴/입점 문의</a></div>
                                 <div class="swiper-slide"><a href="#" class="link-text">FAQ</a></div>
-                                <div class="swiper-slide"><a href="#" class="link-text">입점문의</a></div>
                                 <div class="swiper-slide"><a href="#" class="link-text">1:1 문의</a></div>
                             </div>
                         </div>
@@ -2876,25 +2459,33 @@
                 </div>
                 <div class="container-inner">
                     <a href="#" class="logo">
-                        <img src="../assest/images/logo-meBook.svg" alt="meBook" />
+                        <img src="../assest/images/logo-meBook-store-gray.svg" alt="meBook 스토어" />
                     </a>
                     <ul class="copyright-text">
-                        <li>법인명(상호) : 메가스터디교육(주)</li>
+                        <li>06643 서울 서초구 효령로 321 (서초동, 덕원빌딩) 7층, 메가스터디교육㈜</li>
                         <li>대표자 : 손성은</li>
-                        <li>개인정보보호책임자 : OOO</li>
-                        <li>사업자등록번호 : 780-87-00034</li>
-                        <li>통신판매업신고 : 제 0000-00000호 <a href="#"><strong>사업자정보확인</strong></a></li>
+                        <li>개인정보보호책임자 : 오영석 keeper@megagong.net</li>
+                        <li>사업자 등록번호 : 780-87-00034</li>
+                        <li>통신판매업 신고번호 : 제 2015-서울서초-0678<a href="#" target="_blank"><strong>정보조회</strong></a></li>
                     </ul>
                     <ul class="copyright-text">
-                        <li>주소 : 서울특별시 서초구 효령로 321 (서초동, 덕원빌딩), 7층</li>
+                        <li>호스팅제공자 : ㈜케이티</li>
                         <li>전화번호 : 02-6438-3106</li>
                         <li>
-                            이메일 : <a href="mailto:mebookteam@mebook.io" target="_blank">mebookteam@mebook.io</a>
+                            이메일 : <a href="mailto:mebookteam@mebook.io" target="_blank">support@mebook.io</a>
                         </li>
-                        <li>호스팅 서비스 제공자 : 메가스터디교육(주)</li>
                     </ul>
+                    <div class="kcp-area">
+                        <div class="img-box">
+                            <img src="../assest/images/img-kcp.png" alt="kcp" />
+                        </div>
+                        <div class="text-box">
+                            <h4 class="kcp-title">NHN KCP 구매안전 (에스크로) 서비스</h4>
+                            <p class="kcp-text">고객님은 안전거래를 위해 현금등으로 결제 시 저희 쇼핑몰에 가입한 NHN KCP의 구매안전서비스를 이용하실 수 있습니다.</p>
+                        </div>
+                    </div>
                     <p class="copyright-text copyright">
-                        Copyright © 2024 메가스터디교육(주). All Rights Reserved.
+                     Copyright © megastudyEdu.co.,Ltd. All rights reserved.
                     </p>
                 </div>
                 <div class="floating-btns" id="floatingBtns">
@@ -2906,134 +2497,97 @@
                 </div>
             </footer>
             <!--푸터 끝-->
+            <!--8.8 푸터 일부 텍스트& 이미지 &버튼 수정 추가 끝-->
         </div>
     </main>
     <script src="../assest/js/jquery-2.2.4.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/js/swiper.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.js"></script>
+    <!--7.29 애니메이션 js 추가-->
+    <script src="../assest/js/ScrollMagic.min.js"></script>
+    <script src="../assest/js/debug.addIndicators.min.js"></script>
+    <script src="../assest/js/TweenMax.min.js"></script>
+    <script src="../assest/js/animation.gsap.min.js"></script>
     <script src="../assest/js/swiper-bundle.js"></script>
     <script src="../assest/js/common.js"></script>
 </body>
 <script>
     $(document).ready(function() {
-    let buttons = $(".pc-main-special-group .btn-special");
-    let currentIndex = 0;
-    let intervalId;
+        //7.29 미북 스페셜 추가
+        //미북 스페셜
+        let buttons = $(".pc-main-special-group .btn-special");
+        let currentIndex = 0;
+        let intervalIdArray = new Array();
 
-    function activateNextButton() {
-        buttons.removeClass("on");
-        $(".pc-main-special-group  .tag-special").removeClass("on");
-        
-        let currentButton = $(buttons[currentIndex]);
-        currentButton.addClass("on");
-        
-        let targetId = currentButton.data("target");
-       $(".pc-main-special-group  .swiper-slide .tag-special[id='" + targetId + "']").addClass("on");
-        
-        currentIndex = (currentIndex + 1) % buttons.length; 
-    }
+        function activateNextButton() {
+            buttons.removeClass("on");
+            $(".pc-main-special-group  .tag-special").removeClass("on");
 
-    function startAnimation() {
-        intervalId = setInterval(activateNextButton, 1300); 
-    }
+            let currentButton = $(buttons[currentIndex]);
+            currentButton.addClass("on");
+            //8.9 target id -> class 변경
+            let targetClass = currentButton.data("target");
+            $(".pc-main-special-group .swiper-slide .tag-special." + targetClass).addClass("on");
 
-    function stopAnimation() {
-        clearInterval(intervalId);
-    }
+            currentIndex = (currentIndex + 1) % buttons.length;
 
-    buttons.on("click", function() {
-        stopAnimation(); 
-        buttons.removeClass("on"); 
-        $(".pc-main-special-group  .tag-special").removeClass("on"); 
-
-        let currentButton = $(this);
-        currentButton.addClass("on"); 
-
-        let targetId = currentButton.data("target");
-        $(".pc-main-special-group .swiper-slide .tag-special[id='" + targetId + "']").addClass("on");
-
-        currentIndex = (buttons.index(this) + 1) % buttons.length;
-
-        setTimeout(startAnimation, 1300);
-    });
-
-    startAnimation(); 
-
-
-    var controller = new ScrollMagic.Controller();
-	var scene = new ScrollMagic.Scene({
-        triggerElement: "#trigger1"
-    })
-    .setTween("#animate1", 0.5, {top: "35px",  transform: "rotate(0deg)" }) // trigger a TweenMax.to tween
-    .addIndicators({name: "1 (duration: 0)"}) // add indicators (requires plugin)
-    .addTo(controller);
-
-
-
-    // gnb 메뉴
-    const subTabNav = $(".btn-tab-line-area a"); // 서브 탭 앵커 태그
-    const tabNav = $(".btn-tab-menu-area a"); // 메인 탭 앵커 태그
-    const tabNavLi = $('.btn-tab-menu-area li'); // 메인 탭 리스트
-
-    // 서브 탭 클릭 이벤트 핸들러
-    subTabNav.on("click", function (e) {
-        e.preventDefault();
-        const target = $(this).attr("href");
-
-        // 해당 서브 탭 활성화
-        $(target).addClass("on").siblings('.on').removeClass("on");
-        $(this).closest('li').addClass("on").siblings().removeClass("on");
-    });
-
-    // 메인 탭 클릭 이벤트 핸들러
-    tabNav.on("click", function (e) {
-        e.preventDefault();
-        const target = $(this).attr("href");
-
-        // 해당 메인 탭 활성화
-        $(target).addClass("on").siblings('.on').removeClass("on");
-        $(this).closest('li').addClass("on").siblings().removeClass("on");
-
-        // 서브 탭 유지 또는 첫 번째 서브 탭 활성화
-        const subTabActive = $(target).find('.btn-tab-line-area li.on');
-        if (!subTabActive.length) {
-            $(target).find('.btn-tab-line-area li:first-child a').trigger('click');
-        } else {
-            subTabActive.find('a').trigger('click');
         }
-    });
 
-    // 페이지 로드 시 첫 번째 탭 활성화
-    const mainTabActive = tabNavLi.filter('.on');
-    if (!mainTabActive.length) {
-        tabNavLi.first().find('a').trigger('click');
-    } else {
-        mainTabActive.find('a').trigger('click');
-    }
-
-    $('.btn-menu-link').click(function() {
-        const $parent = $(this).closest('.menu-link-item');
-        // Remove 'on' class from all menu-link-item
-        $('.menu-link-item').not($parent).removeClass('on');
-        // Toggle 'on' class for the clicked menu-link-item
-        if ($parent.find('.menu-link-depth2-list').length) {
-            $parent.toggleClass('on');
+        function startAnimation() {
+            stopAnimation();
+            let intervalId = setInterval(activateNextButton, 1300);
+            intervalIdArray.push(intervalId);
         }
-    });
 
+        function stopAnimation() {
+            for (i = 0; i < intervalIdArray.length; i++) {
+                clearInterval(intervalIdArray[i]);
+            }
+            intervalIdArray = new Array();
+        }
 
-    $('.btn-toggle-text').click(function() {
-        $('.btn-toggle-text').removeClass('on'); 
-        $(this).toggleClass('on');              
-    });
+        buttons.on("click", function () {
+            stopAnimation();
+            buttons.removeClass("on");
+            $(".pc-main-special-group  .tag-special").removeClass("on");
 
-    $('.mo-menu-depth1').on('click', function() {
-        $('.mo-menu-link-group').removeClass('on'); // Remove 'on' class from all groups
-        $(this).closest('.mo-menu-link-group').toggleClass('on'); // Toggle 'on' class on the clicked group
-      });
+            let currentButton = $(this);
+            currentButton.addClass("on");
+            //8.9  id -> class 변경
+            let targetClass = currentButton.data("target"); // target 클래스 이름을 가져옴
+            $(".pc-main-special-group .swiper-slide .tag-special." + targetClass).addClass("on");
+
+            currentIndex = (buttons.index(this) + 1) % buttons.length;
+
+            setTimeout(startAnimation, 3000);
+        });
+
+        startAnimation();
+
+        $('.btn-special-toast').on('click', function () {
+            $('.tag-special-toast').removeClass('on');
+
+            let $specialBox = $(this).closest('.tag-special-box');
+
+            if ($specialBox.length) {
+                let $toast = $specialBox.find('.tag-special-toast');
+
+                if ($toast.length) {
+                    $toast.toggleClass('on');
+                    setTimeout(function () {
+                        $toast.removeClass('on');
+                    }, 3000);
+                }
+            }
+        });
+
+        //미북 스페셜 다이아몬드
+        let controller = new ScrollMagic.Controller();
+        let scene = new ScrollMagic.Scene({
+            triggerElement: "#trigger1"
+        })
+        .setTween("#animate1", 0.5, { top: "35px", transform: "rotate(0deg)" }) 
+        .addTo(controller);
+    
 
 });
 

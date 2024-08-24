@@ -55,7 +55,7 @@
     /* Modern Browsers */
     url("../fonts/Pretendard-Boldr.ttf") format("truetype"),
     /* Safari, Android, iOS */
-    url( "../fonts/Pretendard-Bold.svg#NotoSansKR") format("svg"))))))
+     url("../fonts/Pretendard-Bold.svg#NotoSansKR") format("svg");
 }
 
 @font-face {
@@ -73,7 +73,7 @@
     /* Modern Browsers */
     url("../fonts/Pretendard-SemiBoldr.ttf") format("truetype"),
     /* Safari, Android, iOS */
-    url( "../fonts/Pretendard-SemiBold.svg#NotoSansKR") format("svg"))))))
+     url("../fonts/Pretendard-SemiBold.svg#NotoSansKR") format("svg");
 }
 
 @font-face {
@@ -91,7 +91,7 @@
     /* Modern Browsers */
     url("../fonts/Pretendard-Regular.ttf") format("truetype"),
     /* Safari, Android, iOS */
-    url( "../fonts/Pretendard-Regular.svg#NotoSansKR") format("svg"))))))
+     url("../fonts/Pretendard-Regular.svg#NotoSansKR") format("svg");
 }
 
 @font-face {
@@ -109,7 +109,7 @@
     /* Modern Browsers */
     url("../fonts/Pretendard-Light.ttf") format("truetype"),
     /* Safari, Android, iOS */
-    url( "../fonts/Pretendard-Light.svg#NotoSansKR") format("svg"))))))
+     url("../fonts/Pretendard-Light.svg#NotoSansKR") format("svg");
 }
 
 /* reset */
@@ -321,7 +321,9 @@ input {
     vertical-align: middle;
     opacity: 1;
 }
-
+input:-webkit-autofill {
+    box-shadow:var(--white-color) 0 0 0 1000px inset;
+}
 ::-webkit-input-placeholder {
     /* Edge */
     color: rgba(61, 61, 61, 0.3);
@@ -1082,9 +1084,15 @@ img {
 }
 .icon-info-gray {
     display: inline-block;
-    background: url("../images/ic-notice-info.svg") no-repeat center center/ contain;
+    background: url("../images/ic-info-gray.svg") no-repeat center center/ contain;
     width: 16px;
     height: 16px;
+}
+.icon-copy {
+    display: inline-block;
+    background: url("../images/ic-copy.svg") no-repeat center center/ contain;
+    width: 20px;
+    height: 20px;
 }
 .icon-preview {
     display: inline-block;
@@ -1524,11 +1532,18 @@ img {
     padding: 0 24px;
     border-radius: 8px;
 }
-
+.btn-medium-03 {
+    font-family: "Pretendard SemiBold";
+    font-size: 1.6rem;
+    line-height: 46px;
+    padding: 0 24px;
+    border-radius: 8px;
+    box-shadow: 0 6px 12px 0 #C2C1FF;
+}
 .btn-large {
     font-family: "Pretendard SemiBold";
     font-size: 1.6rem;
-    line-height: 52px;
+    line-height: 46px;
     padding: 0 24px;
     box-shadow: 0 6px 12px 0 #C2C1FF;
     border-radius: 8px;
@@ -1794,7 +1809,64 @@ img {
     margin-left: 4px;
 }
 
-.form-control-line-btn {
+.form-control-select {
+    position: relative;
+    background-color: var(--white-color);
+    border: 0;
+    border-bottom: 1px solid var(--border-primary);
+    width: 100%;
+    /* border-bottom: 1px solid var(--border-primary);
+    width: 100%;
+    height: 100%;
+    width: 100%; */
+}
+.form-control-select .select:focus-visible,
+.form-control-select:focus-visible {
+    outline: 0;
+}
+.form-control-select:focus-visible::after,
+.form-control-select:focus::after,
+.form-control-select:hover::after {
+    -webkit-transition: all 0.3s cubic-bezier(0, 0.21, 0.03, 1.01);
+    -o-transition: all 0.3s cubic-bezier(0, 0.21, 0.03, 1.01);
+    transition: all 0.3s cubic-bezier(0, 0.21, 0.03, 1.01);
+}
+.form-control-select::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 26px;
+    display: block;
+    background: url("../images/ic-arrow-bottom.svg") no-repeat center center / contain;
+    width: 16px;
+    height: 16px;
+}
+
+.form-control-select .select {
+    color: var(--blue-grey-600);
+    padding: 0 20px 0 0;
+    border: 0;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: 100%;
+    color: var(--blue-grey-400);
+    font-size: 1.4rem;
+    color: var(--black-color);
+    font-family: "Pretendard SemiBold";
+    height: 64px;
+    padding: 20px 0;
+}
+.form-control-select .select:required:invalid {
+    color: var(--blue-grey-400);
+    font-size: 1.4rem;
+}
+
+.form-control-select .select option[value=""][disabled] {
+    display: none;
+}
+/* .form-control-line-btn {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -1815,7 +1887,7 @@ img {
 .form-control-line-btn .text.on {
     color: var(--black-color);
     font-family: "Pretendard SemiBold";
-}
+} */
 .icon-arrow {
     transform: rotate(180deg);
     display: inline-block;
@@ -2460,9 +2532,17 @@ img {
 .list-box li > .content {
     font-size: 1.6rem;
     line-height: 22px;
+    text-align: right;
+}
+.list-box li > .content.full-width {
+    width: 100%;
+    margin-top: -8px;
 }
 .list-box li > .content > strong {
     font-family: "Pretendard Bold";
+}
+.list-box li > .content > .semi-bold {
+    font-family: "Pretendard SemiBold";
 }
 .list-box li:last-child {
     margin-bottom: 0;
@@ -3551,6 +3631,12 @@ img {
     width: 100%;
     padding: 22px 16px;
     border-bottom: 1px solid var(--border-primary);
+}
+.notice-list-group .notice-item.fixed {
+    background-color: var(--blue-grey-50);
+}
+.notice-list-group .notice-item.fixed .title {
+    font-family: "Pretendard Bold";
 }
 .notice-list-group .notice-item .notice-badge {
     font-family: "Pretendard SemiBold";

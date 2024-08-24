@@ -24,22 +24,26 @@
         <div class="container">
             <!-- 검색 시작 -->
             <section class="search-section">
-                <form>
-                    <div class="search-bar">
-                        <button type="button" class="btn btn-transparent">
-                            <i class="icon-back-32"><span class="blind">뒤로</span></i>
-                        </button>
-                        <input type="text" class="input-box" placeholder="검색어를 입력해주세요." value="전한길" />
-                        <div class="btns">
-                            <button type="submit" class="btn btn-transparent">
-                                <i class="icon-search-clear"><span class="blind">지우기</span></i>
+                <!-- 7.29 검색바 div class="search-bar-area" 추가  시작-->
+                <div class="search-bar-area">
+                    <form>
+                        <div class="search-bar">
+                            <button type="button" class="btn btn-transparent">
+                                <i class="icon-back-32"><span class="blind">뒤로</span></i>
                             </button>
-                            <button type="submit" class="btn btn-transparent">
-                                <i class="icon-search-32"><span class="blind">검색</span></i>
-                            </button>
+                            <input type="text" class="input-box" placeholder="검색어를 입력해주세요." value="전한길" />
+                            <div class="btns">
+                                <button type="submit" class="btn btn-transparent">
+                                    <i class="icon-search-clear"><span class="blind">지우기</span></i>
+                                </button>
+                                <button type="submit" class="btn btn-transparent">
+                                    <i class="icon-search-32"><span class="blind">검색</span></i>
+                                </button>
+                            </div>
                         </div>
-                    </div>
-                 </form>
+                    </form>
+                </div>
+                <!-- 7.29 검색바 div class="search-bar-area" 추가  끝-->
                  <div class="related-search-group">
                     <div class="search-keyword-inner">
                         <div class="title">연관 검색어</div>
@@ -74,13 +78,63 @@
              <div class="search-contents-wrap">
                 <!-- 검색 결과 시작-->
                 <section class="search-results-section">
+                    <!--7.29 띠배너 수정 시작-->
                     <div class="banner-section">
-                        <div class="banner-board-group">
-                            <a href="#" class="banner-board-large">
-                                <img src="../assest/images/img-main-banner-dummy-01.png" alt="">
-                            </a>
+                        <div class="only-pc">
+                            <div class="banner-board-group">
+                                <a href="#" class="banner-board-large" style="background-color: #F2F4F6;">
+                                    <span class="text-area">
+                                        <span class="sub-text">10월에는 행운을~</span>
+                                        <p class="title">LUCKY DRAW 행운 이벤트</p>
+                                    </span>
+                                    <span class="img-area">
+                                        <img src="../assest/images/img-dummy-banner.png" alt="">
+                                    </span>
+                                </a>
+                                <a href="#" class="banner-board-large" style="background-color: #F2F4F6;">
+                                    <span class="text-area">
+                                        <span class="sub-text">10월에는 행운을~</span>
+                                        <p class="title">LUCKY DRAW 행운 이벤트</p>
+                                    </span>
+                                    <span class="img-area">
+                                        <img src="../assest/images/img-dummy-banner.png" alt="">
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="only-mobile swiper-banner banner-board-group">
+                            <div class="swiper" id="mainEventBanner">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <a href="#" class="banner-board-large" style="background-color: #F2F4F6;">
+                                            <span class="text-area">
+                                                <span class="sub-text">10월에는 행운을~</span>
+                                                <p class="title">LUCKY DRAW 2</p>
+                                            </span>
+                                            <span class="img-area">
+                                                <img src="../assest/images/img-dummy-banner.png" alt="">
+                                            </span>
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="#" class="banner-board-large" style="background-color: #F2F4F6;">
+                                            <span class="text-area">
+                                                <span class="sub-text">10월에는 행운을~</span>
+                                                <p class="title">LUCKY DRAW 2</p>
+                                            </span>
+                                            <span class="img-area">
+                                                <img src="../assest/images/img-dummy-banner.png" alt="">
+                                            </span>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="swiper-button-prev"></div>
+                                <div class="swiper-button-next"></div>
+                                <div class="swiper-pagination"></div>
+                            </div>
                         </div>
                     </div>
+                    <!--7.29 띠배너 수정 끝-->
                     <div class="search-filter-group">
                         <div class="btn-filter-items">
                             <div class="btn-filter-item">
@@ -173,22 +227,6 @@
                         </div>    
                         <button type="reset" class="btn-text">초기화</button>
                     </div>
-                    <!-- 빈 검색 결과 시작-->
-                    <div class="search-empty-group">
-                        <div class="empty-info-group">
-                            <div class="img-box">
-                                <img src="../assest/images/img-cart-01.png" alt=""/>
-                            </div>
-                            <div class="text-box">
-                                <h3 class="empty-title"><span class="color-primary">전한길</span>에 대한 검색결과가 없습니다.</h3>
-                                <p class="empty-text">원하는 도서가 있다면 미북에게 전해주세요.</p>
-                            </div>
-                            <div class="btn-area">
-                                <a href="#" class="btn btn-primary btn-medium">도서 신청하기</a>
-                            </div>
-                        </div>
-                    </div>
-                    <!--빈 검색 결과 끝-->
                     <header class="search-result-header">
                         <h2 class="search-result-title">
                             <span class="color-primary">전한길</span> 검색 결과<span class="num">(1,234)</span>
@@ -231,6 +269,24 @@
                             </a>
                         </div>
                     </div>
+                    <!--7.29 빈 검색 결과 위치 수정-->
+                    <!-- 빈 검색 결과 시작-->
+                    <div class="search-empty-group">
+                        <div class="empty-info-group">
+                            <div class="img-box">
+                                <img src="../assest/images/img-cart-01.png" alt="" />
+                            </div>
+                            <div class="text-box">
+                                <h3 class="empty-title"><span class="color-primary">전한길</span>에 대한 검색결과가 없습니다.</h3>
+                                <p class="empty-text">원하는 도서가 있다면 미북에게 전해주세요.</p>
+                            </div>
+                            <div class="btn-area">
+                                <a href="#" class="btn btn-primary btn-medium">도서 신청하기</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!--빈 검색 결과 끝-->
+                    <!--7.29 빈 검색 결과 위치 끝-->
                     <div class="thumb-grid-items">
                         <div class="thumb-grid-item">
                             <div class="checks black">
@@ -409,6 +465,7 @@
                 </section>
                 <!-- 검색 결과 끝-->
             </div>
+            <!--7.29 바텀 시트 수정 시작-->
             <!--카드 팝업 시작-->
             <section class="bottom-sheet-popup handler" id="sheet">
                 <button type="button" class="handler-area">
@@ -437,61 +494,72 @@
                         <div class="total-price-conent">19,000원 <small class="price">20,000원</small></div>
                     </div>
                     <div class="btn-area">
-                        <button type="button" class="btn btn-line-primary btn-full btn-large-02">장바구니</button>
-                        <button type="button" class="btn btn-primary btn-full btn-large-02">바로 구매</button>
+                        <button type="button" class="btn btn-line-primary btn-full btn-medium-02">장바구니</button>
+                        <button type="button" class="btn btn-primary btn-full btn-medium-02">바로 구매</button>
                     </div>
                 </div>
             </section>
             <!--카드 팝업 끝-->
+            <!--7.29 바텀 시트 수정 끝-->
+            <!--8.8 푸터 일부 텍스트& 이미지 &버튼 수정 추가 시작-->
             <!--푸터 시작-->
             <footer class="footer-section">
                 <div class="link-text-group">
                     <div class="container-inner">
-                            <div class="swiper-container" id="footerSwiper">
-                                <div class="swiper-wrapper">
-                                    <div class="swiper-slide on"><a href="#" class="link-text">회사소개</a></div>
-                                    <div class="swiper-slide"><a href="#" class="link-text">이용약관</a></div>
-                                    <div class="swiper-slide"><a href="#" class="link-text">개인정보처리방침</a></div>
-                                    <div class="swiper-slide"><a href="#" class="link-text">공지사항</a></div>
-                                    <div class="swiper-slide"><a href="#" class="link-text">FAQ</a></div>
-                                    <div class="swiper-slide"><a href="#" class="link-text">입점문의</a></div>
-                                    <div class="swiper-slide"><a href="#" class="link-text">1:1 문의</a></div>
-                                </div>
+                        <div class="swiper-container" id="footerSwiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide on"><a href="#" target="_blank" class="link-text">회사소개</a></div>
+                                <div class="swiper-slide"><a href="#" target="_blank" class="link-text">이용약관</a></div>
+                                <div class="swiper-slide"><a href="#" target="_blank" class="link-text">개인정보처리방침</a></div>
+                                <div class="swiper-slide"><a href="#" class="link-text">공지사항</a></div>
+                                <div class="swiper-slide"><a href="#" class="link-text">제휴/입점 문의</a></div>
+                                <div class="swiper-slide"><a href="#" class="link-text">FAQ</a></div>
+                                <div class="swiper-slide"><a href="#" class="link-text">1:1 문의</a></div>
                             </div>
+                        </div>
                     </div>
                 </div>
                 <div class="container-inner">
                     <a href="#" class="logo">
-                        <img src="../assest/images/logo-meBook.svg" alt="meBook" />
+                        <img src="../assest/images/logo-meBook-store-gray.svg" alt="meBook 스토어" />
                     </a>
                     <ul class="copyright-text">
-                        <li>법인명(상호) : 메가스터디교육(주)</li>
+                        <li>06643 서울 서초구 효령로 321 (서초동, 덕원빌딩) 7층, 메가스터디교육㈜</li>
                         <li>대표자 : 손성은</li>
-                        <li>개인정보보호책임자 : OOO</li>
-                        <li>사업자등록번호 : 780-87-00034</li>
-                        <li>통신판매업신고 : 제 0000-00000호 <a href="#"><strong>사업자정보확인</strong></a></li>
+                        <li>개인정보보호책임자 : 오영석 keeper@megagong.net</li>
+                        <li>사업자 등록번호 : 780-87-00034</li>
+                        <li>통신판매업 신고번호 : 제 2015-서울서초-0678<a href="#" target="_blank"><strong>정보조회</strong></a></li>
                     </ul>
                     <ul class="copyright-text">
-                        <li>주소 : 서울특별시 서초구 효령로 321 (서초동, 덕원빌딩), 7층</li>
+                        <li>호스팅제공자 : ㈜케이티</li>
                         <li>전화번호 : 02-6438-3106</li>
                         <li>
-                            이메일 : <a href="mailto:mebookteam@mebook.io" target="_blank">mebookteam@mebook.io</a>
+                            이메일 : <a href="mailto:mebookteam@mebook.io" target="_blank">support@mebook.io</a>
                         </li>
-                        <li>호스팅 서비스 제공자 : 메가스터디교육(주)</li>
                     </ul>
+                    <div class="kcp-area">
+                        <div class="img-box">
+                            <img src="../assest/images/img-kcp.png" alt="kcp" />
+                        </div>
+                        <div class="text-box">
+                            <h4 class="kcp-title">NHN KCP 구매안전 (에스크로) 서비스</h4>
+                            <p class="kcp-text">고객님은 안전거래를 위해 현금등으로 결제 시 저희 쇼핑몰에 가입한 NHN KCP의 구매안전서비스를 이용하실 수 있습니다.</p>
+                        </div>
+                    </div>
                     <p class="copyright-text copyright">
-                        Copyright © 2024 메가스터디교육(주). All Rights Reserved.
+                        Copyright © megastudyEdu.co.,Ltd. All rights reserved.
                     </p>
                 </div>
                 <div class="floating-btns" id="floatingBtns">
                     <div class="btn-top-scroll-area" id="btnTopScroll">
-                        <button type="button" class="btn-top-scroll"><span class="icon-top"><span class="blind">탑버튼</span></span><span
-                                class="text">TOP</span>
+                        <button type="button" class="btn-top-scroll"><span class="icon-top"><span
+                                    class="blind">탑버튼</span></span><span class="text">TOP</span>
                         </button>
                     </div>
                 </div>
             </footer>
             <!--푸터 끝-->
+            <!--8.8 푸터 일부 텍스트& 이미지 &버튼 수정 추가 끝-->
             <!--최근 검색어 시작-->
             <aside class="side-banner-section" id="sideBanner">
                 <header class="side-banner-header">
@@ -630,98 +698,97 @@
     </main>
     <script src="../assest/js/jquery-2.2.4.min.js"></script>
     <script src="../assest/js/swiper-bundle.js"></script>
-    <script src="../assest/js/jquery.multi-select.min.js"></script>
-    <script src="../assest/js/bottom-sheet.js"></script>
     <script src="../assest/js/common.js"></script>
+    <!--7.29 bottom-sheet.js 추가 및 위치 수정 jquery.multi-select.min.js 삭제-->
+    <script src="../assest/js/bottom-sheet.js"></script>
 
     <script type="text/javascript">
-        $(document).ready(function() {
+        $(document).ready(function () {
             // 드롭다운 메뉴 토글
-            $(".btn-multi-dropdown dt .btn-dropdown").on('click', function() {
+            $(".btn-multi-dropdown dt .btn-dropdown").on("click", function () {
                 // 현재 클릭된 드롭다운의 다음 요소인 dd를 찾습니다.
-                let $dd = $(this).closest('dt').next('dd');
-                
+                let $dd = $(this).closest("dt").next("dd");
+
                 // 다른 모든 드롭다운 닫기
-                $(".btn-multi-dropdown dd").not($dd).find('ul').hide();
-                
+                $(".btn-multi-dropdown dd").not($dd).find("ul").hide();
+
                 // 클릭한 드롭다운 토글
-                $dd.find('ul').slideToggle('fast');
-                
+                $dd.find("ul").slideToggle("fast");
+
                 // 아이콘 회전 처리
-                $(this).find('.icon-arrow').toggleClass('rotate');
+                $(this).find(".icon-arrow").toggleClass("rotate");
             });
 
             // 페이지 다른 곳 클릭 시 드롭다운 닫기
-            $(document).bind('click', function(e) {
+            $(document).bind("click", function (e) {
                 let $clicked = $(e.target);
                 if (!$clicked.parents().hasClass("btn-multi-dropdown")) {
                     $(".btn-multi-dropdown dd ul").hide();
                 }
             });
 
-            // 다중 선택 체크박스 기능
-            $('.mutli-select-checkbox input[type="checkbox"]').on('click', function() {
-                let $dropdown = $(this).closest('.btn-multi-dropdown');
-                let $multiSel = $(this).closest('.btn-multi-dropdown').find('.multi-select');
-                let title = $(this).val() + ",";
+        //7.29 다중 선택 수정 
+        // 다중 선택 체크박스 기능
+         $('.mutli-select-checkbox input[type="checkbox"]').on("click", function () {
+                let $dropdown = $(this).closest(".btn-multi-dropdown");
+                let $multiSel = $dropdown.find(".multi-select");
+                let title = $(this).val();
 
-                if ($(this).is(':checked')) {
+                if ($(this).is(":checked")) {
                     let html = '<span title="' + title + '">' + title + '</span>';
                     $multiSel.append(html);
-                    $(this).closest('.btn-multi-dropdown').find('.hide').hide();
+                    $dropdown.find(".hide").hide();
                 } else {
                     $multiSel.find('span[title="' + title + '"]').remove();
-                    if ($multiSel.children().length == 0) {
-                        $(this).closest('.btn-multi-dropdown').find('.hide').show();
+                    if ($multiSel.children().length === 0) {
+                        $dropdown.find(".hide").show();
                     }
                 }
-
-                // 드롭다운 제목 배경색 변경
                 if ($multiSel.children().length > 0) {
-                    $dropdown.find('dt .btn-dropdown').addClass('on');
+                    $dropdown.find("dt .btn-dropdown").addClass("on");
                 } else {
-                    $dropdown.find('dt .btn-dropdown').removeClass('on');
+                    $dropdown.find("dt .btn-dropdown").removeClass("on");
                 }
             });
-
             // 기본 위치(top)값
-            let floatPosition = parseInt($("#sideBanner").css('top'))
+            let floatPosition = parseInt($("#sideBanner").css("top"));
 
             // scroll 인식
-            $(window).scroll(function() {
-            
-                // 현재 스크롤 위치
-                let currentTop = $(window).scrollTop();
-                let bannerTop = currentTop + floatPosition + "px";
+            $(window)
+                .scroll(function () {
+                    // 현재 스크롤 위치
+                    let currentTop = $(window).scrollTop();
+                    let bannerTop = currentTop + floatPosition + "px";
 
-                //이동 애니메이션
-                $("#sideBanner").stop().animate({
-                "top" : bannerTop
-                }, 500);
+                    //이동 애니메이션
+                    $("#sideBanner").stop().animate(
+                        {
+                            top: bannerTop,
+                        },
+                        500
+                    );
+                })
+                .scroll();
 
-            }).scroll();
-            
             //필터 레이어
-            $('#btnFilter').click(function () {
-                $('#layerFilter').addClass('on');
-                $('body').addClass('scroll-lock');
+            $("#btnFilter").click(function () {
+                $("#layerFilter").addClass("on");
+                $("body").addClass("scroll-lock");
             });
 
-            $('#closelayerFilter').click(function () {
-                $('#layerFilter').removeClass('on');
-                $('body').removeClass('scroll-lock');
+            $("#closelayerFilter").click(function () {
+                $("#layerFilter").removeClass("on");
+                $("body").removeClass("scroll-lock");
             });
 
-            $('.mo-layer-container.scroll').scroll(function () {
+            $(".mo-layer-container.scroll").scroll(function () {
                 if ($(this).scrollTop() > 0) {
-                    $('body').addClass('scroll-lock');
+                    $("body").addClass("scroll-lock");
                 } else {
-                    $('body').removeClass('scroll-lock');
+                    $("body").removeClass("scroll-lock");
                 }
             });
-
         });
-
     </script>
 </body>
 

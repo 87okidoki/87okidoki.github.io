@@ -25,22 +25,26 @@
         <div class="container">
             <!-- 검색 시작 -->
             <section class="search-section search-layer-section">
-                <form>
-                    <div class="search-bar">
-                        <button type="button" class="btn btn-transparent">
-                            <i class="icon-back-32"><span class="blind">뒤로</span></i>
-                        </button>
-                        <input type="text" class="input-box" placeholder="검색어를 입력해주세요." />
-                        <div class="btns">
-                            <button type="submit" class="btn btn-transparent">
-                                <i class="icon-search-clear"><span class="blind">지우기</span></i>
+                <!-- 7.29 검색바 div class="search-bar-area" 추가  시작-->
+                <div class="search-bar-area">
+                    <form>
+                        <div class="search-bar">
+                            <button type="button" class="btn btn-transparent">
+                                <i class="icon-back-32"><span class="blind">뒤로</span></i>
                             </button>
-                            <button type="submit" class="btn btn-transparent">
-                                <i class="icon-search-32"><span class="blind">검색</span></i>
-                            </button>
+                            <input type="text" class="input-box" placeholder="검색어를 입력해주세요." value="전한길" />
+                            <div class="btns">
+                                <button type="submit" class="btn btn-transparent">
+                                    <i class="icon-search-clear"><span class="blind">지우기</span></i>
+                                </button>
+                                <button type="submit" class="btn btn-transparent">
+                                    <i class="icon-search-32"><span class="blind">검색</span></i>
+                                </button>
+                            </div>
                         </div>
-                    </div>
-                 </form>
+                    </form>
+                </div>
+                <!-- 7.29 검색바 div class="search-bar-area" 추가  끝-->
                 <!-- 검색화면 진입 시작 -->
                 <div  class="search-intro-section">
                     <div class="keyword-area">
@@ -51,13 +55,13 @@
                         <div class="btn-keywords">
                             <span class="btn-keyword">
                                 <a href="" class="text">실전모의고사</a>
-                                <button type="button" class="btn-delete" class="btn btn-transparent">
+                                <button type="button" class="btn-delete">
                                     <i class="icon-close-16"><span class="blind">삭제</span></i>
                                 </button>
                             </span>
                             <span class="btn-keyword">
                                 <a href="" class="text">실전모의고사</a>
-                                <button type="button" class="btn-delete" class="btn btn-transparent">
+                                <button type="button" class="btn-delete">
                                     <i class="icon-close-16"><span class="blind">삭제</span></i>
                                 </button>
                             </span>
