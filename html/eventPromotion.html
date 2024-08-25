@@ -1180,7 +1180,6 @@
                             </h2>
                             <img src="../assest/promotion0902/images/img-main-promotion-pc.png" class="img-promotion only-pc" />
                             <img src="../assest/promotion0902/images/img-main-promotion-mo.png" class="img-promotion only-mobile" />
-
                         </header>
                         <section class="intro-section">
                             <div class="promotion-container-inner">
@@ -1326,6 +1325,7 @@
                                 </header>
                             </div>
                             <div class="tablet-swiper">
+                                <img src="../assest/promotion0902/images/img-applpen.png" class="tablet-applpen"/>
                                 <img src="../assest/promotion0902/images/img-tablet.png" class="tablet-frame"/>
                                 <div class="swiper"  id="promotionBookSwiper">
                                     <div class="swiper-wrapper">
@@ -1362,8 +1362,10 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="swiper-button-prev"></div>
-                                    <div class="swiper-button-next"></div>
+                                    <div class="swiper-button-box">
+                                        <div class="swiper-button-prev"></div>
+                                        <div class="swiper-button-next"></div>
+                                    </div>
                                 </div>
                             </div>
                             <div class="promotion-container-inner">
@@ -1449,7 +1451,7 @@
                                         <span class="tab-promo-black">디지털 굿즈 <span class="bubble">다양한 <b class="bold">디지털 굿즈</b>도 만나보세요!</span></span>
                                     </div>
                                     <div class="tab-promo-content on">
-                                        <div class="thumb-grid-items">
+                                        <div class="thumb-grid-items promotion">
                                             <div class="thumb-grid-item">
                                                 <div class="thumb-item">
                                                     <a href="#" class="book-thumb-area badge-special">
@@ -1693,23 +1695,35 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class=" only-mobile">
+                                    <div class="only-mobile">
                                         <div class="event-share-box">
                                             <div class="event-share-item">
-                                                <div class="event-share-img">
-                                                    <img src="../assest/promotion0902/images/img-event-share-01.png"/>
-                                                </div>                                   
+                                                <div class="checks black">
+                                                    <input type="radio" name="eventImg" id="eventImg01" class="check" value="event-img-01" checked />
+                                                    <label for="eventImg01" class="label-check">  
+                                                        <div class="event-share-img">
+                                                            <img src="../assest/promotion0902/images/img-event-share-01.png"/>
+                                                        </div>
+                                                    </label>
+                                                </div>                              
                                             </div>
                                             <div class="event-share-item">
-                                                <div class="event-share-img">
-                                                    <img src="../assest/promotion0902/images/img-event-share-01.png"/>
-                                                </div>                                      
+                                                <div class="checks black">
+                                                    <input type="radio" name="eventImg" id="eventImg02" class="check" value="event-img-02" />
+                                                    <label for="eventImg02" class="label-check">  
+                                                        <div class="event-share-img">
+                                                            <img src="../assest/promotion0902/images/img-event-share-01.png"/>
+                                                        </div>
+                                                    </label>
+                                                </div>                             
                                             </div>
                                         </div>
-                                        <a href="#" class="btn btn-promo btn-full">
-                                            이벤트 <b class="secondary">소문내기</b>
-                                            <span class="icon-share"><span class="blind">오른쪽 화살</span></span>
-                                         </a> 
+                                        <div class="btn-promo-area">
+                                            <a href="#" class="btn btn-promo btn-full">
+                                                이벤트 <b class="secondary">소문내기</b>
+                                                <span class="icon-share"><span class="blind">오른쪽 화살</span></span>
+                                             </a> 
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="promotion-step-box">
@@ -1723,29 +1737,35 @@
                                     <div class="promotion-comment-box">
                                         <div class="url-input-group only-pc">
                                             <form>
-                                                <div class="url-input-box">
+                                                <div class="url-input-box disabled">
                                                     <div class="name-area">
                                                         <div class="name">
-                                                            이*름긴사람이에여
+                                                            로그인 해주세요
                                                         </div>
                                                     </div>
-                                                    <input class="input" type="url" placeholder="인증 URL 입력" />
-                                                    <button type="submit" class="btn btn-url-input">참여하기</button>
+                                                    <input class="input" type="url" placeholder="인증 URL 입력" disabled/>
+                                                    <button type="submit" class="btn btn-url-input" disabled>참여하기</button>
                                                 </div>
                                             </form>
                                         </div>
-                                        <div class="url-input-group only-mobile">
-                                            <form>
-                                                <div class="url-input-box">
-                                                    <div class="name-area">
-                                                        <div class="name">
-                                                            이*름긴사람이에여
-                                                        </div>
+                                        <div class="only-mobile">
+                                            <div class="mo-url-input-group">
+                                                <form>
+                                                    <div class="url-input-infobox">
+                                                        로그인 해주세요 
                                                     </div>
-                                                    <input class="input" type="url" placeholder="인증 URL 입력" />
-                                                </div>
-                                                <button type="submit" class="btn btn-url-input">참여하기</button>
-                                            </form>
+                                                    <div class="url-input-box">
+                                                        <div class="name-area">
+                                                            <div class="name">
+                                                                이*름긴사람이에여
+                                                            </div>
+                                                        </div>
+                                                        <textarea class="input"  placeholder="인증 URL 입력" rows="2">
+                                                        </textarea>
+                                                    </div>
+                                                    <button type="submit" class="btn btn-url-input" disabled>참여하기</button>
+                                                </form>
+                                            </div>
                                         </div>
                                         <div class="promotion-comment-list">
                                             <h5 class="promotion-comment-title">인증 완료 참여자</h5>
@@ -1769,8 +1789,8 @@
                                                     <a href="#">1</a>
                                                     <a href="#" class="active">2</a>
                                                     <a href="#">3</a>
-                                                    <span>∙∙∙</span>
-                                                    <a href="#">999</a>
+                                                    <span class="only-pc">∙∙∙</span>
+                                                    <a href="#" class="only-pc">999</a>
                                                     <a href="#" class="next">
                                                         <span class="blind">오른쪽 화살</span>               
                                                     </a>
@@ -1861,10 +1881,10 @@
             <!--푸터 끝-->
             <!--8.8 푸터 일부 텍스트& 이미지 &버튼 수정 추가 끝-->
             <!--팝업 시작-->
-            <section class="popup-section sns off" id="sharePopup">
+            <section class="popup-section promotion-sns " id="sharePopup">
                 <div class="popup-container text-center">
                     <header class="popup-header">
-                        <h2 class="title">공유하기</h2>
+                        <h2 class="title">소문내기</h2>
                         <button type="button" class="btn btn-transparent" id="btnClose">
                             <i class="icon-close-24"><span class="blind">닫기</span></i>
                         </button>
@@ -1873,8 +1893,24 @@
                         <div class="sns-list-group">
                             <div class="sns-list">
                                 <a href="#" class="sns-item">
-                                    <span class="sns-logo logo-kakao"><span class="blind">카카오톡</span></span>
-                                    <span class="text">카카오톡</span>
+                                    <span class="sns-logo logo-instagram"><span class="blind">인스타그램</span></span>
+                                    <span class="text">인스타그램</span>
+                                </a>
+                                <a href="#" class="sns-item">
+                                    <span class="sns-logo logo-facebook"><span class="blind">페이스북</span></span>
+                                    <span class="text">페이스북</span>
+                                </a>
+                                <a href="#" class="sns-item">
+                                    <span class="sns-logo logo-bamboo"><span class="blind">대나무숲</span></span>
+                                    <span class="text">대나무숲</span>
+                                </a>
+                                <a href="#" class="sns-item">
+                                    <span class="sns-logo logo-blind"><span class="blind">블라인드</span></span>
+                                    <span class="text">블라인드</span>
+                                </a>
+                                <a href="#" class="sns-item">
+                                    <span class="sns-logo logo-naver-cafe"><span class="blind">네이버 카페</span></span>
+                                    <span class="text">네이버 카페</span>
                                 </a>
                                 <a href="#" class="sns-item">
                                     <span class="sns-logo logo-naverband"><span class="blind">네이버밴드</span></span>
@@ -1885,28 +1921,65 @@
                                     <span class="text">네이버블로그</span>
                                 </a>
                                 <a href="#" class="sns-item">
-                                    <span class="sns-logo logo-facebook"><span class="blind">페이스북</span></span>
-                                    <span class="text">페이스북</span>
+                                    <span class="sns-logo logo-dc-nside"><span class="blind">디시인사이드</span></span>
+                                    <span class="text">디시인사이드</span>
                                 </a>
-                                <a href="#" class="sns-item">
-                                    <span class="sns-logo logo-x"><span class="blind">트위터</span></span>
-                                    <div class="text">트위터</div>
-                                </a>
-                                <a href="#" class="sns-item">
-                                    <span class="sns-logo logo-sms"><span class="blind">SMS 문자</span></span>
-                                    <span class="text">SMS 문자</span>
+                                <a href="#" class="sns-item only-mobile">
+                                    <span class="sns-logo icon-img-download"><span class="blind">이미지 다운</span></span>
+                                    <span class="text">이미지 다운</span>
                                 </a>
                             </div>
-                            <a href="#" class="btn-link-area">
-                                <span class="btn-link">
-                                    http://urlurlurlurlurlurlurlurlurlurlurlrulrlurlurlurlurlurlurlurlrul
-                                </span>
-                            </a>
+                            <div class="btn-sns-group">
+                                <button type="button" class="btn-down">
+                                    <span class="icon-down"><span class="blind">다운로드</span></span>
+                                </button>
+                                <div class="btn-link-box">
+                                    <a href="#" class="btn-link-area">
+                                        <span class="btn-link">
+                                            http://urlurlurlurlurlurlurlurlurlurlurlrulrlurlurlurlurlurlurlurlrul
+                                        </span>
+                                    </a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </section>
             <!--팝업 끝-->
+                <!--팝업 시작-->
+                <section class="popup-section promotion-sns " id="sharePopup">
+                    <div class="popup-container text-center">
+                        <header class="popup-header">
+                            <h2 class="title">개인정보 수집/이용 동의 안내</h2>
+                            <button type="button" class="btn btn-transparent" id="btnClose">
+                                <i class="icon-close-24"><span class="blind">닫기</span></i>
+                            </button>
+                        </header>
+                        <div class="popup-body">
+                            <div>
+                                <ul>
+                                    <li>1.개인정보 수집/이용 목적
+                                        <ul>
+                                            <li>미북스토어 이벤트 문자 알림 신청에 따른 절차 진행 및 관련 정보 안내</li>
+                                            <li>이벤트 참여 내역 관리를 통한 혜택 중복 수령 방지 등</li>
+                                            <li>광고성 정보 수신에 별도 동의한 자에 한하여 미북스토어을 비롯한 메가스터디교육의 새로운 서비스 신상품이나 이벤트, 최신 정보 안내 등 회원님의 취향에 맞는 최적의 서비스를 제공하기 위함. (㈜메가스터디교육이 운영하는 온라인 홈페이지, 블로그, 카페(제휴 커뮤니티 포함) 등</li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        2.개인정보 수집 항목 : 이름, 휴대폰 번호, 이메일
+                                    </li>
+                                    <li>
+                                        3.개인정보의 보유/이용 기간 : 수집한 개인정보는 수집 시로부터 1년 간 이용하며, 내역 관리를 위해 추가 1년을 보관한 후 파기합니다. (총 2년 보유) 다만, 보유 및 이용 기간 동안 개인정보 이용 동의에 철회하시는 경우 그 즉시 파기합니다.
+                                    </li>
+                                    <li>
+                                        4.이벤트 신청 회원은 개인정보 이용을 거부할 수 있습니다. 단, 거부의 경우에는 미북스토어 이벤트 참여 및 당첨이 제한됩니다.                                </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!--팝업 끝-->
+            </div>
         </div>
     </main>
     <script src="../assest/js/jquery-2.2.4.min.js"></script>

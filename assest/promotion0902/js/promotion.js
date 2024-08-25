@@ -31,12 +31,14 @@ $(function () {
     const promotionBookSwiper = new Swiper('#promotionBookSwiper', {
         slidesPerView: "auto",
         centeredSlides: true,
-        loop: true,
-
-        pagination: {
-          el: ".swiper-pagination",
-          clickable: true,
+        loop: true,     
+        autoHeight: true,
+        autoplay: {
+            delay: 3000
         },
+        navigation: {
+            nextEl: "#promotionBookSwiper .swiper-button-next",
+            prevEl: "#promotionBookSwiper .swiper-button-prev"
+        }
     });
-
 });
