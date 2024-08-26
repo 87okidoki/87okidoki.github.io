@@ -27,12 +27,26 @@ $(function () {
             .eq(idx)
             .show();
     });
-
     const promotionBookSwiper = new Swiper('#promotionBookSwiper', {
-        slidesPerView: "auto",
+        effect: "coverflow",
+        grabCursor: true,
         centeredSlides: true,
-        loop: true,     
-        autoHeight: true,
+        slidesPerView: "auto",
+        coverflowEffect: {
+            rotate: 0,
+            stretch: 0,
+            depth: 100,
+            modifier: 0,
+            slideShadows: false
+        },
+        keyboard: {
+            enabled: true
+        },
+        mousewheel: {
+            thresholdDelta: 70
+        },
+        spaceBetween: 60,
+        loop: true,
         autoplay: {
             delay: 3000
         },
@@ -40,5 +54,18 @@ $(function () {
             nextEl: "#promotionBookSwiper .swiper-button-next",
             prevEl: "#promotionBookSwiper .swiper-button-prev"
         }
-    });
+});
+    // const promotionBookSwiper = new Swiper('#promotionBookSwiper', {
+    //     slidesPerView: "auto",
+    //     centeredSlides: true,
+    //     loop: true,     
+    //     autoHeight: true,
+    //     autoplay: {
+    //         delay: 3000
+    //     },
+    //     navigation: {
+    //         nextEl: "#promotionBookSwiper .swiper-button-next",
+    //         prevEl: "#promotionBookSwiper .swiper-button-prev"
+    //     }
+    // });
 });
