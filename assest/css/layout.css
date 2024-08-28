@@ -2112,6 +2112,7 @@
     }
     .menu-thumb-items {
         gap: 12px;
+        padding-bottom: 88px;
     }
     .menu-thumb-link .thumb-title {
         width: 100%;
