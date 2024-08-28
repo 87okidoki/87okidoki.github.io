@@ -1918,8 +1918,6 @@
         align-items: flex-start;
         margin-top: 56px;
         height: calc(100vh - 56px);
-        height: -webkit-fill-available;
-        height: fill-available;
     }
     .mo-menu-layer-group .mo-menu-body .mo-menu-body-left {
         width: 130px;
