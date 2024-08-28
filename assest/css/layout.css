@@ -1845,6 +1845,7 @@
         padding-bottom: 40px;
         padding-bottom: calc(constant(safe-area-inset-bottom) + 40px);
         padding-bottom: calc(env(safe-area-inset-bottom) + 40px);
+        height: calc(var(--vh, 1vh)* 100);
     }
     .mo-menu-layer-group .mo-main-menu-layer {
         padding-right: 0;
