@@ -1,3 +1,4 @@
+
 $(function () {
     jQuery.browser = {};
     (function () {
@@ -8,7 +9,15 @@ $(function () {
             jQuery.browser.version = RegExp.$1;
         }
     })();
-    
+
+
+    function setScreenSize() {
+        let vh = window.innerHeight * 0.01;
+        document.documentElement.style.setProperty("--vh", `${vh}px`); //"--vh"라는 속성으로 정의해준다.
+    }
+
+    window.addEventListener('resize', () => setScreenSize());
+
     /* 메인배너*/
     const progressLine = document.querySelector(
         '#mainVisualBanner .autoplay-progress svg'
@@ -462,13 +471,13 @@ $(function () {
         spaceBetween: 20,
         slidesPerView: 1,
         pagination: {
-            el: ".swiper-pagination",
+            el: ".goods-swiper.swiper-pagination",
             clickable: true,
             watchOverflow: true
         },
         navigation: {
-            nextEl: "#detailGoodsSwiper .swiper-button-next",
-            prevEl: "#detailGoodsSwiper .swiper-button-prev"
+            nextEl: ".goods-swiper.swiper-button-next",
+            prevEl: ".goods-swiper.swiper-button-prev"
         }
     });
 
@@ -674,22 +683,8 @@ $(function () {
     const specialMobileThumbSwiper = new Swiper('#specialMobileThumbSwiper', {
         loop: true,
         spaceBetween: 20,
-        slidesPerView: 1.3,
         centeredSlides: true,
-        breakpoints: {
-            360: {
-                slidesPerView: 1.4,
-                spaceBetween: 20
-            },
-            420: {
-                slidesPerView: 1.8,
-                spaceBetween: 20
-            },
-            640: {
-                slidesPerView: 2.2,
-                spaceBetween: 20
-            }
-        }
+         slidesPerView: "auto",
     });
 
     //모바일 메뉴
