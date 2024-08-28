@@ -806,7 +806,10 @@
     align-content: center;
     align-items: center;
     height: 532px;
-    margin-left: 330px;
+    margin-left: 312px;
+}
+.main-special-group .special-thumb-list .swiper {
+    padding-left: 18px;
 }
 .main-special-group .special-thumb-list .swiper-wrapper {
     align-items: flex-end;
@@ -816,13 +819,13 @@
     width: 190px;
 }
 .main-special-group .special-thumb-list .swiper-button-prev {
-    left: 0px;
+    left: 0;
 }
 .main-special-group .special-thumb-list .swiper-button-next {
     right: 40px;
 }
 .main-special-group .special-thumb-list .special-thumb-item {
-    display:block;
+    display: block;
     width: 190px;
     margin-top: 24px;
 }
@@ -909,7 +912,7 @@
         width: auto;
     }
     .main-special-group .special-thumb-list .special-thumb-item {
-        width: auto;
+        width: 216px;
     }
     .main-special-group .special-thumb-list .special-thumb-item .special-thumb-box {
         max-height: 100%;
@@ -1516,7 +1519,7 @@
     .mo-publisher-content .publisher-swiper-group {
         display: flex;
         align-items: center;
-        padding: 32px 0 34px 0px;
+        padding: 32px 0 34px;
     }
     .mo-publisher-content .publisher-swiper-group .publisher-swiper {
         position: relative;
@@ -1709,6 +1712,7 @@
     margin-left: 8px;
     padding-left: 16px;
 }
+
 .main-menu-layer-group .menu-link-depth2-list .menu-link-depth2-item::before {
     content: '';
     position: absolute;
@@ -1723,7 +1727,9 @@
     line-height: 20px;
     color: var(--blue-grey-500);
 }
-
+.main-menu-layer-group .menu-link-depth2-list .menu-link-depth2-item>a:hover {
+    text-decoration: underline;
+}
 .eBook-section .publisher-btns-toggle {
     display: flex;
     align-items: center;
@@ -1912,6 +1918,8 @@
         align-items: flex-start;
         margin-top: 56px;
         height: calc(100vh - 56px);
+        height: -webkit-fill-available;
+        height: fill-available;
     }
     .mo-menu-layer-group .mo-menu-body .mo-menu-body-left {
         width: 130px;
@@ -2184,7 +2192,7 @@
     font-size: 1.2rem;
     line-height: 14px;
     color: var(--blue-grey-500);
-    margin-bottom: 6px;
+    margin-bottom: 4px;
     letter-spacing: -0.35px;
 }
 .banner-board-large .title {
@@ -3027,9 +3035,6 @@
     left: 61px;
 }
 @media screen and (max-width:767px) {
-    .payment-option-group {
-        align-items: flex-end;
-    }
     .payment-option-group .flex {
         display: block;
     }
@@ -3395,6 +3400,9 @@
     padding-top: 40px;
     padding-bottom: 40px;
 }
+.detail-tab-content-box:last-child {
+    border-bottom: none;
+}
 .detail-tab-content-box .content-box {
     border-radius: 8px;
     background: var(--blue-grey-50);
@@ -3403,7 +3411,7 @@
 }
 .goods-info-section {
     position: relative;
-    padding: 40px 0 88px;
+    padding: 20px 0 88px;
 }
 .goods-info-section::after {
     content: '';
@@ -3669,10 +3677,10 @@
     align-items: center;
     width: 100%;
     border-bottom: 1px solid var(--border-primary);
+        background-color: var(--blue-grey-50);
 }
 .detail-goods-info .detail-goods-info-item .title {
     padding: 8px 24px;
-    background-color: var(--blue-grey-50);
     font-size: 1.4rem;
     color: var(--blue-grey-600);
     width: 110px;
@@ -3690,6 +3698,7 @@
     color: var(--blue-grey-600);
     width: 100%;
     line-height: 24px;
+    min-height: 40px;
 }
 
 .detail-goods-info .detail-goods-info-item .content-large {
@@ -3832,6 +3841,7 @@
     .btn-star-toggle {
         flex-grow: 1;
     }
+    .btn-star-toggle input[type="radio"]:disabled+label,
     .btn-star-toggle input[type="radio"]+label {
         padding: 12px 0;
     }
@@ -4103,7 +4113,7 @@
 }
 .tab-bar-group.sticky {
     position: sticky;
-    top: 0;
+    top: -2px;
     left: 0;
     right: 0;
     z-index: 102;
@@ -4871,7 +4881,7 @@
 
 @media screen and (max-width:767px) {
     .login-section {
-        padding:40px 0;
+        padding: 40px 0;
     }
     .login-section .login-header {
         margin-bottom: 32px;
@@ -5688,7 +5698,7 @@
 .my-main-section .my-menu-group .my-menu-item .badge-count {
     position: absolute;
     top: 0;
-    right: -2;
+    right: -2px;
     line-height: 13px;
     padding: 0 4px;
     font-family: "Pretendard SemiBold";
@@ -5743,6 +5753,11 @@
     display: flex;
     align-items: center;
     gap: 4px;
+}
+.my-main-section .my-book-group .my-book-header .btn-info{
+    border: 0px;
+    width: 24px;
+    height: 24px;
 }
 .my-main-section .my-book-group .my-book-header .info-popup-group {
     left: 193px;
@@ -6012,6 +6027,9 @@
 }
 
 /* btn-multi-dropdown  멀티 드롭다운 박스*/
+.btn-multi-dropdown {
+    cursor: pointer;
+}
 .btn-multi-dropdown dd {
     position: relative;
     min-width: 104px;
@@ -6124,6 +6142,7 @@
     border-radius: 8px;
     color: var(--blue-grey-500);
     font-size: 1.4rem;
+    cursor: pointer;
 }
 .btn-search-layer-group .btn-search-dropdown .icon-arrow {
     position: absolute;
@@ -6607,6 +6626,7 @@
     display: flex;
     align-items: center;
     margin-right: 16px;
+    width: 100%;
 }
 @media screen and (max-width:716px) {
     .recent-view-section {
@@ -6860,4 +6880,8 @@
         text-overflow: ellipsis;
         word-break: break-all;
     }
+}
+
+.blockOverlay {
+    z-index: 1010;
 }

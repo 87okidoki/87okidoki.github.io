@@ -55,7 +55,7 @@
     /* Modern Browsers */
     url("../fonts/Pretendard-Boldr.ttf") format("truetype"),
     /* Safari, Android, iOS */
-     url("../fonts/Pretendard-Bold.svg#NotoSansKR") format("svg");
+    url( "../fonts/Pretendard-Bold.svg#NotoSansKR") format("svg"))
 }
 
 @font-face {
@@ -73,7 +73,7 @@
     /* Modern Browsers */
     url("../fonts/Pretendard-SemiBoldr.ttf") format("truetype"),
     /* Safari, Android, iOS */
-     url("../fonts/Pretendard-SemiBold.svg#NotoSansKR") format("svg");
+    url( "../fonts/Pretendard-SemiBold.svg#NotoSansKR") format("svg"))
 }
 
 @font-face {
@@ -91,7 +91,7 @@
     /* Modern Browsers */
     url("../fonts/Pretendard-Regular.ttf") format("truetype"),
     /* Safari, Android, iOS */
-     url("../fonts/Pretendard-Regular.svg#NotoSansKR") format("svg");
+    url( "../fonts/Pretendard-Regular.svg#NotoSansKR") format("svg"))
 }
 
 @font-face {
@@ -109,7 +109,7 @@
     /* Modern Browsers */
     url("../fonts/Pretendard-Light.ttf") format("truetype"),
     /* Safari, Android, iOS */
-     url("../fonts/Pretendard-Light.svg#NotoSansKR") format("svg");
+    url( "../fonts/Pretendard-Light.svg#NotoSansKR") format("svg"))
 }
 
 /* reset */
@@ -171,7 +171,6 @@ html {
     -webkit-touch-callout: none;
     min-height: 100vh;
     min-height: -webkit-fill-available;
-
 }
 
 body {
@@ -321,8 +320,9 @@ input {
     vertical-align: middle;
     opacity: 1;
 }
+
 input:-webkit-autofill {
-    box-shadow:var(--white-color) 0 0 0 1000px inset;
+    box-shadow: var(--white-color) 0 0 0 1000px inset;
 }
 ::-webkit-input-placeholder {
     /* Edge */
@@ -730,7 +730,9 @@ img {
     .main-contents-section .main-contents-header-both > .btn-more > .text {
         display: none;
     }
-
+    .width-116 {
+        width: 175px !important;
+    }
 }
 
 /*content-section */
@@ -1359,7 +1361,6 @@ img {
 
 .btn-top-scroll .text {
     display: block;
-    margin-top: 2px;
     font-size: 1rem;
     line-height: 14.286px;
     color: var(--white-color);
@@ -1384,7 +1385,9 @@ img {
     -o-transition: all 0.3s ease;
     transition: all 0.3s ease;
 }
-
+.btn:disabled{
+    cursor: default
+}
 .btn-keywords {
     display: flex;
     flex-wrap: wrap;
@@ -1538,14 +1541,14 @@ img {
     line-height: 46px;
     padding: 0 24px;
     border-radius: 8px;
-    box-shadow: 0 6px 12px 0 #C2C1FF;
+    box-shadow: 0 4px 6px 0 #C2C1FF;
 }
 .btn-large {
     font-family: "Pretendard SemiBold";
     font-size: 1.6rem;
     line-height: 46px;
     padding: 0 24px;
-    box-shadow: 0 6px 12px 0 #C2C1FF;
+    box-shadow: 0 4px 6px 0 #C2C1FF;
     border-radius: 8px;
 }
 .btn-large:disabled {
@@ -1613,6 +1616,7 @@ img {
     border: solid 1px var(--blue-grey-50);
     background-color: var(--blue-grey-50);
     color: var(--blue-grey-300);
+    cursor: default;
 }
 
 .btn-secondary {
@@ -1625,6 +1629,7 @@ img {
     border: solid 1px var(--blue-grey-50);
     background-color: var(--blue-grey-50);
     color: var(--blue-grey-300);
+    cursor: default;
 }
 .btn-line {
     border: solid 1px var(--border-primary);
@@ -1636,6 +1641,7 @@ img {
     border-color: var(--border-primary);
     background-color: var(--blue-grey-50);
     color: #D1D6DB;
+    cursor: default;
 }
 .btn-line-primary {
     border: solid 1px var(--primary-color);
@@ -1647,6 +1653,7 @@ img {
     border: solid 1px var(--blue-grey-50);
     background-color: var(--blue-grey-50);
     color: var(--blue-grey-300);
+    cursor: default;
 }
 
 .btn-black {
@@ -1663,7 +1670,9 @@ img {
 .btn-transparent {
     background-color: transparent !important;
 }
-
+.btn-transparent:disabled{
+  cursor: default;
+}
 .icon-xsmall {
     width: 14px;
     height: 14px;
@@ -2654,7 +2663,7 @@ img {
     overflow-y: auto;
     transform: translate(-50%, -50%);
     border-radius: 16px;
-    box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.05);
+    box-shadow: 0 -2px 12px 0 rgba(0, 0, 0, 0.12);
     padding: 32px 26px;
 }
 .popup-section .popup-container .popup-header {
@@ -2730,10 +2739,11 @@ img {
     scrollbar-color: transparent rgba(61, 61, 61, 0.5);
     transform: translate(-50%, -50%);
     border-radius: 8px;
-    padding: 24px;
+    padding: 20px;
+    max-width: 320px;
 }
 .main-popup-section .main-popup-container .main-popup-body {
-    width: 320px;
+    width: 280px;
 }
 .main-popup-section .main-popup-footer {
     display: flex;
@@ -2746,10 +2756,10 @@ img {
 }
 
 .main-popup-section .main-popup-banner-area .swiper {
-    padding-bottom: 24px;
+    padding-bottom: 20px;
 }
 .main-popup-section .main-popup-banner-area.swiper-banner .swiper-pagination {
-    margin-top: 24px;
+    margin-top: 20px;
 }
 .main-popup-section .main-popup-banner-area .main-popup-banner {
     position: relative;
@@ -2771,7 +2781,15 @@ img {
     height: 100%;
     object-fit: cover;
 }
+@media screen and (max-width:767px) {
+    .main-popup-section .main-popup-container {
+        max-width: 280px;
+    }
 
+    .main-popup-section .main-popup-container .main-popup-body {
+        width: 240px;
+    }
+}
 /*loading*/
 .loading {
     width: 56px;
@@ -3156,6 +3174,14 @@ img {
     line-height: 14px;
     color: var(--blue-grey-500);
     margin-bottom: 12px;
+    display: -webkit-box;
+    width: 100%;
+    overflow: hidden;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    white-space: normal;
+    text-overflow: ellipsis;
+    word-break: break-all;
 }
 .goods-list-group .goods-info-text > .text {
     position: relative;
@@ -3534,7 +3560,7 @@ img {
 
 .pagination a.previous {
     background: url("../images/ic-arrow-indicator-black-24.svg") no-repeat center center/ contain;
-    background-color: var(--white-color);
+    background-color: transparent;
     transform: rotate(180deg);
     width: 24px;
     height: 24px;
@@ -3645,10 +3671,16 @@ img {
     flex-shrink: 0;
 }
 .notice-list-group .notice-item .title {
-    display: block;
     font-size: 1.4rem;
     line-height: 20px;
+    display: -webkit-box;
     width: 100%;
+    overflow: hidden;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    white-space: normal;
+    text-overflow: ellipsis;
+    word-break: break-all;
 }
 .notice-list-group .notice-item .date {
     font-size: 1.4rem;
