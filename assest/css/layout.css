@@ -1918,7 +1918,7 @@
         display: flex;
         align-items: flex-start;
         margin-top: 56px;
-        height: calc(100vh - 56px);
+        height: calc(var(--vh, 1vh) * 100 - 56px);
     }
     .mo-menu-layer-group .mo-menu-body .mo-menu-body-left {
         width: 130px;
@@ -2022,7 +2022,7 @@
     .mo-layer-group .mo-layer-body {
         margin-top: 56px;
         margin-bottom: 100px;
-        height: calc(100vh - 156px);
+        height: calc(var(--vh, 1vh) * 100 - 156px);
         padding: 0 20px;
         overflow: hidden;
         overflow-y: auto;
@@ -4432,11 +4432,10 @@
     position: relative;
     padding-top: 24px;
     text-align: center;
-
-    height: calc(-80px + 100vh);
+    height: calc(var(--vh, 1vh) * 100 - 80px);
 }
 .book-preview-section .book-preview-slide-group .swiper-slide {
-    height: calc(-242px + 100vh);
+    height: calc(var(--vh, 1vh) * 100 - 242px);
 }
 .book-preview-section .book-preview-slide-group .img-book-preview {
     position: relative;
@@ -4523,7 +4522,7 @@
         height: auto;
     }
     .book-preview-section .book-preview-slide-group .swiper-slide {
-        height: calc(-164px + 100vh);
+        height: calc(var(--vh, 1vh) * 100 - 164px);
     }
     .book-preview-section .book-preview-slide-group .swiper-pagination-group {
         margin: 24px 20px 0;
@@ -5244,7 +5243,7 @@
 /*탈퇴안내 withdrawal-section */
 .withdrawal-section {
     padding-top: 100px;
-    min-height: 100vh;
+    min-height: calc(var(--vh, 1vh) * 100);
 }
 
 .withdrawal-section .withdrawal-header {
