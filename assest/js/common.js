@@ -11,12 +11,11 @@ $(function () {
     })();
 
 
-    function setScreenSize() {
-        let vh = window.innerHeight * 0.01;
-        document.documentElement.style.setProperty("--vh", `${vh}px`); //"--vh"라는 속성으로 정의해준다.
-    }
-
-    window.addEventListener('resize', () => setScreenSize());
+    const setVh = () => {
+    document.documentElement.style.setProperty('--vh', `${window.innerHeight}px`)
+    };
+    window.addEventListener('resize', setVh);
+    setVh();
 
     /* 메인배너*/
     const progressLine = document.querySelector(
