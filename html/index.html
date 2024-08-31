@@ -1208,14 +1208,26 @@
                     <div class="container-inner">
                         <header class="main-contents-header">
                             <h2 class="main-contents-header-title">추천 도서</h2>
-                            <p class="main-contents-header-sub-text">합격행 필독서만 모아서</p>
+                            <!-- 8.27 추천 도서 해더 더보기 추가 시작 -->
+                            <div class="main-contents-header-both">
+                                <p class="main-contents-header-sub-text">
+                                    합격행 필독서만 모아서
+                                </p>
+                                <a href="#" class="btn-more">
+                                    <span class="text">더보기</span>
+                                    <i class="icon-arrow-right-16"><span class="blind">더보기</span></i>
+                                </a>
+                            </div>
+                            <!-- 8.27 추천 도서 해더 더보기 추가 끝 -->
                             <div class="swiper-container btns-swiper-group">
                                 <div class="swiper-wrapper">
-                                    <div class="swiper-slide on"><a href="#"><span class="btn-swiper-tab active">전체</span></a></div>
-                                    <div class="swiper-slide"><a href="#"><span class="btn-swiper-tab">중고등</span></a></div>
-                                    <div class="swiper-slide"><a href="#"><span class="btn-swiper-tab">공무원</span></a></div>
-                                    <div class="swiper-slide"><a href="#"><span class="btn-swiper-tab">취업</span></a></div>
-                                    <div class="swiper-slide"><a href="#"><span class="btn-swiper-tab">외국어</span></a></div>
+                                    <!--8.27 a -> button 으로 변경 swiper-slide의 on, span 삭제 시작-->
+                                    <div class="swiper-slide"><button type="button" class="btn-swiper-tab active">전체</button></div>
+                                    <div class="swiper-slide"><button type="button" class="btn-swiper-tab">중고등</button></div>
+                                    <div class="swiper-slide"><button type="button" class="btn-swiper-tab">공무원</button></div>
+                                    <div class="swiper-slide"><button type="button" class="btn-swiper-tab">취업</button></div>
+                                    <div class="swiper-slide"><button type="button" class="btn-swiper-tab">외국어</button></div>
+                                    <!--8.27 a -> button 으로 변경 swiper-slide의 on, span 삭제 끝-->
                                 </div>
                             </div>
                         </header>
@@ -1623,12 +1635,20 @@
                 <!--미북 스페셜 시작-->
                 <section class="main-contents-section"id="trigger1">
                     <div class="container-inner">
+                        <!-- 8.27 미북 스페셜 해더 더보기 추가 시작 -->
                         <header class="main-contents-header">
                             <h2 class="main-contents-header-title">미북 스페셜</h2>
-                            <div class="main-contents-header">
-                                <p class="main-contents-header-sub-text">오직 미북에서만 : 학습 서비스</p>
+                            <div class="main-contents-header-both">
+                                <p class="main-contents-header-sub-text">
+                                오직 미북에서만 : 학습 서비스
+                                </p>
+                                <a href="#" class="btn-more">
+                                    <span class="text">더보기</span>
+                                    <i class="icon-arrow-right-16"><span class="blind">더보기</span></i>
+                                </a>
                             </div>
                         </header>
+                        <!-- 8.27 미북 스페셜 해더 더보기 추가 끝 -->
                         <div class="main-special-group pc-main-special-group only-pc">
                             <div class="special-tag-area">
                                 <header class="special-tag-header">
@@ -2448,7 +2468,9 @@
                             <div class="swiper-wrapper">
                                 <div class="swiper-slide on"><a href="#" target="_blank" class="link-text">회사소개</a></div>
                                 <div class="swiper-slide"><a href="#" target="_blank" class="link-text">이용약관</a></div>
-                                <div class="swiper-slide"><a href="#" target="_blank" class="link-text">개인정보처리방침</a></div>
+                                <!--8.29 개인정보처리방침 color-bluegray-70 class 추가 시작 -->
+                                <div class="swiper-slide"><a href="#" target="_blank" class="link-text color-bluegray-700">개인정보처리방침</a></div>
+                                <!--8.29 개인정보처리방침 color-bluegray-70 class 추가 끝 -->
                                 <div class="swiper-slide"><a href="#" class="link-text">공지사항</a></div>
                                 <div class="swiper-slide"><a href="#" class="link-text">제휴/입점 문의</a></div>
                                 <div class="swiper-slide"><a href="#" class="link-text">FAQ</a></div>

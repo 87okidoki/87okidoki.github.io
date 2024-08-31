@@ -18,10 +18,9 @@
 </head>
 
 <body>
-    <main class="login-wrap">
+    <main class="error-wrap">
         <!--컨텐츠 시작-->
         <div class="container">
-            <!--8.8 아이디 찾기, 비밀번호 재설정, 최초 로그인, 회원가입  해더 추가-->
             <!--해더 시작-->
             <section class="header-section sub-header-section">
                 <header class="header">
@@ -1130,54 +1129,82 @@
                 <!-- 7.29 메뉴 레이어 끝 -->
             </section>
             <!--해더 끝-->
-            <!--8.8 아이디 찾기, 비밀번호 재설정, 최초 로그인, 회원가입  해더 끝-->
-            <!--최초 로그인 시작-->
-            <div class="login-contents-wrap">
-                <section class="first-login-section">
-                    <header class="first-login-header login-header">
-                        <div class="step-area"><strong class="step-bold">Step 3</strong> / 4</div>
-                        <h2 class="title">
-                            아이디 찾을 때 쓸 거에요 🙏
-                        </h2>
-                        <p class="sub-text">
-                            휴대폰 번호를 인증해 주세요.
-                        </p>
-                    </header>
-                    <form action="" method="">
-                        <fieldset>
-                            <legend class="blind">최초 로그인</legend>
-                            <div class="login-input-group">
-                                <div class="login-input">
-                                    <input name="name"  type="tel" placeholder="휴대폰 번호 (‘-’제외)">
-                                    <div class="login-input-btns">
-                                        <button type="reset" class="btn btn-transparent"><span class="icon-input-close"><span class="blind">삭제</span></span></button>
-                                        <button type="button" class="btn btn-input">인증요청</button>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="login-input-group">
-                                <div class="login-input">
-                                    <input name="name"  type="tel" placeholder="인증 번호">
-                                    <div class="login-input-btns">
-                                        <button type="reset" class="btn btn-transparent"><span class="icon-input-close"><span class="blind">삭제</span></span></button>
-                                        <span class="clock">02:58</span>
-                                        <button type="button" class="btn btn-input">확인</button>
-                                    </div>
-                                </div>
-                            </div>  
-                            <div class="bottom-btns-area">
-                                <button type="submit" class="btn btn-primary btn-large btn-full" disabled>다음</button>
-                            </div>
-                            <!--8.27 로그아웃 추가 시작 -->
-                            <div class="text-btns-area">
-                                <a href="#" class="btn link-text">로그아웃</a>
-                            </div>
-                            <!--8.27 로그아웃 추가 끝 -->
-                        </fieldset>
-                    </form>
-                </section>
+            <div class="sub-contents-wrap">
+                <section class="error-section">
+                    <div class="error-info-group">
+                        <div class="img-box">
+                            <img src="../assest/images/img-error.png" alt=""/>
+                        </div>
+                        <div class="text-box">
+                            <h3 class="error-title">일시적인 오류가 발생했습니다.</h3>
+                            <p class="error-text">서비스 이용에 불편을 드려 정말 죄송합니다.<br/>
+                            문제를 해결하기 위해 열심히 노력하겠습니다.</p>
+                        </div>
+                        <div class="btn-area">
+                            <a href="#" class="btn btn-secondary btn-x-small">메인으로 돌아가기</a>
+                        </div>
+                    </div>
+                </section>å
             </div>
-            <!--최초 로그인 끝-->
+            <!--8.8 푸터 일부 텍스트& 이미지 &버튼 수정 추가 시작-->
+            <!--푸터 시작-->
+            <footer class="footer-section">
+                <div class="link-text-group">
+                    <div class="container-inner">
+                        <div class="swiper-container" id="footerSwiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide on"><a href="#" target="_blank" class="link-text">회사소개</a></div>
+                                <div class="swiper-slide"><a href="#" target="_blank" class="link-text">이용약관</a></div>
+                                <div class="swiper-slide"><a href="#" target="_blank" class="link-text color-bluegray-700">개인정보처리방침</a></div>
+                                <div class="swiper-slide"><a href="#" class="link-text">공지사항</a></div>
+                                <div class="swiper-slide"><a href="#" class="link-text">제휴/입점 문의</a></div>
+                                <div class="swiper-slide"><a href="#" class="link-text">FAQ</a></div>
+                                <div class="swiper-slide"><a href="#" class="link-text">1:1 문의</a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container-inner">
+                    <a href="#" class="logo">
+                        <img src="../assest/images/logo-meBook-store-gray.svg" alt="meBook 스토어" />
+                    </a>
+                    <ul class="copyright-text">
+                        <li>06643 서울 서초구 효령로 321 (서초동, 덕원빌딩) 7층, 메가스터디교육㈜</li>
+                        <li>대표자 : 손성은</li>
+                        <li>개인정보보호책임자 : 오영석 keeper@megagong.net</li>
+                        <li>사업자 등록번호 : 780-87-00034</li>
+                        <li>통신판매업 신고번호 : 제 2015-서울서초-0678<a href="#" target="_blank"><strong>정보조회</strong></a></li>
+                    </ul>
+                    <ul class="copyright-text">
+                        <li>호스팅제공자 : ㈜케이티</li>
+                        <li>전화번호 : 02-6438-3106</li>
+                        <li>
+                            이메일 : <a href="mailto:mebookteam@mebook.io" target="_blank">support@mebook.io</a>
+                        </li>
+                    </ul>
+                    <div class="kcp-area">
+                        <div class="img-box">
+                            <img src="../assest/images/img-kcp.png" alt="kcp" />
+                        </div>
+                        <div class="text-box">
+                            <h4 class="kcp-title">NHN KCP 구매안전 (에스크로) 서비스</h4>
+                            <p class="kcp-text">고객님은 안전거래를 위해 현금등으로 결제 시 저희 쇼핑몰에 가입한 NHN KCP의 구매안전서비스를 이용하실 수 있습니다.</p>
+                        </div>
+                    </div>
+                    <p class="copyright-text copyright">
+                        Copyright © megastudyEdu.co.,Ltd. All rights reserved.
+                    </p>
+                </div>
+                <div class="floating-btns" id="floatingBtns">
+                    <div class="btn-top-scroll-area" id="btnTopScroll">
+                        <button type="button" class="btn-top-scroll"><span class="icon-top"><span
+                                    class="blind">탑버튼</span></span><span class="text">TOP</span>
+                        </button>
+                    </div>
+                </div>
+            </footer>
+            <!--푸터 끝-->
+            <!--8.8 푸터 일부 텍스트& 이미지 &버튼 수정 추가 끝-->
         </div>
     </main>
     <script src="../assest/js/jquery-2.2.4.min.js"></script>

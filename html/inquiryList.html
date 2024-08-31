@@ -1139,21 +1139,11 @@
                         <div class="flex">
                             <div class="swiper-container btns-swiper-group no-full">
                                 <div class="swiper-wrapper">
-                                    <div class="swiper-slide on">
-                                        <a href="#">
-                                            <span class="btn-swiper-tab active">전체</span>
-                                        </a>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <a href="#">
-                                            <span class="btn-swiper-tab">답변완료</span>
-                                        </a>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <a href="#">
-                                            <span class="btn-swiper-tab">답변대기</span>
-                                        </a>
-                                    </div>
+                                    <!--8.27 a -> button 으로 변경 swiper-slide의 on, span 삭제 시작-->
+                                    <div class="swiper-slide"><button type="button" class="btn-swiper-tab active">전체</button></div>
+                                    <div class="swiper-slide"><button type="button" class="btn-swiper-tab">답변완료</button></div>
+                                    <div class="swiper-slide"><button type="button" class="btn-swiper-tab">답변대기</button></div>
+                                    <!--8.27 a -> button 으로 변경 swiper-slide의 on, span 삭제 끝-->
                                 </div>
                             </div>
                             <div class="only-pc">
@@ -1309,7 +1299,9 @@
                                     <p class="empty-text">1:1 문의 작성을 이용해주세요.</p>
                                 </div>
                                 <div class="btn-area">
-                                    <a href="#" class="btn btn-secondary btn-medium">1:1 문의 작성</a>
+                                    <!--8.30 btn-medium class 삭제 시작 -->
+                                    <a href="#" class="btn btn-secondary">1:1 문의 작성</a>
+                                    <!--8.30 btn-medium class 삭제 끝 -->
                                 </div>
                             </div>
                         </div>
@@ -1326,7 +1318,7 @@
                             <div class="swiper-wrapper">
                                 <div class="swiper-slide on"><a href="#" target="_blank" class="link-text">회사소개</a></div>
                                 <div class="swiper-slide"><a href="#" target="_blank" class="link-text">이용약관</a></div>
-                                <div class="swiper-slide"><a href="#" target="_blank" class="link-text">개인정보처리방침</a></div>
+                                <div class="swiper-slide"><a href="#" target="_blank" class="link-text color-bluegray-700">개인정보처리방침</a></div>
                                 <div class="swiper-slide"><a href="#" class="link-text">공지사항</a></div>
                                 <div class="swiper-slide"><a href="#" class="link-text">제휴/입점 문의</a></div>
                                 <div class="swiper-slide"><a href="#" class="link-text">FAQ</a></div>

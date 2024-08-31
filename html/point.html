@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
     <meta name="theme-color" content="#fff">
     <meta name="color-scheme" content="light only">
     <meta name="msapplication-TileColor" content="#fff">
@@ -18,10 +19,9 @@
 </head>
 
 <body>
-    <main class="login-wrap">
+    <main class="point-wrap">
         <!--컨텐츠 시작-->
         <div class="container">
-            <!--8.8 아이디 찾기, 비밀번호 재설정, 최초 로그인, 회원가입  해더 추가-->
             <!--해더 시작-->
             <section class="header-section sub-header-section">
                 <header class="header">
@@ -1130,54 +1130,255 @@
                 <!-- 7.29 메뉴 레이어 끝 -->
             </section>
             <!--해더 끝-->
-            <!--8.8 아이디 찾기, 비밀번호 재설정, 최초 로그인, 회원가입  해더 끝-->
-            <!--최초 로그인 시작-->
-            <div class="login-contents-wrap">
-                <section class="first-login-section">
-                    <header class="first-login-header login-header">
-                        <div class="step-area"><strong class="step-bold">Step 3</strong> / 4</div>
-                        <h2 class="title">
-                            아이디 찾을 때 쓸 거에요 🙏
-                        </h2>
-                        <p class="sub-text">
-                            휴대폰 번호를 인증해 주세요.
-                        </p>
-                    </header>
-                    <form action="" method="">
-                        <fieldset>
-                            <legend class="blind">최초 로그인</legend>
-                            <div class="login-input-group">
-                                <div class="login-input">
-                                    <input name="name"  type="tel" placeholder="휴대폰 번호 (‘-’제외)">
-                                    <div class="login-input-btns">
-                                        <button type="reset" class="btn btn-transparent"><span class="icon-input-close"><span class="blind">삭제</span></span></button>
-                                        <button type="button" class="btn btn-input">인증요청</button>
+            <div class="sub-contents-wrap">
+                <section class="point-list-section">
+                    <div class="point-box">
+                        <header class="point-box-header">
+                            <h2 class="point-box-title">보유 me포인트</h2>
+                            <button type="button" class="btn btn-point">포인트 안내</button>
+                        </header>
+                        <div class="point-text"><strong class="">7,000,000,000,000</strong> P</div>
+                        <div class="point-box-btns">
+                            <a href="#" class="point-box-item">
+                              <span class="text">리뷰 작성 시 적립 가능</span>
+                              <span>3200p</span>
+                            </a>
+                            <button type="button" class="point-box-item">
+                                <span class="text">30일 이내 소멸 예정</span>
+                                <spann>조회하기<span><span class="blind">새로고침</span></span></span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="swiper-container btns-swiper-group">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide"><button type="button" class="btn-swiper-tab active">전체</button></div>
+                            <div class="swiper-slide"><button type="button" class="btn-swiper-tab">적립</button></div>
+                            <div class="swiper-slide"><button type="button" class="btn-swiper-tab">사용</button></div>         
+                            <div class="swiper-slide"><button type="button" class="btn-swiper-tab">소멸</button></div>
+                        </div>
+                    </div>
+                    <!--1:1 문의 리스트 시작-->
+                    <section class="tab-swiper-content-section on">
+                        <div class="point-list-group">
+                            <h3 class="point-list-title">2025</h3>
+                            <ul class="point-list">
+                                <li class="point-list-item">
+                                    <div class="point-content-left">
+                                        <div class="date">12.30</div>
+                                        <div class="point-info">
+                                            <strong class="point-tilte">유효기간 만료 소멸</strong>
+                                            <P class="point-desc">이다지도 생생한 한국사</P>
+                                        </div>
                                     </div>
+                                    <div class="point-content-right">
+                                        <span class="color-red point">- 5,025</span>
+                                    </div>
+                                </li>
+                                <li class="point-list-item">
+                                    <div class="point-content-left">
+                                        <div class="date">12.30</div>
+                                        <div class="point-info">
+                                            <strong class="point-tilte">유효기간 만료 소멸</strong>
+                                            <P class="point-desc">이다지도 생생한 한국사</P>
+                                            <div class="due-date"><span class="due-date-title">사용기한</span><span class="due-date-content">2035.12.30 까지</span></div>
+                                        </div>
+                                    </div>
+                                    <div class="point-content-right">
+                                        <span class="color-primary point">+ 5,025</span>
+                                    </div>
+                                </li>
+                                <li class="point-list-item">
+                                    <div class="point-content-left">
+                                        <div class="date">12.30</div>
+                                        <div class="point-info">
+                                            <strong class="point-tilte">유효기간 만료 소멸</strong>
+                                            <P class="point-desc">이다지도 생생한 한국사</P>
+                                            <div class="due-date"><span class="due-date-title">사용기한</span><span class="due-date-content">2035.12.30 까지</span></div>
+                                        </div>
+                                    </div>
+                                    <div class="point-content-right">
+                                        <span class="color-primary point">+ 5,025</span>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="point-list-group">
+                            <h3 class="point-list-title">2024</h3>
+                            <ul class="point-list">
+                                <li class="point-list-item">
+                                    <div class="point-content-left">
+                                        <div class="date">12.30</div>
+                                        <div class="point-info">
+                                            <strong class="point-tilte">유효기간 만료 소멸</strong>
+                                            <P class="point-desc">이다지도 생생한 한국사</P>
+                                        </div>
+                                    </div>
+                                    <div class="point-content-right">
+                                        <span class="color-red point">- 5,025</span>
+                                    </div>
+                                </li>
+                                <li class="point-list-item">
+                                    <div class="point-content-left">
+                                        <div class="date">12.30</div>
+                                        <div class="point-info">
+                                            <strong class="point-tilte">유효기간 만료 소멸</strong>
+                                            <P class="point-desc">이다지도 생생한 한국사</P>
+                                            <div class="due-date"><span class="due-date-title">사용기한</span><span class="due-date-content">2035.12.30 까지</span></div>
+                                        </div>
+                                    </div>
+                                    <div class="point-content-right">
+                                        <span class="color-primary point">+ 5,025</span>
+                                    </div>
+                                </li>
+                                <li class="point-list-item">
+                                    <div class="point-content-left">
+                                        <div class="date">12.30</div>
+                                        <div class="point-info">
+                                            <strong class="point-tilte">유효기간 만료 소멸</strong>
+                                            <P class="point-desc">이다지도 생생한 한국사</P>
+                                            <div class="due-date"><span class="due-date-title">사용기한</span><span class="due-date-content">2035.12.30 까지</span></div>
+                                        </div>
+                                    </div>
+                                    <div class="point-content-right">
+                                        <span class="color-primary point">+ 5,025</span>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="pagination-group">
+                            <div class="pagination">
+                                <a href="#" class="previous disabled">
+                                    <span class="blind">왼쪽 화살</span>               
+                                </a>
+                                <a href="#">1</a>
+                                <a href="#" class="active">2</a>
+                                <a href="#">3</a>
+                                <span>∙∙∙</span>
+                                <a href="#">999</a>
+                                <a href="#" class="next">
+                                    <span class="blind">오른쪽 화살</span>               
+                                </a>
+                            </div>
+                        </div>
+                    </section>
+                    <!--1:1 문의 리스트 끝-->
+                    <!-- 빈 1:1 문의 리스트 시작-->
+                    <section class="tab-swiper-content-section">
+                        <div class="inquiry-empty-group">
+                            <div class="empty-info-group">
+                                <div class="img-box">
+                                    <img src="../assest/images/img-cart-01.png" alt=""/>
+                                </div>
+                                <div class="text-box">
+                                    <h3 class="empty-title">me포인트 내역이 없습니다.</h3>
                                 </div>
                             </div>
-                            <div class="login-input-group">
-                                <div class="login-input">
-                                    <input name="name"  type="tel" placeholder="인증 번호">
-                                    <div class="login-input-btns">
-                                        <button type="reset" class="btn btn-transparent"><span class="icon-input-close"><span class="blind">삭제</span></span></button>
-                                        <span class="clock">02:58</span>
-                                        <button type="button" class="btn btn-input">확인</button>
-                                    </div>
-                                </div>
-                            </div>  
-                            <div class="bottom-btns-area">
-                                <button type="submit" class="btn btn-primary btn-large btn-full" disabled>다음</button>
-                            </div>
-                            <!--8.27 로그아웃 추가 시작 -->
-                            <div class="text-btns-area">
-                                <a href="#" class="btn link-text">로그아웃</a>
-                            </div>
-                            <!--8.27 로그아웃 추가 끝 -->
-                        </fieldset>
-                    </form>
+                        </div>
+                    </section>
+                     <!-- 빈 1:1 문의 리스트 끝-->
                 </section>
             </div>
-            <!--최초 로그인 끝-->
+            <!--8.8 푸터 일부 텍스트& 이미지 &버튼 수정 추가 시작-->
+            <!--푸터 시작-->
+            <footer class="footer-section">
+                <div class="link-text-group">
+                    <div class="container-inner">
+                        <div class="swiper-container" id="footerSwiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide on"><a href="#" target="_blank" class="link-text">회사소개</a></div>
+                                <div class="swiper-slide"><a href="#" target="_blank" class="link-text">이용약관</a></div>
+                                <div class="swiper-slide"><a href="#" target="_blank" class="link-text color-bluegray-700">개인정보처리방침</a></div>
+                                <div class="swiper-slide"><a href="#" class="link-text">공지사항</a></div>
+                                <div class="swiper-slide"><a href="#" class="link-text">제휴/입점 문의</a></div>
+                                <div class="swiper-slide"><a href="#" class="link-text">FAQ</a></div>
+                                <div class="swiper-slide"><a href="#" class="link-text">1:1 문의</a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container-inner">
+                    <a href="#" class="logo">
+                        <img src="../assest/images/logo-meBook-store-gray.svg" alt="meBook 스토어" />
+                    </a>
+                    <ul class="copyright-text">
+                        <li>06643 서울 서초구 효령로 321 (서초동, 덕원빌딩) 7층, 메가스터디교육㈜</li>
+                        <li>대표자 : 손성은</li>
+                        <li>개인정보보호책임자 : 오영석 keeper@megagong.net</li>
+                        <li>사업자 등록번호 : 780-87-00034</li>
+                        <li>통신판매업 신고번호 : 제 2015-서울서초-0678<a href="#" target="_blank"><strong>정보조회</strong></a></li>
+                    </ul>
+                    <ul class="copyright-text">
+                        <li>호스팅제공자 : ㈜케이티</li>
+                        <li>전화번호 : 02-6438-3106</li>
+                        <li>
+                            이메일 : <a href="mailto:mebookteam@mebook.io" target="_blank">support@mebook.io</a>
+                        </li>
+                    </ul>
+                    <div class="kcp-area">
+                        <div class="img-box">
+                            <img src="../assest/images/img-kcp.png" alt="kcp" />
+                        </div>
+                        <div class="text-box">
+                            <h4 class="kcp-title">NHN KCP 구매안전 (에스크로) 서비스</h4>
+                            <p class="kcp-text">고객님은 안전거래를 위해 현금등으로 결제 시 저희 쇼핑몰에 가입한 NHN KCP의 구매안전서비스를 이용하실 수 있습니다.</p>
+                        </div>
+                    </div>
+                    <p class="copyright-text copyright">
+                        Copyright © megastudyEdu.co.,Ltd. All rights reserved.
+                    </p>
+                </div>
+                <div class="floating-btns" id="floatingBtns">
+                    <div class="btn-top-scroll-area" id="btnTopScroll">
+                        <button type="button" class="btn-top-scroll"><span class="icon-top"><span
+                                    class="blind">탑버튼</span></span><span class="text">TOP</span>
+                        </button>
+                    </div>
+                </div>
+            </footer>
+            <!--푸터 끝-->
+            <!--8.8 푸터 일부 텍스트& 이미지 &버튼 수정 추가 끝-->
+            <!--팝업 시작-->
+            <section class="popup-section page" id="sharePopup">
+                <div class="popup-container">
+                    <header class="popup-header">
+                        <h2 class="title">포인트 안내사항</h2>
+                    </header>
+                    <div class="popup-body">
+                        <div class="point-terms-box scroll">
+                            <ol class="terms">
+                                <li>me포인트 적립
+                                    <ul class="terms-02">
+                                        <li>구매 적립 me포인트는 구매 확정 시(결제 완료 후 8일째) 지급됩니다.</li>
+                                        <li>리뷰 작성 me포인트는 리뷰 작성 완료 즉시 적립됩니다.</li>
+                                        <li>구매 취소/환불 시 리뷰 작성으로 지급 받으신 me포인트는 회수 처리됩니다. <br/>
+                                            (작성한 리뷰는 미삭제)</li>
+                                    </ul>
+                                </li>
+                                <li>me포인트 소멸
+                                    <ul class="terms-02">
+                                        <li>me포인트의 기본 유효기간은 적립일로부터 1년이며, 유효기간이 지난 me포인트는 자동 소멸됩니다.</li>
+                                        <li>이벤트로 지급 받은 me포인트의 유효기간은 1달이며, 미사용 me포인트는 소멸됩니다.<br/>
+                                            (경우에 따라 유효기간은 상이할 수 있으니, 이벤트 페이지에 명시된 이용 기간을 꼭 확인해 주세요.)</li>
+                                        <li>소멸된 me포인트는 복구되지 않습니다.</li>
+                                    </ul>
+                                </li>
+                                <li>me포인트 사용
+                                    <ul class="terms-02">
+                                        <li>보유한 me포인트는 1,000원 이상 결제 시부터 10P 단위로, 총 상품 금액만큼 사용할 수 있습니다.</li>
+                                        <li>me포인트는 상품 별 적용 가능여부가 상이할 수 있습니다.</li>
+                                        <li>me포인트는 남은 유효기간이 짧은 순서대로 사용됩니다.</li>
+                                        <li>구매 취소/환불로 인한 me포인트 환불 시, 남은 유효기간이 긴 순서대로 환불됩니다.</li>
+                                    </ul>
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                    <div class="popup-footer">
+                        <button type="button" class="btn btn-full btn-primary btn-popup">닫기</button>
+                    </div>
+                </div>
+            </section>
+            <!--팝업 끝-->
         </div>
     </main>
     <script src="../assest/js/jquery-2.2.4.min.js"></script>
