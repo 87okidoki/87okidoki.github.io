@@ -6225,6 +6225,8 @@
     border: 0;
     height: 100%;
     width: 100%;
+    font-size: 1.4rem;
+    color: var(--black-color);
 }
 .small-search-box .input-box input::placeholder {
     color: var(--blue-grey-400);
