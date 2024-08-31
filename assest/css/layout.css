@@ -2032,7 +2032,7 @@
         margin-top: 56px;
         margin-bottom: 100px;
         height: calc(100vh - 156px);
-        padding: 0 20px;
+        padding: 0 20px 120px;
         overflow: hidden;
         overflow-y: auto;
         scroll-behavior: smooth;
