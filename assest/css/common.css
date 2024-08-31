@@ -1852,20 +1852,18 @@ img {
 }
 
 .form-control-select .select {
-    color: var(--blue-grey-600);
-    padding: 0 20px 0 0;
     border: 0;
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
     width: 100%;
     height: 100%;
-    color: var(--blue-grey-400);
     font-size: 1.4rem;
     color: var(--black-color);
     font-family: "Pretendard SemiBold";
     height: 64px;
     padding: 20px 0;
+    background-color: var(--white-color);
 }
 .form-control-select .select:required:invalid {
     color: var(--blue-grey-400);

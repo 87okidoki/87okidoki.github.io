@@ -3377,6 +3377,7 @@
 }
 .detail-main-section .book-thumb-area {
     margin: 0 auto;
+    display: block;
 }
 .detail-main-section .book-btns-area {
     position: absolute;
@@ -3392,7 +3393,7 @@
     position: absolute;
     top: 0;
     display: block;
-    background: url("../images/bg-detail-dummy.png") no-repeat center center / cover;
+    background: url("../images/bg-detail-dummy.png") no-repeat top center / cover;
     height: 86%;
     width: 100%;
 }
