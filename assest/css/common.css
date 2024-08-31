@@ -2751,8 +2751,12 @@ img {
     gap: 8px;
     width: 100%;
 }
-.main-popup-section .main-popup-footer .btn-popup:nth-child() {
+.main-popup-section .main-popup-footer .btn-popup-02 {
     width: 116px;
+    font-size: 1.6rem;
+    line-height: 40px;
+    padding: 0 20px;
+    border-radius: 8px;
 }
 .main-popup-section .main-popup-banner-area {
     position: relative;
@@ -2792,7 +2796,7 @@ img {
     .main-popup-section .main-popup-container .main-popup-body {
         width: 240px;
     }
-    .main-popup-section .main-popup-footer .btn-popup:nth-child() {
+    .main-popup-section .main-popup-footer .btn-popup-02{
         width: 75px;
     }
 }
