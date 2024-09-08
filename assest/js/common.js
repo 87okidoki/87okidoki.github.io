@@ -756,7 +756,7 @@ $(function () {
         loop: true,
         spaceBetween: 20,
         centeredSlides: true,
-         slidesPerView: "auto",
+        slidesPerView: "auto",
     });
 
     //모바일 메뉴

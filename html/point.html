@@ -13,6 +13,9 @@
     <link rel="stylesheet" type="text/css" href="../assest/css/swiper-bundle.css" />
     <link rel="stylesheet" type="text/css" href="../assest/css/common.css" />
     <link rel="stylesheet" type="text/css" href="../assest/css/layout.css" />
+    <!--9.2 전화 번호 자동인식 차단 메타태그 추가 시작-->
+    <meta name="format-detection" content="telephone=no">
+    <!--9.2 전화 번호 자동인식 차단 메타태그 추가 끝-->
     <meta name="keywords" content="meBook" />
     <meta name="description" content="meBook" />
     <title>meBook</title>
@@ -1139,14 +1142,30 @@
                         </header>
                         <div class="point-text"><strong class="">7,000,000,000,000</strong> P</div>
                         <div class="point-box-btns">
-                            <a href="#" class="point-box-item">
+                            <div class="point-box-item">
                               <span class="text">리뷰 작성 시 적립 가능</span>
-                              <span>3200p</span>
-                            </a>
-                            <button type="button" class="point-box-item">
+                              <a href="#" class="btn btn-option">
+                                 <span class="text"><strong>3200</strong> P</span>
+                                 <span class="icon icon-arrow-right"><span class="blind">이동</span></span>
+                              </a>
+                            </div>
+                            <div class="point-box-item">
                                 <span class="text">30일 이내 소멸 예정</span>
-                                <spann>조회하기<span><span class="blind">새로고침</span></span></span>
-                            </button>
+                                <button type="button" class="btn btn-option" disabled>
+                                    <span class="text"><strong>조회하기</strong></span>
+                                    <span class="icon icon-refresh"><span class="blind">새로고침</span></span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="inquiry-empty-group">
+                        <div class="empty-info-group">
+                            <div class="img-box">
+                                <img src="../assest/images/img-cart-01.png" alt="" />
+                            </div>
+                            <div class="text-box">
+                                <h3 class="empty-title">me포인트 내역이 없습니다.</h3>
+                            </div>
                         </div>
                     </div>
                     <div class="swiper-container btns-swiper-group">
@@ -1157,7 +1176,7 @@
                             <div class="swiper-slide"><button type="button" class="btn-swiper-tab">소멸</button></div>
                         </div>
                     </div>
-                    <!--1:1 문의 리스트 시작-->
+                    <!--포인트 리스트 시작-->
                     <section class="tab-swiper-content-section on">
                         <div class="point-list-group">
                             <h3 class="point-list-title">2025</h3>
@@ -1178,9 +1197,12 @@
                                     <div class="point-content-left">
                                         <div class="date">12.30</div>
                                         <div class="point-info">
-                                            <strong class="point-tilte">유효기간 만료 소멸</strong>
+                                            <strong class="point-tilte">리뷰 작성 리워드 적립리뷰 작성 리워드 적립</strong>
                                             <P class="point-desc">이다지도 생생한 한국사</P>
-                                            <div class="due-date"><span class="due-date-title">사용기한</span><span class="due-date-content">2035.12.30 까지</span></div>
+                                            <div class="due-date"><span class="due-date-title">사용기한</span><span
+                                                    class="due-date-content">2035.12.30
+                                                    까지</span>
+                                            </div>
                                         </div>
                                     </div>
                                     <div class="point-content-right">
@@ -1191,13 +1213,14 @@
                                     <div class="point-content-left">
                                         <div class="date">12.30</div>
                                         <div class="point-info">
-                                            <strong class="point-tilte">유효기간 만료 소멸</strong>
+                                            <strong class="point-tilte">구매 시 사용</strong>
                                             <P class="point-desc">이다지도 생생한 한국사</P>
-                                            <div class="due-date"><span class="due-date-title">사용기한</span><span class="due-date-content">2035.12.30 까지</span></div>
+                                            <div class="due-date"><span class="due-date-title">사용기한</span><span
+                                                    class="due-date-content">2035.12.30 까지</span></div>
                                         </div>
                                     </div>
                                     <div class="point-content-right">
-                                        <span class="color-primary point">+ 5,025</span>
+                                        <span class="color-red point">- 5,025</span>
                                     </div>
                                 </li>
                             </ul>
@@ -1221,9 +1244,10 @@
                                     <div class="point-content-left">
                                         <div class="date">12.30</div>
                                         <div class="point-info">
-                                            <strong class="point-tilte">유효기간 만료 소멸</strong>
+                                            <strong class="point-tilte">리뷰 작성 리워드 적립리뷰 작성 리워드 적립</strong>
                                             <P class="point-desc">이다지도 생생한 한국사</P>
-                                            <div class="due-date"><span class="due-date-title">사용기한</span><span class="due-date-content">2035.12.30 까지</span></div>
+                                            <div class="due-date"><span class="due-date-title">사용기한</span><span class="due-date-content">2035.12.30
+                                                    까지</span></div>
                                         </div>
                                     </div>
                                     <div class="point-content-right">
@@ -1234,13 +1258,13 @@
                                     <div class="point-content-left">
                                         <div class="date">12.30</div>
                                         <div class="point-info">
-                                            <strong class="point-tilte">유효기간 만료 소멸</strong>
+                                            <strong class="point-tilte">구매 시 사용</strong>
                                             <P class="point-desc">이다지도 생생한 한국사</P>
                                             <div class="due-date"><span class="due-date-title">사용기한</span><span class="due-date-content">2035.12.30 까지</span></div>
                                         </div>
                                     </div>
                                     <div class="point-content-right">
-                                        <span class="color-primary point">+ 5,025</span>
+                                        <span class="color-red point">- 5,025</span>
                                     </div>
                                 </li>
                             </ul>
@@ -1261,9 +1285,28 @@
                             </div>
                         </div>
                     </section>
-                    <!--1:1 문의 리스트 끝-->
-                    <!-- 빈 1:1 문의 리스트 시작-->
+                    <!--포인트 리스트 끝-->
+                    <!-- 빈 포인트 리스트 시작-->
                     <section class="tab-swiper-content-section">
+                        <div class="point-list-group">
+                            <h3 class="point-list-title">2025</h3>
+                            <ul class="point-list">
+                                <li class="point-list-item">
+                                    <div class="point-content-left">
+                                        <div class="date">12.30</div>
+                                        <div class="point-info">
+                                            <strong class="point-tilte">리뷰 작성 리워드 적립리뷰 작성 리워드 적립</strong>
+                                            <P class="point-desc">이다지도 생생한 한국사</P>
+                                            <div class="due-date"><span class="due-date-title">사용기한</span><span
+                                                    class="due-date-content">2035.12.30 까지</span></div>
+                                        </div>
+                                    </div>
+                                    <div class="point-content-right">
+                                        <span class="color-primary point">+ 5,025</span>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
                         <div class="inquiry-empty-group">
                             <div class="empty-info-group">
                                 <div class="img-box">
@@ -1275,7 +1318,79 @@
                             </div>
                         </div>
                     </section>
-                     <!-- 빈 1:1 문의 리스트 끝-->
+                     <!-- 빈 포인트 리스트 끝-->
+                    <!--사용 포인트 리스트 시작-->
+                    <section class="tab-swiper-content-section">
+                        <div class="point-list-group">
+                            <h3 class="point-list-title">2025</h3>
+                            <ul class="point-list">
+                                <li class="point-list-item">
+                                    <div class="point-content-left">
+                                        <div class="date">12.30</div>
+                                        <div class="point-info">
+                                            <strong class="point-tilte">구매 시 사용</strong>
+                                            <P class="point-desc">이다지도 생생한 한국사</P>
+                                        </div>
+                                    </div>
+                                    <div class="point-content-right">
+                                        <span class="color-red point">- 5,025</span>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="pagination-group">
+                            <div class="pagination">
+                                <a href="#" class="previous disabled">
+                                    <span class="blind">왼쪽 화살</span>
+                                </a>
+                                <a href="#">1</a>
+                                <a href="#" class="active">2</a>
+                                <a href="#">3</a>
+                                <span>∙∙∙</span>
+                                <a href="#">999</a>
+                                <a href="#" class="next">
+                                    <span class="blind">오른쪽 화살</span>
+                                </a>
+                            </div>
+                        </div>
+                    </section>
+                    <!--사용 포인트 리스트 끝-->
+                    <!--소멸 포인트 리스트 시작-->
+                    <section class="tab-swiper-content-section">
+                        <div class="point-list-group">
+                            <h3 class="point-list-title">2025</h3>
+                            <ul class="point-list">
+                                <li class="point-list-item">
+                                    <div class="point-content-left">
+                                        <div class="date">12.30</div>
+                                        <div class="point-info">
+                                            <strong class="point-tilte">유효기간 만료 소멸</strong>
+                                            <P class="point-desc">이다지도 생생한 한국사</P>
+                                        </div>
+                                    </div>
+                                    <div class="point-content-right">
+                                        <span class="color-red point">- 5,025</span>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="pagination-group">
+                            <div class="pagination">
+                                <a href="#" class="previous disabled">
+                                    <span class="blind">왼쪽 화살</span>
+                                </a>
+                                <a href="#">1</a>
+                                <a href="#" class="active">2</a>
+                                <a href="#">3</a>
+                                <span>∙∙∙</span>
+                                <a href="#">999</a>
+                                <a href="#" class="next">
+                                    <span class="blind">오른쪽 화살</span>
+                                </a>
+                            </div>
+                        </div>
+                    </section>
+                    <!--소멸 포인트 리스트 끝-->
                 </section>
             </div>
             <!--8.8 푸터 일부 텍스트& 이미지 &버튼 수정 추가 시작-->
@@ -1300,7 +1415,7 @@
                     <a href="#" class="logo">
                         <img src="../assest/images/logo-meBook-store-gray.svg" alt="meBook 스토어" />
                     </a>
-                    <ul class="copyright-text">
+                    <div class="copyright-text">
                         <li>06643 서울 서초구 효령로 321 (서초동, 덕원빌딩) 7층, 메가스터디교육㈜</li>
                         <li>대표자 : 손성은</li>
                         <li>개인정보보호책임자 : 오영석 keeper@megagong.net</li>
@@ -1314,15 +1429,11 @@
                             이메일 : <a href="mailto:mebookteam@mebook.io" target="_blank">support@mebook.io</a>
                         </li>
                     </ul>
+                     <!--9.6 kcp 수정 추가 시작-->
                     <div class="kcp-area">
-                        <div class="img-box">
-                            <img src="../assest/images/img-kcp.png" alt="kcp" />
-                        </div>
-                        <div class="text-box">
-                            <h4 class="kcp-title">NHN KCP 구매안전 (에스크로) 서비스</h4>
-                            <p class="kcp-text">고객님은 안전거래를 위해 현금등으로 결제 시 저희 쇼핑몰에 가입한 NHN KCP의 구매안전서비스를 이용하실 수 있습니다.</p>
-                        </div>
+                        <img src="../assest/images/img-kcp.png" alt="kcp" />
                     </div>
+                    <!--9.6 kcp 수정 추가 끝-->
                     <p class="copyright-text copyright">
                         Copyright © megastudyEdu.co.,Ltd. All rights reserved.
                     </p>
@@ -1338,7 +1449,7 @@
             <!--푸터 끝-->
             <!--8.8 푸터 일부 텍스트& 이미지 &버튼 수정 추가 끝-->
             <!--팝업 시작-->
-            <section class="popup-section page" id="sharePopup">
+            <section class="popup-section page off" id="sharePopup">
                 <div class="popup-container">
                     <header class="popup-header">
                         <h2 class="title">포인트 안내사항</h2>

@@ -37,7 +37,7 @@
     }
     .promotion-header-section .img-promotion {
         position: relative;
-        bottom: -3px;
+        bottom: 30px;
         width: 320px;
     }
     .promotion-header-section .promotion-main-title .img-title {
@@ -363,7 +363,7 @@
     .intro-section .btn-tab-promo {
         font-size: 1.4rem;
         min-width: 96px;
-        padding: 14px 16px;
+        padding: 7px 16px;
         height: 42px;
     }
     .intro-section .tab-promo-content-section {
@@ -1559,6 +1559,19 @@
     line-height: 20px;
     padding: 0 32px 32px;
 }
+.event-notice-box .event-notice-area{
+    margin-bottom: 32px;
+}
+.event-notice-box .event-notice-area:last-child{
+    margin-bottom: 0;
+}
+.event-notice-box .event-notice-area > .title{
+    font-family: "Pretendard Bold"; 
+    margin-bottom: 8px;
+    color: rgba(255, 255, 255, 0.80);
+    text-align: left;
+    font-size: 1.8rem;
+}
 .event-notice-box .event-notice-list {
     text-align: left;
 }
@@ -1572,20 +1585,35 @@
     margin-bottom: 8px;
     padding-left: 24px;
 }
+.event-notice-box .event-notice-list .event-notice-item:last-child{
+    margin-bottom: 0;
+}
+.event-notice-box .event-notice-list .event-notice-item > strong{
+    font-family: "Pretendard Bold"; 
+}
 .event-notice-box .event-notice-list .event-notice-item::after {
     content: '';
     position: absolute;
     top: 12px;
     left: 8px;
     display: block;
-    width: 4px;
-    height: 4px;
+    width: 3px;
+    height: 3px;
     background-color: rgba(255, 255, 255, 0.80);
-    border-radius: 8px;
+    border-radius: 10px;
 }
-.event-notice-box .event-notice-list .event-notice-item:last-child {
-    margin-bottom: 0;
+.event-notice-box .event-notice-list .event-notice-item.bold::after {
+    content: '';
+    position: absolute;
+    top: 11px;
+    left: 8px;
+    display: block;
+    width: 5px;
+    height: 5px;
+    background-color: rgba(255, 255, 255, 0.80);
+    border-radius: 10px;
 }
+
 
 @media screen and (max-width:767px) {
     .event-notice-box {
@@ -1606,6 +1634,12 @@
         width: 20px;
         height: 20px;
     }
+    .event-notice-box .event-notice-area{
+        margin-bottom: 28px;
+    }
+    .event-notice-box .event-notice-area > .title{
+        font-size: 1.4rem;
+    }
     .event-notice-box .event-notice .event-notice-title {
         font-size: 1.4rem;
         line-height: 21px;
@@ -1624,6 +1658,13 @@
         top: 11px;
         width: 2px;
         height: 2px;
+    }
+    .event-notice-box .event-notice-list .event-notice-item.bold::after {
+        content: '';
+        position: absolute;
+        top: 9px;
+        width: 3px;
+        height: 3px;
     }
 }
 .book-thumb-area .book-hover {

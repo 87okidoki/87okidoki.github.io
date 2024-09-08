@@ -10,11 +10,15 @@
     <meta name="msapplication-TileColor" content="#fff">
     <meta name="msapplication-TileImage" content="/ms-icon-70x70.png">
     <meta name="apple-mobile-web-app-capable" content="yes">
-    <!--daterangepicker 수정-->
+    <!--9.2 daterangepicker 수정 시작-->
     <link rel="stylesheet" type="text/css" href="../assest/css/daterangepicker.css" />
+    <!-- 9.2 daterangepicker 수정 끝-->
     <link rel="stylesheet" type="text/css" href="../assest/css/swiper-bundle.css" />
     <link rel="stylesheet" type="text/css" href="../assest/css/common.css" />
     <link rel="stylesheet" type="text/css" href="../assest/css/layout.css" />
+    <!--9.2 전화 번호 자동인식 차단 메타태그 추가 시작-->
+    <meta name="format-detection" content="telephone=no">
+    <!--9.2 전화 번호 자동인식 차단 메타태그 추가 끝-->
     <meta name="keywords" content="meBook" />
     <meta name="description" content="meBook" />
     <title>meBook</title>
@@ -1471,15 +1475,11 @@
                             이메일 : <a href="mailto:mebookteam@mebook.io" target="_blank">support@mebook.io</a>
                         </li>
                     </ul>
+                     <!--9.6 kcp 수정 추가 시작-->
                     <div class="kcp-area">
-                        <div class="img-box">
-                            <img src="../assest/images/img-kcp.png" alt="kcp" />
-                        </div>
-                        <div class="text-box">
-                            <h4 class="kcp-title">NHN KCP 구매안전 (에스크로) 서비스</h4>
-                            <p class="kcp-text">고객님은 안전거래를 위해 현금등으로 결제 시 저희 쇼핑몰에 가입한 NHN KCP의 구매안전서비스를 이용하실 수 있습니다.</p>
-                        </div>
+                        <img src="../assest/images/img-kcp.png" alt="kcp" />
                     </div>
+                    <!--9.6 kcp 수정 추가 끝-->
                     <p class="copyright-text copyright">
                         Copyright © megastudyEdu.co.,Ltd. All rights reserved.
                     </p>
@@ -1497,9 +1497,10 @@
         </div>
     </main>
     <script src="../assest/js/jquery-2.2.4.min.js"></script>
-    <!--daterangepicker 수정-->
-    <script type="text/javascript" src="../assest/js/moment.min.js"></script>
-    <script type="text/javascript" src="../assest/js/daterangepicker.js"></script>
+    <!--9.2 daterangepicker 수정 시작 -->
+    <script src="../assest/js/moment.min.js"></script>
+    <script src="../assest/js/daterangepicker.js"></script>
+    <!--9.2 daterangepicker 수정 끝 -->
     <script src="../assest/js/swiper-bundle.js"></script>
     <script src="../assest/js/common.js"></script>
     <script>
