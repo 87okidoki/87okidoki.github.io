@@ -1135,13 +1135,18 @@
             <!--해더 끝-->
             <nav class="guide-nav" id="guideNav">
                 <div class="guide-nav-inner">
-                    <div class="swiper-container guide-tabs" id="guideBtnSwiper">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide"><a href="#guide-section-01" class="link on">시작하기</a></div>
-                            <div class="swiper-slide"><a href="#guide-section-02" class="link">활용법</a></div>
-                            <div class="swiper-slide"><a href="#guide-section-03" class="link">미북스페셜</a></div>
-                            <div class="swiper-slide"><a href="#guide-section-04" class="link">경험하기</a></div>
+                    <div class="guide-nav-box">
+                        <div class="swiper-container guide-tabs" id="guideBtnSwiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide"><a href="#guide-section-01" class="link on">시작하기</a></div>
+                                <div class="swiper-slide"><a href="#guide-section-02" class="link">활용법</a></div>
+                                <div class="swiper-slide"><a href="#guide-section-03" class="link">미북스페셜</a></div>
+                                <div class="swiper-slide"><a href="#guide-section-04" class="link">경험하기</a></div>
+                            </div>
                         </div>
+                    </div>
+                    <div class="only-mobile">
+                        <a href="#" class="btn-app-link">APP 다운로드</a>
                     </div>
                 </div>
             </nav>
@@ -1225,7 +1230,7 @@
                             <p class="guide-text">* meBOOK스토어에서 구매하신 상품은 meBOOK에서만 열람이 가능하며 태블릿에서만 사용할 수 있습니다.</p>
                         </div>
                     </section>
-                    <section class="guide-box-nav-section guide-step-section guide-step-02-section" id="#guide-box-01">
+                    <section class="guide-step-section guide-step-02-section" id="guide-box-01">
                         <div class="guide-content-inner">
                             <header class="guide-step-header">
                                 <h3 class="guide-step-title">1단계</h3>
@@ -1244,7 +1249,7 @@
                             </div>
                         </div>
                     </section>
-                    <section class="guide-box-nav-section guide-step-section guide-step-03-section" id="#guide-box-02">
+                    <section class="guide-step-section guide-step-03-section" id="guide-box-02">
                         <div class="guide-content-inner">
                             <header class="guide-step-header">
                                 <h3 class="guide-step-title">2단계</h3>
@@ -1291,7 +1296,7 @@
                                             </div>
                                             <div class="guide-info-box">
                                                 <p class="guide-desc">
-                                                    구매 목록 불러오기를 통해 meBOOK스토어에서 구매한<br/>
+                                                    구매 목록 불러오기를 통해 meBOOK스토어에서 구매한<br class="only-pc"/>
                                                     eBook을 다운로드 받으세요.
                                                 </p>
                                             </div>
@@ -1306,7 +1311,7 @@
                             </div>
                         </div>
                     </section>
-                    <section class="guide-box-nav-section guide-step-section guide-step-04-section" id="#guide-box-03">
+                    <section class="guide-step-section guide-step-04-section" id="guide-box-03">
                         <div class="guide-content-inner">
                             <header class="guide-step-header">
                                 <h3 class="guide-step-title">3단계</h3>
@@ -1379,10 +1384,10 @@
                                 </div>
                                 <div class="use-content-right">
                                     <h4 class="use-content-title">
-                                        문제와 해설, <br/>
+                                        문제와 해설, <br class="only-pc"/>
                                         교재와 노트
                                     </h4>
-                                    <p class="use-content-text">듀얼 화면에서 원하는 비율로 동시에 학습할 수 있어요.</p>
+                                    <p class="use-content-text">듀얼 화면에서 원하는 비율로<br class="only-mobile"/> 동시에 학습할 수 있어요.</p>
                                 </div>
                             </li>
                             <li class="use-list-item">
@@ -1448,9 +1453,12 @@
                 <section class="guide-nav-section guide-step-section guide-step-06-section" id="guide-section-03">
                     <div class="guide-content-inner">
                         <header class="guide-step-header">
-                            <h3 class="guide-step-title">미북에서만 제공하는 <span class="img-special"><span class="blind">Special</span></span> 기능 <span class="icon-arrow-top"></span></h3>
-                            <div>
+                            <h3 class="guide-step-title">미북에서만 제공하는 <br class="only-mobile"/> <span class="img-special"><span class="blind">Special</span></span> <span class="mo-hide">기능</span> <span class="icon-arrow-top"></span></h3>
+                            <div class="only-pc">
                                 <button type="button" class="btn btn-player">동영상 보기</button>
+                            </div>
+                            <div class="only-mobile">
+                                <button type="button" class="btn btn-player">전체 기능 <span>동영상 보기</span></button>
                             </div>
                         </header>
                         <div>
@@ -1736,6 +1744,121 @@
                             </div>
                             <button type="button" class="btn-book-more btn btn-full">더보기 <span class="icon-more"></span></button>
                         </div>
+                        <div class="tab-round-content-section">
+                            <div class="thumb-grid-items">
+                                <div class="thumb-grid-item">
+                                    <div class="thumb-item">
+                                        <a href="#" class="book-thumb-area badge-special">
+                                            <div class="book-thumb">
+                                                <img src="../assest/images/img-book-dummy-02.jpg" alt="">
+                                            </div>
+                                        </a>
+                                        <div class="thumb-item-text-area">
+                                            <a href="#" class="thumb-item-title">
+                                                2024 전한길 한국사 4.0 실전동형 모의고사 시즌 1
+                                            </a>
+                                            <div class="thumb-item-sub-text">전한길</div>
+                                            <div class="goods-price">
+                                                <span class="discount">10%</span>
+                                                <strong class="discount-price">9,000원</strong>
+                                            </div>
+                                            <div class="category-badges">
+                                                <span class="category-badge">동영상 강의</span><span class="category-badge">+2</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="thumb-grid-item">
+                                    <div class="thumb-item">
+                                        <a href="#" class="book-thumb-area badge-special">
+                                            <div class="book-thumb">
+                                                <img src="../assest/images/img-book-dummy-03.png" alt="">
+                                            </div>
+                                        </a>
+                                        <div class="thumb-item-text-area">
+                                            <a href="#" class="thumb-item-title">
+                                                2024 전한길 한국사 4.0 실전동형 모의고사 시즌 1
+                                            </a>
+                                            <div class="thumb-item-sub-text">전한길</div>
+                                            <div class="goods-price">
+                                                <span class="discount">10%</span>
+                                                <strong class="discount-price">9,000원</strong>
+                                            </div>
+                                            <div class="category-badges">
+                                                <span class="category-badge">동영상 강의</span><span class="category-badge">+2</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="thumb-grid-item">
+                                    <div class="thumb-item">
+                                        <a href="#" class="book-thumb-area">
+                                            <div class="book-thumb">
+                                                <img src="../assest/images/img-book-dummy-04.png" alt="">
+                                            </div>
+                                        </a>
+                                        <div class="thumb-item-text-area">
+                                            <a href="#" class="thumb-item-title">
+                                                2024 전한길 한국사 4.0 실전동형 모의고사 시즌 1
+                                            </a>
+                                            <div class="thumb-item-sub-text">전한길</div>
+                                            <div class="goods-price">
+                                                <span class="discount">10%</span>
+                                                <strong class="discount-price">9,000원</strong>
+                                            </div>
+                                            <div class="category-badges">
+                                                <span class="category-badge">동영상 강의</span><span class="category-badge">+2</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="thumb-grid-item">
+                                    <div class="thumb-item">
+                                        <a href="#" class="book-thumb-area">
+                                            <div class="book-thumb">
+                                                <img src="../assest/images/img-book-dummy-04.png" alt="">
+                                            </div>
+                                        </a>
+                                        <div class="thumb-item-text-area">
+                                            <a href="#" class="thumb-item-title">
+                                                2024 전한길 한국사 4.0 실전동형 모의고사 시즌 1
+                                            </a>
+                                            <div class="thumb-item-sub-text">전한길</div>
+                                            <div class="goods-price">
+                                                <span class="discount">10%</span>
+                                                <strong class="discount-price">9,000원</strong>
+                                            </div>
+                                            <div class="category-badges">
+                                                <span class="category-badge">동영상 강의</span><span class="category-badge">+2</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="thumb-grid-item">
+                                    <div class="thumb-item">
+                                        <a href="#" class="book-thumb-area badge-special">
+                                            <div class="book-thumb">
+                                                <img src="../assest/images/img-book-dummy-04.png" alt="">
+                                            </div>
+                                        </a>
+                                        <div class="thumb-item-text-area">
+                                            <a href="#" class="thumb-item-title">
+                                                2024 전한길 한국사 4.0 실전동형 모의고사 시즌 1
+                                            </a>
+                                            <div class="thumb-item-sub-text">전한길</div>
+                                            <div class="goods-price">
+                                                <span class="discount">10%</span>
+                                                <strong class="discount-price">9,000원</strong>
+                                            </div>
+                                            <div class="category-badges">
+                                                <span class="category-badge">동영상 강의</span><span class="category-badge">+2</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <button type="button" class="btn-book-more btn btn-full">더보기 <span class="icon-more"></span></button>
+                        </div>
                     </div>
                 </section>
             </div>
@@ -1801,7 +1924,7 @@
     <script src="../assest/js/bottom-sheet.js"></script>
 </body>
 <script>
-    
+      $(document).ready(function() {
         var swiper = new Swiper("#guideBtnSwiper", {
             slidesPerView: 'auto',
         });
@@ -1822,7 +1945,6 @@
     var swiper = new Swiper("#guideSwiper02", {
         slidesPerView: 'auto',
         centeredSlides: true,
-        spaceBetween: 24,
         navigation: {
             nextEl: "#guideSwiper02 .swiper-button-next",
             prevEl: "#guideSwiper02 .swiper-button-prev",
@@ -1832,6 +1954,7 @@
             hide: false,
         },
     });
+    
     // 스와이퍼 슬라이드 클릭 이벤트 리스너 추가
     $(".tab-guide-swiper .swiper-slide").click(function () {
         const idx = $(this).index();
@@ -1861,7 +1984,6 @@
 
     if (guideNav.length > 0) {
         let guideNavHeight = guideNav.outerHeight();
-        let guideNavOffset = guideNav.offset().top - guideNavHeight + 1;
 
         function updateSectionOffsets() {
             guideSections.each(function () {
@@ -1872,7 +1994,6 @@
         }
 
         function handleScroll() {
-
             const scrollTopPosition = $(window).scrollTop();
 
             guideSections.each(function () {
@@ -1887,27 +2008,17 @@
                     guideNav.find('a[href="#' + $this.attr('id') + '"]').addClass('on');
                 }
             });
-
-        }
-
-        function debounce(func, wait) {
-            let timeout;
-            return function () {
-                clearTimeout(timeout);
-                timeout = setTimeout(func, wait);
-            };
         }
 
         // 초기 설정
         updateSectionOffsets();
         $(window).on('scroll', handleScroll);
 
-        // 디바운스를 사용하여 리사이즈 시 업데이트
-        $(window).on('resize', debounce(function () {
+        // 리사이즈 시 업데이트
+        $(window).on('resize', function () {
             guideNavHeight = guideNav.outerHeight();
-            guideNavOffset = guideNav.offset().top - guideNavHeight + 1;
             updateSectionOffsets();
-        }, 100));
+        });
 
         // 탭 메뉴 클릭 이벤트
         guideNav.find('.guide-tabs .link').on('click', function (e) {
@@ -1917,80 +2028,29 @@
 
             if ($target.length) {
                 $('html, body').animate({
-                    scrollTop: $target.offset().top - guideNavHeight + 1
+                    scrollTop: $target.offset().top
                 }, 500);
             }
         });
+
+        // 초기 스크롤 위치에 맞는 섹션과 탭을 하이라이트
+        handleScroll();
     }
 
+    $('#guideBoxNav .btn-link').on('click', function(e) {
+        e.preventDefault();  // 기본 링크 동작 방지
 
-    let guideBoxNav = $('#guideBoxNav');
-    let guideBoxSections = $('.guide-box-nav-section');
+        var target = $(this).attr('href');  // 클릭한 버튼의 href 속성 값 가져오기
+        var targetElement = $(target);  // 해당 ID를 가진 요소 찾기
 
-    if (guideBoxNav.length > 0) {
-        let guideBoxNavHeight = guideBoxNav.outerHeight();
-        let guideBoxNavOffset = guideBoxNav.offset().top - guideBoxNavHeight + 1;
-
-        function updateSectionOffsets() {
-            guideBoxSections.each(function () {
-                let $this = $(this);
-                $this.data('offset-top', $this.offset().top - guideBoxNavHeight);
-                $this.data('bottom', $this.data('offset-top') + $this.outerHeight());
-            });
+        if (targetElement.length) {
+            // html, body에 대해 애니메이션을 사용하여 스크롤
+            $('html, body').animate({
+                scrollTop: targetElement.offset().top  // 해당 요소의 상단 위치로 스크롤
+            }, 500);  // 500ms 동안 부드럽게 스크롤
         }
+    });
+});
 
-        function handleScroll() {
-
-            const scrollTopPosition = $(window).scrollTop();
-
-            guideBoxSections.each(function () {
-                const $this = $(this);
-                const top = $this.data('offset-top');
-                const bottom = $this.data('bottom');
-
-                if (scrollTopPosition >= top && scrollTopPosition <= bottom) {
-                    guideBoxNav.find('.guide-swiper .btn-link').removeClass('on');
-                    guideBoxSections.removeClass('on');
-                    $this.addClass('on');
-                    guideBoxNav.find('a[href="#' + $this.attr('id') + '"]').addClass('on');
-                }
-            });
-
-        }
-
-        // function debounce(func, wait) {
-        //     let timeout;
-        //     return function () {
-        //         clearTimeout(timeout);
-        //         timeout = setTimeout(func, wait);
-        //     };
-        // }
-
-        // // 초기 설정
-        // updateSectionOffsets();
-        // $(window).on('scroll', handleScroll);
-
-        // // 디바운스를 사용하여 리사이즈 시 업데이트
-        // $(window).on('resize', debounce(function () {
-        //     guideBoxNavHeight = guideBoxNav.outerHeight();
-        //     guideBoxNavOffset = guideBoxNav.offset().top - guideBoxNavHeight + 1;
-        //     updateSectionOffsets();
-        // }, 100));
-
-        // 탭 메뉴 클릭 이벤트
-        guideBoxNav.find('.guide-swiper .btn-link').on('click', function (e) {
-            e.preventDefault();
-            const targetId = $(this).attr('href');
-            const $target = $(targetId);
-
-            if ($target.length) {
-                $('html, body').animate({
-                    scrollTop: $target.offset().top - guideBoxNavHeight + 1
-                }, 500);
-            }
-        });
-    }
-
-   
   </script>
 </html>

@@ -7460,22 +7460,54 @@
     padding-left: 20px;
     padding-right: 20px;
     margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
-.guide-tabs .swiper-slide{
+.guide-nav .btn-app-link{
+    font-family: "Pretendard SemiBold";
+    font-size: 1.2rem;
+    padding: 8px 12px;
+    color: var(--white-color);
+    background-color: var(--black-color);
+    border-radius: 100px;
+    display: block;
+    white-space: pre;
+}
+.guide-nav .guide-tabs .swiper-slide{
     width: auto;
 }
-.guide-tabs .link{
+.guide-nav .guide-tabs .link{
     display: block;
     font-size: 1.4rem;
     color: var(--blue-grey-500);
     padding: 20px 36px;
   }
-.guide-tabs .link.on{
+.guide-nav .guide-tabs .link.on{
     font-family: "Pretendard Bold";
-    font-size: 1.4rem;
     color: #1D1D1F;
 }
-
+@media screen and (max-width:767px) {
+    .guide-nav-box{
+        width: 100%;
+        position: relative;
+        overflow: hidden;
+    }
+    .guide-nav-box::after{
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 20px;
+height: 60px;
+z-index: 2;
+background: linear-gradient(90deg, rgba(255, 255, 255, 0.00) 0%, #FFF 97.5%);
+    }
+    .guide-nav .guide-tabs .link{
+        font-size: 1.2rem;
+        padding: 17px 20px 17px 0px;
+      } 
+}
 .guide-step-section{
     padding: 140px 0px 140px;
 }
@@ -7528,11 +7560,10 @@
 .guide-swiper .guide-img-box{
     border-radius: 32px;
     overflow: hidden;
+    border: 0.5px solid var(--border-primary);
 }
 .guide-swiper .swiper-slide {
     opacity: 0.3;
-    max-width: 952px;
-    
 }
 .guide-swiper .swiper-slide.swiper-slide-active {
     opacity: 1;
@@ -7547,40 +7578,33 @@
     z-index: 2;
     width: 100%;
 }
-.guide-swiper .swiper-button-prev{
-    position: absolute;
-    top: 50%;
-    left: -73px; 
-    width: 54px;
-    height: 54px;
-    border: 0;
-    box-shadow: 2px 2px 12px 0px rgba(0, 0, 0, 0.09);
-}
+.guide-swiper .swiper-button-prev,
 .guide-swiper .swiper-button-next{
     position: absolute;
     top: 50%;
-    right: -73px; 
     width: 54px;
     height: 54px;
     border: 0;
     box-shadow: 2px 2px 12px 0px rgba(0, 0, 0, 0.09);
 }
-.guide-swiper .swiper-button-box .swiper-button-prev:after {
+.guide-swiper .swiper-button-prev{
+    left: -73px;
+}
+.guide-swiper .swiper-button-next{
+    right: -73px; 
+}
+.guide-swiper .swiper-button-box .swiper-button-prev:after, 
+.guide-swiper .swiper-button-box .swiper-button-next:after{
     content: '';
     background: url(../images/ic-swiper-arrow-black.svg) no-repeat center center / contain;
     width: 20px;
     height: 20px;
 }
-.guide-swiper .swiper-button-box .swiper-button-next:after {
-    content: '';
-    background: url(../images/ic-swiper-arrow-black.svg) no-repeat center center / contain;
-    width: 20px;
-    height: 20px;
-}
+
 .guide-swiper .swiper-scrollbar{
     max-width: 952px;
- margin: 40px 0 0;
- position: relative;
+    margin: 40px 0 0;
+    position: relative;
 }
 .guide-swiper .swiper-scrollbar .swiper-scrollbar-drag{
     background-color: var(--black-color);
@@ -7644,6 +7668,24 @@ height: 20px;
     margin-top: 20px;
 }
 @media screen and (max-width:767px) {
+    .guide-swiper .swiper-button-prev,
+.guide-swiper .swiper-button-next{
+    width: 28px;
+    height: 28px;
+}
+.guide-swiper .swiper-button-prev{
+    left: -13px;
+}
+.guide-swiper .swiper-button-next{
+    right: -13px; 
+}
+.guide-swiper .swiper-button-box .swiper-button-prev:after, 
+.guide-swiper .swiper-button-box .swiper-button-next:after{
+
+    width: 10px;
+    height: 10px;
+}
+
     .guide-swiper .swiper-scrollbar{
         margin-top: 0px;
     }
@@ -7707,7 +7749,7 @@ height: 20px;
 
 @media screen and (max-width:767px) {
     .guide-main-section .guide-main-box{
-        padding: 40px 20px 60px;
+        padding: 40px 0px 60px;
         display: block;
     }
     .guide-main-section .guide-main-text > .logo{
@@ -7738,6 +7780,9 @@ height: 20px;
 .guide-step-01-section{
     padding: 10px 0px 140px 0px;
 }
+.guide-step-01-section .guide-swiper .swiper-slide{
+    max-width: 952px;
+}
 .guide-step-01-section .guide-text{
     margin: 50px auto 0;
     color: rgba(0, 0, 0, 0.50);
@@ -7745,6 +7790,7 @@ height: 20px;
    font-size: 1.6rem;
    line-height: 100%;
    }
+   
 .guide-step-02-section{
     margin: 0 auto;
     background: #181F29;
@@ -7779,6 +7825,10 @@ display: none;
    }
 .guide-step-03-section .guide-swiper .swiper-slide{
     width: 782px;
+    margin-right: 24px;
+}
+.guide-step-03-section .guide-swiper .swiper-slide:last-child{
+    margin-right: 0px;
 }
 .guide-step-03-section .guide-swiper .swiper-slide:first-child{
     margin-left: -170px;
@@ -7788,11 +7838,11 @@ display: none;
 }
 @media screen and (max-width:767px) {
     .guide-step-03-section .guide-swiper .swiper-slide{
-        width: 280px;
-
+        width: 100%;
+        margin-right: 12px;
     }
     .guide-step-03-section .guide-swiper .swiper-slide:first-child{
-        margin-left: -36px;
+        margin-left: 0px;
     }
 }
 .guide-step-04-section{
@@ -7800,6 +7850,10 @@ display: none;
 }
 .guide-step-04-section .guide-swiper .swiper-slide{
     width: 782px;
+    margin-right: 24px;
+}
+.guide-step-04-section .guide-swiper .swiper-slide:last-child{
+    margin-right: 0px;
 }
 .guide-step-04-section .guide-swiper .swiper-button-box{
     top: 31%;
@@ -7820,10 +7874,11 @@ display: none;
 }
 @media screen and (max-width:767px) {
     .guide-step-04-section .guide-swiper .swiper-slide{
-        width: 280px;
+        width: 100%;
+        margin-right: 12px;
     }
     .guide-step-04-section .guide-swiper .swiper-slide:first-child{
-        margin-left: -36px;
+        margin-left: 0px;
     }  
 }
 .guide-step-05-section{
@@ -7857,6 +7912,7 @@ display: none;
     max-width: 498px;
     overflow: hidden;
     border-radius: 24px;
+    border: 0.5px solid var(--border-primary);
 }
 .guide-step-05-section .use-list-group .use-content-title{
     font-family: "Pretendard Bold";
@@ -7909,6 +7965,7 @@ display: none;
     background: url(../images/ic-arrow-top-black.svg) no-repeat center center / contain;
     width: 36px;
     height: 36px;
+    margin-left: 8px;
 }
 .guide-step-06-section .btn-player{
     font-size: 1.6rem;
@@ -8054,7 +8111,7 @@ z-index: 1;
     display: block;
     padding-bottom:62.5% ;
 }
-.guide-step-06-section .tab-guide-content .video{
+.guide-step-06-section .tab-guide-content-section .video{
     position: absolute;
     top: -8px;
     left: -8px;
@@ -8062,6 +8119,39 @@ z-index: 1;
     bottom: 0;
     width: 104%;
 }
+.guide-step-06-section .tab-guide-content-section:nth-child(3) .video{
+    position: absolute;
+    top: -8px;
+    left: -14px;
+    right: -20px;
+    bottom: 0;
+    width: 106%;
+}
+.guide-step-06-section .tab-guide-content-section:nth-child(4) .video{
+    position: absolute;
+    top: -8px;
+    left: -20px;
+    right: -20px;
+    bottom: 0;
+    width: 106%;
+}
+.guide-step-06-section .tab-guide-content-section:nth-child(5) .video{
+    position: absolute;
+    top: -8px;
+    left: -19px;
+    right: -20px;
+    bottom: 0;
+    width: 106%;
+}
+.guide-step-06-section .tab-guide-content-section:nth-child(7) .video{
+    position: absolute;
+    top: -8px;
+    left: -20px;
+    right: -14px;
+    bottom: 0;
+    width: 107%;
+}
+
 .guide-step-06-section .tab-guide-content .text-box > .title{
     font-family: "Pretendard Bold";
 font-size: 3.4rem;
@@ -8090,6 +8180,38 @@ margin-bottom: 24px;
     height: 24px;
 }
 @media screen and (max-width:767px) {
+    .guide-step-06-section .guide-step-header{
+        text-align: center;
+        margin-bottom: 28px;
+    }
+    .guide-step-06-section .guide-step-header .mo-hide{
+        display: none;
+    }
+    .guide-step-06-section .guide-step-header .img-special{
+        width: 150px;
+        height: 38px;        
+    }
+    .guide-step-06-section .guide-step-header .icon-arrow-top{
+        width: 24px;
+        height: 24px;
+        vertical-align: middle;
+    }
+    .guide-step-06-section .btn-player{
+        margin-top: 16px;
+        font-family: "Pretendard Bold";
+        font-size: 1.6rem;
+        padding: 14px 20px;
+        border-radius:40px;
+        color: var(--white-color);
+        background-color: var(--black-color);
+    }
+    .guide-step-06-section .btn-player > span{
+        font-family: "Pretendard Bold";
+        font-size: 1.6rem;
+        background: linear-gradient(90deg, #BE7EFF 0%, #4685FF 100%);
+        color: transparent;
+        -webkit-background-clip: text;
+    }
     .guide-step-06-section .tab-guide-swiper{
     padding-top: 14px;
     padding-bottom: 14px;
@@ -8144,6 +8266,19 @@ margin-bottom: 24px;
         width: 20px;
         height: 20px;
     }
+    .guide-step-06-section .tab-guide-content-section .video{
+        left: -10px;
+    }
+    .guide-step-06-section .tab-guide-content-section:nth-child(3) .video{
+        left: -16px;
+    }
+    .guide-step-06-section .tab-guide-content-section:nth-child(4) .video{
+        left: -22px;
+    }
+    .guide-step-06-section .tab-guide-content-section:nth-child(7) .video{
+        left: -24px;
+    }
+    
 }
 
 .guide-step-07-section{
@@ -8182,11 +8317,20 @@ margin-bottom: 24px;
 .guide-step-07-section .tab-round-content-section.on{
     display: block;
 }
-.guide-step-07-section .btn-book-more > .icon-more{
-    display: block;
-    background: url(../images/ic-guide-arrow-bottom.svg) no-repeat center center / contain;
-    width: 20px;
-    height: 20px;
+
+.guide-step-07-section .btn-tab-book-content{
+    max-width: 1056px;
+    margin: 0 auto;
+}
+.guide-step-07-section .tab-round-content-section .thumb-grid-items{
+ padding: 0;
+}
+
+.guide-step-07-section .tab-round-content-section .thumb-grid-items .thumb-item{
+    margin-top: 20px;
+}
+.guide-step-07-section .tab-round-content-section .thumb-grid-items .thumb-grid-item .thumb-item-text-area{
+    height: auto;
 }
 .guide-step-07-section .btn-book-more {
     display: flex;
@@ -8197,12 +8341,11 @@ margin-bottom: 24px;
     color: #1D1D1F;
     font-size: 2rem;
 }
-.guide-step-07-section .btn-tab-book-content{
-    max-width: 1056px;
-    margin: 0 auto;
-}
-.guide-step-07-section .btn-tab-book-content .thumb-grid-items{
-    gap:56px
+.guide-step-07-section .btn-book-more > .icon-more{
+    display: block;
+    background: url(../images/ic-guide-arrow-bottom.svg) no-repeat center center / contain;
+    width: 20px;
+    height: 20px;
 }
 @media screen and (max-width:767px) {
     .guide-step-07-section.guide-step-section .guide-step-header{
@@ -8219,5 +8362,9 @@ margin-bottom: 24px;
     .guide-step-07-section .btn-tab-round.on > .icon{
         width: 16px;
         height: 16px;
+    }
+    .guide-step-07-section .btn-book-more {
+        gap: 4px;
+        font-size: 1.6rem;
     }
 }
