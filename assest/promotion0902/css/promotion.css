@@ -1,5 +1,8 @@
+.event-section .event-full-content. {
+    background-color: #0e0d18;
+}
 .promotion-header-section {
-    background: url("../images/bg-main-promotion-pc.png") no-repeat top center / cover;
+    background: url("../images/bg-main-promotion-pc.png") no-repeat top center / 2560px 982px;
     height: 982px;
     width: 100%;
     text-align: center;
@@ -14,8 +17,8 @@
 }
 .promotion-header-section .img-promotion {
     position: relative;
-    bottom: -63px;
-    width: 864px;
+    bottom: -6px;
+    width: 1011px;
     margin: 0 auto;
 }
 .promotion-content-section {
@@ -37,7 +40,7 @@
     }
     .promotion-header-section .img-promotion {
         position: relative;
-        bottom: 30px;
+        bottom: 4px;
         width: 320px;
     }
     .promotion-header-section .promotion-main-title .img-title {
@@ -278,9 +281,9 @@
     background-color: #F6F7FF;
     margin-top: 72px;
 }
-.intro-section .tabs-promo{
+.intro-section .tabs-promo {
     margin: 0 auto;
-    max-width: 1280px;    
+    max-width: 1280px;
     overflow: hidden;
     height: 86px;
 }
@@ -308,9 +311,8 @@
 }
 .intro-section .video-box {
     position: relative;
-    max-width: 597px;
-    /* width: 796px;
-    height: 597px; */
+    max-width: 796px;
+    overflow: hidden;
     margin: 0 auto;
     box-shadow: 12px 12px 60px 0 rgba(14, 15, 51, 0.20);
 }
@@ -318,7 +320,7 @@
 .intro-section .video-box::after {
     content: '';
     display: block;
-    padding-bottom: 80%;
+    padding-bottom: 75%;
 }
 .intro-section .video-box .video {
     position: absolute;
@@ -787,18 +789,24 @@
     text-align: center;
     opacity: 0.6;
 }
-.thumb-grid-items.promotion .thumb-item {
+.book-list-section .thumb-grid-items.promotion {
+    align-items: flex-end;
+}
+.book-list-section .thumb-grid-items.promotion .thumb-item {
     margin-top: 0;
 }
-.thumb-grid-items.promotion .thumb-grid-item .thumb-item-text-area {
+.book-list-section .thumb-grid-items.promotion .thumb-grid-item .thumb-item-text-area {
     height: 135px;
 }
 @media screen and (max-width: 1200px) {
-    .thumb-grid-items {
+    .book-list-section .thumb-grid-items.promotion {
         grid-template-columns: repeat(3, auto);
     }
 }
 @media screen and (max-width:767px) {
+    .book-list-section .thumb-grid-items.promotion {
+        align-items: flex-start;
+    }
     .book-list-section .icon-free {
         top: -16px;
         right: -27px;
@@ -1559,14 +1567,14 @@
     line-height: 20px;
     padding: 0 32px 32px;
 }
-.event-notice-box .event-notice-area{
+.event-notice-box .event-notice-area {
     margin-bottom: 32px;
 }
-.event-notice-box .event-notice-area:last-child{
+.event-notice-box .event-notice-area:last-child {
     margin-bottom: 0;
 }
-.event-notice-box .event-notice-area > .title{
-    font-family: "Pretendard Bold"; 
+.event-notice-box .event-notice-area > .title {
+    font-family: "Pretendard Bold";
     margin-bottom: 8px;
     color: rgba(255, 255, 255, 0.80);
     text-align: left;
@@ -1585,11 +1593,11 @@
     margin-bottom: 8px;
     padding-left: 24px;
 }
-.event-notice-box .event-notice-list .event-notice-item:last-child{
+.event-notice-box .event-notice-list .event-notice-item:last-child {
     margin-bottom: 0;
 }
-.event-notice-box .event-notice-list .event-notice-item > strong{
-    font-family: "Pretendard Bold"; 
+.event-notice-box .event-notice-list .event-notice-item > strong {
+    font-family: "Pretendard Bold";
 }
 .event-notice-box .event-notice-list .event-notice-item::after {
     content: '';
@@ -1614,7 +1622,6 @@
     border-radius: 10px;
 }
 
-
 @media screen and (max-width:767px) {
     .event-notice-box {
         max-width: 300px;
@@ -1634,10 +1641,11 @@
         width: 20px;
         height: 20px;
     }
-    .event-notice-box .event-notice-area{
+    .event-notice-box .event-notice-area {
+        margin-top: 14px;
         margin-bottom: 28px;
     }
-    .event-notice-box .event-notice-area > .title{
+    .event-notice-box .event-notice-area > .title {
         font-size: 1.4rem;
     }
     .event-notice-box .event-notice .event-notice-title {
@@ -2047,7 +2055,7 @@
     margin-top: 32px;
     margin-bottom: 32px;
 }
-.popup-section.coming-soon .img-box{
+.popup-section.coming-soon .img-box {
     width: 156px;
     margin: 0 auto 16px;
 }
