@@ -44,7 +44,7 @@
                             <!-- 7.29 메뉴 버튼 id 수정 끝 -->
                             <a href="#" class="logo">
                                 <h1>
-                                    <img src="../assest/images/logo-meBook-store.svg" alt="meBook 스토어" />
+                                    <img src="../assest/images/logo-meBook-store.png" alt="meBook 스토어" />
                                 </h1>
                             </a>
                             <nav class="pc-nav-btns">
@@ -1224,24 +1224,122 @@
                                     </div>
                                 </div>
                             </header>
+                            <!--9.10 스페셜 말풍선 ui 추가 및 수정 시작-->
                             <div class="chip-group">
-                                <div class="chip"><span class="chip-inner"><span class="text">정・오답 확인</span><span
-                                            class="icon-answer-check"></span></span></div>
-                                <div class="chip"><span class="chip-inner"><span class="text">정답・해설 가리기</span><span
-                                            class="icon-answer-hide"></span></span></div>
-                                <div class="chip"><span class="chip-inner"><span class="text">정답・해설 보기</span><span
-                                            class="icon-answer-view"></span></span></div>
-                                <div class="chip"><span class="chip-inner"><span class="text">지문보기</span><span
-                                            class="icon-fingerprint-view"></span></span></div>
-                                <div class="chip"><span class="chip-inner"><span class="text">학습 Q&A</span><span
-                                            class="icon-learningQA"></span></span></div>
-                                <div class="chip"><span class="chip-inner"><span class="text">듣기 음원</span><span
-                                            class="icon-listening"></span></span></div>
-                                <div class="chip"><span class="chip-inner"><span class="text">동영상 강의</span><span
-                                            class="icon-player"></span></span></div>
-                                <div class="chip"><span class="chip-inner"><span class="text">응시하기</span><span class="icon-test"></span></span>
+                                <div class="chip-box answer-check">
+                                     <button type="button" class="chip">
+                                            <span class="chip-inner"><span class="text">정・오답 확인</span><span
+                                        class="icon-answer-check"></span></span>
+                                    </button>
+                                    <div class="chip-popup-group">
+                                        <div class="chip-popup-header">
+                                            <span class="chip-inner"><span class="text">정・오답 확인</span><span class="icon-answer-check"></span></span>
+                                        </div>
+                                        <p class="text">
+                                            객관식 문제의 선지를 터치하면 선택한 답안이<br />
+                                            정답인 지, 오답인 지 확인할 수 있어요.
+                                        </p>
+                                    </div>
+                                    <div class="bg">
+                                        <div class="blind">배경</div>
+                                    </div>
                                 </div>
+                                <div class="chip-box answer-hide">
+                                    <button type="button" class="chip">
+                                        <span class="chip-inner"><span class="text">정답・해설 가리기</span><span class="icon-answer-hide"></span></span>
+                                    </button>
+                                    <div class="chip-popup-group">
+                                        <div class="chip-popup-header">
+                                            <span class="chip-inner"><span class="text">정답・해설 가리기</span><span class="icon-answer-hide"></span></span>
+                                        </div>
+                                        <p class="text">
+                                            문제 바로 아래 있는 해설을 스크린으로 가려두고,<br />
+                                            모르는 부분은 조금씩 열어 힌트를 얻어요.
+                                        </p>
+                                    </div>
+                                    <div class="bg">
+                                        <div class="blind">배경</div>
+                                    </div>
+                                </div>
+                                <div class="chip-box answer-view">
+                                    <button type="button" class="chip"><span class="chip-inner"><span class="text">정답・해설 보기</span><span
+                                                class="icon-answer-view"></span></span></button>
+                                    <div class="chip-popup-group">
+                                        <div class="chip-popup-header">
+                                            <span class="chip-inner"><span class="text">정답・해설 보기</span><span class="icon-answer-view"></span></span>
+                                        </div>
+                                        <p class="text">
+                                            번거롭게 페이지를 오가지 않고,<br />
+                                            문제 옆 버튼으로 바로 정답과 해설을 확인할 수 있어요.
+                                        </p>
+                                    </div>
+                                    <div class="bg">
+                                        <div class="blind">배경</div>
+                                    </div>
+                                </div>
+                                <div class="chip-box fingerprint-view">
+                                    <button type="button" class="chip"><span class="chip-inner"><span class="text">지문보기</span><span
+                                            class="icon-fingerprint-view"></span></span></button>
+                                    <div class="chip-popup-group">
+                                        <div class="chip-popup-header">
+                                            <span class="chip-inner"><span class="text">지문보기</span><span
+                                                    class="icon-fingerprint-view"></span></span>
+                                        </div>
+                                        <p class="text">
+                                            페이지가 넘어가는 긴 지문을 별도의 창에서<br />
+                                            보여주어 지문을 보며 문제 풀기가 편해요.
+                                        </p>
+                                    </div>
+                                    <div class="bg">
+                                        <div class="blind">배경</div>
+                                    </div>
+                                </div>
+                                <!-- <div class="chip-box">
+                                    <div class="chip"><span class="chip-inner"><span class="text">학습 Q&A</span><span class="icon-learningQA"></span></span>
+                                    </div>
+                                    <div class="chip-popup-group">
+                                        <p class="text">지금 풀고 있는 문제에 엮여있는 영상을 즉시 재생!<br />
+                                            복잡하고 어려운 내용은 영상으로 이해해요.</p>
+                                    </div>
+                                </div> -->
+                                <div class="chip-box listening">
+                                    <button type="button" class="chip"><span class="chip-inner"><span class="text">듣기 음원</span><span class="icon-listening"></span></span>
+                                    </button>
+                                    <div class="chip-popup-group">
+                                        <div class="chip-popup-header">
+                                            <span class="chip-inner"><span class="text">듣기 음원</span><span class="icon-listening"></span></span>
+                                        </div>
+                                        <p class="text">배속 조절, 전체 반복 듣기까지 편하게<br />
+                                        MP3 음원 다운 받는 과정없이 바로 들어요.</p>
+                                    </div>
+                                    <div class="bg">
+                                        <div class="blind">배경</div>
+                                    </div>
+                                </div>
+                                <div class="chip-box player">
+                                    <button type="button" class="chip"><span class="chip-inner"><span class="text">동영상 강의</span><span class="icon-player"></span></span>
+                                    </button>
+                                    <div class="chip-popup-group">
+                                        <div class="chip-popup-header">
+                                            <span class="chip-inner"><span class="text">동영상 강의</span><span class="icon-player"></span></span>
+                                        </div>
+                                        <p class="text">지금 풀고 있는 문제에 엮여있는 영상을 즉시 재생!<br />
+                                            복잡하고 어려운 내용은 영상으로 이해해요.</p>
+                                    </div>
+                                    <div class="bg">
+                                        <div class="blind">배경</div>
+                                    </div>
+                                </div>
+                                <!-- <div class="chip-box">
+                                    <div class="chip"><span class="chip-inner"><span class="text">응시하기</span><span class="icon-test"></span></span>
+                                    </div>
+                                    <div class="chip-popup-group">
+                                        <p class="text">지금 풀고 있는 문제에 엮여있는 영상을 즉시 재생!<br />
+                                            복잡하고 어려운 내용은 영상으로 이해해요.</p>
+                                    </div>
+                                </div> -->
                             </div>
+                            <!--9.10 스페셜 말풍선 ui 추가 및 수정 끝-->
                         </article>
                         <!--미북 Special 끝-->
                         <!--소장/대여 둘 다 있는 경우 시작-->
@@ -1282,23 +1380,30 @@
                                     </li>
                                 </ul>
                             </div>
-                            <div class="notice-text">배송 상품이 아닌
-                                <div class="app-store-group">
-                                    <button type="button" class="btn-app-store-text" id="appStore">meBOOK 앱에서만 열람 가능한 디지털 상품</button>
-                                    <div class="app-store-popup" id="appStorePopup">
-                                        <header class="header">
-                                            <img src="../assest/images/logo-meBook.svg" alt="meBook" />
-                                        </header>
-                                        <div class="app-store-box">
-                                            <a href="#" class="btn-app-store"><span class="logo-apple"></span><span
-                                                    class="text">App Store</span></a>
-                                            <a href="#" class="btn-app-store"><span class="logo-google"></span><span
-                                                    class="text">Google Play</span></a>
+                            <!--9.10 가격단 하단의 전자책/ 디지털굿즈 상품 공통 유의사항 문구 수정 시작-->
+                            <div class="notice-text">
+                                <div class="text">
+                                    <div class="app-store-group">
+                                        <button type="button" class="btn-app-store-text" id="appStore">meBOOK 앱에서만 열람 가능한 디지털 상품</button>
+                                        <div class="app-store-popup" id="appStorePopup">
+                                            <header class="header">
+                                                <img src="../assest/images/logo-meBook.svg" alt="meBook" />
+                                            </header>
+                                            <div class="app-store-box">
+                                                <a href="#" class="btn-app-store"><span class="logo-apple"></span><span class="text">App Store</span></a>
+                                                <a href="#" class="btn-app-store"><span class="logo-google"></span><span class="text">Google Play</span></a>
+                                            </div>
                                         </div>
                                     </div>
+                                    이며, 구매 전 반드시
+                                    <a href="https://store.mebook.io/customer/notice/view?
+                                                                noticeFlg=&nlNoticeIdx=17&page=&pageSize=" class="btn-link-text"
+                                        target="_blank">유의사항</a>
+                                    확인해주세요
                                 </div>
-                                이며, 프린트 불가합니다.
+                               <div class="text">iPad와 안드로이드 태블릿에서만 지원 가능하며 , <strong>PC는 지원되지 않습니다. (스마트폰은 추후 지원 예정)</strong></div>
                             </div>
+                            <!--9.10 가격단 하단의 전자책/ 디지털굿즈 상품 공통 유의사항 문구 수정 끝-->
                         </article>
                         <!--소장/대여 둘 다 있는 경우 끝-->
                         <!--대여만 있는 경우 시작-->
@@ -1325,23 +1430,32 @@
                                     </li>
                                 </ul>
                             </div>
-                            <div class="notice-text">배송 상품이 아닌
-                                <div class="app-store-group">
-                                    <button type="button" class="btn-app-store-text" id="appStore">meBOOK 앱에서만 열람 가능한 디지털 상품</button>
-                                    <div class="app-store-popup" id="appStorePopup">
-                                        <header class="header">
-                                            <img src="../assest/images/logo-meBook.svg" alt="meBook" />
-                                        </header>
-                                        <div class="app-store-box">
-                                            <a href="#" class="btn-app-store"><span class="logo-apple"></span><span class="text">App
-                                                    Store</span></a>
-                                            <a href="#" class="btn-app-store"><span class="logo-google"></span><span class="text">Google
-                                                    Play</span></a>
+                            <!--9.10 가격단 하단의 전자책/ 디지털굿즈 상품 공통 유의사항 문구 수정 시작-->
+                            <div class="notice-text">
+                                <div class="text">
+                                    <div class="app-store-group">
+                                        <button type="button" class="btn-app-store-text" id="appStore">meBOOK 앱에서만 열람 가능한 디지털 상품</button>
+                                        <div class="app-store-popup" id="appStorePopup">
+                                            <header class="header">
+                                                <img src="../assest/images/logo-meBook.svg" alt="meBook" />
+                                            </header>
+                                            <div class="app-store-box">
+                                                <a href="#" class="btn-app-store"><span class="logo-apple"></span><span class="text">App
+                                                        Store</span></a>
+                                                <a href="#" class="btn-app-store"><span class="logo-google"></span><span class="text">Google
+                                                        Play</span></a>
+                                            </div>
                                         </div>
                                     </div>
+                                    이며, 구매 전 반드시
+                                    <a href="https://store.mebook.io/customer/notice/view?
+                                                                                            noticeFlg=&nlNoticeIdx=17&page=&pageSize="
+                                        class="btn-link-text" target="_blank">유의사항</a>
+                                    확인해주세요
                                 </div>
-                                이며, 프린트 불가합니다.
+                                <div class="text">iPad와 안드로이드 태블릿에서만 지원 가능하며 , <strong>PC는 지원되지 않습니다. (스마트폰은 추후 지원 예정)</strong></div>
                             </div>
+                            <!--9.10 가격단 하단의 전자책/ 디지털굿즈 상품 공통 유의사항 문구 수정 끝-->
                         </article>
                         <!--대여만 있는 경우 끝-->
                         <!--소장만 있는 경우 시작-->
@@ -1365,23 +1479,32 @@
                                     </li>
                                 </ul>
                             </div>
-                            <div class="notice-text">배송 상품이 아닌
-                                <div class="app-store-group">
-                                    <button type="button" class="btn-app-store-text" id="appStore">meBOOK 앱에서만 열람 가능한 디지털 상품</button>
-                                    <diㅌv class="app-store-popup" id="appStorePopup">
-                                        <header class="header">
-                                            <img src="../assest/images/logo-meBook.svg" alt="meBook" />
-                                        </header>
-                                        <div class="app-store-box">
-                                            <a href="#" class="btn-app-store"><span class="logo-apple"></span><span class="text">App
-                                                    Store</span></a>
-                                            <a href="#" class="btn-app-store"><span class="logo-google"></span><span class="text">Google
-                                                    Play</span></a>
+                            <!--9.10 가격단 하단의 전자책/ 디지털굿즈 상품 공통 유의사항 문구 수정 시작-->
+                            <div class="notice-text">
+                                <div class="text">
+                                    <div class="app-store-group">
+                                        <button type="button" class="btn-app-store-text" id="appStore">meBOOK 앱에서만 열람 가능한 디지털 상품</button>
+                                        <div class="app-store-popup" id="appStorePopup">
+                                            <header class="header">
+                                                <img src="../assest/images/logo-meBook.svg" alt="meBook" />
+                                            </header>
+                                            <div class="app-store-box">
+                                                <a href="#" class="btn-app-store"><span class="logo-apple"></span><span class="text">App
+                                                        Store</span></a>
+                                                <a href="#" class="btn-app-store"><span class="logo-google"></span><span class="text">Google
+                                                        Play</span></a>
+                                            </div>
                                         </div>
-                                    </diㅌv>
+                                    </div>
+                                    이며, 구매 전 반드시
+                                    <a href="https://store.mebook.io/customer/notice/view?
+                                                                                            noticeFlg=&nlNoticeIdx=17&page=&pageSize="
+                                        class="btn-link-text" target="_blank">유의사항</a>
+                                    확인해주세요
                                 </div>
-                                이며, 프린트 불가합니다.
+                                <div class="text">iPad와 안드로이드 태블릿에서만 지원 가능하며 , <strong>PC는 지원되지 않습니다. (스마트폰은 추후 지원 예정)</strong></div>
                             </div>
+                            <!--9.10 가격단 하단의 전자책/ 디지털굿즈 상품 공통 유의사항 문구 수정 끝-->
                         </article>
                         <!--소장만 있는 경우 끝-->
                         <!--시리즈 교재 시작-->
@@ -1988,6 +2111,21 @@
 </body>
 <script> 
     $(function ($) {
+         //9.10 스페셜 말풍선 스크립트 추가
+         $('.detail-content-box .chip-box .chip').on('click', function (e) {
+            e.stopPropagation();
+            $('.detail-content-box .chip-box').removeClass('on');
+            $(this).closest('.detail-content-box .chip-box').addClass('on');
+        });
+
+        $('.detail-content-box .chip-box .chip-popup-group').on('click', function (e) {
+            e.stopPropagation(); 
+        });
+
+        $(document).on('click', function () {
+            $('.detail-content-box .chip-box').removeClass('on');
+        });
+
         //7.29 리뷰 스크립트 변경
         //리뷰
        function adjustText() {
