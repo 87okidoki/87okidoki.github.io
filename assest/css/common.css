@@ -134,7 +134,7 @@ button {
 }
 
 strong {
-    font-family: "Noto Sans Bold";
+    font-family: "Pretendard Bold";
 }
 .scroll-lock {
     overflow: hidden;
@@ -2399,7 +2399,7 @@ img {
 }
 
 .login-input input::placeholder {
-    font-family: "Pretendard";
+    font-family: "Pretendard Regular";
     color: var(--blue-grey-400);
 }
 
