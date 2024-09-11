@@ -327,23 +327,28 @@ input:-webkit-autofill {
 ::-webkit-input-placeholder {
     /* Edge */
     color: rgba(61, 61, 61, 0.3);
+    font-family: "Pretendard Regular";
 }
 
 :-ms-input-placeholder {
     /* Internet Explorer 10-11 */
     color: rgba(61, 61, 61, 0.3);
+    font-family: "Pretendard Regular";
 }
 
 ::-moz-placeholder {
     color: rgba(61, 61, 61, 0.3);
+    font-family: "Pretendard Regular";
 }
 
 ::-ms-input-placeholder {
     color: rgba(61, 61, 61, 0.3);
+    font-family: "Pretendard Regular";
 }
 
 ::placeholder {
     color: rgba(61, 61, 61, 0.3);
+    font-family: "Pretendard Regular";
 }
 
 input::-webkit-search-cancel-button,
