@@ -56,7 +56,7 @@
     /* Modern Browsers */
     url("../fonts/Pretendard-Boldr.ttf") format("truetype"),
     /* Safari, Android, iOS */
-    url( "../fonts/Pretendard-Bold.svg#NotoSansKR") format("svg")))))
+     url("../fonts/Pretendard-Bold.svg#NotoSansKR") format("svg");
 }
 
 @font-face {
@@ -74,7 +74,7 @@
     /* Modern Browsers */
     url("../fonts/Pretendard-SemiBoldr.ttf") format("truetype"),
     /* Safari, Android, iOS */
-    url( "../fonts/Pretendard-SemiBold.svg#NotoSansKR") format("svg")))))
+     url("../fonts/Pretendard-SemiBold.svg") format("svg");
 }
 
 @font-face {
@@ -92,7 +92,7 @@
     /* Modern Browsers */
     url("../fonts/Pretendard-Regular.ttf") format("truetype"),
     /* Safari, Android, iOS */
-    url( "../fonts/Pretendard-Regular.svg#NotoSansKR") format("svg")))))
+     url("../fonts/Pretendard-Regular.svg") format("svg");
 }
 
 @font-face {
@@ -110,7 +110,7 @@
     /* Modern Browsers */
     url("../fonts/Pretendard-Light.ttf") format("truetype"),
     /* Safari, Android, iOS */
-    url( "../fonts/Pretendard-Light.svg#NotoSansKR") format("svg")))))
+     url("../fonts/Pretendard-Light.svg") format("svg");
 }
 
 /* reset */
@@ -1285,6 +1285,11 @@ img {
     display: flex;
     align-items: center;
 }
+.chip-box {
+    display: inline-block;
+    position: relative;
+}
+
 .chip {
     display: inline-block;
     padding: 4px 8px 4px 12px;
@@ -2825,14 +2830,14 @@ img {
     top: 0;
     left: 0;
     right: 0;
-    height: auto;
+    bottom: 0;
+    height: 100%;
     max-width: 100%;
 }
 @media screen and (max-width:767px) {
     .main-popup-section .main-popup-container {
         max-width: 280px;
     }
-
     .main-popup-section .main-popup-container .main-popup-body {
         width: 240px;
     }
