@@ -454,7 +454,9 @@ $(function () {
         event.stopPropagation();
         const $popup = $(this).siblings('.info-popup-group');
         $popup.toggleClass('off');
-
+       if ($('.detail-content-box .chip-box').length) {
+            $('.detail-content-box .chip-box').removeClass('on');
+        }
         // 다른 곳 클릭 시 팝업 닫기
         $(document).click(function (event) {
             if (!$(event.target).closest('.info-group').length) {

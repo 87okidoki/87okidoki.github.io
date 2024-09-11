@@ -2111,11 +2111,12 @@
 </body>
 <script> 
     $(function ($) {
-         //9.10 스페셜 말풍선 스크립트 추가
+         //9.11 스페셜 말풍선 스크립트 수정 시작
          $('.detail-content-box .chip-box .chip').on('click', function (e) {
             e.stopPropagation();
             $('.detail-content-box .chip-box').removeClass('on');
             $(this).closest('.detail-content-box .chip-box').addClass('on');
+               $('.info-popup-group').addClass('off');
         });
 
         $('.detail-content-box .chip-box .chip-popup-group').on('click', function (e) {
@@ -2124,8 +2125,10 @@
 
         $(document).on('click', function () {
             $('.detail-content-box .chip-box').removeClass('on');
+                $('.info-group .info-popup-group').addClass('off');
         });
-
+        //9.11 스페셜 말풍선 스크립트 수정 끝
+        
         //7.29 리뷰 스크립트 변경
         //리뷰
        function adjustText() {

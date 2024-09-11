@@ -13,6 +13,7 @@
     <link rel="stylesheet" type="text/css" href="../assest/css/swiper-bundle.css" />
     <link rel="stylesheet" type="text/css" href="../assest/css/common.css" />
     <link rel="stylesheet" type="text/css" href="../assest/css/layout.css" />
+    <link rel="stylesheet" type="text/css" href="../assest/css/guide.css" />
     <!--9.2 전화 번호 자동인식 차단 메타태그 추가 시작-->
     <meta name="format-detection" content="telephone=no">
     <!--9.2 전화 번호 자동인식 차단 메타태그 추가 끝-->
@@ -44,7 +45,7 @@
                             <!-- 7.29 메뉴 버튼 id 수정 끝 -->
                             <a href="#" class="logo">
                                 <h1>
-                                    <img src="../assest/images/logo-meBook-store.svg" alt="meBook 스토어" />
+                                    <img src="../assest/images/logo-meBook-store.png" alt="meBook 스토어" />
                                 </h1>
                             </a>
                             <nav class="pc-nav-btns">
@@ -1175,7 +1176,7 @@
                                     <div class="swiper-slide">
                                         <div class="guide-box">
                                             <div class="guide-header">
-                                                <h3 class="title">전자책</h3>
+                                                <h3 class="title">전자책 구입</h3>
                                                 <a href="#guide-box-01" class="btn-link">
                                                     <span class="text">1단계로 이동하기</span>
                                                     <span class="icon">
@@ -1235,10 +1236,10 @@
                             <header class="guide-step-header">
                                 <h3 class="guide-step-title">1단계</h3>
                                 <p class="guide-step-sub-text">
-                                    meBOOK스토어에서 전자책과 디지털 굿즈를 구매해 주세요.
+                                    meBOOK스토어에서 전자책과<br class="only-mobile" />디지털 굿즈를 구매해 주세요.
                                 </p>
                                 <p class="guide-step-guide-text">
-                                    * 구매 후 다운로드를 하지 않은 경우에 한해서만 구매일로부터 7일 이내 100% 환불이 가능합니다.
+                                    * 구매 후 다운로드를 하지 않은 경우에 한해서만 <br class="only-mobile"/>구매일로부터 7일 이내 100% 환불이 가능<span class="mo-hide">합니다.</span>
                                 </p>
                             </header>
                             <div class="guide-img-box">
@@ -1254,9 +1255,12 @@
                             <header class="guide-step-header">
                                 <h3 class="guide-step-title">2단계</h3>
                                 <p class="guide-step-sub-text">
-                                    meBOOK 설치 후 구매한 상품을 다운로드해 주세요.
+                                    meBOOK 설치 후 구매한 상품을 <br class="only-mobile"/>다운로드해 주세요.
                                 </p>
-                                <p class="guide-step-guide-text">
+                                <p class="guide-step-guide-text only-mobile">
+                                    * 미북과 미북스토어는 동일한 계정으로 이용 가능
+                                </p>
+                                <p class="guide-step-guide-text only-pc">
                                     * meBOOK과 meBOOK스토어는 동일한 계정으로 이용이 가능합니다.
                                 </p>
                             </header>
@@ -1265,7 +1269,12 @@
                                     <div class="swiper-slide">
                                         <div class="guide-box">
                                             <div class="guide-img-box">
-                                                <img src="../assest/images/img-guide-03-01.jpg"/>
+                                                <div class="only-pc">
+                                                    <img src="../assest/images/img-guide-03-01-pc.jpg" />
+                                                </div>
+                                                <div class="only-mobile">
+                                                    <img src="../assest/images/img-guide-03-01-mo.jpg" />
+                                                </div>
                                             </div>
                                             <div class="guide-info-box">
                                                 <p class="guide-desc">
@@ -1278,26 +1287,40 @@
                                     <div class="swiper-slide">
                                         <div class="guide-box">
                                             <div class="guide-img-box">
-                                                <img src="../assest/images/img-guide-03-02.jpg"/>
+                                                <div class="only-pc">
+                                                    <img src="../assest/images/img-guide-03-02-pc.jpg" />
+                                                </div>
+                                                <div class="only-mobile">
+                                                    <img src="../assest/images/img-guide-03-02-mo.jpg" />
+                                                </div>
                                             </div>
                                             <div class="guide-info-box">
                                                 <p class="guide-desc">
                                                     meBOOK에 로그인하시면 터치 한 번으로<br/>
                                                     스토어를 연결할 수 있어요.
                                                 </p>
-                                                <p class="guide-text">(추가정보를 입력하지 않았다면 간단한 추가정보 입력 후 바로 이용 가능합니다.)</p>
+                                                <!--9.11 2단계(추가정보 입력 후 바로 이용 가능)  첫번째 이미지에서 두번째로 이동함 시작-->
+                                                <p class="guide-text">(추가정보 입력 후 바로 이용 가능)</p>
+                                                <!--9.11 2단계(추가정보 입력 후 바로 이용 가능)  첫번째 이미지에서 두번째로 이동함 끝-->
                                             </div>
                                         </div>
                                     </div>
                                     <div class="swiper-slide">
                                         <div class="guide-box">
                                             <div class="guide-img-box">
-                                                <img src="../assest/images/img-guide-03-03.jpg"/>
+                                                <div class="only-pc">
+                                                   <img src="../assest/images/img-guide-03-03-pc.jpg" />
+                                                </div>
+                                                <div class="only-mobile">
+                                                    <img src="../assest/images/img-guide-03-03-mo.jpg" />
+                                                </div>
                                             </div>
                                             <div class="guide-info-box">
                                                 <p class="guide-desc">
-                                                    구매 목록 불러오기를 통해 meBOOK스토어에서 구매한<br class="only-pc"/>
+                                                    <!--9.11 텍스트 분기 시작-->
+                                                    구매 목록 불러오기를 통해 meBOOK스토어에서<br class="only-mobile" /> 구매한<br class="only-pc"/>
                                                     eBook을 다운로드 받으세요.
+                                                    <!--9.11 텍스트 분기 끝-->
                                                 </p>
                                             </div>
                                         </div>
@@ -1316,7 +1339,7 @@
                             <header class="guide-step-header">
                                 <h3 class="guide-step-title">3단계</h3>
                                 <p class="guide-step-sub-text">
-                                    다운로드한 전자책과 디지털 굿즈들로 자유롭게 학습해 보세요.
+                                   <span class="mo-hide">다운로드한 전자책과 디지털 굿즈들로 </span>자유롭게 학습해 보세요.
                                 </p>
                             </header>
                             <div class="swiper-container guide-swiper" id="guideSwiper02">
@@ -1324,12 +1347,17 @@
                                     <div class="swiper-slide">
                                         <div class="guide-box">
                                             <div class="guide-img-box">
-                                                <img src="../assest/images/img-guide-04-01.jpg"/>
+                                                <div class="only-pc">
+                                                    <img src="../assest/images/img-guide-04-01-pc.jpg" />
+                                                </div>
+                                                <div class="only-mobile">
+                                                    <img src="../assest/images/img-guide-04-01-mo.jpg" />
+                                                </div>
                                             </div>
                                             <div class="guide-info-box">
-                                                <span class="badge">eBOOK</span>
+                                                <span class="badge">eBook</span>
                                                 <p class="guide-desc">
-                                                    '미북스토어'에서 내가 구매한 전자책과 디지털 굿즈 목록을 확인할 수 있어요.
+                                                    '미북스토어'에서 내가 구매한 전자책과<br class="only-mobile" /> 디지털 굿즈 목록을 확인할 수 있어요.
                                                 </p>
                                             </div>
                                         </div>
@@ -1337,25 +1365,44 @@
                                     <div class="swiper-slide">
                                         <div class="guide-box">
                                             <div class="guide-img-box">
-                                                <img src="../assest/images/img-guide-04-02.jpg"/>
+                                                <div class="only-pc">
+                                                    <img src="../assest/images/img-guide-04-02-pc.jpg" />
+                                                </div>
+                                                <div class="only-mobile">
+                                                    <img src="../assest/images/img-guide-04-02-mo.jpg" />
+                                                </div>
                                             </div>
                                             <div class="guide-info-box">
-                                                <span class="badge">eBOOK</span>
-                                                <p class="guide-desc">
-                                                    내 문서 에서 내가 구매한 노트들을 확인할 수 있어요. 노트들은 무제한으로 다운로드가 가능해요.
-                                                </p>
+                                                <span class="badge">eBook</span>
+                                                <!--9.11 텍스트 분기 시작-->
+                                                <div class="only-pc">
+                                                    <p class="guide-desc">
+                                                    내 문서 에서 내가 구매한 노트들을 확인할 수 있어요. <br /> 노트들은 무제한으로 다운로드가 가능해요.
+                                                    </p>
+                                                </div>
+                                                <div class="only-mobile">
+                                                    <p class="guide-desc">
+                                                    내 문서에서 내가 구매한 노트들을 확인할 수 있고,<br>노트들은 무제한으로 다운로드가 가능해요.
+                                                    </p>
+                                                </div>
+                                                <!--9.11 텍스트 분기 끝-->
                                             </div>
                                         </div>
                                     </div>
                                     <div class="swiper-slide">
                                         <div class="guide-box">
                                             <div class="guide-img-box">
-                                                <img src="../assest/images/img-guide-04-03.jpg"/>
+                                                <div class="only-pc">
+                                                    <img src="../assest/images/img-guide-04-03-pc.jpg" />
+                                                </div>
+                                                <div class="only-mobile">
+                                                    <img src="../assest/images/img-guide-04-03-mo.jpg" />
+                                                </div>
                                             </div>
                                             <div class="guide-info-box">
                                                 <span class="badge">Digital goods</span>
                                                 <p class="guide-desc">
-                                                    학습 화면에서 다운로드한 스티커를 바로 이용할 수 있어요.
+                                                    학습 화면에서 다운로드한 스티커를 바로 <br class="only-mobile"/>이용할 수 있어요.
                                                 </p>
                                             </div>
                                         </div>
@@ -1378,9 +1425,14 @@
                         <ul class="use-list-group">
                             <li class="use-list-item">
                                 <div class="use-content-left">
-                                    <div class="img-box">
-                                        <img src="../assest/images/img-guide-04-01.jpg"/>
+                                    <!--9.11  iframe 변경 시작-->
+                                    <div class="video-box">
+                                        <iframe width="796" height="597" class="video" src="https://www.youtube.com/embed/MJJgU_AMn3A"
+                                            title="[meBOOK 미북] 미북 Special : 동영상 강의" frameborder="0"
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen=""></iframe>
                                     </div>
+                                    <!--9.11  iframe 변경 끝-->
                                 </div>
                                 <div class="use-content-right">
                                     <h4 class="use-content-title">
@@ -1392,23 +1444,33 @@
                             </li>
                             <li class="use-list-item">
                                 <div class="use-content-left">
-                                    <div class="img-box">
-                                        <img src="../assest/images/img-guide-04-01.jpg"/>
+                                    <!--9.11  iframe 변경 시작-->
+                                    <div class="video-box">
+                                        <iframe width="796" height="597" class="video" src="https://www.youtube.com/embed/MJJgU_AMn3A"
+                                            title="[meBOOK 미북] 미북 Special : 동영상 강의" frameborder="0"
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen=""></iframe>
                                     </div>
+                                    <!--9.11  iframe 변경 끝-->
                                 </div>
                                 <div class="use-content-right">
                                     <h4 class="use-content-title">
                                         세밀한 필기
                                     </h4>
                                     <p class="use-content-text">0.05pt 단위로 펜 두께를 조절하고,<br/>
-                                        선과 도형 자동 보정으로 깔끔한 필기가 가능해요.</p>
+                                        선과 도형 자동 보정으로 깔끔한 필기가 가능해요.</p>
                                 </div>
                             </li>
                             <li class="use-list-item">
                                 <div class="use-content-left">
-                                    <div class="img-box">
-                                        <img src="../assest/images/img-guide-04-01.jpg"/>
+                                    <!--9.11  iframe 변경 시작-->
+                                    <div class="video-box">
+                                        <iframe width="796" height="597" class="video" src="https://www.youtube.com/embed/MJJgU_AMn3A"
+                                            title="[meBOOK 미북] 미북 Special : 동영상 강의" frameborder="0"
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen=""></iframe>
                                     </div>
+                                    <!--9.11  iframe 변경 끝-->
                                 </div>
                                 <div class="use-content-right">
                                     <h4 class="use-content-title">
@@ -1420,23 +1482,33 @@
                             </li>
                             <li class="use-list-item">
                                 <div class="use-content-left">
-                                    <div class="img-box">
-                                        <img src="../assest/images/img-guide-04-01.jpg"/>
+                                    <!--9.11  iframe 변경 시작-->
+                                    <div class="video-box">
+                                        <iframe width="796" height="597" class="video" src="https://www.youtube.com/embed/MJJgU_AMn3A"
+                                            title="[meBOOK 미북] 미북 Special : 동영상 강의" frameborder="0"
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen=""></iframe>
                                     </div>
+                                    <!--9.11  iframe 변경 끝-->
                                 </div>
                                 <div class="use-content-right">
                                     <h4 class="use-content-title">
                                         나만을 위한 태그
                                     </h4>
                                     <p class="use-content-text">관련 문서를 키워드로 모아서,<br/>
-                                        문서 정리에 활용해 보세요.</p>
+                                        문서 정리에 활용해 보세요.</p>
                                 </div>
                             </li>
                             <li class="use-list-item">
                                 <div class="use-content-left">
-                                    <div class="img-box">
-                                        <img src="../assest/images/img-guide-04-01.jpg"/>
+                                    <!--9.11  iframe 변경 시작-->
+                                    <div class="video-box">
+                                        <iframe width="796" height="597" class="video" src="https://www.youtube.com/embed/MJJgU_AMn3A"
+                                            title="[meBOOK 미북] 미북 Special : 동영상 강의" frameborder="0"
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen=""></iframe>
                                     </div>
+                                    <!--9.11  iframe 변경 끝-->
                                 </div>
                                 <div class="use-content-right">
                                     <h4 class="use-content-title">
@@ -1453,7 +1525,17 @@
                 <section class="guide-nav-section guide-step-section guide-step-06-section" id="guide-section-03">
                     <div class="guide-content-inner">
                         <header class="guide-step-header">
-                            <h3 class="guide-step-title">미북에서만 제공하는 <br class="only-mobile"/> <span class="img-special"><span class="blind">Special</span></span> <span class="mo-hide">기능</span> <span class="icon-arrow-top"></span></h3>
+                            <h3 class="guide-step-title">미북에서만 제공하는
+                                <div class="pc-title-img-box">
+                                    <span class="img-special"><span class="blind">Special</span></span>
+                                    기능<a href="https://store.mebook.io/ebook/list?buyYn=Y&studySvcYn=Y" class="link-icon" target="_self"><span
+                                            class="icon-arrow-top"></span></a>
+                                </div>
+                                <div class="mo-title-img-box">
+                                    <span class="img-special"><span class="blind">Special</span></span>
+                                    <span class="mo-hide">기능</span><a href="https://store.mebook.io/ebook/list?buyYn=Y&studySvcYn=Y" class="link-icon" target="_self"><span class="icon-arrow-top"></span></a>
+                                </div>
+                            </h3>
                             <div class="only-pc">
                                 <button type="button" class="btn btn-player">동영상 보기</button>
                             </div>
@@ -1461,7 +1543,7 @@
                                 <button type="button" class="btn btn-player">전체 기능 <span>동영상 보기</span></button>
                             </div>
                         </header>
-                        <div>
+                        <div class="tab-swiper-guide-content">
                             <div class="swiper-container tab-guide-swiper" id="tabGuideSwiper">
                                 <div class="swiper-wrapper">
                                     <div class="swiper-slide">
@@ -1495,15 +1577,29 @@
                                         <h4 class="title">
                                             듣기 음원
                                         </h4>
-                                        <p class="desc">
-                                            문제 풀이 시 정답과 해설을 가려둘 수 있어,<br/>
-                                            스스로 문제를 해결하는 데 도움을 줍니다.<br/>
-                                            풀이에 어려움을 느끼는 부분이 있다면,<br/>
-                                            해설을 조금씩 열어 힌트를 얻을 수 있습니다.
-                                        </p>
+                                        <!--9.11  듣기 음원 분기 시작-->
+                                        <div class="only-pc">
+                                            <p class="desc-text">
+                                                학습 화면에서,<br />
+                                                듣기 음원을 바로 재생할 수 있고,<br />
+                                                음원과 연관된 페이지로,<br />
+                                                이동시켜 줍니다.<br />
+                                                (배속 조절, 전체 이어서 듣기 가능)
+                                            </p>
+                                        </div>
+                                        <div class="only-mobile">
+                                            <p class="desc-text">
+                                                학습 화면에서 듣기 음원을 바로 재생할 수 있고,<br>
+                                                음원과 연관된 페이지로 이동시켜 줍니다.<br>
+                                                (배속 조절, 전체 이어서 듣기 가능)
+                                            </p>
+                                        </div>
+                                        <!--9.11  듣기 음원 분기 끝-->
+                                        <!--9.11  미북 스페셜 서브텍스트 변경 시작-->
                                         <p class="guide-text">
-                                            <span class="icon-special"><span class="blind">스페셜</span></span>가 있는 교재는 미북Special 기능을 이용할 수 있습니다.
+                                            <span class="icon-special"><span class="blind">스페셜</span></span>가 있는 교재는 미북Special 기능 사용 가능 합니다.
                                         </p>
+                                        <!--9.11  미북 스페셜 서브텍스트 변경 끝-->
                                     </div>
                                 </div>
                             </section>
@@ -1518,14 +1614,16 @@
                                         <h4 class="title">
                                             정답・해설 가리기
                                         </h4>
-                                        <p class="desc">
+                                        <p class="desc-text">
                                             문제 풀이 시 정답과 해설을 가려둘 수 있어,<br/>
                                             스스로 문제를 해결하는 데 도움을 줍니다.<br/>
                                             풀이에 어려움을 느끼는 부분이 있다면,<br/>
                                             해설을 조금씩 열어 힌트를 얻을 수 있습니다.
                                         </p>
                                         <p class="guide-text">
-                                            <span class="icon-special"><span class="blind">스페셜</span></span>가 있는 교재는 미북Special 기능을 이용할 수 있습니다.
+                                            <!--9.11  미북 스페셜 서브텍스트 변경 시작-->
+                                            <span class="icon-special"><span class="blind">스페셜</span></span>가 있는 교재는 미북Special 기능 사용 가능 합니다.
+                                            <!--9.11  미북 스페셜 서브텍스트 변경 끝-->
                                         </p>
                                     </div>
                                 </div>
@@ -1541,13 +1639,28 @@
                                         <h4 class="title">
                                             정답・해설 보기
                                         </h4>
-                                        <p class="desc">
-                                            문제 풀이 중 '정답〮해설' 버튼을 선택하면 해당 문제의 정답과 <br/>
-                                            해설을 팝업으로 제공하여, 페이지를 이동하지 않고도<br/>
-                                            손쉽게 확인할 수 있도록 도와줍니다.
-                                        </p>
+                                        <!--9.11 정답・해설 보기 분기 시작-->
+                                        <div class="only-pc">
+                                            <p class="desc-text">
+                                                문제 풀고 '정답・해설' 버튼을 선택하면 <br />
+                                                해당 문제의 해설을 팝업으로 제공.<br />
+                                                페이지를 이동하지 않고도<br />
+                                                손쉽게 확인할 수 있도록 도와줍니다.
+                                            </p>
+                                        </div>
+                                        <div class="only-mobile">
+                                            <p class="desc-text">
+                                                문제 풀고 ‘정답・해설’ 버튼을 선택하면<br>
+                                                해당 문제의 해설을 팝업으로 제공하고,<br>
+                                                페이지를 이동하지 않고도 손쉽게
+                                                확인할 수 있도록 도와줍니다.
+                                            </p>
+                                        </div>
+                                        <!--9.11  정답・해설 보기 분기 끝-->
                                         <p class="guide-text">
-                                            <span class="icon-special"><span class="blind">스페셜</span></span>가 있는 교재는 미북Special 기능을 이용할 수 있습니다.
+                                            <!--9.11  미북 스페셜 서브텍스트 변경 시작-->
+                                            <span class="icon-special"><span class="blind">스페셜</span></span>가 있는 교재는 미북Special 기능 사용 가능 합니다.
+                                            <!--9.11  미북 스페셜 서브텍스트 변경 끝-->
                                         </p>
                                     </div>
                                 </div>
@@ -1563,13 +1676,16 @@
                                         <h4 class="title">
                                             동영상 강의
                                         </h4>
-                                        <p class="desc">
-                                            전자책과 연관된 강의 영상을 시청하며 학습할 수 있는<br/>
-                                            기능으로, 팝업 형태로도 제공되어 원하는 위치로 이동<br/>
-                                            가능합니다.
+                                        <p class="desc-text">
+                                            전자책과 연관된 강의 영상을<br/>
+                                            시청하며 학습할 수 있는 기능으로,<br/>
+                                            팝업 형태로도 제공되어 <br />
+                                            원하는 위치로 이동 가능합니다.
                                         </p>
                                         <p class="guide-text">
-                                            <span class="icon-special"><span class="blind">스페셜</span></span>가 있는 교재는 미북Special 기능을 이용할 수 있습니다.
+                                            <!--9.11  미북 스페셜 서브텍스트 변경 시작-->
+                                            <span class="icon-special"><span class="blind">스페셜</span></span>가 있는 교재는 미북Special 기능 사용 가능 합니다.
+                                            <!--9.11  미북 스페셜 서브텍스트 변경 끝-->
                                         </p>
                                     </div>
                                 </div>
@@ -1585,13 +1701,19 @@
                                         <h4 class="title">
                                             지문 보기
                                         </h4>
-                                        <p class="desc">
-                                            긴 지문도 페이지를 왔다 갔다 할 필요 없이 한 화면에서<br/>
-                                            확인하고, 확대와 축소 기능을 제공하여 원하는 크기로<br/>
-                                            지문을 볼 수 있습니다.
+                                        <p class="desc-text">
+                                            페이지를 왔다 갔다 할 필요 없이
+                                            <br />
+                                            긴 지문도 한 화면에서 확인하고,
+                                            <br />
+                                            확대와 축소 기능을 제공하여
+                                            <br />
+                                            원하는 크기로 지문을 볼 수 있습니다.
                                         </p>
                                         <p class="guide-text">
-                                            <span class="icon-special"><span class="blind">스페셜</span></span>가 있는 교재는 미북Special 기능을 이용할 수 있습니다.
+                                            <!--9.11  미북 스페셜 서브텍스트 변경 시작-->
+                                            <span class="icon-special"><span class="blind">스페셜</span></span>가 있는 교재는 미북Special 기능 사용 가능 합니다.
+                                            <!--9.11  미북 스페셜 서브텍스트 변경 끝-->
                                         </p>
                                     </div>
                                 </div>
@@ -1607,12 +1729,19 @@
                                         <h4 class="title">
                                             정・오답 확인
                                         </h4>
-                                        <p class="desc">
-                                            문제 풀이 중 정답 번호를 선택하면, 즉시 정・오답 여부를<br/>
-                                            알려주어 자신의 실력을 빠르게 파악할 수 있도록 도와줍니다.
+                                        <p class="desc-text">
+                                            문제 풀이 중 정답 번호를 선택하면,
+                                            <br />
+                                            즉시 정・오답 여부를 알려주어
+                                            <br />
+                                            자신의 실력을 빠르게 파악하고
+                                            <br />
+                                            점검할 수 있도록 도와줍니다.
                                         </p>
                                         <p class="guide-text">
-                                            <span class="icon-special"><span class="blind">스페셜</span></span>가 있는 교재는 미북Special 기능을 이용할 수 있습니다.
+                                            <!--9.11  미북 스페셜 서브텍스트 변경 시작-->
+                                            <span class="icon-special"><span class="blind">스페셜</span></span>가 있는 교재는 미북Special 기능 사용 가능 합니다.
+                                            <!--9.11  미북 스페셜 서브텍스트 변경 끝-->
                                         </p>
                                     </div>
                                 </div> 
@@ -1621,12 +1750,12 @@
                     </div>
                 </section>
                 <section class="guide-nav-section guide-step-section guide-step-07-section" id="guide-section-04">
-                    <div class="guide-content-inner">
+                    <div class="guide-thumbㅡcontent-inner">
                         <header class="guide-step-header">
                             <h3 class="guide-step-title">지금 바로 경험해보세요</h3>
                             <div class="btn-tabs-round">
-                                <button type="button" class="btn btn-tab-round on">전자책 <span class="icon"><span class="blind">화살표</span></span></button>
-                                <button type="button" class="btn btn-tab-round">디지털굿즈 <span class="icon"><span class="blind">화살표</span></span></button>
+                                <button type="button" class="btn btn-tab-round on">전자책 <a href="https://store.mebook.io/ebook/list?buyYn=N" target="_self" class="link-icon"><span class="icon"><span class="blind">화살표</span></span></a></button>
+                                <button type="button" class="btn btn-tab-round">디지털굿즈 <a href="https://store.mebook.io/product/list?buyYn=N" target="_self" class="link-icon"><span class="icon"><span class="blind">화살표</span></span></a></button>
                             </div>
                         </header>
                         <div class="tab-round-content-section on">
@@ -1857,7 +1986,9 @@
                                     </div>
                                 </div>
                             </div>
+                            <!-- 더보기 클릭시 btn-book-more on 추가-->
                             <button type="button" class="btn-book-more btn btn-full">더보기 <span class="icon-more"></span></button>
+                            <button type="button" class="btn-book-more on btn btn-full">더보기 <span class="icon-more"></span></button>
                         </div>
                     </div>
                 </section>
@@ -1915,6 +2046,24 @@
                 </div>
             </footer>
             <!--푸터 끝-->
+            <!--비디오 팝업 시작-->
+            <section class="popup-section guide-video off">
+                <div class="video-container">
+                    <div class="btn-area">
+                        <button type="button" class="btn btn-transparent"><span class="icon-close"><span
+                                    class="blind">닫기</span></span></button>
+                    </div>
+                    <!--9.11  iframe 변경 시작-->
+                    <div class="video-box">
+                        <iframe width="796" height="597" class="video" src="https://www.youtube.com/embed/MJJgU_AMn3A"
+                            title="[meBOOK 미북] 미북 Special : 동영상 강의" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen=""></iframe>
+                    </div>
+                    <!--9.11  iframe 변경 끝-->
+                </div>
+            </section>
+            <!--비디오 끝-->
         </div>
     </main>
     <script src="../assest/js/jquery-2.2.4.min.js"></script>
@@ -1931,7 +2080,7 @@
 
        var swiper = new Swiper("#guideSwiper01", {
         slidesPerView: 'auto',
-        centeredSlides: true,
+        // centeredSlides: true,
         spaceBetween: 40,
         navigation: {
             nextEl: "#guideSwiper01 .swiper-button-next",
@@ -1943,8 +2092,8 @@
         },
     });
     var swiper = new Swiper("#guideSwiper02", {
-        slidesPerView: 'auto',
-        centeredSlides: true,
+             slidesPerView: 'auto',
+        // centeredSlides: true,
         navigation: {
             nextEl: "#guideSwiper02 .swiper-button-next",
             prevEl: "#guideSwiper02 .swiper-button-prev",
@@ -2021,22 +2170,31 @@
         });
 
         // 탭 메뉴 클릭 이벤트
+        //9.11 상단 스크롤 스크립트 수정 시작
         guideNav.find('.guide-tabs .link').on('click', function (e) {
             e.preventDefault();
             const targetId = $(this).attr('href');
-            const $target = $(targetId);
 
-            if ($target.length) {
+            if (targetId === '#guide-section-01') {
+                // Scroll to the top when the "시작하기" tab is clicked
                 $('html, body').animate({
-                    scrollTop: $target.offset().top
+                    scrollTop: 0
                 }, 500);
+            } else {
+                const $target = $(targetId);
+
+                if ($target.length) {
+                    $('html, body').animate({
+                        scrollTop: $target.offset().top
+                    }, 500);
+                }
             }
         });
+         //9.11 상단 스크롤 스크립트 수정 끝
 
         // 초기 스크롤 위치에 맞는 섹션과 탭을 하이라이트
         handleScroll();
     }
-
     $('#guideBoxNav .btn-link').on('click', function(e) {
         e.preventDefault();  // 기본 링크 동작 방지
 
@@ -2050,6 +2208,7 @@
             }, 500);  // 500ms 동안 부드럽게 스크롤
         }
     });
+    
 });
 
   </script>
