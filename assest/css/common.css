@@ -2687,7 +2687,7 @@ img {
     gap: 8px;
 }
 .popup-section .popup-container .title {
-    font-family: "Pretendard SemiBold";
+    font-family: "Pretendard Bold";
     font-size: 1.6rem;
     line-height: 22px;
     color: var(--black-color);

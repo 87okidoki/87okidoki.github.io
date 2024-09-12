@@ -115,6 +115,9 @@
                                     </li>
                                 </ul>
                                 <a href="" class="btn-mo-menu">기출문제 자료실</a>
+                                <!--9.11 이용안내 버튼 추가 시작-->
+                                 <a href="/guide" class="btn-mo-menu">이용안내</a>
+                                <!--9.11 이용안내 버튼 추가 끝-->
                             </div>
                             <!-- e-Book 시작 -->
                             <section class="mo-menu-body-right mo-ebook-section on" id="moTab1">
@@ -1193,6 +1196,11 @@
                                         </div>              
                                 </div>
                             </div>
+                            <!--9.12 개인정보 수집 및 이용 안내 버튼 추가 시작-->
+                            <div class="btn-marketing-area">
+                                <button type="button" class="btn btn-marketing-link">개인정보 수집 및 이용 안내<span class="icon-arrow-right"><span class="blind">화살표</span></span></button>
+                            </div>
+                            <!--9.12 개인정보 수집 및 이용 안내 버튼 추가 끝-->
                             <div class="marketing-agree">
                                 <div class="checks black">
                                     <input type="checkbox" id="marketing-agree" class="check" name="marketing-agree" value="마케팅 개인정보 제 3자 제공 동의">
@@ -1251,6 +1259,43 @@
             <!--최초 로그인 끝-->
         </div>
           <!--컨텐츠 끝-->
+        <!--9.12 개인정보 수집 및 이용 안내 팝업 시작-->
+        <section class="popup-section use-information off">
+        <div class="popup-container">
+            <header class="popup-header">
+                <h2 class="title">개인정보 수집 및 이용 안내</h2>
+                <button type="button" class="btn btn-transparent" id="btnClose">
+                    <i class="icon-close-24"><span class="blind">닫기</span></i>
+                </button>
+            </header>
+            <div class="popup-body">
+                <div class="terms-box">
+                    <p class="terms-text">개인정보 보호법 제15조제1항제4호에 따라, 정보 주체와 체결한 계약으로 정보 주체의 동의 없이 개인정보를 수집 및 이용합니다.</p>
+                    <ol class="terms scroll">
+                        <li>
+                            ❶ 수집 정보
+                            <ul class="terms-02">
+                                <li>- 이름, 생년월일, 성별, 휴대전화 번호</li>
+                            </ul>
+                        </li>
+                        <li>
+                            ❷ 처리 목적
+                            <ul class="terms-02">
+                                <li>meBOOK 스토어 서비스 제공, 불법 및 부정 이용 방지, 분쟁 예방 및 해결을 위한 기록보존</li>
+                            </ul>
+                        </li>
+                        <li>
+                            ❸ 보유 및 이용 기간
+                            <ul class="terms-02">
+                                <li class="text-underline">회원 탈퇴 시까지</li>
+                            </ul>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--9.12 개인정보 수집 및 이용 안내 팝업 끝-->
     </main>
     <script src="../assest/js/jquery-2.2.4.min.js"></script>
     <script src="../assest/js/swiper-bundle.js"></script>
