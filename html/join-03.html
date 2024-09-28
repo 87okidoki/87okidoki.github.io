@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="ko">
 
 <head>
@@ -1152,12 +1153,19 @@
                         <form action="" method="">
                             <fieldset>
                                 <legend class="blind">약관 동의</legend>
+                                <!--9.12 개인정보 수집 및 이용 안내 버튼 추가 및  체크박스 수정 시작-->
                                 <div class="terms-agree">
                                     <div class="checks black">
-                                        <input type="checkbox" id="terms-agree" class="check" value="마케팅 개인정보 제 3자 제공 동의">
+                                        <input type="checkbox" id="terms-agree" class="check" value="약관 전체 동의">
                                         <label for="terms-agree" class="label-check"><span>약관 전체 동의<div class="inline-block color-primary">(선택)</div></span></label>
                                     </div>
                                     <div class="terms-list-group">
+                                        <div class="terms-list-item">
+                                            <div class="checks line">
+                                                <input type="checkbox" id="privacy" class="check" value="만 14세 이상입니다.">
+                                                <label for="privacy" class="label-check"><span>만 14세 이상입니다.</span></label>
+                                            </div>
+                                        </div>
                                         <div class="terms-list-item">
                                             <div class="checks line">
                                                 <input type="checkbox" id="terms" class="check" value="이용 약관">
@@ -1166,20 +1174,12 @@
                                             <a href="https://www.mebook.io/terms" target="_blank"><span class="icon-arrow-right-16"><span class="blind">이동</span></span></a>
                                         </div>
                                         <div class="terms-list-item">
-                                            <div class="checks line">
-                                                <input type="checkbox" id="privacy" class="check" value="개인정보 처리방침">
-                                                <label for="privacy" class="label-check"><span>개인정보 처리방침</span></label>
-                                            </div>
-                                            <a href="https://www.mebook.io/privacy" target="_blank"><span class="icon-arrow-right-16"><span class="blind">이동</span></span></a>
-                                        </div>  
-                                        <!--9.12 개인정보 수집 및 이용 안내 버튼 추가 시작-->
-                                        <div class="terms-list-item">
                                             <div class="none-check">개인정보 수집 및 이용 안내</div>
                                             <button type="button" class="btn btn-transparent"><span class="icon-arrow-right-16"><span class="blind">이동</span></span></button>
                                         </div>  
-                                        <!--9.12 개인정보 수집 및 이용 안내 버튼 추가 끝-->
                                     </div>
                                 </div>
+                                <!--9.12 개인정보 수집 및 이용 안내 버튼 추가 및  체크박스 수정 끝-->
                                 <div class="bottom-btns-area">
                                     <button type="submit" class="btn btn-primary btn-large btn-full" disabled>완료</button>
                                 </div>

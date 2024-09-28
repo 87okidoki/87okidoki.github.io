@@ -1,5 +1,5 @@
+<!DOCTYPE html>
 <html lang="ko">
-
 <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -1141,27 +1141,32 @@
                     <div class="point-box">
                         <header class="point-box-header">
                             <h2 class="point-box-title">보유 me포인트</h2>
-                            <button type="button" class="btn btn-point">포인트 안내</button>
+                            <button type="button" class="btn btn-point" id="btnOpenPoint">포인트 안내</button>
                         </header>
-                        <div class="point-text"><strong class="">7,000,000,000,000</strong> P</div>
+                        <div class="point-text"><strong>7,000,000,000</strong> P</div>
                         <div class="point-box-btns">
                             <div class="point-box-item">
                               <span class="text">리뷰 작성 시 적립 가능</span>
-                              <a href="#" class="btn btn-option">
-                                 <span class="text"><strong>3200</strong> P</span>
+                              <a href="#" class="btn btn-option disabled">
+                                 <span class="text"><strong>1,300,200</strong>P</span>
                                  <span class="icon icon-arrow-right"><span class="blind">이동</span></span>
                               </a>
                             </div>
                             <div class="point-box-item">
                                 <span class="text">30일 이내 소멸 예정</span>
-                                <button type="button" class="btn btn-option" disabled>
+                                <button type="button" class="btn btn-option">
                                     <span class="text"><strong>조회하기</strong></span>
                                     <span class="icon icon-refresh"><span class="blind">새로고침</span></span>
                                 </button>
+                                <span class="btn btn-option">
+                                    <span class="text"><strong>1,300,200</strong>P</span>
+                                    <button type="button" class="btn btn-transparent" disabled><span class="icon icon-refresh"><span class="blind">새로고침</span></span></button>
+                                </span>
                             </div>
                         </div>
                     </div>
-                    <div class="point-empty-section">
+                    <!-- 빈 포인트 리스트 시작-->
+                    <div class="point-empty-section off">
                         <div class="empty-info-group">
                             <div class="img-box">
                                 <img src="../assest/images/img-cart-01.png" alt="" />
@@ -1171,6 +1176,7 @@
                             </div>
                         </div>
                     </div>
+                    <!-- 빈 포인트 리스트 끝-->
                     <div class="swiper-container btns-swiper-group">
                         <div class="swiper-wrapper">
                             <div class="swiper-slide"><button type="button" class="btn-swiper-tab active">전체</button></div>
@@ -1179,7 +1185,7 @@
                             <div class="swiper-slide"><button type="button" class="btn-swiper-tab">소멸</button></div>
                         </div>
                     </div>
-                    <!--포인트 리스트 시작-->
+                    <!--전체 포인트 리스트 시작-->
                     <section class="tab-swiper-content-section on">
                         <div class="point-list-group">
                             <h3 class="point-list-title">2025</h3>
@@ -1280,16 +1286,15 @@
                                 <a href="#">1</a>
                                 <a href="#" class="active">2</a>
                                 <a href="#">3</a>
-                                <span>∙∙∙</span>
-                                <a href="#">999</a>
+                                <a href="#">4</a>
                                 <a href="#" class="next">
                                     <span class="blind">오른쪽 화살</span>               
                                 </a>
                             </div>
                         </div>
                     </section>
-                    <!--포인트 리스트 끝-->
-                    <!-- 빈 포인트 리스트 시작-->
+                    <!--전체 포인트 리스트 끝-->
+                    <!--적립 포인트 리스트 시작-->
                     <section class="tab-swiper-content-section">
                         <div class="point-list-group">
                             <h3 class="point-list-title">2025</h3>
@@ -1310,18 +1315,8 @@
                                 </li>
                             </ul>
                         </div>
-                        <div class="inquiry-empty-group">
-                            <div class="empty-info-group">
-                                <div class="img-box">
-                                    <img src="../assest/images/img-cart-01.png" alt=""/>
-                                </div>
-                                <div class="text-box">
-                                    <h3 class="empty-title">me포인트 내역이 없습니다.</h3>
-                                </div>
-                            </div>
-                        </div>
                     </section>
-                     <!-- 빈 포인트 리스트 끝-->
+                    <!--적립 포인트 리스트 끝-->
                     <!--사용 포인트 리스트 시작-->
                     <section class="tab-swiper-content-section">
                         <div class="point-list-group">
@@ -1349,8 +1344,7 @@
                                 <a href="#">1</a>
                                 <a href="#" class="active">2</a>
                                 <a href="#">3</a>
-                                <span>∙∙∙</span>
-                                <a href="#">999</a>
+                                <a href="#">4</a>
                                 <a href="#" class="next">
                                     <span class="blind">오른쪽 화살</span>
                                 </a>
@@ -1385,8 +1379,7 @@
                                 <a href="#">1</a>
                                 <a href="#" class="active">2</a>
                                 <a href="#">3</a>
-                                <span>∙∙∙</span>
-                                <a href="#">999</a>
+                                <a href="#">4</a>
                                 <a href="#" class="next">
                                     <span class="blind">오른쪽 화살</span>
                                 </a>
@@ -1452,12 +1445,14 @@
             <!--푸터 끝-->
             <!--8.8 푸터 일부 텍스트& 이미지 &버튼 수정 추가 끝-->
             <!--팝업 시작-->
-            <section class="popup-section page of" id="sharePopup">
+            <section class="popup-section page point off" id="pointPopup">
                 <div class="popup-container">
                     <header class="popup-header">
-                        <h2 class="title">포인트 안내사항</h2>
+                        <h2 class="title">포인트 안내사항 
+                            <i class="icon icon-info-black-fill"><span class="blind">안내</span></i>
+                        </h2>
                         <div class="btn-close-area">
-                            <button type="button" class="btn btn-transparent" id="btnClose">
+                            <button type="button" class="btn btn-transparent btnClosePoint">
                                 <i class="icon-close-24"><span class="blind">닫기</span></i>
                             </button>
                         </div>
@@ -1469,7 +1464,7 @@
                                     <ul class="terms-02">
                                         <li>구매 적립 me포인트는 구매 확정 시(결제 완료 후 8일째) 지급됩니다.</li>
                                         <li>리뷰 작성 me포인트는 리뷰 작성 완료 즉시 적립됩니다.</li>
-                                        <li>구매 취소/환불 시 리뷰 작성으로 지급 받으신 me포인트는 회수 처리됩니다. <br/>
+                                        <li>구매 취소/환불 시 리뷰 작성으로 지급 받으신 me포인트는 회수 처리됩니다.
                                             (작성한 리뷰는 미삭제)</li>
                                     </ul>
                                 </li>
@@ -1492,9 +1487,7 @@
                             </ol>
                         </div>
                     </div>
-                    <div class="popup-footer">
-                        <button type="button" class="btn btn-full btn-primary btn-popup">닫기</button>
-                    </div>
+
                 </div>
             </section>
             <!--팝업 끝-->
@@ -1503,6 +1496,27 @@
     <script src="../assest/js/jquery-2.2.4.min.js"></script>
     <script src="../assest/js/swiper-bundle.js"></script>
     <script src="../assest/js/common.js"></script>
+    <script>    
+     $(document).ready(function () {
+        /*포인트 안내사항 팝업*/
+        $('#btnOpenPoint').click(function () {
+            $('#pointPopup').removeClass('off');
+            $('body').addClass('scroll-lock');
+        });
+
+        $('#pointPopup .btnClosePoint').click(function () {
+            $('#pointPopup').addClass('off');
+            $('body').removeClass('scroll-lock');
+        });
+
+        $(document).click(function (event) {
+            if (!$(event.target).closest('.popup-container').length && !$(event.target).closest('#btnOpenPoint').length) {
+                $('#pointPopup').addClass('off');
+                $('body').removeClass('scroll-lock');
+            }
+        });
+    });
+    </script>
 </body>
 
 </html>

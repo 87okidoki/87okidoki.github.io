@@ -111,6 +111,19 @@ $(function () {
         }
     });
 
+    /* 부록 리스트 스와이퍼*/
+    const appendixSwiper = new Swiper('#appendixSwiper', {
+        slidesPerView: 'auto',
+        freeMode: true,
+        pagination: {
+            clickable: true
+        },
+        navigation: {
+            nextEl: ".appendix-list-group .swiper-button-next",
+            prevEl: ".appendix-list-group .swiper-button-prev"
+        }
+    });
+
     //추천 도서 버튼    
     $(window).on('load', function () {
     // 페이지가 로드되면 탭 스와이프 초기화 함수를 호출합니다.
