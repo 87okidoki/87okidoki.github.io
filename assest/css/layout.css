@@ -52,10 +52,10 @@
 .header-section .header .logo {
     position: relative;
     display: block;
-    height: 24px;
 }
 .header-section .header .logo img {
-    width: 182px;
+width: 182px;
+    height: 24px;
 }
 
 .header-section .header-left {
@@ -220,11 +220,9 @@
         height: 56px;
         border-radius: 0;
     }
-    .header-section .header .logo {
-        height: 20px;
-    }
     .header-section .header .logo img {
         width: 136px;
+        height: 18px;
     }
 
     .header-section .header-left {
@@ -5764,6 +5762,27 @@
     }
 }
 
+/* .notice-list-section */
+.notice-list-section .option-group{
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+@media screen and (max-width:904px) {
+.notice-list-section .option-group {
+        display: grid;
+        justify-content: unset;
+        margin-top: 20px;
+    }
+  
+    .notice-list-section .option-group .small-search-box{
+        order: 1;
+    }
+    .notice-list-section .option-group .btns-swiper-group{
+        margin-top: 16px;
+        order: 2;
+    }
+}
 /* notice-empty-section  */
 .notice-empty-group {
     margin-top: 278px;
@@ -5922,18 +5941,31 @@
 }
 
 /*receipt-info-section 영수증 팝업 보 */
+.receipt-info-section .popup-container{
+    min-width: 500px;
+}
 .receipt-info-section .popup-container .popup-header {
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
 }
 .receipt-info-section .scroll-box {
-    max-height: 244px;
+    max-height: 164px;
 }
 .receipt-info-section .receipt-info-list-box {
     position: relative;
     /* overflow: hidden;
   overflow-y: auto; */
+}
+.receipt-info-section .receipt-info-list-box::before {
+    content: '';
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0.00) 0%, #FFF 100%);
+    height: 20px;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
 }
 .receipt-info-section .receipt-info-list-box::after {
     content: '';
@@ -5992,9 +6024,16 @@
     width: 100%;
     text-align: right;
 }
-
+.receipt-info-section .receipt-item .receipt-content .card {
+    margin-top: 8px;
+}
+.receipt-info-section .receipt-item .receipt-content .card > li{
+    font-size: 1.2rem;
+    color: var(--blue-grey-600);
+    line-height: 18px;
+}
 .receipt-info-section .receipt-guide-box {
-    margin-top: 40px;
+    margin-top: 24px;
     text-align: center;
     padding: 16px;
     border-radius: 8px;
@@ -6009,7 +6048,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 16px;
+    margin-top: 8px;
 }
 .receipt-info-section .mega-signet-area .mega-signet {
     font-size: 1.4rem;
@@ -6018,6 +6057,9 @@
 .receipt-info-section .mega-signet-area .img-signet {
     width: 56px;
     height: 56px;
+}
+.receipt-info-section .popup-container .popup-footer{
+    margin-top: 16px;
 }
 /*.my-main-section 마이페이지 */
 .my-main-section .my-menu-group {
@@ -7983,4 +8025,82 @@ overflow: hidden;
     .appendix-list-group .appendix-list-item .info-box{
         width: 160px;
     }
+}
+
+
+.event-list-group{
+    display: grid;
+    column-gap: 30px;
+    grid-template-columns: repeat(4, 1fr)
+}
+.event-list-group .event-list-item{
+    display: inline-block;
+    margin-bottom: 56px;
+}          
+
+.event-thumb{
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+}
+.event-thumb .cover-end{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.70);
+    font-family: "Pretendard Bold";
+    font-size: 2rem;
+    line-height: 24px;
+    color: var(--white-color);
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.event-thumb .badge{
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    z-index: 1;
+}
+.event-thumb img{
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    object-fit: cover;
+}
+.event-thumb::after{
+    content: '';
+    display: block;
+    padding-bottom: 65.5%;
+}
+.event-info-list {
+    margin-top: 16px;
+}
+.event-info-list .event-title{
+    font-family: "Pretendard Bold";
+    font-size: 1.6rem;
+    line-height: 24px;
+    color: var(--black-color);
+    margin-bottom: 12px;
+}
+.event-content{
+    display: flex;
+    gap: 12px;
+    margin-top: 6px;
+}
+.event-content .title{
+    font-size: 1.2rem;
+    color: var(--blue-grey-400);
+    line-height: 14px;
+    flex-shrink: 0;
+}
+.event-content .content{
+    font-size: 1.2rem;
+    color: var(--blue-grey-500);
+    line-height: 14px;
+    width: 100%;
 }
