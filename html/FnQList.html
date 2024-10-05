@@ -1143,6 +1143,7 @@
                         <h2 class="sub-contents-header-title">
                             FAQ
                         </h2>
+                        <!--10.07 검색 ui 추가 시작-->
                         <div class="option-group">
                             <div class="swiper-container btns-swiper-group">
                                 <div class="swiper-wrapper">
@@ -1159,11 +1160,26 @@
                             <div class="search-area small-search-box">
                                 <form class="input-box">
                                     <input type="text" placeholder="검색어 입력" />
-                                    <button type="submit" class="btn btn-transparent"><i class="icon-search"></i></button>
+                                    <button type="reset" class="btn btn-transparent"><i class="icon-search-clear"></i></button>
                                     <button type="submit" class="btn btn-transparent"><i class="icon-search"></i></button>
                                 </form>
                             </div>
                         </div>
+                        <!--10.07 검색 ui 추가 끝-->
+                        <!-- 검색 ui 없을시 시작-->
+                         <div class="swiper-container btns-swiper-group off">
+                            <div class="swiper-wrapper">
+                                <!--8.27 a -> button 으로 변경 swiper-slide의 on, span 삭제 시작-->
+                                <div class="swiper-slide"><button type="button" class="btn-swiper-tab active">전체</button></div>
+                                <div class="swiper-slide"><button type="button" class="btn-swiper-tab">안내</button></div>
+                                <div class="swiper-slide"><button type="button" class="btn-swiper-tab">공지</button></div>
+                                <div class="swiper-slide"><button type="button" class="btn-swiper-tab">이벤트</button></div>
+                                <div class="swiper-slide"><button type="button" class="btn-swiper-tab">스토어 이용</button></div>
+                                <div class="swiper-slide"><button type="button" class="btn-swiper-tab">앱 이용</button></div>
+                                <!--8.27 a -> button 으로 변경 swiper-slide의 on, span 삭제 끝-->
+                            </div>
+                        </div>
+                         <!-- 검색 ui 없을시 끝-->
                     </header>
                     <!--공지사항 리스트 시작-->
                     <div class="tab-swiper-content-section on">
@@ -1228,7 +1244,7 @@
                         </div>
                     </div>
                     <!--공지사항 리스트 끝-->
-                    <!--공지사항 리스트 시작-->
+                    <!--공지사항 빈 리스트 시작-->
                     <div class="tab-swiper-content-section">
                         <div class="notice-empty-group">
                             <div class="empty-info-group">
@@ -1241,6 +1257,22 @@
                             </div>
                         </div>
                     </div>
+                     <!--공지사항 빈 리스트 끝-->
+                     <!--10.07 공지사항 검색없음 시작-->
+                    <div class="tab-swiper-content-section">
+                        <div class="notice-empty-group">
+                            <div class="empty-info-group">
+                                <div class="img-box">
+                                    <img src="../assest/images/img-cart-01.png" alt=""/>
+                                </div>
+                                <div class="text-box">
+                                    <h3 class="empty-title"><span class="color-primary" id="emptyEllipsis">전자책다운로드전자책다운로드</span>에 대한 <span class="color-primary">디지털 굿즈 이용</span><br/>
+                                        검색 결과가 없습니다.</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                     <!--10.07 공지사항 검색없음 끝-->
                 </section>
             </div>
             <!--8.8 푸터 일부 텍스트& 이미지 &버튼 수정 추가 시작-->
@@ -1303,6 +1335,17 @@
     <script src="../assest/js/jquery-2.2.4.min.js"></script>
     <script src="../assest/js/swiper-bundle.js"></script>
     <script src="../assest/js/common.js"></script>
+    <script>
+        // 10.07 공지사항 검색없음 말줄임표 시작 
+        $(document).ready(function() {
+            $('#emptyEllipsis').each(function() {
+                var text = $(this).text();
+                if (text.length > 7) {
+                    $(this).text(text.substring(0, 7) + '...');
+                }
+            });
+        });
+    </script>
 </body>
 
 </html>

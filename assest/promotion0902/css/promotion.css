@@ -1874,8 +1874,30 @@
         width: 100%;
     }
 }
+
 .popup-section.promotion-terms .popup-container {
     max-width: 480px;
+}
+.popup-section.promotion-terms .popup-container .popup-body{
+    overflow: hidden;
+    overflow-y: auto;
+    scroll-behavior: smooth;
+    max-height: 400px;
+    padding-right: 15px;
+    margin-right: -20px;
+}
+.popup-section.promotion-terms .popup-container .popup-body::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background-color: transparent;
+}
+.popup-section.promotion-terms .popup-container .popup-body::-webkit-scrollbar {
+    width: 5px;
+    background-color: transparent;
+}
+
+.popup-section.promotion-terms .popup-container .popup-body::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: #ddd;
 }
 .popup-section.promotion-terms .popup-header {
     padding-bottom: 16px;
@@ -2006,6 +2028,7 @@
     .popup-section.promotion-terms .popup-container {
         width: 100%;
         max-width: 100%;
+        max-height: 100%;
         left: 0;
         top: 0;
         bottom: 0;
@@ -2013,6 +2036,7 @@
         transform: translate(0%, 0%);
         border-radius: 0;
         padding: 16px 20px;
+        overflow-y: auto;
     }
     .popup-section.promotion-terms .popup-header {
         border-bottom: 0;
@@ -2023,6 +2047,12 @@
         font-size: 2rem;
         line-height: 24px;
     }
+    .popup-section.promotion-terms .popup-container .popup-body{
+        max-height: unset;
+    }
+    .popup-section.promotion-terms .terms{
+        max-height: 100%;
+    }
 }
 .popup-section.check-list .popup-header {
     text-align: center;
@@ -2032,11 +2062,8 @@
     position: absolute;
     right: 20px;
 }
-.popup-section.check-list .popup-container {
-    padding: 24px;
-}
 .popup-section.check-list .check-items {
-    max-height: 224px;
+    max-height: 197px;
     overflow-y: auto;
 }
 .popup-section.check-list .check-items-group {

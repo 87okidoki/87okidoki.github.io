@@ -28,25 +28,29 @@
         <!--컨텐츠 시작-->
         <div class="container">
             <!--팝업 시작-->
-            <section class="popup-section">
+            <section class="popup-section payment-section">
                 <div class="popup-container text-center">
                     <header class="popup-header">
                         <h2 class="title">결제진행 안내</h2>
                     </header>
                     <div class="popup-body">
                         <p class="text">문화비 소득공제를 받으려면<br/>
-                            <strong class="color-primary">2회 결제</strong>를 선택해주세요.</p>
-                            <div class="terms">
-                                <ul class="terms">
-                                    <li>신용/체크카드로 문화비소득공제 대상 상품과 비대상 상품을 함께 구매하는 경우 소득공제 대상 금액과 비대상 금액으로 나누어 2회 결제가 진행 됩니다.</li>
-                                    <li>1회 결제 : 모두 비소득공제 처리가 되며, 이후에도 소득공제 혜택을 받을 수 없습니다.</li>
-                                    <li>2회 결제 : 소득공제 / 비소득공제 분리하여 결제합니다.</li>
-                                </ul>
+                        <strong class="color-primary">2회 결제</strong>를 선택해주세요.</p>
+                        <ul class="info-text-items">
+                            <li class="info-text-item blue-gray-400">신용/체크카드로 문화비소득공제 대상 상품과 비대상 상품을 함께 구매하는 경우 소득공제 대상 금액과 비대상 금액으로 나누어 2회 결제가 진행 됩니다.</li>
+                            <li class="info-text-item blue-gray-400">1회 결제 : 모두 비소득공제 처리가 되며, 이후에도 소득공제 혜택을 받을 수 없습니다.</li>
+                            <li class="info-text-item blue-gray-400">2회 결제 : 소득공제 / 비소득공제 분리하여 결제합니다.</li>
+                        </ul>
+                        <div class="btn-area">
+                            <div class="btn-toggle-basic">
+                                <input type="radio" id="payment-1" name="payment">
+                                <label for="payment-1">2회 결제 (문화비 소득공제)</label>                                      
                             </div>
-                            <div>
-                                <button type="button" class="btn btn-line-primary btn-medium">2회 결제 (문화비 소득공제)</button>
-                                <button type="button"  class="btn btn-line-primary btn-medium">2회 결제 (문화비 소득공제)</button>
+                            <div class="btn-toggle-basic">
+                                <input type="radio" id="payment-2" name="payment">
+                                <label for="payment-2">1회 결제 (문화비 소득공제 불가)</label>                                      
                             </div>
+                        </div>
                     </div>
                     <div class="popup-footer">
                         <button type="button" class="btn btn-full btn-secondary btn-popup">취소</button>

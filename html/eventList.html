@@ -1138,100 +1138,673 @@
             </section>
             <!--해더 끝-->
             <div class="sub-contents-wrap">
-                <!--책 입점 문의 시작-->
+                <!--이벤트 리스트 시작-->
                 <section class="event-list-section">
                     <header class="sub-contents-header">
-                        <h2 class="sub-contents-header-title">
-                            진행 중인 이벤트
-                        </h2>
+                        <div class="header-tabs">
+                            <button type="button" class="header-tab on">
+                                진행 중인 이벤트
+                            </button>
+                            <button type="button" class="header-tab">
+                                종료된 이벤트
+                            </button>
+                        </div>
                     </header>
-                    <div class="event-list-group">
-                        <div class="event-list-item">
-                            <div class="event-thumb">
-                                <div class="badge badge-black">D-3</div>
-                                <img src="../assest/images/img-dummy-event-list.png" alt=""/>
-                             </div>
-                             <dl class="event-info-list">
-                                  <dt class="event-title">조기 마감 주의! 기간 한정 eBook 무료</dt>
-                                  <dd class="event-content"><div class="title">이벤트 기간</div><div class="content">NN.MM.YY ~ NN.MM.YY</div></dd>
-                                  <dd class="event-content"><div class="title">당첨자 발표</div><div class="content">meBOOK 공지사항</div></dd>
-                             </dl>
+                    <section class="header-tab-content-section on">
+                        <div class="option-group">
+                            <div class="swiper-container btns-swiper-group">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide"><button type="button" class="btn-swiper-tab active">전체 (100)</button></div>
+                                    <div class="swiper-slide"><button type="button" class="btn-swiper-tab">미북 이벤트 (80)</button></div>
+                                    <div class="swiper-slide"><button type="button" class="btn-swiper-tab">출판사/작가 이벤트 (20)</button></div>
+                                </div>
+                            </div>
+                            <div class="review-select">
+                                <select class="select">
+                                    <option>최신 등록순</option>
+                                    <option>마감 임박순</option>
+                                </select>
+                            </div>
                         </div>
-                        <div class="event-list-item">
-                            <div class="event-thumb">
-                                <img src="../assest/images/img-dummy-event-list.png" alt=""/>
-                             </div>
-                             <dl class="event-info-list">
-                                  <dt class="event-title">조기 마감 주의! 기간 한정 eBook 무료</dt>
-                                  <dd class="event-content"><div class="title">이벤트 기간</div><div class="content">NN.MM.YY ~ NN.MM.YY</div></dd>
-                             </dl>
+                        <div class="tab-swiper-content-section on">
+                            <div class="event-list-group">
+                                <a href="#"  class="event-list-item">
+                                    <div class="event-thumb">
+                                        <span class="badge badge-black">D-3</span>
+                                        <div class="cover-end">이벤트 종료</div>
+                                        <img src="../assest/images/img-dummy-event-list.png" alt=""/>
+                                    </div>
+                                    <dl class="event-info-list">
+                                        <dt class="event-title"><span class="badge">NEW</span>조기 마감 주의! 기간 한정 eBook 무료</dt>
+                                        <dd class="event-content"><div class="title">이벤트 기간</div><div class="content">NN.MM.YY ~ NN.MM.YY</div></dd>
+                                        <dd class="event-content"><div class="title">당첨자 발표</div><div class="content">meBOOK 공지사항</div></dd>
+                                    </dl>
+                                </a>
+                                <a href="#" class="event-list-item">
+                                    <div class="event-thumb">
+                                        <div class="cover-end">이벤트 종료</div>
+                                        <img src="../assest/images/img-dummy-event-list.png" alt=""/>
+                                    </div>
+                                    <dl class="event-info-list">
+                                        <dt class="event-title">조기 마감 주의! 기간 한정 eBook 무료</dt>
+                                        <dd class="event-content"><div class="title">이벤트 기간</div><div class="content">NN.MM.YY ~ NN.MM.YY</div></dd>
+                                        <dd class="event-content"><div class="title">당첨자 발표</div><div class="content">meBOOK 공지사항</div></dd>
+                                    </dl>
+                                </a>
+                                <a href="#" class="event-list-item">
+                                    <div class="event-thumb">
+                                        <div class="cover-end">이벤트 종료</div>
+                                        <img src="../assest/images/img-dummy-event-list.png" alt=""/>
+                                    </div>
+                                    <dl class="event-info-list">
+                                        <dt class="event-title">조기 마감 주의! 기간 한정 eBook 무료</dt>
+                                        <dd class="event-content"><div class="title">이벤트 기간</div><div class="content">NN.MM.YY ~ NN.MM.YY</div></dd>
+                                        <dd class="event-content"><div class="title">당첨자 발표</div><div class="content">meBOOK 공지사항</div></dd>
+                                    </dl>
+                                </a>
+                                <a href="#" class="event-list-item">
+                                    <div class="event-thumb end">
+                                        <div class="cover-end">이벤트 종료</div>
+                                        <img src="../assest/images/img-dummy-event-list.png" alt=""/>
+                                    </div>
+                                    <dl class="event-info-list">
+                                        <dt class="event-title">조기 마감 주의! 기간 한정 eBook 무료</dt>
+                                        <dd class="event-content"><div class="title">이벤트 기간</div><div class="content">NN.MM.YY ~ NN.MM.YY</div></dd>
+                                        <dd class="event-content"><div class="title">당첨자 발표</div><div class="content">meBOOK 공지사항</div></dd>
+                                    </dl>
+                                </a>
+                                <a href="#" class="event-list-item">
+                                    <div class="event-thumb">
+                                        <span class="badge badge-black">D-3</span>
+                                        <div class="cover-end">이벤트 종료</div>
+                                        <img src="../assest/images/img-dummy-event-list.png" alt=""/>
+                                    </div>
+                                    <dl class="event-info-list">
+                                        <dt class="event-title">조기 마감 주의! 기간 한정 eBook 무료</dt>
+                                        <dd class="event-content"><div class="title">이벤트 기간</div><div class="content">NN.MM.YY ~ NN.MM.YY</div></dd>
+                                        <dd class="event-content"><div class="title">당첨자 발표</div><div class="content">meBOOK 공지사항</div></dd>
+                                    </dl>
+                                </a>
+                                <a href="#" class="event-list-item">
+                                    <div class="event-thumb">
+                                        <div class="cover-end">이벤트 종료</div>
+                                        <img src="../assest/images/img-dummy-event-list.png" alt=""/>
+                                    </div>
+                                    <dl class="event-info-list">
+                                        <dt class="event-title">조기 마감 주의! 기간 한정 eBook 무료</dt>
+                                        <dd class="event-content"><div class="title">이벤트 기간</div><div class="content">NN.MM.YY ~ NN.MM.YY</div></dd>
+                                        <dd class="event-content"><div class="title">당첨자 발표</div><div class="content">meBOOK 공지사항</div></dd>
+                                    </dl>
+                                </a>
+                                <a href="#" class="event-list-item">
+                                    <div class="event-thumb">
+                                        <div class="cover-end">이벤트 종료</div>
+                                        <img src="../assest/images/img-dummy-event-list.png" alt=""/>
+                                    </div>
+                                    <dl class="event-info-list">
+                                        <dt class="event-title">조기 마감 주의! 기간 한정 eBook 무료</dt>
+                                        <dd class="event-content"><div class="title">이벤트 기간</div><div class="content">NN.MM.YY ~ NN.MM.YY</div></dd>
+                                        <dd class="event-content"><div class="title">당첨자 발표</div><div class="content">meBOOK 공지사항</div></dd>
+                                    </dl>
+                                </a>
+                            </div>
+                            <div class="pagination-group">
+                                <div class="pagination">
+                                    <a href="#" class="previous disabled">
+                                        <span class="blind">왼쪽 화살</span>               
+                                    </a>
+                                    <a href="#">1</a>
+                                    <a href="#" class="active">2</a>
+                                    <a href="#">3</a>
+                                    <a href="#">4</a>
+                                    <a href="#" class="next">
+                                        <span class="blind">오른쪽 화살</span>               
+                                    </a>
+                                </div>
+                            </div>
                         </div>
-                        <div class="event-list-item">
-                            <div class="event-thumb">
-                                <img src="../assest/images/img-dummy-event-list.png" alt=""/>
-                             </div>
-                             <dl class="event-info-list">
-                                  <dt class="event-title">조기 마감 주의! 기간 한정 eBook 무료</dt>
-                             </dl>
+                        <div class="tab-swiper-content-section">
+                            <div class="event-list-group">
+                                <a href="#" class="event-list-item">
+                                    <div class="event-thumb">
+                                        <div class="cover-end">이벤트 종료</div>
+                                        <img src="../assest/images/img-dummy-event-list.png" alt=""/>
+                                    </div>
+                                    <dl class="event-info-list">
+                                        <dt class="event-title">조기 마감 주의! 기간 한정 eBook 무료</dt>
+                                        <dd class="event-content"><div class="title">이벤트 기간</div><div class="content">NN.MM.YY ~ NN.MM.YY</div></dd>
+                                        <dd class="event-content"><div class="title">당첨자 발표</div><div class="content">meBOOK 공지사항</div></dd>
+                                    </dl>
+                                </a>
+                                <a href="#" class="event-list-item">
+                                    <div class="event-thumb">
+                                        <div class="cover-end">이벤트 종료</div>
+                                        <img src="../assest/images/img-dummy-event-list.png" alt=""/>
+                                    </div>
+                                    <dl class="event-info-list">
+                                        <dt class="event-title">조기 마감 주의! 기간 한정 eBook 무료</dt>
+                                        <dd class="event-content"><div class="title">이벤트 기간</div><div class="content">NN.MM.YY ~ NN.MM.YY</div></dd>
+                                        <dd class="event-content"><div class="title">당첨자 발표</div><div class="content">meBOOK 공지사항</div></dd>
+                                    </dl>
+                                </a>
+                                <a href="#" class="event-list-item">
+                                    <div class="event-thumb">
+                                        <div class="cover-end">이벤트 종료</div>
+                                        <img src="../assest/images/img-dummy-event-list.png" alt=""/>
+                                    </div>
+                                    <dl class="event-info-list">
+                                        <dt class="event-title">조기 마감 주의! 기간 한정 eBook 무료</dt>
+                                        <dd class="event-content"><div class="title">이벤트 기간</div><div class="content">NN.MM.YY ~ NN.MM.YY</div></dd>
+                                        <dd class="event-content"><div class="title">당첨자 발표</div><div class="content">meBOOK 공지사항</div></dd>
+                                    </dl>
+                                </a>
+                                <a href="#" class="event-list-item">
+                                    <div class="event-thumb end">
+                                        <div class="cover-end">이벤트 종료</div>
+                                        <img src="../assest/images/img-dummy-event-list.png" alt=""/>
+                                    </div>
+                                    <dl class="event-info-list">
+                                        <dt class="event-title">조기 마감 주의! 기간 한정 eBook 무료</dt>
+                                        <dd class="event-content"><div class="title">이벤트 기간</div><div class="content">NN.MM.YY ~ NN.MM.YY</div></dd>
+                                        <dd class="event-content"><div class="title">당첨자 발표</div><div class="content">meBOOK 공지사항</div></dd>
+                                    </dl>
+                                </a>
+                                <a href="#" class="event-list-item">
+                                    <div class="event-thumb">
+                                        <div class="cover-end">이벤트 종료</div>
+                                        <img src="../assest/images/img-dummy-event-list.png" alt=""/>
+                                    </div>
+                                    <dl class="event-info-list">
+                                        <dt class="event-title">조기 마감 주의! 기간 한정 eBook 무료</dt>
+                                        <dd class="event-content"><div class="title">이벤트 기간</div><div class="content">NN.MM.YY ~ NN.MM.YY</div></dd>
+                                        <dd class="event-content"><div class="title">당첨자 발표</div><div class="content">meBOOK 공지사항</div></dd>
+                                    </dl>
+                                </a>
+                                <a href="#" class="event-list-item">
+                                    <div class="event-thumb">
+                                        <div class="cover-end">이벤트 종료</div>
+                                        <img src="../assest/images/img-dummy-event-list.png" alt=""/>
+                                    </div>
+                                    <dl class="event-info-list">
+                                        <dt class="event-title">조기 마감 주의! 기간 한정 eBook 무료</dt>
+                                        <dd class="event-content"><div class="title">이벤트 기간</div><div class="content">NN.MM.YY ~ NN.MM.YY</div></dd>
+                                        <dd class="event-content"><div class="title">당첨자 발표</div><div class="content">meBOOK 공지사항</div></dd>
+                                    </dl>
+                                </a>
+                                <a href="#" class="event-list-item">
+                                    <div class="event-thumb">
+                                        <div class="cover-end">이벤트 종료</div>
+                                        <img src="../assest/images/img-dummy-event-list.png" alt=""/>
+                                    </div>
+                                    <dl class="event-info-list">
+                                        <dt class="event-title">조기 마감 주의! 기간 한정 eBook 무료</dt>
+                                        <dd class="event-content"><div class="title">이벤트 기간</div><div class="content">NN.MM.YY ~ NN.MM.YY</div></dd>
+                                        <dd class="event-content"><div class="title">당첨자 발표</div><div class="content">meBOOK 공지사항</div></dd>
+                                    </dl>
+                                </a>
+                            </div>
+                            <div class="pagination-group">
+                                <div class="pagination">
+                                    <a href="#" class="previous disabled">
+                                        <span class="blind">왼쪽 화살</span>               
+                                    </a>
+                                    <a href="#">1</a>
+                                    <a href="#" class="active">2</a>
+                                    <a href="#">3</a>
+                                    <a href="#">4</a>
+                                    <a href="#" class="next">
+                                        <span class="blind">오른쪽 화살</span>               
+                                    </a>
+                                </div>
+                            </div>
                         </div>
-                        <div class="event-list-item">
-                            <div class="event-thumb end">
-                                <div class="cover-end">이벤트 종료</div>
-                                <img src="../assest/images/img-dummy-event-list.png" alt=""/>
-                             </div>
-                             <dl class="event-info-list">
-                                  <dt class="event-title">조기 마감 주의! 기간 한정 eBook 무료</dt>
-                                  <dd class="event-content"><div class="title">이벤트 기간</div><div class="content">NN.MM.YY ~ NN.MM.YY</div></dd>
-                                  <dd class="event-content"><div class="title">당첨자 발표</div><div class="content">meBOOK 공지사항</div></dd>
-                             </dl>
+                        <div class="tab-swiper-content-section">
+                            <div class="event-list-group">
+                                <a href="#" class="event-list-item">
+                                    <div class="event-thumb">
+                                        <div class="cover-end">이벤트 종료</div>
+                                        <img src="../assest/images/img-dummy-event-list.png" alt=""/>
+                                    </div>
+                                    <dl class="event-info-list">
+                                        <dt class="event-title">조기 마감 주의! 기간 한정 eBook 무료</dt>
+                                        <dd class="event-content"><div class="title">이벤트 기간</div><div class="content">NN.MM.YY ~ NN.MM.YY</div></dd>
+                                        <dd class="event-content"><div class="title">당첨자 발표</div><div class="content">meBOOK 공지사항</div></dd>
+                                    </dl>
+                                </a>
+                                <a href="#" class="event-list-item">
+                                    <div class="event-thumb">
+                                        <div class="cover-end">이벤트 종료</div>
+                                        <img src="../assest/images/img-dummy-event-list.png" alt=""/>
+                                    </div>
+                                    <dl class="event-info-list">
+                                        <dt class="event-title">조기 마감 주의! 기간 한정 eBook 무료</dt>
+                                        <dd class="event-content"><div class="title">이벤트 기간</div><div class="content">NN.MM.YY ~ NN.MM.YY</div></dd>
+                                        <dd class="event-content"><div class="title">당첨자 발표</div><div class="content">meBOOK 공지사항</div></dd>
+                                    </dl>
+                                </a>
+                                <a href="#" class="event-list-item">
+                                    <div class="event-thumb">
+                                        <div class="cover-end">이벤트 종료</div>
+                                        <img src="../assest/images/img-dummy-event-list.png" alt=""/>
+                                    </div>
+                                    <dl class="event-info-list">
+                                        <dt class="event-title">조기 마감 주의! 기간 한정 eBook 무료</dt>
+                                        <dd class="event-content"><div class="title">이벤트 기간</div><div class="content">NN.MM.YY ~ NN.MM.YY</div></dd>
+                                        <dd class="event-content"><div class="title">당첨자 발표</div><div class="content">meBOOK 공지사항</div></dd>
+                                    </dl>
+                                </a>
+                                <a href="#" class="event-list-item">
+                                    <div class="event-thumb end">
+                                        <div class="cover-end">이벤트 종료</div>
+                                        <img src="../assest/images/img-dummy-event-list.png" alt=""/>
+                                    </div>
+                                    <dl class="event-info-list">
+                                        <dt class="event-title">조기 마감 주의! 기간 한정 eBook 무료</dt>
+                                        <dd class="event-content"><div class="title">이벤트 기간</div><div class="content">NN.MM.YY ~ NN.MM.YY</div></dd>
+                                        <dd class="event-content"><div class="title">당첨자 발표</div><div class="content">meBOOK 공지사항</div></dd>
+                                    </dl>
+                                </a>
+                                <a href="#" class="event-list-item">
+                                    <div class="event-thumb">
+                                        <div class="cover-end">이벤트 종료</div>
+                                        <img src="../assest/images/img-dummy-event-list.png" alt=""/>
+                                    </div>
+                                    <dl class="event-info-list">
+                                        <dt class="event-title">조기 마감 주의! 기간 한정 eBook 무료</dt>
+                                        <dd class="event-content"><div class="title">이벤트 기간</div><div class="content">NN.MM.YY ~ NN.MM.YY</div></dd>
+                                        <dd class="event-content"><div class="title">당첨자 발표</div><div class="content">meBOOK 공지사항</div></dd>
+                                    </dl>
+                                </a>
+                                <a href="#" class="event-list-item">
+                                    <div class="event-thumb">
+                                        <div class="cover-end">이벤트 종료</div>
+                                        <img src="../assest/images/img-dummy-event-list.png" alt=""/>
+                                    </div>
+                                    <dl class="event-info-list">
+                                        <dt class="event-title">조기 마감 주의! 기간 한정 eBook 무료</dt>
+                                        <dd class="event-content"><div class="title">이벤트 기간</div><div class="content">NN.MM.YY ~ NN.MM.YY</div></dd>
+                                        <dd class="event-content"><div class="title">당첨자 발표</div><div class="content">meBOOK 공지사항</div></dd>
+                                    </dl>
+                                </a>
+                                <a href="#" class="event-list-item">
+                                    <div class="event-thumb">
+                                        <div class="cover-end">이벤트 종료</div>
+                                        <img src="../assest/images/img-dummy-event-list.png" alt=""/>
+                                    </div>
+                                    <dl class="event-info-list">
+                                        <dt class="event-title">조기 마감 주의! 기간 한정 eBook 무료</dt>
+                                        <dd class="event-content"><div class="title">이벤트 기간</div><div class="content">NN.MM.YY ~ NN.MM.YY</div></dd>
+                                        <dd class="event-content"><div class="title">당첨자 발표</div><div class="content">meBOOK 공지사항</div></dd>
+                                    </dl>
+                                </a>
+                            </div>
+                            <div class="pagination-group">
+                                <div class="pagination">
+                                    <a href="#" class="previous disabled">
+                                        <span class="blind">왼쪽 화살</span>               
+                                    </a>
+                                    <a href="#">1</a>
+                                    <a href="#" class="active">2</a>
+                                    <a href="#">3</a>
+                                    <a href="#">4</a>
+                                    <a href="#" class="next">
+                                        <span class="blind">오른쪽 화살</span>               
+                                    </a>
+                                </div>
+                            </div>
                         </div>
-                        <div class="event-list-item">
-                            <div class="event-thumb">
-                                <img src="../assest/images/img-dummy-event-list.png" alt=""/>
-                             </div>
-                             <dl class="event-info-list">
-                                  <dt class="event-title">조기 마감 주의! 기간 한정 eBook 무료</dt>
-                                  <dd class="event-content"><div class="title">이벤트 기간</div><div class="content">NN.MM.YY ~ NN.MM.YY</div></dd>
-                                  <dd class="event-content"><div class="title">당첨자 발표</div><div class="content">meBOOK 공지사항</div></dd>
-                             </dl>
+                    </section>
+                    <section class="header-tab-content-section">
+                        <div class="option-group">
+                            <div class="swiper-container btns-swiper-group">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide"><button type="button" class="btn-swiper-tab active">전체 (100)</button></div>
+                                    <div class="swiper-slide"><button type="button" class="btn-swiper-tab">미북 이벤트 (80)</button></div>
+                                    <div class="swiper-slide"><button type="button" class="btn-swiper-tab">출판사/작가 이벤트 (20)</button></div>
+                                </div>
+                            </div>
+                            <div class="review-select">
+                                <select class="select">
+                                    <option>최신 등록순</option>
+                                    <option>마감 임박순</option>
+                                </select>
+                            </div>
                         </div>
-                        <div class="event-list-item">
-                            <div class="event-thumb">
-                                <img src="../assest/images/img-dummy-event-list.png" alt=""/>
-                             </div>
-                             <dl class="event-info-list">
-                                  <dt class="event-title">조기 마감 주의! 기간 한정 eBook 무료</dt>
-                                  <dd class="event-content"><div class="title">이벤트 기간</div><div class="content">NN.MM.YY ~ NN.MM.YY</div></dd>
-                                  <dd class="event-content"><div class="title">당첨자 발표</div><div class="content">meBOOK 공지사항</div></dd>
-                             </dl>
+                        <div class="tab-swiper-content-section on">
+                            <div class="event-list-group">
+                                <a href="#"  class="event-list-item">
+                                    <div class="event-thumb">
+                                        <div class="cover-end">이벤트 종료</div>
+                                        <img src="../assest/images/img-dummy-event-list.png" alt=""/>
+                                    </div>
+                                    <dl class="event-info-list">
+                                        <dt class="event-title"><span class="badge">NEW</span>조기 마감 주의! 기간 한정 eBook 무료</dt>
+                                        <dd class="event-content"><div class="title">이벤트 기간</div><div class="content">NN.MM.YY ~ NN.MM.YY</div></dd>
+                                        <dd class="event-content"><div class="title">당첨자 발표</div><div class="content">meBOOK 공지사항</div></dd>
+                                    </dl>
+                                </a>
+                                <a href="#" class="event-list-item">
+                                    <div class="event-thumb">
+                                        <div class="cover-end">이벤트 종료</div>
+                                        <img src="../assest/images/img-dummy-event-list.png" alt=""/>
+                                    </div>
+                                    <dl class="event-info-list">
+                                        <dt class="event-title">조기 마감 주의! 기간 한정 eBook 무료</dt>
+                                        <dd class="event-content"><div class="title">이벤트 기간</div><div class="content">NN.MM.YY ~ NN.MM.YY</div></dd>
+                                        <dd class="event-content"><div class="title">당첨자 발표</div><div class="content">meBOOK 공지사항</div></dd>
+                                    </dl>
+                                </a>
+                                <a href="#" class="event-list-item">
+                                    <div class="event-thumb">
+                                        <div class="cover-end">이벤트 종료</div>
+                                        <img src="../assest/images/img-dummy-event-list.png" alt=""/>
+                                    </div>
+                                    <dl class="event-info-list">
+                                        <dt class="event-title">조기 마감 주의! 기간 한정 eBook 무료</dt>
+                                        <dd class="event-content"><div class="title">이벤트 기간</div><div class="content">NN.MM.YY ~ NN.MM.YY</div></dd>
+                                        <dd class="event-content"><div class="title">당첨자 발표</div><div class="content">meBOOK 공지사항</div></dd>
+                                    </dl>
+                                </a>
+                                <a href="#" class="event-list-item">
+                                    <div class="event-thumb end">
+                                        <div class="cover-end">이벤트 종료</div>
+                                        <img src="../assest/images/img-dummy-event-list.png" alt=""/>
+                                    </div>
+                                    <dl class="event-info-list">
+                                        <dt class="event-title">조기 마감 주의! 기간 한정 eBook 무료</dt>
+                                        <dd class="event-content"><div class="title">이벤트 기간</div><div class="content">NN.MM.YY ~ NN.MM.YY</div></dd>
+                                        <dd class="event-content"><div class="title">당첨자 발표</div><div class="content">meBOOK 공지사항</div></dd>
+                                    </dl>
+                                </a>
+                                <a href="#" class="event-list-item">
+                                    <div class="event-thumb">
+                                        <div class="cover-end">이벤트 종료</div>
+                                        <img src="../assest/images/img-dummy-event-list.png" alt=""/>
+                                    </div>
+                                    <dl class="event-info-list">
+                                        <dt class="event-title">조기 마감 주의! 기간 한정 eBook 무료</dt>
+                                        <dd class="event-content"><div class="title">이벤트 기간</div><div class="content">NN.MM.YY ~ NN.MM.YY</div></dd>
+                                        <dd class="event-content"><div class="title">당첨자 발표</div><div class="content">meBOOK 공지사항</div></dd>
+                                    </dl>
+                                </a>
+                                <a href="#" class="event-list-item">
+                                    <div class="event-thumb">
+                                        <div class="cover-end">이벤트 종료</div>
+                                        <img src="../assest/images/img-dummy-event-list.png" alt=""/>
+                                    </div>
+                                    <dl class="event-info-list">
+                                        <dt class="event-title">조기 마감 주의! 기간 한정 eBook 무료</dt>
+                                        <dd class="event-content"><div class="title">이벤트 기간</div><div class="content">NN.MM.YY ~ NN.MM.YY</div></dd>
+                                        <dd class="event-content"><div class="title">당첨자 발표</div><div class="content">meBOOK 공지사항</div></dd>
+                                    </dl>
+                                </a>
+                                <a href="#" class="event-list-item">
+                                    <div class="event-thumb">
+                                        <div class="cover-end">이벤트 종료</div>
+                                        <img src="../assest/images/img-dummy-event-list.png" alt=""/>
+                                    </div>
+                                    <dl class="event-info-list">
+                                        <dt class="event-title">조기 마감 주의! 기간 한정 eBook 무료</dt>
+                                        <dd class="event-content"><div class="title">이벤트 기간</div><div class="content">NN.MM.YY ~ NN.MM.YY</div></dd>
+                                        <dd class="event-content"><div class="title">당첨자 발표</div><div class="content">meBOOK 공지사항</div></dd>
+                                    </dl>
+                                </a>
+                            </div>
+                            <div class="pagination-group">
+                                <div class="pagination">
+                                    <a href="#" class="previous disabled">
+                                        <span class="blind">왼쪽 화살</span>               
+                                    </a>
+                                    <a href="#">1</a>
+                                    <a href="#" class="active">2</a>
+                                    <a href="#">3</a>
+                                    <a href="#">4</a>
+                                    <a href="#" class="next">
+                                        <span class="blind">오른쪽 화살</span>               
+                                    </a>
+                                </div>
+                            </div>
                         </div>
-                        <div class="event-list-item">
-                            <div class="event-thumb">
-                                <img src="../assest/images/img-dummy-event-list.png" alt=""/>
-                             </div>
-                             <dl class="event-info-list">
-                                  <dt class="event-title">조기 마감 주의! 기간 한정 eBook 무료</dt>
-                                  <dd class="event-content"><div class="title">이벤트 기간</div><div class="content">NN.MM.YY ~ NN.MM.YY</div></dd>
-                                  <dd class="event-content"><div class="title">당첨자 발표</div><div class="content">meBOOK 공지사항</div></dd>
-                             </dl>
+                        <div class="tab-swiper-content-section">
+                            <div class="event-list-group">
+                                <a href="#" class="event-list-item">
+                                    <div class="event-thumb">
+                                        <div class="cover-end">이벤트 종료</div>
+                                        <img src="../assest/images/img-dummy-event-list.png" alt=""/>
+                                    </div>
+                                    <dl class="event-info-list">
+                                        <dt class="event-title">조기 마감 주의! 기간 한정 eBook 무료</dt>
+                                        <dd class="event-content"><div class="title">이벤트 기간</div><div class="content">NN.MM.YY ~ NN.MM.YY</div></dd>
+                                        <dd class="event-content"><div class="title">당첨자 발표</div><div class="content">meBOOK 공지사항</div></dd>
+                                    </dl>
+                                </a>
+                                <a href="#" class="event-list-item">
+                                    <div class="event-thumb">
+                                        <div class="cover-end">이벤트 종료</div>
+                                        <img src="../assest/images/img-dummy-event-list.png" alt=""/>
+                                    </div>
+                                    <dl class="event-info-list">
+                                        <dt class="event-title">조기 마감 주의! 기간 한정 eBook 무료</dt>
+                                        <dd class="event-content"><div class="title">이벤트 기간</div><div class="content">NN.MM.YY ~ NN.MM.YY</div></dd>
+                                        <dd class="event-content"><div class="title">당첨자 발표</div><div class="content">meBOOK 공지사항</div></dd>
+                                    </dl>
+                                </a>
+                                <a href="#" class="event-list-item">
+                                    <div class="event-thumb">
+                                        <div class="cover-end">이벤트 종료</div>
+                                        <img src="../assest/images/img-dummy-event-list.png" alt=""/>
+                                    </div>
+                                    <dl class="event-info-list">
+                                        <dt class="event-title">조기 마감 주의! 기간 한정 eBook 무료</dt>
+                                        <dd class="event-content"><div class="title">이벤트 기간</div><div class="content">NN.MM.YY ~ NN.MM.YY</div></dd>
+                                        <dd class="event-content"><div class="title">당첨자 발표</div><div class="content">meBOOK 공지사항</div></dd>
+                                    </dl>
+                                </a>
+                                <a href="#" class="event-list-item">
+                                    <div class="event-thumb end">
+                                        <div class="cover-end">이벤트 종료</div>
+                                        <img src="../assest/images/img-dummy-event-list.png" alt=""/>
+                                    </div>
+                                    <dl class="event-info-list">
+                                        <dt class="event-title">조기 마감 주의! 기간 한정 eBook 무료</dt>
+                                        <dd class="event-content"><div class="title">이벤트 기간</div><div class="content">NN.MM.YY ~ NN.MM.YY</div></dd>
+                                        <dd class="event-content"><div class="title">당첨자 발표</div><div class="content">meBOOK 공지사항</div></dd>
+                                    </dl>
+                                </a>
+                                <a href="#" class="event-list-item">
+                                    <div class="event-thumb">
+                                        <div class="cover-end">이벤트 종료</div>
+                                        <img src="../assest/images/img-dummy-event-list.png" alt=""/>
+                                    </div>
+                                    <dl class="event-info-list">
+                                        <dt class="event-title">조기 마감 주의! 기간 한정 eBook 무료</dt>
+                                        <dd class="event-content"><div class="title">이벤트 기간</div><div class="content">NN.MM.YY ~ NN.MM.YY</div></dd>
+                                        <dd class="event-content"><div class="title">당첨자 발표</div><div class="content">meBOOK 공지사항</div></dd>
+                                    </dl>
+                                </a>
+                                <a href="#" class="event-list-item">
+                                    <div class="event-thumb">
+                                        <div class="cover-end">이벤트 종료</div>
+                                        <img src="../assest/images/img-dummy-event-list.png" alt=""/>
+                                    </div>
+                                    <dl class="event-info-list">
+                                        <dt class="event-title">조기 마감 주의! 기간 한정 eBook 무료</dt>
+                                        <dd class="event-content"><div class="title">이벤트 기간</div><div class="content">NN.MM.YY ~ NN.MM.YY</div></dd>
+                                        <dd class="event-content"><div class="title">당첨자 발표</div><div class="content">meBOOK 공지사항</div></dd>
+                                    </dl>
+                                </a>
+                                <a href="#" class="event-list-item">
+                                    <div class="event-thumb">
+                                        <div class="cover-end">이벤트 종료</div>
+                                        <img src="../assest/images/img-dummy-event-list.png" alt=""/>
+                                    </div>
+                                    <dl class="event-info-list">
+                                        <dt class="event-title">조기 마감 주의! 기간 한정 eBook 무료</dt>
+                                        <dd class="event-content"><div class="title">이벤트 기간</div><div class="content">NN.MM.YY ~ NN.MM.YY</div></dd>
+                                        <dd class="event-content"><div class="title">당첨자 발표</div><div class="content">meBOOK 공지사항</div></dd>
+                                    </dl>
+                                </a>
+                            </div>
+                            <div class="pagination-group">
+                                <div class="pagination">
+                                    <a href="#" class="previous disabled">
+                                        <span class="blind">왼쪽 화살</span>               
+                                    </a>
+                                    <a href="#">1</a>
+                                    <a href="#" class="active">2</a>
+                                    <a href="#">3</a>
+                                    <a href="#">4</a>
+                                    <a href="#" class="next">
+                                        <span class="blind">오른쪽 화살</span>               
+                                    </a>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                    <div class="pagination-group">
-                        <div class="pagination">
-                            <a href="#" class="previous disabled">
-                                <span class="blind">왼쪽 화살</span>               
-                            </a>
-                            <a href="#">1</a>
-                            <a href="#" class="active">2</a>
-                            <a href="#">3</a>
-                            <a href="#">4</a>
-                            <a href="#" class="next">
-                                <span class="blind">오른쪽 화살</span>               
-                            </a>
+                        <div class="tab-swiper-content-section">
+                            <div class="event-list-group">
+                                <a href="#" class="event-list-item">
+                                    <div class="event-thumb">
+                                        <div class="cover-end">이벤트 종료</div>
+                                        <img src="../assest/images/img-dummy-event-list.png" alt=""/>
+                                    </div>
+                                    <dl class="event-info-list">
+                                        <dt class="event-title">조기 마감 주의! 기간 한정 eBook 무료</dt>
+                                        <dd class="event-content"><div class="title">이벤트 기간</div><div class="content">NN.MM.YY ~ NN.MM.YY</div></dd>
+                                        <dd class="event-content"><div class="title">당첨자 발표</div><div class="content">meBOOK 공지사항</div></dd>
+                                    </dl>
+                                </a>
+                                <a href="#" class="event-list-item">
+                                    <div class="event-thumb">
+                                        <div class="cover-end">이벤트 종료</div>
+                                        <img src="../assest/images/img-dummy-event-list.png" alt=""/>
+                                    </div>
+                                    <dl class="event-info-list">
+                                        <dt class="event-title">조기 마감 주의! 기간 한정 eBook 무료</dt>
+                                        <dd class="event-content"><div class="title">이벤트 기간</div><div class="content">NN.MM.YY ~ NN.MM.YY</div></dd>
+                                        <dd class="event-content"><div class="title">당첨자 발표</div><div class="content">meBOOK 공지사항</div></dd>
+                                    </dl>
+                                </a>
+                                <a href="#" class="event-list-item">
+                                    <div class="event-thumb">
+                                        <div class="cover-end">이벤트 종료</div>
+                                        <img src="../assest/images/img-dummy-event-list.png" alt=""/>
+                                    </div>
+                                    <dl class="event-info-list">
+                                        <dt class="event-title">조기 마감 주의! 기간 한정 eBook 무료</dt>
+                                        <dd class="event-content"><div class="title">이벤트 기간</div><div class="content">NN.MM.YY ~ NN.MM.YY</div></dd>
+                                        <dd class="event-content"><div class="title">당첨자 발표</div><div class="content">meBOOK 공지사항</div></dd>
+                                    </dl>
+                                </a>
+                                <a href="#" class="event-list-item">
+                                    <div class="event-thumb end">
+                                        <div class="cover-end">이벤트 종료</div>
+                                        <img src="../assest/images/img-dummy-event-list.png" alt=""/>
+                                    </div>
+                                    <dl class="event-info-list">
+                                        <dt class="event-title">조기 마감 주의! 기간 한정 eBook 무료</dt>
+                                        <dd class="event-content"><div class="title">이벤트 기간</div><div class="content">NN.MM.YY ~ NN.MM.YY</div></dd>
+                                        <dd class="event-content"><div class="title">당첨자 발표</div><div class="content">meBOOK 공지사항</div></dd>
+                                    </dl>
+                                </a>
+                                <a href="#" class="event-list-item">
+                                    <div class="event-thumb">
+                                        <div class="cover-end">이벤트 종료</div>
+                                        <img src="../assest/images/img-dummy-event-list.png" alt=""/>
+                                    </div>
+                                    <dl class="event-info-list">
+                                        <dt class="event-title">조기 마감 주의! 기간 한정 eBook 무료</dt>
+                                        <dd class="event-content"><div class="title">이벤트 기간</div><div class="content">NN.MM.YY ~ NN.MM.YY</div></dd>
+                                        <dd class="event-content"><div class="title">당첨자 발표</div><div class="content">meBOOK 공지사항</div></dd>
+                                    </dl>
+                                </a>
+                                <a href="#" class="event-list-item">
+                                    <div class="event-thumb">
+                                        <div class="cover-end">이벤트 종료</div>
+                                        <img src="../assest/images/img-dummy-event-list.png" alt=""/>
+                                    </div>
+                                    <dl class="event-info-list">
+                                        <dt class="event-title">조기 마감 주의! 기간 한정 eBook 무료</dt>
+                                        <dd class="event-content"><div class="title">이벤트 기간</div><div class="content">NN.MM.YY ~ NN.MM.YY</div></dd>
+                                        <dd class="event-content"><div class="title">당첨자 발표</div><div class="content">meBOOK 공지사항</div></dd>
+                                    </dl>
+                                </a>
+                                <a href="#" class="event-list-item">
+                                    <div class="event-thumb">
+                                        <div class="cover-end">이벤트 종료</div>
+                                        <img src="../assest/images/img-dummy-event-list.png" alt=""/>
+                                    </div>
+                                    <dl class="event-info-list">
+                                        <dt class="event-title">조기 마감 주의! 기간 한정 eBook 무료</dt>
+                                        <dd class="event-content"><div class="title">이벤트 기간</div><div class="content">NN.MM.YY ~ NN.MM.YY</div></dd>
+                                        <dd class="event-content"><div class="title">당첨자 발표</div><div class="content">meBOOK 공지사항</div></dd>
+                                    </dl>
+                                </a>
+                            </div>
+                            <div class="pagination-group">
+                                <div class="pagination">
+                                    <a href="#" class="previous disabled">
+                                        <span class="blind">왼쪽 화살</span>               
+                                    </a>
+                                    <a href="#">1</a>
+                                    <a href="#" class="active">2</a>
+                                    <a href="#">3</a>
+                                    <a href="#">4</a>
+                                    <a href="#" class="next">
+                                        <span class="blind">오른쪽 화살</span>               
+                                    </a>
+                                </div>
+                            </div>
                         </div>
+                    </section>
+                </section>
+                <!--이벤트 리스트 끝-->
+                <!--띠 배너 시작-->
+                <section class="event-list-banner-section">
+                    <div class="swiper event-banner-board-group" id="mainEventBanner">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <a href="#" class="banner-board-large" style="background-color: #8EB5F5;">
+                                    <span class="text-area only-pc">
+                                        <p class="title" style="color: #fff;">모의고사 체험만 해도<br/>
+                                            스타벅스 커피가 내 손에!</p>
+                                    </span>
+                                    <span class="text-area only-mobile">
+                                        <p class="title" style="color: #fff;">모의고사 0원 체험<br/>
+                                            이벤트!</p>
+                                    </span>
+                                    <span class="img-area only-pc">
+                                        <img src="../assest/images/img-dummy-banner-03.png" alt="">
+                                    </span>
+                                    <span class="img-area only-mobile">
+                                        <img src="../assest/images/img-dummy-banner-02.png" alt="">
+                                    </span>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#" class="banner-board-large" style="background-color: #8EB5F5;">
+                                    <span class="text-area only-pc">
+                                        <p class="title" style="color: #fff;">모의고사 체험만 해도<br/>
+                                            스타벅스 커피가 내 손에!</p>
+                                    </span>
+                                    <span class="text-area only-mobile">
+                                        <p class="title" style="color: #fff;">모의고사 0원 체험<br/>
+                                            이벤트!</p>
+                                    </span>
+                                    <span class="img-area only-pc">
+                                        <img src="../assest/images/img-dummy-banner-03.png" alt="">
+                                    </span>
+                                    <span class="img-area only-mobile">
+                                        <img src="../assest/images/img-dummy-banner-02.png" alt="">
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-pagination"></div>
                     </div>
                 </section>
-                <!--책 입점 문의 끝-->
+                <!--띠 배너 끝-->
             </div>
             <!--8.8 푸터 일부 텍스트& 이미지 &버튼 수정 추가 시작-->
             <!--푸터 시작-->
@@ -1293,6 +1866,17 @@
     <script src="../assest/js/jquery-2.2.4.min.js"></script>
     <script src="../assest/js/swiper-bundle.js"></script>
     <script src="../assest/js/common.js"></script>
+    <script>
+        $(function ($) {
+            $(".header-tabs > .header-tab").click(function () {
+                const idx = $(this).index();
+                $(".header-tabs > .header-tab").removeClass("on");
+                $(".header-tabs > .header-tab").eq(idx).addClass("on");
+                $(".header-tab-content-section").hide();
+                $(".header-tab-content-section").eq(idx).show();
+            });
+        });
+    </script>
 </body>
 
 </html>
