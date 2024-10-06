@@ -1141,36 +1141,24 @@
                 <section class="notice-list-section">
                     <header class="sub-contents-header">
                         <h2 class="sub-contents-header-title">
-                            FAQ
+                            공지사항
                         </h2>
-                        <!--10.07 검색 ui 추가 시작-->
-                        <div class="option-group">
-                            <div class="swiper-container btns-swiper-group">
-                                <div class="swiper-wrapper">
-                                    <!--8.27 a -> button 으로 변경 swiper-slide의 on, span 삭제 시작-->
-                                    <div class="swiper-slide"><button type="button" class="btn-swiper-tab active">전체</button></div>
-                                    <div class="swiper-slide"><button type="button" class="btn-swiper-tab">안내</button></div>
-                                    <div class="swiper-slide"><button type="button" class="btn-swiper-tab">공지</button></div>
-                                    <div class="swiper-slide"><button type="button" class="btn-swiper-tab">이벤트</button></div>
-                                    <div class="swiper-slide"><button type="button" class="btn-swiper-tab">스토어 이용</button></div>
-                                    <div class="swiper-slide"><button type="button" class="btn-swiper-tab">앱 이용</button></div>
-                                    <!--8.27 a -> button 으로 변경 swiper-slide의 on, span 삭제 끝-->
-                                </div>
-                            </div>
-                            <div class="search-area small-search-box">
-                                <form class="input-box">
-                                    <input type="text" placeholder="검색어 입력" />
-                                    <button type="reset" class="btn btn-transparent"><i class="icon-search-clear"></i></button>
-                                    <button type="submit" class="btn btn-transparent"><i class="icon-search"></i></button>
-                                </form>
+                        <div class="swiper-container btns-swiper-group">
+                            <div class="swiper-wrapper">
+                                <!--8.27 a -> button 으로 변경 swiper-slide의 on, span 삭제 시작-->
+                                <div class="swiper-slide"><button type="button" class="btn-swiper-tab active">전체</button></div>
+                                <div class="swiper-slide"><button type="button" class="btn-swiper-tab">안내</button></div>
+                                <div class="swiper-slide"><button type="button" class="btn-swiper-tab">공지</button></div>
+                                <div class="swiper-slide"><button type="button" class="btn-swiper-tab">이벤트</button></div>
+                                <div class="swiper-slide"><button type="button" class="btn-swiper-tab">스토어 이용</button></div>
+                                <div class="swiper-slide"><button type="button" class="btn-swiper-tab">앱 이용</button></div>
+                                <!--8.27 a -> button 으로 변경 swiper-slide의 on, span 삭제 끝-->
                             </div>
                         </div>
-                         <!--10.07 검색 ui 추가 끝-->
                     </header>
                     <!--공지사항 리스트 시작-->
                     <div class="tab-swiper-content-section on">
                         <ul class="notice-list-group">
-                            <!--7.29 공지사항 리스트 상단 고정 디자인 스타일 시작-->
                             <li class="notice-item fixed">
                                 <div class="content-left">
                                     <a href="#" class="title">
@@ -1181,8 +1169,8 @@
                                     <span class="date">2024.03.06</span>
                                 </div>
                             </li>
-                            <!--7.29 공지사항 리스트 상단 고정 디자인 스타일 끝-->
-                            <li class="notice-item">
+                            <!-- 10.07 리스트 파일첨부 notice-item 에 file 추가시작-->
+                            <li class="notice-item file"> 
                                 <div class="content-left">
                                     <a href="#" class="title">
                                         <strong class="category">[결제문의]</strong>결제를 했는데 다운로드가 안됩니다.
@@ -1192,6 +1180,7 @@
                                     <span class="date">2024.03.06</span>
                                 </div>
                             </li>
+                             <!-- 10.07 리스트 파일첨부 notice-item 에 file 추가 끝-->
                             <li class="notice-item">
                                 <div class="content-left">
                                     <a href="#" class="title">
