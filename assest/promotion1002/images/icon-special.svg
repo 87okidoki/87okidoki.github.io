@@ -1,0 +1,68 @@
+<svg width="55" height="49" viewBox="0 0 55 49" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Frame 9258">
+<g id="Group 507">
+<path id="Union" fill-rule="evenodd" clip-rule="evenodd" d="M27.9373 0.453125L14.0545 0.453125L1.06587 15.7557L27.7745 48.0963L54.7042 15.7557L41.8202 0.453125L27.9373 0.453125Z" fill="url(#paint0_linear_193_8440)"/>
+<path id="Union_2" fill-rule="evenodd" clip-rule="evenodd" d="M27.7125 0.513672L13.4619 15.8163L27.5492 48.3146L41.8586 15.8163L27.7125 0.513672Z" fill="url(#paint1_linear_193_8440)"/>
+</g>
+<g id="Mask group" style="mix-blend-mode:multiply">
+<mask id="mask0_193_8440" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="15" width="55" height="34">
+<rect id="Rectangle 4558" width="53.6383" height="32.4985" transform="matrix(1 0 -0.00341729 0.999994 1.0625 15.7559)" fill="#D9D9D9"/>
+</mask>
+<g mask="url(#mask0_193_8440)">
+<g id="Group 508">
+<path id="Union_3" fill-rule="evenodd" clip-rule="evenodd" d="M27.9373 0.451172L14.0545 0.451172L1.06587 15.7538L27.7745 48.0943L54.7042 15.7538L41.8202 0.451172L27.9373 0.451172Z" fill="url(#paint2_linear_193_8440)" fill-opacity="0.7"/>
+<g id="Union_4">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M27.7125 0.511719L13.4619 15.8143L27.5492 48.3126L41.8586 15.8143L27.7125 0.511719Z" fill="#4E32F6"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M27.7125 0.511719L13.4619 15.8143L27.5492 48.3126L41.8586 15.8143L27.7125 0.511719Z" fill="url(#paint3_linear_193_8440)"/>
+</g>
+</g>
+</g>
+</g>
+<g id="Mask group_2" style="mix-blend-mode:multiply" opacity="0.8">
+<mask id="mask1_193_8440" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="15" width="55" height="34">
+<rect id="Rectangle 4558_2" width="53.6383" height="32.4985" transform="matrix(1 0 -0.00341729 0.999994 1.0625 15.7559)" fill="#D9D9D9"/>
+</mask>
+<g mask="url(#mask1_193_8440)">
+<g id="Group 508_2">
+<path id="Union_5" fill-rule="evenodd" clip-rule="evenodd" d="M27.9373 0.451172L14.0545 0.451172L1.06587 15.7538L27.7745 48.0943L54.7042 15.7538L41.8202 0.451172L27.9373 0.451172Z" fill="url(#paint4_linear_193_8440)" fill-opacity="0.7"/>
+<g id="Union_6">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M27.7125 0.511719L13.4619 15.8143L27.5492 48.3126L41.8586 15.8143L27.7125 0.511719Z" fill="#4E32F6"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M27.7125 0.511719L13.4619 15.8143L27.5492 48.3126L41.8586 15.8143L27.7125 0.511719Z" fill="url(#paint5_linear_193_8440)"/>
+</g>
+</g>
+</g>
+</g>
+</g>
+<defs>
+<linearGradient id="paint0_linear_193_8440" x1="32.6063" y1="45.118" x2="33.9157" y2="0.398761" gradientUnits="userSpaceOnUse">
+<stop stop-color="#90B3EA"/>
+<stop offset="0.61" stop-color="#AF99FD"/>
+<stop offset="1" stop-color="#755CFF"/>
+</linearGradient>
+<linearGradient id="paint1_linear_193_8440" x1="30.112" y1="45.3264" x2="32.5967" y2="0.554529" gradientUnits="userSpaceOnUse">
+<stop stop-color="#52AAFF"/>
+<stop offset="0.61" stop-color="#A281FE"/>
+<stop offset="1" stop-color="#4E32F6"/>
+</linearGradient>
+<linearGradient id="paint2_linear_193_8440" x1="32.6063" y1="45.116" x2="33.9157" y2="0.396807" gradientUnits="userSpaceOnUse">
+<stop stop-color="#52AAFF"/>
+<stop offset="0.61" stop-color="#A281FE"/>
+<stop offset="1" stop-color="#4E32F6"/>
+</linearGradient>
+<linearGradient id="paint3_linear_193_8440" x1="30.112" y1="45.3245" x2="32.5967" y2="0.552576" gradientUnits="userSpaceOnUse">
+<stop stop-color="#52AAFF"/>
+<stop offset="0.61" stop-color="#A281FE"/>
+<stop offset="1" stop-color="#4E32F6"/>
+</linearGradient>
+<linearGradient id="paint4_linear_193_8440" x1="32.6063" y1="45.116" x2="33.9157" y2="0.396807" gradientUnits="userSpaceOnUse">
+<stop stop-color="#52AAFF"/>
+<stop offset="0.61" stop-color="#A281FE"/>
+<stop offset="1" stop-color="#4E32F6"/>
+</linearGradient>
+<linearGradient id="paint5_linear_193_8440" x1="30.112" y1="45.3245" x2="32.5967" y2="0.552576" gradientUnits="userSpaceOnUse">
+<stop stop-color="#52AAFF"/>
+<stop offset="0.61" stop-color="#A281FE"/>
+<stop offset="1" stop-color="#4E32F6"/>
+</linearGradient>
+</defs>
+</svg>

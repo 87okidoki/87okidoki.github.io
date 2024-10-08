@@ -346,14 +346,10 @@ $(function () {
         const idx = $(this).index();
 
         $(".btns-swiper-group .swiper-slide .btn-swiper-tab").removeClass("active");
-        $(".btns-swiper-group .swiper-slide .btn-swiper-tab")
-            .eq(idx)
-            .addClass("active");
+        $(".btns-swiper-group .swiper-slide .btn-swiper-tab").eq(idx).addClass("active");
 
         $(".tab-swiper-content-section").hide();
-        $(".tab-swiper-content-section")
-            .eq(idx)
-            .show();
+        $(".tab-swiper-content-section").eq(idx).show();
     });
 
     // gnb 메뉴
