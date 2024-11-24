@@ -1160,7 +1160,9 @@
                         </div>
                         <article class="goods-list-group purchase">
                             <header class="goods-list-header">
-                                <span class="goods-list-title">e-Book</span>
+                                <!--10.17 e-Book → ‘eBook’으로 수정 시작-->
+                                <span class="goods-list-title">eBook</span>
+                                <!--10.17 e-Book → ‘eBook’으로 수정 끝-->
                             </header>
                             <ul class="goods-list">
                                 <li class="goods-list-item">
@@ -1269,14 +1271,81 @@
                         </div>
                     </section>
                     <!--환불 계좌 정보 끝-->
+                    <!--10.17 환불 계좌 정보 2개 이상시 ui 추가 시작-->
+                    <div class="payment-accordions-section">
+                        <div class="payment-option-group">
+                            <div class="flex">
+                                <h3 class="option-title">환불 계좌 정보</h3>
+                            </div>
+                        </div>
+                        <details class="payment-accordion-group">
+                            <summary class="payment-accordion-header">
+                                <h3 class="payment-accordion-title"><span class="only-pc-date">2024.09.30</span><span class="only-mo-date">24.09.30</span> 신청 <span class="sub-text">(환불완료)</span></h3>
+                                <div class="amount">9,000원</div>
+                            </summary>
+                            <div class="payment-accordion-body">
+                                <article class="purchase-info-list-group info">
+                                    <div class="purchase-info-list">
+                                        <div class="purchase-info-item">
+                                            <div class="purchase-title">예금주</div>
+                                            <div class="purchase-content strong">김미북</div>
+                                        </div>
+                                        <div class="purchase-info-item">
+                                            <div class="purchase-title">은행</div>
+                                            <div class="purchase-content strong">신한은행</div>
+                                        </div>
+                                        <div class="purchase-info-item">
+                                            <div class="purchase-title">계좌번호</div>
+                                            <div class="purchase-content strong">123456789012345</div>
+                                        </div>
+                                    </div>
+                                </article>
+                            </div>
+                        </details>
+                        <details class="payment-accordion-group">
+                            <summary class="payment-accordion-header">
+                                <h3 class="payment-accordion-title"><span class="only-pc-date">2024.09.30</span><span class="only-mo-date">24.09.30</span> 신청 <span class="sub-text">(환불처리중)</span></h3>
+                                <div class="amount">9,000원</div>
+                            </summary>
+                            <div class="payment-accordion-body">
+                                <article class="purchase-info-list-group info">
+                                    <div class="purchase-info-list">
+                                        <div class="purchase-info-item">
+                                            <div class="purchase-title">예금주</div>
+                                            <div class="purchase-content strong">김미북</div>
+                                        </div>
+                                        <div class="purchase-info-item">
+                                            <div class="purchase-title">은행</div>
+                                            <div class="purchase-content strong">신한은행</div>
+                                        </div>
+                                        <div class="purchase-info-item">
+                                            <div class="purchase-title">계좌번호</div>
+                                            <div class="purchase-content strong">123456789012345</div>
+                                        </div>
+                                    </div>
+                                </article>
+                            </div>
+                        </details>
+                    </div>
+                    <!--10.17 환불 계좌 정보 2개 이상시 ui 추가 끝-->
                     <!--취소/환불 정보 시작-->
                     <section class="payment-accordion-group un-accordion">
                         <header class="payment-accordion-header un-flex">
                             <div class="flex space-between">
                                 <h3 class="payment-accordion-title">취소/환불 정보</h3>
-                                <!--8.8 영수증 보기 버튼 삭제-->
+                                
                             </div>
-                            <p class="guide-text">* 카드 결제는 취소 완료 후 3~5 영업일 이내 카드 승인취소 예정입니다. 정확한 환불 완료일은 카드사로 직접 문의해주세요.</p>
+                            <!--10.17 취소/환불 정보 마크업 문구 변경 시작-->
+                            <ul class="guide-list">
+                                <li>
+                                 카드 결제는 취소 완료 후 3~5 영업일 이내 카드 승인취소 예정입니다. 정확한 환불 완료일은 카드사로 직접 문의해주세요.
+                                </li>
+                                <li>
+                                     무통장 입금 결제는 환불 접수 시점에서 3~7일 뒤 환불 요청 하신 계좌로 입금 처리되며, 공휴일이 발생될 경우 입금일은 달라질 수 있습니다.<br/>
+                                    (<u>취소/환불 금액은 환불 완료된 금액이 표기</u>되므로, 시점에 따라 환불 신청한 금액과는 상이할 수 있습니다.)
+                                </li>
+                            </ul>
+                            <!--10.17 취소/환불 정보 마크업 문구 변경 끝-->
                         </header>
                         <div class="payment-accordion-body">
                             <article class="purchase-info-list-group">
@@ -1306,7 +1375,11 @@
                             <article class="purchase-info-list-group">
                                 <div class="purchase-info-list">
                                     <div class="purchase-info-item">
-                                        <div class="purchase-title color-red strong">취소/환불 금액</div>
+                                        <!--10.17 최종 결제 금액 소득공제 뱃지 추가 시작-->
+                                        <div class="purchase-title color-red strong">
+                                            <span class="flex">취소/환불 금액<span class="badge badge-default">소득공제 취소</span></span>
+                                        </div>
+                                        <!--10.17 최종 결제 금액 소득공제 뱃지 추가 끝-->
                                         <div class="purchase-content color-red strong">19,000원</div>
                                     </div>
                                     <div class="purchase-info-item">

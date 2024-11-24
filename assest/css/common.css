@@ -54,7 +54,7 @@
     /* Super Modern Browsers */
     url("../fonts/Pretendard-Bold.woff") format("woff"),
     /* Modern Browsers */
-    url("../fonts/Pretendard-Boldr.ttf") format("truetype"),
+    url("../fonts/Pretendard-Bold.ttf") format("truetype"),
     /* Safari, Android, iOS */
      url("../fonts/Pretendard-Bold.svg#NotoSansKR") format("svg");
 }
@@ -135,6 +135,9 @@ button {
 
 strong {
     font-family: "Pretendard Bold";
+}
+.block{
+    display: block;
 }
 .scroll-lock {
     overflow: hidden;
@@ -1103,11 +1106,19 @@ img {
     width: 24px;
     height: 24px;
 }
+
 .icon-info-gray {
     display: inline-block;
     background: url("../images/ic-info-gray.svg") no-repeat center center/ contain;
     width: 16px;
     height: 16px;
+}
+.icon-info-gray-02 {
+    display: inline-block;
+    background: url("../images/ic-info-gray-02.svg") no-repeat center center/ contain;
+    width: 24px;
+    height: 24px;
+    margin-top: 3px;
 }
 .icon-copy {
     display: inline-block;
@@ -1475,6 +1486,9 @@ img {
 }
 
 .btn-link {
+    display: flex;
+    align-items: center;
+    gap: 4px;
     font-size: 14px;
     font-weight: 500;
     opacity: 0.5;
@@ -1538,8 +1552,7 @@ img {
 }
 .btn-x-small {
     font-size: 1.4rem;
-    line-height: 34px;
-    padding: 0 12px;
+    padding: 8px 12px;
     border-radius: 4px;
 }
 
@@ -1573,6 +1586,12 @@ img {
     border-radius: 8px;
     box-shadow: 0 4px 6px 0 #C2C1FF;
 }
+.btn-medium-04 {
+    font-size: 1.4rem;
+    line-height: 42px;
+    padding: 0 14px;
+    border-radius: 8px;
+}
 .btn-large {
     font-family: "Pretendard SemiBold";
     font-size: 1.6rem;
@@ -1591,7 +1610,9 @@ img {
     padding: 0 24px;
     border-radius: 8px;
 }
-
+.btn-w-130{
+    min-width: 130px;
+}
 .btn-w-242 {
     min-width: 242px;
 }
@@ -2029,7 +2050,7 @@ img {
 .form-control:focus,
 .form-control:focus-visible {
     outline: none;
-    border-color: var(--primary-color);
+    border: solid 1px var(--primary-color);
     -webkit-transition: all 0.3s cubic-bezier(0, 0.21, 0.03, 1.01);
     -o-transition: all 0.3s cubic-bezier(0, 0.21, 0.03, 1.01);
     transition: all 0.3s cubic-bezier(0, 0.21, 0.03, 1.01);
@@ -2068,7 +2089,9 @@ img {
     border-radius: 5px;
 }
 .form-select {
+    display: inline-block;
     position: relative;
+    cursor: pointer;
 }
 
 .form-select::after {
@@ -2093,6 +2116,7 @@ img {
     appearance: none;
     background: var(--white-color);
     color: var(--black-color);
+    cursor: pointer;
 }
 
 /* picture-upload-group 사진올리기*/
@@ -2538,14 +2562,12 @@ img {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
     justify-content: space-between;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
     align-items: center;
 }
-
+.list-box.both-type.start li {
+    align-items:flex-start;
+}
 .list-box li {
     margin-bottom: 16px;
 }
@@ -2580,9 +2602,12 @@ img {
 .list-box li:last-child {
     margin-bottom: 0;
 }
-
+.list-box li > .content .point-box{
+    margin-top: 8px;
+}
 /* badge */
 .badge {
+    font-family: "Pretendard Regular";
     display: inline-block;
     border-radius: 4px;
     line-height: 20px;
@@ -2618,7 +2643,7 @@ img {
 }
 .badge-default {
     border: 1px solid var(--blue-grey-500);
-    color: var(--blue-grey-500);
+    color: var(--blue-grey-600);
 }
 .badge-black {
     border: 1px solid var(--black-color);
@@ -2712,6 +2737,9 @@ img {
     align-items: center;
     gap: 8px;
 }
+.popup-section .popup-container .popup-header .popup-header-inner{
+    width: 100%;
+}
 .popup-section .popup-container .title {
     font-family: "Pretendard SemiBold";
     font-size: 1.6rem;
@@ -2719,34 +2747,38 @@ img {
     color: var(--black-color);
     width: 100%;
 }
+.popup-section .popup-container .badge-area{
+    margin-bottom: 12px;
+}
 .popup-section .popup-container .popup-body {
     margin-top: 8px;
 }
-/* .popup-section .popup-container .popup-body {
-    overflow: hidden;
-    overflow-y: auto;
-    scroll-behavior: smooth;
-    max-height: 400px;
-    padding-right: 15px;
-    margin-right: -20px;
+.popup-section .popup-container .popup-body .box{
+    background-color: #F6F8F9;
+    padding: 20px 40px;
+    border-radius: 8px;
+ text-align: center;
+ margin-top: 24px;
 }
-.popup-section .popup-container .popup-body::-webkit-scrollbar-track {
-    border-radius: 10px;
-    background-color: transparent;
+.popup-section .popup-container .popup-body .box .text{
+ font-size: 1.2rem;
+ color: var(--gray-color-400);
+ margin-bottom: 8px;
 }
-.popup-section .popup-container .popup-body::-webkit-scrollbar {
-    width: 5px;
-    background-color: transparent;
+.popup-section .popup-container .popup-body .box .id{
+     font-family: "Pretendard SemiBold";
+     font-size: 1.64em;
+     line-height: 20px;
+     color:var(--blue-grey-600);
 }
-
-.popup-section .popup-container .popup-body::-webkit-scrollbar-thumb {
-    border-radius: 10px;
-    background-color: #ddd;
-} */
 .popup-section .popup-container .popup-footer {
     display: flex;
     gap: 8px;
     margin-top: 32px;
+}
+.popup-section .popup-container .popup-footer.column{
+    flex-direction: column;
+    
 }
 .popup-section .popup-container .text {
     font-size: 1.4rem;
@@ -3166,12 +3198,13 @@ img {
 }
 .tab-box li {
     display: inline-block;
-    color: var(--blue-grey-400);
+    color: var(--blue-grey-400 );
     text-align: center;
     font-size: 1.4rem;
     min-width: 66px;
     padding: 8px 12px;
     line-height: 16px;
+    cursor: pointer;
 }
 
 .tab-box li.on {
@@ -3502,6 +3535,23 @@ img {
 }
 .category-list-group .goods-info-box {
     margin-right: 0;
+}
+.category-list-group .goods-info-box .goods-price{
+    display: flex;
+    align-items: center;
+}
+.category-list-group .goods-info-box .goods-price .point-box{
+    display: flex;
+    align-items: center;
+    padding-left:8px;
+}
+.category-list-group .goods-info-box .goods-price .point-box::before{
+    content: '';
+    display: block;
+    width: 1px;
+    height: 12px;
+    margin-right: 8px;
+    background-color: var(--border-primary)
 }
 .category-list-group .category-badges {
     margin-top: 8px;
@@ -3960,7 +4010,7 @@ img {
     }
     .notice-list-group .notice-item {
         display: block;
-        padding: 20px 0;
+        padding: 20px 8px;
     }
     .notice-list-group .notice-item .content-left {
         display: block;

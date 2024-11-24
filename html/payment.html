@@ -1266,30 +1266,105 @@
                             </div>
                         </div>
                     </details>
+                    <!-- 11.27 쿠폰 할인, 포인트/캐시 사용 추가 시작 -->
                     <details class="payment-accordion-group" open>
                         <summary class="payment-accordion-header">
-                            <h3 class="payment-accordion-title">혜택 적용</h3>
+                            <h3 class="payment-accordion-title">쿠폰 할인 </h3>
                             <span class="payment-accordion-content">- 7,500원</span>
                         </summary>
                         <div class="payment-accordion-body">
-                            <div class="discount-coupon-box">
-                                <div class="discount-coupon-left">   
-                                    <div class="discount-coupon-title">                                
-                                        할인쿠폰 
+                            <div class="discount-coupon-group">
+                                <h3 class="payment-accordion-title only-pc">쿠폰 </h3>
+                                <div class="discount-coupon-box">
+                                    <div class="discount-coupon-left">   
+                                        <h3 class="payment-accordion-title only-mobile">쿠폰 </h3>
+                                        <div class="discount-coupon-left-box">
+                                            <div class="discount-coupon-title">                                
+                                                사용 가능
+                                            </div>
+                                            <div class="discount-coupon-total">
+                                                0장
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div class="discount-coupon-total">
-                                        사용가능 <strong>5장</strong>
-                                    </div>
-                                </div>
-                                <div class="discount-coupon-right">   
-                                    <div class="form-group flex">
-                                        <input type="text" class="form-control text-right" value="5000" />
-                                        <button type="button" class="btn btn-primary btn-medium">적용하기</button>
+                                    <div class="discount-coupon-right">   
+                                        <form class="form-group flex">
+                                            <div class="discount-input-box">
+                                                <div class="input-box">
+                                                    <input type="text" class="text-right" placeholder="1,000원 이상 보유 시 사용 가능합니다." />
+                                                    <button type="reset" class="btn btn-transparent"><i class="icon-clear"></i></button>
+                                                </div>
+                                            </div>
+                                            <button type="submit" class="btn btn-black btn-medium-04" disabled>쿠폰 적용</button>
+                                        </form>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </details>
+                    <details class="payment-accordion-group" open>
+                        <summary class="payment-accordion-header">
+                            <h3 class="payment-accordion-title">포인트/캐시 사용</h3>
+                            <span class="payment-accordion-content">- 7,500원</span>
+                        </summary>
+                        <div class="payment-accordion-body">
+                            <div class="discount-coupon-group">
+                                <h3 class="payment-accordion-title only-pc">me포인트</h3>
+                                <div class="discount-coupon-box">
+                                    <div class="discount-coupon-left">   
+                                        <h3 class="payment-accordion-title only-mobile">me포인트</h3>
+                                        <div class="discount-coupon-left-box">
+                                            <div class="discount-coupon-title">                                
+                                                보유
+                                            </div>
+                                            <div class="discount-coupon-total">
+                                                0 원
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="discount-coupon-right">   
+                                        <form class="form-group flex">
+                                            <div class="discount-input-box">
+                                                <div class="input-box">
+                                                    <input type="text" class="text-right" placeholder="1,000원 이상 보유 시 사용 가능합니다." />
+                                                    <button type="reset" class="btn btn-transparent"><i class="icon-clear"></i></button>
+                                                </div>
+                                            </div>
+                                            <button type="submit" class="btn btn-black btn-medium-04" disabled>전액 사용</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="discount-coupon-group">
+                                <h3 class="payment-accordion-title only-pc">me캐시</h3>
+                                <div class="discount-coupon-box">
+                                    <div class="discount-coupon-left">   
+                                        <h3 class="payment-accordion-title only-mobile">me캐시</h3>
+                                        <div class="discount-coupon-left-box">
+                                            <div class="discount-coupon-title">                                
+                                                보유
+                                            </div>
+                                            <div class="discount-coupon-total">
+                                                0 원
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="discount-coupon-right">   
+                                        <form class="form-group flex">
+                                            <div class="discount-input-box">
+                                                <div class="input-box">
+                                                    <input type="text" class="text-right" placeholder="사용 가능한 me캐시가 없습니다." />
+                                                    <button type="reset" class="btn btn-transparent"><i class="icon-clear"></i></button>
+                                                </div>
+                                            </div>
+                                            <button type="submit" class="btn btn-black btn-medium-04" disabled>전액 사용</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </details>
+                    <!-- 11.27 쿠폰 할인, 포인트/캐시 사용 추가 Rmx -->
                     <details class="payment-accordion-group" open>
                         <summary class="payment-accordion-header">
                             <h3 class="payment-accordion-title">결제 수단</h3>
@@ -1315,7 +1390,7 @@
                                 </ul>
                             </div>
                             <!--10.07 결제 안내 마지막 문장 삭제 끝-->
-                            <!--10.07 문화비 소득공제 안내 텍스트 추가 시작-->
+                            <!--10.17 문화비 소득공제 안내 텍스트 추가 시작-->
                             <div class="bg-info-text-box">
                                 <h3 class="info-text-title">문화비 소득공제 안내</h3>
                                 <ul class="info-text-items">
@@ -1329,9 +1404,33 @@
                                     <li class="info-text-item">일부 제휴 카드 및 제휴사를 통해 상품을 주문하시는 경우 문화비 소득공제가 불가할 수 있습니다.</li>
                                 </ul>
                             </div>
-                            <!--10.07 문화비 소득공제 안내 텍스트 추가 끝-->
+                            <!--10.17 문화비 소득공제 안내 텍스트 추가 끝-->
                         </div>
                     </details>
+                    <!--11.27 메가스터디 회원 인증 시작-->
+                    <div class="agree-checks-group">
+                        <div class="flex">
+                            <div class="checks black agree-checks">
+                                <input type="checkbox" id="agree" class="check" value="agree" />
+                                <label for="agree" class="label-check"><span>아래 비타민교재 구매 유의사항을 확인하였으며, 내용에 모두 동의합니다. (필수)</span></label>
+                            </div>
+                            <!-- <a href="#" class="btn btn-maga">메가스터디 회원 인증</a> -->
+                            <a href="#" class="btn btn-maga disabled">메가스터디 회원 인증 완료</a>
+                        </div>
+                        <div class="terms-group">
+                            <div class="terms style-02 scroll">
+                                <ul class="info-text-items">
+                                    <li class="info-text-item">메가스터디 회원 인증 시, 구매한 메가스터디 비타민 교재의 ‘학습 QA 서비스(메가스터디 > 선생님(저자) 홈 > FAQ 게시판 > 교재 질문)’를 이용하실 수 있습니다.</li>
+                                    <li class="info-text-item">결제/구매 신청 시점 기준, 미북 App에 가장 최근 로그인한 메가스터디 계정이 비타민 교재와 자동 연결되며, 기 인증된 계정이 없을 시 [인증하기] 버튼을 통해 로그인한 계정이 자동 연결됩니다. (단, 미북 계정과 메가스터디 계정의 이름이 일치해야 인증 가능)</li>
+                                    <li class="info-text-item">구매한 비타민 교재와 연결된 메가스터디 계정은 결제 후 수정할 수 없습니다. </li>
+                                    <li class="info-text-item">비타민 교재 최초 구매 시 미북 App에서 연결한 메가스터디 계정이 있다면, 이후 해당 계정이 비타민 교재와 연결됩니다.</li>
+                                    <li class="info-text-item">미북스토어에서 인증한 메가스터디 계정이 있다면, 이후 해당 계정이 비타민 교재와 연결됩니다.<br/> (미북 App에서 다른 메가스터디 계정을 연결했다고 하더라도 스토어에서 연결한 계정이 우선 순위)</li>
+                                    <li class="info-text-item">결제 시점까지 연결한 계정이 없을 시 메가스터디 ‘학습 QA 서비스’ 이용이 제한됩니다. <br/> (연결한 메가스터디 계정이 없을 시, 구매내역 조회에서 1회에 한해 일괄 연결 가능)</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!--11.27 메가스터디 회원 인증 끝-->
                     <div class="agree-checks-group">
                         <div class="checks black agree-checks">
                             <input type="checkbox" id="agree" class="check" value="agree" />
@@ -1354,6 +1453,7 @@
                     <div class="price-info-list-group scroll">
                         <header class="price-info-list-header">
                             <h3 class="price-info-list-title">결제정보</h3>
+                            <div>50,800원</div>
                         </header>
                         <ul class="price-info-list">
                             <li class="price-info-item">
@@ -1381,15 +1481,25 @@
                                 <div class="price-info-content">1,000P</div>
                             </li>
                         </ul>
+                        <header class="price-info-list-header">
+                            <h3 class="price-info-list-title">적립 혜택</h3>
+                            <div>50,800원</div>
+                        </header>
+                        <ul class="price-info-list">
+                            <li class="price-info-item">
+                                <div class="price-info-title">구매 적립</div>
+                                <div class="price-info-content">19,000원</div>
+                            </li>
+                            <li class="price-info-item">
+                                <div class="price-info-title">리뷰 적립</div>
+                                <div class="price-info-content color-red">작성 시 최대 -6,000원</div>
+                            </li>
+                        </ul>
                     </div>
                 </div>
                 <div class="bottom-sheet-footer">
-                    <div class="total-price-group">
-                        <div class="total-price-title">총 결제 금액 </div>
-                        <div class="total-price-conent color-primary">36,500원</div>
-                    </div>
                     <div class="btn-area">
-                        <button type="button" class="btn btn-primary btn-full btn-large" disabled>결제하기</button>
+                        <button type="button" class="btn btn-primary btn-full btn-large" disabled>50,800원 결제하기</button>
                     </div>
                 </div>
             </section>

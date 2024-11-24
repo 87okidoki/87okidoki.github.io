@@ -1170,7 +1170,9 @@
                         </div>
                         <article class="goods-list-group purchase">
                             <header class="goods-list-header">
-                                <span class="goods-list-title">e-Book</span>
+                                <!--10.17 e-Book → ‘eBook’으로 수정 시작-->
+                                <span class="goods-list-title">eBook</span>
+                                <!--10.17 e-Book → ‘eBook’으로 수정 끝-->
                             </header>
                             <ul class="goods-list">
                                 <li class="goods-list-item">
@@ -1366,12 +1368,12 @@
                             <article class="purchase-info-list-group">
                                 <div class="purchase-info-list">
                                     <div class="purchase-info-item">
-                                        <div class="purchase-title color-primary strong">최종 결제 금액</div>
+                                        <!--10.17 최종 결제 금액 소득공제 뱃지 추가 시작-->
+                                        <div class="purchase-title color-primary strong">
+                                            <span class="flex">최종 결제 금액<span class="badge badge-default">소득공제</span></span>
+                                        </div>
+                                        <!--10.17 최종 결제 금액 소득공제 뱃지 추가 끝-->
                                         <div class="purchase-content color-primary strong">35,000원</div>
-                                    </div>
-                                    <div class="purchase-info-item">
-                                        <div class="purchase-title">신한 카드 (2024.03.05 04:15)</div>
-                                        <div class="purchase-content">34,000원</div>
                                     </div>
                                     <div class="purchase-info-item">
                                         <div class="purchase-title">신한 카드 (2024.03.05 04:15)</div>
@@ -1420,7 +1422,11 @@
                             <article class="purchase-info-list-group">
                                 <div class="purchase-info-list">
                                     <div class="purchase-info-item">
-                                        <div class="purchase-title color-red strong">취소/환불 금액</div>
+                                        <!--10.17 최종 결제 금액 소득공제 뱃지 추가 시작-->
+                                        <div class="purchase-title color-red strong">
+                                            <span class="flex">취소/환불 금액<span class="badge badge-default">소득공제 취소</span></span>
+                                        </div>
+                                        <!--10.17 최종 결제 금액 소득공제 뱃지 추가 끝-->
                                         <div class="purchase-content color-red strong">19,000원</div>
                                     </div>
                                     <div class="purchase-info-item">
@@ -1478,7 +1484,9 @@
                             <article class="purchase-info-list-group">
                                 <div class="purchase-info-list">
                                     <div class="purchase-info-item">
-                                        <div class="purchase-title color-primary strong">최종 결제 금액</div>
+                                        <div class="purchase-title color-primary strong">
+                                            최종 결제 금액
+                                        </div>
                                         <div class="purchase-content color-primary strong">35,000원</div>
                                     </div>
                                     <div class="purchase-info-item">
@@ -1507,27 +1515,31 @@
                         </div>
                     </section>
                     <!--결제 정보 무통장 입금 끝-->
-                    <!--10.07 문화비 소득공제 시작-->
+                    <!--11.27포인트 혜택 시작-->
                     <section class="payment-accordion-group un-accordion">
-                        <header class="payment-accordion-header">
-                            <h3 class="payment-accordion-title">문화비 소득공제</h3>
+                        <header class="payment-accordion-header un-flex">
+                            <h3 class="payment-accordion-title">포인트 혜택</h3>
                         </header>
                         <div class="payment-accordion-body">
-                            <article class="purchase-info-list-group">
-                                <div class="purchase-info-list none-bg">
+                            <article class="purchase-info-list-group info">
+                                <div class="purchase-info-list">
                                     <div class="purchase-info-item">
-                                        <div class="purchase-title">신용/체크카드, 간편결제</div>
-                                        <div class="purchase-content">40,000원</div>
+                                        <div class="purchase-title strong">me포인트 적립</div>
+                                        <div class="purchase-content strong">최대 1,695원</div>
                                     </div>
                                     <div class="purchase-info-item">
-                                        <div class="purchase-title">현금 결제</div>
-                                        <div class="purchase-content">0원</div>
+                                        <div class="purchase-title">구매 적립</div>
+                                        <div class="purchase-content">20,000원</div>
+                                    </div>
+                                    <div class="purchase-info-item">
+                                        <div class="purchase-title">최대 리뷰 적립</div>
+                                        <div class="purchase-content">20,000원</div>
                                     </div>
                                 </div>
                             </article>
                         </div>
                     </section>
-                    <!--10.07 문화비 소득공제 끝-->
+                    <!--11.27 포인트 혜택 끝-->
                     <!--7.29 버튼추가 시작-->
                     <div class="payment-btns-group">
                         <button type="button" class="btn btn-x-small btn-secondary">

@@ -20,13 +20,16 @@ function adjustFooterPadding() {
   const $sheet = $("#sheet");
   const $footer = $(".footer-section");
   const $floatingBtns = $("#floatingBtns");
+  const $floatingBanner = $("#floatingBanner");
 
   const sheetHeight = $sheet.outerHeight();
   if ($sheet.css("display") === "block") {
     $footer.css("padding-bottom", sheetHeight + "px");
     $floatingBtns.css("bottom", sheetHeight + "px");
+    $floatingBanner.css("bottom", sheetHeight + "px");
   } else {
     $footer.css("padding-bottom", "");
     $floatingBtns.css("bottom", "");
+    $floatingBanner.css("bottom", "");
   }
 }
