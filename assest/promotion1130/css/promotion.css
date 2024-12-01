@@ -76,6 +76,7 @@
     position: sticky;
     top: 140px;
     width: 100%;
+    padding: 0 40px;
 }
 @media screen and (max-width:767px) {
     .scroll-text-container .scroll-text.text-01 {
@@ -85,6 +86,7 @@
         font-size: 6rem;
     }
     .main-video-box-wrap{
+        padding: 0 0px;
         top: calc(11.1881188119vh + 4.25rem);
         display: flex;
         -webkit-box-orient: vertical;
@@ -103,7 +105,7 @@
     background: url("../images/bg-main-promotion-pc.png") no-repeat bottom center / cover;
     width: 100%;
     text-align: center;
-    padding-top: 160px;
+    padding-top: 96px;
     padding-bottom: 140px;
     position: relative;
     /* background-color: #fff; */
@@ -170,14 +172,14 @@
 .promotion-header-section .promotion-main-title {
     position: relative;
     margin:0 auto 34px;
-    max-width: 808px;
+    max-width: 960px;
 }
 
 .promotion-header-section .promotion-main-title .img-title {
-    max-width: 808px;
+    max-width: 960px;
     margin: 0 auto;
 }
-.promotion-header-section .promotion-main-title::after{     
+/* .promotion-header-section .promotion-main-title::after{     
     content: '';     
     background: url("../images/img-badge-open.png") no-repeat center center / contain;     
     display: inline-block;     
@@ -186,7 +188,7 @@
     position: absolute; 
     right: -40px;
     top: -60px;
-}
+} */
 .promotion-header-section .promotion-main-text{
     font-size: 2.6rem;
     line-height: 39px;

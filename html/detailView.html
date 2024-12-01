@@ -1179,11 +1179,13 @@
                 <!--상세페이지 메인 시작-->
                 <section class="detail-main-section">
                     <div class="container-inner">
-                        <div class="book-thumb-area badge-special large">
+                        <!--12.01 응시 스페셜 뱃지  badge-test시작-->
+                        <div class="book-thumb-area badge-test large">
                             <div class="book-thumb">
                                 <img src="../assest/images/img-book-dummy-01.png" alt="" />
                             </div>
                         </div>
+                        <!--12.01 응시 스페셜 뱃지  badge-test끝-->
                         <div class="book-btns-area">
                             <button type="button" class="btn btn-option"><span class="icon-preview"></span><span
                                     class="text">미리보기</span></button>
@@ -1340,7 +1342,7 @@
                                         <div class="blind">배경</div>
                                     </div>
                                 </div>
-                                <!--11.27 시험 응시 추가 시작-->
+                                <!--12.01 시험 응시 추가 시작-->
                                 <div class="chip-box player">
                                     <button type="button" class="chip"><span class="chip-inner"><span class="text">시험 응시</span><span class="icon-test"></span></span>
                                     </button>
@@ -1355,8 +1357,7 @@
                                         <div class="blind">배경</div>
                                     </div>
                                 </div>
-                      
-                                <!--11.27 시험 응시 추가 끝-->
+                                <!--12.01 시험 응시 추가 끝-->
                             </div>
                             <!--9.10 스페셜 말풍선 ui 추가 및 수정 끝-->
                         </article>
@@ -1415,7 +1416,7 @@
                                         <div class="content"><strong class="discount">50%</strong><strong
                                                 class="discount-price">4,000원</strong></div>
                                     </li>
-                                    <!-- 11.27 me포인트 상세 추가 시작 -->
+                                    <!--12.01 me포인트 상세 추가 시작 -->
                                     <li class="book-info-list-item">
                                         <div class="title">me포인트
                                             <div class="info-group">
@@ -1442,7 +1443,7 @@
                                             </details>
                                         </div>
                                     </li>
-                                    <!-- 11.27 me포인트 상세 추가 끝 -->
+                                    <!--12.01 me포인트 상세 추가 끝 -->
                                 </ul>
                                 <!--10.07 가격단 하단의 전자책/ 디지털굿즈 상품 공통 유의사항 문구 시작-->
                                 <div class="notice-text">
@@ -1487,7 +1488,7 @@
                                         <div class="content"><strong class="discount">10%</strong><strong
                                                 class="discount-price">9,000원</strong></div>
                                     </li>
-                                    <!-- 11.27 me포인트 상세 추가 시작 -->
+                                    <!--12.01 me포인트 상세 추가 시작 -->
                                     <li class="book-info-list-item">
                                         <div class="title">me포인트
                                             <div class="info-group">
@@ -1514,7 +1515,7 @@
                                             </details>
                                         </div>
                                     </li>
-                                    <!-- 11.27 me포인트 상세 추가 끝 -->
+                                    <!--12.01 me포인트 상세 추가 끝 -->
                                 </ul>
                                 <!--10.07 가격단 하단의 전자책/ 디지털굿즈 상품 공통 유의사항 문구 시작-->
                                 <div class="notice-text">
@@ -1556,7 +1557,7 @@
                                         <div class="content"><strong class="discount">10%</strong><strong class="discount-price">9,000원</strong>
                                         </div>
                                     </li>
-                                    <!-- 11.27 me포인트 상세 추가 시작 -->
+                                    <!--12.01 me포인트 상세 추가 시작 -->
                                     <li class="book-info-list-item">
                                         <div class="title">me포인트
                                             <div class="info-group">
@@ -1583,7 +1584,7 @@
                                             </details>
                                         </div>
                                     </li>
-                                    <!-- 11.27 me포인트 상세 추가 끝 -->
+                                    <!--12.01 me포인트 상세 추가 끝 -->
                                 </ul>
                                 <!--10.07 가격단 하단의 전자책/ 디지털굿즈 상품 공통 유의사항 문구 시작-->
                                 <div class="notice-text">
@@ -2247,7 +2248,7 @@
                     <div class="floating-info-box">
                         <p class="text">공백 제외 <strong>최대 20자까지만</strong> 등록 가능합니다</p>
                     </div>
-                    <button type="button" class="btn-close"><span class="blind">닫기</span></button>
+                    <button type="button" class="btn-close" id="floatingBannerClose"><span class="blind">닫기</span></button>
                 </div>
                 <div class="floating-btns" id="floatingBtns">
                     <div class="btn-top-scroll-area" id="btnTopScroll">
@@ -2395,6 +2396,43 @@
         if ($tabBarGroupslides.length === 2) {
             $tabBarGroupWrapper.addClass('fixed-width');
         }
+
+        
+        //12.01 플로팅 버튼 스크립트 추가 시작
+        const $floatingBanner = $("#floatingBanner");
+        const $floatingBtns = $("#floatingBtns");
+        const $floatingBannerClose = $floatingBanner.find("#floatingBannerClose");
+
+        // 닫기 버튼 클릭 시 배너 숨김 처리
+        $floatingBannerClose.on("click", function () {
+            $floatingBanner.hide(); // 배너 숨김
+            $floatingBtns.show();   // 플로팅 버튼 표시
+        });
+
+        // 윈도우 크기나 스크롤 이벤트에 따라 상태 갱신
+        $(window).on("scroll resize", function () {
+            toggleFloatingBtns();
+        });
+
+        function toggleFloatingBtns() {
+            const isMobile = window.innerWidth <= 729; // 해상도 729px 이하 확인
+            const bannerVisible = $floatingBanner.is(":visible") && isElementInViewport($floatingBanner);
+
+            if (isMobile && bannerVisible) {
+            $floatingBtns.hide(); // 플로팅 버튼 숨김
+            } else {
+            $floatingBtns.show(); // 플로팅 버튼 표시
+            }
+        }
+
+        function isElementInViewport($element) {
+            const rect = $element[0].getBoundingClientRect();
+            return rect.top < window.innerHeight && rect.bottom > 0;
+        }
+
+        // 초기 상태 설정
+        toggleFloatingBtns();
+        //12.01 플로팅 버튼 스크립트 추가 끝
     });
  </script>
 </html>

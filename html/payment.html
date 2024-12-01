@@ -1179,11 +1179,13 @@
                                     <li class="goods-list-item">
                                         <div class="goods-list-left">
                                             <a class="thumb-item" href="#">
-                                                <div class="book-thumb-area badge-special small">
+                                                <!--12.01 응시 스페셜 뱃지  badge-test시작-->
+                                                <div class="book-thumb-area badge-test small">
                                                     <div class="book-thumb">
                                                         <img src="../assest/images/img-book-dummy-01.png" alt="" />
                                                     </div>
                                                 </div>
+                                                <!--12.01 응시 스페셜 뱃지  badge-test끝-->
                                             </a>
                                             <div class="goods-info-box">
                                                 <div class="badge-area">
@@ -1266,7 +1268,7 @@
                             </div>
                         </div>
                     </details>
-                    <!-- 11.27 쿠폰 할인, 포인트/캐시 사용 추가 시작 -->
+                    <!--12.01 쿠폰 할인, 포인트/캐시 사용 추가 시작 -->
                     <details class="payment-accordion-group" open>
                         <summary class="payment-accordion-header">
                             <h3 class="payment-accordion-title">쿠폰 할인 </h3>
@@ -1364,7 +1366,7 @@
                             </div>
                         </div>
                     </details>
-                    <!-- 11.27 쿠폰 할인, 포인트/캐시 사용 추가 Rmx -->
+                    <!--12.01 쿠폰 할인, 포인트/캐시 사용 추가 Rmx -->
                     <details class="payment-accordion-group" open>
                         <summary class="payment-accordion-header">
                             <h3 class="payment-accordion-title">결제 수단</h3>
@@ -1407,7 +1409,7 @@
                             <!--10.17 문화비 소득공제 안내 텍스트 추가 끝-->
                         </div>
                     </details>
-                    <!--11.27 메가스터디 회원 인증 시작-->
+                    <!--12.01 메가스터디 회원 인증 시작-->
                     <div class="agree-checks-group">
                         <div class="flex">
                             <div class="checks black agree-checks">
@@ -1430,7 +1432,7 @@
                             </div>
                         </div>
                     </div>
-                    <!--11.27 메가스터디 회원 인증 끝-->
+                    <!--12.01 메가스터디 회원 인증 끝-->
                     <div class="agree-checks-group">
                         <div class="checks black agree-checks">
                             <input type="checkbox" id="agree" class="check" value="agree" />
@@ -1443,58 +1445,62 @@
                     </div>
                 </section>
             </div>
-            <!--7.29 바텀 시트 수정 시작-->
+            <!--12.01 바텀 시트 수정 시작-->
             <!--카드 팝업 시작-->
-            <section class="bottom-sheet-popup handler" id="sheet">
+            <section class="bottom-sheet-popup handler none-total" id="sheet">
                 <button type="button" class="handler-area">
                     <span class="handler-bar"><span class="blind">핸들러</span></span>
                 </button>
                 <div class="bottom-sheet-body">
                     <div class="price-info-list-group scroll">
-                        <header class="price-info-list-header">
-                            <h3 class="price-info-list-title">결제정보</h3>
-                            <div>50,800원</div>
-                        </header>
-                        <ul class="price-info-list">
-                            <li class="price-info-item">
-                                <div class="price-info-title">총 상품 금액</div>
-                                <div class="price-info-content">19,000원</div>
-                            </li>
-                            <li class="price-info-item">
-                                <div class="price-info-title">즉시 할인</div>
-                                <div class="price-info-content color-red">-6,000원</div>
-                            </li>
-                            <li class="price-info-item">
-                                <div class="price-info-title">쿠폰 할인</div>
-                                <div class="price-info-content color-red">-500원</div>
-                            </li>
-                            <li class="price-info-item">
-                                <div class="price-info-title">신용카드</div>
-                                <div class="price-info-content">35,500원</div>
-                            </li>
-                            <li class="price-info-item">
-                                <div class="price-info-title">me포인트 사용</div>
-                                <div class="price-info-content">1,000P</div>
-                            </li>
-                            <li class="price-info-item">
-                                <div class="price-info-title">me포인트 적립</div>
-                                <div class="price-info-content">1,000P</div>
-                            </li>
-                        </ul>
-                        <header class="price-info-list-header">
-                            <h3 class="price-info-list-title">적립 혜택</h3>
-                            <div>50,800원</div>
-                        </header>
-                        <ul class="price-info-list">
-                            <li class="price-info-item">
-                                <div class="price-info-title">구매 적립</div>
-                                <div class="price-info-content">19,000원</div>
-                            </li>
-                            <li class="price-info-item">
-                                <div class="price-info-title">리뷰 적립</div>
-                                <div class="price-info-content color-red">작성 시 최대 -6,000원</div>
-                            </li>
-                        </ul>
+                        <div class="price-info-list-box">
+                            <header class="price-info-list-header">
+                                <h3 class="price-info-list-title">결제정보</h3>
+                                <div class="price-info-list-content total-price">50,800원</div>
+                            </header>
+                            <ul class="price-info-list">
+                                <li class="price-info-item">
+                                    <div class="price-info-title">총 상품 금액</div>
+                                    <div class="price-info-content">19,000원</div>
+                                </li>
+                                <li class="price-info-item">
+                                    <div class="price-info-title">즉시 할인</div>
+                                    <div class="price-info-content color-red">-6,000원</div>
+                                </li>
+                                <li class="price-info-item">
+                                    <div class="price-info-title">쿠폰 할인</div>
+                                    <div class="price-info-content color-red">-500원</div>
+                                </li>
+                                <li class="price-info-item">
+                                    <div class="price-info-title">신용카드</div>
+                                    <div class="price-info-content">35,500원</div>
+                                </li>
+                                <li class="price-info-item">
+                                    <div class="price-info-title">me포인트 사용</div>
+                                    <div class="price-info-content">1,000P</div>
+                                </li>
+                                <li class="price-info-item">
+                                    <div class="price-info-title">me포인트 적립</div>
+                                    <div class="price-info-content">1,000P</div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="price-info-list-box">
+                            <header class="price-info-list-header">
+                                <h3 class="price-info-list-title">결제정보</h3>
+                                <div class="price-info-list-content">50,800원</div>
+                            </header>
+                            <ul class="price-info-list">
+                                <li class="price-info-item">
+                                    <div class="price-info-title">구매 적립</div>
+                                    <div class="price-info-content">19,000원</div>
+                                </li>
+                                <li class="price-info-item">
+                                    <div class="price-info-title">리뷰 적립</div>
+                                    <div class="price-info-content"><span class="guide-text">작성 시 최대</span> 300원</span></div>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
                 <div class="bottom-sheet-footer">
@@ -1504,7 +1510,7 @@
                 </div>
             </section>
             <!--카드 팝업 끝-->
-            <!--7.29 바텀 시트 수정 끝-->
+            <!--12.01 바텀 시트 수정 끝-->
             <!--8.8 푸터 일부 텍스트& 이미지 &버튼 수정 추가 시작-->
             <!--푸터 시작-->
             <footer class="footer-section">
@@ -1521,7 +1527,7 @@
                                 <div class="swiper-slide"><a href="#" class="link-text">1:1 문의</a></div>
                             </div>
                         </div>
-                    </div>
+                    </div> 
                 </div>
                 <div class="container-inner">
                     <a href="#" class="logo">
