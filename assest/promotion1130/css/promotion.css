@@ -10,12 +10,12 @@
     color: #fff;
     text-align: center;
     z-index: 90;
+    font-family: "Pretendard ExtraLight";
 }
 .fixed-banner-group > .btn-link{
     color: #C9D0FF;
     font-size: 1.6rem;
-    color: #fff;
-    font-family: "Pretendard Bold";
+    font-family: "Pretendard ExtraBold";
     display: inline-block;
     margin-left: 12px;
 }
@@ -59,7 +59,7 @@
     width: fit-content;
     font-size: 12rem;
     color: rgba(255, 255, 255, .2);
-    font-family: "Pretendard Bold";
+    font-family: "Pretendard ExtraBold";
 }
 .scroll-text-container .scroll-text.text-01 {
     margin-top: 37.34375%;
@@ -156,7 +156,7 @@
     display: inline-block;
     margin-top: 55px;
     padding-left: 10px;
-    font-family: "Pretendard Light";
+    font-family: "Pretendard ExtraLight";
     font-size: 1.6rem;
     line-height: 24px;
     color: var(--blue-grey-50);
@@ -210,19 +210,21 @@
     }
     .promotion-header-section .promotion-main-title {
         width: 280px;
+        margin-bottom: 24px;
     }
     .promotion-header-section .promotion-main-title::after{
         display: none;
     }
     .promotion-header-section .promotion-main-title .img-title {
         width: 280px;
-        padding: 0 20px;
-        margin: 0 auto;
     }
     .promotion-header-section .promotion-main-text{
         font-size: 1.6rem;
         line-height: 24px;
         margin-top: 24px;
+        width: 280px;
+        margin: 0 auto;
+        text-align: left;
     }
     .promotion-header-section .main-video-box{
         margin-top: 80px;
@@ -261,7 +263,7 @@
 }
 .promotion-header .sub-title {
    color: var(--blue-grey-700);
-    font-family: "Pretendard Light";
+    font-family: "Pretendard ExtraLight";
     font-size: 2.4rem;
     font-style: normal;
     line-height: 150%;
@@ -269,11 +271,11 @@
     margin-bottom: 24px;
 }
 .promotion-header .sub-title >strong {
-    font-family: "Pretendard Bold";
+    font-family: "Pretendard ExtraBold";
 }
 .promotion-header .promotion-title {
     position: relative;
-    font-family: "Pretendard Bold";
+    font-family: "Pretendard ExtraBold";
     font-size: 5.2rem;
     line-height: 67px;
     /* 130% */
@@ -308,7 +310,7 @@
     margin: 0 auto;
 }
 .event-info-box .event-info-title {
-    font-family: "Pretendard Bold";
+    font-family: "Pretendard ExtraBold";
     font-size: 2rem;
     line-height: 27px;
     color: var(--blue-grey-700);
@@ -360,7 +362,7 @@
     color: var(--blue-grey-600);
 }
 .event-info-box .event-info-item .content > .bold {
-    font-family: "Pretendard Bold";
+    font-family: "Pretendard ExtraBold";
     color: var(--blue-grey-700);
 }
 @media screen and (max-width:767px) {
@@ -423,7 +425,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    font-family: "Pretendard Bold";
+    font-family: "Pretendard ExtraBold";
     color: var(--white-color);
     font-size: 1.6rem;
     padding: 16px;
@@ -498,7 +500,7 @@
     height: 86px;
 }
 .intro-section .btn-tab-promo.active {
-    font-family: "Pretendard Bold";
+    font-family: "Pretendard ExtraBold";
     background: #4E32F6;
     color: var(--white-color);
 }
@@ -539,14 +541,14 @@
     margin: 64px auto 0;
 }
 .intro-section .video-info-box .title {
-    font-family: "Pretendard Bold";
+    font-family: "Pretendard ExtraBold";
     font-size: 3.2rem;
     line-height: 100%;
     color: var(--black-color);
     margin-bottom: 20px;
 }
 .intro-section .video-info-box .text {
-    font-family: "Pretendard Light";
+    font-family: "Pretendard ExtraLight";
     font-size: 2rem;
     color: var(--black-color);
     letter-spacing: -0.35px;
@@ -626,7 +628,7 @@
     color: var(--blue-grey-700);
 }
 .book-swiper-section .app-down-box .info-text > .bold {
-    font-family: "Pretendard Bold";
+    font-family: "Pretendard ExtraBold";
 }
 .book-swiper-section .app-down-box .btn-app-downs {
     display: flex;
@@ -725,7 +727,7 @@
 }
 
 .book-list-section .book-list-box {
-    margin-top: 82px;
+    margin-top: 48px;
 }
 .book-list-section .tabs-promo-black {
     display: flex;
@@ -855,7 +857,7 @@
 }
 .banner-line-section .banner-board-group .banner-board-text .sub-title{
     position: relative;
-    font-family: "Pretendard Light";
+    font-family: "Pretendard ExtraLight";
     font-size: 2rem;
     line-height: 20px;
     margin-bottom: 12px;
@@ -884,6 +886,9 @@
 
 }
 @media screen and (max-width:767px) {
+    .banner-line-section{
+        padding: 40px 0px 0px;
+    }
     .banner-line-section .banner-board-group{
         padding: 0px 0px 0px 24px;
         height: 120px;
@@ -960,7 +965,7 @@
 }
 .event-first-section .first-info-list-box .first-info-item .text-area{
     padding: 20px 32px 32px;
-    font-family: "Pretendard Light" ;
+    font-family: "Pretendard ExtraLight" ;
     font-size: 2rem;
     line-height: 30px;
     color: var(--blue-grey-700);
@@ -982,8 +987,9 @@
     .event-first-section .first-info-list-box .first-info-item{
         display: flex;
         align-items: center;
-        margin-bottom: 20px;
+        margin-bottom: 16px;
         margin-top: 0px;
+        border-radius: 12px;
     }
     .event-first-section .first-info-list-box .first-info-item .text-area{
         order: 1;
@@ -1059,7 +1065,7 @@
     color: #A969F7;
 }
 .event-second-section .second-info-items .second-info-item .text-area .title{
-    font-family: "Pretendard Bold";
+    font-family: "Pretendard ExtraBold";
     font-size: 3.2rem;
     line-height: 42px;
     margin-bottom: 20px;
@@ -1140,7 +1146,7 @@
 .event-third-section .exam-box .info-text {
     position: relative;
     margin-top: 40px;
-    font-family: "Pretendard Light";
+    font-family: "Pretendard ExtraLight";
     font-size: 1.8rem;
     line-height: 2.7rem;
     text-align: center;
@@ -1168,7 +1174,7 @@
 }
 
 .event-third-section .exam-box .exam-item-title {
-    font-family: "Pretendard Bold";
+    font-family: "Pretendard ExtraBold";
     font-size: 2.4rem;
     margin-top: 24px;
     margin-bottom: 32px;
@@ -1245,7 +1251,7 @@
 .event-fourth-section .info-text{
     font-size: 3.2rem;
     line-height: 48px;
-    font-family: "Pretendard Bold";
+    font-family: "Pretendard ExtraBold";
     color: var(--white-color);
 }
 .event-fourth-section .btn-area {
@@ -1628,7 +1634,7 @@
     line-height: 24px;
 }
 .popup-section.check-list .price {
-    font-family: "Pretendard Bold";
+    font-family: "Pretendard ExtraBold";
     font-size: 2rem;
     line-height: 24px;
     text-decoration: none;

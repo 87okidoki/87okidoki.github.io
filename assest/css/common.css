@@ -42,6 +42,40 @@
 
 /* font */
 @font-face {
+    font-family: "Pretendard ExtraBold";
+    font-style: normal;
+    font-weight: 800;
+    src: url("../fonts/Pretendard-ExtraBold.eot");
+    /* Legacy iOS */
+    /* IE9 Compat Modes */
+    src:local(""), url("../fonts/Pretendard-ExtraBold.eot?#iefix") format("embedded-opentype"),
+    /* IE6-IE8 */
+    url("../fonts/Pretendard-ExtraBold.woff2") format("woff2"),
+    /* Super Modern Browsers */
+    url("../fonts/Pretendard-ExtraBold.woff") format("woff"),
+    /* Modern Browsers */
+    url("../fonts/Pretendard-ExtraBold.ttf") format("truetype"),
+    /* Safari, Android, iOS */
+     url("../fonts/Pretendard-ExtraBold.svg#NotoSansKR") format("svg");
+}
+@font-face {
+    font-family: "Pretendard ExtraLight";
+    font-style: normal;
+    font-weight: 200;
+    src: url("../fonts/Pretendard-ExtraLight.eot");
+    /* Legacy iOS */
+    /* IE9 Compat Modes */
+    src:local(""), url("../fonts/Pretendard-ExtraLight.eot?#iefix") format("embedded-opentype"),
+    /* IE6-IE8 */
+    url("../fonts/Pretendard-ExtraLight.woff2") format("woff2"),
+    /* Super Modern Browsers */
+    url("../fonts/Pretendard-ExtraLight.woff") format("woff"),
+    /* Modern Browsers */
+    url("../fonts/Pretendard-ExtraLight.ttf") format("truetype"),
+    /* Safari, Android, iOS */
+     url("../fonts/Pretendard-ExtraLight.svg#NotoSansKR") format("svg");
+}
+@font-face {
     font-family: "Pretendard Bold";
     font-style: normal;
     font-weight: 700;
@@ -92,7 +126,7 @@
     /* Modern Browsers */
     url("../fonts/Pretendard-Regular.ttf") format("truetype"),
     /* Safari, Android, iOS */
-     url("../fonts/Pretendard-Regular.svg") format("svg");
+     url("../fonts/Pretendard-Regular.svg") format("svg"))));
 }
 
 @font-face {
@@ -110,7 +144,7 @@
     /* Modern Browsers */
     url("../fonts/Pretendard-Light.ttf") format("truetype"),
     /* Safari, Android, iOS */
-     url("../fonts/Pretendard-Light.svg") format("svg");
+     url("../fonts/Pretendard-Light.svg") format("svg"))));
 }
 
 /* reset */
@@ -136,7 +170,7 @@ button {
 strong {
     font-family: "Pretendard Bold";
 }
-.block{
+.block {
     display: block;
 }
 .scroll-lock {
@@ -1610,7 +1644,7 @@ img {
     padding: 0 24px;
     border-radius: 8px;
 }
-.btn-w-130{
+.btn-w-130 {
     min-width: 130px;
 }
 .btn-w-242 {
@@ -2566,7 +2600,7 @@ img {
     align-items: center;
 }
 .list-box.both-type.start li {
-    align-items:flex-start;
+    align-items: flex-start;
 }
 .list-box li {
     margin-bottom: 16px;
@@ -2602,7 +2636,7 @@ img {
 .list-box li:last-child {
     margin-bottom: 0;
 }
-.list-box li > .content .point-box{
+.list-box li > .content .point-box {
     margin-top: 8px;
 }
 /* badge */
@@ -2737,7 +2771,7 @@ img {
     align-items: center;
     gap: 8px;
 }
-.popup-section .popup-container .popup-header .popup-header-inner{
+.popup-section .popup-container .popup-header .popup-header-inner {
     width: 100%;
 }
 .popup-section .popup-container .title {
@@ -2747,38 +2781,38 @@ img {
     color: var(--black-color);
     width: 100%;
 }
-.popup-section .popup-container .badge-area{
+.popup-section .popup-container .badge-area {
     margin-bottom: 12px;
 }
 .popup-section .popup-container .popup-body {
     margin-top: 8px;
 }
-.popup-section .popup-container .popup-body .box{
+.popup-section .popup-container .popup-body .box {
     background-color: #F6F8F9;
     padding: 20px 40px;
     border-radius: 8px;
- text-align: center;
- margin-top: 24px;
+    text-align: center;
+    margin-top: 24px;
 }
-.popup-section .popup-container .popup-body .box .text{
- font-size: 1.2rem;
- color: var(--gray-color-400);
- margin-bottom: 8px;
+.popup-section .popup-container .popup-body .box .text {
+    font-size: 1.2rem;
+    color: var(--gray-color-400);
+    margin-bottom: 8px;
 }
-.popup-section .popup-container .popup-body .box .id{
-     font-family: "Pretendard SemiBold";
-     font-size: 1.64em;
-     line-height: 20px;
-     color:var(--blue-grey-600);
+.popup-section .popup-container .popup-body .box .id {
+    font-family: "Pretendard SemiBold";
+    font-size: 1.64em;
+    line-height: 20px;
+    color: var(--blue-grey-600);
 }
 .popup-section .popup-container .popup-footer {
     display: flex;
     gap: 8px;
     margin-top: 32px;
 }
-.popup-section .popup-container .popup-footer.column{
+.popup-section .popup-container .popup-footer.column {
     flex-direction: column;
-    
+
 }
 .popup-section .popup-container .text {
     font-size: 1.4rem;
@@ -3198,7 +3232,7 @@ img {
 }
 .tab-box li {
     display: inline-block;
-    color: var(--blue-grey-400 );
+    color: var(--blue-grey-400);
     text-align: center;
     font-size: 1.4rem;
     min-width: 66px;
@@ -3456,7 +3490,24 @@ img {
     width: 1px;
     background-color: var(--blue-grey-500);
 }
+.goods-list-group .goods-price {
+    display: flex;
+    align-items: center;
+}
+.goods-list-group .goods-price .point-box {
+    display: flex;
+    align-items: center;
+    padding-left: 8px;
+}
 
+.goods-list-group .goods-price .point-box::before {
+    content: '';
+    display: block;
+    width: 1px;
+    height: 12px;
+    margin-right: 8px;
+    background-color: var(--border-primary);
+}
 .goods-list-group .goods-list .btns-grid-area {
     display: grid;
     gap: 4px;
@@ -3536,22 +3587,22 @@ img {
 .category-list-group .goods-info-box {
     margin-right: 0;
 }
-.category-list-group .goods-info-box .goods-price{
+.category-list-group .goods-info-box .goods-price {
     display: flex;
     align-items: center;
 }
-.category-list-group .goods-info-box .goods-price .point-box{
+.category-list-group .goods-info-box .goods-price .point-box {
     display: flex;
     align-items: center;
-    padding-left:8px;
+    padding-left: 8px;
 }
-.category-list-group .goods-info-box .goods-price .point-box::before{
+.category-list-group .goods-info-box .goods-price .point-box::before {
     content: '';
     display: block;
     width: 1px;
     height: 12px;
     margin-right: 8px;
-    background-color: var(--border-primary)
+    background-color: var(--border-primary);
 }
 .category-list-group .category-badges {
     margin-top: 8px;
@@ -3659,7 +3710,15 @@ img {
     .goods-list-group.purchase .goods-list .btns-grid-area .btn {
         width: 100%;
     }
+    .goods-list-group.purchase .goods-list .btns-grid-area.mo-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
 
+    .goods-list-group.purchase .goods-list .btns-grid-area.mo-grid .btn:nth-child(3){
+        grid-column: 1 / 3;
+        grid-row: 3 / 2;
+    }
     .goods-list-group.purchase .goods-info-box .sub-text-area {
         display: none;
     }
@@ -3672,8 +3731,22 @@ img {
     .goods-list-group.purchase .goods-list-item:first-child {
         padding-top: 0;
     }
+
     .goods-list-group.purchase-check .goods-list-item {
         display: block;
+    }
+    .category-list-group .goods-info-box .goods-price,
+    .goods-list-group .goods-price {
+        display: block;
+    }
+    .category-list-group .goods-info-box .goods-price .point-box,
+    .goods-list-group .goods-price .point-box {
+        padding-left: 0;
+        margin-top: 4px;
+    }
+    .category-list-group .goods-info-box .goods-price .point-box::before,
+    .goods-list-group .goods-price .point-box::before {
+        display: none;
     }
     .goods-list-group.purchase-check .mo-sub-text-box {
         margin-top: 16px;
