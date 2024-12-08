@@ -1645,7 +1645,7 @@ img {
     border-radius: 8px;
 }
 .btn-w-130 {
-    min-width: 130px;
+    width: 130px;
 }
 .btn-w-242 {
     min-width: 242px;
@@ -1727,6 +1727,7 @@ img {
     background-color: var(--blue-grey-50);
     color: #D1D6DB;
     cursor: default;
+    white-space:normal;
 }
 .btn-line-primary {
     border: solid 1px var(--primary-color);
@@ -2638,6 +2639,9 @@ img {
 }
 .list-box li > .content .point-box {
     margin-top: 8px;
+}
+.list-box li > .content .point-box >.point-bullet{
+    justify-content: flex-end;
 }
 /* badge */
 .badge {
