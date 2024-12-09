@@ -487,6 +487,12 @@ height: 32px;
     font-size: 1.8rem;
     line-height: 32px; 
 }
+.event-notice-box .event-notice-text{
+    font-family: "Pretendard Light";
+    font-size: 1.8rem;
+    line-height: 32px;
+    color: #4E5968;
+}
 .event-notice-box .event-notice-list {
     text-align: left;
 }
@@ -506,7 +512,7 @@ height: 32px;
     content: '';
     position: absolute;
     top: 15px;
-    left: 2px;
+    left: 8px;
     display: block;
     width: 3px;
     height: 3px;
@@ -514,7 +520,26 @@ height: 32px;
     border-radius: 10px;
 }
 
-
+.event-notice-box .event-notice-list .event-notice-item.bold::after {
+    content: '';
+    position: absolute;
+    top: 12px;
+    left: 8px;
+    display: block;
+    width: 5px;
+    height: 5px;
+    background-color: #4E5968;
+    border-radius: 10px;
+}
+.event-notice-box .event-notice-list .event-notice-item.bold{
+    font-family: "Pretendard Bold";
+}
+.event-notice-box .event-notice-list .event-notice-item.none{
+    padding-left: 0px;
+}
+.event-notice-box .event-notice-list .event-notice-item.none::after{
+    display: none;
+}
 @media screen and (max-width:767px) {
     .event-notice-box .event-notice-header::before{
         width: 20px;
@@ -534,6 +559,10 @@ height: 32px;
         font-size: 1.6rem;
         line-height: 20px; /* 125% */
     } 
+    .event-notice-box .event-notice-text{
+        font-size: 1.4rem;
+        line-height: 22px; 
+    }
     .event-notice-box .event-notice-area > .title {
         font-size: 1.4rem;
         line-height: 22px; 
@@ -547,6 +576,14 @@ height: 32px;
         top: 9px;
         left: 0px;
     }    
+    .event-notice-box .event-notice-list .event-notice-item.bold::after {
+        content: '';
+        position: absolute;
+        top: 9px;
+        left: 0px;
+        width: 3px;
+        height: 3px;
+    }
 }
 .book-list-section .btn-box{
     margin: 0 auto;

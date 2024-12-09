@@ -117,12 +117,10 @@
     margin: 0 auto;
     margin-top:160px;
     max-width: 960px;
-    height: 650px;
 }
 .promotion-header-section .main-video-box .video{
     position: relative;
     max-width: 960px;
-    height: 650px;
     border-radius: 14px;
     overflow: hidden;
 }
@@ -138,6 +136,15 @@
     border: 1.167px solid rgba(255, 255, 255, 0.60);
     background: linear-gradient(180deg, rgba(255, 255, 255, 0.30) 0%, rgba(255, 255, 255, 0.90) 100%);
     backdrop-filter: blur(1.1666672229766846px);
+}
+.promotion-header-section .main-video-box .video{
+    position: relative;
+}
+.promotion-header-section .main-video-box .video::after{
+    content: '';
+    display: block;
+    padding-bottom: 69.482888%;
+    background-color: var(--white-color);
 }
 .promotion-header-section .main-video-box .video > video{
     position: absolute;
