@@ -90,6 +90,11 @@
     font-size: 1.6rem;
     border: 1px solid transparent;
 }
+.btn-promo:disabled {
+    background: #EFF0F3;
+    color:#D0D3D8;
+    border: 1px solid transparent;
+}
 .btn-promo-white {
     font-family: "Pretendard Bold";
     border-radius: 8px;

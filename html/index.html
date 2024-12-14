@@ -28,9 +28,18 @@
             <!--해더 시작-->
             <section class="header-section" id="header">
                 <header class="header">
-                    <!-- 9.9 런칭 아이콘 추가 시작 -->
-                    <span class="launching"><span class="blind">런칭</span></span>
-                    <!-- 9.9 런칭 아이콘 추가 끝 -->
+                    <!-- 12.14 이벤트 말풍선 추가 시작 -->
+                    <span class="bubble">
+                        <div class="bubble-text">
+                            <span class="text">EVENT</span>
+                            <span class="text">30% 페이백</span>
+                        </div>
+                        <div class="bubble-text">
+                            <span class="text">EVENT</span>
+                            <span class="text">30% 페이백</span>
+                        </div>
+                    </span>
+                    <!-- 9.9 이벤트 말풍선 추가끝 -->
                     <div class="header-group">
                         <div class="header-left">
                             <div class="mo-nav-btns">
@@ -52,13 +61,23 @@
                                     <!--9.10 해더 로고 svg-> png 변경 끝 -->
                                 </h1>
                             </a>
+                            <!--12.14 이벤트 메뉴 클릭 시 드롭다운 추가 시작-->
                             <nav class="pc-nav-btns">
                                 <ul class="nav-btn-items">
-                                    <li class="nav-btn-item"><a href="">베스트셀러</a></li>
                                     <li class="nav-btn-item"><a href="">신간도서</a></li>
-                                    <li class="nav-btn-item"><a href="">이벤트</a></li>
+                                    <li class="nav-btn-item">
+                                        <a href="">이벤트</a>
+                                        <div class="nav-btn-items-2depth">
+                                            <a href="">30% 페이백 이벤트 (12/19 ~ 1/6)</a>
+                                            <a href="">신규 가입 이벤트 (12/19 ~ 1/6)</a>
+                                            <a href="">시험 응시 기능 체험 이벤트</a>
+                                            <a href="">바탕 모의고사 입점 기념 이벤트</a>
+                                        </div>
+                                    </li>
+                                    <li class="nav-btn-item"><a href="">이용안내</a></li>
                                 </ul>
                             </nav>
+                            <!--12.14 이벤트 메뉴 클릭 시 드롭다운 추가 끝-->
                         </div>
                         <div class="header-right">
                             <div class="btns">
@@ -1612,8 +1631,8 @@
                         <div class="swiper-slide" style="background-color: #8241FF;">
                             <div class="main-visual-banner-container">
                                 <div class="main-visual-banner-text-box">
-                                    <h2 class="main-visual-banner-title">독서를 더욱 풍요롭게 만들 신규 전자책 노트</h2>
-                                    <p class="main-visual-banner-text">신규 일러스트 노트 추가 업데이트</p>
+                                    <h2 class="main-visual-banner-title">독서를 더욱 풍요롭게 만들 신규 전자책 노트 독서를 더욱 풍요롭게 만들 신규 전자책 노트</h2>
+                                    <p class="main-visual-banner-text">신규 일러스트 노트 추가 업데이트 업데이트 업데이트</p>
                                 </div>
                                 <div class="main-visual-banner">
                                     <img src="../assest/images/demo/main_big_01_8241FF.png" alt="" class="pc-main-banner">
@@ -2157,6 +2176,11 @@
                                     <button type="button" class="btn-special btn-answer-hide" data-target="answer-hide">
                                         <span class="text">정답・해설 가리기</span><span class="icon"><span class="blind">정답・해설 가리기</span></span>
                                     </button>
+                                    <!--12.24 단어 가리기 추가 시작-->
+                                    <button type="button" class="btn-special btn-hide-word" data-target="hide-word">
+                                        <span class="text">단어 가리기</span><span class="icon"><span class="blind">단어 가리기</span></span>
+                                    </button>
+                                    <!--12.24 단어 가리기 추가 끝-->
                                 </div>
                             </div>
                             <div class="special-thumb-list" >
@@ -2229,6 +2253,9 @@
                                                             <span class="tag-special tag-player player"><span class="icon"><span class="blind">동영상 강의</span></span></span>
                                                             <span class="tag-special tag-answer-view answer-view"><span class="icon"><span class="blind">정답・해설 보기</span></span></span>
                                                             <span class="tag-special tag-answer-hide answer-hide"><span class="icon"><span class="blind">정답・해설 가리기</span></span></span>
+                                                            <!--12.24 단어 가리기 추가 시작-->
+                                                            <span class="tag-special tag-hide-word hide-word"><span class="icon"><span class="blind">단어 가리기</span></span></span>
+                                                            <!--12.24 단어 가리기 추가 끝-->
                                                             <!--8.9  id 삭제 class 추가 끝-->
                                                         </div>
                                                     </div>
@@ -2367,6 +2394,12 @@
                                                                 <span class="tag-special-toast">정답・해설 가리기 서비스</span>
                                                                 <button type="button" class="btn-special-toast tag-special tag-answer-hide on"><span class="icon"><span class="blind">정답・해설 가리기</span></span></button>
                                                             </span>
+                                                            <!--12.24 단어 가리기 추가 시작-->
+                                                            <span class="tag-special-box">
+                                                                <span class="tag-special-toast">단어 가리기 서비스</span>
+                                                                <button type="button" class="btn-special-toast tag-special tag-hide-word on"><span class="icon"><span class="blind">단어 가리기</span></span></button>
+                                                            </span>
+                                                            <!--12.24 단어 가리기 추가 끝-->
                                                         </div>
                                                     </div>
                                                 </div>
@@ -3084,6 +3117,27 @@
         .setTween("#animate1", 0.5, { top: "35px", transform: "rotate(0deg)" }) 
         .addTo(controller);
     
+        // 12.14 이벤트 메뉴 클릭 시 드롭다운 추가
+        // nav-btn-item 클릭 시 이벤트
+        $('.header-section .header .nav-btn-items .nav-btn-item > a').on('click', function (e) {
+            e.preventDefault(); // 기본 동작 방지 (링크 이동 방지)
+
+            const $parentItem = $(this).parent(); // 현재 클릭된 부모 li.nav-btn-item
+
+            // 클릭된 메뉴의 active 토글
+            $parentItem.toggleClass('active');
+
+            // 다른 모든 메뉴의 active 클래스 제거
+            $('.header-section .header .nav-btn-items .nav-btn-item').not($parentItem).removeClass('active');
+        });
+
+        // 문서의 빈 공간 클릭 시 모든 메뉴 닫기
+        $(document).on('click', function (e) {
+            // 클릭한 요소가 메뉴 또는 서브 메뉴 내부가 아닌 경우
+            if (!$(e.target).closest('.header-section .header .nav-btn-items .nav-btn-item').length) {
+                $('.header-section .header .nav-btn-items .nav-btn-item').removeClass('active'); // 모든 active 제거
+            }
+        });
 
 });
 

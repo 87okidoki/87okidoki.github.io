@@ -1228,6 +1228,12 @@ img {
     width: 24px;
     height: 24px;
 }
+.icon-hide-word {
+    display: inline-block;
+    background: url("../images/ic-hide-word.svg") no-repeat center center/ contain;
+    width: 24px;
+    height: 24px;
+}
 .icon-link-gray {
     display: inline-block;
     background: url("../images/ic-link-gray.svg") no-repeat center center/ contain;
@@ -2556,6 +2562,49 @@ img {
     line-height: 20px;
     margin-left: 4px;
 }
+.box-login-input {
+    position: relative;
+    display: flex;
+    align-items: center;
+    background-color: var(--white-color);
+    border: 1px solid #E6E8EA;
+    width: 100%;
+    height: 44px;
+    border-radius: 8px;
+    overflow: hidden;
+    padding: 0px 20px;
+}
+.box-login-input input {
+    font-size: 1.4rem;
+    line-height: 20px;
+    color: var(--gray-color-600);
+    border: 0;
+    height: 100%;
+    width: 100%;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+.box-login-input .icon-clear {
+    flex-shrink: 0;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background: url("../images/ic-clear.svg") no-repeat center center / contain;
+    vertical-align: -7px;
+}
+.box-login-input > .login-input-btns {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+    gap: 8px;
+}
+.box-login-input > .login-input-btns .icon-input-eye,
+.box-login-input > .login-input-btns .icon-input-eye-closing{
+    width: 20px;
+    height: 20px;
+}
 .btn-input {
     font-size: 1.4rem;
     border: solid 1px var(--black-color);
@@ -2748,7 +2797,12 @@ img {
     background-color: rgba(0, 0, 0, 0.7);
     z-index: 1005;
 }
-
+.popup-section .popup-header .btn-close-area {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    display: block;
+}
 .popup-section .popup-container {
     position: fixed;
     left: 50%;
