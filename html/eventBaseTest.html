@@ -1411,7 +1411,7 @@
                                     <p class="info-text">*출시일은 출판사/미북 사정에 따라 변경될 수 있습니다.</p>
                                 </header>
                                 <div class="book-info-group">
-                                    <div class="book-img-box">
+                                    <div class="book-img-box book-img-box-01">
                                         <div class="swiper" id="bookSwiper-01">
                                             <div class="swiper-wrapper">
                                                 <div class="swiper-slide">
@@ -1498,6 +1498,9 @@
                                         </video>
                                     </div>
                                 </div>
+                                <div class="btn-box">
+                                    <button type="button" class="btn-promo-link BTN">0회차 모의고사 무료 응시하기<span class="icon-arrow"></span></button>
+                                </div>
                             </div>
                         </section>
                         <section class="event-sixth-section">
@@ -1508,8 +1511,8 @@
                                 </header>
                                 <article class="ebook-info-article">
                                     <div class="book-info-group">
-                                        <div class="book-img-box">
-                                            <div class="swiper" id="bookSwiper-01">
+                                        <div class="book-img-box book-img-box-02">
+                                            <div class="swiper" id="bookSwiper-02">
                                                 <div class="swiper-wrapper">
                                                     <div class="swiper-slide">
                                                         <div class="img-box">
@@ -1573,8 +1576,8 @@
                                 </article>
                                 <article class="ebook-info-article">
                                     <div class="book-info-group">
-                                        <div class="book-img-box">
-                                            <div class="swiper" id="bookSwiper-01">
+                                        <div class="book-img-box book-img-box-03">
+                                            <div class="swiper" id="bookSwiper-03">
                                                 <div class="swiper-wrapper">
                                                     <div class="swiper-slide">
                                                         <div class="img-box">
@@ -1623,8 +1626,8 @@
                                 </article>
                                 <article class="ebook-info-article">
                                     <div class="book-info-group">
-                                        <div class="book-img-box">
-                                            <div class="swiper" id="bookSwiper-01">
+                                        <div class="book-img-box book-img-box-04">
+                                            <div class="swiper" id="bookSwiper-04">
                                                 <div class="swiper-wrapper">
                                                     <div class="swiper-slide">
                                                         <div class="img-box">
@@ -2134,20 +2137,57 @@
                     clickable: true
                 },
                 navigation: {
-                    nextEl: ".book-img-box > .swiper-button-next",
-                    prevEl: ".book-img-box > .swiper-button-prev"
+                    nextEl: ".book-img-box-01 > .swiper-button-next",
+                    prevEl: ".book-img-box-01 > .swiper-button-prev"
+                }
+            });
+            const bookSwiper2 = new Swiper('#bookSwiper-02', {
+                // loop: true,
+                slidesPerView: 'auto',
+                freeMode: true,
+                spaceBetween: 20,
+                pagination: {
+                    clickable: true
+                },
+                navigation: {
+                    nextEl: ".book-img-box-02 > .swiper-button-next",
+                    prevEl: ".book-img-box-02 > .swiper-button-prev"
+                }
+            });
+            const bookSwiper3 = new Swiper('#bookSwiper-03', {
+                // loop: true,
+                slidesPerView: 'auto',
+                freeMode: true,
+                spaceBetween: 20,
+                pagination: {
+                    clickable: true
+                },
+                navigation: {
+                    nextEl: ".book-img-box-03 > .swiper-button-next",
+                    prevEl: ".book-img-box-03 > .swiper-button-prev"
+                }
+            });
+            const bookSwiper4 = new Swiper('#bookSwiper-04', {
+                // loop: true,
+                slidesPerView: 'auto',
+                freeMode: true,
+                spaceBetween: 20,
+                pagination: {
+                    clickable: true
+                },
+                navigation: {
+                    nextEl: ".book-img-box-04 > .swiper-button-next",
+                    prevEl: ".book-img-box-04 > .swiper-button-prev"
                 }
             });
 
-
             var $eventBanner = $('#eventBanner');
             var $eventSection = $('#eventSection');
-            // 초기 배너 위치를 저장 (offset 값을 초기화)
             var bannerTop = $eventBanner.offset().top;
-
+            var $headerSection =  $('#header-section');
             $(window).on('scroll', function () {
                 var scrollTop = $(window).scrollTop();
-                var sectionTop = $eventSection.offset().top;
+                var sectionTop = $eventSection.offset().top ;
 
                 // 배너가 화면 상단에 도달하면 FIXED 클래스 추가
                 if (scrollTop >= bannerTop) {
@@ -2163,13 +2203,14 @@
             });
             $('.fixed-banner-link').on('click', function (e) {
                 e.preventDefault(); // 기본 클릭 동작 막기
+                var headerHeight = $('.header-section').outerHeight();
+                var targetPosition = $eventSection.offset().top - $eventBanner.innerHeight() - headerHeight;
 
-                var targetPosition = $eventSection.offset().top - $eventBanner.outerHeight();
                 $('html, body').animate(
                     {
-                        scrollTop: targetPosition, // 수정된 위치로 이동
+                        scrollTop: targetPosition,
                     },
-                    600 // 애니메이션 지속 시간 (밀리초)
+                    600
                 );
             });
         });

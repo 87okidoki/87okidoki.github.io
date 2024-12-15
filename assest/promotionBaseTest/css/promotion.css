@@ -183,6 +183,11 @@
    width: 40px;
     height: 40px;
 }
+.book-info-group .book-img-box .swiper{
+    top: 44px;
+    left: 28px;
+    right: 36px;
+}
     .promotion-container-inner {
         max-width: 320px;
         padding: 0 20px;
@@ -202,7 +207,7 @@
     background-color: #EEE274;
 }
 .fixed-banner-section.fixed{
-    position: fixed;
+    position: sticky;
     top: 64px;
     left: 0;
     right: 0;
@@ -612,6 +617,10 @@
     opacity: 1;
     z-index: 1;
 }
+.event-fifth-section .btn-box{
+    max-width: 360px;
+    margin: 60px auto 0;
+}
 @media screen and (max-width:767px) {
     .event-fifth-section{
         padding: 60px 0px 60px;
@@ -621,6 +630,10 @@
     top: 8px;
     right: 21px;
     bottom: 8px;
+    }
+    .event-fifth-section .btn-box{
+        max-width: 100%;
+        margin: 40px auto 0;
     }
 }
 .event-sixth-section{
@@ -658,14 +671,16 @@
     .event-seventh-section{
         padding: 60px 0px 60px;
     }
-    
-    /* .event-seventh-section .goods-list-group .goods-list-item .goods-list-left{
+    .event-seventh-section .book-list-box{
+        padding: 24px 20px;
+    }
+    .event-seventh-section .goods-list-group .goods-list-item .goods-list-left{
         display: block;
     }
     .category-list-group .goods-info-box{
         margin-left: 0;
         margin-top: 20px;
-    } */
+    }
 }
 .event-terms-section{
     background-color: var(--white-color);
@@ -709,6 +724,17 @@
     background: url('../images/icon-arrow.svg') no-repeat center center / contain;
     margin-left: 8px;
     transform: rotate(0deg);
+}
+.btn-promo-more{
+    padding: 12px 40px;
+    max-width: 204px;
+    border: 1px solid #E5E5E5;
+    background: #FFF;
+    color: #888;
+    font-family: "Pretendard SemiBold";
+    font-size: 1.6rem;
+    line-height: 25.6px;
+    width: 100%;
 }
 .event-notice-box .event-notice{
     margin: 0 auto;
@@ -866,5 +892,10 @@ border-left: 1px solid #E5E5E5;
         display: inline-flex;
         align-items: center;
         justify-content: center;
+    }
+    .btn-promo-more{
+       width: 100%;
+       font-size: 1.4rem;
+       line-height: 22.4px;
     }
 }
