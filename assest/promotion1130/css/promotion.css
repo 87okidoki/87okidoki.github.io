@@ -143,7 +143,7 @@
 .promotion-header-section .main-video-box .video::after{
     content: '';
     display: block;
-    padding-bottom: 69.482888%;
+    padding-bottom: 56.363636%;
     background-color: var(--white-color);
 }
 .promotion-header-section .main-video-box .video > video{
@@ -236,11 +236,11 @@
     .promotion-header-section .main-video-box{
         margin-top: 80px;
         width: 280px;
-        height: 190px;
+        height: 153px;
     }
     .promotion-header-section .main-video-box .video{
         max-width: 280px;
-        height: 190px;
+        height: 153px;
         border-radius: 3px;
         overflow: hidden;
     }

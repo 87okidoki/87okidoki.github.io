@@ -53,14 +53,14 @@
     flex: 0 0 auto;
     gap: 16px;
 }
-.header-section  .bubble .bubble-text{
+.header-section .bubble .bubble-text {
     line-height: 27px;
     animation: textLoop-02 10s linear infinite;
     display: flex;
     gap: 8px;
     margin-top: 7px;
 }
-.header-section .bubble .text{
+.header-section .bubble .text {
     font-family: "Pretendard Bold";
     font-size: 1.1rem;
     line-height: 1.2;
@@ -70,7 +70,7 @@
     white-space: nowrap;
 }
 
-.header-section .bubble .bubble-text{
+.header-section .bubble .bubble-text {
     transition: 0.3s;
 }
 
@@ -200,10 +200,10 @@
     font-size: 1.4rem;
     line-height: 20px;
 }
-.header-section .header .nav-btn-items .nav-btn-item > .nav-btn-items-2depth{
+.header-section .header .nav-btn-items .nav-btn-item > .nav-btn-items-2depth {
     display: none;
 }
-.header-section .header .nav-btn-items .nav-btn-item > .nav-btn-items-2depth{
+.header-section .header .nav-btn-items .nav-btn-item > .nav-btn-items-2depth {
     position: absolute;
     top: 36px;
     left: -20px;
@@ -211,9 +211,9 @@
     border-radius: 8px;
     padding: 24px;
     z-index: 1004;
-    box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.16);
+    box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.16);
 }
-.header-section .header .nav-btn-items .nav-btn-item > .nav-btn-items-2depth > a{
+.header-section .header .nav-btn-items .nav-btn-item > .nav-btn-items-2depth > a {
     display: block;
     font-size: 1.4rem;
     line-height: 20px;
@@ -221,8 +221,8 @@
     white-space: nowrap;
     margin-bottom: 16px;
 }
-.header-section .header .nav-btn-items .nav-btn-item > .nav-btn-items-2depth > a:last-child{
-    margin-bottom: 0px;
+.header-section .header .nav-btn-items .nav-btn-item > .nav-btn-items-2depth > a:last-child {
+    margin-bottom: 0;
 }
 .header-section .header .nav-btn-items .nav-btn-item.active .nav-btn-items-2depth {
     display: block;
@@ -332,8 +332,8 @@
         height: 24px;
     }
     .header-section .btn-app-down,
-    .header-section .header-left .pc-nav-btns,
-    .header-section .bubble {
+    .header-section .bubble,
+    .header-section .header-left .pc-nav-btns {
         display: none;
     }
 }
@@ -501,6 +501,7 @@
 .main-visual-banner-section .main-visual-banner-container {
     position: relative;
     max-width: var(--max-width);
+    max-width: 1920px;
     margin: 0 auto;
 }
 
@@ -669,7 +670,7 @@
     left: calc(constant(safe-area-inset-left) + 80px);
     left: calc(env(safe-area-inset-left) + 80px);
     bottom: 50%;
-    transform: translateY(50%);
+    transform: translate(0px ,50%);
     width: 368px;
     z-index: 10;
     height: 198px;
@@ -678,7 +679,12 @@
     gap: 20px;
     grid-template-rows: 150px 28px;
 }
-
+@media screen and (min-width:1366px) {
+    .main-visual-banner-section .main-visual-banner-text-box {
+        left: 50%;
+        transform: translate(-603px, 50%);
+    }
+}
 .main-visual-banner-section .main-visual-banner-title {
     font-family: "Pretendard SemiBold";
     font-size: 3.6rem;
@@ -733,18 +739,18 @@
         left: 20px;
         left: calc(constant(safe-area-inset-left) + 20px);
         left: calc(env(safe-area-inset-left) + 20px);
-        bottom: 64px;
+        bottom: 52px;
         display: block;
         height: auto;
         transform: translateY(0);
     }
     .main-visual-banner-section .main-visual-banner-title {
-        font-size: 2.4rem;
-        line-height: 34px;
+        font-size: 2rem;
+        line-height: 26px;
     }
     .main-visual-banner-section .main-visual-banner-text {
-        font-size: 1.6rem;
-        line-height: 22px;
+        font-size: 1.4rem;
+        line-height: 20px;
         margin-top: 6px;
     }
     .main-visual-banner-section .swiper-control-area {
@@ -964,7 +970,20 @@
     height: 46px;
     z-index: 1;
 }
-.main-special-group .special-thumb-list .special-thumb-item .special-thumb-box {
+.main-special-group .special-thumb-list .special-thumb-item .special-thumb-test-box::before {
+    content: '';
+    position: absolute;
+    right: -1px;
+    top: -12px;
+    display: block;
+    background: url("../images/ic-special-test.png") no-repeat center center / contain;
+    width: 46px;
+    height: 46px;
+    z-index: 1;
+}
+
+.main-special-group .special-thumb-list .special-thumb-item .special-thumb-box,
+.main-special-group .special-thumb-list .special-thumb-item .special-thumb-test-box {
     display: block;
     position: relative;
     background-color: var(--white-color);
@@ -972,7 +991,8 @@
     border-radius: 8px;
     max-height: 282px;
 }
-.main-special-group .special-thumb-list .special-thumb-item .special-thumb-box:hover {
+.main-special-group .special-thumb-list .special-thumb-item .special-thumb-box:hover,
+.main-special-group .special-thumb-list .special-thumb-item .special-thumb-test-box::hover {
     box-shadow: 8px 8px 24px 0 #5464DC;
 }
 .main-special-group .special-thumb-item .special-thumb {
@@ -2523,6 +2543,7 @@
 .thumb-item-text-area .thumb-item-sub-text {
     font-size: 1.2rem;
     line-height: 14px;
+    text-align: left;
     color: var(--blue-grey-500);
     display: -webkit-box;
     width: 100%;
@@ -6697,7 +6718,7 @@
     position: relative;
     display: inline-block;
     text-align: center;
-    padding: 26px 16px;
+    padding: 24px 16px;
     width: 100%;
 }
 .my-main-section .my-menu-group .my-menu-item:first-child::after {
@@ -6713,47 +6734,23 @@
     height: 64px;
     background-color: var(--border-primary);
 }
-.my-main-section .my-menu-group .my-menu-item .cart {
-    position: relative;
+
+.my-main-section .my-menu-group .my-menu-item .icon-coupon {
     display: inline-block;
-}
-.my-main-section .my-menu-group .my-menu-item .badge-count {
-    position: absolute;
-    top: 0;
-    right: -2px;
-    line-height: 13px;
-    padding: 0 4px;
-    font-family: "Pretendard SemiBold";
-    font-size: 0.8rem;
-    color: var(--white-color);
-    background-color: var(--primary-color);
-    border: 1px solid var(--white-color);
-    border-radius: 8px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.my-main-section .my-menu-group .my-menu-item .icon-my {
-    display: inline-block;
-    background: url("../images/ic-mypage-24.svg") no-repeat center center/ contain;
+    background: url("../images/ic-my-coupon.svg") no-repeat center center/ contain;
     width: 32px;
     height: 32px;
 }
-.my-main-section .my-menu-group .my-menu-item .icon-cart {
+
+.my-main-section .my-menu-group .my-menu-item .icon-point {
     display: inline-block;
-    background: url("../images/ic-cart-24.svg") no-repeat center center/ contain;
+    background: url("../images/ic-my-point.svg") no-repeat center center/ contain;
     width: 32px;
     height: 32px;
 }
-.my-main-section .my-menu-group .my-menu-item .icon-card {
+.my-main-section .my-menu-group .my-menu-item .icon-cash {
     display: inline-block;
-    background: url("../images/ic-card.svg") no-repeat center center/ contain;
-    width: 32px;
-    height: 32px;
-}
-.my-main-section .my-menu-group .my-menu-item .icon-refund {
-    display: inline-block;
-    background: url("../images/ic-refund.svg") no-repeat center center/ contain;
+    background: url("../images/ic-my-cash.svg") no-repeat center center/ contain;
     width: 32px;
     height: 32px;
 }
@@ -6762,7 +6759,10 @@
     margin-top: 8px;
     font-size: 1.6rem;
     line-height: 24px;
-    color: var(--blue-grey-600);
+    color: var(--black-color);
+}
+.my-main-section .my-menu-group .my-menu-item .text > strong {
+    font-family: "Pretendard Bold";
 }
 .my-main-section .my-book-group {
     margin-top: 16px;
@@ -6878,6 +6878,10 @@
     .my-main-section .my-menu-group .my-menu-item .text {
         font-size: 1.4rem;
         line-height: 20px;
+    }
+    .my-main-section .my-menu-group .my-menu-item .text .mo-block {
+        display: block;
+        margin-bottom: 4px;
     }
     .my-main-section .my-book-group .my-book-header .info-popup-group {
         left: -24px;
@@ -8529,6 +8533,21 @@
     overflow-y: auto;
     padding-right: 15px;
 }
+.terms-text-box{
+    margin-top: 12px;
+}
+.popup-section.page .terms-text {
+    font-size: 1.4rem;
+    line-height: 22px;
+    color: var(--blue-grey-500);
+    margin-top: 4px;
+}
+.popup-section.page .terms-text.red {
+    color: #FF2C52;
+}
+.popup-section.page .terms-text strong{
+    font-family: "Pretendard Bold";
+}
 .popup-section.page .terms {
     padding-top: 20px;
 }
@@ -8563,6 +8582,21 @@
     height: 2px;
     border-radius: 10px;
     background-color: var(--blue-grey-500);
+}
+.popup-section.page .terms-02 > li::after {
+    content: '';
+    position: absolute;
+    top: 11px;
+    left: 0;
+    display: block;
+    width: 2px;
+    height: 2px;
+    border-radius: 10px;
+    background-color: var(--blue-grey-500);
+}
+.popup-section.page .terms-none > li > span {
+    display: block;
+    padding-left: 16px;
 }
 .popup-section.page .terms-box {
     padding-bottom: 16px;
@@ -8781,10 +8815,10 @@
 }
 .appendix-list-group .appendix-list-item {
     display: flex;
+    align-items: flex-start;
 }
 .appendix-list-group .appendix-list-item .thumb {
     width: 84px;
-    height: 112px;
     border-radius: 8px;
     box-shadow: 0 0 5.333px 0 rgba(0, 0, 0, 0.08);
     overflow: hidden;
@@ -9152,6 +9186,7 @@
 
 .appendix-section .appendix-box {
     display: flex;
+    align-items: flex-start;
     gap: 24px;
     padding-bottom: 28px;
     margin-bottom: 28px;
@@ -9161,7 +9196,6 @@
 .appendix-section .appendix-box .thumb {
     flex-shrink: 0;
     width: 126px;
-    height: 168px;
     border-radius: 8px;
     box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.08);
     overflow: hidden;

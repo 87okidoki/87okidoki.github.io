@@ -65,10 +65,12 @@
                             <nav class="pc-nav-btns">
                                 <ul class="nav-btn-items">
                                     <li class="nav-btn-item"><a href="">신간도서</a></li>
-                                    <li class="nav-btn-item">
+                                    <li class="nav-btn-item nav-btn-item-1depth">
                                         <a href="">이벤트</a>
                                         <div class="nav-btn-items-2depth">
-                                            <a href="">30% 페이백 이벤트 (12/19 ~ 1/6)</a>
+                                            <!--25.01.04 30% 페이백 이벤트 메뉴 날짜 수정 시작 -->
+                                            <a href="">30% 페이백 이벤트 (12/19 ~ 1/19)</a>
+                                            <!--25.01.04 30% 페이백 이벤트 메뉴 날짜 수정 끝 -->  
                                             <a href="">신규 가입 이벤트 (12/19 ~ 1/6)</a>
                                             <a href="">시험 응시 기능 체험 이벤트</a>
                                             <a href="">바탕 모의고사 입점 기념 이벤트</a>
@@ -2189,7 +2191,7 @@
                                         <div class="swiper-slide">
                                             <a href="./bookPreview.html" class="special-thumb-item">
                                                 <div class="special-thumb-area">
-                                                    <div class="special-thumb-box">
+                                                    <div class="special-thumb-test-box">
                                                         <div class="special-thumb">
                                                             <img src="../assest/images/img-book-dummy-01.png" alt="" />
                                                         </div>
@@ -2351,7 +2353,7 @@
                                         <div class="swiper-slide">
                                             <div href="" class="special-thumb-item">
                                                 <div class="special-thumb-area">
-                                                    <a href="" class="special-thumb-box">
+                                                    <a href="" class="special-thumb-test-box">
                                                         <div class="special-thumb">
                                                             <img src="../assest/images/img-book-dummy-01.png" alt="" />
                                                         </div>
@@ -3119,23 +3121,19 @@
     
         // 12.14 이벤트 메뉴 클릭 시 드롭다운 추가
         // nav-btn-item 클릭 시 이벤트
-        $('.header-section .header .nav-btn-items .nav-btn-item > a').on('click', function (e) {
+         $('.header-section .header .nav-btn-items .nav-btn-item-1depth > a').on('click', function (e) {
             e.preventDefault(); // 기본 동작 방지 (링크 이동 방지)
-
             const $parentItem = $(this).parent(); // 현재 클릭된 부모 li.nav-btn-item
-
             // 클릭된 메뉴의 active 토글
             $parentItem.toggleClass('active');
-
             // 다른 모든 메뉴의 active 클래스 제거
-            $('.header-section .header .nav-btn-items .nav-btn-item').not($parentItem).removeClass('active');
+            $('.header-section .header .nav-btn-items .nav-btn-item-1depth').not($parentItem).removeClass('active');
         });
-
         // 문서의 빈 공간 클릭 시 모든 메뉴 닫기
         $(document).on('click', function (e) {
             // 클릭한 요소가 메뉴 또는 서브 메뉴 내부가 아닌 경우
-            if (!$(e.target).closest('.header-section .header .nav-btn-items .nav-btn-item').length) {
-                $('.header-section .header .nav-btn-items .nav-btn-item').removeClass('active'); // 모든 active 제거
+            if (!$(e.target).closest('.header-section .header .nav-btn-items .nav-btn-item-1depth').length) {
+                $('.header-section .header .nav-btn-items .nav-btn-item-1depth').removeClass('active'); // 모든 active 제거
             }
         });
 
