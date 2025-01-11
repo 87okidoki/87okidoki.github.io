@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -13,6 +14,7 @@
     <link rel="stylesheet" type="text/css" href="../assest/css/swiper-bundle.css" />
     <link rel="stylesheet" type="text/css" href="../assest/css/common.css" />
     <link rel="stylesheet" type="text/css" href="../assest/css/layout.css" />
+    <link rel="stylesheet" type="text/css" href="../assest/promotionWonriedu/css/promotion.css" />
     <!--9.2 전화 번호 자동인식 차단 메타태그 추가 시작-->
     <meta name="format-detection" content="telephone=no">
     <!--9.2 전화 번호 자동인식 차단 메타태그 추가 끝-->
@@ -22,7 +24,7 @@
 </head>
 
 <body>
-    <main class="point-wrap">
+    <main class="my-wrap">
         <!--컨텐츠 시작-->
         <div class="container">
             <!--해더 시작-->
@@ -1137,147 +1139,157 @@
             </section>
             <!--해더 끝-->
             <div class="sub-contents-wrap">
-                <section class="point-list-section">
-                    <div class="point-box">
-                        <header class="point-box-header">
-                            <h2 class="point-box-title">보유 me포인트</h2>
-                            <button type="button" class="btn btn-point" id="btnOpenPoint">포인트 안내</button>
-                        </header>
-                        <div class="point-text"><strong>7,000,000,000</strong> P</div>
-                        <div class="point-box-btns">
-                            <div class="point-box-item">
-                              <span class="text">리뷰 작성 시 적립 가능</span>
-                              <a href="#" class="btn btn-option disabled">
-                                 <span class="text"><strong>1,300,200</strong>P</span>
-                                 <span class="icon icon-arrow-right"><span class="blind">이동</span></span>
-                              </a>
+                <section class="inquiry-list-section">
+                    <header class="sub-contents-header">
+                        <h2 class="sub-contents-header-title">
+                            구매내역 인증확인
+                        </h2>
+                    </header>
+                    <!--리스트 시작-->
+                    <section class="list-content-section">
+                        <div class="event-wonriedu-list-header-group">
+                            <div class="content-left">
+                                <span class="notice-header-title">등록일</span> 
+                                <span class="notice-header-title">구분</span>
+                                <span class="notice-header-title">상품명</span>
                             </div>
-                            <div class="point-box-item">
-                                <span class="text">30일 이내 소멸 예정</span>
-                                <button type="button" class="btn btn-option">
-                                    <span class="text"><strong>조회하기</strong></span>
-                                    <span class="icon icon-refresh"><span class="blind">새로고침</span></span>
-                                </button>
-                                <span class="btn btn-option">
-                                    <span class="text"><strong>1,300,200</strong>P</span>
-                                    <button type="button" class="btn btn-transparent" disabled><span class="icon icon-refresh"><span class="blind">새로고침</span></span></button>
-                                </span>
+                            <div class="content-right">
+                                <span class="notice-header-title">구매인증일자</span>
+                                <span class="notice-header-title">상태</span>
                             </div>
                         </div>
-                    </div>
-                    <!-- 빈 포인트 리스트 시작-->
-                    <div class="point-empty-section off">
-                        <div class="empty-info-group">
-                            <div class="img-box">
-                                <img src="../assest/images/img-cart-01.png" alt="" />
-                            </div>
-                            <div class="text-box">
-                                <h3 class="empty-title">me포인트 내역이 없습니다.</h3>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- 빈 포인트 리스트 끝-->
-                    <div class="swiper-container btns-swiper-group">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide"><button type="button" class="btn-swiper-tab active">전체</button></div>
-                            <div class="swiper-slide"><button type="button" class="btn-swiper-tab">적립</button></div>
-                            <div class="swiper-slide"><button type="button" class="btn-swiper-tab">사용</button></div>         
-                            <div class="swiper-slide"><button type="button" class="btn-swiper-tab">소멸</button></div>
-                        </div>
-                    </div>
-                    <!--전체 포인트 리스트 시작-->
-                    <section class="tab-swiper-content-section on">
-                        <div class="point-list-group">
-                            <h3 class="point-list-title">2025</h3>
-                            <ul class="point-list">
-                                <li class="point-list-item">
-                                    <div class="point-content-left">
-                                        <div class="date">12.30</div>
-                                        <div class="point-info">
-                                            <strong class="point-tilte">유효기간 만료 소멸</strong>
-                                            <P class="point-desc">이다지도 생생한 한국사</P>
-                                        </div>
-                                    </div>
-                                    <div class="point-content-right">
-                                        <span class="color-red point">- 5,025</span>
-                                    </div>
-                                </li>
-                                <li class="point-list-item">
-                                    <div class="point-content-left">
-                                        <div class="date">12.30</div>
-                                        <div class="point-info">
-                                            <strong class="point-tilte">리뷰 작성 리워드 적립리뷰 작성 리워드 적립</strong>
-                                            <P class="point-desc">이다지도 생생한 한국사</P>
-                                            <div class="due-date"><span class="due-date-title">사용기한</span><span
-                                                    class="due-date-content">2035.12.30
-                                                    까지</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="point-content-right">
-                                        <span class="color-primary point">+ 5,025</span>
-                                    </div>
-                                </li>
-                                <li class="point-list-item">
-                                    <div class="point-content-left">
-                                        <div class="date">12.30</div>
-                                        <div class="point-info">
-                                            <strong class="point-tilte">구매 시 사용</strong>
-                                            <P class="point-desc">이다지도 생생한 한국사</P>
-                                            <div class="due-date"><span class="due-date-title">사용기한</span><span
-                                                    class="due-date-content">2035.12.30 까지</span></div>
-                                        </div>
-                                    </div>
-                                    <div class="point-content-right">
-                                        <span class="color-red point">- 5,025</span>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="point-list-group">
-                            <h3 class="point-list-title">2024</h3>
-                            <ul class="point-list">
-                                <li class="point-list-item">
-                                    <div class="point-content-left">
-                                        <div class="date">12.30</div>
-                                        <div class="point-info">
-                                            <strong class="point-tilte">유효기간 만료 소멸</strong>
-                                            <P class="point-desc">이다지도 생생한 한국사</P>
-                                        </div>
-                                    </div>
-                                    <div class="point-content-right">
-                                        <span class="color-red point">- 5,025</span>
-                                    </div>
-                                </li>
-                                <li class="point-list-item">
-                                    <div class="point-content-left">
-                                        <div class="date">12.30</div>
-                                        <div class="point-info">
-                                            <strong class="point-tilte">리뷰 작성 리워드 적립리뷰 작성 리워드 적립</strong>
-                                            <P class="point-desc">이다지도 생생한 한국사</P>
-                                            <div class="due-date"><span class="due-date-title">사용기한</span><span class="due-date-content">2035.12.30
-                                                    까지</span></div>
-                                        </div>
-                                    </div>
-                                    <div class="point-content-right">
-                                        <span class="color-primary point">+ 5,025</span>
-                                    </div>
-                                </li>
-                                <li class="point-list-item">
-                                    <div class="point-content-left">
-                                        <div class="date">12.30</div>
-                                        <div class="point-info">
-                                            <strong class="point-tilte">구매 시 사용</strong>
-                                            <P class="point-desc">이다지도 생생한 한국사</P>
-                                            <div class="due-date"><span class="due-date-title">사용기한</span><span class="due-date-content">2035.12.30 까지</span></div>
-                                        </div>
-                                    </div>
-                                    <div class="point-content-right">
-                                        <span class="color-red point">- 5,025</span>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
+                        <ul class="notice-list-group event-wonriedu-list">
+                            <li class="notice-item">
+                                <div class="content-left">
+                                    <span class="date">2024.03.06</span>
+                                    <strong class="category category-pc">개념원리</strong>
+                                    <a href="#" class="title">
+                                        <strong class="category category-moblie">[개념원리]</strong> 22개정 개념원리 공통수학1
+                                    </a> 
+                                </div>
+                                <div class="content-right">
+                                    <span class="date">2024.12.59 59:59:59</span>
+                                    <span class="notice-badge color-red">인증불가</span>
+                                </div>
+                            </li>
+                            <li class="notice-item">
+                                <div class="content-left">
+                                    <span class="date">2024.03.06</span>
+                                    <strong class="category category-pc">개념원리</strong>
+                                    <a href="#" class="title">
+                                        <strong class="category category-moblie">[개념원리]</strong> 22개정 개념원리 공통수학1
+                                    </a> 
+                                </div>
+                                <div class="content-right">
+                                    <span class="date">2024.12.59 59:59:59</span>
+                                    <span class="notice-badge color-primary">인증완료</span>
+                                </div>
+                            </li>
+                            <li class="notice-item">
+                                <div class="content-left">
+                                    <span class="date">2024.03.06</span>
+                                    <strong class="category category-pc">개념원리</strong>
+                                    <a href="#" class="title">
+                                        <strong class="category category-moblie">[개념원리]</strong> 22개정 개념원리 공통수학1
+                                    </a> 
+                                </div>
+                                <div class="content-right">
+                                    <span class="date">2024.12.59 59:59:59</span>
+                                    <span class="notice-badge">인증대기</span>
+                                </div>
+                            </li>
+                            <li class="notice-item">
+                                <div class="content-left">
+                                    <span class="date">2024.03.06</span>
+                                    <strong class="category category-pc">개념원리</strong>
+                                    <a href="#" class="title">
+                                        <strong class="category category-moblie">[개념원리]</strong> 22개정 개념원리 공통수학1
+                                    </a> 
+                                </div>
+                                <div class="content-right">
+                                    <span class="date">2024.12.59 59:59:59</span>
+                                    <span class="notice-badge">인증대기</span>
+                                </div>
+                            </li>
+                            <li class="notice-item">
+                                <div class="content-left">
+                                    <span class="date">2024.03.06</span>
+                                    <strong class="category category-pc">개념원리</strong>
+                                    <a href="#" class="title">
+                                        <strong class="category category-moblie">[개념원리]</strong> 22개정 개념원리 공통수학1
+                                    </a> 
+                                </div>
+                                <div class="content-right">
+                                    <span class="date">2024.12.59 59:59:59</span>
+                                    <span class="notice-badge">인증대기</span>
+                                </div>
+                            </li>
+                            <li class="notice-item">
+                                <div class="content-left">
+                                    <span class="date">2024.03.06</span>
+                                    <strong class="category category-pc">개념원리</strong>
+                                    <a href="#" class="title">
+                                        <strong class="category category-moblie">[개념원리]</strong> 22개정 개념원리 공통수학1
+                                    </a> 
+                                </div>
+                                <div class="content-right">
+                                    <span class="date">2024.12.59 59:59:59</span>
+                                    <span class="notice-badge">인증대기</span>
+                                </div>
+                            </li>
+                            <li class="notice-item">
+                                <div class="content-left">
+                                    <span class="date">2024.03.06</span>
+                                    <strong class="category category-pc">개념원리</strong>
+                                    <a href="#" class="title">
+                                        <strong class="category category-moblie">[개념원리]</strong> 22개정 개념원리 공통수학1
+                                    </a> 
+                                </div>
+                                <div class="content-right">
+                                    <span class="date">2024.12.59 59:59:59</span>
+                                    <span class="notice-badge">인증대기</span>
+                                </div>
+                            </li>
+                            <li class="notice-item">
+                                <div class="content-left">
+                                    <span class="date">2024.03.06</span>
+                                    <strong class="category category-pc">개념원리</strong> 
+                                    <a href="#" class="title">
+                                        <strong class="category category-moblie">[개념원리]</strong> 22개정 개념원리 공통수학1
+                                    </a> 
+                                </div>
+                                <div class="content-right">
+                                    <span class="date">2024.12.59 59:59:59</span>
+                                    <span class="notice-badge">인증대기</span>
+                                </div>
+                            </li>
+                            <li class="notice-item">
+                                <div class="content-left">
+                                    <span class="date">2024.03.06</span>
+                                    <strong class="category category-pc">개념원리</strong> 
+                                    <a href="#" class="title">
+                                        <strong class="category category-moblie">[개념원리]</strong> 22개정 개념원리 공통수학1
+                                    </a> 
+                                </div>
+                                <div class="content-right">
+                                    <span class="date">2024.12.59 59:59:59</span>
+                                    <span class="notice-badge">인증대기</span>
+                                </div>
+                            </li>
+                            <li class="notice-item">
+                                <div class="content-left">
+                                    <span class="date">2024.03.06</span>
+                                    <strong class="category category-pc">개념원리</strong> 
+                                    <a href="#" class="title">
+                                        <strong class="category category-moblie">[개념원리]</strong> 22개정 개념원리 공통수학1
+                                    </a> 
+                                </div>
+                                <div class="content-right">
+                                    <span class="date">2024.12.59 59:59:59</span>
+                                    <span class="notice-badge">인증대기</span>
+                                </div>
+                            </li>
+                        </ul>
                         <div class="pagination-group">
                             <div class="pagination">
                                 <a href="#" class="previous disabled">
@@ -1286,107 +1298,31 @@
                                 <a href="#">1</a>
                                 <a href="#" class="active">2</a>
                                 <a href="#">3</a>
-                                <a href="#">4</a>
+                                <span>∙∙∙</span>
+                                <a href="#">999</a>
                                 <a href="#" class="next">
                                     <span class="blind">오른쪽 화살</span>               
                                 </a>
                             </div>
                         </div>
                     </section>
-                    <!--전체 포인트 리스트 끝-->
-                    <!--적립 포인트 리스트 시작-->
-                    <section class="tab-swiper-content-section">
-                        <div class="point-list-group">
-                            <h3 class="point-list-title">2025</h3>
-                            <ul class="point-list">
-                                <li class="point-list-item">
-                                    <div class="point-content-left">
-                                        <div class="date">12.30</div>
-                                        <div class="point-info">
-                                            <strong class="point-tilte">리뷰 작성 리워드 적립리뷰 작성 리워드 적립</strong>
-                                            <P class="point-desc">이다지도 생생한 한국사</P>
-                                            <div class="due-date"><span class="due-date-title">사용기한</span><span
-                                                    class="due-date-content">2035.12.30 까지</span></div>
-                                        </div>
-                                    </div>
-                                    <div class="point-content-right">
-                                        <span class="color-primary point">+ 5,025</span>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-                    </section>
-                    <!--적립 포인트 리스트 끝-->
-                    <!--사용 포인트 리스트 시작-->
-                    <section class="tab-swiper-content-section">
-                        <div class="point-list-group">
-                            <h3 class="point-list-title">2025</h3>
-                            <ul class="point-list">
-                                <li class="point-list-item">
-                                    <div class="point-content-left">
-                                        <div class="date">12.30</div>
-                                        <div class="point-info">
-                                            <strong class="point-tilte">구매 시 사용</strong>
-                                            <P class="point-desc">이다지도 생생한 한국사</P>
-                                        </div>
-                                    </div>
-                                    <div class="point-content-right">
-                                        <span class="color-red point">- 5,025</span>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="pagination-group">
-                            <div class="pagination">
-                                <a href="#" class="previous disabled">
-                                    <span class="blind">왼쪽 화살</span>
-                                </a>
-                                <a href="#">1</a>
-                                <a href="#" class="active">2</a>
-                                <a href="#">3</a>
-                                <a href="#">4</a>
-                                <a href="#" class="next">
-                                    <span class="blind">오른쪽 화살</span>
-                                </a>
+                    <!--리스트 끝-->
+                    <!-- 빈 리스트 시작-->
+                    <section class="list-content-section">
+                        <div class="inquiry-empty-group">
+                            <div class="empty-info-group">
+                                <div class="img-box">
+                                    <img src="../assest/images/img-cart-01.png" alt=""/>
+                                </div> 
+                                <div class="text-box">
+                                    <h3 class="empty-title">구매 인증한 내역이 없습니다.</h3>
+                                    <p class="empty-text">이벤트 페이지 내 [구매내역 인증하기] 버튼을 <br/>
+                                        클릭하여 구매내역을 인증해주세요!</p>
+                                </div>
                             </div>
                         </div>
                     </section>
-                    <!--사용 포인트 리스트 끝-->
-                    <!--소멸 포인트 리스트 시작-->
-                    <section class="tab-swiper-content-section">
-                        <div class="point-list-group">
-                            <h3 class="point-list-title">2025</h3>
-                            <ul class="point-list">
-                                <li class="point-list-item">
-                                    <div class="point-content-left">
-                                        <div class="date">12.30</div>
-                                        <div class="point-info">
-                                            <strong class="point-tilte">유효기간 만료 소멸</strong>
-                                            <P class="point-desc">이다지도 생생한 한국사</P>
-                                        </div>
-                                    </div>
-                                    <div class="point-content-right">
-                                        <span class="color-red point">- 5,025</span>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="pagination-group">
-                            <div class="pagination">
-                                <a href="#" class="previous disabled">
-                                    <span class="blind">왼쪽 화살</span>
-                                </a>
-                                <a href="#">1</a>
-                                <a href="#" class="active">2</a>
-                                <a href="#">3</a>
-                                <a href="#">4</a>
-                                <a href="#" class="next">
-                                    <span class="blind">오른쪽 화살</span>
-                                </a>
-                            </div>
-                        </div>
-                    </section>
-                    <!--소멸 포인트 리스트 끝-->
+                     <!-- 문의 리스트 끝-->
                 </section>
             </div>
             <!--8.8 푸터 일부 텍스트& 이미지 &버튼 수정 추가 시작-->
@@ -1411,7 +1347,7 @@
                     <a href="#" class="logo">
                         <img src="../assest/images/logo-meBook-store-gray.svg" alt="meBook 스토어" />
                     </a>
-                    <div class="copyright-text">
+                    <ul class="copyright-text">
                         <li>06643 서울 서초구 효령로 321 (서초동, 덕원빌딩) 7층, 메가스터디교육㈜</li>
                         <li>대표자 : 손성은</li>
                         <li>개인정보보호책임자 : 오영석 keeper@megagong.net</li>
@@ -1444,114 +1380,11 @@
             </footer>
             <!--푸터 끝-->
             <!--8.8 푸터 일부 텍스트& 이미지 &버튼 수정 추가 끝-->
-            <!--25.01.12 포인트 안내사항 팝업 수정 시작-->
-            <section class="popup-section page point off" id="pointPopup">
-                <div class="popup-container">
-                    <header class="popup-header">
-                        <h2 class="title">포인트 안내사항 
-                            <i class="icon icon-info-black-fill"><span class="blind">안내</span></i>
-                        </h2>
-                        <div class="btn-close-area">
-                            <button type="button" class="btn btn-transparent btnClosePoint">
-                                <i class="icon-close-24"><span class="blind">닫기</span></i>
-                            </button>
-                        </div>
-                    </header>
-                    <div class="popup-body">
-                        <div class="point-terms-box scroll-box">
-                            <div class="terms-text-box">
-                                 <strong class="terms-text red">
-                                적립된 포인트는 2025년 2월 중순부터 사용 가능하며,<br />
-                                사용 가능일 이후부터 유효 기간이 적용됩니다.
-                                </strong>
-                                <p class="terms-text red">
-                                    포인트별 사용 유효 기간은 '포인트 소멸 > 유효기간 안내'를 참고해 주세요.
-                                </p>
-                                <p class="terms-text">
-                                    (ex. 2/14 포인트 사용 기능 적용 시, 회원가입 적립 1,000P는 2/14부터 7일 뒤인 2/21까지 사용 가능)
-                                </p>
-                            </div>
-                            <ol class="terms">
-                                <li>me포인트 적립
-                                    <ul class="terms-02">
-                                        <li>신규가입 me포인트는 가입 즉시 적립됩니다.</li>
-                                        <li>가입 후 7일 내 첫 구매 me포인트는 구매 즉시 적립됩니다.</li>
-                                        <li>리뷰 작성 me포인트는 리뷰 작성 완료 즉시 적립됩니다.</li>
-                                        <li>구매 취소/환불 시 지급 받으신 me포인트는 회수 처리됩니다.<br/>
-                                            (작성한 리뷰는 미삭제)
-                                        </li>
-                                        <li><strong>[포인트 적립액/률 안내]</strong>
-                                            <ul class="terms-none">
-                                                <li>① 신규가입 : 1,000P</li>
-                                                <li>② 가입 후 7일 내 첫 구매(5천원 이상) : 1,000P</li>
-                                                <li>③ 구매 적립 : 결제 금액의 3%<br/>
-                                                    <span>단, 기간 내 30% 페이백 이벤트 대상 상품 구매 시 결제 금액의 30% (비대상 상품 : 3%)</span>
-                                                </li>
-                                                <li>④ 리뷰 작성 : 건당 100P (단, 무료 상품 제외)</li>
-                                            </ul>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li>me포인트 소멸
-                                    <ul class="terms-02">
-                                        <li><strong>[포인트 유효기간 안내]</strong>
-                                            <ul class="terms-none">
-                                                <li>① 신규가입 혜택 : 적립일로부터 7일</li>
-                                                <li>② 가입 후 7일 내 첫 구매 혜택 : 적립일로부터 30일</li>
-                                                <li>③ 구매 적립 : 적립일로부터 365일<br />
-                                                    <span>단, 30% 페이백 혜택은 적립일로부터 90일</span> 
-                                                </li>
-                                                <li>④ 리뷰 작성 혜택 : 적립일로부터 365일이며,</li>
-                                            </ul>
-                                        </li>
-                                        <li>유효기간이 지난 me포인트는 자동 소멸됩니다.<br />(경우에 따라 유효기간은 상이할 수 있으니, 내 포인트 페이지에 명시된 이용 기간을 꼭 확인해 주세요.)</li>
-                                        <li>소멸된 me포인트는 복구되지 않습니다.</li>
-                                    </ul>
-                                </li>
-                                <li>me포인트 사용
-                                    <ul class="terms-02">
-                                        <li>적립된 me포인트는 2025년 2월 중순부터 사용 가능합니다. (일정 변동 가능)</li>
-                                        <li>사용 가능일 이후부터 포인트별 유효 기간이 적용됩니다. (마이페이지 > 포인트 페이지에 유효기간 노출 예정)</li>
-                                        <li>보유한 me포인트는 1,000p 이상부터 10p 단위로 사용 가능합니다.</li>
-                                        <li>me포인트는 상품 별 적용 가능여부가 상이할 수 있습니다.</li>
-                                        <li>me포인트는 남은 유효기간이 짧은 순서대로 사용됩니다.</li>
-                                        <li>구매 취소/환불로 인한 me포인트 환불 시, 남은 유효기간이 긴 순서대로 환불됩니다.</li>
-                                        <li>포인트 금액은 예고없이 변경될 수 있습니다.</li>
-                                    </ul>
-                                </li>
-                            </ol>
-                        </div>
-                    </div>
-
-                </div>
-            </section>
-            <!--25.01.12 포인트 안내사항 팝업 수정  끝-->
         </div>
     </main>
     <script src="../assest/js/jquery-2.2.4.min.js"></script>
     <script src="../assest/js/swiper-bundle.js"></script>
     <script src="../assest/js/common.js"></script>
-    <script>    
-     $(document).ready(function () {
-        /*포인트 안내사항 팝업*/
-        $('#btnOpenPoint').click(function () {
-            $('#pointPopup').removeClass('off');
-            $('body').addClass('scroll-lock');
-        });
-
-        $('#pointPopup .btnClosePoint').click(function () {
-            $('#pointPopup').addClass('off');
-            $('body').removeClass('scroll-lock');
-        });
-
-        $(document).click(function (event) {
-            if (!$(event.target).closest('.popup-container').length && !$(event.target).closest('#btnOpenPoint').length) {
-                $('#pointPopup').addClass('off');
-                $('body').removeClass('scroll-lock');
-            }
-        });
-    });
-    </script>
 </body>
 
 </html>
