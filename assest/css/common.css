@@ -56,7 +56,7 @@
     /* Modern Browsers */
     url("../fonts/Pretendard-ExtraBold.ttf") format("truetype"),
     /* Safari, Android, iOS */
-     url("../fonts/Pretendard-ExtraBold.svg#NotoSansKR") format("svg");
+    url( "../fonts/Pretendard-ExtraBold.svg#NotoSansKR") format("svg"))))
 }
 @font-face {
     font-family: "Pretendard ExtraLight";
@@ -73,7 +73,7 @@
     /* Modern Browsers */
     url("../fonts/Pretendard-ExtraLight.ttf") format("truetype"),
     /* Safari, Android, iOS */
-     url("../fonts/Pretendard-ExtraLight.svg#NotoSansKR") format("svg");
+    url( "../fonts/Pretendard-ExtraLight.svg#NotoSansKR") format("svg"))))
 }
 @font-face {
     font-family: "Pretendard Bold";
@@ -90,7 +90,7 @@
     /* Modern Browsers */
     url("../fonts/Pretendard-Bold.ttf") format("truetype"),
     /* Safari, Android, iOS */
-     url("../fonts/Pretendard-Bold.svg#NotoSansKR") format("svg");
+    url( "../fonts/Pretendard-Bold.svg#NotoSansKR") format("svg"))))
 }
 
 @font-face {
@@ -108,7 +108,7 @@
     /* Modern Browsers */
     url("../fonts/Pretendard-SemiBoldr.ttf") format("truetype"),
     /* Safari, Android, iOS */
-     url("../fonts/Pretendard-SemiBold.svg") format("svg");
+    url( "../fonts/Pretendard-SemiBold.svg") format("svg"))))
 }
 
 @font-face {
@@ -126,7 +126,7 @@
     /* Modern Browsers */
     url("../fonts/Pretendard-Regular.ttf") format("truetype"),
     /* Safari, Android, iOS */
-     url("../fonts/Pretendard-Regular.svg") format("svg"))));
+    url( "../fonts/Pretendard-Regular.svg") format("svg")))))))
 }
 
 @font-face {
@@ -144,7 +144,7 @@
     /* Modern Browsers */
     url("../fonts/Pretendard-Light.ttf") format("truetype"),
     /* Safari, Android, iOS */
-     url("../fonts/Pretendard-Light.svg") format("svg"))));
+    url( "../fonts/Pretendard-Light.svg") format("svg")))))))
 }
 
 /* reset */
@@ -1234,6 +1234,12 @@ img {
     width: 24px;
     height: 24px;
 }
+.icon-unit {
+    display: inline-block;
+    background: url("../images/ic-unit.svg") no-repeat center center/ contain;
+    width: 24px;
+    height: 24px;
+}
 .icon-link-gray {
     display: inline-block;
     background: url("../images/ic-link-gray.svg") no-repeat center center/ contain;
@@ -1317,20 +1323,14 @@ img {
 
 .login-google {
     display: inline-block;
-    width: 48px;
-    height: 48px;
+    width: 24px;
+    height: 24px;
     background: url("../images/login-google.svg") no-repeat center center /contain;
-}
-.login-kakao {
-    display: inline-block;
-    width: 48px;
-    height: 48px;
-    background: url("../images/login-kakao.svg") no-repeat center center /contain;
 }
 .login-apple {
     display: inline-block;
-    width: 48px;
-    height: 48px;
+    width: 24px;
+    height: 24px;
     background: url("../images/login-apple.svg") no-repeat center center /contain;
 }
 .login-mebook {
@@ -1733,7 +1733,7 @@ img {
     background-color: var(--blue-grey-50);
     color: #D1D6DB;
     cursor: default;
-    white-space:normal;
+    white-space: normal;
 }
 .btn-line-primary {
     border: solid 1px var(--primary-color);
@@ -2572,7 +2572,7 @@ img {
     height: 44px;
     border-radius: 8px;
     overflow: hidden;
-    padding: 0px 20px;
+    padding: 0 20px;
 }
 .box-login-input input {
     font-size: 1.4rem;
@@ -2601,7 +2601,7 @@ img {
     gap: 8px;
 }
 .box-login-input > .login-input-btns .icon-input-eye,
-.box-login-input > .login-input-btns .icon-input-eye-closing{
+.box-login-input > .login-input-btns .icon-input-eye-closing {
     width: 20px;
     height: 20px;
 }
@@ -2689,7 +2689,7 @@ img {
 .list-box li > .content .point-box {
     margin-top: 8px;
 }
-.list-box li > .content .point-box >.point-bullet{
+.list-box li > .content .point-box > .point-bullet {
     justify-content: flex-end;
 }
 /* badge */
@@ -3773,7 +3773,7 @@ img {
         grid-template-columns: repeat(2, 1fr);
     }
 
-    .goods-list-group.purchase .goods-list .btns-grid-area.mo-grid .btn:nth-child(3){
+    .goods-list-group.purchase .goods-list .btns-grid-area.mo-grid .btn:nth-child(3) {
         grid-column: 1 / 3;
         grid-row: 3 / 2;
     }
